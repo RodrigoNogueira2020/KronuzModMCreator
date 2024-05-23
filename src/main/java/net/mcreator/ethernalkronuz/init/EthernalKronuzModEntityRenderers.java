@@ -9,8 +9,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.client.renderer.entity.ThrownItemRenderer;
-
 import net.mcreator.ethernalkronuz.client.renderer.WarperRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.TerraBladeProjectileRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.TechnomortoRenderer;
@@ -25,7 +23,6 @@ public class EthernalKronuzModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(EthernalKronuzModEntities.WARPER.get(), WarperRenderer::new);
-		event.registerEntityRenderer(EthernalKronuzModEntities.WARPER_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(EthernalKronuzModEntities.GINUKA_POWER_SETUP.get(), GinukaPowerSetupRenderer::new);
 		event.registerEntityRenderer(EthernalKronuzModEntities.TECHNOMORTO.get(), TechnomortoRenderer::new);
 		event.registerEntityRenderer(EthernalKronuzModEntities.TECHNOBALDE.get(), TechnobaldeRenderer::new);

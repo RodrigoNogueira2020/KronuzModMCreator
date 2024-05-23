@@ -16,7 +16,6 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
-import net.mcreator.ethernalkronuz.entity.WarperEntityProjectile;
 import net.mcreator.ethernalkronuz.entity.WarperEntity;
 import net.mcreator.ethernalkronuz.entity.TerraBladeProjectileEntity;
 import net.mcreator.ethernalkronuz.entity.TechnomortoEntity;
@@ -34,8 +33,6 @@ public class EthernalKronuzModEntities {
 			EntityType.Builder.<WarperEntity>of(WarperEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WarperEntity::new)
 
 					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<WarperEntityProjectile>> WARPER_PROJECTILE = register("projectile_warper", EntityType.Builder.<WarperEntityProjectile>of(WarperEntityProjectile::new, MobCategory.MISC)
-			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(WarperEntityProjectile::new).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<GinukaPowerSetupEntity>> GINUKA_POWER_SETUP = register("ginuka_power_setup",
 			EntityType.Builder.<GinukaPowerSetupEntity>of(GinukaPowerSetupEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GinukaPowerSetupEntity::new)
 

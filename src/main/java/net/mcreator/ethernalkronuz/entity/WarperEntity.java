@@ -26,13 +26,11 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.entity.monster.EnderMan;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.RangedAttackGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
@@ -50,7 +48,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -61,14 +58,12 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModEntities;
 
-import javax.annotation.Nullable;
-
 import java.util.Set;
 import java.util.Random;
 import java.util.EnumSet;
 
 @Mod.EventBusSubscriber
-public class WarperEntity extends EnderMan implements RangedAttackMob, IAnimatable {
+public class WarperEntity extends EnderMan implements IAnimatable {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(WarperEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(WarperEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(WarperEntity.class, EntityDataSerializers.STRING);
@@ -116,7 +111,7 @@ public class WarperEntity extends EnderMan implements RangedAttackMob, IAnimatab
 
 	@Override
 	protected float getStandingEyeHeight(Pose poseIn, EntityDimensions sizeIn) {
-		return 1F;
+		return 1.7F;
 	}
 
 	@Override
@@ -154,7 +149,7 @@ public class WarperEntity extends EnderMan implements RangedAttackMob, IAnimatab
 			public void start() {
 				LivingEntity livingentity = WarperEntity.this.getTarget();
 				Vec3 vec3d = livingentity.getEyePosition(1);
-				WarperEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1.2);
+				WarperEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 10);
 			}
 
 			@Override
@@ -164,14 +159,14 @@ public class WarperEntity extends EnderMan implements RangedAttackMob, IAnimatab
 					WarperEntity.this.doHurtTarget(livingentity);
 				} else {
 					double d0 = WarperEntity.this.distanceToSqr(livingentity);
-					if (d0 < 16) {
+					if (d0 < 32) {
 						Vec3 vec3d = livingentity.getEyePosition(1);
-						WarperEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1.2);
+						WarperEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 10);
 					}
 				}
 			}
 		});
-		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1, 20) {
+		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 5, 20) {
 			@Override
 			protected Vec3 getPosition() {
 				Random random = WarperEntity.this.getRandom();
@@ -181,7 +176,7 @@ public class WarperEntity extends EnderMan implements RangedAttackMob, IAnimatab
 				return new Vec3(dir_x, dir_y, dir_z);
 			}
 		});
-		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2, false) {
+		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 10, true) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
@@ -190,100 +185,6 @@ public class WarperEntity extends EnderMan implements RangedAttackMob, IAnimatab
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
 		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, false));
 		this.targetSelector.addGoal(6, new HurtByTargetGoal(this));
-		this.goalSelector.addGoal(1, new WarperEntity.RangedAttackGoal(this, 1.25, 20, 20f) {
-			@Override
-			public boolean canContinueToUse() {
-				return this.canUse();
-			}
-		});
-	}
-
-	public class RangedAttackGoal extends Goal {
-		private final Mob mob;
-		private final RangedAttackMob rangedAttackMob;
-		@Nullable
-		private LivingEntity target;
-		private int attackTime = -1;
-		private final double speedModifier;
-		private int seeTime;
-		private final int attackIntervalMin;
-		private final int attackIntervalMax;
-		private final float attackRadius;
-		private final float attackRadiusSqr;
-
-		public RangedAttackGoal(RangedAttackMob p_25768_, double p_25769_, int p_25770_, float p_25771_) {
-			this(p_25768_, p_25769_, p_25770_, p_25770_, p_25771_);
-		}
-
-		public RangedAttackGoal(RangedAttackMob p_25773_, double p_25774_, int p_25775_, int p_25776_, float p_25777_) {
-			if (!(p_25773_ instanceof LivingEntity)) {
-				throw new IllegalArgumentException("ArrowAttackGoal requires Mob implements RangedAttackMob");
-			} else {
-				this.rangedAttackMob = p_25773_;
-				this.mob = (Mob) p_25773_;
-				this.speedModifier = p_25774_;
-				this.attackIntervalMin = p_25775_;
-				this.attackIntervalMax = p_25776_;
-				this.attackRadius = p_25777_;
-				this.attackRadiusSqr = p_25777_ * p_25777_;
-				this.setFlags(EnumSet.of(Goal.Flag.MOVE, Goal.Flag.LOOK));
-			}
-		}
-
-		public boolean canUse() {
-			LivingEntity livingentity = this.mob.getTarget();
-			if (livingentity != null && livingentity.isAlive()) {
-				this.target = livingentity;
-				return true;
-			} else {
-				return false;
-			}
-		}
-
-		public boolean canContinueToUse() {
-			return this.canUse() || this.target.isAlive() && !this.mob.getNavigation().isDone();
-		}
-
-		public void stop() {
-			this.target = null;
-			this.seeTime = 0;
-			this.attackTime = -1;
-			((WarperEntity) rangedAttackMob).entityData.set(SHOOT, false);
-		}
-
-		public boolean requiresUpdateEveryTick() {
-			return true;
-		}
-
-		public void tick() {
-			double d0 = this.mob.distanceToSqr(this.target.getX(), this.target.getY(), this.target.getZ());
-			boolean flag = this.mob.getSensing().hasLineOfSight(this.target);
-			if (flag) {
-				++this.seeTime;
-			} else {
-				this.seeTime = 0;
-			}
-			if (!(d0 > (double) this.attackRadiusSqr) && this.seeTime >= 5) {
-				this.mob.getNavigation().stop();
-			} else {
-				this.mob.getNavigation().moveTo(this.target, this.speedModifier);
-			}
-			this.mob.getLookControl().setLookAt(this.target, 30.0F, 30.0F);
-			if (--this.attackTime == 0) {
-				if (!flag) {
-					((WarperEntity) rangedAttackMob).entityData.set(SHOOT, false);
-					return;
-				}
-				((WarperEntity) rangedAttackMob).entityData.set(SHOOT, true);
-				float f = (float) Math.sqrt(d0) / this.attackRadius;
-				float f1 = Mth.clamp(f, 0.1F, 1.0F);
-				this.rangedAttackMob.performRangedAttack(this.target, f1);
-				this.attackTime = Mth.floor(f * (float) (this.attackIntervalMax - this.attackIntervalMin) + (float) this.attackIntervalMin);
-			} else if (this.attackTime < 0) {
-				this.attackTime = Mth.floor(Mth.lerp(Math.sqrt(d0) / (double) this.attackRadius, (double) this.attackIntervalMin, (double) this.attackIntervalMax));
-			} else
-				((WarperEntity) rangedAttackMob).entityData.set(SHOOT, false);
-		}
 	}
 
 	@Override
@@ -328,16 +229,6 @@ public class WarperEntity extends EnderMan implements RangedAttackMob, IAnimatab
 	}
 
 	@Override
-	public void performRangedAttack(LivingEntity target, float flval) {
-		WarperEntityProjectile entityarrow = new WarperEntityProjectile(EthernalKronuzModEntities.WARPER_PROJECTILE.get(), this, this.level);
-		double d0 = target.getY() + target.getEyeHeight() - 1.1;
-		double d1 = target.getX() - this.getX();
-		double d3 = target.getZ() - this.getZ();
-		entityarrow.shoot(d1, d0 - entityarrow.getY() + Math.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 1.6F, 12.0F);
-		level.addFreshEntity(entityarrow);
-	}
-
-	@Override
 	protected void checkFallDamage(double y, boolean onGroundIn, BlockState state, BlockPos pos) {
 	}
 
@@ -359,12 +250,13 @@ public class WarperEntity extends EnderMan implements RangedAttackMob, IAnimatab
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.5);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 10);
 		builder = builder.add(Attributes.MAX_HEALTH, 10);
 		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 9);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-		builder = builder.add(Attributes.FLYING_SPEED, 0.5);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.25);
+		builder = builder.add(Attributes.FLYING_SPEED, 10);
 		return builder;
 	}
 

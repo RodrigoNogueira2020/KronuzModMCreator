@@ -81,7 +81,7 @@ public class AsgardDimension {
 		}
 		if (event.getTo() == ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("ethernal_kronuz:asgard"))) {
 
-			AsgardPlayerEntersDimensionProcedure.execute(world, x, y, z, entity);
+			AsgardPlayerEntersDimensionProcedure.execute(entity);
 		}
 	}
 }

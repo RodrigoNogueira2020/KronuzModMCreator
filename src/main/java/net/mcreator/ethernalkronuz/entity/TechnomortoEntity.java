@@ -130,7 +130,7 @@ public class TechnomortoEntity extends PathfinderMob {
 		Entity entity = this;
 		Level world = this.level;
 
-		TechnobaldeRightClickedOnEntityProcedure.execute(world, entity, sourceentity);
+		TechnobaldeRightClickedOnEntityProcedure.execute(world, x, y, z, entity, sourceentity);
 		return retval;
 	}
 

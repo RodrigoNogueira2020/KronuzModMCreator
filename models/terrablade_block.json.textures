@@ -2,7 +2,7 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "terrabladeblock"
+        "1": "terrablade"
       },
       "name": "default"
     }

@@ -9,7 +9,7 @@
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "nokkiahammerblock:default",
+    "customModelName": "nokiahammer_block:default",
     "rotationMode": 0,
     "enablePitch": false,
     "emissiveRendering": true,

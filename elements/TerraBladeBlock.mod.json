@@ -9,7 +9,7 @@
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "terrabladeblock:default",
+    "customModelName": "terrablade_block:default",
     "rotationMode": 0,
     "enablePitch": false,
     "emissiveRendering": true,

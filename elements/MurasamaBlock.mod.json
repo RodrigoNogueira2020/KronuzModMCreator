@@ -9,7 +9,7 @@
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "murasamablock:default",
+    "customModelName": "murasama_block:default",
     "rotationMode": 0,
     "enablePitch": false,
     "emissiveRendering": true,
