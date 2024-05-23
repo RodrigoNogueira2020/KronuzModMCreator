@@ -1,0 +1,46 @@
+{
+  "_fv": 39,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 3,
+    "group": "",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:YggLog"
+      },
+      {
+        "value": "CUSTOM:YggLog"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:YggLog"
+      },
+      {
+        "value": "CUSTOM:YggLog"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:YggWood"
+    },
+    "name": "ygg_log_to_wood",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ethernal_kronuz:ygg_log"
+    },
+    {
+      "item": "ethernal_kronuz:ygg_log"
+    },
+    {
+      "item": "ethernal_kronuz:ygg_log"
+    },
+    {
+      "item": "ethernal_kronuz:ygg_log"
+    }
+  ],
+  "result": {
+    "item": "ethernal_kronuz:ygg_wood",
+    "count": 3
+  }
+}

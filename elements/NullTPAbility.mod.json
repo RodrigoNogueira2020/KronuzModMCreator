@@ -1,0 +1,12 @@
+{
+  "_fv": 39,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "X",
+    "keyBindingName": "Null TP Ability",
+    "keyBindingCategoryKey": "gameplay",
+    "onKeyPressed": {
+      "name": "NullEntityTPAbility"
+    }
+  }
+}

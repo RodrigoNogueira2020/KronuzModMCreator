@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "ethernal_kronuz:mosso_crystal_block"
+    },
+    "title": {
+      "translate": "advancements.bt_achievement.title"
+    },
+    "description": {
+      "translate": "advancements.bt_achievement.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "bt_achievement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "ethernal_kronuz:ascender_advancement"
+}

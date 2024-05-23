@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "ethernal_kronuz:faking_ell_armor_helmet"
+    },
+    "title": {
+      "translate": "advancements.adc_achievement.title"
+    },
+    "description": {
+      "translate": "advancements.adc_achievement.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "adc_achievement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "ethernal_kronuz:ascender_advancement"
+}

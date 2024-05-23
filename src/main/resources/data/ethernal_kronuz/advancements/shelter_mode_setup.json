@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "ethernal_kronuz:textures/screens/icon_inst.png",
+    "icon": {
+      "item": "minecraft:totem_of_undying"
+    },
+    "title": {
+      "translate": "advancements.shelter_mode_setup.title"
+    },
+    "description": {
+      "translate": "advancements.shelter_mode_setup.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "shelter_mode_setup": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

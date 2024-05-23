@@ -1,0 +1,9 @@
+{
+  "_fv": 39,
+  "_type": "command",
+  "definition": {
+    "commandName": "MakeGreenRadiantLord",
+    "permissionLevel": "4",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"128\" y=\"81\"><next><block type=\"entity\"><field name=\"name\">name</field><field name=\"type\">player</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">RadiantLordVerdeProcedure</field></block></statement></block></next></block></xml>"
+  }
+}

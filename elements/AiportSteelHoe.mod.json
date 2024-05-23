@@ -1,0 +1,31 @@
+{
+  "_fv": 39,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "airport_steel_hoe",
+    "customModelName": "Normal",
+    "name": "Airport Steel Hoe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:CreativeTab"
+    },
+    "toolType": "Hoe",
+    "harvestLevel": 7,
+    "efficiency": 14.0,
+    "attackSpeed": 7.0,
+    "enchantability": 14,
+    "damageVsEntity": 1.0,
+    "usageCount": 16256,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:AiportSteelIngot"
+      }
+    ],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

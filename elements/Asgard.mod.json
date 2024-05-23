@@ -1,0 +1,61 @@
+{
+  "_fv": 39,
+  "_type": "dimension",
+  "definition": {
+    "biomesInDimension": [
+      {
+        "value": "CUSTOM:CrystalPillars"
+      },
+      {
+        "value": "CUSTOM:FloatingGarden"
+      },
+      {
+        "value": "CUSTOM:SkyFields"
+      },
+      {
+        "value": "CUSTOM:StoneSpikes"
+      }
+    ],
+    "worldGenType": "Normal world gen",
+    "mainFillerBlock": {
+      "value": "CUSTOM:HeavenStone"
+    },
+    "fluidBlock": {
+      "value": "CUSTOM:CristalizedDivineWater"
+    },
+    "airColor": {
+      "value": -16777216,
+      "falpha": 0.0
+    },
+    "canRespawnHere": false,
+    "hasFog": false,
+    "isDark": true,
+    "doesWaterVaporize": false,
+    "sleepResult": "DENY",
+    "hasSkyLight": false,
+    "imitateOverworldBehaviour": false,
+    "onPlayerEntersDimension": {
+      "name": "AsgardPlayerEntersDimension"
+    },
+    "onPlayerLeavesDimension": {
+      "name": "AsgardEmpowermentEffectExpires"
+    },
+    "portalFrame": {
+      "value": "Blocks.STONE#0"
+    },
+    "portalParticles": {
+      "value": "CUSTOM:EndParticles"
+    },
+    "portalLuminance": 15,
+    "portalSound": {
+      "value": "block.portal.ambient"
+    },
+    "igniterName": "Asgard Portal Igniter",
+    "igniterTab": {
+      "value": "CUSTOM:CreativeTab"
+    },
+    "texture": "gargantuan",
+    "portalTexture": "test",
+    "enablePortal": false
+  }
+}

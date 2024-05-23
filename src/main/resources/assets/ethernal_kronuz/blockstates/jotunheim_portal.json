@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "ethernal_kronuz:block/jotunheim_portal_ew"
+    },
+    "axis=x": {
+      "model": "ethernal_kronuz:block/jotunheim_portal_ns"
+    }
+  }
+}

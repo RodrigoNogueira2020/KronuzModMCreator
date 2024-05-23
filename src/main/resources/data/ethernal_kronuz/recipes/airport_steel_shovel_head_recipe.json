@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ethernal_kronuz:aiport_steel_ingot"
+    }
+  ],
+  "result": {
+    "item": "ethernal_kronuz:airport_steel_shovel_head",
+    "count": 1
+  }
+}

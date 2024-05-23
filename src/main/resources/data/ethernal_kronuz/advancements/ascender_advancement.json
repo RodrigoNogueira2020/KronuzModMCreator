@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "ethernal_kronuz:textures/screens/icon_inst.png",
+    "icon": {
+      "item": "ethernal_kronuz:faking_ell_ingot"
+    },
+    "title": {
+      "translate": "advancements.ascender_advancement.title"
+    },
+    "description": {
+      "translate": "advancements.ascender_advancement.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "ascender_advancement": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

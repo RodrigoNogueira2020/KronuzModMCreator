@@ -1,0 +1,57 @@
+{
+  "_fv": 39,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 1,
+    "height": 1,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "faction_book_gui_frame.png",
+          "use1Xscale": false,
+          "x": 78,
+          "y": -27
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_adc_button",
+          "image": "adc_button.png",
+          "hoveredImage": "adc_button_hover.png",
+          "onClick": {
+            "name": "GiveADC"
+          },
+          "x": 72,
+          "y": 32
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_bt_button",
+          "image": "bt_button.png",
+          "hoveredImage": "bt_button_hover.png",
+          "onClick": {
+            "name": "GiveBT"
+          },
+          "x": 205,
+          "y": 33
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

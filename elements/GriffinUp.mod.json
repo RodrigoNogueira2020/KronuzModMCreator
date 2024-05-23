@@ -1,0 +1,15 @@
+{
+  "_fv": 39,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "Z",
+    "keyBindingName": "Griffin Upwards",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "GriffinUpOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "GriffinUpOnKeyReleased"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "ethernal_kronuz:items/faking_ell_pickaxe"
+  }
+}

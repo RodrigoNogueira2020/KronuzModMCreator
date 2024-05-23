@@ -1,0 +1,15 @@
+{
+  "_fv": 39,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "C",
+    "keyBindingName": "Griffin Downwards",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "GriffinDownOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "GriffinDownOnKeyReleased"
+    }
+  }
+}

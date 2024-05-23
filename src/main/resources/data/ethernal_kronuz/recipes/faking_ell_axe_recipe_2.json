@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23",
+    "4 "
+  ],
+  "key": {
+    "0": {
+      "item": "ethernal_kronuz:faking_ell_ingot"
+    },
+    "1": {
+      "item": "ethernal_kronuz:faking_ell_ingot"
+    },
+    "2": {
+      "item": "minecraft:blaze_rod"
+    },
+    "3": {
+      "item": "ethernal_kronuz:faking_ell_ingot"
+    },
+    "4": {
+      "item": "minecraft:blaze_rod"
+    }
+  },
+  "result": {
+    "item": "ethernal_kronuz:faking_ell_axe",
+    "count": 1
+  }
+}

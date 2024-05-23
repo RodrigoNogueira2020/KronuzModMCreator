@@ -1,0 +1,12 @@
+{
+  "_fv": 39,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "Z",
+    "keyBindingName": "Null Transformation",
+    "keyBindingCategoryKey": "gameplay",
+    "onKeyPressed": {
+      "name": "NullEntityKeyBindOnKeyPressed"
+    }
+  }
+}

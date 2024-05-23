@@ -1,0 +1,19 @@
+{
+  "_fv": 39,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "V.A.S.C.O",
+    "texture": "music_disc_vasco",
+    "description": "V.A.S.C.O",
+    "creativeTab": {
+      "value": "CUSTOM:CreativeTab"
+    },
+    "specialInfo": [],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:vasco"
+    },
+    "lengthInTicks": 0,
+    "analogOutput": 0
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "ethernal_kronuz:airport_steel_axe_head"
+    },
+    "1": {
+      "item": "ethernal_kronuz:steel_core_a_setup"
+    },
+    "2": {
+      "item": "ethernal_kronuz:alloy_setup"
+    }
+  },
+  "result": {
+    "item": "ethernal_kronuz:aiport_steel_axe",
+    "count": 1
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "ethernal_kronuz:blocks/chiseled_heavenstone",
+    "top": "ethernal_kronuz:blocks/chiseled_heavenstone",
+    "side": "ethernal_kronuz:blocks/chiseled_heavenstone"
+  }
+}

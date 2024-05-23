@@ -1,0 +1,9 @@
+{
+  "_fv": 39,
+  "_type": "command",
+  "definition": {
+    "commandName": "giveFactionBook",
+    "permissionLevel": "No requirement",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"173\" y=\"106\"><next><block type=\"call_procedure\"><field name=\"procedure\">GiveFactionBookBack</field></block></next></block></xml>"
+  }
+}

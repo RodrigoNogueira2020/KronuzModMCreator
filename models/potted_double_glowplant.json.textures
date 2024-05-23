@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "dirt",
+        "1": "flower_pot",
+        "2": "glowplant_double"
+      },
+      "name": "default"
+    }
+  }
+}

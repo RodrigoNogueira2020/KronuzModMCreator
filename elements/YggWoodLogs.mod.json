@@ -1,0 +1,36 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:YggLog"
+      },
+      {
+        "value": "CUSTOM:StrippedYggLog"
+      },
+      {
+        "value": "CUSTOM:CrackedHeavenSlateBricks"
+      },
+      {
+        "value": "CUSTOM:BricksHeavenSlate"
+      },
+      {
+        "value": "CUSTOM:TilesHeavenSlate"
+      },
+      {
+        "value": "CUSTOM:BricksHeavenSlateStairs"
+      },
+      {
+        "value": "CUSTOM:TilesHeavenSlateSlab"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "logs",
+    "namespace": "minecraft"
+  }
+}

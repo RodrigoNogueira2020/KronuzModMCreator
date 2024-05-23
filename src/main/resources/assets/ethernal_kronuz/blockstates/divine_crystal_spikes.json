@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ethernal_kronuz:block/divine_crystal_spikes"
+    },
+    "facing=east": {
+      "model": "ethernal_kronuz:block/divine_crystal_spikes",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ethernal_kronuz:block/divine_crystal_spikes",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ethernal_kronuz:block/divine_crystal_spikes",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "ethernal_kronuz:block/divine_crystal_spikes",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "ethernal_kronuz:block/divine_crystal_spikes",
+      "x": 90
+    }
+  }
+}

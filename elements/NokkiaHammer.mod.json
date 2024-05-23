@@ -1,0 +1,29 @@
+{
+  "_fv": 39,
+  "_type": "tool",
+  "definition": {
+    "renderType": 1,
+    "texture": "nokia_hammer",
+    "customModelName": "nokiahammer:default",
+    "name": "§4Nokkia Hammer",
+    "specialInfo": [
+      "World Ender"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:CreativeTab"
+    },
+    "toolType": "MultiTool",
+    "harvestLevel": 9,
+    "efficiency": 10000.0,
+    "attackSpeed": 100.0,
+    "enchantability": 0,
+    "damageVsEntity": 5001.0,
+    "usageCount": 0,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

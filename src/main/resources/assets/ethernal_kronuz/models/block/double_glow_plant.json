@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "ethernal_kronuz:blocks/glowplant_double",
+    "particle": "ethernal_kronuz:blocks/glowplant_double"
+  }
+}

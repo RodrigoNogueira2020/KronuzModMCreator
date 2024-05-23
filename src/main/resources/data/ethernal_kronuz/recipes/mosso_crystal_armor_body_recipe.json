@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "ethernal_kronuz:mosso_crystal_gem"
+    },
+    "2": {
+      "item": "ethernal_kronuz:mosso_crystal_gem"
+    },
+    "3": {
+      "item": "ethernal_kronuz:mosso_crystal_gem"
+    },
+    "4": {
+      "item": "ethernal_kronuz:mosso_crystal_gem"
+    },
+    "5": {
+      "item": "ethernal_kronuz:mosso_crystal_gem"
+    },
+    "6": {
+      "item": "ethernal_kronuz:mosso_crystal_gem"
+    },
+    "7": {
+      "item": "ethernal_kronuz:mosso_crystal_gem"
+    },
+    "8": {
+      "item": "ethernal_kronuz:mosso_crystal_gem"
+    }
+  },
+  "result": {
+    "item": "ethernal_kronuz:mosso_crystal_armor_chestplate",
+    "count": 1
+  }
+}

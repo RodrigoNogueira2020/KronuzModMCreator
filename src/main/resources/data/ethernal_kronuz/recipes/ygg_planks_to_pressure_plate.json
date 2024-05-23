@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ethernal_kronuz:ygg_planks"
+    },
+    {
+      "item": "ethernal_kronuz:ygg_planks"
+    }
+  ],
+  "result": {
+    "item": "ethernal_kronuz:ygg_presure_plate",
+    "count": 1
+  }
+}

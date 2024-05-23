@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ethernal_kronuz:mosso_crystal_dust"
+    },
+    {
+      "item": "ethernal_kronuz:mosso_crystal_dust"
+    },
+    {
+      "item": "ethernal_kronuz:mosso_crystal_dust"
+    },
+    {
+      "item": "ethernal_kronuz:mosso_crystal_dust"
+    }
+  ],
+  "result": {
+    "item": "ethernal_kronuz:mosso_crystal_gem",
+    "count": 1
+  }
+}

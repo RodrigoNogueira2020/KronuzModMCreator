@@ -1,0 +1,46 @@
+{
+  "_fv": 39,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:AiportSteelIngot"
+      },
+      {
+        "value": "CUSTOM:AiportSteelIngot"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:AiportSteelIngot"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:AirportSteelAxeHead"
+    },
+    "name": "airport_steel_axe_head_recipe",
+    "namespace": "mod"
+  }
+}

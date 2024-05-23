@@ -1,0 +1,21 @@
+{
+  "_fv": 39,
+  "_type": "particle",
+  "definition": {
+    "texture": "end_empowerpent_particles.png",
+    "animate": true,
+    "frameDuration": 10,
+    "width": 0.2,
+    "height": 0.2,
+    "scale": 1.0,
+    "speedFactor": 0.6,
+    "gravity": 0.30000000000000004,
+    "maxAge": 20,
+    "maxAgeDiff": 0,
+    "angularVelocity": 0.1,
+    "angularAcceleration": 0.0,
+    "canCollide": true,
+    "alwaysShow": true,
+    "renderType": "LIT"
+  }
+}

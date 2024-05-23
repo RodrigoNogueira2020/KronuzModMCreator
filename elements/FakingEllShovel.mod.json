@@ -1,0 +1,31 @@
+{
+  "_fv": 39,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "faking_ell_shovel",
+    "customModelName": "Normal",
+    "name": "Faking Ell Shovel",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:CreativeTab"
+    },
+    "toolType": "Spade",
+    "harvestLevel": 6,
+    "efficiency": 12.0,
+    "attackSpeed": 1.0,
+    "enchantability": 12,
+    "damageVsEntity": 8.5,
+    "usageCount": 8128,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:FakingEllDust"
+      }
+    ],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

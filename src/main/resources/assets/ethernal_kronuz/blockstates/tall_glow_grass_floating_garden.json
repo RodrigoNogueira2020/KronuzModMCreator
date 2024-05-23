@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "ethernal_kronuz:block/tall_glow_grass_floating_garden"
+    },
+    "half=lower": {
+      "model": "ethernal_kronuz:block/tall_glow_grass_floating_garden_bottom"
+    }
+  }
+}

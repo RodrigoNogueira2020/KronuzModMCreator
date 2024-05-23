@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ethernal_kronuz:airport_steel_chunk"
+    },
+    {
+      "item": "ethernal_kronuz:airport_steel_chunk"
+    },
+    {
+      "item": "ethernal_kronuz:faking_ell_ingot"
+    },
+    {
+      "item": "ethernal_kronuz:mosso_crystal_gem"
+    }
+  ],
+  "result": {
+    "item": "ethernal_kronuz:aiport_steel_ingot",
+    "count": 1
+  }
+}

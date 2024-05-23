@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ethernal_kronuz:aiport_steel_block"
+    }
+  ],
+  "result": {
+    "item": "ethernal_kronuz:aiport_steel_ingot",
+    "count": 9
+  }
+}

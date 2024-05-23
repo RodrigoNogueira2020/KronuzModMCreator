@@ -1,0 +1,61 @@
+{
+  "_fv": 39,
+  "_type": "enchantment",
+  "definition": {
+    "name": "Life Steal",
+    "type": "WEAPON",
+    "rarity": "VERY_RARE",
+    "minLevel": 1,
+    "maxLevel": 1,
+    "damageModifier": 0,
+    "compatibleEnchantments": [],
+    "excludeEnchantments": false,
+    "compatibleItems": [
+      {
+        "value": "CUSTOM:MossoCrystalSword"
+      },
+      {
+        "value": "CUSTOM:FakingEllSword"
+      },
+      {
+        "value": "CUSTOM:AiportSteelSword"
+      },
+      {
+        "value": "Items.WOODEN_SWORD"
+      },
+      {
+        "value": "Items.STONE_SWORD"
+      },
+      {
+        "value": "Items.IRON_SWORD"
+      },
+      {
+        "value": "Items.GOLDEN_SWORD"
+      },
+      {
+        "value": "Items.DIAMOND_SWORD"
+      },
+      {
+        "value": "Items.NETHERITE_SWORD"
+      },
+      {
+        "value": "CUSTOM:BladeOfTheVoidSetup"
+      },
+      {
+        "value": "CUSTOM:TerraBladeSetup"
+      },
+      {
+        "value": "CUSTOM:Murasama"
+      },
+      {
+        "value": "CUSTOM:NokkiaHammer"
+      }
+    ],
+    "excludeItems": false,
+    "isTreasureEnchantment": true,
+    "isCurse": false,
+    "isAllowedOnBooks": true,
+    "canGenerateInLootTables": false,
+    "canVillagerTrade": true
+  }
+}

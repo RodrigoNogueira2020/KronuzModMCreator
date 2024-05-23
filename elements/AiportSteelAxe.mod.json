@@ -1,0 +1,31 @@
+{
+  "_fv": 39,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "airport_steel_axe",
+    "customModelName": "Normal",
+    "name": "Airport Steel Axe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:CreativeTab"
+    },
+    "toolType": "Axe",
+    "harvestLevel": 7,
+    "efficiency": 14.0,
+    "attackSpeed": 1.0,
+    "enchantability": 14,
+    "damageVsEntity": 16.0,
+    "usageCount": 16256,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:AiportSteelIngot"
+      }
+    ],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

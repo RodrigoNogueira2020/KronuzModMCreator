@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "ethernal_kronuz:chiseled_heaven_stone"
+    },
+    "1": {
+      "item": "ethernal_kronuz:chiseled_heaven_stone"
+    },
+    "2": {
+      "item": "ethernal_kronuz:chiseled_heaven_stone"
+    }
+  },
+  "result": {
+    "item": "ethernal_kronuz:chiseled_heaven_stone_slabs",
+    "count": 6
+  }
+}

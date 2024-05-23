@@ -1,0 +1,8 @@
+{
+  "criteria": {
+    "rl_verde_achievement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "ethernal_kronuz:ascender_advancement"
+}

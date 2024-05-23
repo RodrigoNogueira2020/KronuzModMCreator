@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "flowerpot": "flower_pot",
+        "plant": "bioluminescent_lily",
+        "dirt": "dirt"
+      },
+      "name": "default"
+    }
+  }
+}

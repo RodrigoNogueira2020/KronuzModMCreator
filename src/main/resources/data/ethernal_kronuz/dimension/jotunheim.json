@@ -1,0 +1,24 @@
+{
+	"type": "ethernal_kronuz:jotunheim",
+	"generator": {
+		"type": "minecraft:flat",
+		"settings": {
+			"biome": "minecraft:plains",
+			"layers": [
+				{
+					"block": "minecraft:bedrock",
+					"height": 3
+				},
+				{
+					"block": "minecraft:stone",
+					"height": 500
+				},
+				{
+					"block": "minecraft:snow_block",
+					"height": 562
+				}
+			],
+			"structure_overrides": []
+		}
+	}
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "ethernal_kronuz:custom/bladeofthevoid",
+  "textures": {
+    "1": "ethernal_kronuz:blocks/bladeofthevoid",
+    "particle": "ethernal_kronuz:items/blade_of_the_void"
+  }
+}

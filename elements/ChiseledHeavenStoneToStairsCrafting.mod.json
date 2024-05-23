@@ -1,0 +1,46 @@
+{
+  "_fv": 39,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 4,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:ChiseledHeavenStone"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:ChiseledHeavenStone"
+      },
+      {
+        "value": "CUSTOM:ChiseledHeavenStone"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:ChiseledHeavenStone"
+      },
+      {
+        "value": "CUSTOM:ChiseledHeavenStone"
+      },
+      {
+        "value": "CUSTOM:ChiseledHeavenStone"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:ChiseledHeavenStoneStairs"
+    },
+    "name": "chiseled_heaven_stone_to_stairs_crafting",
+    "namespace": "mod"
+  }
+}

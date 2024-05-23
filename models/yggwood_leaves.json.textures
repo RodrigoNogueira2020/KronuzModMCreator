@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "ygg_wood_leaves"
+      },
+      "name": "default"
+    }
+  }
+}

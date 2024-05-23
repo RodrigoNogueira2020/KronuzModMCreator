@@ -1,0 +1,7 @@
+{
+  "parent": "ethernal_kronuz:custom/nokiahammer",
+  "textures": {
+    "0": "ethernal_kronuz:blocks/nokiahammer",
+    "particle": "ethernal_kronuz:items/nokia_hammer"
+  }
+}

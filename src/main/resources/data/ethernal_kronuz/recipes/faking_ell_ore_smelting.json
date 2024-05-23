@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "experience": 0.7,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "ethernal_kronuz:faking_ell_ore"
+  },
+  "result": "ethernal_kronuz:faking_ell_dust"
+}

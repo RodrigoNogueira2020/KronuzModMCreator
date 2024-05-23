@@ -1,0 +1,19 @@
+{
+  "_fv": 39,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Piruka",
+    "texture": "music_disc_cabuflamanau",
+    "description": "Ca Bu Fla Ma Nau",
+    "creativeTab": {
+      "value": "CUSTOM:CreativeTab"
+    },
+    "specialInfo": [],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:cabuflamanau"
+    },
+    "lengthInTicks": 0,
+    "analogOutput": 0
+  }
+}

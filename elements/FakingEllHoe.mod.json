@@ -1,0 +1,31 @@
+{
+  "_fv": 39,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "faking_ell_hoe",
+    "customModelName": "Normal",
+    "name": "Faking Ell Hoe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:CreativeTab"
+    },
+    "toolType": "Hoe",
+    "harvestLevel": 6,
+    "efficiency": 12.0,
+    "attackSpeed": 6.0,
+    "enchantability": 12,
+    "damageVsEntity": 1.0,
+    "usageCount": 8128,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:FakingEllDust"
+      }
+    ],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

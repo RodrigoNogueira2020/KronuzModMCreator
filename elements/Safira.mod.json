@@ -1,0 +1,21 @@
+{
+  "_fv": 39,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Kazzio",
+    "texture": "music_disc_sapphire",
+    "description": "Safira",
+    "creativeTab": {
+      "value": "CUSTOM:CreativeTab"
+    },
+    "specialInfo": [
+      "Foi bug visual"
+    ],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:safira"
+    },
+    "lengthInTicks": 0,
+    "analogOutput": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "ethernal_kronuz:cracked_heaven_slate_bricks"
+    },
+    "1": {
+      "item": "ethernal_kronuz:cracked_heaven_slate_bricks"
+    },
+    "2": {
+      "item": "ethernal_kronuz:cracked_heaven_slate_bricks"
+    }
+  },
+  "result": {
+    "item": "ethernal_kronuz:cracked_heaven_slate_bricks_slabs",
+    "count": 6
+  }
+}

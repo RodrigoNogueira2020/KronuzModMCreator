@@ -1,0 +1,46 @@
+{
+  "_fv": 39,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 4,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:HeavenStoneBricks"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:HeavenStoneBricks"
+      },
+      {
+        "value": "CUSTOM:HeavenStoneBricks"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:HeavenStoneBricks"
+      },
+      {
+        "value": "CUSTOM:HeavenStoneBricks"
+      },
+      {
+        "value": "CUSTOM:HeavenStoneBricks"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:HeavenStoneBricksStairs"
+    },
+    "name": "stone_bricks_to_stairs_crafting",
+    "namespace": "mod"
+  }
+}

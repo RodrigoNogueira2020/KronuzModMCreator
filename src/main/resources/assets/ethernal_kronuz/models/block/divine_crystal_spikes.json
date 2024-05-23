@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "ethernal_kronuz:blocks/divine_crystal_spikes",
+    "particle": "ethernal_kronuz:blocks/divine_crystal_spikes"
+  }
+}

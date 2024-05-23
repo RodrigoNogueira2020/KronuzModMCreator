@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "ethernal_kronuz:blocks/ygg_plank",
+    "particle": "ethernal_kronuz:blocks/ygg_plank"
+  }
+}

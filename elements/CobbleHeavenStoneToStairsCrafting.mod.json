@@ -1,0 +1,46 @@
+{
+  "_fv": 39,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 4,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:CobbledHeavenStone"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:CobbledHeavenStone"
+      },
+      {
+        "value": "CUSTOM:CobbledHeavenStone"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:CobbledHeavenStone"
+      },
+      {
+        "value": "CUSTOM:CobbledHeavenStone"
+      },
+      {
+        "value": "CUSTOM:CobbledHeavenStone"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:CobbledHeavenStoneStairs"
+    },
+    "name": "cobble_heaven_stone_to_stairs_crafting",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ethernal_kronuz:faking_ell_block"
+    }
+  ],
+  "result": {
+    "item": "ethernal_kronuz:faking_ell_dust",
+    "count": 9
+  }
+}

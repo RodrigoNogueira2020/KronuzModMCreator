@@ -1,0 +1,46 @@
+{
+  "_fv": 39,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 4,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:CrackedHeavenSlateBricks"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:CrackedHeavenSlateBricks"
+      },
+      {
+        "value": "CUSTOM:CrackedHeavenSlateBricks"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:CrackedHeavenSlateBricks"
+      },
+      {
+        "value": "CUSTOM:CrackedHeavenSlateBricks"
+      },
+      {
+        "value": "CUSTOM:CrackedHeavenSlateBricks"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:CrackedHeavenSlateBricksStairs"
+    },
+    "name": "cracked_bricks_to_stairs_crafting",
+    "namespace": "mod"
+  }
+}

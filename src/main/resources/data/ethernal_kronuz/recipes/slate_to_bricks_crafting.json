@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ethernal_kronuz:heaven_slate"
+    },
+    {
+      "item": "ethernal_kronuz:heaven_slate"
+    },
+    {
+      "item": "ethernal_kronuz:heaven_slate"
+    },
+    {
+      "item": "ethernal_kronuz:heaven_slate"
+    }
+  ],
+  "result": {
+    "item": "ethernal_kronuz:bricks_heaven_slate",
+    "count": 4
+  }
+}

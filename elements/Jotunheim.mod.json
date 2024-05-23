@@ -1,0 +1,45 @@
+{
+  "_fv": 39,
+  "_type": "dimension",
+  "definition": {
+    "biomesInDimension": [
+      {
+        "value": "CUSTOM:PlainsJotunheim"
+      }
+    ],
+    "worldGenType": "Normal world gen",
+    "mainFillerBlock": {
+      "value": "Blocks.SNOW"
+    },
+    "fluidBlock": {
+      "value": "Blocks.STONE#0"
+    },
+    "canRespawnHere": true,
+    "hasFog": false,
+    "isDark": false,
+    "doesWaterVaporize": false,
+    "sleepResult": "ALLOW",
+    "hasSkyLight": true,
+    "imitateOverworldBehaviour": false,
+    "onPlayerEntersDimension": {
+      "name": "NonRLTakeDamage"
+    },
+    "portalFrame": {
+      "value": "Blocks.STONE#3"
+    },
+    "portalParticles": {
+      "value": "CUSTOM:Jotunheimportalparticles"
+    },
+    "portalLuminance": 15,
+    "portalSound": {
+      "value": "block.portal.ambient"
+    },
+    "igniterName": "Bifrost Key",
+    "igniterTab": {
+      "value": "CUSTOM:CreativeTab"
+    },
+    "texture": "bifrost_key",
+    "portalTexture": "jotunheim_portal",
+    "enablePortal": true
+  }
+}

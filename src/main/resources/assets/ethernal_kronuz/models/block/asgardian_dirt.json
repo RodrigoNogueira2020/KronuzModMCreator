@@ -1,0 +1,10 @@
+{
+  "parent": "block/grass_block",
+  "textures": {
+    "bottom": "ethernal_kronuz:blocks/asgardian_dirt",
+    "top": "ethernal_kronuz:blocks/asgardian_grass_block_top",
+    "side": "ethernal_kronuz:blocks/asgardian_grass_block_side",
+    "overlay": "ethernal_kronuz:blocks/asgardian_grass_block_side",
+    "particle": "ethernal_kronuz:blocks/asgardian_dirt"
+  }
+}

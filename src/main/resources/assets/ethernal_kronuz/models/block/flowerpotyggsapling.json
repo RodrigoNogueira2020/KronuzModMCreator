@@ -1,0 +1,10 @@
+{
+  "parent": "ethernal_kronuz:custom/potted_ygg_sapling",
+  "textures": {
+    "all": "ethernal_kronuz:blocks/flower_pot",
+    "particle": "ethernal_kronuz:blocks/flower_pot",
+    "2": "ethernal_kronuz:blocks/ygg_wood_sappling",
+    "flowerpot": "ethernal_kronuz:blocks/flower_pot",
+    "dirt": "ethernal_kronuz:blocks/asgardian_dirt"
+  }
+}

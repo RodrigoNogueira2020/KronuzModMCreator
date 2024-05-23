@@ -1,0 +1,218 @@
+{
+  "freicken": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:chico_da_tina_-_freicken__prod._bejaflor__cotanza",
+        "stream": true
+      }
+    ]
+  },
+  "away": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:joao_sousa_-_away_prod._tomenzy",
+        "stream": true
+      }
+    ]
+  },
+  "necromancer": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:necromancer_-_the_fuhrer_original_mix",
+        "stream": true
+      }
+    ]
+  },
+  "cabuflamanau": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:piruka_ft_mota_jr_-__ca_bu_fla_ma_nau",
+        "stream": true
+      }
+    ]
+  },
+  "pretodaamadora": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:sim_sou_um_preto_da_amadora_sim_eu_roubo_sim_senhora_-_memes_angolanos_shorts",
+        "stream": true
+      }
+    ]
+  },
+  "gandamoca": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:yuri_nr5__-_ganda_moca_prod._young_emphasis",
+        "stream": true
+      }
+    ]
+  },
+  "saopaulo": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:yuri_nr5_-_sao_paulo__music_video",
+        "stream": true
+      }
+    ]
+  },
+  "vasco": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:vasco",
+        "stream": true
+      }
+    ]
+  },
+  "safira": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:safira",
+        "stream": true
+      }
+    ]
+  },
+  "freaky": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:freaky",
+        "stream": true
+      }
+    ]
+  },
+  "terrabladeshot": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:terrabladeshot",
+        "stream": false
+      }
+    ]
+  },
+  "terrablademeele": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:terrablademelee",
+        "stream": false
+      }
+    ]
+  },
+  "elementsfootsteps": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:elementsfootsteps",
+        "stream": false
+      }
+    ]
+  },
+  "erika": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:auf_der_heide_bluht_ein_kleines_blumelein__german_soldiers_song",
+        "stream": true
+      }
+    ]
+  },
+  "aesir_rift_opening": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:fortnite-rift",
+        "stream": false
+      }
+    ]
+  },
+  "nokkia_hammer_spawn": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:nokia_hammer",
+        "stream": false
+      }
+    ]
+  },
+  "angolaenossa": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:_angola_e_nossa__-_portuguese_nationalist_song",
+        "stream": true
+      }
+    ]
+  },
+  "technoblade_never_dies": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:technoblade_never_dies",
+        "stream": true
+      }
+    ]
+  },
+  "griffin_alive": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:griffin",
+        "stream": false
+      }
+    ]
+  },
+  "griffin-death": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:griffin-death",
+        "stream": false
+      }
+    ]
+  },
+  "griffin-hurt": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:griffin-hurt",
+        "stream": false
+      }
+    ]
+  },
+  "warper-alive": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:warper-alive",
+        "stream": false
+      }
+    ]
+  },
+  "warper-death": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:warper-death",
+        "stream": false
+      }
+    ]
+  },
+  "warper-hurt": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:warper-hurt",
+        "stream": false
+      }
+    ]
+  }
+}

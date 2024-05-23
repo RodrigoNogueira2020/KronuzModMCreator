@@ -1,0 +1,7 @@
+{
+  "parent": "ethernal_kronuz:custom/murasama",
+  "textures": {
+    "1": "ethernal_kronuz:blocks/murasama",
+    "particle": "ethernal_kronuz:items/murasama"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_fv": 39,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Janela",
+    "texture": "music_disc_freaky",
+    "description": "Freaky",
+    "creativeTab": {
+      "value": "CUSTOM:CreativeTab"
+    },
+    "specialInfo": [],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:freaky"
+    },
+    "lengthInTicks": 0,
+    "analogOutput": 0
+  }
+}

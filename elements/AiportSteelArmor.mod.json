@@ -1,0 +1,82 @@
+{
+  "_fv": 39,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "airport_steel_helmet",
+    "enableBody": true,
+    "textureBody": "airport_steel_chestplate",
+    "enableLeggings": true,
+    "textureLeggings": "airport_steel_leggings",
+    "enableBoots": true,
+    "textureBoots": "airport_steel_boots",
+    "onHelmetTick": {
+      "name": "AiportSteelArmorHelmetTickEvent"
+    },
+    "onBodyTick": {
+      "name": "AiportSteelArmorBodyTickEvent"
+    },
+    "onLeggingsTick": {
+      "name": "AiportSteelArmorLeggingsTickEvent"
+    },
+    "onBootsTick": {
+      "name": "AiportSteelArmorBootsTickEvent"
+    },
+    "creativeTab": {
+      "value": "CUSTOM:CreativeTab"
+    },
+    "armorTextureFile": "airport_steel_",
+    "helmetName": "Airport Steel Helmet",
+    "bodyName": "Airport Steel Chestplate",
+    "leggingsName": "Airport Steel Leggings",
+    "bootsName": "Airport Steel Boots",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "Modelairport_steel_armor_no_legs",
+    "helmetModelPart": "Head",
+    "helmetModelTexture": "airport_steel_layer_1.png",
+    "bodyModelName": "Modelairport_steel_armor_no_legs",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "LeftArm",
+    "armsModelPartR": "RightArm",
+    "bodyModelTexture": "airport_steel_layer_1.png",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "airport_steel_layer_2.png",
+    "bootsModelName": "Modelairport_steel_armor_no_legs",
+    "bootsModelPartL": "LeftLeg",
+    "bootsModelPartR": "RightLeg",
+    "bootsModelTexture": "airport_steel_layer_1.png",
+    "helmetItemRenderType": 0,
+    "helmetItemCustomModelName": "Normal",
+    "bodyItemRenderType": 0,
+    "bodyItemCustomModelName": "Normal",
+    "leggingsItemRenderType": 0,
+    "leggingsItemCustomModelName": "Normal",
+    "bootsItemRenderType": 0,
+    "bootsItemCustomModelName": "Normal",
+    "helmetImmuneToFire": true,
+    "bodyImmuneToFire": true,
+    "leggingsImmuneToFire": true,
+    "bootsImmuneToFire": true,
+    "maxDamage": 44,
+    "damageValueHelmet": 10,
+    "damageValueBody": 15,
+    "damageValueLeggings": 13,
+    "damageValueBoots": 10,
+    "enchantability": 14,
+    "toughness": 4.0,
+    "knockbackResistance": 0.4,
+    "equipSound": {
+      "value": ""
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:AiportSteelIngot"
+      }
+    ]
+  }
+}

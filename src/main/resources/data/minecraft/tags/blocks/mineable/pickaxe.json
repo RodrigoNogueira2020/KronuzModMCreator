@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "ethernal_kronuz:mosso_crystal_ore",
+    "ethernal_kronuz:mosso_crystal_block",
+    "ethernal_kronuz:faking_ell_ore",
+    "ethernal_kronuz:faking_ell_block",
+    "ethernal_kronuz:aiport_steel_ore",
+    "ethernal_kronuz:aiport_steel_block"
+  ]
+}

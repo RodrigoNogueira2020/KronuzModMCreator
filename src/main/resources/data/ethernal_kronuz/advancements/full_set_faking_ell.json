@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "ethernal_kronuz:textures/screens/icon_inst.png",
+    "icon": {
+      "item": "ethernal_kronuz:faking_ell_armor_chestplate"
+    },
+    "title": {
+      "translate": "advancements.full_set_faking_ell.title"
+    },
+    "description": {
+      "translate": "advancements.full_set_faking_ell.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "full_set_faking_ell": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

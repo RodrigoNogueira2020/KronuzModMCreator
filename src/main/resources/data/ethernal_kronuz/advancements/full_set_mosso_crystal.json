@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "item": "ethernal_kronuz:mosso_crystal_armor_chestplate"
+    },
+    "title": {
+      "translate": "advancements.full_set_mosso_crystal.title"
+    },
+    "description": {
+      "translate": "advancements.full_set_mosso_crystal.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "full_set_mosso_crystal": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
