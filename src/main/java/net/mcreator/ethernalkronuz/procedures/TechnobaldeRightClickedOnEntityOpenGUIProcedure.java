@@ -6,6 +6,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.server.level.ServerPlayer;
@@ -24,6 +25,8 @@ public class TechnobaldeRightClickedOnEntityOpenGUIProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		if (entity instanceof TechnobaldeEntity) {
+			if (entity instanceof Mob _entity)
+				_entity.getNavigation().stop();
 			{
 				if (sourceentity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = new BlockPos(x, y, z);

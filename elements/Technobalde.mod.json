@@ -3,7 +3,7 @@
   "_type": "livingentity",
   "definition": {
     "mobName": "Technobalde",
-    "mobLabel": "Technobalde",
+    "mobLabel": "",
     "mobModelName": "Modeltechnoblade",
     "mobModelTexture": "technoblade.png",
     "mobModelGlowTexture": "",

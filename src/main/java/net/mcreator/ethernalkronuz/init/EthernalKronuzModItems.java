@@ -22,6 +22,7 @@ import net.mcreator.ethernalkronuz.item.TerraBladeProjectileItem;
 import net.mcreator.ethernalkronuz.item.SteelCoreASetupItem;
 import net.mcreator.ethernalkronuz.item.SaoPauloItem;
 import net.mcreator.ethernalkronuz.item.SafiraItem;
+import net.mcreator.ethernalkronuz.item.RLRoxoArmourItem;
 import net.mcreator.ethernalkronuz.item.PretoDaAmadoraItem;
 import net.mcreator.ethernalkronuz.item.NokkiaHammerItem;
 import net.mcreator.ethernalkronuz.item.NecromancerItem;
@@ -230,6 +231,10 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> FLOWERPOTYGGSAPLING = block(EthernalKronuzModBlocks.FLOWERPOTYGGSAPLING, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
 	public static final RegistryObject<Item> FLOWERPOTGLOWPLANT = block(EthernalKronuzModBlocks.FLOWERPOTGLOWPLANT, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
 	public static final RegistryObject<Item> FLOWERPOTDOUBLEGLOWPLANT = block(EthernalKronuzModBlocks.FLOWERPOTDOUBLEGLOWPLANT, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
+	public static final RegistryObject<Item> RL_ROXO_ARMOUR_HELMET = REGISTRY.register("rl_roxo_armour_helmet", () -> new RLRoxoArmourItem.Helmet());
+	public static final RegistryObject<Item> RL_ROXO_ARMOUR_CHESTPLATE = REGISTRY.register("rl_roxo_armour_chestplate", () -> new RLRoxoArmourItem.Chestplate());
+	public static final RegistryObject<Item> RL_ROXO_ARMOUR_LEGGINGS = REGISTRY.register("rl_roxo_armour_leggings", () -> new RLRoxoArmourItem.Leggings());
+	public static final RegistryObject<Item> RL_ROXO_ARMOUR_BOOTS = REGISTRY.register("rl_roxo_armour_boots", () -> new RLRoxoArmourItem.Boots());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

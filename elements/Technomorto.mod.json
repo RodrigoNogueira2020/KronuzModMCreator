@@ -3,7 +3,7 @@
   "_type": "livingentity",
   "definition": {
     "mobName": "Technomorto",
-    "mobLabel": "Technomorto",
+    "mobLabel": "",
     "mobModelName": "Modelundead_technoblade",
     "mobModelTexture": "undead_technoblade.png",
     "mobModelGlowTexture": "",
@@ -30,10 +30,10 @@
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
     "equipmentMainHand": {
-      "value": "Items.DIAMOND_SWORD"
+      "value": "CUSTOM:Murasama"
     },
     "equipmentOffHand": {
-      "value": ""
+      "value": "CUSTOM:AiportSteelSword"
     },
     "equipmentHelmet": {
       "value": ""

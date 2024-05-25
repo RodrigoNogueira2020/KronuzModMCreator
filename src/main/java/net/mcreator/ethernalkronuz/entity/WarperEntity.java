@@ -149,7 +149,7 @@ public class WarperEntity extends EnderMan implements IAnimatable {
 			public void start() {
 				LivingEntity livingentity = WarperEntity.this.getTarget();
 				Vec3 vec3d = livingentity.getEyePosition(1);
-				WarperEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 10);
+				WarperEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 5);
 			}
 
 			@Override
@@ -159,14 +159,14 @@ public class WarperEntity extends EnderMan implements IAnimatable {
 					WarperEntity.this.doHurtTarget(livingentity);
 				} else {
 					double d0 = WarperEntity.this.distanceToSqr(livingentity);
-					if (d0 < 32) {
+					if (d0 < 16) {
 						Vec3 vec3d = livingentity.getEyePosition(1);
-						WarperEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 10);
+						WarperEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 5);
 					}
 				}
 			}
 		});
-		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 5, 20) {
+		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 0.8, 20) {
 			@Override
 			protected Vec3 getPosition() {
 				Random random = WarperEntity.this.getRandom();
@@ -176,7 +176,7 @@ public class WarperEntity extends EnderMan implements IAnimatable {
 				return new Vec3(dir_x, dir_y, dir_z);
 			}
 		});
-		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 10, true) {
+		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 5, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
@@ -250,13 +250,13 @@ public class WarperEntity extends EnderMan implements IAnimatable {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 10);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.7);
 		builder = builder.add(Attributes.MAX_HEALTH, 10);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 9);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.25);
-		builder = builder.add(Attributes.FLYING_SPEED, 10);
+		builder = builder.add(Attributes.FLYING_SPEED, 0.7);
 		return builder;
 	}
 

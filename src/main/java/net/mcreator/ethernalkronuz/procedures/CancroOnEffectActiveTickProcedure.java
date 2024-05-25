@@ -12,7 +12,7 @@ public class CancroOnEffectActiveTickProcedure {
 			return;
 		if ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(EthernalKronuzModMobEffects.CANCRO.get()) ? _livEnt.getEffect(EthernalKronuzModMobEffects.CANCRO.get()).getDuration() : 0) < 20) {
 			if (entity instanceof LivingEntity _entity)
-				_entity.hurt(new DamageSource("cancro").bypassArmor(), 999999);
+				_entity.hurt(new DamageSource("cancro").bypassArmor(), (float) Double.POSITIVE_INFINITY);
 		}
 	}
 }

@@ -31,7 +31,6 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
-import net.minecraft.network.chat.TextComponent;
 
 import net.mcreator.ethernalkronuz.procedures.TechnobaldeRightClickedOnEntityOpenGUIProcedure;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModEntities;
@@ -45,8 +44,6 @@ public class TechnobaldeEntity extends PathfinderMob {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
-		setCustomName(new TextComponent("Technobalde"));
-		setCustomNameVisible(true);
 		setPersistenceRequired();
 		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Items.DIAMOND_SWORD));
 	}

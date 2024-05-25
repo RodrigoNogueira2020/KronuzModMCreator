@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.mcreator.ethernalkronuz.client.model.Modelundead_technoblade;
 import net.mcreator.ethernalkronuz.client.model.Modelterrabladeprojectileconverted;
 import net.mcreator.ethernalkronuz.client.model.Modeltechnoblade;
+import net.mcreator.ethernalkronuz.client.model.Modelrl_armor;
 import net.mcreator.ethernalkronuz.client.model.Modelradiantlord;
 import net.mcreator.ethernalkronuz.client.model.ModelnullEntity;
 import net.mcreator.ethernalkronuz.client.model.Modelmosso_cyrstal_armor_no_legs;
@@ -34,6 +35,7 @@ public class EthernalKronuzModModels {
 		event.registerLayerDefinition(Modelterrabladeprojectileconverted.LAYER_LOCATION, Modelterrabladeprojectileconverted::createBodyLayer);
 		event.registerLayerDefinition(Modelfaking_ell_armor_no_legs.LAYER_LOCATION, Modelfaking_ell_armor_no_legs::createBodyLayer);
 		event.registerLayerDefinition(Modelgriffin.LAYER_LOCATION, Modelgriffin::createBodyLayer);
+		event.registerLayerDefinition(Modelrl_armor.LAYER_LOCATION, Modelrl_armor::createBodyLayer);
 		event.registerLayerDefinition(Modelfaking_ell_armor_legs.LAYER_LOCATION, Modelfaking_ell_armor_legs::createBodyLayer);
 		event.registerLayerDefinition(Modeltechnoblade.LAYER_LOCATION, Modeltechnoblade::createBodyLayer);
 		event.registerLayerDefinition(Modelairport_steel_armor_legs.LAYER_LOCATION, Modelairport_steel_armor_legs::createBodyLayer);
