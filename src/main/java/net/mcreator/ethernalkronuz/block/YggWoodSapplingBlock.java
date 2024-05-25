@@ -59,6 +59,11 @@ public class YggWoodSapplingBlock extends Block implements BonemealableBlock {
 	}
 
 	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return box(0, 0, 0, 12, 12, 12);
+	}
+
+	@Override
 	public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
 		return 5;
 	}

@@ -9,7 +9,6 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.MaterialColor;
@@ -38,7 +37,7 @@ import java.util.Collections;
 
 public class FlowerpotbioluminescentlilyBlock extends Block {
 	public FlowerpotbioluminescentlilyBlock() {
-		super(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).sound(SoundType.STONE).instabreak().lightLevel(s -> 11).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.STONE).sound(SoundType.GRASS).instabreak().lightLevel(s -> 13).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 	}
 
 	@Override
@@ -57,8 +56,8 @@ public class FlowerpotbioluminescentlilyBlock extends Block {
 	}
 
 	@Override
-	public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter world, BlockPos pos, Player player) {
-		return new ItemStack(EthernalKronuzModBlocks.BIO_LUMINESCENT_LILY.get());
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return box(5, 0, 5, 11, 6, 11);
 	}
 
 	@Override

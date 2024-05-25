@@ -79,7 +79,7 @@ public class WarperEntity extends EnderMan implements IAnimatable {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.AMBIENT).add(new MobSpawnSettings.SpawnerData(EthernalKronuzModEntities.WARPER.get(), 8, 1, 2));
+			event.getSpawns().getSpawner(MobCategory.AMBIENT).add(new MobSpawnSettings.SpawnerData(EthernalKronuzModEntities.WARPER.get(), 8, 1, 1));
 	}
 
 	public WarperEntity(PlayMessages.SpawnEntity packet, Level world) {
@@ -176,7 +176,7 @@ public class WarperEntity extends EnderMan implements IAnimatable {
 				return new Vec3(dir_x, dir_y, dir_z);
 			}
 		});
-		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 5, false) {
+		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 5.5, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
@@ -250,13 +250,12 @@ public class WarperEntity extends EnderMan implements IAnimatable {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.7);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.5);
 		builder = builder.add(Attributes.MAX_HEALTH, 10);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 9);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.25);
-		builder = builder.add(Attributes.FLYING_SPEED, 0.7);
+		builder = builder.add(Attributes.FLYING_SPEED, 0.5);
 		return builder;
 	}
 

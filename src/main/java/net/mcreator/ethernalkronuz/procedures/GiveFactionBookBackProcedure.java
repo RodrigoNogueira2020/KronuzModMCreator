@@ -8,6 +8,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.TextComponent;
 
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModItems;
 
@@ -30,6 +31,9 @@ public class GiveFactionBookBackProcedure {
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
+		} else {
+			if (entity instanceof Player _player && !_player.level.isClientSide())
+				_player.displayClientMessage(new TextComponent("N\u00E3o podes usar este comando"), (true));
 		}
 	}
 }

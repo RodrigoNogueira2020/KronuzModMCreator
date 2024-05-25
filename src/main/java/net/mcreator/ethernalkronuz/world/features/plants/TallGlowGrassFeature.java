@@ -43,7 +43,7 @@ public class TallGlowGrassFeature extends RandomPatchFeature {
 		return PLACED_FEATURE;
 	}
 
-	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("ethernal_kronuz:sky_fields"));
+	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("ethernal_kronuz:floating_garden"), new ResourceLocation("ethernal_kronuz:sky_fields"));
 	private final Set<ResourceKey<Level>> generate_dimensions = Set.of(ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("ethernal_kronuz:asgard")));
 
 	public TallGlowGrassFeature() {

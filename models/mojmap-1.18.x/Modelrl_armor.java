@@ -1,4 +1,4 @@
-// Made with Blockbench 4.8.3
+// Made with Blockbench 4.10.1
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
 
@@ -27,11 +27,8 @@ public class Modelrl_armor<T extends Entity> extends EntityModel<T> {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
 
-		PartDefinition Head = partdefinition.addOrReplaceChild("Head",
-				CubeListBuilder.create().texOffs(0, 0)
-						.addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(1.0F)).texOffs(32, 0)
-						.addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(1.5F)),
-				PartPose.offset(0.0F, 0.0F, 0.0F));
+		PartDefinition Head = partdefinition.addOrReplaceChild("Head", CubeListBuilder.create().texOffs(0, 0).addBox(
+				-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(1.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 
 		PartDefinition left_small_wing = Head.addOrReplaceChild("left_small_wing", CubeListBuilder.create(),
 				PartPose.offset(0.0F, -9.0F, 6.0F));
@@ -106,7 +103,7 @@ public class Modelrl_armor<T extends Entity> extends EntityModel<T> {
 						PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.3927F));
 
 		PartDefinition crystal = Head.addOrReplaceChild("crystal",
-				CubeListBuilder.create().texOffs(0, 5)
+				CubeListBuilder.create().texOffs(37, 16)
 						.addBox(-1.25F, 0.9F, -0.25F, 2.5F, 1.85F, 0.5F, new CubeDeformation(0.0F)).texOffs(0, 0)
 						.addBox(-1.2F, -1.0F, -0.25F, 2.4F, 2.0F, 0.5F, new CubeDeformation(0.0F)).texOffs(0, 5)
 						.addBox(-1.25F, -2.9F, -0.25F, 2.5F, 1.9F, 0.5F, new CubeDeformation(0.0F)),
@@ -114,7 +111,7 @@ public class Modelrl_armor<T extends Entity> extends EntityModel<T> {
 
 		PartDefinition cube_r13 = crystal.addOrReplaceChild("cube_r13",
 				CubeListBuilder.create().texOffs(0, 3)
-						.addBox(-1.0F, 1.2F, -0.25F, 2.0F, 0.8F, 0.5F, new CubeDeformation(0.0F)).texOffs(0, 3)
+						.addBox(-1.0F, 1.2F, -0.25F, 2.0F, 0.8F, 0.5F, new CubeDeformation(0.0F)).texOffs(13, 17)
 						.addBox(-1.0F, -2.0F, -0.25F, 2.0F, 0.8F, 0.5F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 1.5708F));
 

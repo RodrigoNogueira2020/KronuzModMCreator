@@ -52,9 +52,9 @@ public class EthernalKronuzModEntities {
 	public static final RegistryObject<EntityType<BlessingEntity>> BLESSING = register("blessing",
 			EntityType.Builder.<BlessingEntity>of(BlessingEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BlessingEntity::new).fireImmune().sized(0.6f, 0.6f));
 	public static final RegistryObject<EntityType<GriffinAnimatedEntity>> GRIFFIN_ANIMATED = register("griffin_animated",
-			EntityType.Builder.<GriffinAnimatedEntity>of(GriffinAnimatedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GriffinAnimatedEntity::new)
+			EntityType.Builder.<GriffinAnimatedEntity>of(GriffinAnimatedEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GriffinAnimatedEntity::new)
 
-					.sized(6f, 2f));
+					.sized(2f, 2f));
 	public static final RegistryObject<EntityType<TerraBladeProjectileEntity>> TERRA_BLADE_PROJECTILE = register("projectile_terra_blade_projectile", EntityType.Builder.<TerraBladeProjectileEntity>of(TerraBladeProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(TerraBladeProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 

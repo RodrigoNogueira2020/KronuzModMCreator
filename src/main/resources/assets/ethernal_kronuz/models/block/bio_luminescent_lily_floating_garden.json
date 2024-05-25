@@ -1,7 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "ethernal_kronuz:blocks/bioluminescent_lily",
-    "particle": "ethernal_kronuz:blocks/bioluminescent_lily"
-  }
-}

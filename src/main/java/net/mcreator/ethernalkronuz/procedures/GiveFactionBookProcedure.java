@@ -12,7 +12,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TextComponent;
 
 import net.mcreator.ethernalkronuz.network.EthernalKronuzModVariables;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModItems;
@@ -35,28 +34,28 @@ public class GiveFactionBookProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).FirstBook == false && ((entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
-				? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("ethernal_kronuz:full_set_faking_ell"))).isDone()
-				: false)
-				|| (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
-						? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("ethernal_kronuz:full_set_mosso_crystal"))).isDone()
-						: false)
-				|| (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
-						? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("ethernal_kronuz:full_set_airport_steel"))).isDone()
-						: false))) {
-			{
-				boolean _setval = true;
-				entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.FirstBook = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			if (entity instanceof Player _player && !_player.level.isClientSide())
-				_player.displayClientMessage(new TextComponent("Usa o comando /giveFactionBook para resgatares o teu livro"), (true));
-			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(EthernalKronuzModItems.FACTION_BOOK.get());
-				_setstack.setCount(1);
-				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+		if (entity.isAlive() && (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).FirstBook == false) {
+			if ((entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
+					? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("ethernal_kronuz:full_set_faking_ell"))).isDone()
+					: false)
+					|| (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
+							? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("ethernal_kronuz:full_set_mosso_crystal"))).isDone()
+							: false)
+					|| (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
+							? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("ethernal_kronuz:full_set_airport_steel"))).isDone()
+							: false)) {
+				{
+					boolean _setval = true;
+					entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.FirstBook = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(EthernalKronuzModItems.FACTION_BOOK.get());
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
 			}
 		}
 	}

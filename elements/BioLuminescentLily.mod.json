@@ -94,6 +94,9 @@
     "restrictionBiomes": [
       {
         "value": "CUSTOM:SkyFields"
+      },
+      {
+        "value": "CUSTOM:FloatingGarden"
       }
     ],
     "patchSize": 64,

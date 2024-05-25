@@ -1,15 +1,12 @@
 
 package net.mcreator.ethernalkronuz.block;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.Material;
@@ -37,7 +34,7 @@ import java.util.Collections;
 
 public class FlowerpotyggsaplingBlock extends Block {
 	public FlowerpotyggsaplingBlock() {
-		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).instabreak().lightLevel(s -> 1).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of(Material.PLANT).sound(SoundType.GRASS).instabreak().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 	}
 
 	@Override
@@ -56,8 +53,8 @@ public class FlowerpotyggsaplingBlock extends Block {
 	}
 
 	@Override
-	public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter world, BlockPos pos, Player player) {
-		return new ItemStack(EthernalKronuzModBlocks.YGG_WOOD_SAPPLING.get());
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return box(5, 0, 5, 11, 6, 11);
 	}
 
 	@Override

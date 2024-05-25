@@ -220,11 +220,6 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> TERRA_BLADE_BLOCK = block(EthernalKronuzModBlocks.TERRA_BLADE_BLOCK, null);
 	public static final RegistryObject<Item> TERRA_BLADE_PROJECTILE = REGISTRY.register("terra_blade_projectile", () -> new TerraBladeProjectileItem());
 	public static final RegistryObject<Item> INVISIBLE_BLOCK_BLESSING = block(EthernalKronuzModBlocks.INVISIBLE_BLOCK_BLESSING, null);
-	public static final RegistryObject<Item> BIO_LUMINESCENT_LILY_FLOATING_GARDEN = block(EthernalKronuzModBlocks.BIO_LUMINESCENT_LILY_FLOATING_GARDEN, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
-	public static final RegistryObject<Item> GLOW_PLANT_FLOATING_GARDEN = block(EthernalKronuzModBlocks.GLOW_PLANT_FLOATING_GARDEN, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
-	public static final RegistryObject<Item> DOUBLE_GLOW_PLANT_FLOATING_GARDEN = block(EthernalKronuzModBlocks.DOUBLE_GLOW_PLANT_FLOATING_GARDEN, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
-	public static final RegistryObject<Item> TALL_GLOW_GRASS_FLOATING_GARDEN = doubleBlock(EthernalKronuzModBlocks.TALL_GLOW_GRASS_FLOATING_GARDEN, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
-	public static final RegistryObject<Item> NORMAL_GLOW_GRASS_FLOATING_GARDEN = block(EthernalKronuzModBlocks.NORMAL_GLOW_GRASS_FLOATING_GARDEN, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
 	public static final RegistryObject<Item> NORMAL_GLOW_GRASS = block(EthernalKronuzModBlocks.NORMAL_GLOW_GRASS, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
 	public static final RegistryObject<Item> CRYSTALIZED_DIVINE_WATER = block(EthernalKronuzModBlocks.CRYSTALIZED_DIVINE_WATER, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
 	public static final RegistryObject<Item> FLOWERPOTBIOLUMINESCENTLILY = block(EthernalKronuzModBlocks.FLOWERPOTBIOLUMINESCENTLILY, EthernalKronuzModTabs.TAB_CREATIVE_TAB);

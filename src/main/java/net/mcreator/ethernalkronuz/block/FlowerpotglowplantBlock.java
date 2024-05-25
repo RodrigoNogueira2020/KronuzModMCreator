@@ -37,7 +37,7 @@ import java.util.Collections;
 
 public class FlowerpotglowplantBlock extends Block {
 	public FlowerpotglowplantBlock() {
-		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).instabreak().lightLevel(s -> 13).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of(Material.PLANT).sound(SoundType.GRASS).instabreak().lightLevel(s -> 13).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 	}
 
 	@Override
@@ -53,6 +53,11 @@ public class FlowerpotglowplantBlock extends Block {
 	@Override
 	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return Shapes.empty();
+	}
+
+	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return box(5, 0, 5, 11, 6, 11);
 	}
 
 	@Override

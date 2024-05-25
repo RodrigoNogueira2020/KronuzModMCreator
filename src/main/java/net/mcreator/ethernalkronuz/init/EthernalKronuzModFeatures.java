@@ -17,15 +17,10 @@ import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.Holder;
 
-import net.mcreator.ethernalkronuz.world.features.plants.TallGlowGrassFloatingGardenFeature;
 import net.mcreator.ethernalkronuz.world.features.plants.TallGlowGrassFeature;
-import net.mcreator.ethernalkronuz.world.features.plants.NormalGlowGrassFloatingGardenFeature;
 import net.mcreator.ethernalkronuz.world.features.plants.NormalGlowGrassFeature;
-import net.mcreator.ethernalkronuz.world.features.plants.GlowPlantFloatingGardenFeature;
 import net.mcreator.ethernalkronuz.world.features.plants.GlowPlantFeature;
-import net.mcreator.ethernalkronuz.world.features.plants.DoubleGlowPlantFloatingGardenFeature;
 import net.mcreator.ethernalkronuz.world.features.plants.DoubleGlowPlantFeature;
-import net.mcreator.ethernalkronuz.world.features.plants.BioLuminescentLilyFloatingGardenFeature;
 import net.mcreator.ethernalkronuz.world.features.plants.BioLuminescentLilyFeature;
 import net.mcreator.ethernalkronuz.world.features.ores.MossoCrystalOreFeature;
 import net.mcreator.ethernalkronuz.world.features.ores.HeavenSlateFeature;
@@ -145,16 +140,6 @@ public class EthernalKronuzModFeatures {
 			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, DivinecrystalspikegiantFeature.GENERATE_BIOMES, DivinecrystalspikegiantFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> YGGDRASILGIANTSTRUCTVOIDS = register("yggdrasilgiantstructvoids", YggdrasilgiantstructvoidsFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, YggdrasilgiantstructvoidsFeature.GENERATE_BIOMES, YggdrasilgiantstructvoidsFeature::placedFeature));
-	public static final RegistryObject<Feature<?>> BIO_LUMINESCENT_LILY_FLOATING_GARDEN = register("bio_luminescent_lily_floating_garden", BioLuminescentLilyFloatingGardenFeature::feature,
-			new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION, BioLuminescentLilyFloatingGardenFeature.GENERATE_BIOMES, BioLuminescentLilyFloatingGardenFeature::placedFeature));
-	public static final RegistryObject<Feature<?>> GLOW_PLANT_FLOATING_GARDEN = register("glow_plant_floating_garden", GlowPlantFloatingGardenFeature::feature,
-			new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION, GlowPlantFloatingGardenFeature.GENERATE_BIOMES, GlowPlantFloatingGardenFeature::placedFeature));
-	public static final RegistryObject<Feature<?>> DOUBLE_GLOW_PLANT_FLOATING_GARDEN = register("double_glow_plant_floating_garden", DoubleGlowPlantFloatingGardenFeature::feature,
-			new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION, DoubleGlowPlantFloatingGardenFeature.GENERATE_BIOMES, DoubleGlowPlantFloatingGardenFeature::placedFeature));
-	public static final RegistryObject<Feature<?>> TALL_GLOW_GRASS_FLOATING_GARDEN = register("tall_glow_grass_floating_garden", TallGlowGrassFloatingGardenFeature::feature,
-			new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION, TallGlowGrassFloatingGardenFeature.GENERATE_BIOMES, TallGlowGrassFloatingGardenFeature::placedFeature));
-	public static final RegistryObject<Feature<?>> NORMAL_GLOW_GRASS_FLOATING_GARDEN = register("normal_glow_grass_floating_garden", NormalGlowGrassFloatingGardenFeature::feature,
-			new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION, NormalGlowGrassFloatingGardenFeature.GENERATE_BIOMES, NormalGlowGrassFloatingGardenFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> NORMAL_GLOW_GRASS = register("normal_glow_grass", NormalGlowGrassFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION, NormalGlowGrassFeature.GENERATE_BIOMES, NormalGlowGrassFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> ENDRUINSLARGE = register("endruinslarge", EndruinslargeFeature::feature,

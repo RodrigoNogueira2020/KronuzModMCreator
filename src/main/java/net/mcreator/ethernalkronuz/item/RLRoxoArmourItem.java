@@ -95,7 +95,7 @@ public abstract class RLRoxoArmourItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "ethernal_kronuz:textures/entities/rl_crystal_purple.png";
+			return "ethernal_kronuz:textures/models/armor/radiant_lord_armor_purple_cyrstal__layer_1.png";
 		}
 	}
 
@@ -123,7 +123,7 @@ public abstract class RLRoxoArmourItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "ethernal_kronuz:textures/entities/rl_crystal_purple.png";
+			return "ethernal_kronuz:textures/models/armor/radiant_lord_armor_purple_cyrstal__layer_1.png";
 		}
 	}
 
@@ -152,7 +152,7 @@ public abstract class RLRoxoArmourItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "ethernal_kronuz:textures/entities/rl_crystal_purple.png";
+			return "ethernal_kronuz:textures/models/armor/radiant_lord_armor_purple_cyrstal__layer_2.png";
 		}
 	}
 
@@ -181,7 +181,7 @@ public abstract class RLRoxoArmourItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "ethernal_kronuz:textures/entities/rl_crystal_purple.png";
+			return "ethernal_kronuz:textures/models/armor/radiant_lord_armor_purple_cyrstal__layer_1.png";
 		}
 	}
 }
