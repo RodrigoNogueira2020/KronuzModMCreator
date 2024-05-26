@@ -37,12 +37,12 @@ public class GlowPlantSporesParticle extends TextureSheetParticle {
 		this.spriteSet = spriteSet;
 		this.setSize(0.2f, 0.2f);
 
-		this.lifetime = 20;
-		this.gravity = 0.5f;
+		this.lifetime = (int) Math.max(1, 40 + (this.random.nextInt(40) - 20));
+		this.gravity = 0.1f;
 		this.hasPhysics = true;
-		this.xd = vx * 1;
-		this.yd = vy * 1;
-		this.zd = vz * 1;
+		this.xd = vx * 0.1;
+		this.yd = vy * 0.1;
+		this.zd = vz * 0.1;
 		this.setSpriteFromAge(spriteSet);
 	}
 
@@ -60,7 +60,7 @@ public class GlowPlantSporesParticle extends TextureSheetParticle {
 	public void tick() {
 		super.tick();
 		if (!this.removed) {
-			this.setSprite(this.spriteSet.get((this.age / 1) % 4 + 1, 4));
+			this.setSprite(this.spriteSet.get((this.age / 6) % 4 + 1, 4));
 		}
 	}
 }

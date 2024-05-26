@@ -1,6 +1,8 @@
 
 package net.mcreator.ethernalkronuz.block;
 
+import org.checkerframework.checker.units.qual.s;
+
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.block.state.BlockState;
@@ -14,12 +16,17 @@ import net.minecraft.core.BlockPos;
 
 public class AiportSteelOreBlock extends FallingBlock {
 	public AiportSteelOreBlock() {
-		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(30f, 3000f).requiresCorrectToolForDrops().randomTicks());
+		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(30f, 3000f).lightLevel(s -> 3).requiresCorrectToolForDrops().randomTicks());
+	}
+
+	@Override
+	public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
+		return true;
 	}
 
 	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 15;
+		return 0;
 	}
 
 	@Override

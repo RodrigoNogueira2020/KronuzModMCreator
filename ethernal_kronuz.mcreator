@@ -709,10 +709,10 @@
       "registry_name": "aiport_steel_ore",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/aiport_steel_ore.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_ore.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/aiport_steel_ore.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/AiportSteelOreBlock.java"
+          "src/main/resources/assets/ethernal_kronuz/models/block/aiport_steel_ore.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/AiportSteelOreBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/aiport_steel_ore.json"
         ]
       },
       "path": "~/Ores/Airport Steel"
@@ -726,8 +726,8 @@
       "registry_name": "aiport_steel_block",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/blockstates/aiport_steel_block.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_block.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/aiport_steel_block.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/AiportSteelBlockBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/aiport_steel_block.json"
         ]
@@ -6671,10 +6671,10 @@
       "registry_name": "ygg_leaves",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/ygg_leaves.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/YggLeavesBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/ygg_leaves.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/ygg_leaves.json"
+          "src/main/java/net/mcreator/ethernalkronuz/block/YggLeavesBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/ygg_leaves.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/ygg_leaves.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/YggWood/Leaves"
@@ -10417,8 +10417,8 @@
       "block.ethernal_kronuz.bricks_heaven_slate_slabs": "Heaven Slate Bricks Slabs",
       "item.ethernal_kronuz.cabuflamanau": "Piruka",
       "biome.ethernal_kronuz.sky_fields": "Sky Fields",
-      "key.ethernal_kronuz.griffin_up": "Griffin Upwards",
       "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
+      "key.ethernal_kronuz.griffin_up": "Griffin Upwards",
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
       "advancements.bt_achievement.descr": "Juntar-se aos Big Testa",
       "advancements.rl_verde_achievement.title": "Carregado até ao limite",
@@ -10429,13 +10429,13 @@
       "gui.ethernal_kronuz.trade_system_gui_techno.label_technobalde": "Technobalde",
       "item.ethernal_kronuz.blade_of_the_void_setup": "§dBlade Of The Void",
       "block.ethernal_kronuz.mosso_crystal_block": "Block of Mosso Crystal",
-      "block.ethernal_kronuz.ygg_trapdoor": "Ygg Wood Trapdoor",
-      "item.ethernal_kronuz.aiport_steel_armor_chestplate": "Airport Steel Chestplate",
       "advancements.ascender_advancement.descr": "Tornar-se um Radiant Lord",
+      "item.ethernal_kronuz.aiport_steel_armor_chestplate": "Airport Steel Chestplate",
+      "block.ethernal_kronuz.ygg_trapdoor": "Ygg Wood Trapdoor",
       "item.ethernal_kronuz.rl_roxo_armour_helmet": "RL Roxo Armour Helmet",
       "item.ethernal_kronuz.terra_blade_setup": "§aTerra Blade",
-      "advancements.enters_asgard.descr": "Enter in Asgard",
       "block.ethernal_kronuz.ygg_planks": "Ygg Wood Planks",
+      "advancements.enters_asgard.descr": "Enter in Asgard",
       "item.ethernal_kronuz.necromancer.desc": "Necromancer",
       "subtitles.nokkia_hammer_spawn": "",
       "gamerule.give_rl_verde_game_rule.description": "Ascender um jogador",
@@ -10454,16 +10454,16 @@
       "block.ethernal_kronuz.ygg_button": "Ygg Wood Button",
       "subtitles.warper-hurt": "",
       "item.ethernal_kronuz.aiport_steel_armor_leggings": "Airport Steel Leggings",
-      "block.ethernal_kronuz.tiles_heaven_slate_slab": "Heaven Slate Tiles Slab",
       "block.ethernal_kronuz.ygg_door": "Ygg Wood Door",
+      "block.ethernal_kronuz.tiles_heaven_slate_slab": "Heaven Slate Tiles Slab",
       "subtitles.freaky": "",
       "item.ethernal_kronuz.aiport_steel_ingot": "Aiport Steel Ingot",
       "item.ethernal_kronuz.aiport_steel_pickaxe": "Airport Steel Pickaxe",
       "entity.ethernal_kronuz.warper": "Warper",
       "block.ethernal_kronuz.heaven_stone_bricks_stairs": "Heaven Stone Bricks Stairs",
       "block.ethernal_kronuz.heaven_stone_bricks": "Heaven Stone Bricks",
-      "subtitles.gandamoca": "",
       "advancements.full_set_faking_ell.title": "Eia mano!",
+      "subtitles.gandamoca": "",
       "effect.ethernal_kronuz.bt_effect": "Big Testa",
       "itemGroup.tabcreative_tab": "Ethernal Kronuz",
       "gui.ethernal_kronuz.trade_system_gui_techno.label_trades": "Trades",
@@ -10629,7 +10629,7 @@
       "item.ethernal_kronuz.nokkia_hammer": "§4Nokkia Hammer",
       "block.ethernal_kronuz.bricks_heaven_slate_stairs": "Heaven Slate Bricks Stairs",
       "block.ethernal_kronuz.chiseled_heaven_stone_slabs": "Chiseled Heaven Stone Slabs",
-      "block.ethernal_kronuz.aiport_steel_block": "Block of Aiport Steel",
+      "block.ethernal_kronuz.aiport_steel_block": "Block of Airport Steel",
       "item.ethernal_kronuz.mosso_crystal_armor_boots": "Mosso Crystal Boots",
       "curios.identifier.livro": "Livro das Fac��es",
       "item.ethernal_kronuz.asgard": "Asgard Portal Igniter",
