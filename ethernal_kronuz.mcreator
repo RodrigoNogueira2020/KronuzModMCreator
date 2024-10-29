@@ -2675,7 +2675,7 @@
       "type": "tool",
       "sortid": 40,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "murasama",
       "metadata": {
         "files": [
@@ -2920,7 +2920,7 @@
       "type": "tool",
       "sortid": 38,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "nokkia_hammer",
       "metadata": {
         "files": [
@@ -3352,7 +3352,7 @@
       "type": "tool",
       "sortid": 39,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "blade_of_the_void_setup",
       "metadata": {
         "files": [
@@ -3873,7 +3873,7 @@
       "type": "tool",
       "sortid": 41,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "terra_blade_setup",
       "metadata": {
         "files": [
