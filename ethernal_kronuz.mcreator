@@ -10075,6 +10075,21 @@
         ]
       },
       "path": "~/Factions/Radiant Lords/Transformations/Roxo"
+    },
+    {
+      "name": "RenderSkyAsgardProcedure",
+      "type": "procedure",
+      "sortid": 559,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "render_sky_asgard_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/RenderSkyAsgardProcedureProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Dimensions/Asgard/Geracao"
     }
   ],
   "variable_elements": [
