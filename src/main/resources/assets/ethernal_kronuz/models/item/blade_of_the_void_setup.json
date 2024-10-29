@@ -1,7 +1,51 @@
 {
+  "loader": "forge:separate-perspective",
+  "gui_light": "front",
+  "base":
+  {
   "parent": "ethernal_kronuz:custom/bladeofthevoid",
-  "textures": {
-    "1": "ethernal_kronuz:blocks/bladeofthevoid",
-    "particle": "ethernal_kronuz:items/blade_of_the_void"
+  "textures":
+  {
+      "1" : "ethernal_kronuz:blocks/bladeofthevoid"
+  },
+      "display":
+        {
+          "thirdperson_righthand": {
+          "translation": [0, -5.75, -1.5],
+          "scale": [1, 1, 1]
+      },
+      "thirdperson_lefthand": {
+          "translation": [0, -5.75, -1.5],
+          "scale": [1, 1, 1]
+      },
+      "firstperson_righthand": {
+          "rotation": [-9, 0, 0],
+          "translation": [0, -8.25, 0]
+      },
+      "firstperson_lefthand": {
+        "rotation": [-9, 0, 0],
+        "translation": [0, -8.25, 0]
+      },
+      "ground": {
+          "translation": [0, 3, 0],
+          "scale": [1,1,1]
+      },
+      "fixed": {
+          "rotation": [0, -90, 0],
+          "translation": [0, -4.75, 0]
+      }
+        }
+  },
+  "perspectives":
+  {
+      "gui":
+      {
+          "parent": "item/generated",
+          "textures":
+          {
+              "layer0": "ethernal_kronuz:items/blade_of_the_void"
+          },
+          "gui_light": "front"
+      }
   }
 }
