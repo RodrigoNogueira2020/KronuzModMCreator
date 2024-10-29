@@ -53,6 +53,7 @@ import net.mcreator.ethernalkronuz.item.FactionBookItem;
 import net.mcreator.ethernalkronuz.item.ErikaItem;
 import net.mcreator.ethernalkronuz.item.DivineWaterItem;
 import net.mcreator.ethernalkronuz.item.DivineCrystalShardItem;
+import net.mcreator.ethernalkronuz.item.DeepSeaBootItem;
 import net.mcreator.ethernalkronuz.item.CristalizedDivineWaterItem;
 import net.mcreator.ethernalkronuz.item.CabuflamanauItem;
 import net.mcreator.ethernalkronuz.item.BladeOfTheVoidSetupItem;
@@ -230,6 +231,7 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> RL_ROXO_ARMOUR_CHESTPLATE = REGISTRY.register("rl_roxo_armour_chestplate", () -> new RLRoxoArmourItem.Chestplate());
 	public static final RegistryObject<Item> RL_ROXO_ARMOUR_LEGGINGS = REGISTRY.register("rl_roxo_armour_leggings", () -> new RLRoxoArmourItem.Leggings());
 	public static final RegistryObject<Item> RL_ROXO_ARMOUR_BOOTS = REGISTRY.register("rl_roxo_armour_boots", () -> new RLRoxoArmourItem.Boots());
+	public static final RegistryObject<Item> DEEP_SEA_BOOT = REGISTRY.register("deep_sea_boot", () -> new DeepSeaBootItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

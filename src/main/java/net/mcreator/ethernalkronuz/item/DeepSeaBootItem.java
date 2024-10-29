@@ -13,14 +13,12 @@ import net.minecraft.world.entity.monster.EnderMan;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 
-import net.mcreator.ethernalkronuz.procedures.TheEndingEyeBaubleIsUnequippedProcedure;
-import net.mcreator.ethernalkronuz.procedures.TheEndingEyeBaubleIsEquippedProcedure;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModTabs;
 
 import java.util.List;
 
-public class TheEndingEyeItem extends Item implements ICurioItem {
-	public TheEndingEyeItem() {
+public class DeepSeaBootItem extends Item implements ICurioItem {
+	public DeepSeaBootItem() {
 		super(new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).stacksTo(1).fireResistant().rarity(Rarity.EPIC));
 	}
 
@@ -37,16 +35,6 @@ public class TheEndingEyeItem extends Item implements ICurioItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(new TextComponent("Open the Third Eye"));
-	}
-
-	@Override
-	public void curioTick(SlotContext slotContext, ItemStack stack) {
-		TheEndingEyeBaubleIsEquippedProcedure.execute(slotContext.entity());
-	}
-
-	@Override
-	public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack) {
-		TheEndingEyeBaubleIsUnequippedProcedure.execute(slotContext.entity());
+		list.add(new TextComponent("Boot of the Sea God"));
 	}
 }

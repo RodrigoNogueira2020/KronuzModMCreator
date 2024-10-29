@@ -3,9 +3,9 @@
   "_type": "curiosbauble",
   "definition": {
     "renderType": 0,
-    "texture": "ending_eye",
+    "texture": "deep_sea_boot",
     "customModelName": "Normal",
-    "name": "The Ending Eye",
+    "name": "Deep Sea Boot",
     "rarity": "EPIC",
     "slotType": "CURIO",
     "baubleModel": "Default",
@@ -29,19 +29,13 @@
     "addSlot": true,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "Open the Third Eye"
+      "Boot of the Sea God"
     ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "slotAmount": 1,
-    "curioTick": {
-      "name": "TheEndingEyeBaubleIsEquipped"
-    },
-    "onUnequip": {
-      "name": "TheEndingEyeBaubleIsUnequipped"
-    },
     "isFood": false,
     "friendlyPigs": true,
     "enderMask": true,
