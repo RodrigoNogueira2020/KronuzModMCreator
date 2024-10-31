@@ -20,4 +20,5 @@ public class EthernalKronuzModParticleTypes {
 	public static final RegistryObject<ParticleType<?>> GLOW_PLANT_SPORES = REGISTRY.register("glow_plant_spores", () -> new SimpleParticleType(true));
 	public static final RegistryObject<ParticleType<?>> JOTUNHEIMPORTALPARTICLES = REGISTRY.register("jotunheimportalparticles", () -> new SimpleParticleType(false));
 	public static final RegistryObject<ParticleType<?>> ASGARD_PORTAL_PARTICLES = REGISTRY.register("asgard_portal_particles", () -> new SimpleParticleType(false));
+	public static final RegistryObject<ParticleType<?>> ASGARD_PARTICLE = REGISTRY.register("asgard_particle", () -> new SimpleParticleType(true));
 }

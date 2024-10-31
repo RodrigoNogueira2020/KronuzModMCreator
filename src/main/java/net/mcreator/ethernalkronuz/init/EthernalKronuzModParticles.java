@@ -17,6 +17,7 @@ import net.mcreator.ethernalkronuz.client.particle.HellParticleParticle;
 import net.mcreator.ethernalkronuz.client.particle.GlowPlantSporesParticle;
 import net.mcreator.ethernalkronuz.client.particle.EndParticlesParticle;
 import net.mcreator.ethernalkronuz.client.particle.AsgardPortalParticlesParticle;
+import net.mcreator.ethernalkronuz.client.particle.AsgardParticleParticle;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class EthernalKronuzModParticles {
@@ -27,5 +28,6 @@ public class EthernalKronuzModParticles {
 		Minecraft.getInstance().particleEngine.register((SimpleParticleType) EthernalKronuzModParticleTypes.GLOW_PLANT_SPORES.get(), GlowPlantSporesParticle::provider);
 		Minecraft.getInstance().particleEngine.register((SimpleParticleType) EthernalKronuzModParticleTypes.JOTUNHEIMPORTALPARTICLES.get(), JotunheimportalparticlesParticle::provider);
 		Minecraft.getInstance().particleEngine.register((SimpleParticleType) EthernalKronuzModParticleTypes.ASGARD_PORTAL_PARTICLES.get(), AsgardPortalParticlesParticle::provider);
+		Minecraft.getInstance().particleEngine.register((SimpleParticleType) EthernalKronuzModParticleTypes.ASGARD_PARTICLE.get(), AsgardParticleParticle::provider);
 	}
 }

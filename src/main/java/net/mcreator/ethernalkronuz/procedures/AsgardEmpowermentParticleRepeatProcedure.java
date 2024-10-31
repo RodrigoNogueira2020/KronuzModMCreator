@@ -23,7 +23,7 @@ import javax.annotation.Nullable;
 import java.util.Random;
 
 @Mod.EventBusSubscriber
-public class EndEmpowermentParticlesRepeatProcedure {
+public class AsgardEmpowermentParticleRepeatProcedure {
 	@SubscribeEvent
 	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
 		if (event.phase == TickEvent.Phase.END) {
@@ -38,12 +38,12 @@ public class EndEmpowermentParticlesRepeatProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(EthernalKronuzModMobEffects.END_EMPOWERMENT.get()) : false) {
-			if (Mth.nextInt(new Random(), 1, 100) > 80) {
+		if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(EthernalKronuzModMobEffects.ASGARD_EMPOWERMENT.get()) : false) {
+			if (Mth.nextInt(new Random(), 1, 100) > 90) {
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performCommand(
 							new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
-							"/execute as @p at @s anchored feet run particle ethernal_kronuz:end_particles ~ ~0.2 ~ 0.5 0.5 0.5 0.00001 1");
+							"/execute as @p at @s anchored feet run particle ethernal_kronuz:asgard_particle ~ ~0.5 ~ 0.5 0.5 0.5 0.00001 1");
 			}
 		}
 	}

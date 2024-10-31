@@ -10,6 +10,7 @@ import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.util.Mth;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.commands.CommandSourceStack;
@@ -18,6 +19,8 @@ import net.minecraft.commands.CommandSource;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModMobEffects;
 
 import javax.annotation.Nullable;
+
+import java.util.Random;
 
 @Mod.EventBusSubscriber
 public class HellEmpowermentParticleRepeatProcedure {
@@ -36,10 +39,12 @@ public class HellEmpowermentParticleRepeatProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(EthernalKronuzModMobEffects.HELL_EMPOWERMENT.get()) : false) {
-			if (world instanceof ServerLevel _level)
-				_level.getServer().getCommands().performCommand(
-						new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
-						"/execute as @p at @s anchored feet run particle ethernal_kronuz:hell_particle ~ ~0.2 ~ 0.5 0.5 0.5 0.00001 10");
+			if (Mth.nextInt(new Random(), 1, 100) > 80) {
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands().performCommand(
+							new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getX()), (entity.getY()), (entity.getZ())), Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
+							"/execute as @p at @s anchored feet run particle ethernal_kronuz:hell_particle ~ ~0.2 ~ 0.5 0.5 0.5 0.00001 1");
+			}
 		}
 	}
 }

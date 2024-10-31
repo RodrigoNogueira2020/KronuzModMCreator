@@ -10145,6 +10145,45 @@
         ]
       },
       "path": "~/Souvenirs/TheEndingEye"
+    },
+    {
+      "name": "AsgardParticle",
+      "type": "particle",
+      "sortid": 563,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "asgard_particle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ethernal_kronuz/particles/asgard_particle.json",
+          "src/main/java/net/mcreator/ethernalkronuz/client/particle/AsgardParticleParticle.java"
+        ]
+      },
+      "path": "~/Empowerments/Asgard Empowerment"
+    },
+    {
+      "name": "AsgardEmpowermentParticleRepeat",
+      "type": "procedure",
+      "sortid": 564,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "asgard_empowerment_particle_repeat",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/AsgardEmpowermentParticleRepeatProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Empowerments/Asgard Empowerment"
     }
   ],
   "variable_elements": [
