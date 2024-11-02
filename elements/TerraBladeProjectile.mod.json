@@ -3,8 +3,8 @@
   "_type": "rangeditem",
   "definition": {
     "renderType": 1,
-    "texture": "terrablade",
-    "customModelName": "terrablade:default",
+    "texture": "terra_blade_projectile",
+    "customModelName": "terrabladeprojectile:default",
     "name": "Terra Blade Projectile",
     "specialInfo": [],
     "creativeTab": {

@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.ethernalkronuz.client.particle.TerraBladeParticleParticle;
 import net.mcreator.ethernalkronuz.client.particle.JotunheimportalparticlesParticle;
 import net.mcreator.ethernalkronuz.client.particle.HellParticleParticle;
 import net.mcreator.ethernalkronuz.client.particle.GlowPlantSporesParticle;
@@ -29,5 +30,6 @@ public class EthernalKronuzModParticles {
 		Minecraft.getInstance().particleEngine.register((SimpleParticleType) EthernalKronuzModParticleTypes.JOTUNHEIMPORTALPARTICLES.get(), JotunheimportalparticlesParticle::provider);
 		Minecraft.getInstance().particleEngine.register((SimpleParticleType) EthernalKronuzModParticleTypes.ASGARD_PORTAL_PARTICLES.get(), AsgardPortalParticlesParticle::provider);
 		Minecraft.getInstance().particleEngine.register((SimpleParticleType) EthernalKronuzModParticleTypes.ASGARD_PARTICLE.get(), AsgardParticleParticle::provider);
+		Minecraft.getInstance().particleEngine.register((SimpleParticleType) EthernalKronuzModParticleTypes.TERRA_BLADE_PARTICLE.get(), TerraBladeParticleParticle::provider);
 	}
 }

@@ -10,9 +10,12 @@ import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.ethernalkronuz.init.EthernalKronuzModParticleTypes;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModEntities;
 import net.mcreator.ethernalkronuz.entity.TerraBladeProjectileEntity;
 
@@ -46,6 +49,8 @@ public class TerraBladeShootsProcedure {
 				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ethernal_kronuz:terrabladeshot")), SoundSource.AMBIENT, 1, 1, false);
 			}
 		}
+		if (world instanceof ServerLevel _level)
+			_level.sendParticles((SimpleParticleType) (EthernalKronuzModParticleTypes.TERRA_BLADE_PARTICLE.get()), x, y, z, 10, 0.1, 0.1, 0.1, 2);
 		if (entity instanceof Player _player)
 			_player.getCooldowns().addCooldown(itemstack.getItem(), 40);
 	}

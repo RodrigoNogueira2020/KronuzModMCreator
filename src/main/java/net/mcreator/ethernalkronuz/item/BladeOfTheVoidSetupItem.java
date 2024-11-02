@@ -11,15 +11,19 @@ import net.minecraft.world.item.TieredItem;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.ethernalkronuz.procedures.BladeOfTheVoidSlashProcedure;
 import net.mcreator.ethernalkronuz.procedures.KillNonRLsProcedure;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModTabs;
 
@@ -109,4 +113,12 @@ public class BladeOfTheVoidSetupItem extends TieredItem {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
 		KillNonRLsProcedure.execute(world, entity);
 	}
+
+	@Override
+	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
+		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
+		BladeOfTheVoidSlashProcedure.execute(world, entity, ar.getObject());
+		return ar;
+	}
+
 }
