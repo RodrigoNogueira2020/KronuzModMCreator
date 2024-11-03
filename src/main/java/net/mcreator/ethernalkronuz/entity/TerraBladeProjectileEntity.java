@@ -17,6 +17,8 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
+import net.mcreator.ethernalkronuz.procedures.TerraBladeProjectileParticleSpawnerProcedure;
+import net.mcreator.ethernalkronuz.init.EthernalKronuzModItems;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModEntities;
 
 import java.util.Random;
@@ -47,7 +49,7 @@ public class TerraBladeProjectileEntity extends AbstractArrow implements ItemSup
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public ItemStack getItem() {
-		return ItemStack.EMPTY;
+		return new ItemStack(EthernalKronuzModItems.TERRA_BLADE_PROJECTILE.get());
 	}
 
 	@Override
@@ -64,6 +66,7 @@ public class TerraBladeProjectileEntity extends AbstractArrow implements ItemSup
 	@Override
 	public void tick() {
 		super.tick();
+		TerraBladeProjectileParticleSpawnerProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
 		if (this.inGround)
 			this.discard();
 	}

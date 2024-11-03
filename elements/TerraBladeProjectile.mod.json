@@ -19,7 +19,7 @@
     "actionSound": {
       "value": "CUSTOM:terrabladeshot"
     },
-    "hasGlow": false,
+    "hasGlow": true,
     "animation": "none",
     "enableMeleeDamage": true,
     "damageVsEntity": 100.0,
@@ -29,9 +29,12 @@
     "bulletParticles": false,
     "bulletIgnitesFire": false,
     "bulletItemTexture": {
-      "value": ""
+      "value": "CUSTOM:TerraBladeProjectile"
     },
     "bulletModel": "Modelterrabladeprojectileconverted",
-    "customBulletModelTexture": "terrabladeprojectile.png"
+    "customBulletModelTexture": "terrabladeprojectile.png",
+    "onBulletFlyingTick": {
+      "name": "TerraBladeProjectileParticleSpawner"
+    }
   }
 }

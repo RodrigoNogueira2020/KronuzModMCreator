@@ -24,65 +24,60 @@ public class BladeOfTheVoidSlashProcedure {
 	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null || !(entity instanceof Player player))
 			return;
-		
-		double radianArc = 0;
-		double d = 0;
-		double verticalOffset = 0;
-		double sign = 0;
-		double rollAngle = 0;
-		double horizontalOffsetDir = 0;
-		double i = 0;
-		double dMajor = 0;
-		double horizontalOffsetMag = 0;
-		double circleDistanceConstant = 0;
-		double radianSteps = 0;
-		double arcStart = 0;
-		circleDistanceConstant = 6;
-		rollAngle = 0;
-		horizontalOffsetMag = 0;
-		horizontalOffsetDir = 0;
-		verticalOffset = 0;
-		dMajor = circleDistanceConstant;
-		d = circleDistanceConstant * Math.cos(Math.toRadians(rollAngle));
-		i = (-1 * Math.PI) / 2;
-		radianArc = (1 * Math.PI) / 2;
-		radianSteps = (1 * Math.PI) / 64;
-		arcStart = Math.toRadians(entity.getYRot() + 90);
-		while (i <= radianArc) {
-			if (0 > Math.sin(i)) {
-				sign = -1;
-			} else {
-				sign = 1;
-			}
-			if (world instanceof ServerLevel _level)
-				_level.sendParticles((SimpleParticleType) (EthernalKronuzModParticleTypes.BLADE_OF_THE_VOID_PARTICLE.get()),
-						(dMajor * Math.cos(i) * Math.cos(arcStart) - d * Math.sin(i) * Math.sin(arcStart) + entity.getX() + horizontalOffsetMag * Math.sin(Math.toRadians(entity.getYRot() + 180 + horizontalOffsetDir))),
-						(sign * Math.sqrt(Math.abs(Math.sin(Math.toRadians(rollAngle))) * (Math.pow(dMajor, 2) - Math.pow(dMajor * Math.cos(i), 2))) + entity.getY() + 1 + verticalOffset),
-						(dMajor * Math.cos(i) * Math.sin(arcStart) + d * Math.sin(i) * Math.cos(arcStart) + entity.getZ() - horizontalOffsetMag * Math.cos(Math.toRadians(entity.getYRot() + 180 + horizontalOffsetDir))), 1, 0, 0, 0, 0);
-			i = i + radianSteps;
-		}
+			
+		double radianArc = Math.PI;  // 180 degrees for a semi-circle
+	    double radianSteps = Math.PI / 64;  // Adjust particle density here
+	    double arcStart = Math.toRadians(entity.getYRot());  // Start from the right side of the player
+	    double circleDistanceConstant = 6;  // Radius for particle effect
+	
+	    // Spawn particles in a semi-circle arc in front of the player
+	    for (double i = 0; i <= radianArc; i += radianSteps) {
+	        double angle = arcStart + i;  // Rotate each particle along the semi-circle
+	
+	        // Calculate x and z positions for particles based on player's facing direction
+	        double x = circleDistanceConstant * Math.cos(angle) + entity.getX();
+	        double z = circleDistanceConstant * Math.sin(angle) + entity.getZ();
+	        double y = entity.getY() + 1;  // Slightly above player, adjust if needed
+	
+	        if (world instanceof ServerLevel _level)
+	            _level.sendParticles((SimpleParticleType) (EthernalKronuzModParticleTypes.BLADE_OF_THE_VOID_PARTICLE.get()),
+	                                 x, y, z, 1, 0, 0, 0, 0);
+	    }
+	
+	    // Set up the semi-circle damage area
+	    double radius = 6;
+	    double centerX = entity.getX();
+	    double centerY = entity.getY() + 1;  // Slightly above the player
+	    double centerZ = entity.getZ();
+	
+	    // Loop through entities in a bounding box around the player
+	    for (Entity target : world.getEntitiesOfClass(Entity.class, 
+	            new AABB(centerX - radius, centerY - radius / 2, centerZ - radius, centerX + radius, centerY + radius / 2, centerZ + radius))) {
+	        
+	        if (target != entity && !(target instanceof Player)) {  // Avoid damaging the player
+	            double dx = target.getX() - entity.getX();
+	            double dz = target.getZ() - entity.getZ();
+	            double distanceSquared = dx * dx + dz * dz;
 
+	            if (distanceSquared <= radius * radius) {
+	                // Calculate angle to target
+	                double targetAngle = Math.atan2(dz, dx);
+	                double playerAngle = Math.toRadians(entity.getYRot() +90);
+	                double angleDifference = Math.abs(targetAngle - playerAngle);
+	
+	                // Normalize angle difference to be within [0, π]
+	                if (angleDifference > Math.PI)
+	                    angleDifference = 2 * Math.PI - angleDifference;
+	
+	                // Check if within 90 degrees (π/2 radians) in front of the player
+	                if (angleDifference <= Math.PI / 2) {
+	                    // Deal damage to the target entity
+	                    target.hurt(new DamageSource("botv_slash").bypassArmor(), 20);  // Adjust damage as needed
+	                }
+	            }
+	        }
+	    }
 
-		double radius = 6; // Adjust the radius as needed
-        double height = 1.0; // Adjust the height as needed
-        double centerX = entity.getX();
-        double centerY = entity.getY() + 1; // Slightly above the player
-        double centerZ = entity.getZ();
-
-        // Calculate the bounding box for the AoE
-        AABB areaOfEffect = new AABB(centerX - radius, centerY - height / 2, centerZ - radius,
-                                      centerX + radius, centerY + height / 2, centerZ + radius);
-        
-        // Check for entities within the area and apply damage
-        for (Entity target : world.getEntitiesOfClass(Entity.class, areaOfEffect)) {
-            if (target != entity && !(target instanceof Player)) { // Avoid damaging the player
-                double distanceSquared = target.distanceToSqr(entity);
-                if (distanceSquared <= radius * radius) {
-                    // Deal damage to the target entity
-                    target.hurt(new DamageSource("botv_slash").bypassArmor(), 20); // Adjust damage as needed
-                }
-            }
-        }
 
 		if (entity instanceof Player _player)
 			_player.getCooldowns().addCooldown(itemstack.getItem(), 40);
