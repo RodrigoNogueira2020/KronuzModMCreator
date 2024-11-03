@@ -10,27 +10,62 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.Direction;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.ChatType;
+import net.minecraft.server.MinecraftServer;
 
 import java.util.List;
 
 public class MuramasaDashAbilityProcedure {
+    private static long crouchStartTime = -1;
+    private static boolean dashCharged = false;
 
     public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
         if (entity == null)
             return;
 
-        // Define o alcance do dash com base no estado do jogador (no chão ou no ar)
+        boolean isCrouching = entity.isCrouching();
+        boolean hasWeaponInMainHand = entity instanceof Player _player && _player.getMainHandItem().equals(itemstack);
+
+        // Verifica se o jogador está agachado e com a arma na mão
+        if (isCrouching && hasWeaponInMainHand) {
+            // Inicia o timer de crouch caso ainda não tenha sido iniciado
+            if (crouchStartTime == -1) {
+                crouchStartTime = System.currentTimeMillis();
+            }
+
+            // Verifica se o jogador ficou agachado por 3 segundos e o dash ainda não está carregado
+            if (!dashCharged && System.currentTimeMillis() - crouchStartTime >= 3000) {
+                dashCharged = true; // Marca o dash como carregado
+                _player.sendMessage(new TextComponent("Dash Charged!"), _player.getUUID());
+
+                // Envia mensagem ao jogador indicando que o dash foi carregado
+                if (entity instanceof Player _player) {
+                    _player.sendMessage(new TextComponent("Dash Charged!"), _player.getUUID());
+                }
+            }
+        } else {
+            // Reseta o timer e o status de carregamento do dash se o jogador parar de agachar ou tirar a arma da mão
+            crouchStartTime = -1;
+            dashCharged = false;
+        }
+
+        // Define os parâmetros do dash
         int dashRange = entity.isOnGround() ? 13 : 7;
-
-        // Define a velocidade do dash com base no estado do jogador
         double dashSpeed = entity.isOnGround() ? 0.5 : 0.2;
+        float damageAmount = 19;
 
-        if (!(entity instanceof LivingEntity _livEnt ? _livEnt.isFallFlying() : false)) {
+        // Aumenta alcance e dano se o dash estiver carregado
+        if (dashCharged) {
+            dashRange *= 1.5;
+            damageAmount *= 1.5f;
+        }
+
+        // Verifica se o jogador usa o botão direito para ativar o dash
+        if (entity.isShiftKeyDown() || !entity.isCrouching()) {
             Direction direction = entity.getDirection();
             Vec3 initialPosition = entity.position();
 
@@ -47,8 +82,8 @@ public class MuramasaDashAbilityProcedure {
             entity.setDeltaMovement(dashVelocity.scale(dashRange));
 
             // Verifica entidades em uma área de 3x3x3 ao redor de cada ponto ao longo do trajeto
-            for (int i = 0; i <= dashRange * 50; i++) { // Multiplica dashRange por um fator maior para aumentar a precisão
-                double factor = (double) i / (dashRange * 50); // Usa o mesmo fator para percorrer o trajeto com precisão
+            for (int i = 0; i <= dashRange * 50; i++) {
+                double factor = (double) i / (dashRange * 50);
                 double checkX = initialPosition.x + factor * dashRange * dashVelocity.x;
                 double checkY = initialPosition.y + factor * dashRange * dashVelocity.y;
                 double checkZ = initialPosition.z + factor * dashRange * dashVelocity.z;
@@ -60,7 +95,7 @@ public class MuramasaDashAbilityProcedure {
                 for (Entity target : entities) {
                     if (target != entity) {
                         if (target instanceof LivingEntity _entity)
-                            _entity.hurt(new DamageSource("murasama").bypassArmor(), 19); // Ajuste o dano conforme necessário
+                            _entity.hurt(new DamageSource("murasama").bypassArmor(), damageAmount); // Aplica o dano ajustado
                         target.setDeltaMovement(new Vec3(entity.getLookAngle().x * 2, entity.getLookAngle().y + 1, entity.getLookAngle().z * 2));
                     }
                 }
@@ -68,8 +103,8 @@ public class MuramasaDashAbilityProcedure {
 
             // Aplica a rotação horizontal ao jogador
             if (entity instanceof Player _player) {
-                for (int i = 0; i < 3; i++) { // Garante que a rotação ocorra pelo menos 3 vezes
-                    _player.setYRot(_player.getYRot() + 120); // Rotaciona 120 graus cada vez para completar uma volta completa em 3 iterações
+                for (int i = 0; i < 3; i++) {
+                    _player.setYRot(_player.getYRot() + 120);
                     _player.yRotO = _player.getYRot();
                     _player.xRotO = _player.getXRot();
                 }
@@ -96,6 +131,9 @@ public class MuramasaDashAbilityProcedure {
                     );
                 }
             }
+
+            // Reseta o estado do dash carregado após a habilidade ser usada
+            dashCharged = false;
         }
     }
 }
