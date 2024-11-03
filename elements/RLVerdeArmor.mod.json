@@ -3,9 +3,9 @@
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
-    "textureHelmet": "rl_helmet_purple",
+    "textureHelmet": "rl_helmet_green",
     "enableBody": true,
-    "textureBody": "rl_chestplate_purple",
+    "textureBody": "rl_chestplate_green",
     "enableLeggings": true,
     "textureLeggings": "rl_leggings",
     "enableBoots": true,
@@ -13,11 +13,11 @@
     "creativeTab": {
       "value": "CUSTOM:CreativeTab"
     },
-    "armorTextureFile": "radiant_lord_armor_purple_cyrstal_",
-    "helmetName": "Gargantuan's Armour Helmet",
-    "bodyName": "Gargantuan's Body Armor",
-    "leggingsName": "Gargantuan's Leggings",
-    "bootsName": "Gargantuan's Boots",
+    "armorTextureFile": "radiant_lord_armor_green_crystal_",
+    "helmetName": "Titan Kaleb's Helmet",
+    "bodyName": "Titan Kaleb's Body Armor",
+    "leggingsName": "Titan Kaleb's  Leggings",
+    "bootsName": "Titan Kaleb's  Boots",
     "helmetSpecialInfo": [],
     "bodySpecialInfo": [],
     "leggingsSpecialInfo": [],

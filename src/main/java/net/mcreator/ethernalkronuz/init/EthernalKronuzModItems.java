@@ -22,6 +22,8 @@ import net.mcreator.ethernalkronuz.item.TerraBladeProjectileItem;
 import net.mcreator.ethernalkronuz.item.SteelCoreASetupItem;
 import net.mcreator.ethernalkronuz.item.SaoPauloItem;
 import net.mcreator.ethernalkronuz.item.SafiraItem;
+import net.mcreator.ethernalkronuz.item.RLVermelhoArmorItem;
+import net.mcreator.ethernalkronuz.item.RLVerdeArmorItem;
 import net.mcreator.ethernalkronuz.item.RLRoxoArmourItem;
 import net.mcreator.ethernalkronuz.item.PretoDaAmadoraItem;
 import net.mcreator.ethernalkronuz.item.NokkiaHammerItem;
@@ -232,6 +234,14 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> RL_ROXO_ARMOUR_LEGGINGS = REGISTRY.register("rl_roxo_armour_leggings", () -> new RLRoxoArmourItem.Leggings());
 	public static final RegistryObject<Item> RL_ROXO_ARMOUR_BOOTS = REGISTRY.register("rl_roxo_armour_boots", () -> new RLRoxoArmourItem.Boots());
 	public static final RegistryObject<Item> DEEP_SEA_BOOT = REGISTRY.register("deep_sea_boot", () -> new DeepSeaBootItem());
+	public static final RegistryObject<Item> RL_VERMELHO_ARMOR_HELMET = REGISTRY.register("rl_vermelho_armor_helmet", () -> new RLVermelhoArmorItem.Helmet());
+	public static final RegistryObject<Item> RL_VERMELHO_ARMOR_CHESTPLATE = REGISTRY.register("rl_vermelho_armor_chestplate", () -> new RLVermelhoArmorItem.Chestplate());
+	public static final RegistryObject<Item> RL_VERMELHO_ARMOR_LEGGINGS = REGISTRY.register("rl_vermelho_armor_leggings", () -> new RLVermelhoArmorItem.Leggings());
+	public static final RegistryObject<Item> RL_VERMELHO_ARMOR_BOOTS = REGISTRY.register("rl_vermelho_armor_boots", () -> new RLVermelhoArmorItem.Boots());
+	public static final RegistryObject<Item> RL_VERDE_ARMOR_HELMET = REGISTRY.register("rl_verde_armor_helmet", () -> new RLVerdeArmorItem.Helmet());
+	public static final RegistryObject<Item> RL_VERDE_ARMOR_CHESTPLATE = REGISTRY.register("rl_verde_armor_chestplate", () -> new RLVerdeArmorItem.Chestplate());
+	public static final RegistryObject<Item> RL_VERDE_ARMOR_LEGGINGS = REGISTRY.register("rl_verde_armor_leggings", () -> new RLVerdeArmorItem.Leggings());
+	public static final RegistryObject<Item> RL_VERDE_ARMOR_BOOTS = REGISTRY.register("rl_verde_armor_boots", () -> new RLVerdeArmorItem.Boots());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

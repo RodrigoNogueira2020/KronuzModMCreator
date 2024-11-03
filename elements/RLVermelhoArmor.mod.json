@@ -3,9 +3,9 @@
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
-    "textureHelmet": "rl_helmet_purple",
+    "textureHelmet": "rl_helmet_red",
     "enableBody": true,
-    "textureBody": "rl_chestplate_purple",
+    "textureBody": "rl_chestplate_red",
     "enableLeggings": true,
     "textureLeggings": "rl_leggings",
     "enableBoots": true,
@@ -13,11 +13,11 @@
     "creativeTab": {
       "value": "CUSTOM:CreativeTab"
     },
-    "armorTextureFile": "radiant_lord_armor_purple_cyrstal_",
-    "helmetName": "Gargantuan's Armour Helmet",
-    "bodyName": "Gargantuan's Body Armor",
-    "leggingsName": "Gargantuan's Leggings",
-    "bootsName": "Gargantuan's Boots",
+    "armorTextureFile": "radiant_lord_armor_red_crystal_",
+    "helmetName": "Azakana's Helmet",
+    "bodyName": "Azakana's Body Armor",
+    "leggingsName": "Azakana's Leggings",
+    "bootsName": "Azakana's  Boots",
     "helmetSpecialInfo": [],
     "bodySpecialInfo": [],
     "leggingsSpecialInfo": [],

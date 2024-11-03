@@ -17,7 +17,7 @@ public class EthernalKronuzModTabs {
 		TAB_CREATIVE_TAB = new CreativeModeTab("tabcreative_tab") {
 			@Override
 			public ItemStack makeIcon() {
-				return new ItemStack(EthernalKronuzModItems.BATTLE_COIN.get());
+				return new ItemStack(EthernalKronuzModItems.THE_ENDING_EYE.get());
 			}
 
 			@OnlyIn(Dist.CLIENT)

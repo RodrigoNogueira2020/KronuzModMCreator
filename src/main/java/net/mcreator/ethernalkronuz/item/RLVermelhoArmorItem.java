@@ -26,8 +26,8 @@ import net.mcreator.ethernalkronuz.client.model.Modelrl_armor;
 import java.util.Map;
 import java.util.Collections;
 
-public abstract class RLRoxoArmourItem extends ArmorItem {
-	public RLRoxoArmourItem(EquipmentSlot slot, Item.Properties properties) {
+public abstract class RLVermelhoArmorItem extends ArmorItem {
+	public RLVermelhoArmorItem(EquipmentSlot slot, Item.Properties properties) {
 		super(new ArmorMaterial() {
 			@Override
 			public int getDurabilityForSlot(EquipmentSlot slot) {
@@ -56,7 +56,7 @@ public abstract class RLRoxoArmourItem extends ArmorItem {
 
 			@Override
 			public String getName() {
-				return "rl_roxo_armour";
+				return "rl_vermelho_armor";
 			}
 
 			@Override
@@ -71,7 +71,7 @@ public abstract class RLRoxoArmourItem extends ArmorItem {
 		}, slot, properties);
 	}
 
-	public static class Helmet extends RLRoxoArmourItem {
+	public static class Helmet extends RLVermelhoArmorItem {
 		public Helmet() {
 			super(EquipmentSlot.HEAD, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).fireResistant());
 		}
@@ -95,11 +95,11 @@ public abstract class RLRoxoArmourItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "ethernal_kronuz:textures/models/armor/radiant_lord_armor_purple_cyrstal__layer_1.png";
+			return "ethernal_kronuz:textures/models/armor/radiant_lord_armor_red_crystal__layer_1.png";
 		}
 	}
 
-	public static class Chestplate extends RLRoxoArmourItem {
+	public static class Chestplate extends RLVermelhoArmorItem {
 		public Chestplate() {
 			super(EquipmentSlot.CHEST, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).fireResistant());
 		}
@@ -123,11 +123,11 @@ public abstract class RLRoxoArmourItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "ethernal_kronuz:textures/models/armor/radiant_lord_armor_purple_cyrstal__layer_1.png";
+			return "ethernal_kronuz:textures/models/armor/radiant_lord_armor_red_crystal__layer_1.png";
 		}
 	}
 
-	public static class Leggings extends RLRoxoArmourItem {
+	public static class Leggings extends RLVermelhoArmorItem {
 		public Leggings() {
 			super(EquipmentSlot.LEGS, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).fireResistant());
 		}
@@ -152,11 +152,11 @@ public abstract class RLRoxoArmourItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "ethernal_kronuz:textures/models/armor/radiant_lord_armor_purple_cyrstal__layer_2.png";
+			return "ethernal_kronuz:textures/models/armor/radiant_lord_armor_red_crystal__layer_2.png";
 		}
 	}
 
-	public static class Boots extends RLRoxoArmourItem {
+	public static class Boots extends RLVermelhoArmorItem {
 		public Boots() {
 			super(EquipmentSlot.FEET, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).fireResistant());
 		}
@@ -181,7 +181,7 @@ public abstract class RLRoxoArmourItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "ethernal_kronuz:textures/models/armor/radiant_lord_armor_purple_cyrstal__layer_1.png";
+			return "ethernal_kronuz:textures/models/armor/radiant_lord_armor_red_crystal__layer_1.png";
 		}
 	}
 }
