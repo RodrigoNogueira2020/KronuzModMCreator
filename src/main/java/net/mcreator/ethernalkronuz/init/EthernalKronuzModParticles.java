@@ -17,6 +17,7 @@ import net.mcreator.ethernalkronuz.client.particle.JotunheimportalparticlesParti
 import net.mcreator.ethernalkronuz.client.particle.HellParticleParticle;
 import net.mcreator.ethernalkronuz.client.particle.GlowPlantSporesParticle;
 import net.mcreator.ethernalkronuz.client.particle.EndParticlesParticle;
+import net.mcreator.ethernalkronuz.client.particle.BladeOfTheVoidParticleParticle;
 import net.mcreator.ethernalkronuz.client.particle.AsgardPortalParticlesParticle;
 import net.mcreator.ethernalkronuz.client.particle.AsgardParticleParticle;
 
@@ -31,5 +32,6 @@ public class EthernalKronuzModParticles {
 		Minecraft.getInstance().particleEngine.register((SimpleParticleType) EthernalKronuzModParticleTypes.ASGARD_PORTAL_PARTICLES.get(), AsgardPortalParticlesParticle::provider);
 		Minecraft.getInstance().particleEngine.register((SimpleParticleType) EthernalKronuzModParticleTypes.ASGARD_PARTICLE.get(), AsgardParticleParticle::provider);
 		Minecraft.getInstance().particleEngine.register((SimpleParticleType) EthernalKronuzModParticleTypes.TERRA_BLADE_PARTICLE.get(), TerraBladeParticleParticle::provider);
+		Minecraft.getInstance().particleEngine.register((SimpleParticleType) EthernalKronuzModParticleTypes.BLADE_OF_THE_VOID_PARTICLE.get(), BladeOfTheVoidParticleParticle::provider);
 	}
 }

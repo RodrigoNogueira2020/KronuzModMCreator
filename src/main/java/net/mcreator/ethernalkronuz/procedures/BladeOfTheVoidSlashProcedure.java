@@ -46,7 +46,7 @@ public class BladeOfTheVoidSlashProcedure {
 		d = circleDistanceConstant * Math.cos(Math.toRadians(rollAngle));
 		i = (-1 * Math.PI) / 2;
 		radianArc = (1 * Math.PI) / 2;
-		radianSteps = (1 * Math.PI) / 32;
+		radianSteps = (1 * Math.PI) / 64;
 		arcStart = Math.toRadians(entity.getYRot() + 90);
 		while (i <= radianArc) {
 			if (0 > Math.sin(i)) {
@@ -55,7 +55,7 @@ public class BladeOfTheVoidSlashProcedure {
 				sign = 1;
 			}
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles((SimpleParticleType) (EthernalKronuzModParticleTypes.END_PARTICLES.get()),
+				_level.sendParticles((SimpleParticleType) (EthernalKronuzModParticleTypes.BLADE_OF_THE_VOID_PARTICLE.get()),
 						(dMajor * Math.cos(i) * Math.cos(arcStart) - d * Math.sin(i) * Math.sin(arcStart) + entity.getX() + horizontalOffsetMag * Math.sin(Math.toRadians(entity.getYRot() + 180 + horizontalOffsetDir))),
 						(sign * Math.sqrt(Math.abs(Math.sin(Math.toRadians(rollAngle))) * (Math.pow(dMajor, 2) - Math.pow(dMajor * Math.cos(i), 2))) + entity.getY() + 1 + verticalOffset),
 						(dMajor * Math.cos(i) * Math.sin(arcStart) + d * Math.sin(i) * Math.cos(arcStart) + entity.getZ() - horizontalOffsetMag * Math.cos(Math.toRadians(entity.getYRot() + 180 + horizontalOffsetDir))), 1, 0, 0, 0, 0);
@@ -87,7 +87,5 @@ public class BladeOfTheVoidSlashProcedure {
 		if (entity instanceof Player _player)
 			_player.getCooldowns().addCooldown(itemstack.getItem(), 40);
 
-
- 
 	}
 }
