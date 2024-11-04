@@ -5853,7 +5853,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/command/RemoveRLVerdeCommand.java"
         ]
       },
-      "path": "~/Remove Stuff/Faccoes/Radiant Lords"
+      "path": "~/Remove Stuff/Factions/Radiant Lords"
     },
     {
       "name": "RemoveRLVermelho",
@@ -5867,7 +5867,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/command/RemoveRLVermelhoCommand.java"
         ]
       },
-      "path": "~/Remove Stuff/Faccoes/Radiant Lords"
+      "path": "~/Remove Stuff/Factions/Radiant Lords"
     },
     {
       "name": "RemoveRLRoxo",
@@ -5881,7 +5881,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/command/RemoveRLRoxoCommand.java"
         ]
       },
-      "path": "~/Remove Stuff/Faccoes/Radiant Lords"
+      "path": "~/Remove Stuff/Factions/Radiant Lords"
     },
     {
       "name": "RemoveBTCommand",
@@ -5895,7 +5895,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/command/RemoveBTCommandCommand.java"
         ]
       },
-      "path": "~/Remove Stuff/Faccoes/Big Testas"
+      "path": "~/Remove Stuff/Factions/Big Testas"
     },
     {
       "name": "TheEndingEyeBaubleIsEquipped",
@@ -5971,7 +5971,7 @@
           }
         ]
       },
-      "path": "~/Remove Stuff/Faccoes"
+      "path": "~/Remove Stuff/Factions"
     },
     {
       "name": "RemoveADCCommand",
@@ -5985,7 +5985,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/command/RemoveADCCommandCommand.java"
         ]
       },
-      "path": "~/Remove Stuff/Faccoes/Andarilhos da Cave"
+      "path": "~/Remove Stuff/Factions/Andarilhos da Cave"
     },
     {
       "name": "NokkiaHammerClickRoxo",
@@ -9895,7 +9895,7 @@
           }
         ]
       },
-      "path": "~/Remove Stuff/Faccoes"
+      "path": "~/Remove Stuff/Factions"
     },
     {
       "name": "RemoveFactionPotions1ToRemove",
@@ -9915,7 +9915,7 @@
           }
         ]
       },
-      "path": "~/Remove Stuff/Faccoes"
+      "path": "~/Remove Stuff/Factions"
     },
     {
       "name": "AscenderEffectsToPassPowers",
@@ -10290,39 +10290,6 @@
       "path": "~/Factions/Radiant Lords/Transformations/Verde"
     },
     {
-      "name": "YggmediumtreeSkyFieldsAdditionalGenerationConditionProcedure",
-      "type": "procedure",
-      "sortid": 572,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "yggmediumtree_sky_fields_additional_generation_condition_procedure",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/YggmediumtreeSkyFieldsAdditionalGenerationConditionProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Dimensions/Asgard/Estruturas/Ygg Wood/Sky Fields"
-    },
-    {
       "name": "AsgardPortalTriggerUsed",
       "type": "procedure",
       "sortid": 573,
@@ -10345,6 +10312,39 @@
         ]
       },
       "path": "~/Dimensions/Asgard/Geracao"
+    },
+    {
+      "name": "YggmediumtreeSkyFieldsAdditionalGenerationCondition",
+      "type": "procedure",
+      "sortid": 574,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "yggmediumtree_sky_fields_additional_generation_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/YggmediumtreeSkyFieldsAdditionalGenerationConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Dimensions/Asgard/Estruturas/Ygg Wood/Sky Fields"
     }
   ],
   "variable_elements": [
@@ -10735,12 +10735,12 @@
       "block.ethernal_kronuz.bricks_heaven_slate_slabs": "Heaven Slate Bricks Slabs",
       "item.ethernal_kronuz.cabuflamanau": "Piruka",
       "biome.ethernal_kronuz.sky_fields": "Sky Fields",
-      "key.ethernal_kronuz.griffin_up": "Griffin Upwards",
       "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
+      "key.ethernal_kronuz.griffin_up": "Griffin Upwards",
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
       "advancements.bt_achievement.descr": "Juntar-se aos Big Testa",
-      "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "advancements.rl_verde_achievement.title": "Carregado até ao limite",
+      "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
       "block.ethernal_kronuz.mosso_crystal_ore": "Mosso Crystal Ore",
@@ -10748,13 +10748,13 @@
       "gui.ethernal_kronuz.trade_system_gui_techno.label_technobalde": "Technobalde",
       "item.ethernal_kronuz.blade_of_the_void_setup": "§dBlade Of The Void",
       "block.ethernal_kronuz.mosso_crystal_block": "Block of Mosso Crystal",
-      "block.ethernal_kronuz.ygg_trapdoor": "Ygg Wood Trapdoor",
-      "item.ethernal_kronuz.aiport_steel_armor_chestplate": "Airport Steel Chestplate",
       "advancements.ascender_advancement.descr": "Tornar-se um Radiant Lord",
+      "item.ethernal_kronuz.aiport_steel_armor_chestplate": "Airport Steel Chestplate",
+      "block.ethernal_kronuz.ygg_trapdoor": "Ygg Wood Trapdoor",
       "item.ethernal_kronuz.rl_roxo_armour_helmet": "Gargantuan\u0027s Armour Helmet",
       "item.ethernal_kronuz.terra_blade_setup": "§aTerra Blade",
-      "advancements.enters_asgard.descr": "Enter in Asgard",
       "block.ethernal_kronuz.ygg_planks": "Ygg Wood Planks",
+      "advancements.enters_asgard.descr": "Enter in Asgard",
       "item.ethernal_kronuz.necromancer.desc": "Necromancer",
       "subtitles.nokkia_hammer_spawn": "",
       "gamerule.give_rl_verde_game_rule.description": "Ascender um jogador",
@@ -10773,16 +10773,16 @@
       "block.ethernal_kronuz.ygg_button": "Ygg Wood Button",
       "subtitles.warper-hurt": "",
       "item.ethernal_kronuz.aiport_steel_armor_leggings": "Airport Steel Leggings",
-      "block.ethernal_kronuz.tiles_heaven_slate_slab": "Heaven Slate Tiles Slab",
       "block.ethernal_kronuz.ygg_door": "Ygg Wood Door",
+      "block.ethernal_kronuz.tiles_heaven_slate_slab": "Heaven Slate Tiles Slab",
       "subtitles.freaky": "",
       "item.ethernal_kronuz.aiport_steel_ingot": "Aiport Steel Ingot",
       "item.ethernal_kronuz.aiport_steel_pickaxe": "Airport Steel Pickaxe",
       "entity.ethernal_kronuz.warper": "Warper",
       "block.ethernal_kronuz.heaven_stone_bricks_stairs": "Heaven Stone Bricks Stairs",
       "block.ethernal_kronuz.heaven_stone_bricks": "Heaven Stone Bricks",
-      "subtitles.gandamoca": "",
       "advancements.full_set_faking_ell.title": "Eia mano!",
+      "subtitles.gandamoca": "",
       "effect.ethernal_kronuz.bt_effect": "Big Testa",
       "item.ethernal_kronuz.deep_sea_boot": "Deep Sea Boot",
       "itemGroup.tabcreative_tab": "Ethernal Kronuz",
@@ -11577,7 +11577,7 @@
         "name": "Remove Stuff",
         "children": [
           {
-            "name": "Faccoes",
+            "name": "Factions",
             "children": [
               {
                 "name": "Radiant Lords",

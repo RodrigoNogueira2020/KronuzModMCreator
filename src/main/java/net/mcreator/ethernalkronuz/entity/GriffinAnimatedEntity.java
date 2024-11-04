@@ -67,7 +67,6 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.ethernalkronuz.procedures.GriffinAnimatedOnEntityTickUpdateProcedure;
-import net.mcreator.ethernalkronuz.init.EthernalKronuzModItems;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModEntities;
 
 import java.util.Set;
@@ -160,11 +159,6 @@ public class GriffinAnimatedEntity extends TamableAnimal implements IAnimatable 
 	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
-	}
-
-	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
-		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(EthernalKronuzModItems.GRIFFIN_FEATHER.get()));
 	}
 
 	@Override

@@ -19,7 +19,6 @@ public class YggmediumtreeSkyFieldsAdditionalGenerationConditionProcedure {
         int baseDepth = 3; // Profundidade da base da estrutura
         int offsetX = -3; // Ajusta para centralizar a base na coordenada x
         int offsetZ = -3; // Ajusta para centralizar a base na coordenada z
-
         // Verifica se a área da base tem blocos sólidos (não-ar e não o fluido personalizado) diretamente abaixo da estrutura
         for (int bx = 0; bx < baseWidth; bx++) {
             for (int bz = 0; bz < baseDepth; bz++) {
@@ -34,7 +33,6 @@ public class YggmediumtreeSkyFieldsAdditionalGenerationConditionProcedure {
             }
             if (!baseIsSolid) break;
         }
-
         // Se a base estiver sólida, procede com a colocação da estrutura
         if (baseIsSolid) {
             if (world instanceof ServerLevel _serverworld) {
@@ -44,7 +42,6 @@ public class YggmediumtreeSkyFieldsAdditionalGenerationConditionProcedure {
                 }
             }
         }
-
         return baseIsSolid;
     }
 }
