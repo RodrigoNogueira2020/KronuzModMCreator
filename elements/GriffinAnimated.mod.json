@@ -85,7 +85,7 @@
     "immuneToWither": false,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": ""
+      "value": "CUSTOM:GriffinFeather"
     },
     "livingSound": {
       "value": "CUSTOM:griffin_alive"
