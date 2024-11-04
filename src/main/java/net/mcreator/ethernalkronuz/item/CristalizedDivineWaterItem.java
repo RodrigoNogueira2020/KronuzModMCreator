@@ -11,6 +11,6 @@ import net.mcreator.ethernalkronuz.init.EthernalKronuzModFluids;
 
 public class CristalizedDivineWaterItem extends BucketItem {
 	public CristalizedDivineWaterItem() {
-		super(EthernalKronuzModFluids.CRISTALIZED_DIVINE_WATER, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).rarity(Rarity.RARE).tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB));
+		super(EthernalKronuzModFluids.CRISTALIZED_DIVINE_WATER, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).rarity(Rarity.EPIC).tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB));
 	}
 }

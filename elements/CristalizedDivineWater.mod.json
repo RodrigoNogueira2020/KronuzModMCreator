@@ -15,7 +15,7 @@
     "dripParticle": {
       "value": "WHITE_ASH"
     },
-    "flowStrength": 1.0,
+    "flowStrength": 0.0,
     "luminosity": 0,
     "density": 1000,
     "viscosity": 1000,
@@ -27,9 +27,9 @@
       "value": "CUSTOM:CreativeTab"
     },
     "emptySound": {
-      "value": ""
+      "value": "item.bucket.empty"
     },
-    "rarity": "RARE",
+    "rarity": "EPIC",
     "specialInfo": [],
     "resistance": 100.0,
     "luminance": 2,
