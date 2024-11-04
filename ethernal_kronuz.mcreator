@@ -24,11 +24,11 @@
       "registry_name": "mosso_crystal_ore",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/world/features/ores/MossoCrystalOreFeature.java",
+          "src/main/resources/assets/ethernal_kronuz/models/block/mosso_crystal_ore.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_ore.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/mosso_crystal_ore.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/MossoCrystalOreBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/block/mosso_crystal_ore.json"
+          "src/main/java/net/mcreator/ethernalkronuz/world/features/ores/MossoCrystalOreFeature.java",
+          "src/main/java/net/mcreator/ethernalkronuz/block/MossoCrystalOreBlock.java"
         ]
       },
       "path": "~/Ores/Mosso Crystal"
@@ -87,8 +87,8 @@
       "registry_name": "mosso_crystal_pickaxe",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_pickaxe.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/MossoCrystalPickaxeItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/MossoCrystalPickaxeItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_pickaxe.json"
         ]
       },
       "path": "~/Ores/Mosso Crystal/Ferramentas/Pickaxe"
@@ -132,8 +132,8 @@
       "registry_name": "mosso_crystal_shovel",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_shovel.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/MossoCrystalShovelItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/MossoCrystalShovelItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_shovel.json"
         ]
       },
       "path": "~/Ores/Mosso Crystal/Ferramentas/Shovel"
@@ -236,11 +236,11 @@
         "eb": true,
         "ec": true,
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_armor_chestplate.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_armor_leggings.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_armor_boots.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_armor_helmet.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/MossoCrystalArmorItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_armor_boots.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_armor_leggings.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_armor_chestplate.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/MossoCrystalArmorItem.java"
         ]
       },
       "path": "~/Ores/Mosso Crystal/Armadura"
@@ -350,8 +350,8 @@
       "registry_name": "faking_ell_dust",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/item/FakingEllDustItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_dust.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_dust.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/FakingEllDustItem.java"
         ]
       },
       "path": "~/Ores/Faking Ell"
@@ -365,11 +365,11 @@
       "registry_name": "faking_ell_ore",
       "metadata": {
         "files": [
+          "src/main/resources/assets/ethernal_kronuz/blockstates/faking_ell_ore.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/FakingEllOreBlock.java",
           "src/main/java/net/mcreator/ethernalkronuz/world/features/ores/FakingEllOreFeature.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_ore.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/faking_ell_ore.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/faking_ell_ore.json"
+          "src/main/resources/assets/ethernal_kronuz/models/block/faking_ell_ore.json"
         ]
       },
       "path": "~/Ores/Faking Ell"
@@ -383,10 +383,10 @@
       "registry_name": "faking_ell_block",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/faking_ell_block.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/FakingEllBlockBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_block.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/faking_ell_block.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/FakingEllBlockBlock.java"
+          "src/main/resources/assets/ethernal_kronuz/models/block/faking_ell_block.json"
         ]
       },
       "path": "~/Ores/Faking Ell"
@@ -457,8 +457,8 @@
       "registry_name": "faking_ell_axe",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_axe.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/FakingEllAxeItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/FakingEllAxeItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_axe.json"
         ]
       },
       "path": "~/Ores/Faking Ell/Ferramentas/Axe"
@@ -487,8 +487,8 @@
       "registry_name": "faking_ell_shovel",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/item/FakingEllShovelItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_shovel.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_shovel.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/FakingEllShovelItem.java"
         ]
       },
       "path": "~/Ores/Faking Ell/Ferramentas/Shovel"
@@ -502,8 +502,8 @@
       "registry_name": "faking_ell_hoe",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_hoe.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/FakingEllHoeItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/FakingEllHoeItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_hoe.json"
         ]
       },
       "path": "~/Ores/Faking Ell/Ferramentas/Hoe"
@@ -592,10 +592,10 @@
         "ec": true,
         "files": [
           "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_armor_chestplate.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_armor_boots.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_armor_helmet.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/FakingEllArmorItem.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_armor_leggings.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_armor_boots.json"
+          "src/main/java/net/mcreator/ethernalkronuz/item/FakingEllArmorItem.java"
         ]
       },
       "path": "~/Ores/Faking Ell/Armadura"
@@ -710,9 +710,9 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_ore.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/aiport_steel_ore.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/aiport_steel_ore.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/AiportSteelOreBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/aiport_steel_ore.json"
+          "src/main/java/net/mcreator/ethernalkronuz/block/AiportSteelOreBlock.java"
         ]
       },
       "path": "~/Ores/Airport Steel"
@@ -727,9 +727,9 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_block.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/aiport_steel_block.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/aiport_steel_block.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/AiportSteelBlockBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/block/aiport_steel_block.json"
+          "src/main/java/net/mcreator/ethernalkronuz/block/AiportSteelBlockBlock.java"
         ]
       },
       "path": "~/Ores/Airport Steel"
@@ -771,8 +771,8 @@
       "registry_name": "aiport_steel_pickaxe",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_pickaxe.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/AiportSteelPickaxeItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/AiportSteelPickaxeItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_pickaxe.json"
         ]
       },
       "path": "~/Ores/Airport Steel/Ferramentas/Pickaxe"
@@ -786,8 +786,8 @@
       "registry_name": "aiport_steel_axe",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_axe.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/AiportSteelAxeItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/AiportSteelAxeItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_axe.json"
         ]
       },
       "path": "~/Ores/Airport Steel/Ferramentas/Axe"
@@ -801,8 +801,8 @@
       "registry_name": "aiport_steel_sword",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/item/AiportSteelSwordItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_sword.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_sword.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/AiportSteelSwordItem.java"
         ]
       },
       "path": "~/Ores/Airport Steel/Ferramentas/Sword"
@@ -831,8 +831,8 @@
       "registry_name": "aiport_steel_hoe",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_hoe.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/AiportSteelHoeItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/AiportSteelHoeItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_hoe.json"
         ]
       },
       "path": "~/Ores/Airport Steel/Ferramentas/Hoe"
@@ -850,10 +850,10 @@
         "eb": true,
         "ec": true,
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/item/AiportSteelArmorItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_armor_boots.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_armor_helmet.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/AiportSteelArmorItem.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_armor_chestplate.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_armor_boots.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_armor_leggings.json"
         ]
       },
@@ -1508,9 +1508,9 @@
       "registry_name": "aesir_portal_block",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/block/AesirPortalBlockBlock.java",
           "src/main/resources/assets/ethernal_kronuz/blockstates/aesir_portal_block.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/aesir_portal_block.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/AesirPortalBlockBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/aesir_portal_block.json"
         ]
       },
@@ -1844,10 +1844,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -2141,8 +2137,8 @@
       "registry_name": "airport_steel_shovel_head",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/airport_steel_shovel_head.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/AirportSteelShovelHeadItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/AirportSteelShovelHeadItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/airport_steel_shovel_head.json"
         ]
       },
       "path": "~/Ores/Airport Steel/Ferramentas/Shovel"
@@ -2184,8 +2180,8 @@
       "registry_name": "airport_steel_hoe_head",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/airport_steel_hoe_head.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/AirportSteelHoeHeadItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/AirportSteelHoeHeadItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/airport_steel_hoe_head.json"
         ]
       },
       "path": "~/Ores/Airport Steel/Ferramentas/Hoe/Head"
@@ -2649,9 +2645,9 @@
       "metadata": {
         "ep": false,
         "files": [
-          "src/main/resources/data/ethernal_kronuz/dimension/asgard.json",
+          "src/main/resources/data/ethernal_kronuz/dimension_type/asgard.json",
           "src/main/java/net/mcreator/ethernalkronuz/world/dimension/AsgardDimension.java",
-          "src/main/resources/data/ethernal_kronuz/dimension_type/asgard.json"
+          "src/main/resources/data/ethernal_kronuz/dimension/asgard.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Geracao"
@@ -2694,8 +2690,8 @@
       "registry_name": "cabuflamanau",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/cabuflamanau.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/CabuflamanauItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/CabuflamanauItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/cabuflamanau.json"
         ]
       },
       "path": "~/Music Discs"
@@ -2709,8 +2705,8 @@
       "registry_name": "away",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/away.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/AwayItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/AwayItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/away.json"
         ]
       },
       "path": "~/Music Discs"
@@ -2793,8 +2789,8 @@
       "registry_name": "hell_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/particles/hell_particle.json",
-          "src/main/java/net/mcreator/ethernalkronuz/client/particle/HellParticleParticle.java"
+          "src/main/java/net/mcreator/ethernalkronuz/client/particle/HellParticleParticle.java",
+          "src/main/resources/assets/ethernal_kronuz/particles/hell_particle.json"
         ]
       },
       "path": "~/Empowerments/Hell Empowerment"
@@ -2879,8 +2875,8 @@
       "registry_name": "erika",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/erika.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/ErikaItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/ErikaItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/erika.json"
         ]
       },
       "path": "~/Music Discs"
@@ -2909,8 +2905,8 @@
       "registry_name": "ganda_moca",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/item/GandaMocaItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/ganda_moca.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/ganda_moca.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/GandaMocaItem.java"
         ]
       },
       "path": "~/Music Discs"
@@ -2989,7 +2985,7 @@
       "name": "MuramasaDashAbility",
       "type": "procedure",
       "sortid": 258,
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "registry_name": "muramasa_dash_ability",
       "metadata": {
@@ -3649,10 +3645,10 @@
       "registry_name": "nokkia_hammer_block",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/block/NokkiaHammerBlockBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/nokkia_hammer_block.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/nokkia_hammer_block.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/nokkia_hammer_block.json"
+          "src/main/resources/assets/ethernal_kronuz/models/block/nokkia_hammer_block.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/nokkia_hammer_block.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/NokkiaHammerBlockBlock.java"
         ]
       },
       "path": "~/Factions/Radiant Lords/Weapons/Nokkia Hammer"
@@ -3754,9 +3750,9 @@
       "registry_name": "botv_block",
       "metadata": {
         "files": [
+          "src/main/resources/assets/ethernal_kronuz/models/block/botv_block.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/botv_block.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/botv_block.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/botv_block.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/BOTVBlockBlock.java"
         ]
       },
@@ -3807,10 +3803,10 @@
       "registry_name": "murasama_block",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/murasama_block.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/murasama_block.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/MurasamaBlockBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/murasama_block.json"
+          "src/main/resources/assets/ethernal_kronuz/blockstates/murasama_block.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/murasama_block.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/murasama_block.json"
         ]
       },
       "path": "~/Factions/Radiant Lords/Weapons/Murasama"
@@ -3860,10 +3856,10 @@
       "registry_name": "terra_blade_block",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/terra_blade_block.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/terra_blade_block.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/TerraBladeBlockBlock.java",
           "src/main/resources/assets/ethernal_kronuz/blockstates/terra_blade_block.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/TerraBladeBlockBlock.java"
+          "src/main/resources/assets/ethernal_kronuz/models/item/terra_blade_block.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/terra_blade_block.json"
         ]
       },
       "path": "~/Factions/Radiant Lords/Weapons/Terra Blade/Block"
@@ -3932,10 +3928,10 @@
       "registry_name": "terra_blade_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/item/TerraBladeProjectileItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/terra_blade_projectile.json",
+          "src/main/java/net/mcreator/ethernalkronuz/entity/TerraBladeProjectileEntity.java",
           "src/main/java/net/mcreator/ethernalkronuz/client/renderer/TerraBladeProjectileRenderer.java",
-          "src/main/java/net/mcreator/ethernalkronuz/entity/TerraBladeProjectileEntity.java"
+          "src/main/resources/assets/ethernal_kronuz/models/item/terra_blade_projectile.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/TerraBladeProjectileItem.java"
         ]
       },
       "path": "~/Factions/Radiant Lords/Weapons/Terra Blade"
@@ -3949,10 +3945,10 @@
       "registry_name": "chiseled_heaven_slate",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_slate.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/ChiseledHeavenSlateBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/chiseled_heaven_slate.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/chiseled_heaven_slate.json"
+          "src/main/resources/assets/ethernal_kronuz/blockstates/chiseled_heaven_slate.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_slate.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/chiseled_heaven_slate.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenSlate/ChiseledHeavenSlate"
@@ -3966,11 +3962,11 @@
       "registry_name": "heaven_slate",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_slate.json",
           "src/main/java/net/mcreator/ethernalkronuz/world/features/ores/HeavenSlateFeature.java",
-          "src/main/java/net/mcreator/ethernalkronuz/block/HeavenSlateBlock.java",
           "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_slate.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_slate.json"
+          "src/main/java/net/mcreator/ethernalkronuz/block/HeavenSlateBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_slate.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_slate.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenSlate/Heaven Slate"
@@ -3984,10 +3980,10 @@
       "registry_name": "cobbled_heaven_slate",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_slate.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/CobbledHeavenSlateBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/cobbled_heaven_slate.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/cobbled_heaven_slate.json"
+          "src/main/resources/assets/ethernal_kronuz/blockstates/cobbled_heaven_slate.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_slate.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/cobbled_heaven_slate.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenSlate/Cobbled Heaven Slate"
@@ -4001,10 +3997,10 @@
       "registry_name": "cracked_heaven_slate_bricks",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/block/CrackedHeavenSlateBricksBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/cracked_heaven_slate_bricks.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_slate_bricks.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/cracked_heaven_slate_bricks.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_slate_bricks.json"
+          "src/main/java/net/mcreator/ethernalkronuz/block/CrackedHeavenSlateBricksBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/cracked_heaven_slate_bricks.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenSlate/Cracked Heaven Slate Bricks"
@@ -4018,10 +4014,10 @@
       "registry_name": "bricks_heaven_slate",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/bricks_heaven_slate.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/bricks_heaven_slate.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/BricksHeavenSlateBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/bricks_heaven_slate.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/bricks_heaven_slate.json"
+          "src/main/resources/assets/ethernal_kronuz/models/block/bricks_heaven_slate.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenSlate/Bricks Heaven Slate"
@@ -4035,8 +4031,8 @@
       "registry_name": "tiles_heaven_slate",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/tiles_heaven_slate.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/tiles_heaven_slate.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/tiles_heaven_slate.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/tiles_heaven_slate.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/TilesHeavenSlateBlock.java"
         ]
@@ -4052,10 +4048,10 @@
       "registry_name": "chiseled_heaven_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/blockstates/chiseled_heaven_stone.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/chiseled_heaven_stone.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/ChiseledHeavenStoneBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_stone.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/ChiseledHeavenStoneBlock.java"
+          "src/main/resources/assets/ethernal_kronuz/models/item/chiseled_heaven_stone.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/chiseled_heaven_stone.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenStone/Chiseled Heaven Stone"
@@ -4087,9 +4083,9 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/ethernalkronuz/block/CrackedHeavenStoneBricksBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/cracked_heaven_stone_bricks.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_stone_bricks.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/cracked_heaven_stone_bricks.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/cracked_heaven_stone_bricks.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/cracked_heaven_stone_bricks.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenStone/Cracked Heaven Stone Bricks"
@@ -4103,10 +4099,10 @@
       "registry_name": "heaven_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_stone.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/HeavenStoneBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_stone.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_stone.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_stone.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenStone/Heaven Stone"
@@ -4120,10 +4116,10 @@
       "registry_name": "heaven_stone_bricks",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_stone_bricks.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_bricks.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_stone_bricks.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/HeavenStoneBricksBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_bricks.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_stone_bricks.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/HeavenStoneBricksBlock.java"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenStone/Bricks Heaven Stone"
@@ -4188,9 +4184,9 @@
       "registry_name": "gui_faction_book",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/network/GUIFactionBookButtonMessage.java",
+          "src/main/java/net/mcreator/ethernalkronuz/world/inventory/GUIFactionBookMenu.java",
           "src/main/java/net/mcreator/ethernalkronuz/client/gui/GUIFactionBookScreen.java",
-          "src/main/java/net/mcreator/ethernalkronuz/world/inventory/GUIFactionBookMenu.java"
+          "src/main/java/net/mcreator/ethernalkronuz/network/GUIFactionBookButtonMessage.java"
         ]
       },
       "path": "~/Factions/FactionBook/GUI"
@@ -4298,11 +4294,11 @@
       "registry_name": "cobbled_heaven_slate_slab",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/cobbled_heaven_slate_slab.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_slate_slab_full.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/cobbled_heaven_slate_slab.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_slate_slab_top.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/CobbledHeavenSlateSlabBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/cobbled_heaven_slate_slab.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/cobbled_heaven_slate_slab.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_slate_slab_full.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_slate_slab.json"
         ]
       },
@@ -4317,12 +4313,12 @@
       "registry_name": "cobbled_heaven_stone_slabs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_stone_slabs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/cobbled_heaven_stone_slabs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_stone_slabs_top.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_stone_slabs_full.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/cobbled_heaven_stone_slabs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_stone_slabs.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/CobbledHeavenStoneSlabsBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/cobbled_heaven_stone_slabs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_stone_slabs_full.json"
+          "src/main/resources/assets/ethernal_kronuz/blockstates/cobbled_heaven_stone_slabs.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenStone/Cobbled Heaven Stone"
@@ -4336,11 +4332,11 @@
       "registry_name": "bricks_heaven_slate_slabs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/bricks_heaven_slate_slabs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/bricks_heaven_slate_slabs_full.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/bricks_heaven_slate_slabs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/bricks_heaven_slate_slabs_top.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/BricksHeavenSlateSlabsBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/bricks_heaven_slate_slabs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/bricks_heaven_slate_slabs_full.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/bricks_heaven_slate_slabs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/bricks_heaven_slate_slabs.json"
         ]
       },
@@ -4355,12 +4351,12 @@
       "registry_name": "heaven_slate_slabs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_slate_slabs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_slate_slabs_full.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_slate_slabs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_slate_slabs.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/HeavenSlateSlabsBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_slate_slabs_full.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/heaven_slate_slabs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_slate_slabs_top.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/HeavenSlateSlabsBlock.java"
+          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_slate_slabs_top.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenSlate/Heaven Slate"
@@ -4374,12 +4370,12 @@
       "registry_name": "tiles_heaven_slate_slab",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/blockstates/tiles_heaven_slate_slab.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/TilesHeavenSlateSlabBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/tiles_heaven_slate_slab.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/tiles_heaven_slate_slab_full.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/tiles_heaven_slate_slab.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/tiles_heaven_slate_slab_top.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/tiles_heaven_slate_slab.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/tiles_heaven_slate_slab.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/tiles_heaven_slate_slab_top.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/tiles_heaven_slate_slab_full.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenSlate/Tiles Heaven Slate"
@@ -4393,11 +4389,11 @@
       "registry_name": "heaven_stone_bricks_slabs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_bricks_slabs_top.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/HeavenStoneBricksSlabsBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_bricks_slabs_full.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_stone_bricks_slabs.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/HeavenStoneBricksSlabsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/heaven_stone_bricks_slabs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_bricks_slabs_top.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_bricks_slabs_full.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_bricks_slabs.json"
         ]
       },
@@ -4412,12 +4408,12 @@
       "registry_name": "heaven_stone_slabs",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/block/HeavenStoneSlabsBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_slabs_full.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_stone_slabs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_slabs.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/heaven_stone_slabs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_slabs_top.json"
+          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_slabs_top.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/HeavenStoneSlabsBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_slabs.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_stone_slabs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_slabs_full.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenStone/Heaven Stone"
@@ -4431,12 +4427,12 @@
       "registry_name": "cobbled_heaven_slate_stairs",
       "metadata": {
         "files": [
+          "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_slate_stairs_outer.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/cobbled_heaven_slate_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_slate_stairs.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/CobbledHeavenSlateStairsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/blockstates/cobbled_heaven_slate_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_slate_stairs_inner.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/cobbled_heaven_slate_stairs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_slate_stairs_outer.json"
+          "src/main/java/net/mcreator/ethernalkronuz/block/CobbledHeavenSlateStairsBlock.java"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenSlate/Cobbled Heaven Slate"
@@ -4453,9 +4449,9 @@
           "src/main/java/net/mcreator/ethernalkronuz/block/CobbledHeavenStoneStairsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_stone_stairs_outer.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/cobbled_heaven_stone_stairs.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/cobbled_heaven_stone_stairs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_stone_stairs_inner.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_stone_stairs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_stone_stairs_inner.json"
+          "src/main/resources/assets/ethernal_kronuz/blockstates/cobbled_heaven_stone_stairs.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenStone/Cobbled Heaven Stone"
@@ -4469,11 +4465,11 @@
       "registry_name": "bricks_heaven_slate_stairs",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/block/BricksHeavenSlateStairsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/bricks_heaven_slate_stairs_inner.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/BricksHeavenSlateStairsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/bricks_heaven_slate_stairs_outer.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/bricks_heaven_slate_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/bricks_heaven_slate_stairs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/bricks_heaven_slate_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/bricks_heaven_slate_stairs.json"
         ]
       },
@@ -4489,11 +4485,11 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/ethernal_kronuz/models/block/heaven_slate_stairs_inner.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_slate_stairs_outer.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/HeavenSlateStairsBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_slate_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_slate_stairs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_slate_stairs.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_slate_stairs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_slate_stairs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_slate_stairs_outer.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/HeavenSlateStairsBlock.java"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenSlate/Heaven Slate"
@@ -4507,11 +4503,11 @@
       "registry_name": "tiles_heaven_slate_stairs",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/block/TilesHeavenSlateStairsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/tiles_heaven_slate_stairs_outer.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/tiles_heaven_slate_stairs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/tiles_heaven_slate_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/tiles_heaven_slate_stairs_inner.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/TilesHeavenSlateStairsBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/tiles_heaven_slate_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/tiles_heaven_slate_stairs.json"
         ]
       },
@@ -4526,12 +4522,12 @@
       "registry_name": "heaven_stone_bricks_stairs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_bricks_stairs_inner.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_stone_bricks_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_bricks_stairs_outer.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/HeavenStoneBricksStairsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/heaven_stone_bricks_stairs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_bricks_stairs.json"
+          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_bricks_stairs_inner.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_bricks_stairs.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/HeavenStoneBricksStairsBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_stone_bricks_stairs.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenStone/Bricks Heaven Stone"
@@ -4546,10 +4542,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_stairs_inner.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_stone_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_stone_stairs.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/HeavenStoneStairsBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_stone_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_stairs_outer.json"
         ]
       },
@@ -4956,8 +4952,8 @@
       "registry_name": "ginuka_power_setup",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/ginuka_power_setup_spawn_egg.json",
           "src/main/java/net/mcreator/ethernalkronuz/client/renderer/GinukaPowerSetupRenderer.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/ginuka_power_setup_spawn_egg.json",
           "src/main/java/net/mcreator/ethernalkronuz/entity/GinukaPowerSetupEntity.java"
         ]
       },
@@ -5085,8 +5081,8 @@
       "registry_name": "technomorto",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/technomorto_spawn_egg.json",
           "src/main/java/net/mcreator/ethernalkronuz/client/renderer/TechnomortoRenderer.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/technomorto_spawn_egg.json",
           "src/main/java/net/mcreator/ethernalkronuz/entity/TechnomortoEntity.java"
         ]
       },
@@ -5101,8 +5097,8 @@
       "registry_name": "technobalde",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/TechnobaldeRenderer.java",
           "src/main/java/net/mcreator/ethernalkronuz/entity/TechnobaldeEntity.java",
+          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/TechnobaldeRenderer.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/technobalde_spawn_egg.json"
         ]
       },
@@ -5117,8 +5113,8 @@
       "registry_name": "battle_coin",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/item/MoedaDeTrocaItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/battle_coin.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/battle_coin.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/MoedaDeTrocaItem.java"
         ]
       },
       "path": "~/Mobs/Techno Balde/Sistema de trocas/Battle Coin"
@@ -5509,8 +5505,8 @@
       "registry_name": "divine_water",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/item/DivineWaterItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/divine_water.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/divine_water.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/DivineWaterItem.java"
         ]
       },
       "path": "~/Mobs/Ginuka Power/Divine Water"
@@ -5570,8 +5566,8 @@
       "registry_name": "null_entity",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/NullEntityRenderer.java",
-          "src/main/java/net/mcreator/ethernalkronuz/entity/NullEntityEntity.java"
+          "src/main/java/net/mcreator/ethernalkronuz/entity/NullEntityEntity.java",
+          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/NullEntityRenderer.java"
         ]
       },
       "path": "~/Factions/Andarilhos da Cave/Transformacao"
@@ -5663,8 +5659,8 @@
       "registry_name": "blessing",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/BlessingRenderer.java",
           "src/main/java/net/mcreator/ethernalkronuz/entity/BlessingEntity.java",
+          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/BlessingRenderer.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/blessing_spawn_egg.json"
         ]
       },
@@ -5794,9 +5790,9 @@
       "registry_name": "backpack",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/item/BackpackItem.java",
+          "src/main/java/net/mcreator/ethernalkronuz/item/inventory/BackpackInventoryCapability.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/backpack.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/inventory/BackpackInventoryCapability.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/BackpackItem.java"
         ]
       },
       "path": "~/Souvenirs/Super Backpack"
@@ -6200,10 +6196,10 @@
       "registry_name": "ygg_log",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/ygg_log.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_log.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/YggLogBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/ygg_log.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_log.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/ygg_log.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/ygg_log.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/YggWood"
@@ -6217,10 +6213,10 @@
       "registry_name": "ygg_planks",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_planks.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/ygg_planks.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/YggPlanksBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/ygg_planks.json"
+          "src/main/resources/assets/ethernal_kronuz/blockstates/ygg_planks.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_planks.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/YggPlanksBlock.java"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/YggWood"
@@ -6234,10 +6230,10 @@
       "registry_name": "stripped_ygg_log",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/block/StrippedYggLogBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/block/stripped_ygg_log.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/stripped_ygg_log.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/stripped_ygg_log.json"
+          "src/main/resources/assets/ethernal_kronuz/blockstates/stripped_ygg_log.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/stripped_ygg_log.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/StrippedYggLogBlock.java"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/YggWood/Stripped Log"
@@ -6291,13 +6287,13 @@
       "registry_name": "ygg_door",
       "metadata": {
         "files": [
+          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_door_bottom.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/ygg_door_bottom_hinge.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/ygg_door.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/YggDoorBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/ygg_door.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/ygg_door_top_hinge.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/ygg_door_top.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_door_bottom.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/ygg_door.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/YggDoorBlock.java"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/YggWood"
@@ -6311,12 +6307,12 @@
       "registry_name": "ygg_trapdoor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_trapdoor.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_trapdoor_open.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/YggTrapdoorBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/ygg_trapdoor.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/ygg_trapdoor_top.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/ygg_trapdoor.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/ygg_trapdoor.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_trapdoor_open.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_trapdoor.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/YggTrapdoorBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/ygg_trapdoor.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/YggWood"
@@ -6330,10 +6326,10 @@
       "registry_name": "ygg_wood_sappling",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/ygg_wood_sappling.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/ygg_wood_sappling.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_wood_sappling.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/YggWoodSapplingBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_wood_sappling.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/ygg_wood_sappling.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/ygg_wood_sappling.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/YggWood"
@@ -6347,10 +6343,10 @@
       "registry_name": "divine_crystal",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/divine_crystal.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/divine_crystal.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/divine_crystal.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/DivineCrystalBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/block/divine_crystal.json"
+          "src/main/resources/assets/ethernal_kronuz/blockstates/divine_crystal.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/divine_crystal.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/Divine Crystal"
@@ -6364,10 +6360,10 @@
       "registry_name": "divine_crystal_spikes",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/divine_crystal_spikes.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/divine_crystal_spikes.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/divine_crystal_spikes.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/DivineCrystalSpikesBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/block/divine_crystal_spikes.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/divine_crystal_spikes.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/Divine Crystal"
@@ -6381,10 +6377,10 @@
       "registry_name": "cristalized_divine_water",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/cristalized_divine_water.json",
-          "src/main/java/net/mcreator/ethernalkronuz/fluid/CristalizedDivineWaterFluid.java",
           "src/main/resources/assets/ethernal_kronuz/blockstates/cristalized_divine_water.json",
+          "src/main/java/net/mcreator/ethernalkronuz/fluid/CristalizedDivineWaterFluid.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/cristalized_divine_water_bucket.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/cristalized_divine_water.json",
           "src/main/java/net/mcreator/ethernalkronuz/item/CristalizedDivineWaterItem.java",
           "src/main/java/net/mcreator/ethernalkronuz/block/CristalizedDivineWaterBlock.java"
         ]
@@ -6420,10 +6416,10 @@
       "registry_name": "asgardian_dirt",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/asgardian_dirt.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/AsgardianDirtBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/asgardian_dirt.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/asgardian_dirt.json"
+          "src/main/resources/assets/ethernal_kronuz/blockstates/asgardian_dirt.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/asgardian_dirt.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/AsgardianDirtBlock.java"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos"
@@ -6437,11 +6433,11 @@
       "registry_name": "bio_luminescent_lily",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/world/features/plants/BioLuminescentLilyFeature.java",
           "src/main/java/net/mcreator/ethernalkronuz/block/BioLuminescentLilyBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/block/bio_luminescent_lily.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/bio_luminescent_lily.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/bio_luminescent_lily.json"
+          "src/main/resources/assets/ethernal_kronuz/blockstates/bio_luminescent_lily.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/bio_luminescent_lily.json",
+          "src/main/java/net/mcreator/ethernalkronuz/world/features/plants/BioLuminescentLilyFeature.java"
         ]
       },
       "path": "~/Dimensions/Asgard/Vegetacao"
@@ -6455,11 +6451,11 @@
       "registry_name": "glow_plant",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/world/features/plants/GlowPlantFeature.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/glow_plant.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/glow_plant.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/GlowPlantBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/glow_plant.json"
+          "src/main/java/net/mcreator/ethernalkronuz/world/features/plants/GlowPlantFeature.java",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/glow_plant.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/glow_plant.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Vegetacao"
@@ -6473,11 +6469,11 @@
       "registry_name": "double_glow_plant",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/blockstates/double_glow_plant.json",
           "src/main/java/net/mcreator/ethernalkronuz/world/features/plants/DoubleGlowPlantFeature.java",
-          "src/main/resources/assets/ethernal_kronuz/models/block/double_glow_plant.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/double_glow_plant.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/double_glow_plant.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/DoubleGlowPlantBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/double_glow_plant.json"
+          "src/main/resources/assets/ethernal_kronuz/models/block/double_glow_plant.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Vegetacao"
@@ -6654,9 +6650,9 @@
       "registry_name": "griffin_animated",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/entity/GriffinAnimatedEntity.java",
-          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/GriffinAnimatedRenderer.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/griffin_animated_spawn_egg.json",
+          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/GriffinAnimatedRenderer.java",
+          "src/main/java/net/mcreator/ethernalkronuz/entity/GriffinAnimatedEntity.java",
           "src/main/java/net/mcreator/ethernalkronuz/entity/model/GriffinAnimatedModel.java"
         ]
       },
@@ -6671,10 +6667,10 @@
       "registry_name": "ygg_leaves",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_leaves.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/YggLeavesBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/ygg_leaves.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/ygg_leaves.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/ygg_leaves.json"
+          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_leaves.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/YggLeavesBlock.java"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/YggWood/Leaves"
@@ -6688,12 +6684,12 @@
       "registry_name": "tall_glow_grass",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/block/TallGlowGrassBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/tall_glow_grass.json",
-          "src/main/java/net/mcreator/ethernalkronuz/world/features/plants/TallGlowGrassFeature.java",
-          "src/main/resources/assets/ethernal_kronuz/models/block/tall_glow_grass_bottom.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/tall_glow_grass.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/tall_glow_grass.json"
+          "src/main/java/net/mcreator/ethernalkronuz/block/TallGlowGrassBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/block/tall_glow_grass.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/tall_glow_grass.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/tall_glow_grass_bottom.json",
+          "src/main/java/net/mcreator/ethernalkronuz/world/features/plants/TallGlowGrassFeature.java"
         ]
       },
       "path": "~/Dimensions/Asgard/Vegetacao"
@@ -6707,9 +6703,9 @@
       "registry_name": "asgardian_dirt_block",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/block/AsgardianDirtBlockBlock.java",
           "src/main/resources/assets/ethernal_kronuz/blockstates/asgardian_dirt_block.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/asgardian_dirt_block.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/AsgardianDirtBlockBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/asgardian_dirt_block.json"
         ]
       },
@@ -6756,8 +6752,8 @@
       "registry_name": "glow_plant_spores",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/particles/glow_plant_spores.json",
-          "src/main/java/net/mcreator/ethernalkronuz/client/particle/GlowPlantSporesParticle.java"
+          "src/main/java/net/mcreator/ethernalkronuz/client/particle/GlowPlantSporesParticle.java",
+          "src/main/resources/assets/ethernal_kronuz/particles/glow_plant_spores.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/YggWood/Leaves"
@@ -6771,12 +6767,12 @@
       "registry_name": "ygg_stairs",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/block/YggStairsBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/ygg_stairs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_stairs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/ygg_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/ygg_stairs_inner.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/ygg_stairs_outer.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/ygg_stairs.json"
+          "src/main/java/net/mcreator/ethernalkronuz/block/YggStairsBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_stairs.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/ygg_stairs.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/YggWood"
@@ -6790,12 +6786,12 @@
       "registry_name": "ygg_fences",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_fences_post.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/ygg_fences.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_fences.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/ygg_fences_inventory.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/ygg_fences.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/YggFencesBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/ygg_fences.json"
+          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_fences_post.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_fences.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/ygg_fences.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/YggWood"
@@ -6809,11 +6805,11 @@
       "registry_name": "ygg_slabs",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/block/YggSlabsBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/ygg_slabs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/ygg_slabs_top.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/YggSlabsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/ygg_slabs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/ygg_slabs.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/ygg_slabs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/ygg_slabs_full.json"
         ]
       },
@@ -6828,13 +6824,13 @@
       "registry_name": "ygg_gate",
       "metadata": {
         "files": [
+          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_gate.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/ygg_gate_wall_open.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/YggGateBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/ygg_gate_wall.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/ygg_gate.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_gate.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/ygg_gate.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_gate_open.json"
+          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_gate_open.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/ygg_gate.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/YggWood"
@@ -6848,9 +6844,9 @@
       "registry_name": "ygg_presure_plate",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_presure_plate.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/ygg_presure_plate.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/ygg_presure_plate.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_presure_plate.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/ygg_presure_plate_down.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/YggPresurePlateBlock.java"
         ]
@@ -6867,11 +6863,11 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/ethernal_kronuz/blockstates/ygg_button.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_button_inventory.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/ygg_button.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/YggButtonBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_button_pressed.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/ygg_button.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_button_inventory.json"
+          "src/main/java/net/mcreator/ethernalkronuz/block/YggButtonBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/block/ygg_button_pressed.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/YggWood"
@@ -7843,11 +7839,11 @@
       "registry_name": "cracked_heaven_slate_bricks_slabs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_slate_bricks_slabs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/cracked_heaven_slate_bricks_slabs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_slate_bricks_slabs_full.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/CrackedHeavenSlateBricksSlabsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_slate_bricks_slabs_top.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/CrackedHeavenSlateBricksSlabsBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/cracked_heaven_slate_bricks_slabs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_slate_bricks_slabs.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/cracked_heaven_slate_bricks_slabs.json"
         ]
       },
@@ -7862,11 +7858,11 @@
       "registry_name": "cracked_heaven_slate_bricks_stairs",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/block/CrackedHeavenSlateBricksStairsBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/cracked_heaven_slate_bricks_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_slate_bricks_stairs_inner.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/cracked_heaven_slate_bricks_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_slate_bricks_stairs_outer.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/cracked_heaven_slate_bricks_stairs.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/CrackedHeavenSlateBricksStairsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_slate_bricks_stairs.json"
         ]
       },
@@ -7937,11 +7933,11 @@
       "registry_name": "chiseled_heaven_slate_stairs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_slate_stairs_inner.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/ChiseledHeavenSlateStairsBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_slate_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/chiseled_heaven_slate_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_slate_stairs_outer.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_slate_stairs_inner.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_slate_stairs.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/ChiseledHeavenSlateStairsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/blockstates/chiseled_heaven_slate_stairs.json"
         ]
       },
@@ -7956,12 +7952,12 @@
       "registry_name": "chiseled_heaven_slate_slabs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_slate_slabs_full.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/chiseled_heaven_slate_slabs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_slate_slabs_top.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/ChiseledHeavenSlateSlabsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_slate_slabs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/chiseled_heaven_slate_slabs.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/chiseled_heaven_slate_slabs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_slate_slabs_top.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_slate_slabs_full.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/ChiseledHeavenSlateSlabsBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/chiseled_heaven_slate_slabs.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenSlate/ChiseledHeavenSlate"
@@ -8031,12 +8027,12 @@
       "registry_name": "cracked_heaven_stone_bricks_stairs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_stone_bricks_stairs_outer.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_stone_bricks_stairs.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/CrackedHeavenStoneBricksStairsBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/cracked_heaven_stone_bricks_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_stone_bricks_stairs_inner.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/CrackedHeavenStoneBricksStairsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/cracked_heaven_stone_bricks_stairs.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/cracked_heaven_stone_bricks_stairs.json"
+          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_stone_bricks_stairs_outer.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenStone/Cracked Heaven Stone Bricks"
@@ -8050,12 +8046,12 @@
       "registry_name": "cracked_heaven_stone_bricks_slabs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/blockstates/cracked_heaven_stone_bricks_slabs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_stone_bricks_slabs_full.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_stone_bricks_slabs_top.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/CrackedHeavenStoneBricksSlabsBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_stone_bricks_slabs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/cracked_heaven_stone_bricks_slabs.json"
+          "src/main/resources/assets/ethernal_kronuz/blockstates/cracked_heaven_stone_bricks_slabs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/cracked_heaven_stone_bricks_slabs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_stone_bricks_slabs_top.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_stone_bricks_slabs_full.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_stone_bricks_slabs.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenStone/Cracked Heaven Stone Bricks"
@@ -8125,12 +8121,12 @@
       "registry_name": "chiseled_heaven_stone_stairs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_stone_stairs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/chiseled_heaven_stone_stairs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_stone_stairs_inner.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/chiseled_heaven_stone_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_stone_stairs_outer.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_stone_stairs_inner.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/ChiseledHeavenStoneStairsBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/chiseled_heaven_stone_stairs.json"
+          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_stone_stairs.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/ChiseledHeavenStoneStairsBlock.java"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenStone/Chiseled Heaven Stone"
@@ -8144,11 +8140,11 @@
       "registry_name": "chiseled_heaven_stone_slabs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_stone_slabs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_stone_slabs_full.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/ChiseledHeavenStoneSlabsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/blockstates/chiseled_heaven_stone_slabs.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/chiseled_heaven_stone_slabs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_stone_slabs_full.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_stone_slabs.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/ChiseledHeavenStoneSlabsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_stone_slabs_top.json"
         ]
       },
@@ -8219,10 +8215,10 @@
       "registry_name": "invisible_block_blessing",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/invisible_block_blessing.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/invisible_block_blessing.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/invisible_block_blessing.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/InvisibleBlockBlessingBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/invisible_block_blessing.json"
+          "src/main/resources/assets/ethernal_kronuz/models/block/invisible_block_blessing.json"
         ]
       },
       "path": "~/Factions/Big Testas/Transformacao"
@@ -8271,10 +8267,10 @@
       "registry_name": "warper",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/entity/model/WarperModel.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/warper_spawn_egg.json",
+          "src/main/java/net/mcreator/ethernalkronuz/entity/WarperEntity.java",
           "src/main/java/net/mcreator/ethernalkronuz/client/renderer/WarperRenderer.java",
-          "src/main/java/net/mcreator/ethernalkronuz/entity/WarperEntity.java"
+          "src/main/java/net/mcreator/ethernalkronuz/entity/model/WarperModel.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/warper_spawn_egg.json"
         ]
       },
       "path": "~/Mobs/Warper"
@@ -8471,11 +8467,11 @@
       "registry_name": "normal_glow_grass",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/block/NormalGlowGrassBlock.java",
-          "src/main/java/net/mcreator/ethernalkronuz/world/features/plants/NormalGlowGrassFeature.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/normal_glow_grass.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/normal_glow_grass.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/normal_glow_grass.json"
+          "src/main/java/net/mcreator/ethernalkronuz/block/NormalGlowGrassBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/block/normal_glow_grass.json",
+          "src/main/java/net/mcreator/ethernalkronuz/world/features/plants/NormalGlowGrassFeature.java",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/normal_glow_grass.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Vegetacao"
@@ -8694,8 +8690,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/ethernalkronuz/block/CrystalizedDivineWaterBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/block/crystalized_divine_water.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/crystalized_divine_water.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/crystalized_divine_water.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/crystalized_divine_water.json"
         ]
       },
@@ -8746,9 +8742,9 @@
       "registry_name": "flowerpotbioluminescentlily",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/flowerpotbioluminescentlily.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/flowerpotbioluminescentlily.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/FlowerpotbioluminescentlilyBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/block/flowerpotbioluminescentlily.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/flowerpotbioluminescentlily.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/flowerpotbioluminescentlily.json"
         ]
       },
@@ -8871,10 +8867,10 @@
       "registry_name": "flowerpotyggsapling",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/blockstates/flowerpotyggsapling.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/FlowerpotyggsaplingBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/flowerpotyggsapling.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/flowerpotyggsapling.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/flowerpotyggsapling.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/flowerpotyggsapling.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Vegetacao"
@@ -8924,10 +8920,10 @@
       "registry_name": "flowerpotglowplant",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/block/FlowerpotglowplantBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/flowerpotglowplant.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/flowerpotglowplant.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/flowerpotglowplant.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/FlowerpotglowplantBlock.java"
+          "src/main/resources/assets/ethernal_kronuz/blockstates/flowerpotglowplant.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Vegetacao"
@@ -9013,9 +9009,9 @@
       "registry_name": "flowerpotdoubleglowplant",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/block/FlowerpotdoubleglowplantBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/flowerpotdoubleglowplant.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/flowerpotdoubleglowplant.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/FlowerpotdoubleglowplantBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/flowerpotdoubleglowplant.json"
         ]
       },
@@ -10067,11 +10063,11 @@
       "registry_name": "rl_roxo_armour",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/rl_roxo_armour_helmet.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/RLRoxoArmourItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/rl_roxo_armour_leggings.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/rl_roxo_armour_chestplate.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/rl_roxo_armour_boots.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/rl_roxo_armour_chestplate.json"
+          "src/main/java/net/mcreator/ethernalkronuz/item/RLRoxoArmourItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/rl_roxo_armour_helmet.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/rl_roxo_armour_leggings.json"
         ]
       },
       "path": "~/Factions/Radiant Lords/Transformations/Roxo"
@@ -10100,11 +10096,11 @@
       "registry_name": "deep_sea_boot",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/deep_sea_boot.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/DeepSeaBootItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/DeepSeaBootItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/deep_sea_boot.json"
         ]
       },
-      "path": "~/Souvenirs/TheEndingEye"
+      "path": "~/Souvenirs/DeepSeaBoot"
     },
     {
       "name": "DeepSeaBootBaublesEquipped",
@@ -10124,7 +10120,7 @@
           }
         ]
       },
-      "path": "~/Souvenirs/TheEndingEye"
+      "path": "~/Souvenirs/DeepSeaBoot"
     },
     {
       "name": "DeepSeaBootBaublesUnequipped",
@@ -10144,7 +10140,7 @@
           }
         ]
       },
-      "path": "~/Souvenirs/TheEndingEye"
+      "path": "~/Souvenirs/DeepSeaBoot"
     },
     {
       "name": "AsgardParticle",
@@ -10194,8 +10190,8 @@
       "registry_name": "terra_blade_particle",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/client/particle/TerraBladeParticleParticle.java",
-          "src/main/resources/assets/ethernal_kronuz/particles/terra_blade_particle.json"
+          "src/main/resources/assets/ethernal_kronuz/particles/terra_blade_particle.json",
+          "src/main/java/net/mcreator/ethernalkronuz/client/particle/TerraBladeParticleParticle.java"
         ]
       },
       "path": "~/Factions/Radiant Lords/Weapons/Terra Blade"
@@ -10237,8 +10233,8 @@
       "registry_name": "blade_of_the_void_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/particles/blade_of_the_void_particle.json",
-          "src/main/java/net/mcreator/ethernalkronuz/client/particle/BladeOfTheVoidParticleParticle.java"
+          "src/main/java/net/mcreator/ethernalkronuz/client/particle/BladeOfTheVoidParticleParticle.java",
+          "src/main/resources/assets/ethernal_kronuz/particles/blade_of_the_void_particle.json"
         ]
       },
       "path": "~/Factions/Radiant Lords/Weapons/Blade Of The Void"
@@ -10299,10 +10295,10 @@
       "registry_name": "rl_vermelho_armor",
       "metadata": {
         "files": [
+          "src/main/resources/assets/ethernal_kronuz/models/item/rl_vermelho_armor_boots.json",
           "src/main/java/net/mcreator/ethernalkronuz/item/RLVermelhoArmorItem.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/rl_vermelho_armor_helmet.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/rl_vermelho_armor_chestplate.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/rl_vermelho_armor_boots.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/rl_vermelho_armor_leggings.json"
         ]
       },
@@ -10317,11 +10313,11 @@
       "registry_name": "rl_verde_armor",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/item/RLVerdeArmorItem.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/rl_verde_armor_leggings.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/rl_verde_armor_boots.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/rl_verde_armor_chestplate.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/rl_verde_armor_helmet.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/RLVerdeArmorItem.java"
+          "src/main/resources/assets/ethernal_kronuz/models/item/rl_verde_armor_helmet.json"
         ]
       },
       "path": "~/Factions/Radiant Lords/Transformations/Verde"
@@ -10667,12 +10663,12 @@
       "block.ethernal_kronuz.bricks_heaven_slate_slabs": "Heaven Slate Bricks Slabs",
       "item.ethernal_kronuz.cabuflamanau": "Piruka",
       "biome.ethernal_kronuz.sky_fields": "Sky Fields",
-      "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
       "key.ethernal_kronuz.griffin_up": "Griffin Upwards",
+      "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
       "advancements.bt_achievement.descr": "Juntar-se aos Big Testa",
-      "advancements.rl_verde_achievement.title": "Carregado até ao limite",
       "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
+      "advancements.rl_verde_achievement.title": "Carregado até ao limite",
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
       "block.ethernal_kronuz.mosso_crystal_ore": "Mosso Crystal Ore",
@@ -10680,13 +10676,13 @@
       "gui.ethernal_kronuz.trade_system_gui_techno.label_technobalde": "Technobalde",
       "item.ethernal_kronuz.blade_of_the_void_setup": "§dBlade Of The Void",
       "block.ethernal_kronuz.mosso_crystal_block": "Block of Mosso Crystal",
-      "advancements.ascender_advancement.descr": "Tornar-se um Radiant Lord",
-      "item.ethernal_kronuz.aiport_steel_armor_chestplate": "Airport Steel Chestplate",
       "block.ethernal_kronuz.ygg_trapdoor": "Ygg Wood Trapdoor",
+      "item.ethernal_kronuz.aiport_steel_armor_chestplate": "Airport Steel Chestplate",
+      "advancements.ascender_advancement.descr": "Tornar-se um Radiant Lord",
       "item.ethernal_kronuz.rl_roxo_armour_helmet": "Gargantuan\u0027s Armour Helmet",
       "item.ethernal_kronuz.terra_blade_setup": "§aTerra Blade",
-      "block.ethernal_kronuz.ygg_planks": "Ygg Wood Planks",
       "advancements.enters_asgard.descr": "Enter in Asgard",
+      "block.ethernal_kronuz.ygg_planks": "Ygg Wood Planks",
       "item.ethernal_kronuz.necromancer.desc": "Necromancer",
       "subtitles.nokkia_hammer_spawn": "",
       "gamerule.give_rl_verde_game_rule.description": "Ascender um jogador",
@@ -10705,18 +10701,18 @@
       "block.ethernal_kronuz.ygg_button": "Ygg Wood Button",
       "subtitles.warper-hurt": "",
       "item.ethernal_kronuz.aiport_steel_armor_leggings": "Airport Steel Leggings",
-      "block.ethernal_kronuz.ygg_door": "Ygg Wood Door",
       "block.ethernal_kronuz.tiles_heaven_slate_slab": "Heaven Slate Tiles Slab",
+      "block.ethernal_kronuz.ygg_door": "Ygg Wood Door",
       "subtitles.freaky": "",
       "item.ethernal_kronuz.aiport_steel_ingot": "Aiport Steel Ingot",
       "item.ethernal_kronuz.aiport_steel_pickaxe": "Airport Steel Pickaxe",
       "entity.ethernal_kronuz.warper": "Warper",
       "block.ethernal_kronuz.heaven_stone_bricks_stairs": "Heaven Stone Bricks Stairs",
       "block.ethernal_kronuz.heaven_stone_bricks": "Heaven Stone Bricks",
-      "advancements.full_set_faking_ell.title": "Eia mano!",
       "subtitles.gandamoca": "",
-      "item.ethernal_kronuz.deep_sea_boot": "Deep Sea Boot",
+      "advancements.full_set_faking_ell.title": "Eia mano!",
       "effect.ethernal_kronuz.bt_effect": "Big Testa",
+      "item.ethernal_kronuz.deep_sea_boot": "Deep Sea Boot",
       "itemGroup.tabcreative_tab": "Ethernal Kronuz",
       "gui.ethernal_kronuz.trade_system_gui_techno.label_trades": "Trades",
       "item.ethernal_kronuz.rl_verde_armor_leggings": "Titan Kaleb\u0027s  Leggings",

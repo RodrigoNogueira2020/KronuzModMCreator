@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Null",
     "mobLabel": "",
-    "mobModelName": "Biped",
+    "mobModelName": "ModelnullEntity",
     "mobModelTexture": "nullentity.png",
     "mobModelGlowTexture": "",
     "solidBoundingBox": {

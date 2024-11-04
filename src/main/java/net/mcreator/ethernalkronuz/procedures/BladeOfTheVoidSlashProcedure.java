@@ -83,4 +83,4 @@ public class BladeOfTheVoidSlashProcedure {
 			_player.getCooldowns().addCooldown(itemstack.getItem(), 40);
 
 	}
-}
+}

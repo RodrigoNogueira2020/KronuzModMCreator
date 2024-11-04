@@ -111,7 +111,7 @@ public class BladeOfTheVoidSetupItem extends TieredItem {
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		KillNonRLsProcedure.execute(world, entity);
+		KillNonRLsProcedure.execute(entity);
 	}
 
 	@Override
