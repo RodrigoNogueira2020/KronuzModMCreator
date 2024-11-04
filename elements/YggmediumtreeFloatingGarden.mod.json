@@ -21,9 +21,6 @@
         "value": "CUSTOM:FloatingGarden"
       }
     ],
-    "ignoreBlocks": "STRUCTURE_BLOCK",
-    "generateCondition": {
-      "name": "YggmediumtreeSkyFieldAdditionalGenerationCondition"
-    }
+    "ignoreBlocks": "STRUCTURE_BLOCK"
   }
 }

@@ -88,6 +88,10 @@ public class EthernalKronuzModVariables {
 			clone.FirstBook = original.FirstBook;
 			clone.IsRadiantLord = original.IsRadiantLord;
 			clone.AllowInJotunheim = original.AllowInJotunheim;
+			clone.CoordXBeforeEnterAsgard = original.CoordXBeforeEnterAsgard;
+			clone.CoordYBeforeEnterAsgard = original.CoordYBeforeEnterAsgard;
+			clone.CoordZBeforeEnterAsgard = original.CoordZBeforeEnterAsgard;
+			clone.DiretionBeforeEnterAsgard = original.DiretionBeforeEnterAsgard;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -287,6 +291,10 @@ public class EthernalKronuzModVariables {
 		public boolean FirstBook = false;
 		public boolean IsRadiantLord = false;
 		public boolean AllowInJotunheim = false;
+		public double CoordXBeforeEnterAsgard = 0;
+		public double CoordYBeforeEnterAsgard = 0;
+		public double CoordZBeforeEnterAsgard = 0;
+		public Direction DiretionBeforeEnterAsgard = Direction.NORTH;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -311,6 +319,10 @@ public class EthernalKronuzModVariables {
 			nbt.putBoolean("FirstBook", FirstBook);
 			nbt.putBoolean("IsRadiantLord", IsRadiantLord);
 			nbt.putBoolean("AllowInJotunheim", AllowInJotunheim);
+			nbt.putDouble("CoordXBeforeEnterAsgard", CoordXBeforeEnterAsgard);
+			nbt.putDouble("CoordYBeforeEnterAsgard", CoordYBeforeEnterAsgard);
+			nbt.putDouble("CoordZBeforeEnterAsgard", CoordZBeforeEnterAsgard);
+			nbt.putInt("DiretionBeforeEnterAsgard", DiretionBeforeEnterAsgard.get3DDataValue());
 			return nbt;
 		}
 
@@ -332,6 +344,10 @@ public class EthernalKronuzModVariables {
 			FirstBook = nbt.getBoolean("FirstBook");
 			IsRadiantLord = nbt.getBoolean("IsRadiantLord");
 			AllowInJotunheim = nbt.getBoolean("AllowInJotunheim");
+			CoordXBeforeEnterAsgard = nbt.getDouble("CoordXBeforeEnterAsgard");
+			CoordYBeforeEnterAsgard = nbt.getDouble("CoordYBeforeEnterAsgard");
+			CoordZBeforeEnterAsgard = nbt.getDouble("CoordZBeforeEnterAsgard");
+			DiretionBeforeEnterAsgard = Direction.from3DDataValue(nbt.getInt("DiretionBeforeEnterAsgard"));
 		}
 	}
 
@@ -372,6 +388,10 @@ public class EthernalKronuzModVariables {
 					variables.FirstBook = message.data.FirstBook;
 					variables.IsRadiantLord = message.data.IsRadiantLord;
 					variables.AllowInJotunheim = message.data.AllowInJotunheim;
+					variables.CoordXBeforeEnterAsgard = message.data.CoordXBeforeEnterAsgard;
+					variables.CoordYBeforeEnterAsgard = message.data.CoordYBeforeEnterAsgard;
+					variables.CoordZBeforeEnterAsgard = message.data.CoordZBeforeEnterAsgard;
+					variables.DiretionBeforeEnterAsgard = message.data.DiretionBeforeEnterAsgard;
 				}
 			});
 			context.setPacketHandled(true);

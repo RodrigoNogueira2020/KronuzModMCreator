@@ -15,9 +15,9 @@ public class DivinecrystalspikegiantAdditionalGenerationConditionProcedure {
     public static boolean execute(LevelAccessor world, double x, double y, double z) {
         boolean baseIsSolid = true;
         int baseWidth = 6; // Largura da base da estrutura
-        int baseDepth = 6; // Profundidade da base da estrutura
-        int offsetX = -3; // Ajusta para centralizar a base na coordenada x
-        int offsetZ = -3; // Ajusta para centralizar a base na coordenada z
+        int baseDepth = 3; // Profundidade da base da estrutura
+        int offsetX = -5; // Ajusta para centralizar a base na coordenada x
+        int offsetZ = -5; // Ajusta para centralizar a base na coordenada z
 
         // Verifica se a área da base tem blocos sólidos (não-ar e não o fluido personalizado) diretamente abaixo da estrutura
         for (int bx = 0; bx < baseWidth; bx++) {

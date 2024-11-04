@@ -15,7 +15,7 @@ public class DivinecrystalpillarmediumAdditionalGenerationConditionProcedure {
     public static boolean execute(LevelAccessor world, double x, double y, double z) {
         boolean baseIsSolid = true;
         int baseWidth = 6; // Largura da base da estrutura
-        int baseDepth = 6; // Profundidade da base da estrutura
+        int baseDepth = 3; // Profundidade da base da estrutura
         int offsetX = -3; // Ajusta para centralizar a base na coordenada x
         int offsetZ = -3; // Ajusta para centralizar a base na coordenada z
 

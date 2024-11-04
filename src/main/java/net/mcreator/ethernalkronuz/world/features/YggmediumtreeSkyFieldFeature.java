@@ -23,7 +23,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.Holder;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.ethernalkronuz.procedures.YggmediumtreeSkyFieldAdditionalGenerationConditionProcedure;
+import net.mcreator.ethernalkronuz.procedures.YggmediumtreeSkyFieldsAdditionalGenerationConditionProcedure;
 
 import java.util.Set;
 import java.util.List;
@@ -72,7 +72,7 @@ public class YggmediumtreeSkyFieldFeature extends Feature<NoneFeatureConfigurati
 				int x = spawnTo.getX();
 				int y = spawnTo.getY();
 				int z = spawnTo.getZ();
-				if (!YggmediumtreeSkyFieldAdditionalGenerationConditionProcedure.execute(world, x, y, z))
+				if (!YggmediumtreeSkyFieldsAdditionalGenerationConditionProcedure.execute(world, x, y, z))
 					continue;
 				if (template.placeInWorld(context.level(), spawnTo, spawnTo, new StructurePlaceSettings().setMirror(Mirror.values()[context.random().nextInt(2)]).setRotation(Rotation.values()[context.random().nextInt(3)]).setRandom(context.random())
 						.addProcessor(BlockIgnoreProcessor.STRUCTURE_BLOCK).setIgnoreEntities(false), context.random(), 2)) {

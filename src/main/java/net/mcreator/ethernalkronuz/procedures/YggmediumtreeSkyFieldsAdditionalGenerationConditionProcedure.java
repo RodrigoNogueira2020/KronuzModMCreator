@@ -9,16 +9,18 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
+
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModBlocks;
 
-public class DivinecrystalpillarlargeAdditionalGenerationConditionProcedure {
+public class YggmediumtreeSkyFieldsAdditionalGenerationConditionProcedure {
     public static boolean execute(LevelAccessor world, double x, double y, double z) {
         boolean baseIsSolid = true;
-        int baseWidth = 6;
-        int baseDepth = 3;
-        int offsetX = -3;
-        int offsetZ = -3;
+        int baseWidth = 6; // Largura da base da estrutura
+        int baseDepth = 3; // Profundidade da base da estrutura
+        int offsetX = -3; // Ajusta para centralizar a base na coordenada x
+        int offsetZ = -3; // Ajusta para centralizar a base na coordenada z
 
+        // Verifica se a área da base tem blocos sólidos (não-ar e não o fluido personalizado) diretamente abaixo da estrutura
         for (int bx = 0; bx < baseWidth; bx++) {
             for (int bz = 0; bz < baseDepth; bz++) {
                 BlockPos checkPos = new BlockPos(x + offsetX + bx, y - 1, z + offsetZ + bz);
@@ -33,9 +35,10 @@ public class DivinecrystalpillarlargeAdditionalGenerationConditionProcedure {
             if (!baseIsSolid) break;
         }
 
+        // Se a base estiver sólida, procede com a colocação da estrutura
         if (baseIsSolid) {
             if (world instanceof ServerLevel _serverworld) {
-                StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("ethernal_kronuz", "divine_crystal_pillar_large"));
+                StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("ethernal_kronuz", "ygg_medium_tree"));
                 if (template != null) {
                     template.placeInWorld(_serverworld, new BlockPos(x, y, z), new BlockPos(x, y, z), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
                 }

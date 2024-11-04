@@ -67,7 +67,7 @@ public class DivinecrystalpillarlargeFeature extends Feature<NoneFeatureConfigur
 				int i = context.origin().getX() + context.random().nextInt(16);
 				int k = context.origin().getZ() + context.random().nextInt(16);
 				int j = context.level().getHeight(Heightmap.Types.OCEAN_FLOOR_WG, i, k) - 1;
-				BlockPos spawnTo = new BlockPos(i + 0, j + 30, k + 0);
+				BlockPos spawnTo = new BlockPos(i + 0, j + 0, k + 0);
 				WorldGenLevel world = context.level();
 				int x = spawnTo.getX();
 				int y = spawnTo.getY();
