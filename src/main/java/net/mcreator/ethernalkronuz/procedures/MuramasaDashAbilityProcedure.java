@@ -8,14 +8,14 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageSource;  // Corrigido o pacote para DamageSource
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.Direction;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.ChatType;
-import net.minecraft.server.MinecraftServer;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.List;
 
@@ -39,8 +39,7 @@ public class MuramasaDashAbilityProcedure {
                 dashCharged = true;
 
                 if (entity instanceof Player _player) {
-                    _player.sendMessage(new TextComponent("Dash Charged!"), _player.getUUID()); // retirar esta condição quando arranjar 
-                    																			// um som para o ataque(meter o som no final deste file)
+                    _player.sendMessage(new TextComponent("Dash Charged!"), _player.getUUID());
                 }
             }
         } else {
@@ -58,6 +57,13 @@ public class MuramasaDashAbilityProcedure {
         }
 
         if (entity.isShiftKeyDown() || !entity.isCrouching()) {
+            String soundEvent = dashCharged ? "ethernal_kronuz:sword-dash-charged" : "ethernal_kronuz:sword-dash";
+            if (world instanceof ServerLevel _level) {
+                _level.playSound(null, entity.getX(), entity.getY(), entity.getZ(),
+                        ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(soundEvent)),
+                        SoundSource.PLAYERS, 1.0f, 1.0f);
+            }
+
             Vec3 lookDirection = entity.getLookAngle().normalize();
             double maxVerticalOffset = 2.0 / dashRange;
             double adjustedY = Math.max(-maxVerticalOffset, Math.min(maxVerticalOffset, lookDirection.y));
@@ -110,8 +116,6 @@ public class MuramasaDashAbilityProcedure {
                     );
                 }
             }
-
-            // meter aqui um som
 
             dashCharged = false;
         }

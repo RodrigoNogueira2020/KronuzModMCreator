@@ -42,6 +42,9 @@ public class EthernalKronuzModSounds {
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "warper-alive"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "warper-alive")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "warper-death"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "warper-death")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "warper-hurt"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "warper-hurt")));
+		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "sickle-swing"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "sickle-swing")));
+		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "sword-dash"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "sword-dash")));
+		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "sword-dash-charged"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "sword-dash-charged")));
 	}
 
 	@SubscribeEvent

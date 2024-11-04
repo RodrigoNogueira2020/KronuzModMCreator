@@ -10655,6 +10655,30 @@
       ],
       "category": "hostile",
       "subtitle": ""
+    },
+    {
+      "name": "sickle-swing",
+      "files": [
+        "sickle-swing"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "sword-dash",
+      "files": [
+        "sword-dash"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "sword-dash-charged",
+      "files": [
+        "sword-dash-charged"
+      ],
+      "category": "player",
+      "subtitle": ""
     }
   ],
   "language_map": {
@@ -10663,13 +10687,12 @@
       "block.ethernal_kronuz.bricks_heaven_slate_slabs": "Heaven Slate Bricks Slabs",
       "item.ethernal_kronuz.cabuflamanau": "Piruka",
       "biome.ethernal_kronuz.sky_fields": "Sky Fields",
-      "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
       "key.ethernal_kronuz.griffin_up": "Griffin Upwards",
+      "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
       "advancements.bt_achievement.descr": "Juntar-se aos Big Testa",
       "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "advancements.rl_verde_achievement.title": "Carregado até ao limite",
-      "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
       "block.ethernal_kronuz.mosso_crystal_ore": "Mosso Crystal Ore",
@@ -10677,13 +10700,13 @@
       "gui.ethernal_kronuz.trade_system_gui_techno.label_technobalde": "Technobalde",
       "item.ethernal_kronuz.blade_of_the_void_setup": "§dBlade Of The Void",
       "block.ethernal_kronuz.mosso_crystal_block": "Block of Mosso Crystal",
-      "advancements.ascender_advancement.descr": "Tornar-se um Radiant Lord",
-      "item.ethernal_kronuz.aiport_steel_armor_chestplate": "Airport Steel Chestplate",
       "block.ethernal_kronuz.ygg_trapdoor": "Ygg Wood Trapdoor",
+      "item.ethernal_kronuz.aiport_steel_armor_chestplate": "Airport Steel Chestplate",
+      "advancements.ascender_advancement.descr": "Tornar-se um Radiant Lord",
       "item.ethernal_kronuz.rl_roxo_armour_helmet": "Gargantuan\u0027s Armour Helmet",
       "item.ethernal_kronuz.terra_blade_setup": "§aTerra Blade",
-      "block.ethernal_kronuz.ygg_planks": "Ygg Wood Planks",
       "advancements.enters_asgard.descr": "Enter in Asgard",
+      "block.ethernal_kronuz.ygg_planks": "Ygg Wood Planks",
       "item.ethernal_kronuz.necromancer.desc": "Necromancer",
       "subtitles.nokkia_hammer_spawn": "",
       "gamerule.give_rl_verde_game_rule.description": "Ascender um jogador",
@@ -10702,18 +10725,18 @@
       "block.ethernal_kronuz.ygg_button": "Ygg Wood Button",
       "subtitles.warper-hurt": "",
       "item.ethernal_kronuz.aiport_steel_armor_leggings": "Airport Steel Leggings",
-      "block.ethernal_kronuz.ygg_door": "Ygg Wood Door",
       "block.ethernal_kronuz.tiles_heaven_slate_slab": "Heaven Slate Tiles Slab",
+      "block.ethernal_kronuz.ygg_door": "Ygg Wood Door",
       "subtitles.freaky": "",
       "item.ethernal_kronuz.aiport_steel_ingot": "Aiport Steel Ingot",
       "item.ethernal_kronuz.aiport_steel_pickaxe": "Airport Steel Pickaxe",
       "entity.ethernal_kronuz.warper": "Warper",
       "block.ethernal_kronuz.heaven_stone_bricks_stairs": "Heaven Stone Bricks Stairs",
       "block.ethernal_kronuz.heaven_stone_bricks": "Heaven Stone Bricks",
-      "advancements.full_set_faking_ell.title": "Eia mano!",
       "subtitles.gandamoca": "",
-      "item.ethernal_kronuz.deep_sea_boot": "Deep Sea Boot",
+      "advancements.full_set_faking_ell.title": "Eia mano!",
       "effect.ethernal_kronuz.bt_effect": "Big Testa",
+      "item.ethernal_kronuz.deep_sea_boot": "Deep Sea Boot",
       "itemGroup.tabcreative_tab": "Ethernal Kronuz",
       "gui.ethernal_kronuz.trade_system_gui_techno.label_trades": "Trades",
       "item.ethernal_kronuz.rl_verde_armor_leggings": "Titan Kaleb\u0027s  Leggings",
@@ -10784,6 +10807,7 @@
       "item.ethernal_kronuz.mosso_crystal_sword": "Mosso Crystal Sword",
       "item.ethernal_kronuz.aiport_steel_shovel": "Aiport Steel Shovel",
       "item.ethernal_kronuz.necromancer": "Adolfus Hitlurus",
+      "subtitles.sword-dash-charged": "",
       "item.ethernal_kronuz.freaky.desc": "Freaky",
       "death.attack.cancro": "Stage 4 finished you",
       "block.ethernal_kronuz.chiseled_heaven_slate_stairs": "Chiseled Heaven Slate Stairs",
@@ -10846,6 +10870,7 @@
       "advancements.rl_verde_achievement.descr": "Literalmente carregado a Radiant Lord",
       "block.ethernal_kronuz.heaven_slate_slabs": "Heaven Slate Slabs",
       "effect.ethernal_kronuz.asgard_empowerment_cooldown": "In Cooldown",
+      "subtitles.sickle-swing": "",
       "item.ethernal_kronuz.faking_ell_dust": "Faking Ell Nugget",
       "item.ethernal_kronuz.vasco": "V.A.S.C.O",
       "block.ethernal_kronuz.botv_block": "BOTV Block",
@@ -10916,6 +10941,7 @@
       "block.ethernal_kronuz.crystalized_divine_water": "Crystalized Divine Water",
       "item.ethernal_kronuz.technobalde_spawn_egg": "Technobalde Spawn Egg",
       "item.ethernal_kronuz.rl_verde_armor_boots": "Titan Kaleb\u0027s  Boots",
+      "subtitles.sword-dash": "",
       "item.ethernal_kronuz.battle_coin": "Battle Coin",
       "item.ethernal_kronuz.mosso_crystal_pickaxe": "Mosso Crystal Pickaxe",
       "gui.ethernal_kronuz.trade_system_gui_techno.button_21": "2",

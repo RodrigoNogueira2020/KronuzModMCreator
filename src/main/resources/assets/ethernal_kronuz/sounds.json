@@ -214,5 +214,32 @@
         "stream": false
       }
     ]
+  },
+  "sickle-swing": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:sickle-swing",
+        "stream": false
+      }
+    ]
+  },
+  "sword-dash": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:sword-dash",
+        "stream": false
+      }
+    ]
+  },
+  "sword-dash-charged": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:sword-dash-charged",
+        "stream": false
+      }
+    ]
   }
 }
