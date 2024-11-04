@@ -48,13 +48,13 @@ public class MuramasaDashAbilityProcedure {
             dashCharged = false;
         }
 
-        int dashRange = entity.isOnGround() ? 13 : 7;
-        double dashSpeed = entity.isOnGround() ? 0.5 : 0.2;
-        float damageAmount = 19;
+        int dashRange = entity.isOnGround() ? 7 : 3;
+        double dashSpeed = entity.isOnGround() ? 0.7 : 0.5;
+        float damageAmount = 20;
 
         if (dashCharged) {
-            dashRange *= 1.5;
-            damageAmount *= 1.5f;
+            dashRange *= 2;
+            damageAmount *= 2f;
         }
 
         if (entity.isShiftKeyDown() || !entity.isCrouching()) {
