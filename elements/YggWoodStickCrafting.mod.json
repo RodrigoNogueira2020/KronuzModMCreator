@@ -5,24 +5,21 @@
     "recipeType": "Crafting",
     "xpReward": 0.0,
     "cookingTime": 200,
-    "recipeRetstackSize": 3,
+    "recipeRetstackSize": 4,
     "group": "",
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "CUSTOM:YggPlanks"
+        "value": ""
       },
       {
-        "value": "CUSTOM:YggWoodStick"
+        "value": ""
       },
       {
-        "value": "CUSTOM:YggPlanks"
+        "value": ""
       },
       {
-        "value": "CUSTOM:YggPlanks"
-      },
-      {
-        "value": "CUSTOM:YggWoodStick"
+        "value": ""
       },
       {
         "value": "CUSTOM:YggPlanks"
@@ -32,15 +29,18 @@
       },
       {
         "value": ""
+      },
+      {
+        "value": "CUSTOM:YggPlanks"
       },
       {
         "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:YggFences"
+      "value": "CUSTOM:YggWoodStick"
     },
-    "name": "ygg_wood_to_fences",
+    "name": "ygg_wood_stick_crafting",
     "namespace": "mod"
   }
 }

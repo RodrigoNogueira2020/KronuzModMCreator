@@ -6650,9 +6650,9 @@
       "registry_name": "griffin_animated",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/griffin_animated_spawn_egg.json",
-          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/GriffinAnimatedRenderer.java",
           "src/main/java/net/mcreator/ethernalkronuz/entity/GriffinAnimatedEntity.java",
+          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/GriffinAnimatedRenderer.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/griffin_animated_spawn_egg.json",
           "src/main/java/net/mcreator/ethernalkronuz/entity/model/GriffinAnimatedModel.java"
         ]
       },
@@ -10345,6 +10345,93 @@
         ]
       },
       "path": "~/Dimensions/Asgard/Estruturas/Ygg Wood/Sky Fields"
+    },
+    {
+      "name": "DivineArrow",
+      "type": "item",
+      "sortid": 575,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "divine_arrow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/item/DivineArrowItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/divine_arrow.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "DivineArrowCrafting",
+      "type": "recipe",
+      "sortid": 576,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "divine_arrow_crafting",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ethernal_kronuz/recipes/divine_arrow_crafting.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "GriffinFeather",
+      "type": "item",
+      "sortid": 577,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "griffin_feather",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/item/GriffinFeatherItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/griffin_feather.json"
+        ]
+      },
+      "path": "~/Mobs/Griffin"
+    },
+    {
+      "name": "YggWoodStick",
+      "type": "item",
+      "sortid": 578,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ygg_wood_stick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/item/YggWoodStickItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/ygg_wood_stick.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "YggWoodStickCrafting",
+      "type": "recipe",
+      "sortid": 579,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ygg_wood_stick_crafting",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ethernal_kronuz/recipes/ygg_wood_stick_crafting.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "YggWoodToFenceGate",
+      "type": "recipe",
+      "sortid": 580,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ygg_wood_to_fence_gate",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ethernal_kronuz/recipes/ygg_wood_to_fence_gate.json"
+        ]
+      },
+      "path": "~/Dimensions/Asgard/Blocos/YggWood"
     }
   ],
   "variable_elements": [
@@ -10824,6 +10911,7 @@
       "biome.ethernal_kronuz.stone_spikes": "Stone Spikes",
       "block.ethernal_kronuz.faking_ell_ore": "Faking Ell Ore",
       "item.ethernal_kronuz.mosso_crystal_armor_chestplate": "Mosso Crystal Chestplate",
+      "item.ethernal_kronuz.griffin_feather": "Griffin Feather",
       "item.ethernal_kronuz.blade_of_aiport_steel_sword": "Blade Of Aiport Steel Sword",
       "block.ethernal_kronuz.flowerpotbioluminescentlily": "Flower Pot Bioluminescent Lily",
       "subtitles.ganda-moca": "",
@@ -10858,6 +10946,7 @@
       "subtitles.sword-dash-charged": "",
       "item.ethernal_kronuz.freaky.desc": "Freaky",
       "death.attack.cancro": "Stage 4 finished you",
+      "item.ethernal_kronuz.ygg_wood_stick": "Ygg Wood Stick",
       "block.ethernal_kronuz.chiseled_heaven_slate_stairs": "Chiseled Heaven Slate Stairs",
       "item.ethernal_kronuz.safira.desc": "Safira",
       "block.ethernal_kronuz.bio_luminescent_lily": "Bio Luminescent Lily",
@@ -10964,6 +11053,7 @@
       "effect.ethernal_kronuz.asgard_empowerment": "Asgard Empowerment",
       "effect.ethernal_kronuz.andarilho_da_cave_effect": "Andarilho da Cave",
       "block.ethernal_kronuz.ygg_wood_sappling": "Ygg Wood Sapling",
+      "item.ethernal_kronuz.divine_arrow": "Divine Arrow",
       "advancements.full_set_mosso_crystal.title": "O mosso n�o pen�a...",
       "block.ethernal_kronuz.bricks_heaven_slate": "Heaven Slate Bricks",
       "block.ethernal_kronuz.chiseled_heaven_slate_slabs": "Chiseled Heaven Slate Slabs",
@@ -11597,6 +11687,10 @@
       },
       {
         "name": "Paintings",
+        "children": []
+      },
+      {
+        "name": "Misc",
         "children": []
       }
     ]
