@@ -2,7 +2,7 @@
   "_fv": 39,
   "_type": "potioneffect",
   "definition": {
-    "effectName": "Andarilho da Cave",
+    "effectName": "Cave Dweller",
     "icon": "adc_effect.png",
     "color": {
       "value": -16777216,
