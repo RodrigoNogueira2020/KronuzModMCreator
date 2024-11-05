@@ -32,7 +32,7 @@ import io.netty.buffer.Unpooled;
 
 public class BackpackItem extends Item {
 	public BackpackItem() {
-		super(new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).stacksTo(1).fireResistant().rarity(Rarity.EPIC));
+		super(new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).stacksTo(1).rarity(Rarity.EPIC));
 	}
 
 	@Override
