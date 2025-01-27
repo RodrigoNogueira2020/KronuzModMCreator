@@ -66,9 +66,9 @@ public class AesirPortalBlockEntityCollidesInTheBlockProcedure {
 					_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 				}
 			}
-			if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(EthernalKronuzModMobEffects.ASGARD_EMPOWERMENT_COOLDOWN.get()) : false)) {
+			if ((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).AsgardDeaths == 0) {
 				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(EthernalKronuzModMobEffects.ASGARD_EMPOWERMENT.get(), (int) Double.POSITIVE_INFINITY, 0, (false), (false)));
+					_entity.addEffect(new MobEffectInstance(EthernalKronuzModMobEffects.ASGARD_EMPOWERMENT.get(), (int) Double.POSITIVE_INFINITY, 0, (true), (false)));
 			}
 		} else if ((entity.level.dimension()) == (ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("ethernal_kronuz:asgard")))) {
 			if (entity instanceof ServerPlayer _player && !_player.level.isClientSide()) {
@@ -102,9 +102,9 @@ public class AesirPortalBlockEntityCollidesInTheBlockProcedure {
 					_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 				}
 			}
-			if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(EthernalKronuzModMobEffects.ASGARD_EMPOWERMENT_COOLDOWN.get()) : false)) {
+			if ((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).AsgardDeaths == 0) {
 				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(EthernalKronuzModMobEffects.ASGARD_EMPOWERMENT.get(), (int) Double.POSITIVE_INFINITY, 0, (false), (false)));
+					_entity.addEffect(new MobEffectInstance(EthernalKronuzModMobEffects.ASGARD_EMPOWERMENT.get(), (int) Double.POSITIVE_INFINITY, 0, (true), (false)));
 			}
 		}
 	}

@@ -47,7 +47,7 @@ public class AsgardEmpowermentBackInDimensionProcedure {
 			if (!world.isClientSide()) {
 				MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
 				if (_mcserv != null)
-					_mcserv.getPlayerList().broadcastMessage(new TextComponent("AsgardEmpowerment gave"), ChatType.SYSTEM, Util.NIL_UUID);
+					_mcserv.getPlayerList().broadcastMessage(new TextComponent("AsgardEmpowerment active!!!"), ChatType.SYSTEM, Util.NIL_UUID);
 			}
 		}
 	}

@@ -83,7 +83,6 @@ public class AsgardEmpowermentTimerProcedure {
 									("Deaths: 0" + " Remaining Ticks: " + (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).AsgardCooldownRemainTicks)),
 									ChatType.SYSTEM, Util.NIL_UUID);
 					}
-					AsgardEmpowermentBackInDimensionProcedure.execute(world, entity);
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
 			}.start(world, (int) (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).AsgardCooldownRemainTicks);
