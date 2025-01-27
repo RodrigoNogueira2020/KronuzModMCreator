@@ -15,6 +15,7 @@ import net.minecraft.world.item.DoubleHighBlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
+import net.mcreator.ethernalkronuz.item.YggWoodStickItem;
 import net.mcreator.ethernalkronuz.item.VASCOItem;
 import net.mcreator.ethernalkronuz.item.TheEndingEyeItem;
 import net.mcreator.ethernalkronuz.item.TerraBladeSetupItem;
@@ -40,6 +41,7 @@ import net.mcreator.ethernalkronuz.item.MossoCrystalArmorItem;
 import net.mcreator.ethernalkronuz.item.MoedaDeTrocaItem;
 import net.mcreator.ethernalkronuz.item.MakeAWishItem;
 import net.mcreator.ethernalkronuz.item.JotunheimItem;
+import net.mcreator.ethernalkronuz.item.GriffinFeatherItem;
 import net.mcreator.ethernalkronuz.item.GandaMocaItem;
 import net.mcreator.ethernalkronuz.item.FreickenItem;
 import net.mcreator.ethernalkronuz.item.FreakyItem;
@@ -55,6 +57,7 @@ import net.mcreator.ethernalkronuz.item.FactionBookItem;
 import net.mcreator.ethernalkronuz.item.ErikaItem;
 import net.mcreator.ethernalkronuz.item.DivineWaterItem;
 import net.mcreator.ethernalkronuz.item.DivineCrystalShardItem;
+import net.mcreator.ethernalkronuz.item.DivineArrowItem;
 import net.mcreator.ethernalkronuz.item.DeepSeaBootItem;
 import net.mcreator.ethernalkronuz.item.CristalizedDivineWaterItem;
 import net.mcreator.ethernalkronuz.item.CabuflamanauItem;
@@ -242,6 +245,9 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> RL_VERDE_ARMOR_CHESTPLATE = REGISTRY.register("rl_verde_armor_chestplate", () -> new RLVerdeArmorItem.Chestplate());
 	public static final RegistryObject<Item> RL_VERDE_ARMOR_LEGGINGS = REGISTRY.register("rl_verde_armor_leggings", () -> new RLVerdeArmorItem.Leggings());
 	public static final RegistryObject<Item> RL_VERDE_ARMOR_BOOTS = REGISTRY.register("rl_verde_armor_boots", () -> new RLVerdeArmorItem.Boots());
+	public static final RegistryObject<Item> DIVINE_ARROW = REGISTRY.register("divine_arrow", () -> new DivineArrowItem());
+	public static final RegistryObject<Item> GRIFFIN_FEATHER = REGISTRY.register("griffin_feather", () -> new GriffinFeatherItem());
+	public static final RegistryObject<Item> YGG_WOOD_STICK = REGISTRY.register("ygg_wood_stick", () -> new YggWoodStickItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
