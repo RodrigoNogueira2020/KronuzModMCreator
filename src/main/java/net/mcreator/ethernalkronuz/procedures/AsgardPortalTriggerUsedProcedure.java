@@ -49,12 +49,11 @@ public class AsgardPortalTriggerUsedProcedure {
 			if (!world.isClientSide()) {
 				MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
 				if (_mcserv != null)
-					_mcserv.getPlayerList().broadcastMessage(
-							new TextComponent(("Coords: " + "X: " + (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).CoordXBeforeEnterAsgard + " Y: "
+					_mcserv.getPlayerList()
+							.broadcastMessage(new TextComponent(("X: " + (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).CoordXBeforeEnterAsgard + " Y: "
 									+ (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).CoordYBeforeEnterAsgard + " Z: "
 									+ (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).CoordZBeforeEnterAsgard + " Direction Looking: "
-									+ (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).DiretionBeforeEnterAsgard)),
-							ChatType.SYSTEM, Util.NIL_UUID);
+									+ (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).DiretionBeforeEnterAsgard)), ChatType.SYSTEM, Util.NIL_UUID);
 			}
 		}
 	}

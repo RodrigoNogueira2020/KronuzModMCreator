@@ -3,6 +3,7 @@ package net.mcreator.ethernalkronuz.procedures;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
@@ -10,9 +11,6 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.core.Registry;
 
 import net.mcreator.ethernalkronuz.network.EthernalKronuzModVariables;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModMobEffects;
@@ -20,12 +18,10 @@ import net.mcreator.ethernalkronuz.init.EthernalKronuzModMobEffects;
 import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
-public class AsgardEmpowermentBackInDimensionProcedure {
+public class AsgardEmpowermentTimerRespawnProcedure {
 	@SubscribeEvent
-	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		if (event.phase == TickEvent.Phase.END) {
-			execute(event, event.player.level, event.player);
-		}
+	public static void onPlayerRespawned(PlayerEvent.PlayerRespawnEvent event) {
+		execute(event, event.getPlayer().level, event.getPlayer());
 	}
 
 	public static void execute(LevelAccessor world, Entity entity) {
@@ -35,10 +31,10 @@ public class AsgardEmpowermentBackInDimensionProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.level.dimension()) == (ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("ethernal_kronuz:asgard")))
-				&& (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).AsgardDeaths == 1) {
+		if ((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).AsgardDeaths == 1) {
 			if (entity instanceof LivingEntity _entity)
-				_entity.removeEffect(EthernalKronuzModMobEffects.ASGARD_EMPOWERMENT.get());
+				_entity.addEffect(new MobEffectInstance(EthernalKronuzModMobEffects.ASGARD_EMPOWERMENT_COOLDOWN.get(),
+						(int) (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).AsgardCooldownRemainTicks, 0, (true), (false)));
 			new Object() {
 				private int ticks = 0;
 				private float waitTicks;
@@ -67,17 +63,9 @@ public class AsgardEmpowermentBackInDimensionProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					if ((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).AsgardDeaths == 0) {
-						if (entity instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(EthernalKronuzModMobEffects.ASGARD_EMPOWERMENT.get(), (int) Double.POSITIVE_INFINITY, 0, (true), (false)));
-					}
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world,
-					entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(EthernalKronuzModMobEffects.ASGARD_EMPOWERMENT_COOLDOWN.get()) ? _livEnt.getEffect(EthernalKronuzModMobEffects.ASGARD_EMPOWERMENT_COOLDOWN.get()).getDuration() : 0);
-		} else {
-			if (entity instanceof LivingEntity _entity)
-				_entity.removeEffect(EthernalKronuzModMobEffects.ASGARD_EMPOWERMENT.get());
+			}.start(world, (int) (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).AsgardCooldownRemainTicks);
 		}
 	}
 }

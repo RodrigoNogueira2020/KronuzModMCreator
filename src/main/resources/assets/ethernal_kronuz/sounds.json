@@ -241,5 +241,14 @@
         "stream": false
       }
     ]
+  },
+  "gojo_vs_toji_hollow_purple": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:gojo_vs_toji_hollow_purple",
+        "stream": false
+      }
+    ]
   }
 }

@@ -1,10 +1,5 @@
 package net.mcreator.ethernalkronuz.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
-
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
@@ -18,24 +13,10 @@ import net.minecraft.commands.CommandSource;
 
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModMobEffects;
 
-import javax.annotation.Nullable;
-
 import java.util.Random;
 
-@Mod.EventBusSubscriber
 public class AsgardEmpowermentParticleRepeatProcedure {
-	@SubscribeEvent
-	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		if (event.phase == TickEvent.Phase.END) {
-			execute(event, event.player.level, event.player);
-		}
-	}
-
 	public static void execute(LevelAccessor world, Entity entity) {
-		execute(null, world, entity);
-	}
-
-	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(EthernalKronuzModMobEffects.ASGARD_EMPOWERMENT.get()) : false) {

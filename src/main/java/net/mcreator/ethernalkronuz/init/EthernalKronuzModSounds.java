@@ -45,6 +45,7 @@ public class EthernalKronuzModSounds {
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "sickle-swing"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "sickle-swing")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "sword-dash"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "sword-dash")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "sword-dash-charged"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "sword-dash-charged")));
+		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "gojo_vs_toji_hollow_purple"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "gojo_vs_toji_hollow_purple")));
 	}
 
 	@SubscribeEvent
