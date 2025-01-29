@@ -58,7 +58,7 @@ public class AsgardEmpowermentEffectGiveProcedure {
 			if (entity instanceof LivingEntity _entity)
 				_entity.removeEffect(EthernalKronuzModMobEffects.ASGARD_EMPOWERMENT.get());
 			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(EthernalKronuzModMobEffects.ASGARD_EMPOWERMENT_COOLDOWN.get(), 300, 0, (true), (false)));
+				_entity.addEffect(new MobEffectInstance(EthernalKronuzModMobEffects.ASGARD_EMPOWERMENT_COOLDOWN.get(), 6000, 0, (true), (false)));
 			if (event != null && event.isCancelable()) {
 				event.setCanceled(true);
 			}

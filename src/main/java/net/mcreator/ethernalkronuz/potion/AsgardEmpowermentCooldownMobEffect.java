@@ -6,7 +6,8 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
 
-import net.mcreator.ethernalkronuz.procedures.AsgardEmpowermentBackInDimensionProcedure;
+import net.mcreator.ethernalkronuz.procedures.AsgardEmpowermentCooldownOnEffectActiveTickProcedure;
+import net.mcreator.ethernalkronuz.procedures.AsgardEmpowermentCooldownEffectExpiresProcedure;
 
 public class AsgardEmpowermentCooldownMobEffect extends MobEffect {
 	public AsgardEmpowermentCooldownMobEffect() {
@@ -19,9 +20,14 @@ public class AsgardEmpowermentCooldownMobEffect extends MobEffect {
 	}
 
 	@Override
+	public void applyEffectTick(LivingEntity entity, int amplifier) {
+		AsgardEmpowermentCooldownOnEffectActiveTickProcedure.execute(entity);
+	}
+
+	@Override
 	public void removeAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
 		super.removeAttributeModifiers(entity, attributeMap, amplifier);
-		AsgardEmpowermentBackInDimensionProcedure.execute(entity.level, entity);
+		AsgardEmpowermentCooldownEffectExpiresProcedure.execute(entity);
 	}
 
 	@Override

@@ -13,8 +13,11 @@
     "isBenefitical": false,
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
+    "onActiveTick": {
+      "name": "AsgardEmpowermentCooldownOnEffectActiveTick"
+    },
     "onExpired": {
-      "name": "AsgardEmpowermentBackInDimension"
+      "name": "AsgardEmpowermentCooldownEffectExpires"
     }
   }
 }
