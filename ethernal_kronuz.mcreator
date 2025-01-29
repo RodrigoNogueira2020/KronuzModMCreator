@@ -3888,7 +3888,7 @@
       "type": "procedure",
       "sortid": 291,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "terra_blade_shoots",
       "metadata": {
         "files": [
@@ -11103,7 +11103,7 @@
       "advancements.shelter_mode_setup.descr": "Utilizar a tecla favorita dos noobs",
       "item.ethernal_kronuz.rl_verde_armor_chestplate": "Titan Kaleb\u0027s Body Armor",
       "item.ethernal_kronuz.aiport_steel_hoe": "Airport Steel Hoe",
-      "entity.ethernal_kronuz.projectile_terra_blade_projectile": "%1$s was put under Terra",
+      "entity.ethernal_kronuz.projectile_terra_blade_projectile": "Terra Projectile",
       "item.ethernal_kronuz.angolae_nossa": "Colónia Portuguesa",
       "block.ethernal_kronuz.crystalized_divine_water": "Crystalized Divine Water",
       "item.ethernal_kronuz.technobalde_spawn_egg": "Technobalde Spawn Egg",
