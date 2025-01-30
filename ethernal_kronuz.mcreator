@@ -6108,66 +6108,6 @@
       "path": "~/Factions/Radiant Lords/Weapons/Nokkia Hammer/Spawn"
     },
     {
-      "name": "RLRoxoTransformation",
-      "type": "procedure",
-      "sortid": 375,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rl_roxo_transformation",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/RLRoxoTransformationProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Transformations/Roxo"
-    },
-    {
-      "name": "RLVermelhoTrasnformation",
-      "type": "procedure",
-      "sortid": 376,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rl_vermelho_trasnformation",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/RLVermelhoTrasnformationProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Transformations/Vermelho"
-    },
-    {
-      "name": "RLVerdeTransformation",
-      "type": "procedure",
-      "sortid": 377,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rl_verde_transformation",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/RLVerdeTransformationProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Transformations/Verde"
-    },
-    {
       "name": "YggLog",
       "type": "block",
       "sortid": 96,
@@ -9993,7 +9933,7 @@
           "src/main/resources/assets/ethernal_kronuz/models/item/rl_roxo_armour_leggings.json"
         ]
       },
-      "path": "~/Factions/Radiant Lords/Transformations/Roxo"
+      "path": "~/Factions/Radiant Lords/Armaduras/Roxo"
     },
     {
       "name": "RenderSkyAsgardProcedure",
@@ -10225,14 +10165,14 @@
           "src/main/resources/assets/ethernal_kronuz/models/item/rl_vermelho_armor_leggings.json"
         ]
       },
-      "path": "~/Factions/Radiant Lords/Transformations/Vermelho"
+      "path": "~/Factions/Radiant Lords/Armaduras/Vermelho"
     },
     {
       "name": "RLVerdeArmor",
       "type": "armor",
       "sortid": 571,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "rl_verde_armor",
       "metadata": {
         "files": [
@@ -10243,7 +10183,7 @@
           "src/main/resources/assets/ethernal_kronuz/models/item/rl_verde_armor_helmet.json"
         ]
       },
-      "path": "~/Factions/Radiant Lords/Transformations/Verde"
+      "path": "~/Factions/Radiant Lords/Armaduras/Verde"
     },
     {
       "name": "AsgardPortalTriggerUsed",
@@ -10850,12 +10790,12 @@
       "block.ethernal_kronuz.bricks_heaven_slate_slabs": "Heaven Slate Bricks Slabs",
       "item.ethernal_kronuz.cabuflamanau": "Piruka",
       "biome.ethernal_kronuz.sky_fields": "Sky Fields",
-      "key.ethernal_kronuz.griffin_up": "Griffin Upwards",
       "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
+      "key.ethernal_kronuz.griffin_up": "Griffin Upwards",
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
       "advancements.bt_achievement.descr": "Juntar-se aos Big Testa",
-      "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "advancements.rl_verde_achievement.title": "Carregado até ao limite",
+      "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
       "block.ethernal_kronuz.mosso_crystal_ore": "Mosso Crystal Ore",
@@ -10863,13 +10803,13 @@
       "gui.ethernal_kronuz.trade_system_gui_techno.label_technobalde": "Technobalde",
       "item.ethernal_kronuz.blade_of_the_void_setup": "§dBlade Of The Void",
       "block.ethernal_kronuz.mosso_crystal_block": "Block of Mosso Crystal",
-      "block.ethernal_kronuz.ygg_trapdoor": "Ygg Wood Trapdoor",
-      "item.ethernal_kronuz.aiport_steel_armor_chestplate": "Airport Steel Chestplate",
       "advancements.ascender_advancement.descr": "Tornar-se um Radiant Lord",
+      "item.ethernal_kronuz.aiport_steel_armor_chestplate": "Airport Steel Chestplate",
+      "block.ethernal_kronuz.ygg_trapdoor": "Ygg Wood Trapdoor",
       "item.ethernal_kronuz.rl_roxo_armour_helmet": "Gargantuan\u0027s Armour Helmet",
       "item.ethernal_kronuz.terra_blade_setup": "§aTerra Blade",
-      "advancements.enters_asgard.descr": "Enter in Asgard",
       "block.ethernal_kronuz.ygg_planks": "Ygg Wood Planks",
+      "advancements.enters_asgard.descr": "Enter in Asgard",
       "item.ethernal_kronuz.necromancer.desc": "Necromancer",
       "subtitles.nokkia_hammer_spawn": "",
       "gamerule.give_rl_verde_game_rule.description": "Ascender um jogador",
@@ -10888,8 +10828,8 @@
       "block.ethernal_kronuz.ygg_button": "Ygg Wood Button",
       "subtitles.warper-hurt": "",
       "item.ethernal_kronuz.aiport_steel_armor_leggings": "Airport Steel Leggings",
-      "block.ethernal_kronuz.tiles_heaven_slate_slab": "Heaven Slate Tiles Slab",
       "block.ethernal_kronuz.ygg_door": "Ygg Wood Door",
+      "block.ethernal_kronuz.tiles_heaven_slate_slab": "Heaven Slate Tiles Slab",
       "subtitles.freaky": "",
       "item.ethernal_kronuz.aiport_steel_ingot": "Aiport Steel Ingot",
       "item.ethernal_kronuz.aiport_steel_pickaxe": "Airport Steel Pickaxe",
@@ -11237,7 +11177,7 @@
                 "children": []
               },
               {
-                "name": "Transformations",
+                "name": "Armaduras",
                 "children": [
                   {
                     "name": "Roxo",
@@ -11255,6 +11195,10 @@
               },
               {
                 "name": "Passagem de poderes",
+                "children": []
+              },
+              {
+                "name": "KeepRadiantLordSet",
                 "children": []
               }
             ]

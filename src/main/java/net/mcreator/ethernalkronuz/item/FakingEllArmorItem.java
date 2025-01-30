@@ -61,7 +61,7 @@ public abstract class FakingEllArmorItem extends ArmorItem {
 
 			@Override
 			public float getToughness() {
-				return 4f;
+				return 5f;
 			}
 
 			@Override

@@ -14,7 +14,7 @@ import net.mcreator.ethernalkronuz.block.JotunheimPortalBlock;
 
 public class JotunheimItem extends Item {
 	public JotunheimItem() {
-		super(new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).durability(64));
+		super(new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).durability(0));
 	}
 
 	@Override

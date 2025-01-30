@@ -21,6 +21,7 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 
 import net.mcreator.ethernalkronuz.procedures.TerraBladeShootsProcedure;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModTabs;
@@ -107,9 +108,19 @@ public class TerraBladeSetupItem extends TieredItem {
 	}
 
 	@Override
-	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
-		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		TerraBladeShootsProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
-		return ar;
+	public boolean onDroppedByPlayer(ItemStack itemstack, Player player) {
+	    if (player != null && !player.level.isClientSide)
+	        player.getInventory().add(itemstack);
+	    return false;
 	}
-}
+	
+	@Override
+	public boolean canBeDepleted() {
+	    return false;
+	}
+	
+	@Override
+	public boolean canAttackBlock(BlockState state, Level world, BlockPos pos, Player player) {
+	    return true;
+	}
+}

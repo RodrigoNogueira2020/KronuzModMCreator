@@ -68,7 +68,7 @@ public abstract class AiportSteelArmorItem extends ArmorItem {
 
 			@Override
 			public float getToughness() {
-				return 4f;
+				return 6f;
 			}
 
 			@Override
