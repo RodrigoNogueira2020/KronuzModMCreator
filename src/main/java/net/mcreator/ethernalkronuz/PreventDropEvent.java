@@ -12,6 +12,9 @@ public class PreventDropEvent {
 
     @SubscribeEvent
     public static void onItemToss(ItemTossEvent event) {
+    	if (event.getPlayer().isCreative())
+            return;
+        
         ItemStack droppedItem = event.getEntityItem().getItem();
 
         if (droppedItem.getItem() == EthernalKronuzModItems.TERRA_BLADE_SETUP.get() || 
