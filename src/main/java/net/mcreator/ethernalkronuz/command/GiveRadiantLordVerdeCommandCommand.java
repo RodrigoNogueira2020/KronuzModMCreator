@@ -14,7 +14,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.Commands;
 
-import net.mcreator.ethernalkronuz.procedures.RadiantLordVerdeProcedureProcedure;
+import net.mcreator.ethernalkronuz.procedures.RiseRadiantLordVerdeAfterTheRiseConfirmationProcedure;
 
 @Mod.EventBusSubscriber
 public class GiveRadiantLordVerdeCommandCommand {
@@ -30,7 +30,7 @@ public class GiveRadiantLordVerdeCommandCommand {
 				entity = FakePlayerFactory.getMinecraft(world);
 			Direction direction = entity.getDirection();
 
-			RadiantLordVerdeProcedureProcedure.execute(world, x, y, z, arguments, entity);
+			RiseRadiantLordVerdeAfterTheRiseConfirmationProcedure.execute(world, x, y, z, entity);
 			return 0;
 		})));
 	}

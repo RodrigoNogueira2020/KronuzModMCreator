@@ -37,7 +37,7 @@ public class NokkiaHammerClickRoxoProcedure {
 			return;
 		if ((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).AlreadyClicked == false
 				&& (world.getBlockState(new BlockPos(x, y, z))).getBlock() == EthernalKronuzModBlocks.NOKKIA_HAMMER_BLOCK.get()
-				&& (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordRoxoPlayer == true) {
+				&& (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordRoxoPlayer) {
 			{
 				boolean _setval = true;
 				entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

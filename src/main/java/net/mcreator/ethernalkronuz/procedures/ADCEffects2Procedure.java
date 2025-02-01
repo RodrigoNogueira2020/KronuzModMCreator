@@ -23,6 +23,6 @@ public class ADCEffects2Procedure {
 				_entity.removeEffect(MobEffects.DAMAGE_BOOST);
 		}
 		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.UNLUCK, 999999, 0, (false), (false)));
+			_entity.addEffect(new MobEffectInstance(MobEffects.UNLUCK, (int) Double.POSITIVE_INFINITY, 0, (false), (false)));
 	}
 }

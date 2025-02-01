@@ -38,7 +38,7 @@ public class BTEffectsProcedure {
 							|| (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordVermelhoPlayer == false
 							|| (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordRoxoPlayer == false)) {
 				BTEffects1Procedure.execute(entity);
-				if (world instanceof Level _lvl && _lvl.isDay() && (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).BTPlayer == true) {
+				if (world instanceof Level _lvl && _lvl.isDay() && (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).BTPlayer) {
 					BTEffects2Procedure.execute(entity);
 				} else {
 					BTEffects3Procedure.execute(entity);

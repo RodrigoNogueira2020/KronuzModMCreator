@@ -92,6 +92,9 @@ public class EthernalKronuzModVariables {
 			clone.CoordYBeforeEnterAsgard = original.CoordYBeforeEnterAsgard;
 			clone.CoordZBeforeEnterAsgard = original.CoordZBeforeEnterAsgard;
 			clone.DiretionBeforeEnterAsgard = original.DiretionBeforeEnterAsgard;
+			clone.HasMinimumForTheRiseRoxo = original.HasMinimumForTheRiseRoxo;
+			clone.HasMinimumForTheRiseVerde = original.HasMinimumForTheRiseVerde;
+			clone.HasMinimumForTheRiseVermelho = original.HasMinimumForTheRiseVermelho;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -295,6 +298,9 @@ public class EthernalKronuzModVariables {
 		public double CoordYBeforeEnterAsgard = 0;
 		public double CoordZBeforeEnterAsgard = 0;
 		public Direction DiretionBeforeEnterAsgard = Direction.NORTH;
+		public boolean HasMinimumForTheRiseRoxo = false;
+		public boolean HasMinimumForTheRiseVerde = false;
+		public boolean HasMinimumForTheRiseVermelho = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -323,6 +329,9 @@ public class EthernalKronuzModVariables {
 			nbt.putDouble("CoordYBeforeEnterAsgard", CoordYBeforeEnterAsgard);
 			nbt.putDouble("CoordZBeforeEnterAsgard", CoordZBeforeEnterAsgard);
 			nbt.putInt("DiretionBeforeEnterAsgard", DiretionBeforeEnterAsgard.get3DDataValue());
+			nbt.putBoolean("HasMinimumForTheRiseRoxo", HasMinimumForTheRiseRoxo);
+			nbt.putBoolean("HasMinimumForTheRiseVerde", HasMinimumForTheRiseVerde);
+			nbt.putBoolean("HasMinimumForTheRiseVermelho", HasMinimumForTheRiseVermelho);
 			return nbt;
 		}
 
@@ -348,6 +357,9 @@ public class EthernalKronuzModVariables {
 			CoordYBeforeEnterAsgard = nbt.getDouble("CoordYBeforeEnterAsgard");
 			CoordZBeforeEnterAsgard = nbt.getDouble("CoordZBeforeEnterAsgard");
 			DiretionBeforeEnterAsgard = Direction.from3DDataValue(nbt.getInt("DiretionBeforeEnterAsgard"));
+			HasMinimumForTheRiseRoxo = nbt.getBoolean("HasMinimumForTheRiseRoxo");
+			HasMinimumForTheRiseVerde = nbt.getBoolean("HasMinimumForTheRiseVerde");
+			HasMinimumForTheRiseVermelho = nbt.getBoolean("HasMinimumForTheRiseVermelho");
 		}
 	}
 
@@ -392,6 +404,9 @@ public class EthernalKronuzModVariables {
 					variables.CoordYBeforeEnterAsgard = message.data.CoordYBeforeEnterAsgard;
 					variables.CoordZBeforeEnterAsgard = message.data.CoordZBeforeEnterAsgard;
 					variables.DiretionBeforeEnterAsgard = message.data.DiretionBeforeEnterAsgard;
+					variables.HasMinimumForTheRiseRoxo = message.data.HasMinimumForTheRiseRoxo;
+					variables.HasMinimumForTheRiseVerde = message.data.HasMinimumForTheRiseVerde;
+					variables.HasMinimumForTheRiseVermelho = message.data.HasMinimumForTheRiseVermelho;
 				}
 			});
 			context.setPacketHandled(true);

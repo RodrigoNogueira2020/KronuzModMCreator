@@ -1,0 +1,270 @@
+{
+  "_fv": 39,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_faction_book_gui_frame",
+          "image": "faction_book_gui_frame.png",
+          "hoveredImage": "",
+          "x": 78,
+          "y": -28
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_confirm_the_rise",
+          "text": {
+            "fixedValue": "Confirm The Rise"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 105,
+          "y": 35
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_became_a",
+          "text": {
+            "fixedValue": "Became a"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_radiant_lord",
+          "text": {
+            "fixedValue": "Radiant Lord"
+          },
+          "color": {
+            "value": -16738048,
+            "falpha": 0.0
+          },
+          "x": 141,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_able_to_fly",
+          "text": {
+            "fixedValue": "- Able to fly"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 98
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_special_tool",
+          "text": {
+            "fixedValue": "- Special Tool"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_special_armor",
+          "text": {
+            "fixedValue": "- Special Armor"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 134
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_special_display_name",
+          "text": {
+            "fixedValue": "- Special Display Name"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 152
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_double_health",
+          "text": {
+            "fixedValue": "- Double Health"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 170
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_atention",
+          "text": {
+            "fixedValue": "Atention"
+          },
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "x": 267,
+          "y": 35
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_remove_your_current",
+          "text": {
+            "fixedValue": "Remove your current"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 231,
+          "y": 44
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_armor_before_the_rise",
+          "text": {
+            "fixedValue": "armor before The Rise"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 231,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_or_your_armor_will_be",
+          "text": {
+            "fixedValue": "or your armor will be"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 231,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_overwritten",
+          "text": {
+            "fixedValue": "overwritten"
+          },
+          "color": {
+            "value": -3407872,
+            "falpha": 0.0
+          },
+          "x": 231,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_begin_the_rise",
+          "text": {
+            "fixedValue": "Begin The Rise"
+          },
+          "color": {
+            "value": -16738048,
+            "falpha": 0.0
+          },
+          "x": 249,
+          "y": 107
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_rise",
+          "text": "Rise",
+          "onClick": {
+            "name": "RiseRadiantLordVerdeAfterTheRiseConfirmation"
+          },
+          "width": 46,
+          "height": 20,
+          "x": 366,
+          "y": 125
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_wait",
+          "text": "Wait",
+          "onClick": {
+            "name": "CloseConfirmRiseGUI"
+          },
+          "width": 46,
+          "height": 20,
+          "x": 366,
+          "y": 152
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

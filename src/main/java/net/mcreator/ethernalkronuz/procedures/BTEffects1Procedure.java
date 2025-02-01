@@ -20,10 +20,10 @@ public class BTEffects1Procedure {
 			});
 		}
 		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(EthernalKronuzModMobEffects.BT_EFFECT.get(), 999999, 0, (true), (false)));
+			_entity.addEffect(new MobEffectInstance(EthernalKronuzModMobEffects.BT_EFFECT.get(), (int) Double.POSITIVE_INFINITY, 0, (true), (false)));
 		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.LUCK, 999999, 0, (false), (false)));
+			_entity.addEffect(new MobEffectInstance(MobEffects.LUCK, (int) Double.POSITIVE_INFINITY, 0, (false), (false)));
 		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 999999, 0, (false), (false)));
+			_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, (int) Double.POSITIVE_INFINITY, 0, (false), (false)));
 	}
 }

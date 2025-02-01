@@ -14,6 +14,6 @@ public class BTEffects3Procedure {
 				_entity.removeEffect(MobEffects.REGENERATION);
 		}
 		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 999999, 0, (false), (false)));
+			_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, (int) Double.POSITIVE_INFINITY, 0, (false), (false)));
 	}
 }

@@ -31,7 +31,7 @@ public abstract class RLRoxoArmourItem extends ArmorItem {
 		super(new ArmorMaterial() {
 			@Override
 			public int getDurabilityForSlot(EquipmentSlot slot) {
-				return new int[]{13, 15, 16, 11}[slot.getIndex()] * 70;
+				return new int[]{0, 0, 0, 0}[slot.getIndex()] * 70;
 			}
 
 			@Override

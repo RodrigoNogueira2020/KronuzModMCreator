@@ -1101,7 +1101,7 @@
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs"
+      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs/Roxo"
     },
     {
       "name": "RadiantLordVermelhoProcedure",
@@ -1137,44 +1137,7 @@
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs"
-    },
-    {
-      "name": "RadiantLordVerdeProcedure",
-      "type": "procedure",
-      "sortid": 173,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "radiant_lord_verde_procedure",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs/Verde"
+      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs/Vermelho"
     },
     {
       "name": "RadiantLordDead",
@@ -3020,7 +2983,7 @@
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords/Weapons/Murasama"
+      "path": "~/Factions/Radiant Lords/Weapons/Murasama/Special Attack"
     },
     {
       "name": "ADCEffects1",
@@ -4922,7 +4885,7 @@
           "src/main/resources/data/ethernal_kronuz/functions/murasama_special_attack_func.mcfunction"
         ]
       },
-      "path": "~/Factions/Radiant Lords/Weapons/Murasama"
+      "path": "~/Factions/Radiant Lords/Weapons/Murasama/Special Attack"
     },
     {
       "name": "GinukaPowerSetup",
@@ -9899,7 +9862,7 @@
       "type": "armor",
       "sortid": 558,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "rl_roxo_armour",
       "metadata": {
         "files": [
@@ -10062,7 +10025,7 @@
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords/Weapons/Blade Of The Void"
+      "path": "~/Factions/Radiant Lords/Weapons/Blade Of The Void/Special Attack"
     },
     {
       "name": "BladeOfTheVoidParticle",
@@ -10077,7 +10040,7 @@
           "src/main/resources/assets/ethernal_kronuz/particles/blade_of_the_void_particle.json"
         ]
       },
-      "path": "~/Factions/Radiant Lords/Weapons/Blade Of The Void"
+      "path": "~/Factions/Radiant Lords/Weapons/Blade Of The Void/Special Attack"
     },
     {
       "name": "MurasamaDashParticle",
@@ -10092,7 +10055,7 @@
           "src/main/resources/assets/ethernal_kronuz/particles/murasama_dash_particle.json"
         ]
       },
-      "path": "~/Factions/Radiant Lords/Weapons/Murasama"
+      "path": "~/Factions/Radiant Lords/Weapons/Murasama/Special Attack"
     },
     {
       "name": "TerraBladeProjectileParticleSpawner",
@@ -10131,7 +10094,7 @@
       "type": "armor",
       "sortid": 570,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "rl_vermelho_armor",
       "metadata": {
         "files": [
@@ -10382,6 +10345,232 @@
         ]
       },
       "path": "~/Factions/Radiant Lords/Weapons"
+    },
+    {
+      "name": "ConfirmRiseGUIRoxo",
+      "type": "gui",
+      "sortid": 584,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "confirm_rise_gui_roxo",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/client/gui/ConfirmRiseGUIRoxoScreen.java",
+          "src/main/java/net/mcreator/ethernalkronuz/world/inventory/ConfirmRiseGUIRoxoMenu.java",
+          "src/main/java/net/mcreator/ethernalkronuz/network/ConfirmRiseGUIRoxoButtonMessage.java"
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs/ConfirmRise"
+    },
+    {
+      "name": "ConfirmRiseGUIVermelho",
+      "type": "gui",
+      "sortid": 585,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "confirm_rise_gui_vermelho",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/network/ConfirmRiseGUIVermelhoButtonMessage.java",
+          "src/main/java/net/mcreator/ethernalkronuz/world/inventory/ConfirmRiseGUIVermelhoMenu.java",
+          "src/main/java/net/mcreator/ethernalkronuz/client/gui/ConfirmRiseGUIVermelhoScreen.java"
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs/ConfirmRise"
+    },
+    {
+      "name": "ConfirmRiseGUIVerde",
+      "type": "gui",
+      "sortid": 586,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "confirm_rise_gui_verde",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/network/ConfirmRiseGUIVerdeButtonMessage.java",
+          "src/main/java/net/mcreator/ethernalkronuz/client/gui/ConfirmRiseGUIVerdeScreen.java",
+          "src/main/java/net/mcreator/ethernalkronuz/world/inventory/ConfirmRiseGUIVerdeMenu.java"
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs/ConfirmRise"
+    },
+    {
+      "name": "CloseConfirmRiseGUI",
+      "type": "procedure",
+      "sortid": 587,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "close_confirm_rise_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/CloseConfirmRiseGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs/ConfirmRise"
+    },
+    {
+      "name": "RiseRadiantLordRoxoAfterTheRiseConfirmation",
+      "type": "procedure",
+      "sortid": 589,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rise_radiant_lord_roxo_after_the_rise_confirmation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/RiseRadiantLordRoxoAfterTheRiseConfirmationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs/Roxo"
+    },
+    {
+      "name": "RiseRadiantLordVermelhoAfterTheRiseConfirmation",
+      "type": "procedure",
+      "sortid": 590,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rise_radiant_lord_vermelho_after_the_rise_confirmation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/RiseRadiantLordVermelhoAfterTheRiseConfirmationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs/Vermelho"
+    },
+    {
+      "name": "RiseRadiantLordVerdeAfterTheRiseConfirmation",
+      "type": "procedure",
+      "sortid": 591,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rise_radiant_lord_verde_after_the_rise_confirmation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/RiseRadiantLordVerdeAfterTheRiseConfirmationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs/Verde"
+    },
+    {
+      "name": "OpenConfirmRiseGUIOnKeyPressed",
+      "type": "procedure",
+      "sortid": 592,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_confirm_rise_gui_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/OpenConfirmRiseGUIOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs"
+    },
+    {
+      "name": "OpenConfirmRiseGUI",
+      "type": "keybind",
+      "sortid": 593,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_confirm_rise_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/network/OpenConfirmRiseGUIMessage.java"
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs"
     }
   ],
   "variable_elements": [
@@ -10546,6 +10735,24 @@
       "type": "direction",
       "scope": "player_persistent",
       "value": "Direction.NORTH"
+    },
+    {
+      "name": "HasMinimumForTheRiseRoxo",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "HasMinimumForTheRiseVerde",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "HasMinimumForTheRiseVermelho",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -10786,25 +10993,34 @@
       "advancements.bt_achievement.descr": "Juntar-se aos Big Testa",
       "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "advancements.rl_verde_achievement.title": "Carregado até ao limite",
+      "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_atention": "Atention",
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_atention": "Atention",
       "block.ethernal_kronuz.mosso_crystal_ore": "Mosso Crystal Ore",
       "item.ethernal_kronuz.ganda_moca.desc": "Ganda Moca",
       "gui.ethernal_kronuz.trade_system_gui_techno.label_technobalde": "Technobalde",
       "item.ethernal_kronuz.blade_of_the_void_setup": "§dBlade Of The Void",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_radiant_lord": "Radiant Lord",
+      "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_remove_your_current": "Remove your current",
       "block.ethernal_kronuz.mosso_crystal_block": "Block of Mosso Crystal",
+      "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_overwritten": "overwritten",
       "block.ethernal_kronuz.ygg_trapdoor": "Ygg Wood Trapdoor",
       "item.ethernal_kronuz.aiport_steel_armor_chestplate": "Airport Steel Chestplate",
       "advancements.ascender_advancement.descr": "Tornar-se um Radiant Lord",
+      "key.ethernal_kronuz.open_confirm_rise_gui": "Open The Rise GUI",
       "item.ethernal_kronuz.rl_roxo_armour_helmet": "Gargantuan\u0027s Armour Helmet",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_armor_before_the_rise": "armor before The Rise",
       "item.ethernal_kronuz.terra_blade_setup": "§aTerra Blade",
       "advancements.enters_asgard.descr": "Enter in Asgard",
       "block.ethernal_kronuz.ygg_planks": "Ygg Wood Planks",
       "item.ethernal_kronuz.necromancer.desc": "Necromancer",
       "subtitles.nokkia_hammer_spawn": "",
       "gamerule.give_rl_verde_game_rule.description": "Ascender um jogador",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_begin_the_rise": "Begin The Rise",
       "item.ethernal_kronuz.ginuka_power_setup_spawn_egg": "Ginuka Power Setup Spawn Egg",
       "item.ethernal_kronuz.mosso_crystal_hoe": "Mosso Crystal Hoe",
+      "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_special_display_name": "- Special Display Name",
       "item.ethernal_kronuz.faking_ell_pickaxe": "Faking Ell Pickaxe",
       "subtitles.angolaenossa": "",
       "subtitles.griffin-death": "",
@@ -10815,6 +11031,7 @@
       "subtitles.sao-paulo": "",
       "block.ethernal_kronuz.chiseled_heaven_slate": "Chiseled Heaven Slate",
       "gui.ethernal_kronuz.trade_system_gui_techno.label_inventory": "Inventory",
+      "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_begin_the_rise": "Begin The Rise",
       "block.ethernal_kronuz.ygg_button": "Ygg Wood Button",
       "subtitles.warper-hurt": "",
       "item.ethernal_kronuz.aiport_steel_armor_leggings": "Airport Steel Leggings",
@@ -10824,10 +11041,12 @@
       "item.ethernal_kronuz.aiport_steel_ingot": "Aiport Steel Ingot",
       "item.ethernal_kronuz.aiport_steel_pickaxe": "Airport Steel Pickaxe",
       "entity.ethernal_kronuz.warper": "Warper",
+      "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_special_armor": "- Special Armor",
       "block.ethernal_kronuz.heaven_stone_bricks_stairs": "Heaven Stone Bricks Stairs",
       "block.ethernal_kronuz.heaven_stone_bricks": "Heaven Stone Bricks",
       "subtitles.gandamoca": "",
       "advancements.full_set_faking_ell.title": "Eia mano!",
+      "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_armor_before_the_rise": "armor before The Rise",
       "effect.ethernal_kronuz.bt_effect": "Big Testa",
       "item.ethernal_kronuz.deep_sea_boot": "Deep Sea Boot",
       "itemGroup.tabcreative_tab": "Ethernal Kronuz",
@@ -10835,9 +11054,10 @@
       "item.ethernal_kronuz.rl_verde_armor_leggings": "Titan Kaleb\u0027s  Leggings",
       "block.ethernal_kronuz.ygg_fences": "Ygg Wood Fences",
       "effect.ethernal_kronuz.end_empowerment": "End Empowerment",
-      "key.ethernal_kronuz.null_tp_ability": "Null TP Ability",
+      "key.ethernal_kronuz.null_tp_ability": "Null Teleport Ability",
       "subtitles.saopaulo": "",
       "subtitles.freicken": "",
+      "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_double_health": "- Double Health",
       "item.ethernal_kronuz.divine_crystal_shard": "Divine Crystal Shard",
       "subtitles.worldender": "",
       "item.ethernal_kronuz.mosso_crystal_armor_helmet": "Mosso Crystal Helmet",
@@ -10846,26 +11066,32 @@
       "block.ethernal_kronuz.invisible_block_blessing": "Invisible Block Blessing",
       "item.ethernal_kronuz.cabuflamanau.desc": "Ca Bu Fla Ma Nau",
       "death.attack.terrablade": "%1$s was put under Terra",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_confirm_the_rise": "Confirm The Rise",
       "item.ethernal_kronuz.faction_book": "§dJoin!",
       "block.ethernal_kronuz.cracked_heaven_stone_bricks": "Cracked Heaven Stone Bricks",
       "item.ethernal_kronuz.terra_blade_projectile": "Terra Blade Projectile",
       "item.ethernal_kronuz.warper_spawn_egg": "Warper Spawn Egg",
       "subtitles.aesir_rift_opening": "",
       "item.ethernal_kronuz.preto_da_amadora": "Amadora Não Central",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.button_rise": "Rise",
       "item.ethernal_kronuz.faking_ell_armor_chestplate": "Faking Ell Chestplate",
       "item.ethernal_kronuz.erika": "Auf Der Heide",
       "block.ethernal_kronuz.divine_crystal": "Divine Crystal",
       "block.ethernal_kronuz.cobbled_heaven_stone_stairs": "Cobbled Heaven Stone Stairs",
       "item.ethernal_kronuz.airport_steel_axe_head": "Head of Airport Steel Axe",
       "block.ethernal_kronuz.cracked_heaven_stone_bricks_stairs": "Cracked Heaven Stone Bricks Stairs",
+      "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_special_tool": "- Special Tool",
       "block.ethernal_kronuz.tall_glow_grass": "Tall Glow Grass",
       "item.ethernal_kronuz.null_entity_spawn_egg": "Null Spawn Egg",
       "block.ethernal_kronuz.double_glow_plant": "Double Glow Plant",
       "biome.ethernal_kronuz.plains_jotunheim": "Jotunheim",
       "item.ethernal_kronuz.erika.desc": "Erika",
       "block.ethernal_kronuz.flowerpotdoubleglowplant": "Flower Pot Double Glow Plant",
+      "gui.ethernal_kronuz.confirm_rise_gui_vermelho.button_wait": "Wait",
       "death.attack.cancro.player": "%1$s is a wannabe Technomorto",
+      "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_armor_before_the_rise": "armor before The Rise",
       "item.ethernal_kronuz.safira": "Kazzio",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_overwritten": "overwritten",
       "biome.ethernal_kronuz.stone_spikes": "Stone Spikes",
       "block.ethernal_kronuz.faking_ell_ore": "Faking Ell Ore",
       "item.ethernal_kronuz.mosso_crystal_armor_chestplate": "Mosso Crystal Chestplate",
@@ -10879,6 +11105,7 @@
       "gui.ethernal_kronuz.trade_system_gui_techno.button_3": "3",
       "gui.ethernal_kronuz.trade_system_gui_techno.button_2": "2",
       "block.ethernal_kronuz.asgardian_dirt": "Asgardian Grass Block",
+      "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_special_tool": "- Special Tool",
       "gui.ethernal_kronuz.trade_system_gui_techno.button_1": "1",
       "entity.ethernal_kronuz.null_entity": "Null",
       "advancements.shelter_mode_setup.title": "Shelter Mode j�?",
@@ -10899,6 +11126,7 @@
       "block.ethernal_kronuz.divine_crystal_spikes": "Divine Crystal Spikes",
       "effect.ethernal_kronuz.hell_empowerment": "Hell Empowerment",
       "item.ethernal_kronuz.airport_steel_hoe_head": "Head of Airport Steel Hoe",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_double_health": "- Double Health",
       "item.ethernal_kronuz.mosso_crystal_sword": "Mosso Crystal Sword",
       "item.ethernal_kronuz.aiport_steel_shovel": "Aiport Steel Shovel",
       "item.ethernal_kronuz.necromancer": "Adolfus Hitlurus",
@@ -10907,23 +11135,28 @@
       "death.attack.cancro": "Stage 4 finished you",
       "item.ethernal_kronuz.ygg_wood_stick": "Ygg Wood Stick",
       "block.ethernal_kronuz.chiseled_heaven_slate_stairs": "Chiseled Heaven Slate Stairs",
+      "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_special_armor": "- Special Armor",
       "item.ethernal_kronuz.safira.desc": "Safira",
       "block.ethernal_kronuz.bio_luminescent_lily": "Bio Luminescent Lily",
       "subtitles.cabuflamanau": "",
       "block.ethernal_kronuz.cobbled_heaven_stone_slabs": "Cobbled Heaven Stone Slabs",
       "item.ethernal_kronuz.rl_roxo_armour_leggings": "Gargantuan\u0027s Leggings",
+      "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_able_to_fly": "- Able to fly",
       "subtitles.griffin-hurt": "",
+      "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_overwritten": "overwritten",
       "item.ethernal_kronuz.rl_verde_armor_helmet": "Titan Kaleb\u0027s Helmet",
       "item.ethernal_kronuz.faking_ell_sword": "Faking Ell Sword",
       "block.ethernal_kronuz.heaven_stone_stairs": "Heaven Stone Stairs",
       "block.ethernal_kronuz.heaven_slate": "Heaven Slate",
       "block.ethernal_kronuz.ygg_slabs": "Ygg Wood Slabs",
       "block.ethernal_kronuz.murasama_block": "Murasama Block",
+      "gui.ethernal_kronuz.confirm_rise_gui_roxo.button_wait": "Wait",
       "item.ethernal_kronuz.faking_ell_shovel": "Faking Ell Shovel",
       "enchantment.ethernal_kronuz.life_steal_setup": "Life Steal",
       "block.ethernal_kronuz.flowerpotglowplant": "Flower Pot Glow Plant",
       "block.ethernal_kronuz.glow_plant": "Glow Plant",
       "curios.identifier.elytra": "Elytra",
+      "gui.ethernal_kronuz.confirm_rise_gui_vermelho.button_rise": "Rise",
       "block.ethernal_kronuz.stripped_ygg_log": "Stripped Ygg Wood Log",
       "item.ethernal_kronuz.aiport_steel_axe": "Airport Steel Axe",
       "item.ethernal_kronuz.make_a_wish": "Make A Wish",
@@ -10931,6 +11164,7 @@
       "block.ethernal_kronuz.cobbled_heaven_slate_slab": "Cobbled Heaven Slate Slab",
       "effect.ethernal_kronuz.radiant_lord_effect": "Radiant Lord",
       "subtitles.warper-alive": "",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_special_armor": "- Special Armor",
       "item.ethernal_kronuz.airport_steel_pickaxe_head": "Head of Airport Steel Pickaxe",
       "advancements.full_set_faking_ell.descr": "Ter uma armadura completa de Faking Ell",
       "item.ethernal_kronuz.sao_paulo.desc": "São Paulo",
@@ -10941,10 +11175,13 @@
       "item.ethernal_kronuz.blessing_spawn_egg": "Blessing Spawn Egg",
       "block.ethernal_kronuz.faking_ell_block": "Block of Faking Ell",
       "block.ethernal_kronuz.ygg_log": "Ygg Wood Log",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_special_tool": "- Special Tool",
       "item.ethernal_kronuz.freicken": "Chico da Concertina",
       "block.ethernal_kronuz.tiles_heaven_slate_stairs": "Heaven Slate Tiles Stairs",
+      "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_able_to_fly": "- Able to fly",
       "item.ethernal_kronuz.mosso_crystal_armor_leggings": "Mosso Crystal Leggings",
       "biome.ethernal_kronuz.floating_garden": "Floating Garden",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_or_your_armor_will_be": "or your armor will be",
       "block.ethernal_kronuz.cracked_heaven_slate_bricks_slabs": "Cracked Heaven Slate Bricks Slabs",
       "entity.ethernal_kronuz.griffin_animated": "Griffin",
       "item.ethernal_kronuz.murasama": "§cMurasama",
@@ -10963,6 +11200,7 @@
       "item.ethernal_kronuz.preto_da_amadora.desc": "Preto da Amadora",
       "death.attack.nokkiahammer": "%1$s was victim of The Carnage",
       "item.ethernal_kronuz.cristalized_divine_water_bucket": "Cristalized Divine Water Bucket",
+      "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_radiant_lord": "Radiant Lord",
       "advancements.rl_verde_achievement.descr": "Literalmente carregado a Radiant Lord",
       "block.ethernal_kronuz.heaven_slate_slabs": "Heaven Slate Slabs",
       "effect.ethernal_kronuz.asgard_empowerment_cooldown": "In Cooldown",
@@ -10970,13 +11208,16 @@
       "item.ethernal_kronuz.faking_ell_dust": "Faking Ell Nugget",
       "item.ethernal_kronuz.vasco": "V.A.S.C.O",
       "block.ethernal_kronuz.botv_block": "BOTV Block",
+      "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_radiant_lord": "Radiant Lord",
       "item.ethernal_kronuz.rl_vermelho_armor_chestplate": "Azakana\u0027s Body Armor",
       "item.ethernal_kronuz.jotunheim": "Bifrost Key",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_special_display_name": "- Special Display Name",
       "item.ethernal_kronuz.rl_vermelho_armor_helmet": "Azakana\u0027s Helmet",
       "item.ethernal_kronuz.faking_ell_armor_helmet": "Faking Ell Helmet",
       "item.ethernal_kronuz.mosso_crystal_axe": "Mosso Crystal Axe",
       "item.ethernal_kronuz.rl_vermelho_armor_boots": "Azakana\u0027s  Boots",
       "block.ethernal_kronuz.cracked_heaven_stone_bricks_slabs": "Cracked Heaven Stone Bricks Slabs",
+      "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_begin_the_rise": "Begin The Rise",
       "block.ethernal_kronuz.ygg_presure_plate": "Ygg Wood Presure Plate",
       "item.ethernal_kronuz.sao_paulo": "Yuri NR5",
       "entity.ethernal_kronuz.blessing": "Blessing",
@@ -10988,6 +11229,7 @@
       "advancements.bt_achievement.title": "Estou indo. Comi o cu de quem está ouvindo",
       "item.ethernal_kronuz.angolae_nossa.desc": "Angola é nossa",
       "block.ethernal_kronuz.ygg_stairs": "Ygg Wood Stairs",
+      "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_confirm_the_rise": "Confirm The Rise",
       "effect.ethernal_kronuz.cancro": "Cancro",
       "item.ethernal_kronuz.divine_water": "Divine Water",
       "biome.ethernal_kronuz.crystal_pillars": "Crystal Pillars",
@@ -10996,6 +11238,7 @@
       "advancements.full_set_airport_steel.descr": "Ter uma armadura completa de Aiport Steel",
       "gamerule.give_rl_verde_game_rule": "ascender",
       "key.ethernal_kronuz.griffin_down": "Griffin Downwards",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_became_a": "Became a",
       "item.ethernal_kronuz.faking_ell_armor_leggings": "Faking Ell Leggings",
       "block.ethernal_kronuz.asgardian_dirt_block": "Asgardian Dirt Block",
       "advancements.ascender_advancement.title": "Basta 2 dedos de testa",
@@ -11003,8 +11246,10 @@
       "block.ethernal_kronuz.flowerpotyggsapling": "Flower Pot Ygg Sapling",
       "item.ethernal_kronuz.nokkia_hammer": "§4Nokkia Hammer",
       "block.ethernal_kronuz.bricks_heaven_slate_stairs": "Heaven Slate Bricks Stairs",
+      "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_atention": "Atention",
       "block.ethernal_kronuz.chiseled_heaven_stone_slabs": "Chiseled Heaven Stone Slabs",
       "block.ethernal_kronuz.aiport_steel_block": "Block of Airport Steel",
+      "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_remove_your_current": "Remove your current",
       "item.ethernal_kronuz.mosso_crystal_armor_boots": "Mosso Crystal Boots",
       "curios.identifier.livro": "Livro das Fac��es",
       "item.ethernal_kronuz.asgard": "Asgard Portal Igniter",
@@ -11022,8 +11267,10 @@
       "item.ethernal_kronuz.mosso_crystal_gem": "Mosso Crystal Gem",
       "subtitles.vasco": "",
       "subtitles.terrablademeele": "",
+      "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_confirm_the_rise": "Confirm The Rise",
       "item.ethernal_kronuz.technomorto_spawn_egg": "Technomorto Spawn Egg",
       "gui.ethernal_kronuz.trade_system_gui_techno.button_11": "1",
+      "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_became_a": "Became a",
       "key.ethernal_kronuz.null_entity_invisibility_ability_key_bind": "Invisibility Ability",
       "item.ethernal_kronuz.vasco.desc": "V.A.S.C.O",
       "block.ethernal_kronuz.aiport_steel_ore": "Aiport Steel Ore",
@@ -11031,16 +11278,22 @@
       "item.ethernal_kronuz.faking_ell_armor_boots": "Faking Ell Boots",
       "gui.ethernal_kronuz.gui_faction_book.button_bt": "bt",
       "advancements.shelter_mode_setup.descr": "Utilizar a tecla favorita dos noobs",
+      "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_or_your_armor_will_be": "or your armor will be",
       "item.ethernal_kronuz.rl_verde_armor_chestplate": "Titan Kaleb\u0027s Body Armor",
+      "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_or_your_armor_will_be": "or your armor will be",
       "item.ethernal_kronuz.aiport_steel_hoe": "Airport Steel Hoe",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.button_wait": "Wait",
+      "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_special_display_name": "- Special Display Name",
       "entity.ethernal_kronuz.projectile_terra_blade_projectile": "Terra Projectile",
       "item.ethernal_kronuz.angolae_nossa": "Colónia Portuguesa",
       "block.ethernal_kronuz.crystalized_divine_water": "Crystalized Divine Water",
+      "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_double_health": "- Double Health",
       "item.ethernal_kronuz.technobalde_spawn_egg": "Technobalde Spawn Egg",
       "item.ethernal_kronuz.rl_verde_armor_boots": "Titan Kaleb\u0027s  Boots",
       "subtitles.sword-dash": "",
       "item.ethernal_kronuz.battle_coin": "Battle Coin",
       "item.ethernal_kronuz.mosso_crystal_pickaxe": "Mosso Crystal Pickaxe",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_remove_your_current": "Remove your current",
       "gui.ethernal_kronuz.trade_system_gui_techno.button_21": "2",
       "item.ethernal_kronuz.faking_ell_hoe": "Faking Ell Hoe",
       "subtitles.elementsfootsteps": "",
@@ -11056,8 +11309,11 @@
       "block.ethernal_kronuz.cobbled_heaven_slate_stairs": "Cobbled Heaven Slate Stairs",
       "gui.ethernal_kronuz.trade_system_gui_techno.button_31": "3",
       "block.ethernal_kronuz.nokkia_hammer_block": "Nokkia Hammer Block",
+      "gui.ethernal_kronuz.confirm_rise_gui_roxo.button_rise": "Rise",
       "block.ethernal_kronuz.heaven_stone_slabs": "Heaven Stone Slabs",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_able_to_fly": "- Able to fly",
       "entity.ethernal_kronuz.technomorto": "Technomorto",
+      "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_became_a": "Became a",
       "item.ethernal_kronuz.mosso_crystal_shovel": "Mosso Crystal Shovel"
     }
   },
@@ -11123,7 +11379,12 @@
                 "children": [
                   {
                     "name": "Blade Of The Void",
-                    "children": []
+                    "children": [
+                      {
+                        "name": "Special Attack",
+                        "children": []
+                      }
+                    ]
                   },
                   {
                     "name": "Terra Blade",
@@ -11136,7 +11397,12 @@
                   },
                   {
                     "name": "Murasama",
-                    "children": []
+                    "children": [
+                      {
+                        "name": "Special Attack",
+                        "children": []
+                      }
+                    ]
                   },
                   {
                     "name": "Nokkia Hammer",
@@ -11154,6 +11420,18 @@
                 "children": [
                   {
                     "name": "Verde",
+                    "children": []
+                  },
+                  {
+                    "name": "ConfirmRise",
+                    "children": []
+                  },
+                  {
+                    "name": "Vermelho",
+                    "children": []
+                  },
+                  {
+                    "name": "Roxo",
                     "children": []
                   }
                 ]

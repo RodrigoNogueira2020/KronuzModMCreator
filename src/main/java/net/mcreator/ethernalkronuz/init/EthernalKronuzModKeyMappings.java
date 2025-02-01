@@ -16,6 +16,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
+import net.mcreator.ethernalkronuz.network.OpenConfirmRiseGUIMessage;
 import net.mcreator.ethernalkronuz.network.NullTPAbilityMessage;
 import net.mcreator.ethernalkronuz.network.NullEntityKeyBindMessage;
 import net.mcreator.ethernalkronuz.network.NullEntityInvisibilityAbilityKeyBindMessage;
@@ -30,6 +31,7 @@ public class EthernalKronuzModKeyMappings {
 	public static final KeyMapping NULL_ENTITY_INVISIBILITY_ABILITY_KEY_BIND = new KeyMapping("key.ethernal_kronuz.null_entity_invisibility_ability_key_bind", GLFW.GLFW_KEY_V, "key.categories.gameplay");
 	public static final KeyMapping GRIFFIN_UP = new KeyMapping("key.ethernal_kronuz.griffin_up", GLFW.GLFW_KEY_Z, "key.categories.misc");
 	public static final KeyMapping GRIFFIN_DOWN = new KeyMapping("key.ethernal_kronuz.griffin_down", GLFW.GLFW_KEY_C, "key.categories.misc");
+	public static final KeyMapping OPEN_CONFIRM_RISE_GUI = new KeyMapping("key.ethernal_kronuz.open_confirm_rise_gui", GLFW.GLFW_KEY_F6, "key.categories.ui");
 	private static long GRIFFIN_UP_LASTPRESS = 0;
 	private static long GRIFFIN_DOWN_LASTPRESS = 0;
 
@@ -40,6 +42,7 @@ public class EthernalKronuzModKeyMappings {
 		ClientRegistry.registerKeyBinding(NULL_ENTITY_INVISIBILITY_ABILITY_KEY_BIND);
 		ClientRegistry.registerKeyBinding(GRIFFIN_UP);
 		ClientRegistry.registerKeyBinding(GRIFFIN_DOWN);
+		ClientRegistry.registerKeyBinding(OPEN_CONFIRM_RISE_GUI);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -85,6 +88,12 @@ public class EthernalKronuzModKeyMappings {
 						int dt = (int) (System.currentTimeMillis() - GRIFFIN_DOWN_LASTPRESS);
 						EthernalKronuzMod.PACKET_HANDLER.sendToServer(new GriffinDownMessage(1, dt));
 						GriffinDownMessage.pressAction(Minecraft.getInstance().player, 1, dt);
+					}
+				}
+				if (event.getKey() == OPEN_CONFIRM_RISE_GUI.getKey().getValue()) {
+					if (event.getAction() == GLFW.GLFW_PRESS) {
+						EthernalKronuzMod.PACKET_HANDLER.sendToServer(new OpenConfirmRiseGUIMessage(0, 0));
+						OpenConfirmRiseGUIMessage.pressAction(Minecraft.getInstance().player, 0, 0);
 					}
 				}
 			}

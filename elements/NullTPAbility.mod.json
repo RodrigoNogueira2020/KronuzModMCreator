@@ -3,7 +3,7 @@
   "_type": "keybind",
   "definition": {
     "triggerKey": "X",
-    "keyBindingName": "Null TP Ability",
+    "keyBindingName": "Null Teleport Ability",
     "keyBindingCategoryKey": "gameplay",
     "onKeyPressed": {
       "name": "NullEntityTPAbility"
