@@ -1,15 +1,21 @@
 package net.mcreator.ethernalkronuz;
 
+import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.item.ItemTossEvent;
 import net.minecraftforge.event.entity.player.PlayerContainerEvent;
+import net.minecraftforge.client.event.ScreenEvent;
+import net.minecraftforge.client.event.InputEvent;
+import net.minecraftforge.client.event.InputEvent.KeyInputEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.client.event.ScreenEvent;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModItems;
+
+import org.lwjgl.glfw.GLFW;
 
 @Mod.EventBusSubscriber
 public class PreventDropEvent {
@@ -38,9 +44,8 @@ public class PreventDropEvent {
             Slot clickedSlot = ((net.minecraft.client.gui.screens.inventory.AbstractContainerScreen<?>) event.getScreen()).getSlotUnderMouse();
             if (clickedSlot != null && clickedSlot.hasItem()) {
                 ItemStack clickedItem = clickedSlot.getItem();
-                if (isRestrictedItem(clickedItem)) {
+                if (isRestrictedItem(clickedItem))
                     event.setCanceled(true);
-                }
             }
         }
     }
@@ -65,6 +70,34 @@ public class PreventDropEvent {
         }
     }
 
+    @SubscribeEvent
+    public static void onPlayerDeath(LivingDeathEvent event) {
+        if (event.getEntity() instanceof Player player) {
+            if (player.isCreative())
+                return;
+                
+            for (int i = 0; i < player.getInventory().getContainerSize(); i++) {
+                ItemStack stack = player.getInventory().getItem(i);
+                if (isRestrictedItem(stack))
+                    player.getInventory().setItem(i, ItemStack.EMPTY);
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public static void onPlayerClone(PlayerEvent.Clone event) {
+        if (!event.isWasDeath()) return;
+
+        Player original = event.getOriginal();
+        Player player = event.getPlayer();
+
+        for (int i = 0; i < original.getInventory().getContainerSize(); i++) {
+            ItemStack stack = original.getInventory().getItem(i);
+            if (isRestrictedItem(stack))
+                player.getInventory().setItem(i, stack.copy());
+        }
+    }
+
     private static boolean isRestrictedItem(ItemStack stack) {
         return stack.getItem() == EthernalKronuzModItems.TERRA_BLADE_SETUP.get() ||
                stack.getItem() == EthernalKronuzModItems.BLADE_OF_THE_VOID_SETUP.get() ||
@@ -80,6 +113,7 @@ public class PreventDropEvent {
                stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_HELMET.get() ||
                stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_CHESTPLATE.get() ||
                stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_LEGGINGS.get() ||
-               stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_BOOTS.get();
+               stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_BOOTS.get() ||
+               stack.getItem() == EthernalKronuzModItems.JOTUNHEIM.get();
     }
 }
