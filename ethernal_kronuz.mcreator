@@ -1140,26 +1140,6 @@
       "path": "~/Factions/Radiant Lords/Procedures Ativar RLs/Vermelho"
     },
     {
-      "name": "RadiantLordDead",
-      "type": "procedure",
-      "sortid": 174,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "radiant_lord_dead",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/RadiantLordDeadProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Is RL Dead"
-    },
-    {
       "name": "AndarilhoDaCaveEffect",
       "type": "potioneffect",
       "sortid": 175,
@@ -3104,26 +3084,6 @@
         ]
       },
       "path": "~/Factions/Big Testas/BTEffects"
-    },
-    {
-      "name": "RadiantLordDead1",
-      "type": "procedure",
-      "sortid": 265,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "radiant_lord_dead_1",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/RadiantLordDead1Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Is RL Dead"
     },
     {
       "name": "RemoveFactionPotions1",
@@ -9873,7 +9833,7 @@
           "src/main/resources/assets/ethernal_kronuz/models/item/rl_roxo_armour_leggings.json"
         ]
       },
-      "path": "~/Factions/Radiant Lords/Armaduras/Roxo"
+      "path": "~/Factions/Radiant Lords/Armaduras"
     },
     {
       "name": "RenderSkyAsgardProcedure",
@@ -10105,7 +10065,7 @@
           "src/main/resources/assets/ethernal_kronuz/models/item/rl_vermelho_armor_leggings.json"
         ]
       },
-      "path": "~/Factions/Radiant Lords/Armaduras/Vermelho"
+      "path": "~/Factions/Radiant Lords/Armaduras"
     },
     {
       "name": "RLVerdeArmor",
@@ -10123,7 +10083,7 @@
           "src/main/resources/assets/ethernal_kronuz/models/item/rl_verde_armor_helmet.json"
         ]
       },
-      "path": "~/Factions/Radiant Lords/Armaduras/Verde"
+      "path": "~/Factions/Radiant Lords/Armaduras"
     },
     {
       "name": "AsgardPortalTriggerUsed",
@@ -10568,6 +10528,26 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/ethernalkronuz/network/OpenConfirmRiseGUIMessage.java"
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs"
+    },
+    {
+      "name": "GiveRLStuffAfterRespawn",
+      "type": "procedure",
+      "sortid": 594,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "give_rl_stuff_after_respawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/GiveRLStuffAfterRespawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
         ]
       },
       "path": "~/Factions/Radiant Lords/Procedures Ativar RLs"
@@ -11437,29 +11417,12 @@
                 ]
               },
               {
-                "name": "Is RL Dead",
-                "children": []
-              },
-              {
                 "name": "Remove Faction Potions",
                 "children": []
               },
               {
                 "name": "Armaduras",
-                "children": [
-                  {
-                    "name": "Roxo",
-                    "children": []
-                  },
-                  {
-                    "name": "Vermelho",
-                    "children": []
-                  },
-                  {
-                    "name": "Verde",
-                    "children": []
-                  }
-                ]
+                "children": []
               },
               {
                 "name": "Passagem de poderes",
