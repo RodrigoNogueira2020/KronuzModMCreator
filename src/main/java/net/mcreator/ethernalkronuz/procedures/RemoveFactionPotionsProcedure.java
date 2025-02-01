@@ -30,7 +30,7 @@ public class RemoveFactionPotionsProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).ADCPlayer == true && ((entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
+		if ((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).ADCPlayer && ((entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
 				? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("ethernal_kronuz:ascender_advancement"))).isDone()
 				: false)
 				|| (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
@@ -44,13 +44,12 @@ public class RemoveFactionPotionsProcedure {
 				});
 			}
 			RemoveFactionPotions1Procedure.execute(entity);
-		} else if ((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).BTPlayer == true
-				&& ((entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
-						? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("ethernal_kronuz:ascender_advancement"))).isDone()
-						: false)
-						|| (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
-								? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("ethernal_kronuz:rl_verde_achievement"))).isDone()
-								: false))) {
+		} else if ((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).BTPlayer && ((entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
+				? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("ethernal_kronuz:ascender_advancement"))).isDone()
+				: false)
+				|| (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
+						? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("ethernal_kronuz:rl_verde_achievement"))).isDone()
+						: false))) {
 			{
 				boolean _setval = false;
 				entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

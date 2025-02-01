@@ -1,5 +1,4 @@
-
-package net.mcreator.ethernalkronuz.item;
+package net.mcreator.ethernalkronuz.item;
 
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.client.IItemRenderProperties;
@@ -184,4 +183,4 @@ public abstract class RLVerdeArmorItem extends ArmorItem {
 			return "ethernal_kronuz:textures/models/armor/radiant_lord_armor_green_crystal__layer_1.png";
 		}
 	}
-}
+}

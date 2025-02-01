@@ -9,6 +9,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -46,6 +47,10 @@ public class GiveRadiantLordEffectsProcedure {
 					"attribute @p minecraft:generic.max_health base set 40");
 		if (entity instanceof LivingEntity _entity)
 			_entity.addEffect(new MobEffectInstance(EthernalKronuzModMobEffects.RADIANT_LORD_EFFECT.get(), (int) Double.POSITIVE_INFINITY, 0, (true), (false)));
+		if (entity instanceof Player _player) {
+			_player.getAbilities().mayfly = (true);
+			_player.onUpdateAbilities();
+		}
 		AscenderEffectsProcedure.execute(world, entity);
 		new Object() {
 			private int ticks = 0;
