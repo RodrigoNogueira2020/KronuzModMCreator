@@ -2,12 +2,12 @@ package net.mcreator.ethernalkronuz.procedures;
 
 import net.minecraftforge.server.ServerLifecycleHooks;
 import net.minecraftforge.items.ItemHandlerHelper;
-import net.minecraftforge.items.IItemHandlerModifiable;
-import net.minecraftforge.items.CapabilityItemHandler;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.network.chat.TextComponent;
@@ -66,40 +66,40 @@ public class RiseRadiantLordVermelhoAfterTheRiseConfirmationProcedure {
 			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 		}
 		{
-			final int _slotid = 3;
-			final ItemStack _setstack = new ItemStack(EthernalKronuzModItems.RL_VERMELHO_ARMOR_HELMET.get());
-			_setstack.setCount(1);
-			entity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-				if (capability instanceof IItemHandlerModifiable _modHandler)
-					_modHandler.setStackInSlot(_slotid, _setstack);
-			});
+			Entity _entity = entity;
+			if (_entity instanceof Player _player) {
+				_player.getInventory().armor.set(3, new ItemStack(EthernalKronuzModItems.RL_VERMELHO_ARMOR_HELMET.get()));
+				_player.getInventory().setChanged();
+			} else if (_entity instanceof LivingEntity _living) {
+				_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EthernalKronuzModItems.RL_VERMELHO_ARMOR_HELMET.get()));
+			}
 		}
 		{
-			final int _slotid = 2;
-			final ItemStack _setstack = new ItemStack(EthernalKronuzModItems.RL_VERMELHO_ARMOR_CHESTPLATE.get());
-			_setstack.setCount(1);
-			entity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-				if (capability instanceof IItemHandlerModifiable _modHandler)
-					_modHandler.setStackInSlot(_slotid, _setstack);
-			});
+			Entity _entity = entity;
+			if (_entity instanceof Player _player) {
+				_player.getInventory().armor.set(2, new ItemStack(EthernalKronuzModItems.RL_VERMELHO_ARMOR_CHESTPLATE.get()));
+				_player.getInventory().setChanged();
+			} else if (_entity instanceof LivingEntity _living) {
+				_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(EthernalKronuzModItems.RL_VERMELHO_ARMOR_CHESTPLATE.get()));
+			}
 		}
 		{
-			final int _slotid = 1;
-			final ItemStack _setstack = new ItemStack(EthernalKronuzModItems.RL_VERMELHO_ARMOR_LEGGINGS.get());
-			_setstack.setCount(1);
-			entity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-				if (capability instanceof IItemHandlerModifiable _modHandler)
-					_modHandler.setStackInSlot(_slotid, _setstack);
-			});
+			Entity _entity = entity;
+			if (_entity instanceof Player _player) {
+				_player.getInventory().armor.set(1, new ItemStack(EthernalKronuzModItems.RL_VERMELHO_ARMOR_LEGGINGS.get()));
+				_player.getInventory().setChanged();
+			} else if (_entity instanceof LivingEntity _living) {
+				_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(EthernalKronuzModItems.RL_VERMELHO_ARMOR_LEGGINGS.get()));
+			}
 		}
 		{
-			final int _slotid = 0;
-			final ItemStack _setstack = new ItemStack(EthernalKronuzModItems.RL_VERMELHO_ARMOR_BOOTS.get());
-			_setstack.setCount(1);
-			entity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-				if (capability instanceof IItemHandlerModifiable _modHandler)
-					_modHandler.setStackInSlot(_slotid, _setstack);
-			});
+			Entity _entity = entity;
+			if (_entity instanceof Player _player) {
+				_player.getInventory().armor.set(0, new ItemStack(EthernalKronuzModItems.RL_VERMELHO_ARMOR_BOOTS.get()));
+				_player.getInventory().setChanged();
+			} else if (_entity instanceof LivingEntity _living) {
+				_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(EthernalKronuzModItems.RL_VERMELHO_ARMOR_BOOTS.get()));
+			}
 		}
 		for (int index0 = 0; index0 < (int) (5); index0++) {
 			if (!world.isClientSide()) {

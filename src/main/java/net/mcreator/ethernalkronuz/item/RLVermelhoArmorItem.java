@@ -1,5 +1,4 @@
-
-package net.mcreator.ethernalkronuz.item;
+package net.mcreator.ethernalkronuz.item;
 
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.client.IItemRenderProperties;
