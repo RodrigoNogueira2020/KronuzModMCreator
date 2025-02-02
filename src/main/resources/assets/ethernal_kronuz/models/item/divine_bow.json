@@ -1,0 +1,29 @@
+
+  {
+  "parent": "item/bow",
+  "textures": {
+    "layer0": "ethernal_kronuz:items/divine_bow"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "minecraft:pulling": 1
+      },
+      "model": "ethernal_kronuz:item/divine_bow_pulling_0"
+    },
+    {
+      "predicate": {
+        "minecraft:pulling": 1,
+        "minecraft:pull": 0.65
+      },
+      "model": "ethernal_kronuz:item/divine_bow_pulling_1"
+    },
+    {
+      "predicate": {
+        "minecraft:pulling": 1,
+        "minecraft:pull": 0.9
+      },
+      "model": "ethernal_kronuz:item/divine_bow_pulling_2"
+    }
+  ]
+}
