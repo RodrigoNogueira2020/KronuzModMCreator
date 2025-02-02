@@ -63,6 +63,7 @@ import net.mcreator.ethernalkronuz.item.CristalizedDivineWaterItem;
 import net.mcreator.ethernalkronuz.item.CabuflamanauItem;
 import net.mcreator.ethernalkronuz.item.BladeOfTheVoidSetupItem;
 import net.mcreator.ethernalkronuz.item.BladeOfAiportSteelSwordItem;
+import net.mcreator.ethernalkronuz.item.BifrostKeyItem;
 import net.mcreator.ethernalkronuz.item.BackpackItem;
 import net.mcreator.ethernalkronuz.item.AwayItem;
 import net.mcreator.ethernalkronuz.item.AngolaeNossaItem;
@@ -248,6 +249,7 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> DIVINE_ARROW = REGISTRY.register("divine_arrow", () -> new DivineArrowItem());
 	public static final RegistryObject<Item> GRIFFIN_FEATHER = REGISTRY.register("griffin_feather", () -> new GriffinFeatherItem());
 	public static final RegistryObject<Item> YGG_WOOD_STICK = REGISTRY.register("ygg_wood_stick", () -> new YggWoodStickItem());
+	public static final RegistryObject<Item> BIFROST_KEY = REGISTRY.register("bifrost_key", () -> new BifrostKeyItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

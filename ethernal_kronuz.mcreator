@@ -10551,6 +10551,21 @@
         ]
       },
       "path": "~/Factions/Radiant Lords/Procedures Ativar RLs"
+    },
+    {
+      "name": "BifrostKey",
+      "type": "curiosbauble",
+      "sortid": 595,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bifrost_key",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ethernal_kronuz/models/item/bifrost_key.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/BifrostKeyItem.java"
+        ]
+      },
+      "path": "~/Dimensions/Jotunheim"
     }
   ],
   "variable_elements": [
@@ -10985,6 +11000,7 @@
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_remove_your_current": "Remove your current",
       "block.ethernal_kronuz.mosso_crystal_block": "Block of Mosso Crystal",
       "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_overwritten": "overwritten",
+      "item.ethernal_kronuz.bifrost_key": "Bifrost Key",
       "block.ethernal_kronuz.ygg_trapdoor": "Ygg Wood Trapdoor",
       "item.ethernal_kronuz.aiport_steel_armor_chestplate": "Airport Steel Chestplate",
       "advancements.ascender_advancement.descr": "Tornar-se um Radiant Lord",
