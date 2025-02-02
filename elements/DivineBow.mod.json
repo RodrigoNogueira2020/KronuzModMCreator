@@ -1,0 +1,39 @@
+{
+  "_fv": 39,
+  "_type": "rangeditem",
+  "definition": {
+    "renderType": 0,
+    "texture": "divine_bow",
+    "customModelName": "Normal",
+    "name": "Divine Bow",
+    "specialInfo": [
+      "Divinity"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:CreativeTab"
+    },
+    "stackSize": 1,
+    "ammoItem": {
+      "value": "CUSTOM:DivineArrow"
+    },
+    "shootConstantly": false,
+    "usageCount": 1000,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "hasGlow": false,
+    "animation": "bow",
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "bulletPower": 1.0,
+    "bulletDamage": 5.0,
+    "bulletKnockback": 5,
+    "bulletParticles": true,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": "CUSTOM:DivineArrow"
+    },
+    "bulletModel": "Default",
+    "customBulletModelTexture": ""
+  }
+}

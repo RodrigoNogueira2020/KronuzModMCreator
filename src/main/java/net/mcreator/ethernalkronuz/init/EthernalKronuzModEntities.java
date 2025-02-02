@@ -23,6 +23,7 @@ import net.mcreator.ethernalkronuz.entity.TechnobaldeEntity;
 import net.mcreator.ethernalkronuz.entity.NullEntityEntity;
 import net.mcreator.ethernalkronuz.entity.GriffinAnimatedEntity;
 import net.mcreator.ethernalkronuz.entity.GinukaPowerSetupEntity;
+import net.mcreator.ethernalkronuz.entity.DivineBowEntity;
 import net.mcreator.ethernalkronuz.entity.BlessingEntity;
 import net.mcreator.ethernalkronuz.EthernalKronuzMod;
 
@@ -57,6 +58,8 @@ public class EthernalKronuzModEntities {
 					.sized(2f, 2f));
 	public static final RegistryObject<EntityType<TerraBladeProjectileEntity>> TERRA_BLADE_PROJECTILE = register("projectile_terra_blade_projectile", EntityType.Builder.<TerraBladeProjectileEntity>of(TerraBladeProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(TerraBladeProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<DivineBowEntity>> DIVINE_BOW = register("projectile_divine_bow",
+			EntityType.Builder.<DivineBowEntity>of(DivineBowEntity::new, MobCategory.MISC).setCustomClientFactory(DivineBowEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

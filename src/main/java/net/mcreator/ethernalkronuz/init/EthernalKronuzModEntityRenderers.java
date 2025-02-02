@@ -9,6 +9,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
+
 import net.mcreator.ethernalkronuz.client.renderer.WarperRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.TerraBladeProjectileRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.TechnomortoRenderer;
@@ -30,5 +32,6 @@ public class EthernalKronuzModEntityRenderers {
 		event.registerEntityRenderer(EthernalKronuzModEntities.BLESSING.get(), BlessingRenderer::new);
 		event.registerEntityRenderer(EthernalKronuzModEntities.GRIFFIN_ANIMATED.get(), GriffinAnimatedRenderer::new);
 		event.registerEntityRenderer(EthernalKronuzModEntities.TERRA_BLADE_PROJECTILE.get(), TerraBladeProjectileRenderer::new);
+		event.registerEntityRenderer(EthernalKronuzModEntities.DIVINE_BOW.get(), ThrownItemRenderer::new);
 	}
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "ethernal_kronuz:item/divine_bow",
+  "textures": 
+  {
+      "layer0": "ethernal_kronuz:items/divine_bow_pulling_1"
+  }
+}
