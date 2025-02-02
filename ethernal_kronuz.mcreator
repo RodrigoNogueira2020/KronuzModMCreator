@@ -1448,9 +1448,9 @@
       "registry_name": "aesir_portal_block",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/block/AesirPortalBlockBlock.java",
           "src/main/resources/assets/ethernal_kronuz/blockstates/aesir_portal_block.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/aesir_portal_block.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/AesirPortalBlockBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/aesir_portal_block.json"
         ]
       },
@@ -10537,7 +10537,7 @@
       "type": "procedure",
       "sortid": 594,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "give_rl_stuff_after_respawn",
       "metadata": {
         "files": [
@@ -10550,7 +10550,7 @@
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs"
+      "path": "~/Factions/Radiant Lords"
     },
     {
       "name": "BifrostKey",
@@ -10986,8 +10986,8 @@
       "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
       "advancements.bt_achievement.descr": "Juntar-se aos Big Testa",
-      "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "advancements.rl_verde_achievement.title": "Carregado até ao limite",
+      "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_atention": "Atention",
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
@@ -11008,8 +11008,8 @@
       "item.ethernal_kronuz.rl_roxo_armour_helmet": "Gargantuan\u0027s Armour Helmet",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_armor_before_the_rise": "armor before The Rise",
       "item.ethernal_kronuz.terra_blade_setup": "§aTerra Blade",
-      "advancements.enters_asgard.descr": "Enter in Asgard",
       "block.ethernal_kronuz.ygg_planks": "Ygg Wood Planks",
+      "advancements.enters_asgard.descr": "Enter in Asgard",
       "item.ethernal_kronuz.necromancer.desc": "Necromancer",
       "subtitles.nokkia_hammer_spawn": "",
       "gamerule.give_rl_verde_game_rule.description": "Ascender um jogador",
