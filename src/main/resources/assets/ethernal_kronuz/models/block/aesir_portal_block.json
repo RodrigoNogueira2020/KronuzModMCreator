@@ -1,7 +1,12 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/cube",
   "textures": {
-    "all": "ethernal_kronuz:blocks/bifrost_animated_portal",
-    "particle": "ethernal_kronuz:blocks/bifrost_animated_portal"
+    "down": "ethernal_kronuz:blocks/aesir_portal_block_down2",
+    "up": "ethernal_kronuz:blocks/aesir_portal_block_up",
+    "north": "ethernal_kronuz:blocks/aesir_portal_block_side",
+    "east": "ethernal_kronuz:blocks/aesir_portal_block_side",
+    "south": "ethernal_kronuz:blocks/aesir_portal_block_side",
+    "west": "ethernal_kronuz:blocks/aesir_portal_block_side",
+    "particle": "ethernal_kronuz:blocks/aesir_portal_block_down2"
   }
 }

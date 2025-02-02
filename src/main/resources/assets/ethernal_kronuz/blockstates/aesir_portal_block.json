@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=north": {
       "model": "ethernal_kronuz:block/aesir_portal_block"
+    },
+    "facing=east": {
+      "model": "ethernal_kronuz:block/aesir_portal_block",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ethernal_kronuz:block/aesir_portal_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ethernal_kronuz:block/aesir_portal_block",
+      "y": 270
     }
   }
 }
