@@ -1,119 +1,99 @@
 package net.mcreator.ethernalkronuz;
 
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.event.entity.player.PlayerContainerEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.item.ItemTossEvent;
-import net.minecraftforge.event.entity.player.PlayerContainerEvent;
 import net.minecraftforge.client.event.ScreenEvent;
-import net.minecraftforge.client.event.InputEvent;
-import net.minecraftforge.client.event.InputEvent.KeyInputEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraft.client.Minecraft;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.Slot;
-import net.minecraft.world.item.ItemStack;
-import net.mcreator.ethernalkronuz.init.EthernalKronuzModItems;
 
-import org.lwjgl.glfw.GLFW;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.client.Minecraft;
+
+import net.mcreator.ethernalkronuz.init.EthernalKronuzModItems;
 
 @Mod.EventBusSubscriber
 public class PreventDropEvent {
+	@SubscribeEvent
+	public static void onItemToss(ItemTossEvent event) {
+		if (event.getPlayer().isCreative())
+			return;
+		ItemStack droppedItem = event.getEntityItem().getItem();
+		if (isRestrictedItem(droppedItem)) {
+			event.setCanceled(true);
+			event.getPlayer().getInventory().add(droppedItem);
+		}
+	}
 
-    @SubscribeEvent
-    public static void onItemToss(ItemTossEvent event) {
-        if (event.getPlayer().isCreative())
-            return;
+	@SubscribeEvent
+	public static void onMouseClicked(ScreenEvent.MouseClickedEvent event) {
+		if (!(event.getScreen() instanceof net.minecraft.client.gui.screens.inventory.AbstractContainerScreen<?>))
+			return;
+		Player player = Minecraft.getInstance().player;
+		if (player != null && !player.isCreative()) {
+			Slot clickedSlot = ((net.minecraft.client.gui.screens.inventory.AbstractContainerScreen<?>) event.getScreen()).getSlotUnderMouse();
+			if (clickedSlot != null && clickedSlot.hasItem()) {
+				ItemStack clickedItem = clickedSlot.getItem();
+				if (isRestrictedItem(clickedItem))
+					event.setCanceled(true);
+			}
+		}
+	}
 
-        ItemStack droppedItem = event.getEntityItem().getItem();
+	@SubscribeEvent
+	public static void onContainerClose(PlayerContainerEvent.Close event) {
+		Player player = event.getPlayer();
+		if (player.isCreative())
+			return;
+		for (Slot slot : player.containerMenu.slots) {
+			if (slot.hasItem()) {
+				ItemStack stack = slot.getItem();
+				if (isRestrictedItem(stack)) {
+					if (!player.getInventory().contains(stack)) {
+						slot.set(ItemStack.EMPTY);
+						player.getInventory().add(stack);
+					}
+				}
+			}
+		}
+	}
 
-        if (isRestrictedItem(droppedItem)) {
-            event.setCanceled(true);
-            event.getPlayer().getInventory().add(droppedItem);
-        }
-    }
+	@SubscribeEvent
+	public static void onPlayerDeath(LivingDeathEvent event) {
+		if (event.getEntity() instanceof Player player) {
+			if (player.isCreative())
+				return;
 
-    @SubscribeEvent
-    public static void onMouseClicked(ScreenEvent.MouseClickedEvent event) {
-        if (!(event.getScreen() instanceof net.minecraft.client.gui.screens.inventory.AbstractContainerScreen<?>))
-            return;
+			for (int i = 0; i < player.getInventory().getContainerSize(); i++) {
+				ItemStack stack = player.getInventory().getItem(i);
+				if (isRestrictedItem(stack))
+					player.getInventory().setItem(i, ItemStack.EMPTY);
+			}
+		}
+	}
 
-        Player player = Minecraft.getInstance().player;
+	@SubscribeEvent
+	public static void onPlayerClone(PlayerEvent.Clone event) {
+		if (!event.isWasDeath())
+			return;
+		Player original = event.getOriginal();
+		Player player = event.getPlayer();
+		for (int i = 0; i < original.getInventory().getContainerSize(); i++) {
+			ItemStack stack = original.getInventory().getItem(i);
+			if (isRestrictedItem(stack))
+				player.getInventory().setItem(i, stack.copy());
+		}
+	}
 
-        if (player != null && !player.isCreative()) {
-            Slot clickedSlot = ((net.minecraft.client.gui.screens.inventory.AbstractContainerScreen<?>) event.getScreen()).getSlotUnderMouse();
-            if (clickedSlot != null && clickedSlot.hasItem()) {
-                ItemStack clickedItem = clickedSlot.getItem();
-                if (isRestrictedItem(clickedItem))
-                    event.setCanceled(true);
-            }
-        }
-    }
-
-    @SubscribeEvent
-    public static void onContainerClose(PlayerContainerEvent.Close event) {
-        Player player = event.getPlayer();
-
-        if (player.isCreative())
-            return;
-
-        for (Slot slot : player.containerMenu.slots) {
-            if (slot.hasItem()) {
-                ItemStack stack = slot.getItem();
-                if (isRestrictedItem(stack)) {
-                    if (!player.getInventory().contains(stack)) {
-                        slot.set(ItemStack.EMPTY);
-                        player.getInventory().add(stack);
-                    }
-                }
-            }
-        }
-    }
-
-    @SubscribeEvent
-    public static void onPlayerDeath(LivingDeathEvent event) {
-        if (event.getEntity() instanceof Player player) {
-            if (player.isCreative())
-                return;
-                
-            for (int i = 0; i < player.getInventory().getContainerSize(); i++) {
-                ItemStack stack = player.getInventory().getItem(i);
-                if (isRestrictedItem(stack))
-                    player.getInventory().setItem(i, ItemStack.EMPTY);
-            }
-        }
-    }
-
-    @SubscribeEvent
-    public static void onPlayerClone(PlayerEvent.Clone event) {
-        if (!event.isWasDeath()) return;
-
-        Player original = event.getOriginal();
-        Player player = event.getPlayer();
-
-        for (int i = 0; i < original.getInventory().getContainerSize(); i++) {
-            ItemStack stack = original.getInventory().getItem(i);
-            if (isRestrictedItem(stack))
-                player.getInventory().setItem(i, stack.copy());
-        }
-    }
-
-    private static boolean isRestrictedItem(ItemStack stack) {
-        return stack.getItem() == EthernalKronuzModItems.TERRA_BLADE_SETUP.get() ||
-               stack.getItem() == EthernalKronuzModItems.BLADE_OF_THE_VOID_SETUP.get() ||
-               stack.getItem() == EthernalKronuzModItems.MURASAMA.get() ||
-               stack.getItem() == EthernalKronuzModItems.RL_ROXO_ARMOUR_HELMET.get() ||
-               stack.getItem() == EthernalKronuzModItems.RL_ROXO_ARMOUR_CHESTPLATE.get() ||
-               stack.getItem() == EthernalKronuzModItems.RL_ROXO_ARMOUR_LEGGINGS.get() ||
-               stack.getItem() == EthernalKronuzModItems.RL_ROXO_ARMOUR_BOOTS.get() ||
-               stack.getItem() == EthernalKronuzModItems.RL_VERMELHO_ARMOR_HELMET.get() ||
-               stack.getItem() == EthernalKronuzModItems.RL_VERMELHO_ARMOR_CHESTPLATE.get() ||
-               stack.getItem() == EthernalKronuzModItems.RL_VERMELHO_ARMOR_LEGGINGS.get() ||
-               stack.getItem() == EthernalKronuzModItems.RL_VERMELHO_ARMOR_BOOTS.get() ||
-               stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_HELMET.get() ||
-               stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_CHESTPLATE.get() ||
-               stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_LEGGINGS.get() ||
-               stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_BOOTS.get() ||
-               stack.getItem() == EthernalKronuzModItems.JOTUNHEIM.get();
-    }
+	private static boolean isRestrictedItem(ItemStack stack) {
+		return stack.getItem() == EthernalKronuzModItems.TERRA_BLADE_SETUP.get() || stack.getItem() == EthernalKronuzModItems.BLADE_OF_THE_VOID_SETUP.get() || stack.getItem() == EthernalKronuzModItems.MURASAMA.get()
+				|| stack.getItem() == EthernalKronuzModItems.RL_ROXO_ARMOUR_HELMET.get() || stack.getItem() == EthernalKronuzModItems.RL_ROXO_ARMOUR_CHESTPLATE.get() || stack.getItem() == EthernalKronuzModItems.RL_ROXO_ARMOUR_LEGGINGS.get()
+				|| stack.getItem() == EthernalKronuzModItems.RL_ROXO_ARMOUR_BOOTS.get() || stack.getItem() == EthernalKronuzModItems.RL_VERMELHO_ARMOR_HELMET.get() || stack.getItem() == EthernalKronuzModItems.RL_VERMELHO_ARMOR_CHESTPLATE.get()
+				|| stack.getItem() == EthernalKronuzModItems.RL_VERMELHO_ARMOR_LEGGINGS.get() || stack.getItem() == EthernalKronuzModItems.RL_VERMELHO_ARMOR_BOOTS.get() || stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_HELMET.get()
+				|| stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_CHESTPLATE.get() || stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_LEGGINGS.get() || stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_BOOTS.get()
+				|| stack.getItem() == EthernalKronuzModItems.BIFROST_KEY.get();
+	}
 }

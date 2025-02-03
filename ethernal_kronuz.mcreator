@@ -1448,9 +1448,9 @@
       "registry_name": "aesir_portal_block",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/block/AesirPortalBlockBlock.java",
           "src/main/resources/assets/ethernal_kronuz/blockstates/aesir_portal_block.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/aesir_portal_block.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/AesirPortalBlockBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/aesir_portal_block.json"
         ]
       },
@@ -10538,7 +10538,7 @@
       "type": "procedure",
       "sortid": 594,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "give_rl_stuff_after_respawn",
       "metadata": {
         "files": [
@@ -10551,7 +10551,7 @@
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs"
+      "path": "~/Factions/Radiant Lords"
     },
     {
       "name": "BifrostKey",
