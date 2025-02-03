@@ -1,5 +1,7 @@
 package net.mcreator.ethernalkronuz.procedures;
 
+import top.theillusivec4.curios.api.CuriosApi;
+
 import net.minecraftforge.server.ServerLifecycleHooks;
 import net.minecraftforge.items.ItemHandlerHelper;
 
@@ -21,6 +23,10 @@ public class RiseRadiantLordRoxoAfterTheRiseConfirmationProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		if (entity instanceof Player player) {
+			ItemStack bifrostKey = new ItemStack(EthernalKronuzModItems.BIFROST_KEY.get());
+			equipBifrostKeyInCuriosSlot(player, bifrostKey);
+		}
 		if (entity instanceof Player _player)
 			_player.closeContainer();
 		{
@@ -57,11 +63,6 @@ public class RiseRadiantLordRoxoAfterTheRiseConfirmationProcedure {
 		entity.setCustomName(new TextComponent("\u00A75Gargantuan"));
 		if (entity instanceof Player _player) {
 			ItemStack _setstack = new ItemStack(EthernalKronuzModItems.BLADE_OF_THE_VOID_SETUP.get());
-			_setstack.setCount(1);
-			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-		}
-		if (entity instanceof Player _player) {
-			ItemStack _setstack = new ItemStack(EthernalKronuzModItems.JOTUNHEIM.get());
 			_setstack.setCount(1);
 			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 		}
@@ -109,4 +110,18 @@ public class RiseRadiantLordRoxoAfterTheRiseConfirmationProcedure {
 			}
 		}
 	}
-}
+
+	private static void equipBifrostKeyInCuriosSlot(Player player, ItemStack itemStack) {
+		CuriosApi.getCuriosHelper().getCuriosHandler(player).ifPresent(curiosHandler -> {
+			curiosHandler.getCurios().forEach((identifier, stackHandler) -> {
+				for (int slot = 0; slot < stackHandler.getSlots(); slot++) {
+					ItemStack currentStack = stackHandler.getStacks().getStackInSlot(slot);
+					if (currentStack.isEmpty()) {
+						stackHandler.getStacks().setStackInSlot(slot, itemStack);
+						return;
+					}
+				}
+			});
+		});
+	}
+}
