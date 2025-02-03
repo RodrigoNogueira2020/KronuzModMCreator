@@ -3849,10 +3849,10 @@
       "registry_name": "chiseled_heaven_slate",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/block/ChiseledHeavenSlateBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/chiseled_heaven_slate.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_slate.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/chiseled_heaven_slate.json"
+          "src/main/java/net/mcreator/ethernalkronuz/block/ChiseledHeavenSlateBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/chiseled_heaven_slate.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/chiseled_heaven_slate.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenSlate/ChiseledHeavenSlate"
@@ -3866,11 +3866,11 @@
       "registry_name": "heaven_slate",
       "metadata": {
         "files": [
+          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_slate.json",
           "src/main/java/net/mcreator/ethernalkronuz/world/features/ores/HeavenSlateFeature.java",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_slate.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/HeavenSlateBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_slate.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_slate.json"
+          "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_slate.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_slate.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenSlate/Heaven Slate"
@@ -3884,10 +3884,10 @@
       "registry_name": "cobbled_heaven_slate",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/block/CobbledHeavenSlateBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/cobbled_heaven_slate.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_slate.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/cobbled_heaven_slate.json"
+          "src/main/java/net/mcreator/ethernalkronuz/block/CobbledHeavenSlateBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/cobbled_heaven_slate.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/cobbled_heaven_slate.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenSlate/Cobbled Heaven Slate"
@@ -3901,10 +3901,10 @@
       "registry_name": "cracked_heaven_slate_bricks",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_slate_bricks.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/cracked_heaven_slate_bricks.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/CrackedHeavenSlateBricksBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/cracked_heaven_slate_bricks.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/cracked_heaven_slate_bricks.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/cracked_heaven_slate_bricks.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_slate_bricks.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenSlate/Cracked Heaven Slate Bricks"
@@ -3918,10 +3918,10 @@
       "registry_name": "bricks_heaven_slate",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/blockstates/bricks_heaven_slate.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/bricks_heaven_slate.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/BricksHeavenSlateBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/bricks_heaven_slate.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/bricks_heaven_slate.json"
+          "src/main/resources/assets/ethernal_kronuz/blockstates/bricks_heaven_slate.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenSlate/Bricks Heaven Slate"
@@ -3935,8 +3935,8 @@
       "registry_name": "tiles_heaven_slate",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/blockstates/tiles_heaven_slate.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/tiles_heaven_slate.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/tiles_heaven_slate.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/tiles_heaven_slate.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/TilesHeavenSlateBlock.java"
         ]
@@ -3952,10 +3952,10 @@
       "registry_name": "chiseled_heaven_stone",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/block/ChiseledHeavenStoneBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_stone.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/chiseled_heaven_stone.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/chiseled_heaven_stone.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/chiseled_heaven_stone.json"
+          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_stone.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/ChiseledHeavenStoneBlock.java"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenStone/Chiseled Heaven Stone"
@@ -3987,9 +3987,9 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/ethernalkronuz/block/CrackedHeavenStoneBricksBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/cracked_heaven_stone_bricks.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_stone_bricks.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/cracked_heaven_stone_bricks.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/cracked_heaven_stone_bricks.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/cracked_heaven_stone_bricks.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenStone/Cracked Heaven Stone Bricks"
@@ -4003,10 +4003,10 @@
       "registry_name": "heaven_stone",
       "metadata": {
         "files": [
+          "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_stone.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/HeavenStoneBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_stone.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_stone.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_stone.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenStone/Heaven Stone"
@@ -4020,10 +4020,10 @@
       "registry_name": "heaven_stone_bricks",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_bricks.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_stone_bricks.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/heaven_stone_bricks.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/HeavenStoneBricksBlock.java"
+          "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_stone_bricks.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/HeavenStoneBricksBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_bricks.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenStone/Bricks Heaven Stone"
@@ -4198,11 +4198,11 @@
       "registry_name": "cobbled_heaven_slate_slab",
       "metadata": {
         "files": [
+          "src/main/resources/assets/ethernal_kronuz/models/item/cobbled_heaven_slate_slab.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_slate_slab_full.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/cobbled_heaven_slate_slab.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_slate_slab_top.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/CobbledHeavenSlateSlabBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/cobbled_heaven_slate_slab.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/cobbled_heaven_slate_slab.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_slate_slab_full.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_slate_slab.json"
         ]
       },
@@ -4217,12 +4217,12 @@
       "registry_name": "cobbled_heaven_stone_slabs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_stone_slabs_top.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_stone_slabs_full.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/cobbled_heaven_stone_slabs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_stone_slabs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/cobbled_heaven_stone_slabs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_stone_slabs_top.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/CobbledHeavenStoneSlabsBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/cobbled_heaven_stone_slabs.json"
+          "src/main/resources/assets/ethernal_kronuz/blockstates/cobbled_heaven_stone_slabs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_stone_slabs_full.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenStone/Cobbled Heaven Stone"
@@ -4236,11 +4236,11 @@
       "registry_name": "bricks_heaven_slate_slabs",
       "metadata": {
         "files": [
+          "src/main/resources/assets/ethernal_kronuz/models/item/bricks_heaven_slate_slabs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/bricks_heaven_slate_slabs_full.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/bricks_heaven_slate_slabs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/bricks_heaven_slate_slabs_top.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/BricksHeavenSlateSlabsBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/bricks_heaven_slate_slabs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/bricks_heaven_slate_slabs_full.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/bricks_heaven_slate_slabs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/bricks_heaven_slate_slabs.json"
         ]
       },
@@ -4255,12 +4255,12 @@
       "registry_name": "heaven_slate_slabs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_slate_slabs.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/heaven_slate_slabs.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/HeavenSlateSlabsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/heaven_slate_slabs_full.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_slate_slabs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/heaven_slate_slabs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_slate_slabs_top.json"
+          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_slate_slabs_top.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/HeavenSlateSlabsBlock.java"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenSlate/Heaven Slate"
@@ -4274,12 +4274,12 @@
       "registry_name": "tiles_heaven_slate_slab",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/block/TilesHeavenSlateSlabBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/block/tiles_heaven_slate_slab.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/tiles_heaven_slate_slab.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/tiles_heaven_slate_slab.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/tiles_heaven_slate_slab_top.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/tiles_heaven_slate_slab_full.json"
+          "src/main/java/net/mcreator/ethernalkronuz/block/TilesHeavenSlateSlabBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/tiles_heaven_slate_slab.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/tiles_heaven_slate_slab_full.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/tiles_heaven_slate_slab.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/tiles_heaven_slate_slab_top.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenSlate/Tiles Heaven Slate"
@@ -4293,11 +4293,11 @@
       "registry_name": "heaven_stone_bricks_slabs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_stone_bricks_slabs.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/HeavenStoneBricksSlabsBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_stone_bricks_slabs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_bricks_slabs_top.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/HeavenStoneBricksSlabsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_bricks_slabs_full.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_stone_bricks_slabs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_stone_bricks_slabs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_bricks_slabs.json"
         ]
       },
@@ -4312,12 +4312,12 @@
       "registry_name": "heaven_stone_slabs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_stone_slabs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_slabs_top.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/HeavenStoneSlabsBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_slabs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_slabs_full.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_stone_slabs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_slabs_full.json"
+          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_slabs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_stone_slabs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_slabs_top.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenStone/Heaven Stone"
@@ -4331,12 +4331,12 @@
       "registry_name": "cobbled_heaven_slate_stairs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_slate_stairs_outer.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/cobbled_heaven_slate_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_slate_stairs.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/CobbledHeavenSlateStairsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/blockstates/cobbled_heaven_slate_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_slate_stairs_inner.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/CobbledHeavenSlateStairsBlock.java"
+          "src/main/resources/assets/ethernal_kronuz/models/item/cobbled_heaven_slate_stairs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_slate_stairs_outer.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenSlate/Cobbled Heaven Slate"
@@ -4353,9 +4353,9 @@
           "src/main/java/net/mcreator/ethernalkronuz/block/CobbledHeavenStoneStairsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_stone_stairs_outer.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/cobbled_heaven_stone_stairs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_stone_stairs_inner.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/cobbled_heaven_stone_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_stone_stairs.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/cobbled_heaven_stone_stairs.json"
+          "src/main/resources/assets/ethernal_kronuz/models/block/cobbled_heaven_stone_stairs_inner.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenStone/Cobbled Heaven Stone"
@@ -4369,11 +4369,11 @@
       "registry_name": "bricks_heaven_slate_stairs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/bricks_heaven_slate_stairs_inner.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/BricksHeavenSlateStairsBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/block/bricks_heaven_slate_stairs_inner.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/bricks_heaven_slate_stairs_outer.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/bricks_heaven_slate_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/bricks_heaven_slate_stairs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/bricks_heaven_slate_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/bricks_heaven_slate_stairs.json"
         ]
       },
@@ -4389,11 +4389,11 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/ethernal_kronuz/models/block/heaven_slate_stairs_inner.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_slate_stairs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_slate_stairs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_slate_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/heaven_slate_stairs_outer.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/HeavenSlateStairsBlock.java"
+          "src/main/java/net/mcreator/ethernalkronuz/block/HeavenSlateStairsBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_slate_stairs.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_slate_stairs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_slate_stairs.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenSlate/Heaven Slate"
@@ -4407,11 +4407,11 @@
       "registry_name": "tiles_heaven_slate_stairs",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/block/TilesHeavenSlateStairsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/tiles_heaven_slate_stairs_outer.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/tiles_heaven_slate_stairs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/tiles_heaven_slate_stairs_inner.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/tiles_heaven_slate_stairs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/tiles_heaven_slate_stairs_inner.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/TilesHeavenSlateStairsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/tiles_heaven_slate_stairs.json"
         ]
       },
@@ -4426,12 +4426,12 @@
       "registry_name": "heaven_stone_bricks_stairs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_bricks_stairs_outer.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_stone_bricks_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_bricks_stairs_inner.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_bricks_stairs.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_stone_bricks_stairs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_bricks_stairs_outer.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/HeavenStoneBricksStairsBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_stone_bricks_stairs.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_stone_bricks_stairs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_bricks_stairs.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenStone/Bricks Heaven Stone"
@@ -4446,10 +4446,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_stairs_inner.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_stone_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/heaven_stone_stairs.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/HeavenStoneStairsBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/heaven_stone_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/heaven_stone_stairs_outer.json"
         ]
       },
@@ -7659,11 +7659,11 @@
       "registry_name": "cracked_heaven_slate_bricks_slabs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_slate_bricks_slabs_full.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_slate_bricks_slabs_top.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/CrackedHeavenSlateBricksSlabsBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/cracked_heaven_slate_bricks_slabs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_slate_bricks_slabs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/cracked_heaven_slate_bricks_slabs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_slate_bricks_slabs_full.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/CrackedHeavenSlateBricksSlabsBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_slate_bricks_slabs_top.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/cracked_heaven_slate_bricks_slabs.json"
         ]
       },
@@ -7678,11 +7678,11 @@
       "registry_name": "cracked_heaven_slate_bricks_stairs",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/block/CrackedHeavenSlateBricksStairsBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/cracked_heaven_slate_bricks_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_slate_bricks_stairs_inner.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/cracked_heaven_slate_bricks_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_slate_bricks_stairs_outer.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/cracked_heaven_slate_bricks_stairs.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/CrackedHeavenSlateBricksStairsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_slate_bricks_stairs.json"
         ]
       },
@@ -7753,11 +7753,11 @@
       "registry_name": "chiseled_heaven_slate_stairs",
       "metadata": {
         "files": [
+          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_slate_stairs_inner.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/ChiseledHeavenSlateStairsBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_slate_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/chiseled_heaven_slate_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_slate_stairs_outer.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_slate_stairs_inner.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_slate_stairs.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/ChiseledHeavenSlateStairsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/blockstates/chiseled_heaven_slate_stairs.json"
         ]
       },
@@ -7772,12 +7772,12 @@
       "registry_name": "chiseled_heaven_slate_slabs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_slate_slabs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/chiseled_heaven_slate_slabs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_slate_slabs_top.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_slate_slabs_full.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/chiseled_heaven_slate_slabs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_slate_slabs_top.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/ChiseledHeavenSlateSlabsBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/chiseled_heaven_slate_slabs.json"
+          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_slate_slabs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/chiseled_heaven_slate_slabs.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenSlate/ChiseledHeavenSlate"
@@ -7847,12 +7847,12 @@
       "registry_name": "cracked_heaven_stone_bricks_stairs",
       "metadata": {
         "files": [
+          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_stone_bricks_stairs_outer.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_stone_bricks_stairs.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/cracked_heaven_stone_bricks_stairs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_stone_bricks_stairs_inner.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/CrackedHeavenStoneBricksStairsBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_stone_bricks_stairs_inner.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/cracked_heaven_stone_bricks_stairs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_stone_bricks_stairs_outer.json"
+          "src/main/resources/assets/ethernal_kronuz/blockstates/cracked_heaven_stone_bricks_stairs.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenStone/Cracked Heaven Stone Bricks"
@@ -7866,12 +7866,12 @@
       "registry_name": "cracked_heaven_stone_bricks_slabs",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/block/CrackedHeavenStoneBricksSlabsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/blockstates/cracked_heaven_stone_bricks_slabs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/cracked_heaven_stone_bricks_slabs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_stone_bricks_slabs_top.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_stone_bricks_slabs_full.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_stone_bricks_slabs.json"
+          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_stone_bricks_slabs_top.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/CrackedHeavenStoneBricksSlabsBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/block/cracked_heaven_stone_bricks_slabs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/cracked_heaven_stone_bricks_slabs.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenStone/Cracked Heaven Stone Bricks"
@@ -7941,12 +7941,12 @@
       "registry_name": "chiseled_heaven_stone_stairs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/chiseled_heaven_stone_stairs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_stone_stairs_inner.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_stone_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/chiseled_heaven_stone_stairs.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_stone_stairs_outer.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_stone_stairs.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/ChiseledHeavenStoneStairsBlock.java"
+          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_stone_stairs_inner.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/ChiseledHeavenStoneStairsBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/chiseled_heaven_stone_stairs.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Blocos/HeavenStone/Chiseled Heaven Stone"
@@ -7960,11 +7960,11 @@
       "registry_name": "chiseled_heaven_stone_slabs",
       "metadata": {
         "files": [
+          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_stone_slabs.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_stone_slabs_full.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/ChiseledHeavenStoneSlabsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/blockstates/chiseled_heaven_stone_slabs.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/chiseled_heaven_stone_slabs.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_stone_slabs_full.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_stone_slabs.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/ChiseledHeavenStoneSlabsBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/chiseled_heaven_stone_slabs_top.json"
         ]
       },
