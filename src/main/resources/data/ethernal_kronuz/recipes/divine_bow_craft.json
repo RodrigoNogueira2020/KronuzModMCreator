@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 12",
+    "345",
+    " 78"
+  ],
+  "key": {
+    "1": {
+      "item": "ethernal_kronuz:ygg_wood_stick"
+    },
+    "2": {
+      "item": "ethernal_kronuz:alloy_setup"
+    },
+    "3": {
+      "item": "ethernal_kronuz:ygg_wood_stick"
+    },
+    "4": {
+      "item": "ethernal_kronuz:divine_crystal_shard"
+    },
+    "5": {
+      "item": "ethernal_kronuz:alloy_setup"
+    },
+    "7": {
+      "item": "ethernal_kronuz:ygg_wood_stick"
+    },
+    "8": {
+      "item": "ethernal_kronuz:alloy_setup"
+    }
+  },
+  "result": {
+    "item": "ethernal_kronuz:divine_bow",
+    "count": 1
+  }
+}

@@ -10613,6 +10613,20 @@
         ]
       },
       "path": "~/Dimensions/Jotunheim"
+    },
+    {
+      "name": "DivineBowCraft",
+      "type": "recipe",
+      "sortid": 601,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "divine_bow_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ethernal_kronuz/recipes/divine_bow_craft.json"
+        ]
+      },
+      "path": "~/Misc"
     }
   ],
   "variable_elements": [
@@ -11992,7 +12006,7 @@
     "currentGenerator": "forge-1.18.2",
     "credits": "Sta na fita",
     "modElementsPackage": "net.mcreator.ethernalkronuz",
-    "lockBaseModFiles": true
+    "lockBaseModFiles": false
   },
   "mcreatorVersion": 202300110610
 }
