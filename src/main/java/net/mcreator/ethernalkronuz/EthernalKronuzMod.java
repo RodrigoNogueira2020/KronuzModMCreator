@@ -22,6 +22,7 @@ import net.minecraftforge.network.simple.SimpleChannel;
 import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.IEventBus;
 
@@ -57,15 +58,18 @@ public class EthernalKronuzMod {
 		EthernalKronuzModBlocks.REGISTRY.register(bus);
 		EthernalKronuzModItems.REGISTRY.register(bus);
 		EthernalKronuzModEntities.REGISTRY.register(bus);
-
 		EthernalKronuzModFeatures.REGISTRY.register(bus);
 		EthernalKronuzModFluids.REGISTRY.register(bus);
 		EthernalKronuzModEnchantments.REGISTRY.register(bus);
 		EthernalKronuzModMobEffects.REGISTRY.register(bus);
-
 		EthernalKronuzModBiomes.REGISTRY.register(bus);
 		EthernalKronuzModParticleTypes.REGISTRY.register(bus);
 		GeckoLib.initialize();
+		bus.addListener(this::clientSetup);
+	}
+
+	private void clientSetup(final FMLClientSetupEvent event) {
+		ModItemProperties.addCustomItemProperties();
 	}
 
 	public static <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, FriendlyByteBuf> encoder, Function<FriendlyByteBuf, T> decoder, BiConsumer<T, Supplier<NetworkEvent.Context>> messageConsumer) {
