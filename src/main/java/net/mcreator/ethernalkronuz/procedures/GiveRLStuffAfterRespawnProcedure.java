@@ -49,12 +49,10 @@ public class GiveRLStuffAfterRespawnProcedure {
 			if (entity instanceof LivingEntity _entity)
 				_entity.addEffect(new MobEffectInstance(EthernalKronuzModMobEffects.RADIANT_LORD_EFFECT.get(), (int) Double.POSITIVE_INFINITY, 0, (true), (false)));
 		}
-
 		if (entity instanceof Player player) {
 			ItemStack bifrostKey = new ItemStack(EthernalKronuzModItems.BIFROST_KEY.get());
 			equipBifrostKeyInCuriosSlot(player, bifrostKey);
 		}
-
 		if ((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordRoxoPlayer) {
 			entity.setCustomName(new TextComponent("Gargantuan"));
 			if (entity instanceof Player _player) {
@@ -202,4 +200,4 @@ public class GiveRLStuffAfterRespawnProcedure {
 			});
 		});
 	}
-}
+}
