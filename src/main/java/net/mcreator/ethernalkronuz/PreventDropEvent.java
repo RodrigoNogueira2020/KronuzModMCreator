@@ -66,7 +66,6 @@ public class PreventDropEvent {
 		if (event.getEntity() instanceof Player player) {
 			if (player.isCreative())
 				return;
-
 			for (int i = 0; i < player.getInventory().getContainerSize(); i++) {
 				ItemStack stack = player.getInventory().getItem(i);
 				if (isRestrictedItem(stack))
@@ -96,4 +95,4 @@ public class PreventDropEvent {
 				|| stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_CHESTPLATE.get() || stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_LEGGINGS.get() || stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_BOOTS.get()
 				|| stack.getItem() == EthernalKronuzModItems.BIFROST_KEY.get();
 	}
-}
+}
