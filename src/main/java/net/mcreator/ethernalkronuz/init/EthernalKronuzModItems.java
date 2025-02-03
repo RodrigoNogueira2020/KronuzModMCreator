@@ -252,6 +252,7 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> YGG_WOOD_STICK = REGISTRY.register("ygg_wood_stick", () -> new YggWoodStickItem());
 	public static final RegistryObject<Item> BIFROST_KEY = REGISTRY.register("bifrost_key", () -> new BifrostKeyItem());
 	public static final RegistryObject<Item> DIVINE_BOW = REGISTRY.register("divine_bow", () -> new DivineBowItem());
+	public static final RegistryObject<Item> JOTUNHEIM_FRAME = block(EthernalKronuzModBlocks.JOTUNHEIM_FRAME, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
