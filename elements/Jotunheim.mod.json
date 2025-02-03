@@ -25,7 +25,7 @@
       "name": "NonRLTakeDamage"
     },
     "portalFrame": {
-      "value": "Blocks.STONE#3"
+      "value": "CUSTOM:JotunheimFrame"
     },
     "portalParticles": {
       "value": "CUSTOM:Jotunheimportalparticles"

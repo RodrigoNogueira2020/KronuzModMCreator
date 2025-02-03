@@ -1448,9 +1448,9 @@
       "registry_name": "aesir_portal_block",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/block/AesirPortalBlockBlock.java",
           "src/main/resources/assets/ethernal_kronuz/blockstates/aesir_portal_block.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/aesir_portal_block.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/AesirPortalBlockBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/aesir_portal_block.json"
         ]
       },
@@ -2880,17 +2880,17 @@
       "metadata": {
         "ep": true,
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/block/JotunheimPortalBlock.java",
-          "src/main/java/net/mcreator/ethernalkronuz/world/dimension/JotunheimDimension.java",
-          "src/main/java/net/mcreator/ethernalkronuz/item/JotunheimItem.java",
-          "src/main/java/net/mcreator/ethernalkronuz/world/teleporter/JotunheimTeleporter.java",
           "src/main/java/net/mcreator/ethernalkronuz/world/teleporter/JotunheimPortalShape.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/jotunheim.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/jotunheim_portal_ns.json",
+          "src/main/java/net/mcreator/ethernalkronuz/world/dimension/JotunheimDimension.java",
           "src/main/resources/data/ethernal_kronuz/dimension_type/jotunheim.json",
+          "src/main/java/net/mcreator/ethernalkronuz/world/teleporter/JotunheimTeleporter.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/jotunheim.json",
           "src/main/resources/data/ethernal_kronuz/dimension/jotunheim.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/JotunheimPortalBlock.java",
+          "src/main/java/net/mcreator/ethernalkronuz/item/JotunheimItem.java",
           "src/main/resources/assets/ethernal_kronuz/blockstates/jotunheim_portal.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/jotunheim_portal_ew.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/jotunheim_portal_ns.json"
+          "src/main/resources/assets/ethernal_kronuz/models/block/jotunheim_portal_ew.json"
         ]
       },
       "path": "~/Dimensions/Jotunheim"
@@ -10538,7 +10538,7 @@
       "type": "procedure",
       "sortid": 594,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "give_rl_stuff_after_respawn",
       "metadata": {
         "files": [
@@ -10551,7 +10551,7 @@
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords"
+      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs"
     },
     {
       "name": "BifrostKey",

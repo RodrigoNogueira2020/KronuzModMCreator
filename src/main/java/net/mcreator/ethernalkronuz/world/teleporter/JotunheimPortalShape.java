@@ -7,7 +7,6 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.NetherPortalBlock;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.util.Mth;
@@ -29,7 +28,7 @@ public class JotunheimPortalShape {
 	private static final int MIN_HEIGHT = 3;
 	public static final int MAX_HEIGHT = 21;
 	private static final BlockBehaviour.StatePredicate FRAME = (p_77720_, p_77721_, p_77722_) -> {
-		return p_77720_.getBlock() == Blocks.DIORITE;
+		return p_77720_.getBlock() == EthernalKronuzModBlocks.JOTUNHEIM_FRAME.get();
 	};
 	private final LevelAccessor level;
 	private final Direction.Axis axis;
