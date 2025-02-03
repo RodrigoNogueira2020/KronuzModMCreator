@@ -24,11 +24,11 @@
       "registry_name": "mosso_crystal_ore",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/mosso_crystal_ore.json",
+          "src/main/java/net/mcreator/ethernalkronuz/world/features/ores/MossoCrystalOreFeature.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_ore.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/mosso_crystal_ore.json",
-          "src/main/java/net/mcreator/ethernalkronuz/world/features/ores/MossoCrystalOreFeature.java",
-          "src/main/java/net/mcreator/ethernalkronuz/block/MossoCrystalOreBlock.java"
+          "src/main/java/net/mcreator/ethernalkronuz/block/MossoCrystalOreBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/block/mosso_crystal_ore.json"
         ]
       },
       "path": "~/Ores/Mosso Crystal"
@@ -87,8 +87,8 @@
       "registry_name": "mosso_crystal_pickaxe",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/item/MossoCrystalPickaxeItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_pickaxe.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_pickaxe.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/MossoCrystalPickaxeItem.java"
         ]
       },
       "path": "~/Ores/Mosso Crystal/Ferramentas/Pickaxe"
@@ -10627,6 +10627,21 @@
         ]
       },
       "path": "~/Misc"
+    },
+    {
+      "name": "MultiTool",
+      "type": "tool",
+      "sortid": 602,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "multi_tool",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/item/MultiToolItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/multi_tool.json"
+        ]
+      },
+      "path": "~/Misc"
     }
   ],
   "variable_elements": [
@@ -11046,9 +11061,10 @@
       "key.ethernal_kronuz.griffin_up": "Griffin Upwards",
       "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
+      "item.ethernal_kronuz.multi_tool": "Multi Tool",
       "advancements.bt_achievement.descr": "Juntar-se aos Big Testa",
-      "advancements.rl_verde_achievement.title": "Carregado até ao limite",
       "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
+      "advancements.rl_verde_achievement.title": "Carregado até ao limite",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_atention": "Atention",
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
@@ -11069,8 +11085,8 @@
       "item.ethernal_kronuz.rl_roxo_armour_helmet": "Gargantuan\u0027s Armour Helmet",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_armor_before_the_rise": "armor before The Rise",
       "item.ethernal_kronuz.terra_blade_setup": "§aTerra Blade",
-      "block.ethernal_kronuz.ygg_planks": "Ygg Wood Planks",
       "advancements.enters_asgard.descr": "Enter in Asgard",
+      "block.ethernal_kronuz.ygg_planks": "Ygg Wood Planks",
       "item.ethernal_kronuz.necromancer.desc": "Necromancer",
       "subtitles.nokkia_hammer_spawn": "",
       "gamerule.give_rl_verde_game_rule.description": "Ascender um jogador",
@@ -11975,6 +11991,10 @@
       },
       {
         "name": "Misc",
+        "children": []
+      },
+      {
+        "name": "Tags",
         "children": []
       }
     ]

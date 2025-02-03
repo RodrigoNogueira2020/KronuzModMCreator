@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "ethernal_kronuz:items/blade_of_the_void"
+  }
+}
