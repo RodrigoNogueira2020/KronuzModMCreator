@@ -10558,7 +10558,7 @@
       "type": "curiosbauble",
       "sortid": 595,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "bifrost_key",
       "metadata": {
         "files": [
@@ -11992,7 +11992,7 @@
     "currentGenerator": "forge-1.18.2",
     "credits": "Sta na fita",
     "modElementsPackage": "net.mcreator.ethernalkronuz",
-    "lockBaseModFiles": false
+    "lockBaseModFiles": true
   },
   "mcreatorVersion": 202300110610
 }
