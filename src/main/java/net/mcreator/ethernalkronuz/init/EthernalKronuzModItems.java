@@ -30,6 +30,7 @@ import net.mcreator.ethernalkronuz.item.PretoDaAmadoraItem;
 import net.mcreator.ethernalkronuz.item.NokkiaHammerItem;
 import net.mcreator.ethernalkronuz.item.NecromancerItem;
 import net.mcreator.ethernalkronuz.item.MurasamaItem;
+import net.mcreator.ethernalkronuz.item.MultiToolItem;
 import net.mcreator.ethernalkronuz.item.MossoCrystalSwordItem;
 import net.mcreator.ethernalkronuz.item.MossoCrystalShovelItem;
 import net.mcreator.ethernalkronuz.item.MossoCrystalPickaxeItem;
@@ -57,6 +58,7 @@ import net.mcreator.ethernalkronuz.item.FactionBookItem;
 import net.mcreator.ethernalkronuz.item.ErikaItem;
 import net.mcreator.ethernalkronuz.item.DivineWaterItem;
 import net.mcreator.ethernalkronuz.item.DivineCrystalShardItem;
+import net.mcreator.ethernalkronuz.item.DivineBowItem;
 import net.mcreator.ethernalkronuz.item.DivineArrowItem;
 import net.mcreator.ethernalkronuz.item.DeepSeaBootItem;
 import net.mcreator.ethernalkronuz.item.CristalizedDivineWaterItem;
@@ -250,6 +252,9 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> GRIFFIN_FEATHER = REGISTRY.register("griffin_feather", () -> new GriffinFeatherItem());
 	public static final RegistryObject<Item> YGG_WOOD_STICK = REGISTRY.register("ygg_wood_stick", () -> new YggWoodStickItem());
 	public static final RegistryObject<Item> BIFROST_KEY = REGISTRY.register("bifrost_key", () -> new BifrostKeyItem());
+	public static final RegistryObject<Item> DIVINE_BOW = REGISTRY.register("divine_bow", () -> new DivineBowItem());
+	public static final RegistryObject<Item> JOTUNHEIM_FRAME = block(EthernalKronuzModBlocks.JOTUNHEIM_FRAME, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
+	public static final RegistryObject<Item> MULTI_TOOL = REGISTRY.register("multi_tool", () -> new MultiToolItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

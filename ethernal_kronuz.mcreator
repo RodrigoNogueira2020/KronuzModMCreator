@@ -24,11 +24,11 @@
       "registry_name": "mosso_crystal_ore",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/mosso_crystal_ore.json",
+          "src/main/java/net/mcreator/ethernalkronuz/world/features/ores/MossoCrystalOreFeature.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_ore.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/mosso_crystal_ore.json",
-          "src/main/java/net/mcreator/ethernalkronuz/world/features/ores/MossoCrystalOreFeature.java",
-          "src/main/java/net/mcreator/ethernalkronuz/block/MossoCrystalOreBlock.java"
+          "src/main/java/net/mcreator/ethernalkronuz/block/MossoCrystalOreBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/block/mosso_crystal_ore.json"
         ]
       },
       "path": "~/Ores/Mosso Crystal"
@@ -87,8 +87,8 @@
       "registry_name": "mosso_crystal_pickaxe",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/item/MossoCrystalPickaxeItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_pickaxe.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_pickaxe.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/MossoCrystalPickaxeItem.java"
         ]
       },
       "path": "~/Ores/Mosso Crystal/Ferramentas/Pickaxe"
@@ -1448,9 +1448,9 @@
       "registry_name": "aesir_portal_block",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/block/AesirPortalBlockBlock.java",
           "src/main/resources/assets/ethernal_kronuz/blockstates/aesir_portal_block.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/aesir_portal_block.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/AesirPortalBlockBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/block/aesir_portal_block.json"
         ]
       },
@@ -2880,17 +2880,17 @@
       "metadata": {
         "ep": true,
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/block/JotunheimPortalBlock.java",
-          "src/main/java/net/mcreator/ethernalkronuz/world/dimension/JotunheimDimension.java",
-          "src/main/java/net/mcreator/ethernalkronuz/item/JotunheimItem.java",
-          "src/main/java/net/mcreator/ethernalkronuz/world/teleporter/JotunheimTeleporter.java",
           "src/main/java/net/mcreator/ethernalkronuz/world/teleporter/JotunheimPortalShape.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/jotunheim.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/jotunheim_portal_ns.json",
+          "src/main/java/net/mcreator/ethernalkronuz/world/dimension/JotunheimDimension.java",
           "src/main/resources/data/ethernal_kronuz/dimension_type/jotunheim.json",
+          "src/main/java/net/mcreator/ethernalkronuz/world/teleporter/JotunheimTeleporter.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/jotunheim.json",
           "src/main/resources/data/ethernal_kronuz/dimension/jotunheim.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/JotunheimPortalBlock.java",
+          "src/main/java/net/mcreator/ethernalkronuz/item/JotunheimItem.java",
           "src/main/resources/assets/ethernal_kronuz/blockstates/jotunheim_portal.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/jotunheim_portal_ew.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/jotunheim_portal_ns.json"
+          "src/main/resources/assets/ethernal_kronuz/models/block/jotunheim_portal_ew.json"
         ]
       },
       "path": "~/Dimensions/Jotunheim"
@@ -10296,6 +10296,7 @@
     {
       "name": "PreventDropEvent",
       "type": "code",
+      "sortid": 598,
       "compiles": true,
       "locked_code": true,
       "registry_name": "prevent_drop_event",
@@ -10379,7 +10380,7 @@
       "type": "procedure",
       "sortid": 589,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "rise_radiant_lord_roxo_after_the_rise_confirmation",
       "metadata": {
         "files": [
@@ -10415,7 +10416,7 @@
       "type": "procedure",
       "sortid": 590,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "rise_radiant_lord_vermelho_after_the_rise_confirmation",
       "metadata": {
         "files": [
@@ -10451,7 +10452,7 @@
       "type": "procedure",
       "sortid": 591,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "rise_radiant_lord_verde_after_the_rise_confirmation",
       "metadata": {
         "files": [
@@ -10537,7 +10538,7 @@
       "type": "procedure",
       "sortid": 594,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "give_rl_stuff_after_respawn",
       "metadata": {
         "files": [
@@ -10550,14 +10551,14 @@
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords"
+      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs"
     },
     {
       "name": "BifrostKey",
       "type": "curiosbauble",
       "sortid": 595,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "bifrost_key",
       "metadata": {
         "files": [
@@ -10566,6 +10567,81 @@
         ]
       },
       "path": "~/Dimensions/Jotunheim"
+    },
+    {
+      "name": "ModItemProperties",
+      "type": "code",
+      "sortid": 597,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "mod_item_properties",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/ModItemProperties.java"
+        ]
+      }
+    },
+    {
+      "name": "DivineBow",
+      "type": "rangeditem",
+      "sortid": 599,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "divine_bow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/entity/DivineBowEntity.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/divine_bow.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/DivineBowItem.java"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "JotunheimFrame",
+      "type": "block",
+      "sortid": 600,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jotunheim_frame",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ethernal_kronuz/models/block/jotunheim_frame.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/jotunheim_frame.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/JotunheimFrameBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/jotunheim_frame.json"
+        ]
+      },
+      "path": "~/Dimensions/Jotunheim"
+    },
+    {
+      "name": "DivineBowCraft",
+      "type": "recipe",
+      "sortid": 601,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "divine_bow_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ethernal_kronuz/recipes/divine_bow_craft.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "MultiTool",
+      "type": "tool",
+      "sortid": 602,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "multi_tool",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/item/MultiToolItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/multi_tool.json"
+        ]
+      },
+      "path": "~/Misc"
     }
   ],
   "variable_elements": [
@@ -10985,6 +11061,7 @@
       "key.ethernal_kronuz.griffin_up": "Griffin Upwards",
       "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
+      "item.ethernal_kronuz.multi_tool": "Multi Tool",
       "advancements.bt_achievement.descr": "Juntar-se aos Big Testa",
       "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "advancements.rl_verde_achievement.title": "Carregado até ao limite",
@@ -11123,6 +11200,7 @@
       "effect.ethernal_kronuz.hell_empowerment": "Hell Empowerment",
       "item.ethernal_kronuz.airport_steel_hoe_head": "Head of Airport Steel Hoe",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_double_health": "- Double Health",
+      "block.ethernal_kronuz.jotunheim_frame": "Jotunheim Frame",
       "item.ethernal_kronuz.mosso_crystal_sword": "Mosso Crystal Sword",
       "item.ethernal_kronuz.aiport_steel_shovel": "Aiport Steel Shovel",
       "item.ethernal_kronuz.necromancer": "Adolfus Hitlurus",
@@ -11243,6 +11321,7 @@
       "item.ethernal_kronuz.nokkia_hammer": "§4Nokkia Hammer",
       "block.ethernal_kronuz.bricks_heaven_slate_stairs": "Heaven Slate Bricks Stairs",
       "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_atention": "Atention",
+      "item.ethernal_kronuz.divine_bow": "Divine Bow",
       "block.ethernal_kronuz.chiseled_heaven_stone_slabs": "Chiseled Heaven Stone Slabs",
       "block.ethernal_kronuz.aiport_steel_block": "Block of Airport Steel",
       "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_remove_your_current": "Remove your current",
@@ -11912,6 +11991,10 @@
       },
       {
         "name": "Misc",
+        "children": []
+      },
+      {
+        "name": "Tags",
         "children": []
       }
     ]

@@ -39,6 +39,7 @@ import net.mcreator.ethernalkronuz.block.MurasamaBlockBlock;
 import net.mcreator.ethernalkronuz.block.MossoCrystalOreBlock;
 import net.mcreator.ethernalkronuz.block.MossoCrystalBlockBlock;
 import net.mcreator.ethernalkronuz.block.JotunheimPortalBlock;
+import net.mcreator.ethernalkronuz.block.JotunheimFrameBlock;
 import net.mcreator.ethernalkronuz.block.InvisibleBlockBlessingBlock;
 import net.mcreator.ethernalkronuz.block.HeavenStoneStairsBlock;
 import net.mcreator.ethernalkronuz.block.HeavenStoneSlabsBlock;
@@ -168,6 +169,7 @@ public class EthernalKronuzModBlocks {
 	public static final RegistryObject<Block> FLOWERPOTYGGSAPLING = REGISTRY.register("flowerpotyggsapling", () -> new FlowerpotyggsaplingBlock());
 	public static final RegistryObject<Block> FLOWERPOTGLOWPLANT = REGISTRY.register("flowerpotglowplant", () -> new FlowerpotglowplantBlock());
 	public static final RegistryObject<Block> FLOWERPOTDOUBLEGLOWPLANT = REGISTRY.register("flowerpotdoubleglowplant", () -> new FlowerpotdoubleglowplantBlock());
+	public static final RegistryObject<Block> JOTUNHEIM_FRAME = REGISTRY.register("jotunheim_frame", () -> new JotunheimFrameBlock());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {
