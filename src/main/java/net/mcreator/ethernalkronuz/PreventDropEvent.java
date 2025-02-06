@@ -1,5 +1,8 @@
 package net.mcreator.ethernalkronuz;
 
+import top.theillusivec4.curios.api.type.inventory.ICurioStacksHandler;
+import top.theillusivec4.curios.api.CuriosApi;
+
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
@@ -14,6 +17,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModItems;
+
+import java.util.Optional;
 
 @Mod.EventBusSubscriber
 public class PreventDropEvent {
@@ -52,9 +57,12 @@ public class PreventDropEvent {
 			if (slot.hasItem()) {
 				ItemStack stack = slot.getItem();
 				if (isRestrictedItem(stack)) {
-					if (!player.getInventory().contains(stack)) {
+					if (!player.getInventory().contains(stack) && !isItemInCurios(player, stack)) {
 						slot.set(ItemStack.EMPTY);
-						player.getInventory().add(stack);
+						CuriosApi.getCuriosHelper().getCuriosHandler(player).ifPresent(handler -> {
+							Optional<ICurioStacksHandler> curiosSlot = handler.getStacksHandler("curios");
+							curiosSlot.ifPresent(stacksHandler -> stacksHandler.getStacks().setStackInSlot(0, stack));
+						});
 					}
 				}
 			}
@@ -66,7 +74,6 @@ public class PreventDropEvent {
 		if (event.getEntity() instanceof Player player) {
 			if (player.isCreative())
 				return;
-
 			for (int i = 0; i < player.getInventory().getContainerSize(); i++) {
 				ItemStack stack = player.getInventory().getItem(i);
 				if (isRestrictedItem(stack))
@@ -96,4 +103,8 @@ public class PreventDropEvent {
 				|| stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_CHESTPLATE.get() || stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_LEGGINGS.get() || stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_BOOTS.get()
 				|| stack.getItem() == EthernalKronuzModItems.BIFROST_KEY.get();
 	}
-}
+
+	private static boolean isItemInCurios(Player player, ItemStack stack) {
+		return CuriosApi.getCuriosHelper().findFirstCurio(player, stack.getItem()).isPresent();
+	}
+}
