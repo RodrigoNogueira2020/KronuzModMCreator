@@ -79,6 +79,15 @@ public class PreventDropEvent {
 				if (isRestrictedItem(stack))
 					player.getInventory().setItem(i, ItemStack.EMPTY);
 			}
+			CuriosApi.getCuriosHelper().getCuriosHandler(player).ifPresent(handler -> {
+				handler.getCurios().forEach((slot, stacksHandler) -> {
+					for (int i = 0; i < stacksHandler.getStacks().getSlots(); i++) {
+						ItemStack stack = stacksHandler.getStacks().getStackInSlot(i);
+						if (isRestrictedItem(stack))
+							stacksHandler.getStacks().setStackInSlot(i, ItemStack.EMPTY);
+					}
+				});
+			});
 		}
 	}
 
@@ -107,4 +116,4 @@ public class PreventDropEvent {
 	private static boolean isItemInCurios(Player player, ItemStack stack) {
 		return CuriosApi.getCuriosHelper().findFirstCurio(player, stack.getItem()).isPresent();
 	}
-}
+}
