@@ -10538,7 +10538,7 @@
       "type": "procedure",
       "sortid": 594,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "give_rl_stuff_after_respawn",
       "metadata": {
         "files": [
