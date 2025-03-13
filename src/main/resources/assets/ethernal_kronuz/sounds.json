@@ -250,5 +250,50 @@
         "stream": false
       }
     ]
+  },
+  "morre-no-inferno": {
+    "category": "voice",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:morre-no-inferno-vc",
+        "stream": false
+      }
+    ]
+  },
+  "vc-irritado": {
+    "category": "voice",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:vc-irritado",
+        "stream": false
+      }
+    ]
+  },
+  "choro-vc": {
+    "category": "voice",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:choro-vc",
+        "stream": false
+      }
+    ]
+  },
+  "literalmente-vc": {
+    "category": "voice",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:literalmente-vc",
+        "stream": false
+      }
+    ]
+  },
+  "mano-vc": {
+    "category": "voice",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:mano-vc",
+        "stream": false
+      }
+    ]
   }
 }

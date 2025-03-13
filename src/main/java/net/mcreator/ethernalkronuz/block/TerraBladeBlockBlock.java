@@ -57,7 +57,7 @@ public class TerraBladeBlockBlock extends Block {
 
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return box(6.8, 0, 2.6, 8.5, 16, 16);
+		return box(7, 0, 1.5, 9, 17.5, 13.5);
 	}
 
 	@Override

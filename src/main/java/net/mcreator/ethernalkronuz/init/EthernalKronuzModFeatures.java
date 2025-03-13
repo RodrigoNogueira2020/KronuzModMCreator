@@ -85,6 +85,8 @@ public class EthernalKronuzModFeatures {
 			new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION, DoubleGlowPlantFeature.GENERATE_BIOMES, DoubleGlowPlantFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> TALL_GLOW_GRASS = register("tall_glow_grass", TallGlowGrassFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION, TallGlowGrassFeature.GENERATE_BIOMES, TallGlowGrassFeature::placedFeature));
+	public static final RegistryObject<Feature<?>> NORMAL_GLOW_GRASS = register("normal_glow_grass", NormalGlowGrassFeature::feature,
+			new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION, NormalGlowGrassFeature.GENERATE_BIOMES, NormalGlowGrassFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> AESIR_PORTAL_STRUCTURE = register("aesir_portal_structure", AesirPortalStructureFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.RAW_GENERATION, AesirPortalStructureFeature.GENERATE_BIOMES, AesirPortalStructureFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> BICH = register("bich", BichFeature::feature, new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, BichFeature.GENERATE_BIOMES, BichFeature::placedFeature));
@@ -140,8 +142,6 @@ public class EthernalKronuzModFeatures {
 			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, DivinecrystalspikegiantFeature.GENERATE_BIOMES, DivinecrystalspikegiantFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> YGGDRASILGIANTSTRUCTVOIDS = register("yggdrasilgiantstructvoids", YggdrasilgiantstructvoidsFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, YggdrasilgiantstructvoidsFeature.GENERATE_BIOMES, YggdrasilgiantstructvoidsFeature::placedFeature));
-	public static final RegistryObject<Feature<?>> NORMAL_GLOW_GRASS = register("normal_glow_grass", NormalGlowGrassFeature::feature,
-			new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION, NormalGlowGrassFeature.GENERATE_BIOMES, NormalGlowGrassFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> ENDRUINSLARGE = register("endruinslarge", EndruinslargeFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, EndruinslargeFeature.GENERATE_BIOMES, EndruinslargeFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> ENDRUINSMEDIUM = register("endruinsmedium", EndruinsmediumFeature::feature,

@@ -57,7 +57,7 @@ public class BOTVBlockBlock extends Block {
 
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return box(6, 0, 0, 9.1, 32, 11.5);
+		return Shapes.or(box(7, 0, 1, 9, 32, 16), box(7, 28, -2, 9, 31, 1), box(7, 27, -5, 9, 30, -2), box(7, 25, -8, 9, 28, -5), box(7, 24, -8, 9, 25, -7));
 	}
 
 	@Override

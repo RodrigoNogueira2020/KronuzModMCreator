@@ -31,7 +31,7 @@ public class EthernalKronuzModEntityRenderers {
 		event.registerEntityRenderer(EthernalKronuzModEntities.NULL_ENTITY.get(), NullEntityRenderer::new);
 		event.registerEntityRenderer(EthernalKronuzModEntities.BLESSING.get(), BlessingRenderer::new);
 		event.registerEntityRenderer(EthernalKronuzModEntities.GRIFFIN_ANIMATED.get(), GriffinAnimatedRenderer::new);
-		event.registerEntityRenderer(EthernalKronuzModEntities.TERRA_BLADE_PROJECTILE.get(), TerraBladeProjectileRenderer::new);
 		event.registerEntityRenderer(EthernalKronuzModEntities.DIVINE_BOW.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(EthernalKronuzModEntities.TERRA_BLADE_PROJECTILE.get(), TerraBladeProjectileRenderer::new);
 	}
 }

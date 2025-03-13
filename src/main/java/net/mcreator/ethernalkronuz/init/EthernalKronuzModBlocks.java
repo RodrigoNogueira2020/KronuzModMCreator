@@ -103,6 +103,7 @@ public class EthernalKronuzModBlocks {
 	public static final RegistryObject<Block> NOKKIA_HAMMER_BLOCK = REGISTRY.register("nokkia_hammer_block", () -> new NokkiaHammerBlockBlock());
 	public static final RegistryObject<Block> BOTV_BLOCK = REGISTRY.register("botv_block", () -> new BOTVBlockBlock());
 	public static final RegistryObject<Block> MURASAMA_BLOCK = REGISTRY.register("murasama_block", () -> new MurasamaBlockBlock());
+	public static final RegistryObject<Block> TERRA_BLADE_BLOCK = REGISTRY.register("terra_blade_block", () -> new TerraBladeBlockBlock());
 	public static final RegistryObject<Block> AESIR_PORTAL_BLOCK = REGISTRY.register("aesir_portal_block", () -> new AesirPortalBlockBlock());
 	public static final RegistryObject<Block> JOTUNHEIM_PORTAL = REGISTRY.register("jotunheim_portal", () -> new JotunheimPortalBlock());
 	public static final RegistryObject<Block> CHISELED_HEAVEN_SLATE = REGISTRY.register("chiseled_heaven_slate", () -> new ChiseledHeavenSlateBlock());
@@ -161,8 +162,6 @@ public class EthernalKronuzModBlocks {
 	public static final RegistryObject<Block> YGG_PRESURE_PLATE = REGISTRY.register("ygg_presure_plate", () -> new YggPresurePlateBlock());
 	public static final RegistryObject<Block> YGG_BUTTON = REGISTRY.register("ygg_button", () -> new YggButtonBlock());
 	public static final RegistryObject<Block> CRISTALIZED_DIVINE_WATER = REGISTRY.register("cristalized_divine_water", () -> new CristalizedDivineWaterBlock());
-	public static final RegistryObject<Block> TERRA_BLADE_BLOCK = REGISTRY.register("terra_blade_block", () -> new TerraBladeBlockBlock());
-	public static final RegistryObject<Block> INVISIBLE_BLOCK_BLESSING = REGISTRY.register("invisible_block_blessing", () -> new InvisibleBlockBlessingBlock());
 	public static final RegistryObject<Block> NORMAL_GLOW_GRASS = REGISTRY.register("normal_glow_grass", () -> new NormalGlowGrassBlock());
 	public static final RegistryObject<Block> CRYSTALIZED_DIVINE_WATER = REGISTRY.register("crystalized_divine_water", () -> new CrystalizedDivineWaterBlock());
 	public static final RegistryObject<Block> FLOWERPOTBIOLUMINESCENTLILY = REGISTRY.register("flowerpotbioluminescentlily", () -> new FlowerpotbioluminescentlilyBlock());
@@ -170,6 +169,7 @@ public class EthernalKronuzModBlocks {
 	public static final RegistryObject<Block> FLOWERPOTGLOWPLANT = REGISTRY.register("flowerpotglowplant", () -> new FlowerpotglowplantBlock());
 	public static final RegistryObject<Block> FLOWERPOTDOUBLEGLOWPLANT = REGISTRY.register("flowerpotdoubleglowplant", () -> new FlowerpotdoubleglowplantBlock());
 	public static final RegistryObject<Block> JOTUNHEIM_FRAME = REGISTRY.register("jotunheim_frame", () -> new JotunheimFrameBlock());
+	public static final RegistryObject<Block> INVISIBLE_BLOCK_BLESSING = REGISTRY.register("invisible_block_blessing", () -> new InvisibleBlockBlessingBlock());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {
@@ -178,6 +178,7 @@ public class EthernalKronuzModBlocks {
 			NokkiaHammerBlockBlock.registerRenderLayer();
 			BOTVBlockBlock.registerRenderLayer();
 			MurasamaBlockBlock.registerRenderLayer();
+			TerraBladeBlockBlock.registerRenderLayer();
 			JotunheimPortalBlock.registerRenderLayer();
 			CobbledHeavenSlateSlabBlock.registerRenderLayer();
 			CobbledHeavenStoneSlabsBlock.registerRenderLayer();
@@ -208,13 +209,12 @@ public class EthernalKronuzModBlocks {
 			YggGateBlock.registerRenderLayer();
 			YggPresurePlateBlock.registerRenderLayer();
 			YggButtonBlock.registerRenderLayer();
-			TerraBladeBlockBlock.registerRenderLayer();
-			InvisibleBlockBlessingBlock.registerRenderLayer();
 			NormalGlowGrassBlock.registerRenderLayer();
 			FlowerpotbioluminescentlilyBlock.registerRenderLayer();
 			FlowerpotyggsaplingBlock.registerRenderLayer();
 			FlowerpotglowplantBlock.registerRenderLayer();
 			FlowerpotdoubleglowplantBlock.registerRenderLayer();
+			InvisibleBlockBlessingBlock.registerRenderLayer();
 		}
 	}
 }

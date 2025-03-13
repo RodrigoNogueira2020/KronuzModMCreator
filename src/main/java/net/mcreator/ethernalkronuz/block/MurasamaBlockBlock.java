@@ -57,7 +57,7 @@ public class MurasamaBlockBlock extends Block {
 
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return box(7, 0, 1.5, 9.2, 24.1, 14);
+		return box(8, 0, 0, 9, 24, 16);
 	}
 
 	@Override

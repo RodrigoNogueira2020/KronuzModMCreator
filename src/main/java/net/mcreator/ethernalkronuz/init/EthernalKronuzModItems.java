@@ -139,6 +139,7 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> NOKKIA_HAMMER_BLOCK = block(EthernalKronuzModBlocks.NOKKIA_HAMMER_BLOCK, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
 	public static final RegistryObject<Item> BOTV_BLOCK = block(EthernalKronuzModBlocks.BOTV_BLOCK, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
 	public static final RegistryObject<Item> MURASAMA_BLOCK = block(EthernalKronuzModBlocks.MURASAMA_BLOCK, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
+	public static final RegistryObject<Item> TERRA_BLADE_BLOCK = block(EthernalKronuzModBlocks.TERRA_BLADE_BLOCK, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
 	public static final RegistryObject<Item> CABUFLAMANAU = REGISTRY.register("cabuflamanau", () -> new CabuflamanauItem());
 	public static final RegistryObject<Item> VASCO = REGISTRY.register("vasco", () -> new VASCOItem());
 	public static final RegistryObject<Item> NECROMANCER = REGISTRY.register("necromancer", () -> new NecromancerItem());
@@ -225,10 +226,8 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> BACKPACK = REGISTRY.register("backpack", () -> new BackpackItem());
 	public static final RegistryObject<Item> FACTION_BOOK = REGISTRY.register("faction_book", () -> new FactionBookItem());
 	public static final RegistryObject<Item> THE_ENDING_EYE = REGISTRY.register("the_ending_eye", () -> new TheEndingEyeItem());
+	public static final RegistryObject<Item> DEEP_SEA_BOOT = REGISTRY.register("deep_sea_boot", () -> new DeepSeaBootItem());
 	public static final RegistryObject<Item> CRISTALIZED_DIVINE_WATER_BUCKET = REGISTRY.register("cristalized_divine_water_bucket", () -> new CristalizedDivineWaterItem());
-	public static final RegistryObject<Item> TERRA_BLADE_BLOCK = block(EthernalKronuzModBlocks.TERRA_BLADE_BLOCK, null);
-	public static final RegistryObject<Item> TERRA_BLADE_PROJECTILE = REGISTRY.register("terra_blade_projectile", () -> new TerraBladeProjectileItem());
-	public static final RegistryObject<Item> INVISIBLE_BLOCK_BLESSING = block(EthernalKronuzModBlocks.INVISIBLE_BLOCK_BLESSING, null);
 	public static final RegistryObject<Item> NORMAL_GLOW_GRASS = block(EthernalKronuzModBlocks.NORMAL_GLOW_GRASS, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
 	public static final RegistryObject<Item> CRYSTALIZED_DIVINE_WATER = block(EthernalKronuzModBlocks.CRYSTALIZED_DIVINE_WATER, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
 	public static final RegistryObject<Item> FLOWERPOTBIOLUMINESCENTLILY = block(EthernalKronuzModBlocks.FLOWERPOTBIOLUMINESCENTLILY, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
@@ -239,7 +238,6 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> RL_ROXO_ARMOUR_CHESTPLATE = REGISTRY.register("rl_roxo_armour_chestplate", () -> new RLRoxoArmourItem.Chestplate());
 	public static final RegistryObject<Item> RL_ROXO_ARMOUR_LEGGINGS = REGISTRY.register("rl_roxo_armour_leggings", () -> new RLRoxoArmourItem.Leggings());
 	public static final RegistryObject<Item> RL_ROXO_ARMOUR_BOOTS = REGISTRY.register("rl_roxo_armour_boots", () -> new RLRoxoArmourItem.Boots());
-	public static final RegistryObject<Item> DEEP_SEA_BOOT = REGISTRY.register("deep_sea_boot", () -> new DeepSeaBootItem());
 	public static final RegistryObject<Item> RL_VERMELHO_ARMOR_HELMET = REGISTRY.register("rl_vermelho_armor_helmet", () -> new RLVermelhoArmorItem.Helmet());
 	public static final RegistryObject<Item> RL_VERMELHO_ARMOR_CHESTPLATE = REGISTRY.register("rl_vermelho_armor_chestplate", () -> new RLVermelhoArmorItem.Chestplate());
 	public static final RegistryObject<Item> RL_VERMELHO_ARMOR_LEGGINGS = REGISTRY.register("rl_vermelho_armor_leggings", () -> new RLVermelhoArmorItem.Leggings());
@@ -248,13 +246,15 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> RL_VERDE_ARMOR_CHESTPLATE = REGISTRY.register("rl_verde_armor_chestplate", () -> new RLVerdeArmorItem.Chestplate());
 	public static final RegistryObject<Item> RL_VERDE_ARMOR_LEGGINGS = REGISTRY.register("rl_verde_armor_leggings", () -> new RLVerdeArmorItem.Leggings());
 	public static final RegistryObject<Item> RL_VERDE_ARMOR_BOOTS = REGISTRY.register("rl_verde_armor_boots", () -> new RLVerdeArmorItem.Boots());
-	public static final RegistryObject<Item> DIVINE_ARROW = REGISTRY.register("divine_arrow", () -> new DivineArrowItem());
 	public static final RegistryObject<Item> GRIFFIN_FEATHER = REGISTRY.register("griffin_feather", () -> new GriffinFeatherItem());
 	public static final RegistryObject<Item> YGG_WOOD_STICK = REGISTRY.register("ygg_wood_stick", () -> new YggWoodStickItem());
 	public static final RegistryObject<Item> BIFROST_KEY = REGISTRY.register("bifrost_key", () -> new BifrostKeyItem());
 	public static final RegistryObject<Item> DIVINE_BOW = REGISTRY.register("divine_bow", () -> new DivineBowItem());
+	public static final RegistryObject<Item> DIVINE_ARROW = REGISTRY.register("divine_arrow", () -> new DivineArrowItem());
 	public static final RegistryObject<Item> JOTUNHEIM_FRAME = block(EthernalKronuzModBlocks.JOTUNHEIM_FRAME, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
 	public static final RegistryObject<Item> MULTI_TOOL = REGISTRY.register("multi_tool", () -> new MultiToolItem());
+	public static final RegistryObject<Item> TERRA_BLADE_PROJECTILE = REGISTRY.register("terra_blade_projectile", () -> new TerraBladeProjectileItem());
+	public static final RegistryObject<Item> INVISIBLE_BLOCK_BLESSING = block(EthernalKronuzModBlocks.INVISIBLE_BLOCK_BLESSING, null);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
