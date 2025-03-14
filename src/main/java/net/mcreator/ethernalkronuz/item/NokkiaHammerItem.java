@@ -1,10 +1,6 @@
-
 package net.mcreator.ethernalkronuz.item;
 
-import net.minecraftforge.common.ToolActions;
-import net.minecraftforge.common.ToolAction;
-
-import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.TooltipFlag;
@@ -12,12 +8,16 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.tags.BlockTags;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
-import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.ChatFormatting;
 
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModTabs;
@@ -25,6 +25,10 @@ import net.mcreator.ethernalkronuz.init.EthernalKronuzModTabs;
 import java.util.List;
 
 public class NokkiaHammerItem extends PickaxeItem {
+	private static final int COOLDOWN_TICKS = 200; // 10 segundos (200 ticks)
+	private static final double RADIUS = 10.0; // Raio da habilidade
+	private static final double LAUNCH_POWER = 1.5; // Altura do lançamento (5 blocos)
+
 	public NokkiaHammerItem() {
 		super(new Tier() {
 			public int getUses() {
@@ -55,49 +59,35 @@ public class NokkiaHammerItem extends PickaxeItem {
 
 	@Override
 	public Component getName(ItemStack stack) {
-		return new TextComponent("Blade Of The Void").withStyle(ChatFormatting.DARK_RED);
-	}
-
-	@Override
-	public boolean isCorrectToolForDrops(BlockState blockstate) {
-		int tier = 9;
-		if (tier < 3 && blockstate.is(BlockTags.NEEDS_DIAMOND_TOOL))
-			return false;
-		else if (tier < 2 && blockstate.is(BlockTags.NEEDS_IRON_TOOL))
-			return false;
-		else {
-			return tier < 1 && blockstate.is(BlockTags.NEEDS_STONE_TOOL)
-					? false
-					: (blockstate.is(BlockTags.MINEABLE_WITH_AXE) || blockstate.is(BlockTags.MINEABLE_WITH_HOE) || blockstate.is(BlockTags.MINEABLE_WITH_PICKAXE) || blockstate.is(BlockTags.MINEABLE_WITH_SHOVEL));
-		}
-	}
-
-	@Override
-	public boolean canPerformAction(ItemStack stack, ToolAction toolAction) {
-		return ToolActions.DEFAULT_AXE_ACTIONS.contains(toolAction) || ToolActions.DEFAULT_HOE_ACTIONS.contains(toolAction) || ToolActions.DEFAULT_SHOVEL_ACTIONS.contains(toolAction) || ToolActions.DEFAULT_PICKAXE_ACTIONS.contains(toolAction)
-				|| ToolActions.DEFAULT_SWORD_ACTIONS.contains(toolAction);
-	}
-
-	@Override
-	public float getDestroySpeed(ItemStack itemstack, BlockState blockstate) {
-		return 10000f;
-	}
-
-	@Override
-	public boolean mineBlock(ItemStack itemstack, Level world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
-		itemstack.hurtAndBreak(1, entity, i -> i.broadcastBreakEvent(EquipmentSlot.MAINHAND));
-		return true;
-	}
-
-	@Override
-	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
-		itemstack.hurtAndBreak(2, entity, i -> i.broadcastBreakEvent(EquipmentSlot.MAINHAND));
-		return true;
+		return new TextComponent("Nokkia Hammer").withStyle(ChatFormatting.DARK_RED);
 	}
 
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(new TextComponent("World Ender"));
+		list.add(new TextComponent("§cHabilidade: §eSmash Quake").withStyle(ChatFormatting.GOLD));
+		list.add(new TextComponent("§7Levanta todas as entidades num raio de 10 blocos!").withStyle(ChatFormatting.GRAY));
+	}
+
+	@Override
+	public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
+		ItemStack itemstack = player.getItemInHand(hand);
+		if (!world.isClientSide) {
+			if (itemstack.getOrCreateTag().getLong("lastUsed") + COOLDOWN_TICKS > player.level.getGameTime())
+				return InteractionResultHolder.fail(itemstack);
+			itemstack.getOrCreateTag().putLong("lastUsed", player.level.getGameTime());
+			AABB area = player.getBoundingBox().inflate(RADIUS);
+			List<Entity> entities = world.getEntities(player, area);
+			for (Entity entity : entities) {
+				if (entity instanceof LivingEntity && entity != player) {
+					entity.setDeltaMovement(entity.getDeltaMovement().add(0, LAUNCH_POWER, 0));
+					entity.hurtMarked = true;
+				}
+			}
+			world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ANVIL_LAND, SoundSource.PLAYERS, 1.0F, 0.5F);
+			for (int i = 0; i < 30; i++)
+				world.addParticle(ParticleTypes.CLOUD, player.getX(), player.getY() + 1, player.getZ(), (Math.random() - 0.5) * 0.5, 0.5, (Math.random() - 0.5) * 0.5);
+		}
+		return InteractionResultHolder.success(itemstack);
 	}
 }
