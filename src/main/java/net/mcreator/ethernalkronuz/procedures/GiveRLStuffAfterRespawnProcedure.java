@@ -65,36 +65,32 @@ public class GiveRLStuffAfterRespawnProcedure {
 				if (_entity instanceof Player _player) {
 					_player.getInventory().armor.set(3, new ItemStack(EthernalKronuzModItems.RL_ROXO_ARMOUR_HELMET.get()));
 					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
+				} else if (_entity instanceof LivingEntity _living)
 					_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EthernalKronuzModItems.RL_ROXO_ARMOUR_HELMET.get()));
-				}
 			}
 			{
 				Entity _entity = entity;
 				if (_entity instanceof Player _player) {
 					_player.getInventory().armor.set(2, new ItemStack(EthernalKronuzModItems.RL_ROXO_ARMOUR_CHESTPLATE.get()));
 					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
+				} else if (_entity instanceof LivingEntity _living)
 					_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(EthernalKronuzModItems.RL_ROXO_ARMOUR_CHESTPLATE.get()));
-				}
 			}
 			{
 				Entity _entity = entity;
 				if (_entity instanceof Player _player) {
 					_player.getInventory().armor.set(1, new ItemStack(EthernalKronuzModItems.RL_ROXO_ARMOUR_LEGGINGS.get()));
 					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
+				} else if (_entity instanceof LivingEntity _living)
 					_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(EthernalKronuzModItems.RL_ROXO_ARMOUR_LEGGINGS.get()));
-				}
 			}
 			{
 				Entity _entity = entity;
 				if (_entity instanceof Player _player) {
 					_player.getInventory().armor.set(0, new ItemStack(EthernalKronuzModItems.RL_ROXO_ARMOUR_BOOTS.get()));
 					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
+				} else if (_entity instanceof LivingEntity _living)
 					_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(EthernalKronuzModItems.RL_ROXO_ARMOUR_BOOTS.get()));
-				}
 			}
 		}
 		if ((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordVerdePlayer) {
@@ -109,36 +105,32 @@ public class GiveRLStuffAfterRespawnProcedure {
 				if (_entity instanceof Player _player) {
 					_player.getInventory().armor.set(3, new ItemStack(EthernalKronuzModItems.RL_VERDE_ARMOR_HELMET.get()));
 					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
+				} else if (_entity instanceof LivingEntity _living)
 					_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EthernalKronuzModItems.RL_VERDE_ARMOR_HELMET.get()));
-				}
 			}
 			{
 				Entity _entity = entity;
 				if (_entity instanceof Player _player) {
 					_player.getInventory().armor.set(2, new ItemStack(EthernalKronuzModItems.RL_VERDE_ARMOR_CHESTPLATE.get()));
 					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
+				} else if (_entity instanceof LivingEntity _living)
 					_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(EthernalKronuzModItems.RL_VERDE_ARMOR_CHESTPLATE.get()));
-				}
 			}
 			{
 				Entity _entity = entity;
 				if (_entity instanceof Player _player) {
 					_player.getInventory().armor.set(1, new ItemStack(EthernalKronuzModItems.RL_VERDE_ARMOR_LEGGINGS.get()));
 					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
+				} else if (_entity instanceof LivingEntity _living)
 					_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(EthernalKronuzModItems.RL_VERDE_ARMOR_LEGGINGS.get()));
-				}
 			}
 			{
 				Entity _entity = entity;
 				if (_entity instanceof Player _player) {
 					_player.getInventory().armor.set(0, new ItemStack(EthernalKronuzModItems.RL_VERDE_ARMOR_BOOTS.get()));
 					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
+				} else if (_entity instanceof LivingEntity _living)
 					_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(EthernalKronuzModItems.RL_VERDE_ARMOR_BOOTS.get()));
-				}
 			}
 		}
 		if ((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordVermelhoPlayer) {
@@ -153,51 +145,59 @@ public class GiveRLStuffAfterRespawnProcedure {
 				if (_entity instanceof Player _player) {
 					_player.getInventory().armor.set(3, new ItemStack(EthernalKronuzModItems.RL_VERMELHO_ARMOR_HELMET.get()));
 					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
+				} else if (_entity instanceof LivingEntity _living)
 					_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EthernalKronuzModItems.RL_VERMELHO_ARMOR_HELMET.get()));
-				}
 			}
 			{
 				Entity _entity = entity;
 				if (_entity instanceof Player _player) {
 					_player.getInventory().armor.set(2, new ItemStack(EthernalKronuzModItems.RL_VERMELHO_ARMOR_CHESTPLATE.get()));
 					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
+				} else if (_entity instanceof LivingEntity _living)
 					_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(EthernalKronuzModItems.RL_VERMELHO_ARMOR_CHESTPLATE.get()));
-				}
 			}
 			{
 				Entity _entity = entity;
 				if (_entity instanceof Player _player) {
 					_player.getInventory().armor.set(1, new ItemStack(EthernalKronuzModItems.RL_VERMELHO_ARMOR_LEGGINGS.get()));
 					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
+				} else if (_entity instanceof LivingEntity _living)
 					_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(EthernalKronuzModItems.RL_VERMELHO_ARMOR_LEGGINGS.get()));
-				}
 			}
 			{
 				Entity _entity = entity;
 				if (_entity instanceof Player _player) {
 					_player.getInventory().armor.set(0, new ItemStack(EthernalKronuzModItems.RL_VERMELHO_ARMOR_BOOTS.get()));
 					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
+				} else if (_entity instanceof LivingEntity _living)
 					_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(EthernalKronuzModItems.RL_VERMELHO_ARMOR_BOOTS.get()));
-				}
 			}
 		}
 	}
 
 	private static void equipBifrostKeyInCuriosSlot(Player player, ItemStack itemStack) {
 		CuriosApi.getCuriosHelper().getCuriosHandler(player).ifPresent(curiosHandler -> {
-			curiosHandler.getCurios().forEach((identifier, stackHandler) -> {
-				for (int slot = 0; slot < stackHandler.getSlots(); slot++) {
-					ItemStack currentStack = stackHandler.getStacks().getStackInSlot(slot);
-					if (currentStack.isEmpty()) {
-						stackHandler.getStacks().setStackInSlot(slot, itemStack);
-						return;
+			boolean alreadyHasKey = false;
+			for (var stackHandler : curiosHandler.getCurios().values()) {
+				for (int i = 0; i < stackHandler.getSlots(); i++) {
+					if (stackHandler.getStacks().getStackInSlot(i).getItem() == EthernalKronuzModItems.BIFROST_KEY.get()) {
+						alreadyHasKey = true;
+						break;
 					}
 				}
-			});
+				if (alreadyHasKey)
+					break;
+			}
+			if (!alreadyHasKey) {
+				for (var stackHandler : curiosHandler.getCurios().values()) {
+					for (int slot = 0; slot < stackHandler.getSlots(); slot++) {
+						if (stackHandler.getStacks().getStackInSlot(slot).isEmpty()) {
+							stackHandler.getStacks().setStackInSlot(slot, itemStack);
+							return;
+						}
+					}
+				}
+			}
 		});
 	}
 }

@@ -8248,7 +8248,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/command/AllowInJotunheimCommand.java"
         ]
       },
-      "path": "~/Dimensions/Jotunheim"
+      "path": "~/Dimensions/Jotunheim/AllowPlayersInJotunheim"
     },
     {
       "name": "AllowPlayerInJotunheim",
@@ -8276,7 +8276,7 @@
           }
         ]
       },
-      "path": "~/Dimensions/Jotunheim"
+      "path": "~/Dimensions/Jotunheim/AllowPlayersInJotunheim"
     },
     {
       "name": "PassRadiantLordRoxoTo",
@@ -12059,7 +12059,12 @@
           },
           {
             "name": "Jotunheim",
-            "children": []
+            "children": [
+              {
+                "name": "AllowPlayersInJotunheim",
+                "children": []
+              }
+            ]
           }
         ]
       },
