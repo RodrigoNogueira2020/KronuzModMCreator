@@ -30,7 +30,6 @@ import net.mcreator.ethernalkronuz.item.PretoDaAmadoraItem;
 import net.mcreator.ethernalkronuz.item.NokkiaHammerItem;
 import net.mcreator.ethernalkronuz.item.NecromancerItem;
 import net.mcreator.ethernalkronuz.item.MurasamaItem;
-import net.mcreator.ethernalkronuz.item.MultiToolItem;
 import net.mcreator.ethernalkronuz.item.MossoCrystalSwordItem;
 import net.mcreator.ethernalkronuz.item.MossoCrystalShovelItem;
 import net.mcreator.ethernalkronuz.item.MossoCrystalPickaxeItem;
@@ -63,7 +62,7 @@ import net.mcreator.ethernalkronuz.item.DivineArrowItem;
 import net.mcreator.ethernalkronuz.item.DeepSeaBootItem;
 import net.mcreator.ethernalkronuz.item.CristalizedDivineWaterItem;
 import net.mcreator.ethernalkronuz.item.CabuflamanauItem;
-import net.mcreator.ethernalkronuz.item.BladeOfTheVoidSetupItem;
+import net.mcreator.ethernalkronuz.item.BladeOfTheVoidItem;
 import net.mcreator.ethernalkronuz.item.BladeOfAiportSteelSwordItem;
 import net.mcreator.ethernalkronuz.item.BifrostKeyItem;
 import net.mcreator.ethernalkronuz.item.BackpackItem;
@@ -133,7 +132,6 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> AIPORT_STEEL_HOE = REGISTRY.register("aiport_steel_hoe", () -> new AiportSteelHoeItem());
 	public static final RegistryObject<Item> AIPORT_STEEL_SWORD = REGISTRY.register("aiport_steel_sword", () -> new AiportSteelSwordItem());
 	public static final RegistryObject<Item> NOKKIA_HAMMER = REGISTRY.register("nokkia_hammer", () -> new NokkiaHammerItem());
-	public static final RegistryObject<Item> BLADE_OF_THE_VOID_SETUP = REGISTRY.register("blade_of_the_void_setup", () -> new BladeOfTheVoidSetupItem());
 	public static final RegistryObject<Item> MURASAMA = REGISTRY.register("murasama", () -> new MurasamaItem());
 	public static final RegistryObject<Item> TERRA_BLADE_SETUP = REGISTRY.register("terra_blade_setup", () -> new TerraBladeSetupItem());
 	public static final RegistryObject<Item> NOKKIA_HAMMER_BLOCK = block(EthernalKronuzModBlocks.NOKKIA_HAMMER_BLOCK, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
@@ -252,9 +250,9 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> DIVINE_BOW = REGISTRY.register("divine_bow", () -> new DivineBowItem());
 	public static final RegistryObject<Item> DIVINE_ARROW = REGISTRY.register("divine_arrow", () -> new DivineArrowItem());
 	public static final RegistryObject<Item> JOTUNHEIM_FRAME = block(EthernalKronuzModBlocks.JOTUNHEIM_FRAME, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
-	public static final RegistryObject<Item> MULTI_TOOL = REGISTRY.register("multi_tool", () -> new MultiToolItem());
 	public static final RegistryObject<Item> TERRA_BLADE_PROJECTILE = REGISTRY.register("terra_blade_projectile", () -> new TerraBladeProjectileItem());
 	public static final RegistryObject<Item> INVISIBLE_BLOCK_BLESSING = block(EthernalKronuzModBlocks.INVISIBLE_BLOCK_BLESSING, null);
+	public static final RegistryObject<Item> BLADE_OF_THE_VOID = REGISTRY.register("blade_of_the_void", () -> new BladeOfTheVoidItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

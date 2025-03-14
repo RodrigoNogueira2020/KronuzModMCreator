@@ -37,18 +37,6 @@
       },
       {
         "value": "Items.NETHERITE_SWORD"
-      },
-      {
-        "value": "CUSTOM:BladeOfTheVoidSetup"
-      },
-      {
-        "value": "CUSTOM:TerraBladeSetup"
-      },
-      {
-        "value": "CUSTOM:Murasama"
-      },
-      {
-        "value": "CUSTOM:NokkiaHammer"
       }
     ],
     "excludeItems": false,

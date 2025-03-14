@@ -7,31 +7,28 @@ import net.minecraftforge.common.ToolAction;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.TieredItem;
 import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
+import net.minecraft.ChatFormatting;
 
-import net.mcreator.ethernalkronuz.procedures.BladeOfTheVoidSlashProcedure;
 import net.mcreator.ethernalkronuz.procedures.KillNonRLsProcedure;
+import net.mcreator.ethernalkronuz.procedures.BladeOfTheVoidSlashProcedure;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModTabs;
 
-import com.google.common.collect.Multimap;
-import com.google.common.collect.ImmutableMultimap;
-
-public class BladeOfTheVoidSetupItem extends TieredItem {
-	public BladeOfTheVoidSetupItem() {
+public class BladeOfTheVoidItem extends PickaxeItem {
+	public BladeOfTheVoidItem() {
 		super(new Tier() {
 			public int getUses() {
 				return 0;
@@ -56,17 +53,22 @@ public class BladeOfTheVoidSetupItem extends TieredItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.EMPTY;
 			}
-		}, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).fireResistant());
+		}, 1, 26f, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).fireResistant());
+	}
+
+	@Override
+	public Component getName(ItemStack stack) {
+		return new TextComponent("Blade Of The Void").withStyle(ChatFormatting.DARK_PURPLE);
 	}
 
 	@Override
 	public boolean isCorrectToolForDrops(BlockState blockstate) {
 		int tier = 8;
-		if (tier < 3 && blockstate.is(BlockTags.NEEDS_DIAMOND_TOOL)) {
+		if (tier < 3 && blockstate.is(BlockTags.NEEDS_DIAMOND_TOOL))
 			return false;
-		} else if (tier < 2 && blockstate.is(BlockTags.NEEDS_IRON_TOOL)) {
+		else if (tier < 2 && blockstate.is(BlockTags.NEEDS_IRON_TOOL))
 			return false;
-		} else {
+		else {
 			return tier < 1 && blockstate.is(BlockTags.NEEDS_STONE_TOOL)
 					? false
 					: (blockstate.is(BlockTags.MINEABLE_WITH_AXE) || blockstate.is(BlockTags.MINEABLE_WITH_HOE) || blockstate.is(BlockTags.MINEABLE_WITH_PICKAXE) || blockstate.is(BlockTags.MINEABLE_WITH_SHOVEL));
@@ -81,19 +83,7 @@ public class BladeOfTheVoidSetupItem extends TieredItem {
 
 	@Override
 	public float getDestroySpeed(ItemStack itemstack, BlockState blockstate) {
-		return 1000f;
-	}
-
-	@Override
-	public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(EquipmentSlot equipmentSlot) {
-		if (equipmentSlot == EquipmentSlot.MAINHAND) {
-			ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
-			builder.putAll(super.getDefaultAttributeModifiers(equipmentSlot));
-			builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Tool modifier", 999f, AttributeModifier.Operation.ADDITION));
-			builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Tool modifier", 96, AttributeModifier.Operation.ADDITION));
-			return builder.build();
-		}
-		return super.getDefaultAttributeModifiers(equipmentSlot);
+		return 30f;
 	}
 
 	@Override
@@ -120,5 +110,4 @@ public class BladeOfTheVoidSetupItem extends TieredItem {
 		BladeOfTheVoidSlashProcedure.execute(world, entity, ar.getObject());
 		return ar;
 	}
-
 }

@@ -3248,21 +3248,6 @@
       "path": "~/Dimensions/Asgard/Geracao"
     },
     {
-      "name": "BladeOfTheVoidSetup",
-      "type": "tool",
-      "sortid": 39,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "blade_of_the_void_setup",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/blade_of_the_void_setup.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/BladeOfTheVoidSetupItem.java"
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Weapons/Blade Of The Void"
-    },
-    {
       "name": "BichAdditionalGenerationCondition",
       "type": "procedure",
       "sortid": 288,
@@ -3643,7 +3628,7 @@
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords/Weapons/Blade Of The Void"
+      "path": "~/Factions/Radiant Lords/Weapons/Blade Of The Void/Block"
     },
     {
       "name": "BOTVBlock",
@@ -3660,7 +3645,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/block/BOTVBlockBlock.java"
         ]
       },
-      "path": "~/Factions/Radiant Lords/Weapons/Blade Of The Void"
+      "path": "~/Factions/Radiant Lords/Weapons/Blade Of The Void/Block"
     },
     {
       "name": "MurasamaBlockOnBlockRightClicked",
@@ -10629,21 +10614,6 @@
       "path": "~/Misc"
     },
     {
-      "name": "MultiTool",
-      "type": "tool",
-      "sortid": 147,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "multi_tool",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/item/MultiToolItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/multi_tool.json"
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
       "name": "RadiantLordEffectOnEffectActiveTick",
       "type": "procedure",
       "sortid": 578,
@@ -10742,6 +10712,21 @@
         ]
       },
       "path": "~/Mobs/DinoVasco"
+    },
+    {
+      "name": "BladeOfTheVoid",
+      "type": "tool",
+      "sortid": 583,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "blade_of_the_void",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ethernal_kronuz/models/item/blade_of_the_void.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/BladeOfTheVoidItem.java"
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/Weapons/Blade Of The Void"
     }
   ],
   "variable_elements": [
@@ -11197,14 +11182,14 @@
       "subtitles.griffin_alive": "",
       "block.ethernal_kronuz.bricks_heaven_slate_slabs": "Heaven Slate Bricks Slabs",
       "item.ethernal_kronuz.cabuflamanau": "Piruka",
+      "item.ethernal_kronuz.blade_of_the_void": "§5Blade Of The Void",
       "biome.ethernal_kronuz.sky_fields": "Sky Fields",
       "key.ethernal_kronuz.griffin_up": "Griffin Upwards",
       "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
-      "item.ethernal_kronuz.multi_tool": "Multi Tool",
       "advancements.bt_achievement.descr": "Juntar-se aos Big Testa",
-      "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "advancements.rl_verde_achievement.title": "Carregado até ao limite",
+      "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_atention": "Atention",
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
@@ -11212,7 +11197,6 @@
       "block.ethernal_kronuz.mosso_crystal_ore": "Mosso Crystal Ore",
       "item.ethernal_kronuz.ganda_moca.desc": "Ganda Moca",
       "gui.ethernal_kronuz.trade_system_gui_techno.label_technobalde": "Technobalde",
-      "item.ethernal_kronuz.blade_of_the_void_setup": "§dBlade Of The Void",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_radiant_lord": "Radiant Lord",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_remove_your_current": "Remove your current",
       "block.ethernal_kronuz.mosso_crystal_block": "Block of Mosso Crystal",
@@ -11604,6 +11588,10 @@
                     "children": [
                       {
                         "name": "Special Attack",
+                        "children": []
+                      },
+                      {
+                        "name": "Block",
                         "children": []
                       }
                     ]

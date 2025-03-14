@@ -56,7 +56,7 @@ public class RiseRadiantLordRoxoAfterTheRiseConfirmationProcedure {
 		GiveRadiantLordEffectsProcedure.execute(world, x, y, z, entity);
 		entity.setCustomName(new TextComponent("\u00A75Gargantuan"));
 		if (entity instanceof Player _player) {
-			ItemStack _setstack = new ItemStack(EthernalKronuzModItems.BLADE_OF_THE_VOID_SETUP.get());
+			ItemStack _setstack = new ItemStack(EthernalKronuzModItems.BLADE_OF_THE_VOID.get());
 			_setstack.setCount(1);
 			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 		}
