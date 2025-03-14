@@ -25,9 +25,9 @@ import net.mcreator.ethernalkronuz.init.EthernalKronuzModTabs;
 import java.util.List;
 
 public class NokkiaHammerItem extends PickaxeItem {
-	private static final int COOLDOWN_TICKS = 200; // 10 segundos (200 ticks)
-	private static final double RADIUS = 10.0; // Raio da habilidade
-	private static final double LAUNCH_POWER = 1.5; // Altura do lançamento (5 blocos)
+	private static final int COOLDOWN_TICKS = 200;
+	private static final double RADIUS = 5.0;
+	private static final double LAUNCH_POWER = 1.5;
 
 	public NokkiaHammerItem() {
 		super(new Tier() {
