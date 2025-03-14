@@ -131,7 +131,6 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> AIPORT_STEEL_SHOVEL = REGISTRY.register("aiport_steel_shovel", () -> new AiportSteelShovelItem());
 	public static final RegistryObject<Item> AIPORT_STEEL_HOE = REGISTRY.register("aiport_steel_hoe", () -> new AiportSteelHoeItem());
 	public static final RegistryObject<Item> AIPORT_STEEL_SWORD = REGISTRY.register("aiport_steel_sword", () -> new AiportSteelSwordItem());
-	public static final RegistryObject<Item> NOKKIA_HAMMER = REGISTRY.register("nokkia_hammer", () -> new NokkiaHammerItem());
 	public static final RegistryObject<Item> NOKKIA_HAMMER_BLOCK = block(EthernalKronuzModBlocks.NOKKIA_HAMMER_BLOCK, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
 	public static final RegistryObject<Item> BOTV_BLOCK = block(EthernalKronuzModBlocks.BOTV_BLOCK, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
 	public static final RegistryObject<Item> MURASAMA_BLOCK = block(EthernalKronuzModBlocks.MURASAMA_BLOCK, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
@@ -253,6 +252,7 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> BLADE_OF_THE_VOID = REGISTRY.register("blade_of_the_void", () -> new BladeOfTheVoidItem());
 	public static final RegistryObject<Item> MURASAMA = REGISTRY.register("murasama", () -> new MurasamaItem());
 	public static final RegistryObject<Item> TERRA_BLADE = REGISTRY.register("terra_blade", () -> new TerraBladeItem());
+	public static final RegistryObject<Item> NOKKIA_HAMMER = REGISTRY.register("nokkia_hammer", () -> new NokkiaHammerItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

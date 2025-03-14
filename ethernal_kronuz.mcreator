@@ -2841,21 +2841,6 @@
       "path": "~/Music Discs"
     },
     {
-      "name": "NokkiaHammer",
-      "type": "tool",
-      "sortid": 38,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "nokkia_hammer",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/item/NokkiaHammerItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/nokkia_hammer.json"
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Weapons/Nokkia Hammer"
-    },
-    {
       "name": "Jotunheim",
       "type": "dimension",
       "sortid": 60,
@@ -10727,6 +10712,21 @@
         ]
       },
       "path": "~/Factions/Radiant Lords/Weapons/Terra Blade"
+    },
+    {
+      "name": "NokkiaHammer",
+      "type": "tool",
+      "sortid": 586,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "nokkia_hammer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/item/NokkiaHammerItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/nokkia_hammer.json"
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/Weapons/Nokkia Hammer"
     }
   ],
   "variable_elements": [
@@ -11448,8 +11448,8 @@
       "advancements.ascender_advancement.title": "Basta 2 dedos de testa",
       "block.ethernal_kronuz.ygg_leaves": "Ygg Leaves",
       "block.ethernal_kronuz.flowerpotyggsapling": "Flower Pot Ygg Sapling",
-      "item.ethernal_kronuz.nokkia_hammer": "§4Nokkia Hammer",
       "block.ethernal_kronuz.bricks_heaven_slate_stairs": "Heaven Slate Bricks Stairs",
+      "item.ethernal_kronuz.nokkia_hammer": "Nokkia Hammer",
       "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_atention": "Atention",
       "item.ethernal_kronuz.divine_bow": "Divine Bow",
       "block.ethernal_kronuz.chiseled_heaven_stone_slabs": "Chiseled Heaven Stone Slabs",

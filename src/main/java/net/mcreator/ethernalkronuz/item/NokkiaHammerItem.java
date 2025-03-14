@@ -8,28 +8,23 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.TieredItem;
 import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
+import net.minecraft.ChatFormatting;
 
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModTabs;
 
 import java.util.List;
 
-import com.google.common.collect.Multimap;
-import com.google.common.collect.ImmutableMultimap;
-
-public class NokkiaHammerItem extends TieredItem {
+public class NokkiaHammerItem extends PickaxeItem {
 	public NokkiaHammerItem() {
 		super(new Tier() {
 			public int getUses() {
@@ -37,11 +32,11 @@ public class NokkiaHammerItem extends TieredItem {
 			}
 
 			public float getSpeed() {
-				return 10000f;
+				return 1000f;
 			}
 
 			public float getAttackDamageBonus() {
-				return 4999f;
+				return 4998f;
 			}
 
 			public int getLevel() {
@@ -55,17 +50,22 @@ public class NokkiaHammerItem extends TieredItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.EMPTY;
 			}
-		}, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).fireResistant());
+		}, 1, 96f, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).fireResistant());
+	}
+
+	@Override
+	public Component getName(ItemStack stack) {
+		return new TextComponent("Blade Of The Void").withStyle(ChatFormatting.DARK_RED);
 	}
 
 	@Override
 	public boolean isCorrectToolForDrops(BlockState blockstate) {
 		int tier = 9;
-		if (tier < 3 && blockstate.is(BlockTags.NEEDS_DIAMOND_TOOL)) {
+		if (tier < 3 && blockstate.is(BlockTags.NEEDS_DIAMOND_TOOL))
 			return false;
-		} else if (tier < 2 && blockstate.is(BlockTags.NEEDS_IRON_TOOL)) {
+		else if (tier < 2 && blockstate.is(BlockTags.NEEDS_IRON_TOOL))
 			return false;
-		} else {
+		else {
 			return tier < 1 && blockstate.is(BlockTags.NEEDS_STONE_TOOL)
 					? false
 					: (blockstate.is(BlockTags.MINEABLE_WITH_AXE) || blockstate.is(BlockTags.MINEABLE_WITH_HOE) || blockstate.is(BlockTags.MINEABLE_WITH_PICKAXE) || blockstate.is(BlockTags.MINEABLE_WITH_SHOVEL));
@@ -81,18 +81,6 @@ public class NokkiaHammerItem extends TieredItem {
 	@Override
 	public float getDestroySpeed(ItemStack itemstack, BlockState blockstate) {
 		return 10000f;
-	}
-
-	@Override
-	public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(EquipmentSlot equipmentSlot) {
-		if (equipmentSlot == EquipmentSlot.MAINHAND) {
-			ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
-			builder.putAll(super.getDefaultAttributeModifiers(equipmentSlot));
-			builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Tool modifier", 4999f, AttributeModifier.Operation.ADDITION));
-			builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Tool modifier", 96, AttributeModifier.Operation.ADDITION));
-			return builder.build();
-		}
-		return super.getDefaultAttributeModifiers(equipmentSlot);
 	}
 
 	@Override
