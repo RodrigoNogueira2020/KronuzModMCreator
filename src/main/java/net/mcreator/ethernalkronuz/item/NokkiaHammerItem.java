@@ -65,17 +65,16 @@ public class NokkiaHammerItem extends PickaxeItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(new TextComponent("§cHabilidade: §eSmash Quake").withStyle(ChatFormatting.GOLD));
-		list.add(new TextComponent("§7Levanta todas as entidades num raio de 10 blocos!").withStyle(ChatFormatting.GRAY));
+		list.add(new TextComponent("§cAbility: §eSmash Quake").withStyle(ChatFormatting.GOLD));
+		list.add(new TextComponent("§7Projects all entities within a 10 block radius").withStyle(ChatFormatting.GRAY));
 	}
 
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
 		ItemStack itemstack = player.getItemInHand(hand);
+		if (player.getCooldowns().isOnCooldown(itemstack.getItem()))
+			return InteractionResultHolder.fail(itemstack);
 		if (!world.isClientSide) {
-			if (itemstack.getOrCreateTag().getLong("lastUsed") + COOLDOWN_TICKS > player.level.getGameTime())
-				return InteractionResultHolder.fail(itemstack);
-			itemstack.getOrCreateTag().putLong("lastUsed", player.level.getGameTime());
 			AABB area = player.getBoundingBox().inflate(RADIUS);
 			List<Entity> entities = world.getEntities(player, area);
 			for (Entity entity : entities) {
@@ -87,6 +86,7 @@ public class NokkiaHammerItem extends PickaxeItem {
 			world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ANVIL_LAND, SoundSource.PLAYERS, 1.0F, 0.5F);
 			for (int i = 0; i < 30; i++)
 				world.addParticle(ParticleTypes.CLOUD, player.getX(), player.getY() + 1, player.getZ(), (Math.random() - 0.5) * 0.5, 0.5, (Math.random() - 0.5) * 0.5);
+			player.getCooldowns().addCooldown(itemstack.getItem(), COOLDOWN_TICKS);
 		}
 		return InteractionResultHolder.success(itemstack);
 	}
