@@ -58,7 +58,7 @@ public class RiseRadiantLordVerdeAfterTheRiseConfirmationProcedure {
 		GiveRadiantLordEffectsProcedure.execute(world, x, y, z, entity);
 		entity.setCustomName(new TextComponent("\u00A7aTitan Kaleb"));
 		if (entity instanceof Player _player) {
-			ItemStack _setstack = new ItemStack(EthernalKronuzModItems.TERRA_BLADE_SETUP.get());
+			ItemStack _setstack = new ItemStack(EthernalKronuzModItems.TERRA_BLADE.get());
 			_setstack.setCount(1);
 			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 		}

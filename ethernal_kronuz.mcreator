@@ -3739,21 +3739,6 @@
       "path": "~/Factions/Radiant Lords/Weapons/Terra Blade/Block"
     },
     {
-      "name": "TerraBladeSetup",
-      "type": "tool",
-      "sortid": 41,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "terra_blade_setup",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/terra_blade_setup.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/TerraBladeSetupItem.java"
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Weapons/Terra Blade"
-    },
-    {
       "name": "TerraBladeShoots",
       "type": "procedure",
       "sortid": 303,
@@ -10727,6 +10712,21 @@
         ]
       },
       "path": "~/Factions/Radiant Lords/Weapons/Murasama"
+    },
+    {
+      "name": "TerraBlade",
+      "type": "tool",
+      "sortid": 585,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "terra_blade",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/item/TerraBladeItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/terra_blade.json"
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/Weapons/Terra Blade"
     }
   ],
   "variable_elements": [
@@ -11208,7 +11208,6 @@
       "key.ethernal_kronuz.open_confirm_rise_gui": "Open The Rise GUI",
       "item.ethernal_kronuz.rl_roxo_armour_helmet": "Gargantuan\u0027s Armour Helmet",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_armor_before_the_rise": "armor before The Rise",
-      "item.ethernal_kronuz.terra_blade_setup": "§aTerra Blade",
       "block.ethernal_kronuz.ygg_planks": "Ygg Wood Planks",
       "advancements.enters_asgard.descr": "Enter in Asgard",
       "item.ethernal_kronuz.necromancer.desc": "Necromancer",
@@ -11458,6 +11457,7 @@
       "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_remove_your_current": "Remove your current",
       "item.ethernal_kronuz.mosso_crystal_armor_boots": "Mosso Crystal Boots",
       "curios.identifier.livro": "Livro das Fac��es",
+      "item.ethernal_kronuz.terra_blade": "Terra Blade",
       "item.ethernal_kronuz.asgard": "Asgard Portal Igniter",
       "subtitles.safira": "",
       "effect.ethernal_kronuz.asgard_empowerment": "Asgard Empowerment",

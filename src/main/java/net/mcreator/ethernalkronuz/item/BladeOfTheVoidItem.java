@@ -39,7 +39,7 @@ public class BladeOfTheVoidItem extends PickaxeItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 999f;
+				return 98f;
 			}
 
 			public int getLevel() {
@@ -53,7 +53,7 @@ public class BladeOfTheVoidItem extends PickaxeItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.EMPTY;
 			}
-		}, 1, 26f, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).fireResistant());
+		}, 1, 96f, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).fireResistant());
 	}
 
 	@Override

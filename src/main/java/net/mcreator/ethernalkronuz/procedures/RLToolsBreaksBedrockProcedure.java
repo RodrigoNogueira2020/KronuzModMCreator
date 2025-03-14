@@ -36,7 +36,7 @@ public class RLToolsBreaksBedrockProcedure {
 		if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.BEDROCK) {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == EthernalKronuzModItems.MURASAMA.get()
 					|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == EthernalKronuzModItems.NOKKIA_HAMMER.get()
-					|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == EthernalKronuzModItems.TERRA_BLADE_SETUP.get()
+					|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == EthernalKronuzModItems.TERRA_BLADE.get()
 					|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == EthernalKronuzModItems.BLADE_OF_THE_VOID.get()) {
 				world.levelEvent(2001, new BlockPos(x, y, z), Block.getId(Blocks.BEDROCK.defaultBlockState()));
 				world.destroyBlock(new BlockPos(x, y, z), false);

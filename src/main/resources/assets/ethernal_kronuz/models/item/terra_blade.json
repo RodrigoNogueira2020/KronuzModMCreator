@@ -1,0 +1,93 @@
+{
+  "loader": "forge:separate-perspective",
+  "gui_light": "front",
+  "base": {
+    "parent": "ethernal_kronuz:custom/terrablade",
+    "textures": {
+      "1": "ethernal_kronuz:blocks/terrablade"
+    },
+    "display": {
+      "thirdperson_righthand": {
+        "translation": [
+          0,
+          6.5,
+          0.75
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "thirdperson_lefthand": {
+        "translation": [
+          0,
+          6.5,
+          0.75
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "firstperson_righthand": {
+        "rotation": [
+          -23,
+          0,
+          0
+        ],
+        "translation": [
+          -0.5,
+          7.25,
+          0.75
+        ]
+      },
+      "firstperson_lefthand": {
+        "rotation": [
+          -23,
+          0,
+          0
+        ],
+        "translation": [
+          -0.5,
+          7.25,
+          0.75
+        ]
+      },
+      "ground": {
+        "translation": [
+          0,
+          7.25,
+          0
+        ],
+        "scale": [
+          1,
+          1.13,
+          1
+        ]
+      },
+      "fixed": {
+        "rotation": [
+          0,
+          -90,
+          0
+        ],
+        "translation": [
+          0,
+          -4.75,
+          0
+        ]
+      }
+    }
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "ethernal_kronuz:items/terrablade"
+      },
+      "gui_light": "front"
+    }
+  }
+}

@@ -32,7 +32,7 @@ public class KillNonRLsProcedure {
 				if (entity instanceof LivingEntity _entity)
 					_entity.hurt(new DamageSource("BODV").bypassArmor(), (float) Double.POSITIVE_INFINITY);
 			}
-			if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(EthernalKronuzModItems.TERRA_BLADE_SETUP.get())) : false) {
+			if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(EthernalKronuzModItems.TERRA_BLADE.get())) : false) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.hurt(new DamageSource("terrablade").bypassArmor(), (float) Double.POSITIVE_INFINITY);
 			}

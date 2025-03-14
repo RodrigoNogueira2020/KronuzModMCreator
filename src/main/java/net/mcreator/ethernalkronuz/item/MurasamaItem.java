@@ -16,7 +16,10 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
+import net.minecraft.ChatFormatting;
 
 import net.mcreator.ethernalkronuz.procedures.MuramasaDashAbilityProcedure;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModTabs;
@@ -33,7 +36,7 @@ public class MurasamaItem extends PickaxeItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 999f;
+				return 98f;
 			}
 
 			public int getLevel() {
@@ -47,7 +50,12 @@ public class MurasamaItem extends PickaxeItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.EMPTY;
 			}
-		}, 1, -3f, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).fireResistant());
+		}, 1, 96f, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).fireResistant());
+	}
+
+	@Override
+	public Component getName(ItemStack stack) {
+		return new TextComponent("Murasama").withStyle(ChatFormatting.RED);
 	}
 
 	@Override
