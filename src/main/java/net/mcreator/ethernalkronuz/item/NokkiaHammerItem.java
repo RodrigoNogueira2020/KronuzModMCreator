@@ -65,8 +65,8 @@ public class NokkiaHammerItem extends PickaxeItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(new TextComponent("§cAbility: §eSmash Quake").withStyle(ChatFormatting.GOLD));
-		list.add(new TextComponent("§7Projects all entities within a 10 block radius").withStyle(ChatFormatting.GRAY));
+		list.add(new TextComponent("§cSpecial Ability: §eSmash Quake").withStyle(ChatFormatting.GOLD));
+		list.add(new TextComponent("\u00A7fRight-click §7projects all entities within a 5 block radius").withStyle(ChatFormatting.GRAY));
 	}
 
 	@Override

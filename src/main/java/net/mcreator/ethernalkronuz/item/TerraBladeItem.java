@@ -7,6 +7,7 @@ import net.minecraftforge.common.ToolAction;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ItemStack;
@@ -24,6 +25,8 @@ import net.minecraft.ChatFormatting;
 
 import net.mcreator.ethernalkronuz.procedures.TerraBladeShootsProcedure;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModTabs;
+
+import java.util.List;
 
 public class TerraBladeItem extends PickaxeItem {
 	public TerraBladeItem() {
@@ -52,6 +55,13 @@ public class TerraBladeItem extends PickaxeItem {
 				return Ingredient.EMPTY;
 			}
 		}, 1, 96f, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).fireResistant());
+	}
+
+	@Override
+	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, world, list, flag);
+		list.add(new TextComponent("\u00A7cSpecial Ability: \u00A7eDash"));
+		list.add(new TextComponent("\u00A7fRight-click \u00A77to fire lethal projectiles"));
 	}
 
 	@Override

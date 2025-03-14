@@ -7,6 +7,7 @@ import net.minecraftforge.common.ToolAction;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ItemStack;
@@ -26,6 +27,8 @@ import net.minecraft.ChatFormatting;
 import net.mcreator.ethernalkronuz.procedures.KillNonRLsProcedure;
 import net.mcreator.ethernalkronuz.procedures.BladeOfTheVoidSlashProcedure;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModTabs;
+
+import java.util.List;
 
 public class BladeOfTheVoidItem extends PickaxeItem {
 	public BladeOfTheVoidItem() {
@@ -54,6 +57,13 @@ public class BladeOfTheVoidItem extends PickaxeItem {
 				return Ingredient.EMPTY;
 			}
 		}, 1, 96f, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).fireResistant());
+	}
+
+	@Override
+	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, world, list, flag);
+		list.add(new TextComponent("\u00A7cSpecial Ability: \u00A7eDeath Swing"));
+		list.add(new TextComponent("\u00A7fRight-click \u00A77deals damage in a half-moon area to entities in front of you."));
 	}
 
 	@Override
