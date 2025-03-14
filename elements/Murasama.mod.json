@@ -2,29 +2,26 @@
   "_fv": 39,
   "_type": "tool",
   "definition": {
-    "renderType": 1,
+    "renderType": 0,
     "texture": "murasama",
-    "customModelName": "murasama:default",
-    "name": "§cMurasama",
+    "customModelName": "Normal",
+    "name": "Murasama",
     "specialInfo": [],
     "creativeTab": {
       "value": "CUSTOM:CreativeTab"
     },
-    "toolType": "MultiTool",
+    "toolType": "Pickaxe",
     "harvestLevel": 8,
     "efficiency": 1000.0,
-    "attackSpeed": 100.0,
+    "attackSpeed": 1.0,
     "enchantability": 0,
-    "damageVsEntity": 1001.0,
+    "damageVsEntity": 100.0,
     "usageCount": 0,
     "blocksAffected": [],
     "hasGlow": false,
     "repairItems": [],
     "immuneToFire": true,
     "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false,
-    "onRightClickedInAir": {
-      "name": "MuramasaDashAbility"
-    }
+    "damageOnCrafting": false
   }
 }

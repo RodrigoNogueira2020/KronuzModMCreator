@@ -2611,21 +2611,6 @@
       "path": "~/Dimensions/Jotunheim"
     },
     {
-      "name": "Murasama",
-      "type": "tool",
-      "sortid": 40,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "murasama",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/item/MurasamaItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/murasama.json"
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Weapons/Murasama"
-    },
-    {
       "name": "Cabuflamanau",
       "type": "musicdisc",
       "sortid": 46,
@@ -3681,7 +3666,7 @@
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords/Weapons/Murasama"
+      "path": "~/Factions/Radiant Lords/Weapons/Murasama/Block"
     },
     {
       "name": "MurasamaBlock",
@@ -3698,7 +3683,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/block/MurasamaBlockBlock.java"
         ]
       },
-      "path": "~/Factions/Radiant Lords/Weapons/Murasama"
+      "path": "~/Factions/Radiant Lords/Weapons/Murasama/Block"
     },
     {
       "name": "TerraBladeBlockOnBlockRightClicked",
@@ -10727,6 +10712,21 @@
         ]
       },
       "path": "~/Factions/Radiant Lords/Weapons/Blade Of The Void"
+    },
+    {
+      "name": "Murasama",
+      "type": "tool",
+      "sortid": 584,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "murasama",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ethernal_kronuz/models/item/murasama.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/MurasamaItem.java"
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/Weapons/Murasama"
     }
   ],
   "variable_elements": [
@@ -11388,8 +11388,8 @@
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_or_your_armor_will_be": "or your armor will be",
       "block.ethernal_kronuz.cracked_heaven_slate_bricks_slabs": "Cracked Heaven Slate Bricks Slabs",
       "entity.ethernal_kronuz.griffin_animated": "Griffin",
-      "item.ethernal_kronuz.murasama": "§cMurasama",
       "item.ethernal_kronuz.backpack": "Backpack",
+      "item.ethernal_kronuz.murasama": "Murasama",
       "item.ethernal_kronuz.freaky": "Janela",
       "item.ethernal_kronuz.away": "João Sousa",
       "item.ethernal_kronuz.the_ending_eye": "The Ending Eye",
@@ -11610,6 +11610,10 @@
                     "children": [
                       {
                         "name": "Special Attack",
+                        "children": []
+                      },
+                      {
+                        "name": "Block",
                         "children": []
                       }
                     ]
