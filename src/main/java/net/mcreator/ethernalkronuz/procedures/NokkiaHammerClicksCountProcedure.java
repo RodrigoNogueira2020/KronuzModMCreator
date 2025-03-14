@@ -30,7 +30,7 @@ public class NokkiaHammerClicksCountProcedure {
 				if (!world.isClientSide()) {
 					MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
 					if (_mcserv != null)
-						_mcserv.getPlayerList().broadcastMessage(new TextComponent("\u00A74Nokkia Hammer foi spawnado!"), ChatType.SYSTEM, Util.NIL_UUID);
+						_mcserv.getPlayerList().broadcastMessage(new TextComponent("\u00A74Nokkia Hammer was summoned!"), ChatType.SYSTEM, Util.NIL_UUID);
 				}
 			}
 		}
