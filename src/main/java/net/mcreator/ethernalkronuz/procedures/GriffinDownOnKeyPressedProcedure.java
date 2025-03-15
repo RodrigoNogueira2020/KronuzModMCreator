@@ -8,7 +8,7 @@ public class GriffinDownOnKeyPressedProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getVehicle()) instanceof GriffinAnimatedEntity == true) {
+		if ((entity.getVehicle()) instanceof GriffinAnimatedEntity) {
 			(entity.getVehicle()).getPersistentData().putDouble("VerticalMovement", (-1));
 		}
 	}

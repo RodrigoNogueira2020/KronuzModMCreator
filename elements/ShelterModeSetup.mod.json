@@ -2,12 +2,12 @@
   "_fv": 39,
   "_type": "achievement",
   "definition": {
-    "achievementName": "Shelter Mode j�?",
+    "achievementName": "Shelter Mode já?",
     "achievementDescription": "Utilizar a tecla favorita dos noobs",
     "achievementIcon": {
       "value": "Items.TOTEM_OF_UNDYING"
     },
-    "background": "icon_inst.png",
+    "background": "Default",
     "disableDisplay": false,
     "showPopup": true,
     "announceToChat": true,

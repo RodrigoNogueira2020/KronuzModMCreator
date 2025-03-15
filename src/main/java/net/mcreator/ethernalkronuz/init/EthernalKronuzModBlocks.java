@@ -38,7 +38,6 @@ import net.mcreator.ethernalkronuz.block.NokkiaHammerBlockBlock;
 import net.mcreator.ethernalkronuz.block.MurasamaBlockBlock;
 import net.mcreator.ethernalkronuz.block.MossoCrystalOreBlock;
 import net.mcreator.ethernalkronuz.block.MossoCrystalBlockBlock;
-import net.mcreator.ethernalkronuz.block.JotunheimPortalBlock;
 import net.mcreator.ethernalkronuz.block.JotunheimFrameBlock;
 import net.mcreator.ethernalkronuz.block.InvisibleBlockBlessingBlock;
 import net.mcreator.ethernalkronuz.block.HeavenStoneStairsBlock;
@@ -105,7 +104,6 @@ public class EthernalKronuzModBlocks {
 	public static final RegistryObject<Block> MURASAMA_BLOCK = REGISTRY.register("murasama_block", () -> new MurasamaBlockBlock());
 	public static final RegistryObject<Block> TERRA_BLADE_BLOCK = REGISTRY.register("terra_blade_block", () -> new TerraBladeBlockBlock());
 	public static final RegistryObject<Block> AESIR_PORTAL_BLOCK = REGISTRY.register("aesir_portal_block", () -> new AesirPortalBlockBlock());
-	public static final RegistryObject<Block> JOTUNHEIM_PORTAL = REGISTRY.register("jotunheim_portal", () -> new JotunheimPortalBlock());
 	public static final RegistryObject<Block> CHISELED_HEAVEN_SLATE = REGISTRY.register("chiseled_heaven_slate", () -> new ChiseledHeavenSlateBlock());
 	public static final RegistryObject<Block> HEAVEN_SLATE = REGISTRY.register("heaven_slate", () -> new HeavenSlateBlock());
 	public static final RegistryObject<Block> COBBLED_HEAVEN_SLATE = REGISTRY.register("cobbled_heaven_slate", () -> new CobbledHeavenSlateBlock());
@@ -179,7 +177,6 @@ public class EthernalKronuzModBlocks {
 			BOTVBlockBlock.registerRenderLayer();
 			MurasamaBlockBlock.registerRenderLayer();
 			TerraBladeBlockBlock.registerRenderLayer();
-			JotunheimPortalBlock.registerRenderLayer();
 			CobbledHeavenSlateSlabBlock.registerRenderLayer();
 			CobbledHeavenStoneSlabsBlock.registerRenderLayer();
 			BricksHeavenSlateSlabsBlock.registerRenderLayer();

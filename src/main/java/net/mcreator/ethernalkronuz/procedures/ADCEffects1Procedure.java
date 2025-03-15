@@ -20,8 +20,8 @@ public class ADCEffects1Procedure {
 			});
 		}
 		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(EthernalKronuzModMobEffects.ANDARILHO_DA_CAVE_EFFECT.get(), 999999, 0, (true), (false)));
+			_entity.addEffect(new MobEffectInstance(EthernalKronuzModMobEffects.ANDARILHO_DA_CAVE_EFFECT.get(), (int) Double.POSITIVE_INFINITY, 0, (true), (false)));
 		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 999999, 0, (true), (false)));
+			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, (int) Double.POSITIVE_INFINITY, 0, (true), (false)));
 	}
 }

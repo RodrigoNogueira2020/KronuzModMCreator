@@ -11,7 +11,7 @@ public class NullEntityKeyBindOnKeyPressedProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).ADCPlayer == true
+		if ((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).ADCPlayer
 				&& (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).IsNullEntity == false) {
 			{
 				boolean _setval = true;
@@ -21,9 +21,9 @@ public class NullEntityKeyBindOnKeyPressedProcedure {
 				});
 			}
 			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 999999, 2, (false), (false)));
+				_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, (int) Double.POSITIVE_INFINITY, 2, (false), (false)));
 			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 999999, 2, (false), (false)));
+				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, (int) Double.POSITIVE_INFINITY, 2, (false), (false)));
 		} else if ((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).IsNullEntity == true) {
 			{
 				boolean _setval = false;

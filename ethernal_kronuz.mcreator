@@ -2841,31 +2841,6 @@
       "path": "~/Music Discs"
     },
     {
-      "name": "Jotunheim",
-      "type": "dimension",
-      "sortid": 60,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "jotunheim",
-      "metadata": {
-        "ep": true,
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/world/teleporter/JotunheimPortalShape.java",
-          "src/main/resources/assets/ethernal_kronuz/models/block/jotunheim_portal_ns.json",
-          "src/main/java/net/mcreator/ethernalkronuz/world/dimension/JotunheimDimension.java",
-          "src/main/resources/data/ethernal_kronuz/dimension_type/jotunheim.json",
-          "src/main/java/net/mcreator/ethernalkronuz/world/teleporter/JotunheimTeleporter.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/jotunheim.json",
-          "src/main/resources/data/ethernal_kronuz/dimension/jotunheim.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/JotunheimPortalBlock.java",
-          "src/main/java/net/mcreator/ethernalkronuz/item/JotunheimItem.java",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/jotunheim_portal.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/jotunheim_portal_ew.json"
-        ]
-      },
-      "path": "~/Dimensions/Jotunheim"
-    },
-    {
       "name": "Safira",
       "type": "musicdisc",
       "sortid": 49,
@@ -8248,7 +8223,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/command/AllowInJotunheimCommand.java"
         ]
       },
-      "path": "~/Dimensions/Jotunheim/AllowPlayersInJotunheim"
+      "path": "~/Dimensions/Jotunheim"
     },
     {
       "name": "AllowPlayerInJotunheim",
@@ -8276,7 +8251,7 @@
           }
         ]
       },
-      "path": "~/Dimensions/Jotunheim/AllowPlayersInJotunheim"
+      "path": "~/Dimensions/Jotunheim"
     },
     {
       "name": "PassRadiantLordRoxoTo",
@@ -10727,6 +10702,22 @@
         ]
       },
       "path": "~/Factions/Radiant Lords/Weapons/Nokkia Hammer"
+    },
+    {
+      "name": "Jotunheim",
+      "type": "dimension",
+      "sortid": 587,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jotunheim",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ethernal_kronuz/dimension/jotunheim.json",
+          "src/main/java/net/mcreator/ethernalkronuz/world/dimension/JotunheimDimension.java",
+          "src/main/resources/data/ethernal_kronuz/dimension_type/jotunheim.json"
+        ]
+      },
+      "path": "~/Dimensions/Jotunheim"
     }
   ],
   "variable_elements": [
@@ -11308,7 +11299,7 @@
       "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_special_tool": "- Special Tool",
       "gui.ethernal_kronuz.trade_system_gui_techno.button_1": "1",
       "entity.ethernal_kronuz.null_entity": "Null",
-      "advancements.shelter_mode_setup.title": "Shelter Mode j�?",
+      "advancements.shelter_mode_setup.title": "Shelter Mode já?",
       "item.ethernal_kronuz.airport_steel_shovel_head": "Part of Airport Steel Shovel",
       "block.ethernal_kronuz.heaven_stone": "Heaven Stone",
       "gui.ethernal_kronuz.trade_system_gui_techno.button_9": "9",
@@ -11413,7 +11404,7 @@
       "block.ethernal_kronuz.botv_block": "BOTV Block",
       "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_radiant_lord": "Radiant Lord",
       "item.ethernal_kronuz.rl_vermelho_armor_chestplate": "Azakana\u0027s Body Armor",
-      "item.ethernal_kronuz.jotunheim": "Bifrost Key",
+      "item.ethernal_kronuz.jotunheim": "Jotunheim Portal Igniter",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_special_display_name": "- Special Display Name",
       "item.ethernal_kronuz.rl_vermelho_armor_helmet": "Azakana\u0027s Helmet",
       "item.ethernal_kronuz.faking_ell_armor_helmet": "Faking Ell Helmet",
@@ -12059,12 +12050,7 @@
           },
           {
             "name": "Jotunheim",
-            "children": [
-              {
-                "name": "AllowPlayersInJotunheim",
-                "children": []
-              }
-            ]
+            "children": []
           }
         ]
       },

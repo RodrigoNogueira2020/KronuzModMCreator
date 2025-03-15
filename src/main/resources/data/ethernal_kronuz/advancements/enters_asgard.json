@@ -2,7 +2,7 @@
   "display": {
     "background": "minecraft:textures/block/stone.png",
     "icon": {
-      "item": "ethernal_kronuz:blade_of_the_void_setup"
+      "item": "ethernal_kronuz:deleted_mod_element"
     },
     "title": {
       "translate": "advancements.enters_asgard.title"

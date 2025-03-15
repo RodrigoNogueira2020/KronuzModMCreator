@@ -40,7 +40,6 @@ import net.mcreator.ethernalkronuz.item.MossoCrystalAxeItem;
 import net.mcreator.ethernalkronuz.item.MossoCrystalArmorItem;
 import net.mcreator.ethernalkronuz.item.MoedaDeTrocaItem;
 import net.mcreator.ethernalkronuz.item.MakeAWishItem;
-import net.mcreator.ethernalkronuz.item.JotunheimItem;
 import net.mcreator.ethernalkronuz.item.GriffinFeatherItem;
 import net.mcreator.ethernalkronuz.item.GandaMocaItem;
 import net.mcreator.ethernalkronuz.item.FreickenItem;
@@ -148,7 +147,6 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> ANGOLAE_NOSSA = REGISTRY.register("angolae_nossa", () -> new AngolaeNossaItem());
 	public static final RegistryObject<Item> FREAKY = REGISTRY.register("freaky", () -> new FreakyItem());
 	public static final RegistryObject<Item> AESIR_PORTAL_BLOCK = block(EthernalKronuzModBlocks.AESIR_PORTAL_BLOCK, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
-	public static final RegistryObject<Item> JOTUNHEIM = REGISTRY.register("jotunheim", () -> new JotunheimItem());
 	public static final RegistryObject<Item> CHISELED_HEAVEN_SLATE = block(EthernalKronuzModBlocks.CHISELED_HEAVEN_SLATE, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
 	public static final RegistryObject<Item> HEAVEN_SLATE = block(EthernalKronuzModBlocks.HEAVEN_SLATE, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
 	public static final RegistryObject<Item> COBBLED_HEAVEN_SLATE = block(EthernalKronuzModBlocks.COBBLED_HEAVEN_SLATE, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
