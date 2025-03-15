@@ -9,39 +9,35 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
+
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModBlocks;
 
 public class DivinecrystalpillarlargeAdditionalGenerationConditionProcedure {
-    public static boolean execute(LevelAccessor world, double x, double y, double z) {
-        boolean baseIsSolid = true;
-        int baseWidth = 6;
-        int baseDepth = 3;
-        int offsetX = -3;
-        int offsetZ = -3;
-
-        for (int bx = 0; bx < baseWidth; bx++) {
-            for (int bz = 0; bz < baseDepth; bz++) {
-                BlockPos checkPos = new BlockPos(x + offsetX + bx, y - 1, z + offsetZ + bz);
-                if (world.getBlockState(checkPos).getBlock() == Blocks.AIR ||
-                    world.getBlockState(checkPos).getBlock() == Blocks.VOID_AIR ||
-                    world.getBlockState(checkPos).getBlock() == Blocks.CAVE_AIR ||
-                    world.getBlockState(checkPos).getBlock() == EthernalKronuzModBlocks.CRISTALIZED_DIVINE_WATER.get()) {
-                    baseIsSolid = false;
-                    break;
-                }
-            }
-            if (!baseIsSolid) break;
-        }
-
-        if (baseIsSolid) {
-            if (world instanceof ServerLevel _serverworld) {
-                StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("ethernal_kronuz", "divine_crystal_pillar_large"));
-                if (template != null) {
-                    template.placeInWorld(_serverworld, new BlockPos(x, y, z), new BlockPos(x, y, z), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-                }
-            }
-        }
-
-        return baseIsSolid;
-    }
+	public static boolean execute(LevelAccessor world, double x, double y, double z) {
+		boolean baseIsSolid = true;
+		int baseWidth = 6;
+		int baseDepth = 3;
+		int offsetX = -3;
+		int offsetZ = -3;
+		for (int bx = 0; bx < baseWidth; bx++) {
+			for (int bz = 0; bz < baseDepth; bz++) {
+				BlockPos checkPos = new BlockPos(x + offsetX + bx, y - 1, z + offsetZ + bz);
+				if (world.getBlockState(checkPos).getBlock() == Blocks.AIR || world.getBlockState(checkPos).getBlock() == Blocks.VOID_AIR || world.getBlockState(checkPos).getBlock() == Blocks.CAVE_AIR
+						|| world.getBlockState(checkPos).getBlock() == EthernalKronuzModBlocks.CRISTALIZED_DIVINE_WATER.get()) {
+					baseIsSolid = false;
+					break;
+				}
+			}
+			if (!baseIsSolid)
+				break;
+		}
+		if (baseIsSolid) {
+			if (world instanceof ServerLevel _serverworld) {
+				StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("ethernal_kronuz", "divine_crystal_pillar_large"));
+				if (template != null)
+					template.placeInWorld(_serverworld, new BlockPos(x, y, z), new BlockPos(x, y, z), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+			}
+		}
+		return baseIsSolid;
+	}
 }
