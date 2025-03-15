@@ -14,6 +14,8 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 
 import net.mcreator.ethernalkronuz.world.inventory.TradeSystemGUITechnoMenu;
 import net.mcreator.ethernalkronuz.world.inventory.SuperBackPackGUIMenu;
+import net.mcreator.ethernalkronuz.world.inventory.GoToJotunheimRLGUIMenu;
+import net.mcreator.ethernalkronuz.world.inventory.GetOutJotunheimRLGUIMenu;
 import net.mcreator.ethernalkronuz.world.inventory.GUIFactionBookMenu;
 import net.mcreator.ethernalkronuz.world.inventory.ConfirmRiseGUIVermelhoMenu;
 import net.mcreator.ethernalkronuz.world.inventory.ConfirmRiseGUIVerdeMenu;
@@ -31,6 +33,8 @@ public class EthernalKronuzModMenus {
 	public static final MenuType<ConfirmRiseGUIRoxoMenu> CONFIRM_RISE_GUI_ROXO = register("confirm_rise_gui_roxo", (id, inv, extraData) -> new ConfirmRiseGUIRoxoMenu(id, inv, extraData));
 	public static final MenuType<ConfirmRiseGUIVermelhoMenu> CONFIRM_RISE_GUI_VERMELHO = register("confirm_rise_gui_vermelho", (id, inv, extraData) -> new ConfirmRiseGUIVermelhoMenu(id, inv, extraData));
 	public static final MenuType<ConfirmRiseGUIVerdeMenu> CONFIRM_RISE_GUI_VERDE = register("confirm_rise_gui_verde", (id, inv, extraData) -> new ConfirmRiseGUIVerdeMenu(id, inv, extraData));
+	public static final MenuType<GoToJotunheimRLGUIMenu> GO_TO_JOTUNHEIM_RLGUI = register("go_to_jotunheim_rlgui", (id, inv, extraData) -> new GoToJotunheimRLGUIMenu(id, inv, extraData));
+	public static final MenuType<GetOutJotunheimRLGUIMenu> GET_OUT_JOTUNHEIM_RLGUI = register("get_out_jotunheim_rlgui", (id, inv, extraData) -> new GetOutJotunheimRLGUIMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);

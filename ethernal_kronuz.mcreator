@@ -3149,30 +3149,6 @@
       "path": "~/Ores/Airport Steel"
     },
     {
-      "name": "NonRLTakeDamage",
-      "type": "procedure",
-      "sortid": 286,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "non_rl_take_damage",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/NonRLTakeDamageProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Dimensions/Jotunheim"
-    },
-    {
       "name": "AsgardPlayerEntersDimension",
       "type": "procedure",
       "sortid": 287,
@@ -8212,48 +8188,6 @@
       "path": "~/Dimensions/Asgard/Vegetacao"
     },
     {
-      "name": "AllowInJotunheim",
-      "type": "command",
-      "sortid": 497,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "allow_in_jotunheim",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/command/AllowInJotunheimCommand.java"
-        ]
-      },
-      "path": "~/Dimensions/Jotunheim"
-    },
-    {
-      "name": "AllowPlayerInJotunheim",
-      "type": "procedure",
-      "sortid": 498,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "allow_player_in_jotunheim",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/AllowPlayerInJotunheimProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Dimensions/Jotunheim"
-    },
-    {
       "name": "PassRadiantLordRoxoTo",
       "type": "command",
       "sortid": 499,
@@ -10564,72 +10498,6 @@
       "path": "~/Factions/Radiant Lords"
     },
     {
-      "name": "DinoVasco",
-      "type": "livingentity",
-      "sortid": 579,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "dino_vasco",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/dino_vasco_spawn_egg.json",
-          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/DinoVascoRenderer.java",
-          "src/main/java/net/mcreator/ethernalkronuz/entity/DinoVascoEntity.java",
-          "src/main/java/net/mcreator/ethernalkronuz/entity/DinoVascoEntityProjectile.java"
-        ]
-      },
-      "path": "~/Mobs/DinoVasco"
-    },
-    {
-      "name": "DinoVascoOnEntityTickUpdate",
-      "type": "procedure",
-      "sortid": 580,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "dino_vasco_on_entity_tick_update",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Mobs/DinoVasco"
-    },
-    {
-      "name": "DinoVascoRightClickedOnEntity",
-      "type": "procedure",
-      "sortid": 581,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dino_vasco_right_clicked_on_entity",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/DinoVascoRightClickedOnEntityProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Mobs/DinoVasco"
-    },
-    {
       "name": "SleepNearOwnerGoal",
       "type": "code",
       "sortid": 582,
@@ -10708,13 +10576,179 @@
       "type": "dimension",
       "sortid": 587,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "jotunheim",
       "metadata": {
         "files": [
           "src/main/resources/data/ethernal_kronuz/dimension/jotunheim.json",
           "src/main/java/net/mcreator/ethernalkronuz/world/dimension/JotunheimDimension.java",
           "src/main/resources/data/ethernal_kronuz/dimension_type/jotunheim.json"
+        ]
+      },
+      "path": "~/Dimensions/Jotunheim"
+    },
+    {
+      "name": "GoToJotunheimRLGUI",
+      "type": "gui",
+      "sortid": 588,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "go_to_jotunheim_rlgui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/network/GoToJotunheimRLGUIButtonMessage.java",
+          "src/main/java/net/mcreator/ethernalkronuz/client/gui/GoToJotunheimRLGUIScreen.java",
+          "src/main/java/net/mcreator/ethernalkronuz/world/inventory/GoToJotunheimRLGUIMenu.java"
+        ]
+      },
+      "path": "~/Dimensions/Jotunheim/GoToJotunheim/RadiantLord"
+    },
+    {
+      "name": "GetOutJotunheimRLGUI",
+      "type": "gui",
+      "sortid": 589,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_out_jotunheim_rlgui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/client/gui/GetOutJotunheimRLGUIScreen.java",
+          "src/main/java/net/mcreator/ethernalkronuz/network/GetOutJotunheimRLGUIButtonMessage.java",
+          "src/main/java/net/mcreator/ethernalkronuz/world/inventory/GetOutJotunheimRLGUIMenu.java"
+        ]
+      },
+      "path": "~/Dimensions/Jotunheim/GoToJotunheim/RadiantLord"
+    },
+    {
+      "name": "GoToJotunheimRLYesButton",
+      "type": "procedure",
+      "sortid": 590,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "go_to_jotunheim_rl_yes_button",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/GoToJotunheimRLYesButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Dimensions/Jotunheim/GoToJotunheim/RadiantLord"
+    },
+    {
+      "name": "GoToJotunheimRLNoButton",
+      "type": "procedure",
+      "sortid": 591,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "go_to_jotunheim_rl_no_button",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/GoToJotunheimRLNoButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Dimensions/Jotunheim/GoToJotunheim/RadiantLord"
+    },
+    {
+      "name": "GoToJotunheimRLKeyBindOnKeyPressed",
+      "type": "procedure",
+      "sortid": 592,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "go_to_jotunheim_rl_key_bind_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/GoToJotunheimRLKeyBindOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Dimensions/Jotunheim/GoToJotunheim/RadiantLord"
+    },
+    {
+      "name": "GoToJotunheimRLKeyBind",
+      "type": "keybind",
+      "sortid": 593,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "go_to_jotunheim_rl_key_bind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/network/GoToJotunheimRLKeyBindMessage.java"
+        ]
+      },
+      "path": "~/Dimensions/Jotunheim/GoToJotunheim/RadiantLord"
+    },
+    {
+      "name": "GetOutJotunheimYesButton",
+      "type": "procedure",
+      "sortid": 594,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_out_jotunheim_yes_button",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/GetOutJotunheimYesButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Dimensions/Jotunheim/GoToJotunheim/RadiantLord"
+    },
+    {
+      "name": "JotunheimPlayerEntersDimension",
+      "type": "procedure",
+      "sortid": 595,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jotunheim_player_enters_dimension",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/JotunheimPlayerEntersDimensionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
         ]
       },
       "path": "~/Dimensions/Jotunheim"
@@ -10900,6 +10934,30 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "CoordXBeforeEnterJotunheim",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "CoordYBeforeEnterJotunheim",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "CoordZBeforeEnterJotunheim",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "DimensionBeforeEnterJotunheim",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -11179,8 +11237,8 @@
       "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
       "advancements.bt_achievement.descr": "Juntar-se aos Big Testa",
-      "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "advancements.rl_verde_achievement.title": "Carregado até ao limite",
+      "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_atention": "Atention",
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
@@ -11189,6 +11247,7 @@
       "item.ethernal_kronuz.ganda_moca.desc": "Ganda Moca",
       "gui.ethernal_kronuz.trade_system_gui_techno.label_technobalde": "Technobalde",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_radiant_lord": "Radiant Lord",
+      "key.ethernal_kronuz.go_to_jotunheim_rl_key_bind": "Go To Dimension",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_remove_your_current": "Remove your current",
       "block.ethernal_kronuz.mosso_crystal_block": "Block of Mosso Crystal",
       "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_overwritten": "overwritten",
@@ -11243,6 +11302,7 @@
       "block.ethernal_kronuz.ygg_fences": "Ygg Wood Fences",
       "effect.ethernal_kronuz.end_empowerment": "End Empowerment",
       "key.ethernal_kronuz.null_tp_ability": "Null Teleport Ability",
+      "gui.ethernal_kronuz.get_out_jotunheim_rlgui.label_teleporting_into": "teleporting into",
       "subtitles.saopaulo": "",
       "subtitles.freicken": "",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_double_health": "- Double Health",
@@ -11262,6 +11322,7 @@
       "item.ethernal_kronuz.warper_spawn_egg": "Warper Spawn Egg",
       "subtitles.aesir_rift_opening": "",
       "item.ethernal_kronuz.preto_da_amadora": "Amadora Não Central",
+      "gui.ethernal_kronuz.get_out_jotunheim_rlgui.button_no": "No",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.button_rise": "Rise",
       "item.ethernal_kronuz.faking_ell_armor_chestplate": "Faking Ell Chestplate",
       "item.ethernal_kronuz.erika": "Auf Der Heide",
@@ -11298,6 +11359,8 @@
       "block.ethernal_kronuz.asgardian_dirt": "Asgardian Grass Block",
       "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_special_tool": "- Special Tool",
       "gui.ethernal_kronuz.trade_system_gui_techno.button_1": "1",
+      "gui.ethernal_kronuz.get_out_jotunheim_rlgui.label_to_where_you_were_before": "to where you were before",
+      "gui.ethernal_kronuz.go_to_jotunheim_rlgui.button_no": "No",
       "entity.ethernal_kronuz.null_entity": "Null",
       "advancements.shelter_mode_setup.title": "Shelter Mode já?",
       "item.ethernal_kronuz.airport_steel_shovel_head": "Part of Airport Steel Shovel",
@@ -11320,6 +11383,7 @@
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_double_health": "- Double Health",
       "block.ethernal_kronuz.jotunheim_frame": "Jotunheim Frame",
       "item.ethernal_kronuz.mosso_crystal_sword": "Mosso Crystal Sword",
+      "gui.ethernal_kronuz.go_to_jotunheim_rlgui.button_yes": "Yes",
       "item.ethernal_kronuz.aiport_steel_shovel": "Aiport Steel Shovel",
       "item.ethernal_kronuz.necromancer": "Adolfus Hitlurus",
       "subtitles.sword-dash-charged": "",
@@ -11416,7 +11480,9 @@
       "block.ethernal_kronuz.ygg_presure_plate": "Ygg Wood Presure Plate",
       "item.ethernal_kronuz.sao_paulo": "Yuri NR5",
       "entity.ethernal_kronuz.blessing": "Blessing",
+      "gui.ethernal_kronuz.get_out_jotunheim_rlgui.label_you_will_be_teleported": "You will be teleported",
       "advancements.adc_achievement.title": "Larga-me Carlos!",
+      "gui.ethernal_kronuz.go_to_jotunheim_rlgui.label_teleport_to_jotunheim": "Teleport to Jotunheim",
       "block.ethernal_kronuz.ygg_gate": "Ygg Wood Fence Gate",
       "subtitles.warper-death": "",
       "block.ethernal_kronuz.normal_glow_grass": "Glow Grass",
@@ -11442,6 +11508,7 @@
       "block.ethernal_kronuz.bricks_heaven_slate_stairs": "Heaven Slate Bricks Stairs",
       "item.ethernal_kronuz.nokkia_hammer": "Nokkia Hammer",
       "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_atention": "Atention",
+      "gui.ethernal_kronuz.get_out_jotunheim_rlgui.label_get_out_of_jotunheim": "Get out of Jotunheim",
       "item.ethernal_kronuz.divine_bow": "Divine Bow",
       "block.ethernal_kronuz.chiseled_heaven_stone_slabs": "Chiseled Heaven Stone Slabs",
       "block.ethernal_kronuz.aiport_steel_block": "Block of Airport Steel",
@@ -11452,6 +11519,7 @@
       "item.ethernal_kronuz.asgard": "Asgard Portal Igniter",
       "subtitles.safira": "",
       "effect.ethernal_kronuz.asgard_empowerment": "Asgard Empowerment",
+      "gui.ethernal_kronuz.get_out_jotunheim_rlgui.button_yes": "Yes",
       "effect.ethernal_kronuz.andarilho_da_cave_effect": "Cave Dweller",
       "block.ethernal_kronuz.ygg_wood_sappling": "Ygg Wood Sapling",
       "item.ethernal_kronuz.divine_arrow": "Divine Arrow",
@@ -11488,6 +11556,7 @@
       "item.ethernal_kronuz.technobalde_spawn_egg": "Technobalde Spawn Egg",
       "item.ethernal_kronuz.rl_verde_armor_boots": "Titan Kaleb\u0027s  Boots",
       "subtitles.sword-dash": "",
+      "gui.ethernal_kronuz.get_out_jotunheim_rlgui.label_jotunheim": "Jotunheim",
       "item.ethernal_kronuz.battle_coin": "Battle Coin",
       "item.ethernal_kronuz.mosso_crystal_pickaxe": "Mosso Crystal Pickaxe",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_remove_your_current": "Remove your current",
@@ -12050,7 +12119,17 @@
           },
           {
             "name": "Jotunheim",
-            "children": []
+            "children": [
+              {
+                "name": "GoToJotunheim",
+                "children": [
+                  {
+                    "name": "RadiantLord",
+                    "children": []
+                  }
+                ]
+              }
+            ]
           }
         ]
       },

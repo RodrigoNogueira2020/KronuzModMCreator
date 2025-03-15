@@ -1,0 +1,134 @@
+{
+  "_fv": 39,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "faction_book_gui_frame.png",
+          "use1Xscale": false,
+          "x": 78,
+          "y": -19
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_get_out_of_jotunheim",
+          "text": {
+            "fixedValue": "Get out of Jotunheim"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 105,
+          "y": 80
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_yes",
+          "text": "Yes",
+          "onClick": {
+            "name": "GetOutJotunheimYesButton"
+          },
+          "width": 40,
+          "height": 20,
+          "x": 267,
+          "y": 80
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_no",
+          "text": "No",
+          "onClick": {
+            "name": "GoToJotunheimRLNoButton"
+          },
+          "width": 35,
+          "height": 20,
+          "x": 267,
+          "y": 134
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_you_will_be_teleported",
+          "text": {
+            "fixedValue": "You will be teleported"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 107
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_to_where_you_were_before",
+          "text": {
+            "fixedValue": "to where you were before"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_teleporting_into",
+          "text": {
+            "fixedValue": "teleporting into"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 125
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_jotunheim",
+          "text": {
+            "fixedValue": "Jotunheim"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 134
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

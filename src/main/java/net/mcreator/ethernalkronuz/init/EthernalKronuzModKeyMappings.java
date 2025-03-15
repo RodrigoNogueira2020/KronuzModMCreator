@@ -22,6 +22,7 @@ import net.mcreator.ethernalkronuz.network.NullEntityKeyBindMessage;
 import net.mcreator.ethernalkronuz.network.NullEntityInvisibilityAbilityKeyBindMessage;
 import net.mcreator.ethernalkronuz.network.GriffinUpMessage;
 import net.mcreator.ethernalkronuz.network.GriffinDownMessage;
+import net.mcreator.ethernalkronuz.network.GoToJotunheimRLKeyBindMessage;
 import net.mcreator.ethernalkronuz.EthernalKronuzMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
@@ -32,6 +33,7 @@ public class EthernalKronuzModKeyMappings {
 	public static final KeyMapping GRIFFIN_UP = new KeyMapping("key.ethernal_kronuz.griffin_up", GLFW.GLFW_KEY_Z, "key.categories.misc");
 	public static final KeyMapping GRIFFIN_DOWN = new KeyMapping("key.ethernal_kronuz.griffin_down", GLFW.GLFW_KEY_C, "key.categories.misc");
 	public static final KeyMapping OPEN_CONFIRM_RISE_GUI = new KeyMapping("key.ethernal_kronuz.open_confirm_rise_gui", GLFW.GLFW_KEY_F6, "key.categories.ui");
+	public static final KeyMapping GO_TO_JOTUNHEIM_RL_KEY_BIND = new KeyMapping("key.ethernal_kronuz.go_to_jotunheim_rl_key_bind", GLFW.GLFW_KEY_HOME, "key.categories.ui");
 	private static long GRIFFIN_UP_LASTPRESS = 0;
 	private static long GRIFFIN_DOWN_LASTPRESS = 0;
 
@@ -43,6 +45,7 @@ public class EthernalKronuzModKeyMappings {
 		ClientRegistry.registerKeyBinding(GRIFFIN_UP);
 		ClientRegistry.registerKeyBinding(GRIFFIN_DOWN);
 		ClientRegistry.registerKeyBinding(OPEN_CONFIRM_RISE_GUI);
+		ClientRegistry.registerKeyBinding(GO_TO_JOTUNHEIM_RL_KEY_BIND);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -94,6 +97,12 @@ public class EthernalKronuzModKeyMappings {
 					if (event.getAction() == GLFW.GLFW_PRESS) {
 						EthernalKronuzMod.PACKET_HANDLER.sendToServer(new OpenConfirmRiseGUIMessage(0, 0));
 						OpenConfirmRiseGUIMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+					}
+				}
+				if (event.getKey() == GO_TO_JOTUNHEIM_RL_KEY_BIND.getKey().getValue()) {
+					if (event.getAction() == GLFW.GLFW_PRESS) {
+						EthernalKronuzMod.PACKET_HANDLER.sendToServer(new GoToJotunheimRLKeyBindMessage(0, 0));
+						GoToJotunheimRLKeyBindMessage.pressAction(Minecraft.getInstance().player, 0, 0);
 					}
 				}
 			}

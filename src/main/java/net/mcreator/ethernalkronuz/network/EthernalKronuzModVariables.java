@@ -95,6 +95,10 @@ public class EthernalKronuzModVariables {
 			clone.HasMinimumForTheRiseRoxo = original.HasMinimumForTheRiseRoxo;
 			clone.HasMinimumForTheRiseVerde = original.HasMinimumForTheRiseVerde;
 			clone.HasMinimumForTheRiseVermelho = original.HasMinimumForTheRiseVermelho;
+			clone.CoordXBeforeEnterJotunheim = original.CoordXBeforeEnterJotunheim;
+			clone.CoordYBeforeEnterJotunheim = original.CoordYBeforeEnterJotunheim;
+			clone.CoordZBeforeEnterJotunheim = original.CoordZBeforeEnterJotunheim;
+			clone.DimensionBeforeEnterJotunheim = original.DimensionBeforeEnterJotunheim;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -301,6 +305,10 @@ public class EthernalKronuzModVariables {
 		public boolean HasMinimumForTheRiseRoxo = false;
 		public boolean HasMinimumForTheRiseVerde = false;
 		public boolean HasMinimumForTheRiseVermelho = false;
+		public double CoordXBeforeEnterJotunheim = 0;
+		public double CoordYBeforeEnterJotunheim = 0;
+		public double CoordZBeforeEnterJotunheim = 0;
+		public double DimensionBeforeEnterJotunheim = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -332,6 +340,10 @@ public class EthernalKronuzModVariables {
 			nbt.putBoolean("HasMinimumForTheRiseRoxo", HasMinimumForTheRiseRoxo);
 			nbt.putBoolean("HasMinimumForTheRiseVerde", HasMinimumForTheRiseVerde);
 			nbt.putBoolean("HasMinimumForTheRiseVermelho", HasMinimumForTheRiseVermelho);
+			nbt.putDouble("CoordXBeforeEnterJotunheim", CoordXBeforeEnterJotunheim);
+			nbt.putDouble("CoordYBeforeEnterJotunheim", CoordYBeforeEnterJotunheim);
+			nbt.putDouble("CoordZBeforeEnterJotunheim", CoordZBeforeEnterJotunheim);
+			nbt.putDouble("DimensionBeforeEnterJotunheim", DimensionBeforeEnterJotunheim);
 			return nbt;
 		}
 
@@ -360,6 +372,10 @@ public class EthernalKronuzModVariables {
 			HasMinimumForTheRiseRoxo = nbt.getBoolean("HasMinimumForTheRiseRoxo");
 			HasMinimumForTheRiseVerde = nbt.getBoolean("HasMinimumForTheRiseVerde");
 			HasMinimumForTheRiseVermelho = nbt.getBoolean("HasMinimumForTheRiseVermelho");
+			CoordXBeforeEnterJotunheim = nbt.getDouble("CoordXBeforeEnterJotunheim");
+			CoordYBeforeEnterJotunheim = nbt.getDouble("CoordYBeforeEnterJotunheim");
+			CoordZBeforeEnterJotunheim = nbt.getDouble("CoordZBeforeEnterJotunheim");
+			DimensionBeforeEnterJotunheim = nbt.getDouble("DimensionBeforeEnterJotunheim");
 		}
 	}
 
@@ -407,6 +423,10 @@ public class EthernalKronuzModVariables {
 					variables.HasMinimumForTheRiseRoxo = message.data.HasMinimumForTheRiseRoxo;
 					variables.HasMinimumForTheRiseVerde = message.data.HasMinimumForTheRiseVerde;
 					variables.HasMinimumForTheRiseVermelho = message.data.HasMinimumForTheRiseVermelho;
+					variables.CoordXBeforeEnterJotunheim = message.data.CoordXBeforeEnterJotunheim;
+					variables.CoordYBeforeEnterJotunheim = message.data.CoordYBeforeEnterJotunheim;
+					variables.CoordZBeforeEnterJotunheim = message.data.CoordZBeforeEnterJotunheim;
+					variables.DimensionBeforeEnterJotunheim = message.data.DimensionBeforeEnterJotunheim;
 				}
 			});
 			context.setPacketHandled(true);
