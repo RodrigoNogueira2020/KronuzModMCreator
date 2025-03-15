@@ -25,4 +25,4 @@ public class ModItemProperties {
 			return p_174632_ != null && p_174632_.isUsingItem() && p_174632_.getUseItem() == p_174630_ ? 1.0f : 0.0f;
 		});
 	}
-}
+}

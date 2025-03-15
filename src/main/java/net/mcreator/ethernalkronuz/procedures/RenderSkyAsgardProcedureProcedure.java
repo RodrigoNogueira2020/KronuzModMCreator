@@ -74,6 +74,7 @@ public class RenderSkyAsgardProcedureProcedure {
 	public static void execute(LevelAccessor world, Entity entity, PoseStack pose) {
 		execute(null, world, entity, pose);
 	}
+
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity, PoseStack pose) {
 		if (entity == null || pose == null)
 			return;
@@ -93,20 +94,19 @@ public class RenderSkyAsgardProcedureProcedure {
 					float _u1 = 1.0F;
 					float _v1 = 1.0F;
 					for (int _i = 0; _i < 6; ++_i) {
-						if (_i == 0) {
+						if (_i == 0)
 							pose.mulPose(Vector3f.YP.rotationDegrees(180.0F));
-						} else if (_i == 1) {
+						else if (_i == 1)
 							pose.mulPose(Vector3f.XP.rotationDegrees(180.0F));
-						} else if (_i == 2) {
+						else if (_i == 2) {
 							pose.mulPose(Vector3f.YP.rotationDegrees(-180.0F));
 							pose.mulPose(Vector3f.XP.rotationDegrees(-90.0F));
-						} else if (_i == 3) {
+						} else if (_i == 3)
 							pose.mulPose(Vector3f.ZP.rotationDegrees(90.0F));
-						} else if (_i == 4) {
+						else if (_i == 4)
 							pose.mulPose(Vector3f.ZP.rotationDegrees(90.0F));
-						} else if (_i == 5) {
+						else if (_i == 5)
 							pose.mulPose(Vector3f.ZP.rotationDegrees(90.0F));
-						}
 						Matrix4f _matrix4f = pose.last().pose();
 						_bufferBuilder.vertex(_matrix4f, -100.0F, -100.0F, -100.0F).uv(_u0, _v0).color(255, 255, 255, 255).endVertex();
 						_bufferBuilder.vertex(_matrix4f, -100.0F, -100.0F, 100.0F).uv(_u0, _v1).color(255, 255, 255, 255).endVertex();
@@ -135,7 +135,6 @@ public class RenderSkyAsgardProcedureProcedure {
 				_bufferBuilder.end();
 				BufferUploader.end(_bufferBuilder);
 			}
-
 			RenderSystem.setShaderTexture(0, new ResourceLocation(("ethernal_kronuz" + ":textures/" + "red_planet" + ".png")));
 			if (world instanceof ClientLevel _clientLevel) {
 				RenderSystem.enableTexture();

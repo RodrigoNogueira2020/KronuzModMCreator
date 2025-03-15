@@ -1,5 +1,4 @@
-
-  {
+{
   "parent": "item/bow",
   "textures": {
     "layer0": "ethernal_kronuz:items/divine_bow"

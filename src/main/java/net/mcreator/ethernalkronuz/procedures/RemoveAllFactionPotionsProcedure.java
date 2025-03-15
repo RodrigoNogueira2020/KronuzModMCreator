@@ -30,7 +30,7 @@ public class RemoveAllFactionPotionsProcedure {
 					return null;
 				}
 			}
-		}.getEntity()).getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordRoxoPlayer == true) {
+		}.getEntity()).getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordRoxoPlayer) {
 			EthernalKronuzModVariables.MapVariables.get(world).RadiantLordRoxo = false;
 			EthernalKronuzModVariables.MapVariables.get(world).syncData(world);
 			{
@@ -144,7 +144,7 @@ public class RemoveAllFactionPotionsProcedure {
 					return null;
 				}
 			}
-		}.getEntity()).getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordVerdePlayer == true) {
+		}.getEntity()).getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordVerdePlayer) {
 			EthernalKronuzModVariables.MapVariables.get(world).RadiantLordVerde = false;
 			EthernalKronuzModVariables.MapVariables.get(world).syncData(world);
 			{
@@ -258,7 +258,7 @@ public class RemoveAllFactionPotionsProcedure {
 					return null;
 				}
 			}
-		}.getEntity()).getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordVermelhoPlayer == true) {
+		}.getEntity()).getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordVermelhoPlayer) {
 			EthernalKronuzModVariables.MapVariables.get(world).RadiantLordVermelho = false;
 			EthernalKronuzModVariables.MapVariables.get(world).syncData(world);
 			{
@@ -372,7 +372,7 @@ public class RemoveAllFactionPotionsProcedure {
 					return null;
 				}
 			}
-		}.getEntity()).getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).ADCPlayer == true) {
+		}.getEntity()).getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).ADCPlayer) {
 			{
 				boolean _setval = false;
 				(new Object() {
@@ -432,7 +432,7 @@ public class RemoveAllFactionPotionsProcedure {
 					return null;
 				}
 			}
-		}.getEntity()).getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).BTPlayer == true) {
+		}.getEntity()).getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).BTPlayer) {
 			{
 				boolean _setval = false;
 				(new Object() {
