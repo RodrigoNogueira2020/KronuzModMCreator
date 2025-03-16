@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Technobalde",
     "mobLabel": "",
-    "mobModelName": "Modeltechnoblade",
+    "mobModelName": "Biped",
     "mobModelTexture": "technoblade.png",
     "mobModelGlowTexture": "",
     "solidBoundingBox": {

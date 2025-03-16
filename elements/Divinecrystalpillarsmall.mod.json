@@ -23,7 +23,7 @@
     ],
     "ignoreBlocks": "STRUCTURE_BLOCK",
     "generateCondition": {
-      "name": "DivinecrystalpillarsmallAdditionalGenerationCondition"
+      "name": "DivinecrystalspikesmallAdditionalGenerationCondition"
     }
   }
 }

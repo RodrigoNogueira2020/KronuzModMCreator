@@ -102,8 +102,6 @@ public class EthernalKronuzModFeatures {
 			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, AsgardTempleEntryFeature.GENERATE_BIOMES, AsgardTempleEntryFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> DIVINECRYSTALPILLAREXTRALARGE = register("divinecrystalpillarextralarge", DivinecrystalpillarextralargeFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, DivinecrystalpillarextralargeFeature.GENERATE_BIOMES, DivinecrystalpillarextralargeFeature::placedFeature));
-	public static final RegistryObject<Feature<?>> DIVINECRYSTALPILLARLARGE = register("divinecrystalpillarlarge", DivinecrystalpillarlargeFeature::feature,
-			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, DivinecrystalpillarlargeFeature.GENERATE_BIOMES, DivinecrystalpillarlargeFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> DIVINECRYSTALPILLARMEDIUM = register("divinecrystalpillarmedium", DivinecrystalpillarmediumFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, DivinecrystalpillarmediumFeature.GENERATE_BIOMES, DivinecrystalpillarmediumFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> DIVINECRYSTALPILLARSMALL = register("divinecrystalpillarsmall", DivinecrystalpillarsmallFeature::feature,
@@ -148,6 +146,8 @@ public class EthernalKronuzModFeatures {
 			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, EndruinsmediumFeature.GENERATE_BIOMES, EndruinsmediumFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> ENDRUINSSMALL = register("endruinssmall", EndruinssmallFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, EndruinssmallFeature.GENERATE_BIOMES, EndruinssmallFeature::placedFeature));
+	public static final RegistryObject<Feature<?>> DIVINECRYSTALPILLARLARGE = register("divinecrystalpillarlarge", DivinecrystalpillarlargeFeature::feature,
+			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, DivinecrystalpillarlargeFeature.GENERATE_BIOMES, DivinecrystalpillarlargeFeature::placedFeature));
 
 	private static RegistryObject<Feature<?>> register(String registryname, Supplier<Feature<?>> feature, FeatureRegistration featureRegistration) {
 		FEATURE_REGISTRATIONS.add(featureRegistration);

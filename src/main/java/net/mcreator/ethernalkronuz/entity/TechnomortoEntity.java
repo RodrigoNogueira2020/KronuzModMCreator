@@ -11,6 +11,7 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
@@ -41,7 +42,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.ethernalkronuz.procedures.TechnobaldeRightClickedOnEntityProcedure;
-import net.mcreator.ethernalkronuz.init.EthernalKronuzModItems;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModEntities;
 
 import java.util.Set;
@@ -73,8 +73,7 @@ public class TechnomortoEntity extends PathfinderMob {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
-		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(EthernalKronuzModItems.MURASAMA.get()));
-		this.setItemSlot(EquipmentSlot.OFFHAND, new ItemStack(EthernalKronuzModItems.AIPORT_STEEL_SWORD.get()));
+		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Items.DIAMOND_SWORD));
 	}
 
 	@Override

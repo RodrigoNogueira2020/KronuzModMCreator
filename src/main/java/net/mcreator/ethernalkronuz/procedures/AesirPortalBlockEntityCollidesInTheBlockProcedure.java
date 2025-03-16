@@ -1,33 +1,26 @@
 package net.mcreator.ethernalkronuz.procedures;
 
-import net.minecraftforge.server.ServerLifecycleHooks;
-
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.network.protocol.game.ClientboundUpdateMobEffectPacket;
 import net.minecraft.network.protocol.game.ClientboundPlayerAbilitiesPacket;
 import net.minecraft.network.protocol.game.ClientboundLevelEventPacket;
 import net.minecraft.network.protocol.game.ClientboundGameEventPacket;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.ChatType;
 import net.minecraft.core.Registry;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
-import net.minecraft.Util;
 
 import net.mcreator.ethernalkronuz.network.EthernalKronuzModVariables;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModMobEffects;
 
 public class AesirPortalBlockEntityCollidesInTheBlockProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
 		if ((entity.level.dimension()) == (Level.END)) {
@@ -108,11 +101,6 @@ public class AesirPortalBlockEntityCollidesInTheBlockProcedure {
 			if ((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).AsgardDeaths == 0) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.addEffect(new MobEffectInstance(EthernalKronuzModMobEffects.ASGARD_EMPOWERMENT.get(), (int) Double.POSITIVE_INFINITY, 0, (true), (false)));
-				if (!world.isClientSide()) {
-					MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
-					if (_mcserv != null)
-						_mcserv.getPlayerList().broadcastMessage(new TextComponent("empowerment ativo"), ChatType.SYSTEM, Util.NIL_UUID);
-				}
 			}
 		}
 	}

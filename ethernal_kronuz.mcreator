@@ -1471,10 +1471,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -6588,7 +6584,7 @@
       "type": "structure",
       "sortid": 398,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "divinecrystalpillarextralarge",
       "metadata": {
         "files": [
@@ -6598,25 +6594,11 @@
       "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Pillars"
     },
     {
-      "name": "Divinecrystalpillarlarge",
-      "type": "structure",
-      "sortid": 399,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "divinecrystalpillarlarge",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/world/features/DivinecrystalpillarlargeFeature.java"
-        ]
-      },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Pillars"
-    },
-    {
       "name": "Divinecrystalpillarmedium",
       "type": "structure",
       "sortid": 400,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "divinecrystalpillarmedium",
       "metadata": {
         "files": [
@@ -6630,7 +6612,7 @@
       "type": "structure",
       "sortid": 401,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "divinecrystalpillarsmall",
       "metadata": {
         "files": [
@@ -7264,7 +7246,7 @@
       "type": "structure",
       "sortid": 444,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "divinecrystalpillargiant",
       "metadata": {
         "files": [
@@ -8843,171 +8825,6 @@
       "path": "~/Dimensions/Asgard/Geracao"
     },
     {
-      "name": "DivinecrystalpillarextralargeAdditionalGenerationCondition",
-      "type": "procedure",
-      "sortid": 517,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "divinecrystalpillarextralarge_additional_generation_condition",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/DivinecrystalpillarextralargeAdditionalGenerationConditionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Pillars"
-    },
-    {
-      "name": "DivinecrystalpillarlargeAdditionalGenerationCondition",
-      "type": "procedure",
-      "sortid": 518,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "divinecrystalpillarlarge_additional_generation_condition",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/DivinecrystalpillarlargeAdditionalGenerationConditionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Pillars"
-    },
-    {
-      "name": "DivinecrystalpillarmediumAdditionalGenerationCondition",
-      "type": "procedure",
-      "sortid": 519,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "divinecrystalpillarmedium_additional_generation_condition",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/DivinecrystalpillarmediumAdditionalGenerationConditionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Pillars"
-    },
-    {
-      "name": "DivinecrystalpillarsmallAdditionalGenerationCondition",
-      "type": "procedure",
-      "sortid": 520,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "divinecrystalpillarsmall_additional_generation_condition",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/DivinecrystalpillarsmallAdditionalGenerationConditionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Pillars"
-    },
-    {
-      "name": "DivinecrystalpillargiantAdditionalGenerationCondition",
-      "type": "procedure",
-      "sortid": 521,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "divinecrystalpillargiant_additional_generation_condition",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/DivinecrystalpillargiantAdditionalGenerationConditionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Pillars"
-    },
-    {
       "name": "DivinecrystalspikeextralargeAdditionalGenerationCondition",
       "type": "procedure",
       "sortid": 522,
@@ -9949,10 +9766,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -10752,6 +10565,95 @@
         ]
       },
       "path": "~/Dimensions/Jotunheim"
+    },
+    {
+      "name": "DivinecrystalpillarextralargeAdditionalGenerationCondition",
+      "type": "procedure",
+      "sortid": 596,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "divinecrystalpillarextralarge_additional_generation_condition",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/DivinecrystalpillarextralargeAdditionalGenerationConditionProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Pillars"
+    },
+    {
+      "name": "DivinecrystalpillarmediumAdditionalGenerationCondition",
+      "type": "procedure",
+      "sortid": 598,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "divinecrystalpillarmedium_additional_generation_condition",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/DivinecrystalpillarmediumAdditionalGenerationConditionProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Pillars"
+    },
+    {
+      "name": "DivinecrystalpillarsmallAdditionalGenerationCondition",
+      "type": "procedure",
+      "sortid": 599,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "divinecrystalpillarsmall_additional_generation_condition",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/DivinecrystalpillarsmallAdditionalGenerationConditionProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Pillars"
+    },
+    {
+      "name": "DivinecrystalpillargiantAdditionalGenerationCondition",
+      "type": "procedure",
+      "sortid": 600,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "divinecrystalpillargiant_additional_generation_condition",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/DivinecrystalpillargiantAdditionalGenerationConditionProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Pillars"
+    },
+    {
+      "name": "Divinecrystalpillarlarge",
+      "type": "structure",
+      "sortid": 601,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "divinecrystalpillarlarge",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/world/features/DivinecrystalpillarlargeFeature.java"
+        ]
+      },
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Pillars"
+    },
+    {
+      "name": "DivinecrystalpillarlargeAdditionalGenerationCondition",
+      "type": "procedure",
+      "sortid": 602,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "divinecrystalpillarlarge_additional_generation_condition",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/DivinecrystalpillarlargeAdditionalGenerationConditionProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Pillars"
     }
   ],
   "variable_elements": [
@@ -11237,8 +11139,8 @@
       "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
       "advancements.bt_achievement.descr": "Juntar-se aos Big Testa",
-      "advancements.rl_verde_achievement.title": "Carregado até ao limite",
       "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
+      "advancements.rl_verde_achievement.title": "Carregado até ao limite",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_atention": "Atention",
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
