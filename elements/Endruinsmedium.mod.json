@@ -294,7 +294,7 @@
     ],
     "ignoreBlocks": "STRUCTURE_BLOCK",
     "generateCondition": {
-      "name": "EndruinsmediumAdditionalGenerationCondition"
+      "name": "BichAdditionalGenerationCondition"
     }
   }
 }

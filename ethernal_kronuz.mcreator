@@ -8972,44 +8972,11 @@
       "path": "~/Dimensions/Asgard/Estruturas/Ygg Wood/Floating Garden"
     },
     {
-      "name": "EndruinslargeAdditionalGenerationCondition",
-      "type": "procedure",
-      "sortid": 532,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "endruinslarge_additional_generation_condition",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/EndruinslargeAdditionalGenerationConditionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Dimensions/Asgard/Estruturas/End Ruins"
-    },
-    {
       "name": "Endruinslarge",
       "type": "structure",
       "sortid": 533,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "endruinslarge",
       "metadata": {
         "files": [
@@ -9023,7 +8990,7 @@
       "type": "structure",
       "sortid": 534,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "endruinsmedium",
       "metadata": {
         "files": [
@@ -9033,81 +9000,15 @@
       "path": "~/Dimensions/Asgard/Estruturas/End Ruins"
     },
     {
-      "name": "EndruinsmediumAdditionalGenerationCondition",
-      "type": "procedure",
-      "sortid": 535,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "endruinsmedium_additional_generation_condition",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/EndruinsmediumAdditionalGenerationConditionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Dimensions/Asgard/Estruturas/End Ruins"
-    },
-    {
       "name": "Endruinssmall",
       "type": "structure",
       "sortid": 536,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "endruinssmall",
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/ethernalkronuz/world/features/EndruinssmallFeature.java"
-        ]
-      },
-      "path": "~/Dimensions/Asgard/Estruturas/End Ruins"
-    },
-    {
-      "name": "EndruinssmallAdditionalGenerationCondition",
-      "type": "procedure",
-      "sortid": 537,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "endruinssmall_additional_generation_condition",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/EndruinssmallAdditionalGenerationConditionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
         ]
       },
       "path": "~/Dimensions/Asgard/Estruturas/End Ruins"
@@ -10546,6 +10447,65 @@
         "dependencies": []
       },
       "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars Spikes/Spikes"
+    },
+    {
+      "name": "EndruinslargeAdditionalGenerationCondition",
+      "type": "procedure",
+      "sortid": 608,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "endruinslarge_additional_generation_condition",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Dimensions/Asgard/Estruturas/End Ruins"
+    },
+    {
+      "name": "EndruinsmediumAdditionalGenerationCondition",
+      "type": "procedure",
+      "sortid": 609,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "endruinsmedium_additional_generation_condition",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/EndruinsmediumAdditionalGenerationConditionProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Dimensions/Asgard/Estruturas/End Ruins"
+    },
+    {
+      "name": "EndruinssmallAdditionalGenerationCondition",
+      "type": "procedure",
+      "sortid": 610,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "endruinssmall_additional_generation_condition",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/EndruinssmallAdditionalGenerationConditionProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Dimensions/Asgard/Estruturas/End Ruins"
     }
   ],
   "variable_elements": [
