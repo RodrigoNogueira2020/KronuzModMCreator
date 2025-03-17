@@ -15,9 +15,9 @@ import net.mcreator.ethernalkronuz.init.EthernalKronuzModBlocks;
 public class EndruinssmallAdditionalGenerationConditionProcedure {
 	public static boolean execute(LevelAccessor world, double x, double y, double z) {
 		Block[] allowedBlocks = {EthernalKronuzModBlocks.ASGARDIAN_DIRT.get(), EthernalKronuzModBlocks.ASGARDIAN_DIRT_BLOCK.get(), EthernalKronuzModBlocks.DIVINE_CRYSTAL.get(), EthernalKronuzModBlocks.HEAVEN_STONE.get()};
-		int sizeX = 8;
-		int sizeZ = 8;
-		int sizeY = 3;
+		int sizeX = 6;
+		int sizeZ = 6;
+		int sizeY = 4;
 		for (int dx = 0; dx < sizeX; dx++) {
 			for (int dz = 0; dz < sizeZ; dz++) {
 				for (int dy = 0; dy < sizeY; dy++) {
