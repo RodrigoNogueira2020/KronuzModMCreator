@@ -10506,6 +10506,20 @@
         "dependencies": []
       },
       "path": "~/Dimensions/Asgard/Estruturas/End Ruins"
+    },
+    {
+      "name": "EndRuinLootTable",
+      "type": "loottable",
+      "sortid": 611,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "end_ruin_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ethernal_kronuz/loot_tables/chests/end_ruin_loot_table.json"
+        ]
+      },
+      "path": "~/Dimensions/Asgard/Estruturas/End Ruins"
     }
   ],
   "variable_elements": [
