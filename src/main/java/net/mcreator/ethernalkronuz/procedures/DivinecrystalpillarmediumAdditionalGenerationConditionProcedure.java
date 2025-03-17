@@ -17,8 +17,8 @@ public class DivinecrystalpillarmediumAdditionalGenerationConditionProcedure {
 		boolean baseIsSolid = true;
 		int baseWidth = 2;
 		int baseDepth = 2;
-		int offsetX = 0;
-		int offsetZ = 0;
+		int offsetX = -1;
+		int offsetZ = -1;
 		for (int bx = 0; bx < baseWidth; bx++) {
 			for (int bz = 0; bz < baseDepth; bz++) {
 				BlockPos basePos = new BlockPos(x + offsetX + bx, y, z + offsetZ + bz);

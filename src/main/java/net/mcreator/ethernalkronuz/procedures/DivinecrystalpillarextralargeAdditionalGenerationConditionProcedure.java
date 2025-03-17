@@ -17,8 +17,8 @@ public class DivinecrystalpillarextralargeAdditionalGenerationConditionProcedure
 		boolean baseIsSolid = true;
 		int baseWidth = 3;
 		int baseDepth = 3;
-		int offsetX = 0;
-		int offsetZ = 0;
+		int offsetX = -1;
+		int offsetZ = -1;
 		for (int bx = 0; bx < baseWidth; bx++) {
 			for (int bz = 0; bz < baseDepth; bz++) {
 				BlockPos belowPos = new BlockPos(x + offsetX + bx, y - 1, z + offsetZ + bz);

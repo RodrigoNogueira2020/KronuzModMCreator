@@ -17,16 +17,10 @@ public class DivinecrystalpillargiantAdditionalGenerationConditionProcedure {
 		boolean baseIsSolid = true;
 		int baseWidth = 6;
 		int baseDepth = 6;
-		int offsetX = 0;
-		int offsetZ = 0;
+		int offsetX = -3;
+		int offsetZ = -3;
 		for (int bx = 0; bx < baseWidth; bx++) {
 			for (int bz = 0; bz < baseDepth; bz++) {
-				BlockPos basePos = new BlockPos(x + offsetX + bx, y, z + offsetZ + bz);
-				if (world.getBlockState(basePos).getBlock() == Blocks.AIR || world.getBlockState(basePos).getBlock() == Blocks.VOID_AIR || world.getBlockState(basePos).getBlock() == Blocks.CAVE_AIR
-						|| world.getBlockState(basePos).getBlock() == EthernalKronuzModBlocks.CRISTALIZED_DIVINE_WATER.get()) {
-					baseIsSolid = false;
-					break;
-				}
 				BlockPos belowPos = new BlockPos(x + offsetX + bx, y - 1, z + offsetZ + bz);
 				if (world.getBlockState(belowPos).getBlock() == Blocks.AIR || world.getBlockState(belowPos).getBlock() == Blocks.VOID_AIR || world.getBlockState(belowPos).getBlock() == Blocks.CAVE_AIR
 						|| world.getBlockState(belowPos).getBlock() == EthernalKronuzModBlocks.CRISTALIZED_DIVINE_WATER.get()) {
@@ -37,12 +31,10 @@ public class DivinecrystalpillargiantAdditionalGenerationConditionProcedure {
 			if (!baseIsSolid)
 				break;
 		}
-		if (baseIsSolid) {
-			if (world instanceof ServerLevel _serverworld) {
-				StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("ethernal_kronuz", "divine_crystal_pillar_giant"));
-				if (template != null) {
-					template.placeInWorld(_serverworld, new BlockPos(x, y, z), new BlockPos(x, y, z), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-				}
+		if (baseIsSolid && world instanceof ServerLevel _serverworld) {
+			StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("ethernal_kronuz", "divine_crystal_pillar_giant"));
+			if (template != null) {
+				template.placeInWorld(_serverworld, new BlockPos(x, y, z), new BlockPos(x, y, z), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 			}
 		}
 		return baseIsSolid;

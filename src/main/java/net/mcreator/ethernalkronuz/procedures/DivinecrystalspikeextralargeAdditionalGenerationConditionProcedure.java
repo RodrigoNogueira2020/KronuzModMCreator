@@ -16,14 +16,14 @@ public class DivinecrystalspikeextralargeAdditionalGenerationConditionProcedure 
 	public static boolean execute(LevelAccessor world, double x, double y, double z) {
 		boolean baseIsSolid = true;
 		int baseWidth = 6;
-		int baseDepth = 3;
+		int baseDepth = 6;
 		int offsetX = -3;
 		int offsetZ = -3;
 		for (int bx = 0; bx < baseWidth; bx++) {
 			for (int bz = 0; bz < baseDepth; bz++) {
-				BlockPos checkPos = new BlockPos(x + offsetX + bx, y - 1, z + offsetZ + bz);
-				if (world.getBlockState(checkPos).getBlock() == Blocks.AIR || world.getBlockState(checkPos).getBlock() == Blocks.VOID_AIR || world.getBlockState(checkPos).getBlock() == Blocks.CAVE_AIR
-						|| world.getBlockState(checkPos).getBlock() == EthernalKronuzModBlocks.CRISTALIZED_DIVINE_WATER.get()) {
+				BlockPos belowPos = new BlockPos(x + offsetX + bx, y - 1, z + offsetZ + bz);
+				if (world.getBlockState(belowPos).getBlock() == Blocks.AIR || world.getBlockState(belowPos).getBlock() == Blocks.VOID_AIR || world.getBlockState(belowPos).getBlock() == Blocks.CAVE_AIR
+						|| world.getBlockState(belowPos).getBlock() == EthernalKronuzModBlocks.CRISTALIZED_DIVINE_WATER.get()) {
 					baseIsSolid = false;
 					break;
 				}
@@ -34,8 +34,9 @@ public class DivinecrystalspikeextralargeAdditionalGenerationConditionProcedure 
 		if (baseIsSolid) {
 			if (world instanceof ServerLevel _serverworld) {
 				StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("ethernal_kronuz", "divine_crystal_spike_extralarge"));
-				if (template != null)
+				if (template != null) {
 					template.placeInWorld(_serverworld, new BlockPos(x, y, z), new BlockPos(x, y, z), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+				}
 			}
 		}
 		return baseIsSolid;

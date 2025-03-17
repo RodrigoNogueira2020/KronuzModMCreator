@@ -6591,7 +6591,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/world/features/DivinecrystalpillarextralargeFeature.java"
         ]
       },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Pillars"
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars Spikes/Pillars"
     },
     {
       "name": "Divinecrystalpillarmedium",
@@ -6605,7 +6605,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/world/features/DivinecrystalpillarmediumFeature.java"
         ]
       },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Pillars"
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars Spikes/Pillars"
     },
     {
       "name": "Divinecrystalpillarsmall",
@@ -6619,63 +6619,63 @@
           "src/main/java/net/mcreator/ethernalkronuz/world/features/DivinecrystalpillarsmallFeature.java"
         ]
       },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Pillars"
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars Spikes/Pillars"
     },
     {
       "name": "Divinecrystalspikeextralarge",
       "type": "structure",
       "sortid": 402,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "divinecrystalspikeextralarge",
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/ethernalkronuz/world/features/DivinecrystalspikeextralargeFeature.java"
         ]
       },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Spikes"
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars Spikes/Spikes"
     },
     {
       "name": "Divinecrystalspikelarge",
       "type": "structure",
       "sortid": 403,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "divinecrystalspikelarge",
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/ethernalkronuz/world/features/DivinecrystalspikelargeFeature.java"
         ]
       },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Spikes"
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars Spikes/Spikes"
     },
     {
       "name": "Divinecrystalspikemedium",
       "type": "structure",
       "sortid": 404,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "divinecrystalspikemedium",
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/ethernalkronuz/world/features/DivinecrystalspikemediumFeature.java"
         ]
       },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Spikes"
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars Spikes/Spikes"
     },
     {
       "name": "Divinecrystalspikesmall",
       "type": "structure",
       "sortid": 405,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "divinecrystalspikesmall",
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/ethernalkronuz/world/features/DivinecrystalspikesmallFeature.java"
         ]
       },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Spikes"
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars Spikes/Spikes"
     },
     {
       "name": "YggbigbushSkyFields",
@@ -7253,21 +7253,21 @@
           "src/main/java/net/mcreator/ethernalkronuz/world/features/DivinecrystalpillargiantFeature.java"
         ]
       },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Pillars"
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars Spikes/Pillars"
     },
     {
       "name": "Divinecrystalspikegiant",
       "type": "structure",
       "sortid": 445,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "divinecrystalspikegiant",
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/ethernalkronuz/world/features/DivinecrystalspikegiantFeature.java"
         ]
       },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Spikes"
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars Spikes/Spikes"
     },
     {
       "name": "YggLogExtension",
@@ -8823,171 +8823,6 @@
         ]
       },
       "path": "~/Dimensions/Asgard/Geracao"
-    },
-    {
-      "name": "DivinecrystalspikeextralargeAdditionalGenerationCondition",
-      "type": "procedure",
-      "sortid": 522,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "divinecrystalspikeextralarge_additional_generation_condition",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/DivinecrystalspikeextralargeAdditionalGenerationConditionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Spikes"
-    },
-    {
-      "name": "DivinecrystalspikelargeAdditionalGenerationCondition",
-      "type": "procedure",
-      "sortid": 523,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "divinecrystalspikelarge_additional_generation_condition",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/DivinecrystalspikelargeAdditionalGenerationConditionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Spikes"
-    },
-    {
-      "name": "DivinecrystalspikemediumAdditionalGenerationCondition",
-      "type": "procedure",
-      "sortid": 524,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "divinecrystalspikemedium_additional_generation_condition",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/DivinecrystalspikemediumAdditionalGenerationConditionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Spikes"
-    },
-    {
-      "name": "DivinecrystalspikesmallAdditionalGenerationCondition",
-      "type": "procedure",
-      "sortid": 525,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "divinecrystalspikesmall_additional_generation_condition",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/DivinecrystalspikesmallAdditionalGenerationConditionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Spikes"
-    },
-    {
-      "name": "DivinecrystalspikegiantAdditionalGenerationCondition",
-      "type": "procedure",
-      "sortid": 526,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "divinecrystalspikegiant_additional_generation_condition",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/DivinecrystalspikegiantAdditionalGenerationConditionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Spikes"
     },
     {
       "name": "YggbigbushSkyFieldsAdditionalGenerationCondition",
@@ -10579,7 +10414,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Pillars"
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars Spikes/Pillars"
     },
     {
       "name": "DivinecrystalpillarmediumAdditionalGenerationCondition",
@@ -10594,7 +10429,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Pillars"
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars Spikes/Pillars"
     },
     {
       "name": "DivinecrystalpillarsmallAdditionalGenerationCondition",
@@ -10609,7 +10444,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Pillars"
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars Spikes/Pillars"
     },
     {
       "name": "DivinecrystalpillargiantAdditionalGenerationCondition",
@@ -10624,7 +10459,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Pillars"
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars Spikes/Pillars"
     },
     {
       "name": "Divinecrystalpillarlarge",
@@ -10638,7 +10473,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/world/features/DivinecrystalpillarlargeFeature.java"
         ]
       },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Pillars"
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars Spikes/Pillars"
     },
     {
       "name": "DivinecrystalpillarlargeAdditionalGenerationCondition",
@@ -10653,7 +10488,82 @@
         ],
         "dependencies": []
       },
-      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars/Pillars"
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars Spikes/Pillars"
+    },
+    {
+      "name": "DivinecrystalspikeextralargeAdditionalGenerationCondition",
+      "type": "procedure",
+      "sortid": 603,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "divinecrystalspikeextralarge_additional_generation_condition",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/DivinecrystalspikeextralargeAdditionalGenerationConditionProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars Spikes/Spikes"
+    },
+    {
+      "name": "DivinecrystalspikelargeAdditionalGenerationCondition",
+      "type": "procedure",
+      "sortid": 604,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "divinecrystalspikelarge_additional_generation_condition",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/DivinecrystalspikelargeAdditionalGenerationConditionProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars Spikes/Spikes"
+    },
+    {
+      "name": "DivinecrystalspikemediumAdditionalGenerationCondition",
+      "type": "procedure",
+      "sortid": 605,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "divinecrystalspikemedium_additional_generation_condition",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/DivinecrystalspikemediumAdditionalGenerationConditionProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars Spikes/Spikes"
+    },
+    {
+      "name": "DivinecrystalspikesmallAdditionalGenerationCondition",
+      "type": "procedure",
+      "sortid": 606,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "divinecrystalspikesmall_additional_generation_condition",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/DivinecrystalspikesmallAdditionalGenerationConditionProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars Spikes/Spikes"
+    },
+    {
+      "name": "DivinecrystalspikegiantAdditionalGenerationCondition",
+      "type": "procedure",
+      "sortid": 607,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "divinecrystalspikegiant_additional_generation_condition",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/DivinecrystalspikegiantAdditionalGenerationConditionProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Dimensions/Asgard/Estruturas/Crystal Pillars Spikes/Spikes"
     }
   ],
   "variable_elements": [
@@ -11978,7 +11888,7 @@
                 "name": "Estruturas",
                 "children": [
                   {
-                    "name": "Crystal Pillars",
+                    "name": "Crystal Pillars Spikes",
                     "children": [
                       {
                         "name": "Pillars",
