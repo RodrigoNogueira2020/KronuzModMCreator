@@ -2,93 +2,77 @@
   "type": "minecraft:chest",
   "pools": [
     {
-      "rolls": 1,
+      "rolls": {
+        "min": 1,
+        "max": 10
+      },
       "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ethernal_kronuz:normal_glow_grass",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 2,
+                "max": 20
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ethernal_kronuz:asgardian_dirt_block",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 2,
+                "max": 10
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ender_pearl",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 2,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:end_stone",
+          "weight": 30,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 10,
+                "max": 20
+              }
+            }
+          ]
+        },
         {
           "type": "minecraft:item",
           "name": "ethernal_kronuz:battle_coin",
-          "weight": 10,
+          "weight": 5,
           "functions": [
             {
               "function": "set_count",
               "count": {
                 "min": 1,
-                "max": 1
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "ethernal_kronuz:freicken",
-          "weight": 10,
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 1,
-                "max": 1
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "ethernal_kronuz:griffin_feather",
-          "weight": 50,
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 1,
-                "max": 10
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "ethernal_kronuz:glow_plant",
-          "weight": 15,
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 1,
-                "max": 3
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "ethernal_kronuz:asgardian_dirt",
-          "weight": 15,
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 5,
-                "max": 10
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "ethernal_kronuz:ygg_wood_sappling",
-          "weight": 20,
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 1,
-                "max": 3
+                "max": 2
               }
             }
           ]
@@ -96,7 +80,7 @@
         {
           "type": "minecraft:item",
           "name": "ethernal_kronuz:bio_luminescent_lily",
-          "weight": 20,
+          "weight": 5,
           "functions": [
             {
               "function": "set_count",
@@ -110,41 +94,41 @@
         {
           "type": "minecraft:item",
           "name": "ethernal_kronuz:glow_plant",
-          "weight": 20,
+          "weight": 10,
           "functions": [
             {
               "function": "set_count",
               "count": {
-                "min": 1,
-                "max": 3
+                "min": 2,
+                "max": 4
               }
             }
           ]
         },
         {
           "type": "minecraft:item",
-          "name": "ethernal_kronuz:double_glow_plant",
-          "weight": 20,
+          "name": "ethernal_kronuz:griffin_feather",
+          "weight": 7,
           "functions": [
             {
               "function": "set_count",
               "count": {
                 "min": 1,
-                "max": 3
+                "max": 10
               }
             }
           ]
         },
         {
           "type": "minecraft:item",
-          "name": "ethernal_kronuz:battle_coin",
-          "weight": 5,
+          "name": "ethernal_kronuz:mosso_crystal_gem",
+          "weight": 10,
           "functions": [
             {
               "function": "set_count",
               "count": {
-                "min": 1,
-                "max": 1
+                "min": 2,
+                "max": 5
               }
             }
           ]
@@ -152,21 +136,7 @@
         {
           "type": "minecraft:item",
           "name": "ethernal_kronuz:divine_bow",
-          "weight": 5,
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 1,
-                "max": 1
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "ethernal_kronuz:backpack",
-          "weight": 10,
+          "weight": 3,
           "functions": [
             {
               "function": "set_count",
