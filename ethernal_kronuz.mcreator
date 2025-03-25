@@ -8152,168 +8152,6 @@
       "path": "~/Dimensions/Asgard/Vegetacao"
     },
     {
-      "name": "PassRadiantLordRoxoTo",
-      "type": "command",
-      "sortid": 499,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pass_radiant_lord_roxo_to",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/command/PassRadiantLordRoxoToCommand.java"
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Passagem de poderes"
-    },
-    {
-      "name": "PassRadiantLordVermelhoTo",
-      "type": "command",
-      "sortid": 500,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pass_radiant_lord_vermelho_to",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/command/PassRadiantLordVermelhoToCommand.java"
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Passagem de poderes"
-    },
-    {
-      "name": "PassRadiantLordVerdeTo",
-      "type": "command",
-      "sortid": 501,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pass_radiant_lord_verde_to",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/command/PassRadiantLordVerdeToCommand.java"
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Passagem de poderes"
-    },
-    {
-      "name": "PassRadiantLordRoxoToPlayer",
-      "type": "procedure",
-      "sortid": 502,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pass_radiant_lord_roxo_to_player",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/PassRadiantLordRoxoToPlayerProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Passagem de poderes"
-    },
-    {
-      "name": "PassRadiantLordVermelhoPlayer",
-      "type": "procedure",
-      "sortid": 503,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pass_radiant_lord_vermelho_player",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/PassRadiantLordVermelhoPlayerProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Passagem de poderes"
-    },
-    {
-      "name": "PassRadiantLordVerdePlayer",
-      "type": "procedure",
-      "sortid": 504,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pass_radiant_lord_verde_player",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/PassRadiantLordVerdePlayerProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Passagem de poderes"
-    },
-    {
       "name": "CrystalizedDivineWater",
       "type": "block",
       "sortid": 133,
@@ -9046,42 +8884,6 @@
       "path": "~/Factions/Big Testas/Transformacao"
     },
     {
-      "name": "GiveRadiantLordEffectsToPassPowers",
-      "type": "procedure",
-      "sortid": 539,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "give_radiant_lord_effects_to_pass_powers",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/GiveRadiantLordEffectsToPassPowersProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Passagem de poderes"
-    },
-    {
       "name": "RemoveFactionPotionsToRemove",
       "type": "procedure",
       "sortid": 540,
@@ -9120,30 +8922,6 @@
         ]
       },
       "path": "~/Remove Stuff/Factions"
-    },
-    {
-      "name": "AscenderEffectsToPassPowers",
-      "type": "procedure",
-      "sortid": 542,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ascender_effects_to_pass_powers",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/AscenderEffectsToPassPowersProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Passagem de poderes"
     },
     {
       "name": "PaintingRadiantLord",
@@ -11072,8 +10850,8 @@
       "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
       "advancements.bt_achievement.descr": "Juntar-se aos Big Testa",
-      "advancements.rl_verde_achievement.title": "Carregado até ao limite",
       "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
+      "advancements.rl_verde_achievement.title": "Carregado até ao limite",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_atention": "Atention",
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
