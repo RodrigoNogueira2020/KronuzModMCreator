@@ -14,59 +14,69 @@ import software.bernie.geckolib3.core.IAnimatable;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.common.ForgeMod;
 
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.projectile.ThrownPotion;
-import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.ai.navigation.PathNavigation;
-import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
-import net.minecraft.world.entity.ai.control.FlyingMoveControl;
+import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.Pose;
-import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.ethernalkronuz.procedures.RadiantLordNoColorTrialPlayerCollidesWithThisEntityProcedure;
+import net.mcreator.ethernalkronuz.init.EthernalKronuzModItems;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModEntities;
 
-public class RadiantLordNoColorTrialEntity extends PathfinderMob implements IAnimatable {
-	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(RadiantLordNoColorTrialEntity.class, EntityDataSerializers.BOOLEAN);
-	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(RadiantLordNoColorTrialEntity.class, EntityDataSerializers.STRING);
-	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(RadiantLordNoColorTrialEntity.class, EntityDataSerializers.STRING);
+public class RadiantLordGreenTrialEntity extends Monster implements IAnimatable {
+	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(RadiantLordGreenTrialEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(RadiantLordGreenTrialEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(RadiantLordGreenTrialEntity.class, EntityDataSerializers.STRING);
 	private AnimationFactory factory = GeckoLibUtil.createFactory(this);
 	private boolean swinging;
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
+	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.GREEN, ServerBossEvent.BossBarOverlay.NOTCHED_12);
 
-	public RadiantLordNoColorTrialEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(EthernalKronuzModEntities.RADIANT_LORD_NO_COLOR_TRIAL.get(), world);
+	public RadiantLordGreenTrialEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(EthernalKronuzModEntities.RADIANT_LORD_GREEN_TRIAL.get(), world);
 	}
 
-	public RadiantLordNoColorTrialEntity(EntityType<RadiantLordNoColorTrialEntity> type, Level world) {
+	public RadiantLordGreenTrialEntity(EntityType<RadiantLordGreenTrialEntity> type, Level world) {
 		super(type, world);
 		xpReward = 0;
-		setNoAi(true);
+		setNoAi(false);
+		setCustomName(new TextComponent("§aTitan Kaleb"));
+		setCustomNameVisible(true);
 		setPersistenceRequired();
-		this.moveControl = new FlyingMoveControl(this, 10, true);
+		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(EthernalKronuzModItems.TERRA_BLADE.get()));
+		this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EthernalKronuzModItems.RL_VERDE_ARMOR_HELMET.get()));
+		this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(EthernalKronuzModItems.RL_VERDE_ARMOR_CHESTPLATE.get()));
+		this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(EthernalKronuzModItems.RL_VERDE_ARMOR_LEGGINGS.get()));
+		this.setItemSlot(EquipmentSlot.FEET, new ItemStack(EthernalKronuzModItems.RL_VERDE_ARMOR_BOOTS.get()));
 	}
 
 	@Override
@@ -96,8 +106,18 @@ public class RadiantLordNoColorTrialEntity extends PathfinderMob implements IAni
 	}
 
 	@Override
-	protected PathNavigation createNavigation(Level world) {
-		return new FlyingPathNavigation(this, world);
+	protected void registerGoals() {
+		super.registerGoals();
+		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
+			@Override
+			protected double getAttackReachSqr(LivingEntity entity) {
+				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
+			}
+		});
+		this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 0.8));
+		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, false));
 	}
 
 	@Override
@@ -111,49 +131,18 @@ public class RadiantLordNoColorTrialEntity extends PathfinderMob implements IAni
 	}
 
 	@Override
+	public void playStepSound(BlockPos pos, BlockState blockIn) {
+		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ethernal_kronuz:elementsfootsteps")), 0.15f, 1);
+	}
+
+	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
-	}
-
-	@Override
-	public boolean causeFallDamage(float l, float d, DamageSource source) {
-		return false;
-	}
-
-	@Override
-	public boolean hurt(DamageSource source, float amount) {
-		if (source.getDirectEntity() instanceof AbstractArrow)
-			return false;
-		if (source.getDirectEntity() instanceof Player)
-			return false;
-		if (source.getDirectEntity() instanceof ThrownPotion || source.getDirectEntity() instanceof AreaEffectCloud)
-			return false;
-		if (source == DamageSource.FALL)
-			return false;
-		if (source == DamageSource.CACTUS)
-			return false;
-		if (source == DamageSource.DROWN)
-			return false;
-		if (source == DamageSource.LIGHTNING_BOLT)
-			return false;
-		if (source.isExplosion())
-			return false;
-		if (source.getMsgId().equals("trident"))
-			return false;
-		if (source == DamageSource.ANVIL)
-			return false;
-		if (source == DamageSource.DRAGON_BREATH)
-			return false;
-		if (source == DamageSource.WITHER)
-			return false;
-		if (source.getMsgId().equals("witherSkull"))
-			return false;
-		return super.hurt(source, amount);
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
 	}
 
 	@Override
@@ -168,40 +157,26 @@ public class RadiantLordNoColorTrialEntity extends PathfinderMob implements IAni
 	}
 
 	@Override
-	public void playerTouch(Player sourceentity) {
-		super.playerTouch(sourceentity);
-		RadiantLordNoColorTrialPlayerCollidesWithThisEntityProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this, sourceentity);
-	}
-
-	@Override
-	public boolean canBreatheUnderwater() {
-		return true;
-	}
-
-	@Override
-	public boolean checkSpawnObstruction(LevelReader world) {
-		return world.isUnobstructed(this);
-	}
-
-	@Override
-	public boolean isPushedByFluid() {
+	public boolean canChangeDimensions() {
 		return false;
 	}
 
 	@Override
-	protected void checkFallDamage(double y, boolean onGroundIn, BlockState state, BlockPos pos) {
+	public void startSeenByPlayer(ServerPlayer player) {
+		super.startSeenByPlayer(player);
+		this.bossInfo.addPlayer(player);
 	}
 
 	@Override
-	public void setNoGravity(boolean ignored) {
-		super.setNoGravity(true);
+	public void stopSeenByPlayer(ServerPlayer player) {
+		super.stopSeenByPlayer(player);
+		this.bossInfo.removePlayer(player);
 	}
 
 	@Override
-	public void aiStep() {
-		super.aiStep();
-		this.updateSwingTime();
-		this.setNoGravity(true);
+	public void customServerAiStep() {
+		super.customServerAiStep();
+		this.bossInfo.setProgress(this.getHealth() / this.getMaxHealth());
 	}
 
 	public static void init() {
@@ -211,45 +186,20 @@ public class RadiantLordNoColorTrialEntity extends PathfinderMob implements IAni
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 1024);
-		builder = builder.add(Attributes.ARMOR, 2.2);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
+		builder = builder.add(Attributes.ARMOR, 10);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1000);
-		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1000);
-		builder = builder.add(Attributes.FLYING_SPEED, 0.3);
-		builder = builder.add(ForgeMod.SWIM_SPEED.get(), 0.3);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.5);
+		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1.2);
 		return builder;
 	}
 
 	private <E extends IAnimatable> PlayState movementPredicate(AnimationEvent<E> event) {
 		if (this.animationprocedure.equals("empty")) {
-			if (this.isAggressive() && event.isMoving()) {
-				event.getController().setAnimation(new AnimationBuilder().addAnimation("transforming", EDefaultLoopTypes.LOOP));
-				return PlayState.CONTINUE;
-			}
 			event.getController().setAnimation(new AnimationBuilder().addAnimation("idle", EDefaultLoopTypes.LOOP));
 			return PlayState.CONTINUE;
 		}
 		return PlayState.STOP;
-	}
-
-	private <E extends IAnimatable> PlayState attackingPredicate(AnimationEvent<E> event) {
-		double d1 = this.getX() - this.xOld;
-		double d0 = this.getZ() - this.zOld;
-		float velocity = (float) Math.sqrt(d1 * d1 + d0 * d0);
-		if (getAttackAnim(event.getPartialTick()) > 0f && !this.swinging) {
-			this.swinging = true;
-			this.lastSwing = level.getGameTime();
-		}
-		if (this.swinging && this.lastSwing + 15L <= level.getGameTime()) {
-			this.swinging = false;
-		}
-		if (this.swinging && event.getController().getAnimationState().equals(software.bernie.geckolib3.core.AnimationState.Stopped)) {
-			event.getController().markNeedsReload();
-			event.getController().setAnimation(new AnimationBuilder().addAnimation("wakeup", EDefaultLoopTypes.PLAY_ONCE));
-			return PlayState.CONTINUE;
-		}
-		return PlayState.CONTINUE;
 	}
 
 	private <E extends IAnimatable> PlayState procedurePredicate(AnimationEvent<E> event) {
@@ -284,7 +234,7 @@ public class RadiantLordNoColorTrialEntity extends PathfinderMob implements IAni
 	protected void tickDeath() {
 		++this.deathTime;
 		if (this.deathTime == 20) {
-			this.remove(RadiantLordNoColorTrialEntity.RemovalReason.KILLED);
+			this.remove(RadiantLordGreenTrialEntity.RemovalReason.KILLED);
 			this.dropExperience();
 		}
 	}
@@ -300,7 +250,6 @@ public class RadiantLordNoColorTrialEntity extends PathfinderMob implements IAni
 	@Override
 	public void registerControllers(AnimationData data) {
 		data.addAnimationController(new AnimationController<>(this, "movement", 4, this::movementPredicate));
-		data.addAnimationController(new AnimationController<>(this, "attacking", 4, this::attackingPredicate));
 		data.addAnimationController(new AnimationController<>(this, "procedure", 4, this::procedurePredicate));
 	}
 

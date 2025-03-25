@@ -5,6 +5,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
 
 import net.mcreator.ethernalkronuz.entity.WarperEntity;
+import net.mcreator.ethernalkronuz.entity.RadiantLordNoColorTrialEntity;
+import net.mcreator.ethernalkronuz.entity.RadiantLordGreenTrialEntity;
 import net.mcreator.ethernalkronuz.entity.GriffinAnimatedEntity;
 
 @Mod.EventBusSubscriber
@@ -20,6 +22,20 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof GriffinAnimatedEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof RadiantLordNoColorTrialEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof RadiantLordGreenTrialEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

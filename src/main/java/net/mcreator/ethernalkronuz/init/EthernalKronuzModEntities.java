@@ -20,8 +20,8 @@ import net.mcreator.ethernalkronuz.entity.WarperEntity;
 import net.mcreator.ethernalkronuz.entity.TerraBladeProjectileEntity;
 import net.mcreator.ethernalkronuz.entity.TechnomortoEntity;
 import net.mcreator.ethernalkronuz.entity.TechnobaldeEntity;
-import net.mcreator.ethernalkronuz.entity.RadiantLordVerdeTrialEntity;
 import net.mcreator.ethernalkronuz.entity.RadiantLordNoColorTrialEntity;
+import net.mcreator.ethernalkronuz.entity.RadiantLordGreenTrialEntity;
 import net.mcreator.ethernalkronuz.entity.NullEntityEntity;
 import net.mcreator.ethernalkronuz.entity.GriffinAnimatedEntity;
 import net.mcreator.ethernalkronuz.entity.GinukaPowerSetupEntity;
@@ -62,14 +62,14 @@ public class EthernalKronuzModEntities {
 			EntityType.Builder.<DivineBowEntity>of(DivineBowEntity::new, MobCategory.MISC).setCustomClientFactory(DivineBowEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<TerraBladeProjectileEntity>> TERRA_BLADE_PROJECTILE = register("projectile_terra_blade_projectile", EntityType.Builder.<TerraBladeProjectileEntity>of(TerraBladeProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(TerraBladeProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<RadiantLordVerdeTrialEntity>> RADIANT_LORD_VERDE_TRIAL = register("radiant_lord_verde_trial",
-			EntityType.Builder.<RadiantLordVerdeTrialEntity>of(RadiantLordVerdeTrialEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
-					.setCustomClientFactory(RadiantLordVerdeTrialEntity::new)
-
-					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<RadiantLordNoColorTrialEntity>> RADIANT_LORD_NO_COLOR_TRIAL = register("radiant_lord_no_color_trial",
 			EntityType.Builder.<RadiantLordNoColorTrialEntity>of(RadiantLordNoColorTrialEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
-					.setCustomClientFactory(RadiantLordNoColorTrialEntity::new).fireImmune().sized(0.6f, 1.8f));
+					.setCustomClientFactory(RadiantLordNoColorTrialEntity::new).fireImmune().sized(5f, 2.5f));
+	public static final RegistryObject<EntityType<RadiantLordGreenTrialEntity>> RADIANT_LORD_GREEN_TRIAL = register("radiant_lord_green_trial",
+			EntityType.Builder.<RadiantLordGreenTrialEntity>of(RadiantLordGreenTrialEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+					.setCustomClientFactory(RadiantLordGreenTrialEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -85,8 +85,8 @@ public class EthernalKronuzModEntities {
 			NullEntityEntity.init();
 			BlessingEntity.init();
 			GriffinAnimatedEntity.init();
-			RadiantLordVerdeTrialEntity.init();
 			RadiantLordNoColorTrialEntity.init();
+			RadiantLordGreenTrialEntity.init();
 		});
 	}
 
@@ -99,7 +99,7 @@ public class EthernalKronuzModEntities {
 		event.put(NULL_ENTITY.get(), NullEntityEntity.createAttributes().build());
 		event.put(BLESSING.get(), BlessingEntity.createAttributes().build());
 		event.put(GRIFFIN_ANIMATED.get(), GriffinAnimatedEntity.createAttributes().build());
-		event.put(RADIANT_LORD_VERDE_TRIAL.get(), RadiantLordVerdeTrialEntity.createAttributes().build());
 		event.put(RADIANT_LORD_NO_COLOR_TRIAL.get(), RadiantLordNoColorTrialEntity.createAttributes().build());
+		event.put(RADIANT_LORD_GREEN_TRIAL.get(), RadiantLordGreenTrialEntity.createAttributes().build());
 	}
 }

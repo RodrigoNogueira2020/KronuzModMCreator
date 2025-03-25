@@ -23,7 +23,6 @@ import net.mcreator.ethernalkronuz.item.TerraBladeItem;
 import net.mcreator.ethernalkronuz.item.SteelCoreASetupItem;
 import net.mcreator.ethernalkronuz.item.SaoPauloItem;
 import net.mcreator.ethernalkronuz.item.SafiraItem;
-import net.mcreator.ethernalkronuz.item.RadiantLordNoColorTrialArmorItem;
 import net.mcreator.ethernalkronuz.item.RLVermelhoArmorItem;
 import net.mcreator.ethernalkronuz.item.RLVerdeArmorItem;
 import net.mcreator.ethernalkronuz.item.RLRoxoArmourItem;
@@ -252,14 +251,10 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> MURASAMA = REGISTRY.register("murasama", () -> new MurasamaItem());
 	public static final RegistryObject<Item> TERRA_BLADE = REGISTRY.register("terra_blade", () -> new TerraBladeItem());
 	public static final RegistryObject<Item> NOKKIA_HAMMER = REGISTRY.register("nokkia_hammer", () -> new NokkiaHammerItem());
-	public static final RegistryObject<Item> RADIANT_LORD_VERDE_TRIAL_SPAWN_EGG = REGISTRY.register("radiant_lord_verde_trial_spawn_egg",
-			() -> new ForgeSpawnEggItem(EthernalKronuzModEntities.RADIANT_LORD_VERDE_TRIAL, -1, -16724992, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB)));
 	public static final RegistryObject<Item> RADIANT_LORD_NO_COLOR_TRIAL_SPAWN_EGG = REGISTRY.register("radiant_lord_no_color_trial_spawn_egg",
 			() -> new ForgeSpawnEggItem(EthernalKronuzModEntities.RADIANT_LORD_NO_COLOR_TRIAL, -1, -16777216, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB)));
-	public static final RegistryObject<Item> RADIANT_LORD_NO_COLOR_TRIAL_ARMOR_HELMET = REGISTRY.register("radiant_lord_no_color_trial_armor_helmet", () -> new RadiantLordNoColorTrialArmorItem.Helmet());
-	public static final RegistryObject<Item> RADIANT_LORD_NO_COLOR_TRIAL_ARMOR_CHESTPLATE = REGISTRY.register("radiant_lord_no_color_trial_armor_chestplate", () -> new RadiantLordNoColorTrialArmorItem.Chestplate());
-	public static final RegistryObject<Item> RADIANT_LORD_NO_COLOR_TRIAL_ARMOR_LEGGINGS = REGISTRY.register("radiant_lord_no_color_trial_armor_leggings", () -> new RadiantLordNoColorTrialArmorItem.Leggings());
-	public static final RegistryObject<Item> RADIANT_LORD_NO_COLOR_TRIAL_ARMOR_BOOTS = REGISTRY.register("radiant_lord_no_color_trial_armor_boots", () -> new RadiantLordNoColorTrialArmorItem.Boots());
+	public static final RegistryObject<Item> RADIANT_LORD_GREEN_TRIAL_SPAWN_EGG = REGISTRY.register("radiant_lord_green_trial_spawn_egg",
+			() -> new ForgeSpawnEggItem(EthernalKronuzModEntities.RADIANT_LORD_GREEN_TRIAL, -1, -16738048, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

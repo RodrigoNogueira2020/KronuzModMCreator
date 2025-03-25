@@ -2,8 +2,8 @@
   "_fv": 39,
   "_type": "animatedentity",
   "definition": {
-    "mobName": "Radiant Lord",
-    "mobLabel": "",
+    "mobName": "§aTitan Kaleb",
+    "mobLabel": "§aTitan Kaleb",
     "mobModelTexture": "rl_base.png",
     "mobModelGlowTexture": "",
     "visualScale": {
@@ -12,8 +12,8 @@
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
-    "modelWidth": 5.0,
-    "modelHeight": 2.5,
+    "modelWidth": 0.6,
+    "modelHeight": 1.8,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
@@ -22,46 +22,46 @@
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -16777216,
+      "value": -16738048,
       "falpha": 0.0
     },
     "creativeTab": {
       "value": "CUSTOM:CreativeTab"
     },
-    "isBoss": false,
-    "bossBarColor": "PINK",
-    "bossBarType": "PROGRESS",
+    "isBoss": true,
+    "bossBarColor": "GREEN",
+    "bossBarType": "NOTCHED_12",
     "equipmentMainHand": {
-      "value": ""
+      "value": "CUSTOM:TerraBlade"
     },
     "equipmentOffHand": {
       "value": ""
     },
     "equipmentHelmet": {
-      "value": ""
+      "value": "CUSTOM:RLVerdeArmor.helmet"
     },
     "equipmentBody": {
-      "value": ""
+      "value": "CUSTOM:RLVerdeArmor.body"
     },
     "equipmentLeggings": {
-      "value": ""
+      "value": "CUSTOM:RLVerdeArmor.legs"
     },
     "equipmentBoots": {
-      "value": ""
+      "value": "CUSTOM:RLVerdeArmor.boots"
     },
-    "mobBehaviourType": "Creature",
+    "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 0,
-    "attackKnockback": 1000.0,
-    "knockbackResistance": 1000.0,
+    "attackStrength": 3,
+    "attackKnockback": 1.2,
+    "knockbackResistance": 0.5,
     "movementSpeed": 0.3,
-    "armorBaseValue": 2.2,
+    "armorBaseValue": 10.0,
     "trackingRange": 64,
     "followRange": 16,
     "health": 1024,
     "xpAmount": 0,
-    "waterMob": true,
-    "flyingMob": true,
+    "waterMob": false,
+    "flyingMob": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
@@ -71,19 +71,19 @@
     "ridable": false,
     "canControlForward": false,
     "canControlStrafe": false,
-    "immuneToFire": true,
-    "immuneToArrows": true,
-    "immuneToFallDamage": true,
-    "immuneToCactus": true,
-    "immuneToDrowning": true,
-    "immuneToLightning": true,
-    "immuneToPotions": true,
-    "immuneToPlayer": true,
-    "immuneToExplosion": true,
-    "immuneToTrident": true,
-    "immuneToAnvil": true,
-    "immuneToWither": true,
-    "immuneToDragonBreath": true,
+    "immuneToFire": false,
+    "immuneToArrows": false,
+    "immuneToFallDamage": false,
+    "immuneToCactus": false,
+    "immuneToDrowning": false,
+    "immuneToLightning": false,
+    "immuneToPotions": false,
+    "immuneToPlayer": false,
+    "immuneToExplosion": false,
+    "immuneToTrident": false,
+    "immuneToAnvil": false,
+    "immuneToWither": false,
+    "immuneToDragonBreath": false,
     "mobDrop": {
       "value": ""
     },
@@ -91,41 +91,38 @@
       "value": ""
     },
     "hurtSound": {
-      "value": ""
+      "value": "entity.generic.hurt"
     },
     "deathSound": {
-      "value": ""
+      "value": "entity.generic.death"
     },
     "stepSound": {
-      "value": ""
+      "value": "CUSTOM:elementsfootsteps"
     },
-    "onPlayerCollidesWith": {
-      "name": "RadiantLordNoColorTrialPlayerCollidesWithThisEntity"
-    },
-    "hasAI": false,
+    "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"116\" y=\"56\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "model": "radiantlordanimated.geo.json",
     "groupName": "",
     "animation1": "idle",
     "animation2": "",
     "animation3": "",
-    "animation4": "wakeup",
+    "animation4": "",
     "animation5": "",
     "animation6": "",
     "animation7": "",
     "animation8": "",
     "animation9": "",
-    "animation10": "transforming",
+    "animation10": "",
     "enable2": false,
     "enable3": false,
-    "enable4": true,
+    "enable4": false,
     "enable5": false,
     "enable6": false,
     "enable7": false,
     "enable8": false,
     "enable9": false,
-    "enable10": true,
+    "enable10": false,
     "breedable": false,
     "tameable": false,
     "disableDeathRotation": false,

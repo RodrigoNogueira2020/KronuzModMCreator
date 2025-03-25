@@ -99,6 +99,7 @@ public class EthernalKronuzModVariables {
 			clone.CoordYBeforeEnterJotunheim = original.CoordYBeforeEnterJotunheim;
 			clone.CoordZBeforeEnterJotunheim = original.CoordZBeforeEnterJotunheim;
 			clone.DimensionBeforeEnterJotunheim = original.DimensionBeforeEnterJotunheim;
+			clone.TouchRLOnce = original.TouchRLOnce;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -309,6 +310,7 @@ public class EthernalKronuzModVariables {
 		public double CoordYBeforeEnterJotunheim = 0;
 		public double CoordZBeforeEnterJotunheim = 0;
 		public double DimensionBeforeEnterJotunheim = 0;
+		public boolean TouchRLOnce = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -344,6 +346,7 @@ public class EthernalKronuzModVariables {
 			nbt.putDouble("CoordYBeforeEnterJotunheim", CoordYBeforeEnterJotunheim);
 			nbt.putDouble("CoordZBeforeEnterJotunheim", CoordZBeforeEnterJotunheim);
 			nbt.putDouble("DimensionBeforeEnterJotunheim", DimensionBeforeEnterJotunheim);
+			nbt.putBoolean("TouchRLOnce", TouchRLOnce);
 			return nbt;
 		}
 
@@ -376,6 +379,7 @@ public class EthernalKronuzModVariables {
 			CoordYBeforeEnterJotunheim = nbt.getDouble("CoordYBeforeEnterJotunheim");
 			CoordZBeforeEnterJotunheim = nbt.getDouble("CoordZBeforeEnterJotunheim");
 			DimensionBeforeEnterJotunheim = nbt.getDouble("DimensionBeforeEnterJotunheim");
+			TouchRLOnce = nbt.getBoolean("TouchRLOnce");
 		}
 	}
 
@@ -427,6 +431,7 @@ public class EthernalKronuzModVariables {
 					variables.CoordYBeforeEnterJotunheim = message.data.CoordYBeforeEnterJotunheim;
 					variables.CoordZBeforeEnterJotunheim = message.data.CoordZBeforeEnterJotunheim;
 					variables.DimensionBeforeEnterJotunheim = message.data.DimensionBeforeEnterJotunheim;
+					variables.TouchRLOnce = message.data.TouchRLOnce;
 				}
 			});
 			context.setPacketHandled(true);
