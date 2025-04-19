@@ -10358,6 +10358,42 @@
         ]
       },
       "path": "~/Factions/Radiant Lords/Trial"
+    },
+    {
+      "name": "RadiantLordGreenTrialOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 614,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "radiant_lord_green_trial_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/RadiantLordGreenTrialOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/Trial"
     }
   ],
   "variable_elements": [
@@ -11332,10 +11368,6 @@
               },
               {
                 "name": "Armaduras",
-                "children": []
-              },
-              {
-                "name": "Passagem de poderes",
                 "children": []
               },
               {

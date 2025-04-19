@@ -1,20 +1,25 @@
 package net.mcreator.ethernalkronuz.entity.model;
 
+import software.bernie.geckolib3.model.provider.data.EntityModelData;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib3.core.processor.IBone;
+import software.bernie.geckolib3.core.manager.AnimationData;
+import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.Minecraft;
 
 import net.mcreator.ethernalkronuz.entity.RadiantLordGreenTrialEntity;
 
 public class RadiantLordGreenTrialModel extends AnimatedGeoModel<RadiantLordGreenTrialEntity> {
 	@Override
 	public ResourceLocation getAnimationFileLocation(RadiantLordGreenTrialEntity entity) {
-		return new ResourceLocation("ethernal_kronuz", "animations/radiantlordanimated.animation.json");
+		return new ResourceLocation("ethernal_kronuz", "animations/radiantlordcoloranimated.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelLocation(RadiantLordGreenTrialEntity entity) {
-		return new ResourceLocation("ethernal_kronuz", "geo/radiantlordanimated.geo.json");
+		return new ResourceLocation("ethernal_kronuz", "geo/radiantlordcoloranimated.geo.json");
 	}
 
 	@Override
@@ -22,4 +27,14 @@ public class RadiantLordGreenTrialModel extends AnimatedGeoModel<RadiantLordGree
 		return new ResourceLocation("ethernal_kronuz", "textures/entities/" + entity.getTexture() + ".png");
 	}
 
+	@Override
+	public void setCustomAnimations(RadiantLordGreenTrialEntity animatable, int instanceId, AnimationEvent animationEvent) {
+		super.setCustomAnimations(animatable, instanceId, animationEvent);
+		IBone head = this.getAnimationProcessor().getBone("head");
+		EntityModelData extraData = (EntityModelData) animationEvent.getExtraDataOfType(EntityModelData.class).get(0);
+		AnimationData manager = animatable.getFactory().getOrCreateAnimationData(instanceId);
+		int unpausedMultiplier = !Minecraft.getInstance().isPaused() || manager.shouldPlayWhilePaused ? 1 : 0;
+		head.setRotationX(head.getRotationX() + extraData.headPitch * ((float) Math.PI / 180F) * unpausedMultiplier);
+		head.setRotationY(head.getRotationY() + extraData.netHeadYaw * ((float) Math.PI / 180F) * unpausedMultiplier);
+	}
 }
