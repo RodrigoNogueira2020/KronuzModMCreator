@@ -5524,8 +5524,8 @@
       "registry_name": "super_back_pack_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/world/inventory/SuperBackPackGUIMenu.java",
-          "src/main/java/net/mcreator/ethernalkronuz/client/gui/SuperBackPackGUIScreen.java"
+          "src/main/java/net/mcreator/ethernalkronuz/client/gui/SuperBackPackGUIScreen.java",
+          "src/main/java/net/mcreator/ethernalkronuz/world/inventory/SuperBackPackGUIMenu.java"
         ]
       },
       "path": "~/Souvenirs/Super Backpack"
@@ -5539,9 +5539,9 @@
       "registry_name": "backpack",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/item/inventory/BackpackInventoryCapability.java",
           "src/main/java/net/mcreator/ethernalkronuz/item/BackpackItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/backpack.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/inventory/BackpackInventoryCapability.java"
+          "src/main/resources/assets/ethernal_kronuz/models/item/backpack.json"
         ]
       },
       "path": "~/Souvenirs/Super Backpack"
@@ -9474,9 +9474,9 @@
       "registry_name": "confirm_rise_gui_roxo",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/world/inventory/ConfirmRiseGUIRoxoMenu.java",
           "src/main/java/net/mcreator/ethernalkronuz/network/ConfirmRiseGUIRoxoButtonMessage.java",
-          "src/main/java/net/mcreator/ethernalkronuz/client/gui/ConfirmRiseGUIRoxoScreen.java"
+          "src/main/java/net/mcreator/ethernalkronuz/client/gui/ConfirmRiseGUIRoxoScreen.java",
+          "src/main/java/net/mcreator/ethernalkronuz/world/inventory/ConfirmRiseGUIRoxoMenu.java"
         ]
       },
       "path": "~/Factions/Radiant Lords/Procedures Ativar RLs/ConfirmRise"
@@ -9490,9 +9490,9 @@
       "registry_name": "confirm_rise_gui_vermelho",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/network/ConfirmRiseGUIVermelhoButtonMessage.java",
           "src/main/java/net/mcreator/ethernalkronuz/client/gui/ConfirmRiseGUIVermelhoScreen.java",
-          "src/main/java/net/mcreator/ethernalkronuz/world/inventory/ConfirmRiseGUIVermelhoMenu.java",
-          "src/main/java/net/mcreator/ethernalkronuz/network/ConfirmRiseGUIVermelhoButtonMessage.java"
+          "src/main/java/net/mcreator/ethernalkronuz/world/inventory/ConfirmRiseGUIVermelhoMenu.java"
         ]
       },
       "path": "~/Factions/Radiant Lords/Procedures Ativar RLs/ConfirmRise"
@@ -9506,8 +9506,8 @@
       "registry_name": "confirm_rise_gui_verde",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/client/gui/ConfirmRiseGUIVerdeScreen.java",
           "src/main/java/net/mcreator/ethernalkronuz/network/ConfirmRiseGUIVerdeButtonMessage.java",
+          "src/main/java/net/mcreator/ethernalkronuz/client/gui/ConfirmRiseGUIVerdeScreen.java",
           "src/main/java/net/mcreator/ethernalkronuz/world/inventory/ConfirmRiseGUIVerdeMenu.java"
         ]
       },
@@ -9764,9 +9764,9 @@
       "registry_name": "jotunheim_frame",
       "metadata": {
         "files": [
+          "src/main/resources/assets/ethernal_kronuz/models/block/jotunheim_frame.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/jotunheim_frame.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/JotunheimFrameBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/block/jotunheim_frame.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/jotunheim_frame.json"
         ]
       },
@@ -9905,9 +9905,9 @@
       "registry_name": "go_to_jotunheim_rlgui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/network/GoToJotunheimRLGUIButtonMessage.java",
+          "src/main/java/net/mcreator/ethernalkronuz/world/inventory/GoToJotunheimRLGUIMenu.java",
           "src/main/java/net/mcreator/ethernalkronuz/client/gui/GoToJotunheimRLGUIScreen.java",
-          "src/main/java/net/mcreator/ethernalkronuz/world/inventory/GoToJotunheimRLGUIMenu.java"
+          "src/main/java/net/mcreator/ethernalkronuz/network/GoToJotunheimRLGUIButtonMessage.java"
         ]
       },
       "path": "~/Dimensions/Jotunheim/GoToJotunheim/RadiantLord"
@@ -9922,8 +9922,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/ethernalkronuz/client/gui/GetOutJotunheimRLGUIScreen.java",
-          "src/main/java/net/mcreator/ethernalkronuz/network/GetOutJotunheimRLGUIButtonMessage.java",
-          "src/main/java/net/mcreator/ethernalkronuz/world/inventory/GetOutJotunheimRLGUIMenu.java"
+          "src/main/java/net/mcreator/ethernalkronuz/world/inventory/GetOutJotunheimRLGUIMenu.java",
+          "src/main/java/net/mcreator/ethernalkronuz/network/GetOutJotunheimRLGUIButtonMessage.java"
         ]
       },
       "path": "~/Dimensions/Jotunheim/GoToJotunheim/RadiantLord"
@@ -10394,6 +10394,60 @@
         ]
       },
       "path": "~/Factions/Radiant Lords/Trial/Green"
+    },
+    {
+      "name": "TheTrialChamberGreen",
+      "type": "structure",
+      "sortid": 615,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_trial_chamber_green",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/world/features/TheTrialChamberGreenFeature.java"
+        ]
+      },
+      "path": "~/Dimensions/Jotunheim/Spawn Trial Chambers"
+    },
+    {
+      "name": "TeleportPlayerToTheTrialChamberGreen",
+      "type": "procedure",
+      "sortid": 616,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleport_player_to_the_trial_chamber_green",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/TeleportPlayerToTheTrialChamberGreenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/Trial/Green"
+    },
+    {
+      "name": "LoadTrialChambers",
+      "type": "procedure",
+      "sortid": 617,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "load_trial_chambers",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/LoadTrialChambersProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Dimensions/Jotunheim"
     }
   ],
   "variable_elements": [
@@ -10892,6 +10946,7 @@
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_atention": "Atention",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_you_will_be_teleported_to_the_tr": "You will be teleported",
       "block.ethernal_kronuz.mosso_crystal_ore": "Mosso Crystal Ore",
       "item.ethernal_kronuz.ganda_moca.desc": "Ganda Moca",
       "gui.ethernal_kronuz.trade_system_gui_techno.label_technobalde": "Technobalde",
@@ -10991,6 +11046,7 @@
       "death.attack.cancro.player": "%1$s is a wannabe Technomorto",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_armor_before_the_rise": "armor before The Rise",
       "subtitles.choro-vc": "",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_radiant_lord_are_you_really_rea": "Radiant Lord",
       "item.ethernal_kronuz.safira": "Kazzio",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_overwritten": "overwritten",
       "biome.ethernal_kronuz.stone_spikes": "Stone Spikes",
@@ -11186,6 +11242,7 @@
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_confirm_the_rise": "Confirm The Rise",
       "item.ethernal_kronuz.technomorto_spawn_egg": "Technomorto Spawn Egg",
       "item.ethernal_kronuz.radiant_lord_no_color_trial_spawn_egg": "Radiant Lord Spawn Egg",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_your_position_as_radiant_lord": "claim your position as",
       "gui.ethernal_kronuz.trade_system_gui_techno.button_11": "1",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_became_a": "Became a",
       "key.ethernal_kronuz.null_entity_invisibility_ability_key_bind": "Invisibility Ability",
@@ -11211,6 +11268,7 @@
       "gui.ethernal_kronuz.get_out_jotunheim_rlgui.label_jotunheim": "Jotunheim",
       "item.ethernal_kronuz.battle_coin": "Battle Coin",
       "item.ethernal_kronuz.mosso_crystal_pickaxe": "Mosso Crystal Pickaxe",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_to_the_trial_to_claim_your_posit": "to The Rise Chamber to",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_remove_your_current": "Remove your current",
       "gui.ethernal_kronuz.trade_system_gui_techno.button_21": "2",
       "item.ethernal_kronuz.faking_ell_hoe": "Faking Ell Hoe",
@@ -11224,6 +11282,7 @@
       "subtitles.technoblade_never_dies": "",
       "item.ethernal_kronuz.freicken.desc": "Freicken",
       "item.ethernal_kronuz.alloy_setup": "Alloy",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_are_you_really_ready": "Are you REALLY ready?",
       "block.ethernal_kronuz.cobbled_heaven_slate_stairs": "Cobbled Heaven Slate Stairs",
       "gui.ethernal_kronuz.trade_system_gui_techno.button_31": "3",
       "block.ethernal_kronuz.nokkia_hammer_block": "Nokkia Hammer Block",
@@ -11785,6 +11844,10 @@
                     "children": []
                   }
                 ]
+              },
+              {
+                "name": "Spawn Trial Chambers",
+                "children": []
               }
             ]
           }

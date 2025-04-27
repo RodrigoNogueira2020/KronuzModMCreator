@@ -36,6 +36,7 @@ import net.mcreator.ethernalkronuz.world.features.YggbigtreeSkyFieldsFeature;
 import net.mcreator.ethernalkronuz.world.features.YggbigtreeFloatingGardenFeature;
 import net.mcreator.ethernalkronuz.world.features.YggbigbushSkyFieldsFeature;
 import net.mcreator.ethernalkronuz.world.features.YggbigbushFloatingGardenFeature;
+import net.mcreator.ethernalkronuz.world.features.TheTrialChamberGreenFeature;
 import net.mcreator.ethernalkronuz.world.features.TaigaFeature;
 import net.mcreator.ethernalkronuz.world.features.SnowFeature;
 import net.mcreator.ethernalkronuz.world.features.SavanhaFeature;
@@ -148,6 +149,8 @@ public class EthernalKronuzModFeatures {
 			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, EndruinssmallFeature.GENERATE_BIOMES, EndruinssmallFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> DIVINECRYSTALPILLARLARGE = register("divinecrystalpillarlarge", DivinecrystalpillarlargeFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, DivinecrystalpillarlargeFeature.GENERATE_BIOMES, DivinecrystalpillarlargeFeature::placedFeature));
+	public static final RegistryObject<Feature<?>> THE_TRIAL_CHAMBER_GREEN = register("the_trial_chamber_green", TheTrialChamberGreenFeature::feature,
+			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, TheTrialChamberGreenFeature.GENERATE_BIOMES, TheTrialChamberGreenFeature::placedFeature));
 
 	private static RegistryObject<Feature<?>> register(String registryname, Supplier<Feature<?>> feature, FeatureRegistration featureRegistration) {
 		FEATURE_REGISTRATIONS.add(featureRegistration);

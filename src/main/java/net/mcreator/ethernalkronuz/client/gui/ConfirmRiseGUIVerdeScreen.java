@@ -89,7 +89,12 @@ public class ConfirmRiseGUIVerdeScreen extends AbstractContainerScreen<ConfirmRi
 		this.font.draw(poseStack, new TranslatableComponent("gui.ethernal_kronuz.confirm_rise_gui_verde.label_armor_before_the_rise"), 105, 16, -16777216);
 		this.font.draw(poseStack, new TranslatableComponent("gui.ethernal_kronuz.confirm_rise_gui_verde.label_or_your_armor_will_be"), 105, 25, -16777216);
 		this.font.draw(poseStack, new TranslatableComponent("gui.ethernal_kronuz.confirm_rise_gui_verde.label_overwritten"), 105, 34, -3407872);
-		this.font.draw(poseStack, new TranslatableComponent("gui.ethernal_kronuz.confirm_rise_gui_verde.label_begin_the_rise"), 123, 70, -16738048);
+		this.font.draw(poseStack, new TranslatableComponent("gui.ethernal_kronuz.confirm_rise_gui_verde.label_begin_the_rise"), 123, 142, -16738048);
+		this.font.draw(poseStack, new TranslatableComponent("gui.ethernal_kronuz.confirm_rise_gui_verde.label_you_will_be_teleported_to_the_tr"), 105, 52, -12829636);
+		this.font.draw(poseStack, new TranslatableComponent("gui.ethernal_kronuz.confirm_rise_gui_verde.label_to_the_trial_to_claim_your_posit"), 105, 61, -12829636);
+		this.font.draw(poseStack, new TranslatableComponent("gui.ethernal_kronuz.confirm_rise_gui_verde.label_your_position_as_radiant_lord"), 105, 70, -12829636);
+		this.font.draw(poseStack, new TranslatableComponent("gui.ethernal_kronuz.confirm_rise_gui_verde.label_radiant_lord_are_you_really_rea"), 105, 79, -16738048);
+		this.font.draw(poseStack, new TranslatableComponent("gui.ethernal_kronuz.confirm_rise_gui_verde.label_are_you_really_ready"), 105, 106, -12829636);
 	}
 
 	@Override
