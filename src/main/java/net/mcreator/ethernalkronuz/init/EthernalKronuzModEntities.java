@@ -65,11 +65,8 @@ public class EthernalKronuzModEntities {
 	public static final RegistryObject<EntityType<RadiantLordNoColorTrialEntity>> RADIANT_LORD_NO_COLOR_TRIAL = register("radiant_lord_no_color_trial",
 			EntityType.Builder.<RadiantLordNoColorTrialEntity>of(RadiantLordNoColorTrialEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 					.setCustomClientFactory(RadiantLordNoColorTrialEntity::new).fireImmune().sized(5f, 2.5f));
-	public static final RegistryObject<EntityType<RadiantLordGreenTrialEntity>> RADIANT_LORD_GREEN_TRIAL = register("radiant_lord_green_trial",
-			EntityType.Builder.<RadiantLordGreenTrialEntity>of(RadiantLordGreenTrialEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
-					.setCustomClientFactory(RadiantLordGreenTrialEntity::new)
-
-					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<RadiantLordGreenTrialEntity>> RADIANT_LORD_GREEN_TRIAL = register("radiant_lord_green_trial", EntityType.Builder.<RadiantLordGreenTrialEntity>of(RadiantLordGreenTrialEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RadiantLordGreenTrialEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

@@ -3701,10 +3701,10 @@
       "registry_name": "terra_blade_projectile",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/terra_blade_projectile.json",
-          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/TerraBladeProjectileRenderer.java",
           "src/main/java/net/mcreator/ethernalkronuz/entity/TerraBladeProjectileEntity.java",
-          "src/main/java/net/mcreator/ethernalkronuz/item/TerraBladeProjectileItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/TerraBladeProjectileItem.java",
+          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/TerraBladeProjectileRenderer.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/terra_blade_projectile.json"
         ]
       },
       "path": "~/Factions/Radiant Lords/Weapons/Terra Blade"
@@ -4725,8 +4725,8 @@
       "registry_name": "ginuka_power_setup",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/GinukaPowerSetupRenderer.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/ginuka_power_setup_spawn_egg.json",
+          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/GinukaPowerSetupRenderer.java",
           "src/main/java/net/mcreator/ethernalkronuz/entity/GinukaPowerSetupEntity.java"
         ]
       },
@@ -4741,8 +4741,8 @@
       "registry_name": "make_a_wish",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/item/MakeAWishItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/make_a_wish.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/make_a_wish.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/MakeAWishItem.java"
         ]
       },
       "path": "~/Mobs/Ginuka Power/Make A Wish"
@@ -4870,9 +4870,9 @@
       "registry_name": "technobalde",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/entity/TechnobaldeEntity.java",
           "src/main/java/net/mcreator/ethernalkronuz/client/renderer/TechnobaldeRenderer.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/technobalde_spawn_egg.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/technobalde_spawn_egg.json",
+          "src/main/java/net/mcreator/ethernalkronuz/entity/TechnobaldeEntity.java"
         ]
       },
       "path": "~/Mobs/Techno Balde"
@@ -5278,8 +5278,8 @@
       "registry_name": "divine_water",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/divine_water.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/DivineWaterItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/DivineWaterItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/divine_water.json"
         ]
       },
       "path": "~/Mobs/Ginuka Power/Divine Water"
@@ -6339,10 +6339,10 @@
       "registry_name": "griffin_animated",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/GriffinAnimatedRenderer.java",
-          "src/main/java/net/mcreator/ethernalkronuz/entity/GriffinAnimatedEntity.java",
           "src/main/java/net/mcreator/ethernalkronuz/entity/model/GriffinAnimatedModel.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/griffin_animated_spawn_egg.json"
+          "src/main/java/net/mcreator/ethernalkronuz/entity/GriffinAnimatedEntity.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/griffin_animated_spawn_egg.json",
+          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/GriffinAnimatedRenderer.java"
         ]
       },
       "path": "~/Mobs/Griffin"
@@ -7942,8 +7942,8 @@
       "registry_name": "warper",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/warper_spawn_egg.json",
           "src/main/java/net/mcreator/ethernalkronuz/entity/WarperEntity.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/warper_spawn_egg.json",
           "src/main/java/net/mcreator/ethernalkronuz/client/renderer/WarperRenderer.java",
           "src/main/java/net/mcreator/ethernalkronuz/entity/model/WarperModel.java"
         ]
@@ -9158,8 +9158,8 @@
       "registry_name": "blade_of_the_void_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/particles/blade_of_the_void_particle.json",
-          "src/main/java/net/mcreator/ethernalkronuz/client/particle/BladeOfTheVoidParticleParticle.java"
+          "src/main/java/net/mcreator/ethernalkronuz/client/particle/BladeOfTheVoidParticleParticle.java",
+          "src/main/resources/assets/ethernal_kronuz/particles/blade_of_the_void_particle.json"
         ]
       },
       "path": "~/Factions/Radiant Lords/Weapons/Blade Of The Void/Special Attack"
@@ -9338,8 +9338,8 @@
       "registry_name": "griffin_feather",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/item/GriffinFeatherItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/griffin_feather.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/griffin_feather.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/GriffinFeatherItem.java"
         ]
       },
       "path": "~/Mobs/Griffin"
@@ -10323,7 +10323,7 @@
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords/Trial"
+      "path": "~/Factions/Radiant Lords/Trial/Green"
     },
     {
       "name": "RadiantLordNoColorTrial",
@@ -10334,13 +10334,13 @@
       "registry_name": "radiant_lord_no_color_trial",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/entity/model/RadiantLordNoColorTrialModel.java",
           "src/main/java/net/mcreator/ethernalkronuz/entity/RadiantLordNoColorTrialEntity.java",
           "src/main/java/net/mcreator/ethernalkronuz/client/renderer/RadiantLordNoColorTrialRenderer.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/radiant_lord_no_color_trial_spawn_egg.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/radiant_lord_no_color_trial_spawn_egg.json",
+          "src/main/java/net/mcreator/ethernalkronuz/entity/model/RadiantLordNoColorTrialModel.java"
         ]
       },
-      "path": "~/Factions/Radiant Lords/Trial"
+      "path": "~/Factions/Radiant Lords/Trial/Green"
     },
     {
       "name": "RadiantLordGreenTrial",
@@ -10351,13 +10351,13 @@
       "registry_name": "radiant_lord_green_trial",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/RadiantLordGreenTrialRenderer.java",
+          "src/main/java/net/mcreator/ethernalkronuz/entity/RadiantLordGreenTrialEntity.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/radiant_lord_green_trial_spawn_egg.json",
-          "src/main/java/net/mcreator/ethernalkronuz/entity/model/RadiantLordGreenTrialModel.java",
-          "src/main/java/net/mcreator/ethernalkronuz/entity/RadiantLordGreenTrialEntity.java"
+          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/RadiantLordGreenTrialRenderer.java",
+          "src/main/java/net/mcreator/ethernalkronuz/entity/model/RadiantLordGreenTrialModel.java"
         ]
       },
-      "path": "~/Factions/Radiant Lords/Trial"
+      "path": "~/Factions/Radiant Lords/Trial/Green"
     },
     {
       "name": "RadiantLordGreenTrialOnInitialEntitySpawn",
@@ -10393,7 +10393,7 @@
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords/Trial"
+      "path": "~/Factions/Radiant Lords/Trial/Green"
     }
   ],
   "variable_elements": [
@@ -10886,8 +10886,8 @@
       "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
       "advancements.bt_achievement.descr": "Juntar-se aos Big Testa",
-      "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "advancements.rl_verde_achievement.title": "Carregado até ao limite",
+      "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_atention": "Atention",
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
@@ -11372,7 +11372,12 @@
               },
               {
                 "name": "Trial",
-                "children": []
+                "children": [
+                  {
+                    "name": "Green",
+                    "children": []
+                  }
+                ]
               }
             ]
           },

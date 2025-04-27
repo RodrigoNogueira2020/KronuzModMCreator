@@ -32,7 +32,7 @@
     "bossBarColor": "GREEN",
     "bossBarType": "NOTCHED_12",
     "equipmentMainHand": {
-      "value": "CUSTOM:TerraBlade"
+      "value": ""
     },
     "equipmentOffHand": {
       "value": ""
@@ -71,7 +71,7 @@
     "ridable": false,
     "canControlForward": false,
     "canControlStrafe": false,
-    "immuneToFire": false,
+    "immuneToFire": true,
     "immuneToArrows": false,
     "immuneToFallDamage": false,
     "immuneToCactus": false,
