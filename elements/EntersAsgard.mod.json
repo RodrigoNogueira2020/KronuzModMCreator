@@ -2,10 +2,10 @@
   "_fv": 39,
   "_type": "achievement",
   "definition": {
-    "achievementName": "God's World",
+    "achievementName": "God's Dimension",
     "achievementDescription": "Enter in Asgard",
     "achievementIcon": {
-      "value": "CUSTOM:BladeOfTheVoidSetup"
+      "value": "CUSTOM:DivineBow"
     },
     "background": "Default",
     "disableDisplay": false,

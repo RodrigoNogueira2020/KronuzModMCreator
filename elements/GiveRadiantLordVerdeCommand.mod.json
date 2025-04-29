@@ -2,7 +2,7 @@
   "_fv": 39,
   "_type": "command",
   "definition": {
-    "commandName": "Ascend Radiant Lord",
+    "commandName": "AscendRadiantLord",
     "permissionLevel": "No requirement",
     "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"185\" y=\"114\"><next><block type=\"entity\"><field name=\"name\">name</field><field name=\"type\">player</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">OpenGUITheRiseGreen</field></block></statement></block></next></block></xml>"
   }

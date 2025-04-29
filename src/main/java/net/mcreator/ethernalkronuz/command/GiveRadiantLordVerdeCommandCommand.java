@@ -18,7 +18,7 @@ import net.mcreator.ethernalkronuz.procedures.OpenGUITheRiseGreenProcedure;
 public class GiveRadiantLordVerdeCommandCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("Ascend Radiant Lord")
+		event.getDispatcher().register(Commands.literal("AscendRadiantLord")
 
 				.then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();

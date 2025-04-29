@@ -1,22 +1,28 @@
 package net.mcreator.ethernalkronuz.procedures;
 
-import net.minecraftforge.server.ServerLifecycleHooks;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.ChatType;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.network.protocol.game.ClientboundUpdateMobEffectPacket;
+import net.minecraft.network.protocol.game.ClientboundPlayerAbilitiesPacket;
+import net.minecraft.network.protocol.game.ClientboundLevelEventPacket;
+import net.minecraft.network.protocol.game.ClientboundGameEventPacket;
+import net.minecraft.core.Registry;
+import net.minecraft.core.BlockPos;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
-import net.minecraft.Util;
 
+import net.mcreator.ethernalkronuz.network.EthernalKronuzModVariables;
 import net.mcreator.ethernalkronuz.entity.RadiantLordGreenTrialEntity;
 
 import java.util.Iterator;
@@ -34,11 +40,6 @@ public class RadiantLordGreenTrialEntityDiesProcedure {
 					while (_iterator.hasNext())
 						_player.getAdvancements().award(_adv, (String) _iterator.next());
 				}
-			}
-			if (!world.isClientSide()) {
-				MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
-				if (_mcserv != null)
-					_mcserv.getPlayerList().broadcastMessage(new TextComponent("\u00A7aBeginning The Rise"), ChatType.SYSTEM, Util.NIL_UUID);
 			}
 			new Object() {
 				private int ticks = 0;
@@ -61,72 +62,83 @@ public class RadiantLordGreenTrialEntityDiesProcedure {
 				}
 
 				private void run() {
-					if (!world.isClientSide()) {
-						MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
-						if (_mcserv != null)
-							_mcserv.getPlayerList().broadcastMessage(new TextComponent("\u00A7a3"), ChatType.SYSTEM, Util.NIL_UUID);
+					if ((sourceentity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).DimensionBeforeEnterJotunheim == 0) {
+						if (sourceentity instanceof ServerPlayer _player && !_player.level.isClientSide()) {
+							ResourceKey<Level> destinationType = Level.OVERWORLD;
+							if (_player.level.dimension() == destinationType)
+								return;
+							ServerLevel nextLevel = _player.server.getLevel(destinationType);
+							if (nextLevel != null) {
+								_player.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
+								_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
+								_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
+								for (MobEffectInstance _effectinstance : _player.getActiveEffects())
+									_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
+								_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
+							}
+						}
 					}
-					new Object() {
-						private int ticks = 0;
-						private float waitTicks;
-						private LevelAccessor world;
-
-						public void start(LevelAccessor world, int waitTicks) {
-							this.waitTicks = waitTicks;
-							MinecraftForge.EVENT_BUS.register(this);
-							this.world = world;
-						}
-
-						@SubscribeEvent
-						public void tick(TickEvent.ServerTickEvent event) {
-							if (event.phase == TickEvent.Phase.END) {
-								this.ticks += 1;
-								if (this.ticks >= this.waitTicks)
-									run();
+					if ((sourceentity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).DimensionBeforeEnterJotunheim == 1) {
+						if (sourceentity instanceof ServerPlayer _player && !_player.level.isClientSide()) {
+							ResourceKey<Level> destinationType = Level.NETHER;
+							if (_player.level.dimension() == destinationType)
+								return;
+							ServerLevel nextLevel = _player.server.getLevel(destinationType);
+							if (nextLevel != null) {
+								_player.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
+								_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
+								_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
+								for (MobEffectInstance _effectinstance : _player.getActiveEffects())
+									_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
+								_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 							}
 						}
-
-						private void run() {
-							if (!world.isClientSide()) {
-								MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
-								if (_mcserv != null)
-									_mcserv.getPlayerList().broadcastMessage(new TextComponent("\u00A7a2"), ChatType.SYSTEM, Util.NIL_UUID);
+					}
+					if ((sourceentity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).DimensionBeforeEnterJotunheim == 2) {
+						if (sourceentity instanceof ServerPlayer _player && !_player.level.isClientSide()) {
+							ResourceKey<Level> destinationType = Level.END;
+							if (_player.level.dimension() == destinationType)
+								return;
+							ServerLevel nextLevel = _player.server.getLevel(destinationType);
+							if (nextLevel != null) {
+								_player.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
+								_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
+								_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
+								for (MobEffectInstance _effectinstance : _player.getActiveEffects())
+									_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
+								_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 							}
-							new Object() {
-								private int ticks = 0;
-								private float waitTicks;
-								private LevelAccessor world;
-
-								public void start(LevelAccessor world, int waitTicks) {
-									this.waitTicks = waitTicks;
-									MinecraftForge.EVENT_BUS.register(this);
-									this.world = world;
-								}
-
-								@SubscribeEvent
-								public void tick(TickEvent.ServerTickEvent event) {
-									if (event.phase == TickEvent.Phase.END) {
-										this.ticks += 1;
-										if (this.ticks >= this.waitTicks)
-											run();
-									}
-								}
-
-								private void run() {
-									if (!world.isClientSide()) {
-										MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
-										if (_mcserv != null)
-											_mcserv.getPlayerList().broadcastMessage(new TextComponent("\u00A7a1"), ChatType.SYSTEM, Util.NIL_UUID);
-									}
-									MinecraftForge.EVENT_BUS.unregister(this);
-								}
-							}.start(world, 20);
-							MinecraftForge.EVENT_BUS.unregister(this);
 						}
-					}.start(world, 20);
+					}
+					if ((sourceentity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).DimensionBeforeEnterJotunheim == 3) {
+						if (sourceentity instanceof ServerPlayer _player && !_player.level.isClientSide()) {
+							ResourceKey<Level> destinationType = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("ethernal_kronuz:asgard"));
+							if (_player.level.dimension() == destinationType)
+								return;
+							ServerLevel nextLevel = _player.server.getLevel(destinationType);
+							if (nextLevel != null) {
+								_player.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
+								_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
+								_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
+								for (MobEffectInstance _effectinstance : _player.getActiveEffects())
+									_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
+								_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
+							}
+						}
+					}
+					{
+						Entity _ent = sourceentity;
+						_ent.teleportTo(((sourceentity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).CoordXBeforeEnterJotunheim),
+								((sourceentity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).CoordYBeforeEnterJotunheim),
+								((sourceentity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).CoordZBeforeEnterJotunheim));
+						if (_ent instanceof ServerPlayer _serverPlayer)
+							_serverPlayer.connection.teleport(((sourceentity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).CoordXBeforeEnterJotunheim),
+									((sourceentity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).CoordYBeforeEnterJotunheim),
+									((sourceentity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).CoordZBeforeEnterJotunheim), _ent.getYRot(), _ent.getXRot());
+					}
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, 20);
+			}.start(world, 400);
 		}
 	}
 }
