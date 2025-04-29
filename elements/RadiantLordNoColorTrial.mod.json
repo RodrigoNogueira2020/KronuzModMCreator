@@ -99,15 +99,12 @@
     "stepSound": {
       "value": ""
     },
-    "whenMobDies": {
-      "name": "RadiantLordNoColorTrialEntityDies"
-    },
     "onPlayerCollidesWith": {
       "name": "RadiantLordNoColorTrialPlayerCollidesWithThisEntity"
     },
     "hasAI": false,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"92\" y=\"55\"></block></xml>",
     "model": "radiantlordanimated.geo.json",
     "groupName": "",
     "animation1": "idle",
@@ -142,7 +139,7 @@
     "rangedItemType": "Default item",
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
-    "height": 1.0,
+    "height": 2.0,
     "spawnThisMob": false,
     "doesDespawnWhenIdle": false,
     "spawningProbability": 20,

@@ -101,8 +101,6 @@ public class RadiantLordNoColorTrialPlayerCollidesWithThisEntityProcedure {
 								}
 
 								private void run() {
-									if (!entity.level.isClientSide())
-										entity.discard();
 									if (world instanceof ServerLevel _level) {
 										Entity entityToSpawn = new RadiantLordGreenTrialEntity(EthernalKronuzModEntities.RADIANT_LORD_GREEN_TRIAL.get(), _level);
 										entityToSpawn.moveTo(x, y, z, 0, 0);
@@ -122,6 +120,8 @@ public class RadiantLordNoColorTrialPlayerCollidesWithThisEntityProcedure {
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
 			}.start(world, 20);
+			if (!entity.level.isClientSide())
+				entity.discard();
 		}
 	}
 }

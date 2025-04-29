@@ -45,7 +45,6 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.ethernalkronuz.procedures.RadiantLordNoColorTrialPlayerCollidesWithThisEntityProcedure;
-import net.mcreator.ethernalkronuz.procedures.RadiantLordNoColorTrialEntityDiesProcedure;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModEntities;
 
 public class RadiantLordNoColorTrialEntity extends PathfinderMob implements IAnimatable {
@@ -88,7 +87,7 @@ public class RadiantLordNoColorTrialEntity extends PathfinderMob implements IAni
 
 	@Override
 	protected float getStandingEyeHeight(Pose poseIn, EntityDimensions sizeIn) {
-		return 1F;
+		return 2F;
 	}
 
 	@Override
@@ -155,12 +154,6 @@ public class RadiantLordNoColorTrialEntity extends PathfinderMob implements IAni
 		if (source.getMsgId().equals("witherSkull"))
 			return false;
 		return super.hurt(source, amount);
-	}
-
-	@Override
-	public void die(DamageSource source) {
-		super.die(source);
-		RadiantLordNoColorTrialEntityDiesProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override

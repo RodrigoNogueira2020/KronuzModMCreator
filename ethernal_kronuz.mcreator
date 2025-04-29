@@ -10518,38 +10518,6 @@
       "path": "~/Dimensions/Jotunheim/Spawn The Rise Chambers"
     },
     {
-      "name": "RadiantLordNoColorTrialEntityDies",
-      "type": "procedure",
-      "sortid": 622,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "radiant_lord_no_color_trial_entity_dies",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/RadiantLordNoColorTrialEntityDiesProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/The Rise/NoColor"
-    },
-    {
       "name": "TheRiseCompleteAdvancement",
       "type": "achievement",
       "sortid": 624,
