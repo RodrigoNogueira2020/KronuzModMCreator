@@ -25,15 +25,15 @@ import net.minecraft.core.BlockPos;
 import java.util.Set;
 import java.util.List;
 
-public class TheTrialChamberGreenFeature extends Feature<NoneFeatureConfiguration> {
-	public static TheTrialChamberGreenFeature FEATURE = null;
+public class TheRiseChamberGreenFeature extends Feature<NoneFeatureConfiguration> {
+	public static TheRiseChamberGreenFeature FEATURE = null;
 	public static Holder<ConfiguredFeature<NoneFeatureConfiguration, ?>> CONFIGURED_FEATURE = null;
 	public static Holder<PlacedFeature> PLACED_FEATURE = null;
 
 	public static Feature<?> feature() {
-		FEATURE = new TheTrialChamberGreenFeature();
-		CONFIGURED_FEATURE = FeatureUtils.register("ethernal_kronuz:the_trial_chamber_green", FEATURE, FeatureConfiguration.NONE);
-		PLACED_FEATURE = PlacementUtils.register("ethernal_kronuz:the_trial_chamber_green", CONFIGURED_FEATURE, List.of());
+		FEATURE = new TheRiseChamberGreenFeature();
+		CONFIGURED_FEATURE = FeatureUtils.register("ethernal_kronuz:the_rise_chamber_green", FEATURE, FeatureConfiguration.NONE);
+		PLACED_FEATURE = PlacementUtils.register("ethernal_kronuz:the_rise_chamber_green", CONFIGURED_FEATURE, List.of());
 		return FEATURE;
 	}
 
@@ -45,7 +45,7 @@ public class TheTrialChamberGreenFeature extends Feature<NoneFeatureConfiguratio
 	private final Set<ResourceKey<Level>> generate_dimensions = Set.of(ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("ethernal_kronuz:jotunheim")));
 	private StructureTemplate template = null;
 
-	public TheTrialChamberGreenFeature() {
+	public TheRiseChamberGreenFeature() {
 		super(NoneFeatureConfiguration.CODEC);
 	}
 

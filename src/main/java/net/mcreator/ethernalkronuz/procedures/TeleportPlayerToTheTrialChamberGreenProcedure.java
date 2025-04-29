@@ -14,10 +14,33 @@ import net.minecraft.network.protocol.game.ClientboundGameEventPacket;
 import net.minecraft.core.Registry;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.ethernalkronuz.network.EthernalKronuzModVariables;
+
 public class TeleportPlayerToTheTrialChamberGreenProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
+		{
+			double _setval = entity.getX();
+			entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.CoordXBeforeEnterAsgard = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
+			double _setval = entity.getY();
+			entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.CoordYBeforeEnterAsgard = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
+			double _setval = entity.getZ();
+			entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.CoordZBeforeEnterAsgard = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
 		if (entity instanceof ServerPlayer _player && !_player.level.isClientSide()) {
 			ResourceKey<Level> destinationType = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("ethernal_kronuz:jotunheim"));
 			if (_player.level.dimension() == destinationType)
@@ -32,5 +55,7 @@ public class TeleportPlayerToTheTrialChamberGreenProcedure {
 				_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 			}
 		}
+		if (entity instanceof ServerPlayer _serverPlayer)
+			_serverPlayer.setRespawnPosition(_serverPlayer.level.dimension(), new BlockPos(0, 1000, -50), _serverPlayer.getYRot(), true, false);
 	}
 }

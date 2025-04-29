@@ -45,6 +45,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.ethernalkronuz.procedures.RadiantLordNoColorTrialPlayerCollidesWithThisEntityProcedure;
+import net.mcreator.ethernalkronuz.procedures.RadiantLordNoColorTrialEntityDiesProcedure;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModEntities;
 
 public class RadiantLordNoColorTrialEntity extends PathfinderMob implements IAnimatable {
@@ -157,6 +158,12 @@ public class RadiantLordNoColorTrialEntity extends PathfinderMob implements IAni
 	}
 
 	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		RadiantLordNoColorTrialEntityDiesProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
+	}
+
+	@Override
 	public void baseTick() {
 		super.baseTick();
 		this.refreshDimensions();
@@ -209,15 +216,15 @@ public class RadiantLordNoColorTrialEntity extends PathfinderMob implements IAni
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0);
 		builder = builder.add(Attributes.MAX_HEALTH, 1024);
-		builder = builder.add(Attributes.ARMOR, 2.2);
+		builder = builder.add(Attributes.ARMOR, 100);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1000);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1000);
-		builder = builder.add(Attributes.FLYING_SPEED, 0.3);
-		builder = builder.add(ForgeMod.SWIM_SPEED.get(), 0.3);
+		builder = builder.add(Attributes.FLYING_SPEED, 0);
+		builder = builder.add(ForgeMod.SWIM_SPEED.get(), 0);
 		return builder;
 	}
 

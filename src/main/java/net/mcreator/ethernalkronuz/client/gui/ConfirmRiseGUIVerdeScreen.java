@@ -76,7 +76,7 @@ public class ConfirmRiseGUIVerdeScreen extends AbstractContainerScreen<ConfirmRi
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, new TranslatableComponent("gui.ethernal_kronuz.confirm_rise_gui_verde.label_confirm_the_rise"), -20, -2, -16777216);
+		this.font.draw(poseStack, new TranslatableComponent("gui.ethernal_kronuz.confirm_rise_gui_verde.label_confirm_the_rise"), 6, -2, -16777216);
 		this.font.draw(poseStack, new TranslatableComponent("gui.ethernal_kronuz.confirm_rise_gui_verde.label_became_a"), -29, 34, -16777216);
 		this.font.draw(poseStack, new TranslatableComponent("gui.ethernal_kronuz.confirm_rise_gui_verde.label_radiant_lord"), 15, 34, -16738048);
 		this.font.draw(poseStack, new TranslatableComponent("gui.ethernal_kronuz.confirm_rise_gui_verde.label_able_to_fly"), -29, 61, -16777216);

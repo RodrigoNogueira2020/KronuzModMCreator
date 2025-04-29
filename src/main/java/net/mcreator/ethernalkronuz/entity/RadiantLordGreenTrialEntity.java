@@ -52,7 +52,9 @@ import net.minecraft.network.chat.TextComponent;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.ethernalkronuz.procedures.RadiantLordGreenTrialThisEntityKillsAnotherOneProcedure;
 import net.mcreator.ethernalkronuz.procedures.RadiantLordGreenTrialOnInitialEntitySpawnProcedure;
+import net.mcreator.ethernalkronuz.procedures.RadiantLordGreenTrialEntityDiesProcedure;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModItems;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModEntities;
 
@@ -160,10 +162,22 @@ public class RadiantLordGreenTrialEntity extends Monster implements IAnimatable 
 	}
 
 	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		RadiantLordGreenTrialEntityDiesProcedure.execute(this.level, this, source.getEntity());
+	}
+
+	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
 		RadiantLordGreenTrialOnInitialEntitySpawnProcedure.execute(world, this.getX(), this.getY(), this.getZ(), this);
 		return retval;
+	}
+
+	@Override
+	public void awardKillScore(Entity entity, int score, DamageSource damageSource) {
+		super.awardKillScore(entity, score, damageSource);
+		RadiantLordGreenTrialThisEntityKillsAnotherOneProcedure.execute(entity);
 	}
 
 	@Override

@@ -19,7 +19,7 @@ import net.minecraft.core.BlockPos;
 import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
-public class LoadTrialChambersProcedure {
+public class LoadTheRiseChambersProcedure {
 	@SubscribeEvent
 	public static void onWorldLoad(WorldEvent.Load event) {
 		execute(event, event.getWorld());
@@ -34,18 +34,6 @@ public class LoadTrialChambersProcedure {
 			LevelAccessor _worldorig = world;
 			world = _origLevel.getServer().getLevel(ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("ethernal_kronuz:jotunheim")));
 			if (world != null) {
-				if (world instanceof ServerLevel _serverworld) {
-					StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("ethernal_kronuz", "green_trial"));
-					if (template != null) {
-						template.placeInWorld(_serverworld, new BlockPos(-50, 1000, 0), new BlockPos(-50, 1000, 0), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-					}
-				}
-				if (world instanceof ServerLevel _serverworld) {
-					StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("ethernal_kronuz", "green_trial"));
-					if (template != null) {
-						template.placeInWorld(_serverworld, new BlockPos(50, 1000, 0), new BlockPos(50, 1000, 0), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-					}
-				}
 				if (world instanceof ServerLevel _serverworld) {
 					StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("ethernal_kronuz", "green_trial"));
 					if (template != null) {

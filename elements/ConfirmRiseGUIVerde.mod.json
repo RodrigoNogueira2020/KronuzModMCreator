@@ -25,13 +25,13 @@
         "data": {
           "name": "label_confirm_the_rise",
           "text": {
-            "fixedValue": "Confirm The Rise"
+            "fixedValue": "The Rise"
           },
           "color": {
             "value": -16777216,
             "falpha": 0.0
           },
-          "x": 105,
+          "x": 132,
           "y": 35
         }
       },
@@ -236,7 +236,7 @@
           "name": "button_rise",
           "text": "Rise",
           "onClick": {
-            "name": "RiseRadiantLordVerdeAfterTheRiseConfirmation"
+            "name": "TeleportPlayerToTheTrialChamberGreen"
           },
           "width": 46,
           "height": 20,
