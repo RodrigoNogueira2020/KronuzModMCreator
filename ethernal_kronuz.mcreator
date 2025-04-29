@@ -1084,18 +1084,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -1118,18 +1106,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -10448,42 +10424,6 @@
       "path": "~/Factions/Radiant Lords/The Rise/Green"
     },
     {
-      "name": "OpenGUITheRiseGreen",
-      "type": "procedure",
-      "sortid": 619,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_gui_the_rise_green",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/OpenGUITheRiseGreenProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs/Verde"
-    },
-    {
       "name": "LoadTheRiseChambers",
       "type": "procedure",
       "sortid": 620,
@@ -10530,6 +10470,77 @@
         ]
       },
       "path": "~/Achievements/Faccoes/Radiant Lords"
+    },
+    {
+      "name": "TheRiseParchment",
+      "type": "item",
+      "sortid": 625,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_rise_parchment",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ethernal_kronuz/models/item/the_rise_parchment.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/TheRiseParchmentItem.java"
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs"
+    },
+    {
+      "name": "TheRiseParchmentRightclicked",
+      "type": "procedure",
+      "sortid": 626,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_rise_parchment_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/TheRiseParchmentRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs"
+    },
+    {
+      "name": "GiveGreenParchment",
+      "type": "procedure",
+      "sortid": 627,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "give_green_parchment",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/GiveGreenParchmentProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs/Verde"
     }
   ],
   "variable_elements": [
@@ -11030,13 +11041,13 @@
       "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
       "advancements.bt_achievement.descr": "Join Big Testa",
-      "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "advancements.rl_verde_achievement.title": "The Third",
+      "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_atention": "Atention",
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
-      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_you_will_be_teleported_to_the_tr": "You will be teleported",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_atention": "Atention",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_you_will_be_teleported_to_the_tr": "You will be teleported",
       "block.ethernal_kronuz.mosso_crystal_ore": "Mosso Crystal Ore",
       "item.ethernal_kronuz.ganda_moca.desc": "Ganda Moca",
       "gui.ethernal_kronuz.trade_system_gui_techno.label_technobalde": "Technobalde",
@@ -11240,6 +11251,7 @@
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_or_your_armor_will_be": "or your armor will be",
       "block.ethernal_kronuz.cracked_heaven_slate_bricks_slabs": "Cracked Heaven Slate Bricks Slabs",
       "entity.ethernal_kronuz.griffin_animated": "Griffin",
+      "item.ethernal_kronuz.the_rise_parchment": "The Rise Parchment",
       "item.ethernal_kronuz.backpack": "Backpack",
       "item.ethernal_kronuz.murasama": "Murasama",
       "item.ethernal_kronuz.freaky": "Janela",

@@ -214,7 +214,7 @@ public class RiseRadiantLordVerdeAfterTheRiseConfirmationProcedure {
 										if (!world.isClientSide()) {
 											MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
 											if (_mcserv != null)
-												_mcserv.getPlayerList().broadcastMessage(new TextComponent("\u00A7aThe Titan Kaleb is AMONGUS!"), ChatType.SYSTEM, Util.NIL_UUID);
+												_mcserv.getPlayerList().broadcastMessage(new TextComponent("\u00A7aThe Rise of Titan Kaleb has been completed"), ChatType.SYSTEM, Util.NIL_UUID);
 										}
 									}
 									MinecraftForge.EVENT_BUS.unregister(this);

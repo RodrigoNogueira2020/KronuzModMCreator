@@ -12,7 +12,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.Commands;
 
-import net.mcreator.ethernalkronuz.procedures.OpenGUITheRiseGreenProcedure;
+import net.mcreator.ethernalkronuz.procedures.GiveGreenParchmentProcedure;
 
 @Mod.EventBusSubscriber
 public class GiveRadiantLordVerdeCommandCommand {
@@ -30,7 +30,7 @@ public class GiveRadiantLordVerdeCommandCommand {
 						entity = FakePlayerFactory.getMinecraft(world);
 					Direction direction = entity.getDirection();
 
-					OpenGUITheRiseGreenProcedure.execute(world, x, y, z, entity);
+					GiveGreenParchmentProcedure.execute(entity);
 					return 0;
 				})));
 	}
