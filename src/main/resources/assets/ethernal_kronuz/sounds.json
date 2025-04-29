@@ -295,5 +295,14 @@
         "stream": false
       }
     ]
+  },
+  "template_boss_music": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:template_boss_music",
+        "stream": false
+      }
+    ]
   }
 }
