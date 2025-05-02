@@ -1,6 +1,7 @@
 package net.mcreator.ethernalkronuz.item;
 
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.TooltipFlag;
@@ -55,6 +56,11 @@ public class NokkiaHammerItem extends PickaxeItem {
 				return Ingredient.EMPTY;
 			}
 		}, 1, 96f, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).fireResistant());
+	}
+
+	@Override
+	public float getDestroySpeed(ItemStack itemstack, BlockState blockstate) {
+		return 1000f;
 	}
 
 	@Override
