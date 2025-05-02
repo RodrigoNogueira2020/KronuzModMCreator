@@ -15,6 +15,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.tags.BlockTags;
@@ -24,6 +25,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.ChatFormatting;
 
 import net.mcreator.ethernalkronuz.procedures.TerraBladeShootsProcedure;
+import net.mcreator.ethernalkronuz.procedures.KillNonRLsProcedure;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModTabs;
 
 import java.util.List;
@@ -104,6 +106,12 @@ public class TerraBladeItem extends PickaxeItem {
 	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 		itemstack.hurtAndBreak(2, entity, i -> i.broadcastBreakEvent(EquipmentSlot.MAINHAND));
 		return true;
+	}
+
+	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		KillNonRLsProcedure.execute(entity);
 	}
 
 	@Override

@@ -1,6 +1,8 @@
 package net.mcreator.ethernalkronuz.item;
 
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.TooltipFlag;
@@ -11,15 +13,20 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.particles.BlockParticleOption;
+import net.minecraft.core.BlockPos;
 import net.minecraft.ChatFormatting;
 
+import net.mcreator.ethernalkronuz.procedures.KillNonRLsProcedure;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModTabs;
 
 import java.util.List;
@@ -27,7 +34,7 @@ import java.util.List;
 public class NokkiaHammerItem extends PickaxeItem {
 	private static final int COOLDOWN_TICKS = 200;
 	private static final double RADIUS = 5.0;
-	private static final double LAUNCH_POWER = 1.5;
+	private static final double LAUNCH_POWER = 1;
 
 	public NokkiaHammerItem() {
 		super(new Tier() {
@@ -58,6 +65,11 @@ public class NokkiaHammerItem extends PickaxeItem {
 	}
 
 	@Override
+	public float getDestroySpeed(ItemStack itemstack, BlockState blockstate) {
+		return 1000f;
+	}
+
+	@Override
 	public Component getName(ItemStack stack) {
 		return new TextComponent("Nokkia Hammer").withStyle(ChatFormatting.DARK_RED);
 	}
@@ -70,23 +82,40 @@ public class NokkiaHammerItem extends PickaxeItem {
 	}
 
 	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		KillNonRLsProcedure.execute(entity);
+	}
+
+	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
 		ItemStack itemstack = player.getItemInHand(hand);
 		if (player.getCooldowns().isOnCooldown(itemstack.getItem()))
 			return InteractionResultHolder.fail(itemstack);
 		if (!world.isClientSide) {
-			AABB area = player.getBoundingBox().inflate(RADIUS);
-			List<Entity> entities = world.getEntities(player, area);
+			AABB cubeArea = new AABB(player.getX() - RADIUS, player.getY() - RADIUS, player.getZ() - RADIUS, player.getX() + RADIUS, player.getY() + RADIUS, player.getZ() + RADIUS);
+			List<Entity> entities = world.getEntities(player, cubeArea, e -> e instanceof LivingEntity && e != player);
 			for (Entity entity : entities) {
-				if (entity instanceof LivingEntity && entity != player) {
-					entity.setDeltaMovement(entity.getDeltaMovement().add(0, LAUNCH_POWER, 0));
-					entity.hurtMarked = true;
-				}
+				entity.setDeltaMovement(entity.getDeltaMovement().add(0, LAUNCH_POWER, 0));
+				entity.hurtMarked = true;
+				if (entity instanceof LivingEntity _entity)
+					_entity.hurt(new DamageSource("nokkiahammer").bypassArmor(), 10);
 			}
 			world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ANVIL_LAND, SoundSource.PLAYERS, 1.0F, 0.5F);
 			for (int i = 0; i < 30; i++)
 				world.addParticle(ParticleTypes.CLOUD, player.getX(), player.getY() + 1, player.getZ(), (Math.random() - 0.5) * 0.5, 0.5, (Math.random() - 0.5) * 0.5);
 			player.getCooldowns().addCooldown(itemstack.getItem(), COOLDOWN_TICKS);
+			for (int dx = -2; dx <= 2; dx++) {
+				for (int dy = -2; dy <= 2; dy++) {
+					for (int dz = -2; dz <= 2; dz++) {
+						BlockPos pos = new BlockPos(player.getX() + dx, player.getY() + dy, player.getZ() + dz);
+						BlockState blockState = world.getBlockState(pos);
+						if (!blockState.isAir() && blockState.getBlock() != Blocks.BEDROCK) {
+							((ServerLevel) world).sendParticles(new BlockParticleOption(ParticleTypes.BLOCK, blockState), pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, 5, 0.2, 0.5, 0.2, 0.25);
+						}
+					}
+				}
+			}
 		}
 		return InteractionResultHolder.success(itemstack);
 	}

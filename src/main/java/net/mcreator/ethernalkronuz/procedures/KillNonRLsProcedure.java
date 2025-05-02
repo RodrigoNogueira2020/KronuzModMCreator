@@ -25,24 +25,26 @@ public class KillNonRLsProcedure {
 				}
 				return false;
 			}
-		}.checkGamemode(entity) && ((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordRoxoPlayer
-				|| (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordVerdePlayer
-				|| (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordVermelhoPlayer))) {
-			if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(EthernalKronuzModItems.BLADE_OF_THE_VOID.get())) : false) {
-				if (entity instanceof LivingEntity _entity)
-					_entity.hurt(new DamageSource("BODV").bypassArmor(), (float) Double.POSITIVE_INFINITY);
-			}
-			if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(EthernalKronuzModItems.TERRA_BLADE.get())) : false) {
-				if (entity instanceof LivingEntity _entity)
-					_entity.hurt(new DamageSource("terrablade").bypassArmor(), (float) Double.POSITIVE_INFINITY);
-			}
-			if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(EthernalKronuzModItems.MURASAMA.get())) : false) {
-				if (entity instanceof LivingEntity _entity)
-					_entity.hurt(new DamageSource("murasama").bypassArmor(), (float) Double.POSITIVE_INFINITY);
-			}
-			if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(EthernalKronuzModItems.NOKKIA_HAMMER.get())) : false) {
-				if (entity instanceof LivingEntity _entity)
-					_entity.hurt(new DamageSource("nokkiahammer").bypassArmor(), (float) Double.POSITIVE_INFINITY);
+		}.checkGamemode(entity))) {
+			if (!((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordRoxoPlayer
+					|| (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordVerdePlayer
+					|| (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordVermelhoPlayer)) {
+				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(EthernalKronuzModItems.BLADE_OF_THE_VOID.get())) : false) {
+					if (entity instanceof LivingEntity _entity)
+						_entity.hurt(new DamageSource("BODV").bypassArmor(), (float) Double.POSITIVE_INFINITY);
+				}
+				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(EthernalKronuzModItems.TERRA_BLADE.get())) : false) {
+					if (entity instanceof LivingEntity _entity)
+						_entity.hurt(new DamageSource("terrablade").bypassArmor(), (float) Double.POSITIVE_INFINITY);
+				}
+				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(EthernalKronuzModItems.MURASAMA.get())) : false) {
+					if (entity instanceof LivingEntity _entity)
+						_entity.hurt(new DamageSource("murasama").bypassArmor(), (float) Double.POSITIVE_INFINITY);
+				}
+				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(EthernalKronuzModItems.NOKKIA_HAMMER.get())) : false) {
+					if (entity instanceof LivingEntity _entity)
+						_entity.hurt(new DamageSource("nokkiahammer").bypassArmor(), (float) Double.POSITIVE_INFINITY);
+				}
 			}
 		}
 	}
