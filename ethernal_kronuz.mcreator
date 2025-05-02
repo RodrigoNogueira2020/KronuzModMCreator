@@ -9392,8 +9392,8 @@
       "registry_name": "murasama_dash_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/particles/murasama_dash_particle.json",
-          "src/main/java/net/mcreator/ethernalkronuz/client/particle/MurasamaDashParticleParticle.java"
+          "src/main/java/net/mcreator/ethernalkronuz/client/particle/MurasamaDashParticleParticle.java",
+          "src/main/resources/assets/ethernal_kronuz/particles/murasama_dash_particle.json"
         ]
       },
       "path": "~/Factions/Radiant Lords/Weapons/Murasama/Special Attack"
