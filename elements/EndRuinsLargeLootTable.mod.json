@@ -17,7 +17,7 @@
               "value": "Items.ENDER_PEARL"
             },
             "weight": 15,
-            "minCount": 3,
+            "minCount": 2,
             "maxCount": 5,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
@@ -126,7 +126,7 @@
           {
             "type": "item",
             "item": {
-              "value": "Blocks.END_PORTAL"
+              "value": "CUSTOM:NokkiaHammer"
             },
             "weight": 2,
             "minCount": 1,

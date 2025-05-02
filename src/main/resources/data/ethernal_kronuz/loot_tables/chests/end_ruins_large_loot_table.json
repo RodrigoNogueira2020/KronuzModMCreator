@@ -15,7 +15,7 @@
             {
               "function": "set_count",
               "count": {
-                "min": 3,
+                "min": 2,
                 "max": 5
               }
             }
@@ -121,7 +121,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:end_portal",
+          "name": "ethernal_kronuz:nokkia_hammer",
           "weight": 2,
           "functions": [
             {
