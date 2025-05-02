@@ -37,8 +37,8 @@ public class MurasamaDashParticleParticle extends TextureSheetParticle {
 		this.spriteSet = spriteSet;
 		this.setSize(0.2f, 0.2f);
 
-		this.lifetime = 12;
-		this.gravity = 0f;
+		this.lifetime = 20;
+		this.gravity = 0.25f;
 		this.hasPhysics = true;
 		this.xd = vx * 1;
 		this.yd = vy * 1;

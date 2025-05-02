@@ -72,13 +72,6 @@ public class MuramasaDashAbilityProcedure {
 					}
 				}
 			}
-			if (entity instanceof Player _player) {
-				for (int i = 0; i < 3; i++) {
-					_player.setYRot(_player.getYRot() + 120);
-					_player.yRotO = _player.getYRot();
-					_player.xRotO = _player.getXRot();
-				}
-			}
 			if (entity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 40);
 			if (world instanceof ServerLevel _level) {
