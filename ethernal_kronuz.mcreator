@@ -5744,9 +5744,6 @@
       "locked_code": false,
       "registry_name": "nokkia_hammer_click_roxo",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/NokkiaHammerClickRoxoProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",

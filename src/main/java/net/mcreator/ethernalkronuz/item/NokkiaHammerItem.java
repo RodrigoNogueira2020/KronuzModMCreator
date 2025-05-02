@@ -12,6 +12,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.sounds.SoundSource;
@@ -29,7 +30,7 @@ import java.util.List;
 public class NokkiaHammerItem extends PickaxeItem {
 	private static final int COOLDOWN_TICKS = 200;
 	private static final double RADIUS = 5.0;
-	private static final double LAUNCH_POWER = 1.5;
+	private static final double LAUNCH_POWER = 1;
 
 	public NokkiaHammerItem() {
 		super(new Tier() {
@@ -88,13 +89,13 @@ public class NokkiaHammerItem extends PickaxeItem {
 		if (player.getCooldowns().isOnCooldown(itemstack.getItem()))
 			return InteractionResultHolder.fail(itemstack);
 		if (!world.isClientSide) {
-			AABB area = player.getBoundingBox().inflate(RADIUS);
-			List<Entity> entities = world.getEntities(player, area);
+			AABB cubeArea = new AABB(player.getX() - RADIUS, player.getY() - RADIUS, player.getZ() - RADIUS, player.getX() + RADIUS, player.getY() + RADIUS, player.getZ() + RADIUS);
+			List<Entity> entities = world.getEntities(player, cubeArea, e -> e instanceof LivingEntity && e != player);
 			for (Entity entity : entities) {
-				if (entity instanceof LivingEntity && entity != player) {
-					entity.setDeltaMovement(entity.getDeltaMovement().add(0, LAUNCH_POWER, 0));
-					entity.hurtMarked = true;
-				}
+				entity.setDeltaMovement(entity.getDeltaMovement().add(0, LAUNCH_POWER, 0));
+				entity.hurtMarked = true;
+				if (entity instanceof LivingEntity _entity)
+					_entity.hurt(new DamageSource("nokkiahammer").bypassArmor(), 10);
 			}
 			world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ANVIL_LAND, SoundSource.PLAYERS, 1.0F, 0.5F);
 			for (int i = 0; i < 30; i++)
