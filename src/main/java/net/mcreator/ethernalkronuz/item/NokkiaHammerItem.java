@@ -21,6 +21,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.ChatFormatting;
 
+import net.mcreator.ethernalkronuz.procedures.KillNonRLsProcedure;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModTabs;
 
 import java.util.List;
@@ -73,6 +74,12 @@ public class NokkiaHammerItem extends PickaxeItem {
 		super.appendHoverText(itemstack, world, list, flag);
 		list.add(new TextComponent("§cSpecial Ability: §eSmash Quake").withStyle(ChatFormatting.GOLD));
 		list.add(new TextComponent("\u00A7fRight-click §7projects all entities within a 5 block radius").withStyle(ChatFormatting.GRAY));
+	}
+
+	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		KillNonRLsProcedure.execute(entity);
 	}
 
 	@Override
