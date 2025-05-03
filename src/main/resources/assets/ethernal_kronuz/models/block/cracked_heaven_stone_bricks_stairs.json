@@ -1,8 +1,0 @@
-{
-  "parent": "block/stairs",
-  "textures": {
-    "bottom": "ethernal_kronuz:blocks/cracked_heavenstone_bricks",
-    "top": "ethernal_kronuz:blocks/cracked_heavenstone_bricks",
-    "side": "ethernal_kronuz:blocks/cracked_heavenstone_bricks"
-  }
-}

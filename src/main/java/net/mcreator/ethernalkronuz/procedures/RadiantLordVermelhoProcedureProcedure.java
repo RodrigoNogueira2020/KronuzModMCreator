@@ -43,36 +43,21 @@ public class RadiantLordVermelhoProcedureProcedure {
 						: false)
 				&& (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
 						? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("minecraft:adventure/two_birds_one_arrow"))).isDone()
-						: false)
-				&& (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
-						? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("minecraft:nether/uneasy_alliance"))).isDone()
-						: false)
-				&& (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
-						? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("minecraft:nether/all_effects"))).isDone()
-						: false)
-				&& (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
-						? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("minecraft:nether/create_full_beacon"))).isDone()
-						: false)
-				&& (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
-						? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("minecraft:story/cure_zombie_villager"))).isDone()
-						: false)
-				&& (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
-						? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("minecraft:husbandry/bred_all_animals"))).isDone()
-						: false)
-				&& (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
-						? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("minecraft:husbandry/obtain_netherite_hoe"))).isDone()
 						: false)) {
-			{
-				boolean _setval = true;
-				entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.HasMinimumForTheRiseVermelho = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(EthernalKronuzModItems.THE_RISE_PARCHMENT.get());
-				_setstack.setCount(1);
-				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+			if (!((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).HasMinimumForTheRiseVermelho
+					&& (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordVermelhoPlayer)) {
+				{
+					boolean _setval = true;
+					entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.HasMinimumForTheRiseVermelho = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(EthernalKronuzModItems.THE_RISE_PARCHMENT.get());
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
 			}
 		}
 	}

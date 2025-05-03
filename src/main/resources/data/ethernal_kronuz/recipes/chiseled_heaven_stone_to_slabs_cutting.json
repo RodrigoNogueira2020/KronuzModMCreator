@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "ethernal_kronuz:chiseled_heaven_stone"
-  },
-  "result": "ethernal_kronuz:chiseled_heaven_stone_slabs"
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "block/stairs",
-  "textures": {
-    "bottom": "ethernal_kronuz:blocks/cobbled_heavenslate",
-    "top": "ethernal_kronuz:blocks/cobbled_heavenslate",
-    "side": "ethernal_kronuz:blocks/cobbled_heavenslate"
-  }
-}

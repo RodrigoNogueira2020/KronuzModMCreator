@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "ethernal_kronuz:blocks/ygg_wood_leaves",
-    "particle": "ethernal_kronuz:blocks/ygg_wood_leaves"
-  }
-}

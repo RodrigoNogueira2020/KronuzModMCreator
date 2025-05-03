@@ -1,7 +1,0 @@
-{
-  "parent": "block/fence_post",
-  "textures": {
-    "texture": "ethernal_kronuz:blocks/ygg_plank",
-    "particle": "ethernal_kronuz:blocks/ygg_plank"
-  }
-}

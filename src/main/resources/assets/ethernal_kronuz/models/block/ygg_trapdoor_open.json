@@ -1,7 +1,0 @@
-{
-  "parent": "block/template_orientable_trapdoor_open",
-  "textures": {
-    "texture": "ethernal_kronuz:blocks/ygg_trapdoor",
-    "particle": "ethernal_kronuz:blocks/ygg_trapdoor"
-  }
-}

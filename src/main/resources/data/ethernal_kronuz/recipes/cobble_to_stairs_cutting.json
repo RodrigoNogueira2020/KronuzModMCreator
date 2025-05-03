@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "ethernal_kronuz:cobbled_heaven_slate"
-  },
-  "result": "ethernal_kronuz:cobbled_heaven_slate_stairs"
-}

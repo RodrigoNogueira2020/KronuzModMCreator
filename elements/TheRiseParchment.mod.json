@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "faction_book",
     "customModelName": "Normal",
-    "name": "The Rise Parchment",
+    "name": "§6The Rise Parchment",
     "rarity": "EPIC",
     "creativeTab": {
       "value": "CUSTOM:CreativeTab"
@@ -24,9 +24,7 @@
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [
-      "§6The Rise Parchment"
-    ],
+    "specialInfo": [],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,

@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "ethernal_kronuz:blocks/heavenslate_tiles",
-    "particle": "ethernal_kronuz:blocks/heavenslate_tiles"
-  }
-}

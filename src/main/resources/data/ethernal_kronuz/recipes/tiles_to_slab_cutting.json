@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "ethernal_kronuz:tiles_heaven_slate"
-  },
-  "result": "ethernal_kronuz:tiles_heaven_slate_slab"
-}

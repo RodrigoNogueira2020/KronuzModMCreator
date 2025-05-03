@@ -1,7 +1,0 @@
-{
-  "parent": "block/door_bottom_rh",
-  "textures": {
-    "bottom": "ethernal_kronuz:blocks/ygg_door_bottom",
-    "top": "ethernal_kronuz:blocks/ygg_door_top"
-  }
-}

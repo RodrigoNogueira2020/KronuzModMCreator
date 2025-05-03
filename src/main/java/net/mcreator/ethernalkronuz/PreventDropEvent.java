@@ -110,7 +110,7 @@ public class PreventDropEvent {
 				|| stack.getItem() == EthernalKronuzModItems.RL_ROXO_ARMOUR_BOOTS.get() || stack.getItem() == EthernalKronuzModItems.RL_VERMELHO_ARMOR_HELMET.get() || stack.getItem() == EthernalKronuzModItems.RL_VERMELHO_ARMOR_CHESTPLATE.get()
 				|| stack.getItem() == EthernalKronuzModItems.RL_VERMELHO_ARMOR_LEGGINGS.get() || stack.getItem() == EthernalKronuzModItems.RL_VERMELHO_ARMOR_BOOTS.get() || stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_HELMET.get()
 				|| stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_CHESTPLATE.get() || stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_LEGGINGS.get() || stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_BOOTS.get()
-				|| stack.getItem() == EthernalKronuzModItems.BIFROST_KEY.get();
+				|| stack.getItem() == EthernalKronuzModItems.BIFROST_KEY.get() || stack.getItem() == EthernalKronuzModItems.THE_RISE_PARCHMENT.get();
 	}
 
 	private static boolean isItemInCurios(Player player, ItemStack stack) {

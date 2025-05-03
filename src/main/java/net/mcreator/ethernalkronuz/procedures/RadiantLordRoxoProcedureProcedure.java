@@ -42,36 +42,21 @@ public class RadiantLordRoxoProcedureProcedure {
 						: false)
 				&& (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
 						? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("minecraft:nether/explore_nether"))).isDone()
-						: false)
-				&& (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
-						? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("minecraft:nether/summon_wither"))).isDone()
-						: false)
-				&& (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
-						? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("minecraft:adventure/whos_the_pillager_now"))).isDone()
-						: false)
-				&& (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
-						? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("minecraft:adventure/adventuring_time"))).isDone()
-						: false)
-				&& (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
-						? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("minecraft:adventure/kill_all_mobs"))).isDone()
-						: false)
-				&& (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
-						? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("minecraft:end/respawn_dragon"))).isDone()
-						: false)
-				&& (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
-						? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("minecraft:end/kill_dragon"))).isDone()
 						: false)) {
-			{
-				boolean _setval = true;
-				entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.HasMinimumForTheRiseVerde = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(EthernalKronuzModItems.THE_RISE_PARCHMENT.get());
-				_setstack.setCount(1);
-				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+			if (!((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordRoxoPlayer
+					&& (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).HasMinimumForTheRiseRoxo)) {
+				{
+					boolean _setval = true;
+					entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.RadiantLordRoxoPlayer = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(EthernalKronuzModItems.THE_RISE_PARCHMENT.get());
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
 			}
 		}
 	}

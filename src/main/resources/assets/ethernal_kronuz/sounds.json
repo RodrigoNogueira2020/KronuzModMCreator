@@ -297,11 +297,20 @@
     ]
   },
   "template_boss_music": {
-    "category": "hostile",
+    "category": "music",
     "sounds": [
       {
         "name": "ethernal_kronuz:template_boss_music",
-        "stream": false
+        "stream": true
+      }
+    ]
+  },
+  "the_rise_fade_out": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:the_rise_fade_out",
+        "stream": true
       }
     ]
   }

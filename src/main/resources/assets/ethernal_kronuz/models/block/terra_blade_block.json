@@ -1,8 +1,0 @@
-{
-  "parent": "ethernal_kronuz:custom/terrablade_block",
-  "textures": {
-    "all": "ethernal_kronuz:blocks/terrablade",
-    "particle": "ethernal_kronuz:blocks/terrablade",
-    "1": "ethernal_kronuz:blocks/terrablade"
-  }
-}
