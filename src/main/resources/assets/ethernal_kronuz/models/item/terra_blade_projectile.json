@@ -1,0 +1,7 @@
+{
+  "parent": "ethernal_kronuz:custom/terrabladeprojectile",
+  "textures": {
+    "0": "ethernal_kronuz:blocks/terrabladeprojectile",
+    "particle": "ethernal_kronuz:items/terra_blade_projectile"
+  }
+}

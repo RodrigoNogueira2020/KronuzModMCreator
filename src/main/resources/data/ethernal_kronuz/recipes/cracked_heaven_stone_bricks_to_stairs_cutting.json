@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "ethernal_kronuz:cracked_heaven_stone_bricks"
+  },
+  "result": "ethernal_kronuz:cracked_heaven_stone_bricks_stairs"
+}

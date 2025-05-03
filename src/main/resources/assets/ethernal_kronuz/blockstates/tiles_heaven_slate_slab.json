@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ethernal_kronuz:block/tiles_heaven_slate_slab"
+    },
+    "type=top": {
+      "model": "ethernal_kronuz:block/tiles_heaven_slate_slab_top"
+    },
+    "type=double": {
+      "model": "ethernal_kronuz:block/tiles_heaven_slate_slab_full"
+    }
+  }
+}

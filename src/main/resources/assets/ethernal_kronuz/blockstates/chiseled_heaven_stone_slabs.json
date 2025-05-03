@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ethernal_kronuz:block/chiseled_heaven_stone_slabs"
+    },
+    "type=top": {
+      "model": "ethernal_kronuz:block/chiseled_heaven_stone_slabs_top"
+    },
+    "type=double": {
+      "model": "ethernal_kronuz:block/chiseled_heaven_stone_slabs_full"
+    }
+  }
+}

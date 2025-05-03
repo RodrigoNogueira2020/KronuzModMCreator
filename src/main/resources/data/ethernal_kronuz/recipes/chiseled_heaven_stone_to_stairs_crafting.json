@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "ethernal_kronuz:chiseled_heaven_stone"
+    },
+    "3": {
+      "item": "ethernal_kronuz:chiseled_heaven_stone"
+    },
+    "4": {
+      "item": "ethernal_kronuz:chiseled_heaven_stone"
+    },
+    "6": {
+      "item": "ethernal_kronuz:chiseled_heaven_stone"
+    },
+    "7": {
+      "item": "ethernal_kronuz:chiseled_heaven_stone"
+    },
+    "8": {
+      "item": "ethernal_kronuz:chiseled_heaven_stone"
+    }
+  },
+  "result": {
+    "item": "ethernal_kronuz:chiseled_heaven_stone_stairs",
+    "count": 4
+  }
+}

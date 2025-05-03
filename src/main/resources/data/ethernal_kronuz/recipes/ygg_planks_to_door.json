@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23",
+    "45"
+  ],
+  "key": {
+    "0": {
+      "item": "ethernal_kronuz:ygg_planks"
+    },
+    "1": {
+      "item": "ethernal_kronuz:ygg_planks"
+    },
+    "2": {
+      "item": "ethernal_kronuz:ygg_planks"
+    },
+    "3": {
+      "item": "ethernal_kronuz:ygg_planks"
+    },
+    "4": {
+      "item": "ethernal_kronuz:ygg_planks"
+    },
+    "5": {
+      "item": "ethernal_kronuz:ygg_planks"
+    }
+  },
+  "result": {
+    "item": "ethernal_kronuz:ygg_door",
+    "count": 3
+  }
+}

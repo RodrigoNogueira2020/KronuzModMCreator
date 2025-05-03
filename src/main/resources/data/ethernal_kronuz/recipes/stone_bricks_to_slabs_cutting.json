@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "ethernal_kronuz:heaven_stone_bricks"
+  },
+  "result": "ethernal_kronuz:heaven_stone_bricks_slabs"
+}

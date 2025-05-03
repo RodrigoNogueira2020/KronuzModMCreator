@@ -1,0 +1,6 @@
+{
+  "parent": "block/button_inventory",
+  "textures": {
+    "texture": "ethernal_kronuz:blocks/ygg_plank"
+  }
+}

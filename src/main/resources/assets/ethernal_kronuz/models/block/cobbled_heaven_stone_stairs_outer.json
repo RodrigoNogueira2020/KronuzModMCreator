@@ -1,0 +1,8 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "ethernal_kronuz:blocks/cobbled_heavenstone",
+    "top": "ethernal_kronuz:blocks/cobbled_heavenstone",
+    "side": "ethernal_kronuz:blocks/cobbled_heavenstone"
+  }
+}

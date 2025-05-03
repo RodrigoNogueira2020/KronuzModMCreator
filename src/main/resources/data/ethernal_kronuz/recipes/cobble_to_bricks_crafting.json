@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "ethernal_kronuz:heaven_slate"
+    },
+    "1": {
+      "item": "ethernal_kronuz:heaven_slate"
+    },
+    "2": {
+      "item": "ethernal_kronuz:heaven_slate"
+    },
+    "3": {
+      "item": "ethernal_kronuz:heaven_slate"
+    }
+  },
+  "result": {
+    "item": "ethernal_kronuz:bricks_heaven_slate",
+    "count": 4
+  }
+}

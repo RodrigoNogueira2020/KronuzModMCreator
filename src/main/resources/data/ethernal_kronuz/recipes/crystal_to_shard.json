@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ethernal_kronuz:divine_crystal"
+    }
+  ],
+  "result": {
+    "item": "ethernal_kronuz:divine_crystal_shard",
+    "count": 9
+  }
+}

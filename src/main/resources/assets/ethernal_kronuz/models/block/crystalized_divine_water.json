@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "ethernal_kronuz:blocks/cristalized_divine_water",
+    "particle": "ethernal_kronuz:blocks/cristalized_divine_water"
+  }
+}

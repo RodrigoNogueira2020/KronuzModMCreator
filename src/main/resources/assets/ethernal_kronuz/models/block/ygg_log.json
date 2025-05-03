@@ -1,0 +1,10 @@
+{
+  "parent": "block/grass_block",
+  "textures": {
+    "bottom": "ethernal_kronuz:blocks/ygg_log_top",
+    "top": "ethernal_kronuz:blocks/ygg_log_top",
+    "side": "ethernal_kronuz:blocks/ygg_log",
+    "overlay": "ethernal_kronuz:blocks/ygg_log",
+    "particle": "ethernal_kronuz:blocks/ygg_log_top"
+  }
+}

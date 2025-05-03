@@ -1,0 +1,10 @@
+{
+  "parent": "ethernal_kronuz:custom/potted_bioluminescent_lily",
+  "textures": {
+    "all": "ethernal_kronuz:blocks/flower_pot",
+    "particle": "ethernal_kronuz:blocks/flower_pot",
+    "2": "ethernal_kronuz:blocks/bioluminescent_lily",
+    "flowerpot": "ethernal_kronuz:blocks/flower_pot",
+    "dirt": "ethernal_kronuz:blocks/dirt"
+  }
+}
