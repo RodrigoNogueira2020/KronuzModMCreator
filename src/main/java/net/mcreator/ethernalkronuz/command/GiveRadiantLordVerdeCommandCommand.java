@@ -1,8 +1,6 @@
 
 package net.mcreator.ethernalkronuz.command;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegisterCommandsEvent;
@@ -14,24 +12,26 @@ import net.minecraft.core.Direction;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.Commands;
 
-import net.mcreator.ethernalkronuz.procedures.RiseRadiantLordVerdeAfterTheRiseConfirmationProcedure;
+import net.mcreator.ethernalkronuz.procedures.GiveGreenParchmentProcedure;
 
 @Mod.EventBusSubscriber
 public class GiveRadiantLordVerdeCommandCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("MakeGreenRadiantLord").requires(s -> s.hasPermission(4)).then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
-			ServerLevel world = arguments.getSource().getLevel();
-			double x = arguments.getSource().getPosition().x();
-			double y = arguments.getSource().getPosition().y();
-			double z = arguments.getSource().getPosition().z();
-			Entity entity = arguments.getSource().getEntity();
-			if (entity == null)
-				entity = FakePlayerFactory.getMinecraft(world);
-			Direction direction = entity.getDirection();
+		event.getDispatcher().register(Commands.literal("AscendRadiantLord")
 
-			RiseRadiantLordVerdeAfterTheRiseConfirmationProcedure.execute(world, x, y, z, entity);
-			return 0;
-		})));
+				.then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
+
+					GiveGreenParchmentProcedure.execute(entity);
+					return 0;
+				})));
 	}
 }

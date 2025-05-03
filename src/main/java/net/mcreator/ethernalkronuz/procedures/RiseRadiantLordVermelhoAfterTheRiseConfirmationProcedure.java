@@ -101,12 +101,10 @@ public class RiseRadiantLordVermelhoAfterTheRiseConfirmationProcedure {
 				_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(EthernalKronuzModItems.RL_VERMELHO_ARMOR_BOOTS.get()));
 			}
 		}
-		for (int index0 = 0; index0 < (int) (5); index0++) {
-			if (!world.isClientSide()) {
-				MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
-				if (_mcserv != null)
-					_mcserv.getPlayerList().broadcastMessage(new TextComponent("The Azakana is AMONGUS!"), ChatType.SYSTEM, Util.NIL_UUID);
-			}
+		if (!world.isClientSide()) {
+			MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
+			if (_mcserv != null)
+				_mcserv.getPlayerList().broadcastMessage(new TextComponent("The Azakana is AMONGUS!"), ChatType.SYSTEM, Util.NIL_UUID);
 		}
 	}
 }

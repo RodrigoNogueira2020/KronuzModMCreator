@@ -51,6 +51,8 @@ public class EthernalKronuzModSounds {
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "choro-vc"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "choro-vc")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "literalmente-vc"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "literalmente-vc")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "mano-vc"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "mano-vc")));
+		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "template_boss_music"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "template_boss_music")));
+		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "the_rise_fade_out"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "the_rise_fade_out")));
 	}
 
 	@SubscribeEvent

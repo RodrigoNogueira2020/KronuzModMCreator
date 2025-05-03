@@ -17,6 +17,7 @@ import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.ethernalkronuz.item.YggWoodStickItem;
 import net.mcreator.ethernalkronuz.item.VASCOItem;
+import net.mcreator.ethernalkronuz.item.TheRiseParchmentItem;
 import net.mcreator.ethernalkronuz.item.TheEndingEyeItem;
 import net.mcreator.ethernalkronuz.item.TerraBladeProjectileItem;
 import net.mcreator.ethernalkronuz.item.TerraBladeItem;
@@ -251,6 +252,11 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> MURASAMA = REGISTRY.register("murasama", () -> new MurasamaItem());
 	public static final RegistryObject<Item> TERRA_BLADE = REGISTRY.register("terra_blade", () -> new TerraBladeItem());
 	public static final RegistryObject<Item> NOKKIA_HAMMER = REGISTRY.register("nokkia_hammer", () -> new NokkiaHammerItem());
+	public static final RegistryObject<Item> RADIANT_LORD_NO_COLOR_TRIAL_SPAWN_EGG = REGISTRY.register("radiant_lord_no_color_trial_spawn_egg",
+			() -> new ForgeSpawnEggItem(EthernalKronuzModEntities.RADIANT_LORD_NO_COLOR_TRIAL, -10066330, -16777216, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB)));
+	public static final RegistryObject<Item> RADIANT_LORD_GREEN_TRIAL_SPAWN_EGG = REGISTRY.register("radiant_lord_green_trial_spawn_egg",
+			() -> new ForgeSpawnEggItem(EthernalKronuzModEntities.RADIANT_LORD_GREEN_TRIAL, -10066330, -16738048, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB)));
+	public static final RegistryObject<Item> THE_RISE_PARCHMENT = REGISTRY.register("the_rise_parchment", () -> new TheRiseParchmentItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

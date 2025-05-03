@@ -1084,24 +1084,12 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs/Roxo"
+      "path": "~/Factions/Radiant Lords/Active Radiant Lords/Purple"
     },
     {
       "name": "RadiantLordVermelhoProcedure",
@@ -1120,24 +1108,12 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs/Vermelho"
+      "path": "~/Factions/Radiant Lords/Active Radiant Lords/Red"
     },
     {
       "name": "AndarilhoDaCaveEffect",
@@ -1365,7 +1341,7 @@
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords/Remove Faction Potions"
+      "path": "~/Factions/Radiant Lords/Remove Faction Effects To Ascend"
     },
     {
       "name": "GiveStartedKit",
@@ -3044,7 +3020,7 @@
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords/Remove Faction Potions"
+      "path": "~/Factions/Radiant Lords/Remove Faction Effects To Ascend"
     },
     {
       "name": "RemoveFactionPotions2",
@@ -3064,7 +3040,7 @@
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords/Remove Faction Potions"
+      "path": "~/Factions/Radiant Lords/Remove Faction Effects To Ascend"
     },
     {
       "name": "GiveRadiantLordEffects",
@@ -3100,7 +3076,7 @@
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs"
+      "path": "~/Factions/Radiant Lords/Active Radiant Lords"
     },
     {
       "name": "MossoCrystalDrops",
@@ -5588,7 +5564,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/command/GiveRadiantLordVerdeCommandCommand.java"
         ]
       },
-      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs/Verde"
+      "path": "~/Factions/Radiant Lords/Active Radiant Lords/Green"
     },
     {
       "name": "RemoveRLVerde",
@@ -8152,168 +8128,6 @@
       "path": "~/Dimensions/Asgard/Vegetacao"
     },
     {
-      "name": "PassRadiantLordRoxoTo",
-      "type": "command",
-      "sortid": 499,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pass_radiant_lord_roxo_to",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/command/PassRadiantLordRoxoToCommand.java"
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Passagem de poderes"
-    },
-    {
-      "name": "PassRadiantLordVermelhoTo",
-      "type": "command",
-      "sortid": 500,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pass_radiant_lord_vermelho_to",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/command/PassRadiantLordVermelhoToCommand.java"
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Passagem de poderes"
-    },
-    {
-      "name": "PassRadiantLordVerdeTo",
-      "type": "command",
-      "sortid": 501,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pass_radiant_lord_verde_to",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/command/PassRadiantLordVerdeToCommand.java"
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Passagem de poderes"
-    },
-    {
-      "name": "PassRadiantLordRoxoToPlayer",
-      "type": "procedure",
-      "sortid": 502,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pass_radiant_lord_roxo_to_player",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/PassRadiantLordRoxoToPlayerProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Passagem de poderes"
-    },
-    {
-      "name": "PassRadiantLordVermelhoPlayer",
-      "type": "procedure",
-      "sortid": 503,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pass_radiant_lord_vermelho_player",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/PassRadiantLordVermelhoPlayerProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Passagem de poderes"
-    },
-    {
-      "name": "PassRadiantLordVerdePlayer",
-      "type": "procedure",
-      "sortid": 504,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pass_radiant_lord_verde_player",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/PassRadiantLordVerdePlayerProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Passagem de poderes"
-    },
-    {
       "name": "CrystalizedDivineWater",
       "type": "block",
       "sortid": 133,
@@ -9046,42 +8860,6 @@
       "path": "~/Factions/Big Testas/Transformacao"
     },
     {
-      "name": "GiveRadiantLordEffectsToPassPowers",
-      "type": "procedure",
-      "sortid": 539,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "give_radiant_lord_effects_to_pass_powers",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/GiveRadiantLordEffectsToPassPowersProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Passagem de poderes"
-    },
-    {
       "name": "RemoveFactionPotionsToRemove",
       "type": "procedure",
       "sortid": 540,
@@ -9120,30 +8898,6 @@
         ]
       },
       "path": "~/Remove Stuff/Factions"
-    },
-    {
-      "name": "AscenderEffectsToPassPowers",
-      "type": "procedure",
-      "sortid": 542,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ascender_effects_to_pass_powers",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/AscenderEffectsToPassPowersProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Passagem de poderes"
     },
     {
       "name": "PaintingRadiantLord",
@@ -9217,7 +8971,7 @@
           "src/main/resources/assets/ethernal_kronuz/models/item/rl_roxo_armour_leggings.json"
         ]
       },
-      "path": "~/Factions/Radiant Lords/Armaduras"
+      "path": "~/Factions/Radiant Lords/Armours"
     },
     {
       "name": "RenderSkyAsgardProcedure",
@@ -9449,7 +9203,7 @@
           "src/main/resources/assets/ethernal_kronuz/models/item/rl_vermelho_armor_leggings.json"
         ]
       },
-      "path": "~/Factions/Radiant Lords/Armaduras"
+      "path": "~/Factions/Radiant Lords/Armours"
     },
     {
       "name": "RLVerdeArmor",
@@ -9467,7 +9221,7 @@
           "src/main/resources/assets/ethernal_kronuz/models/item/rl_verde_armor_helmet.json"
         ]
       },
-      "path": "~/Factions/Radiant Lords/Armaduras"
+      "path": "~/Factions/Radiant Lords/Armours"
     },
     {
       "name": "AsgardPortalTriggerUsed",
@@ -9701,7 +9455,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/world/inventory/ConfirmRiseGUIRoxoMenu.java"
         ]
       },
-      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs/ConfirmRise"
+      "path": "~/Factions/Radiant Lords/The Rise/GUI"
     },
     {
       "name": "ConfirmRiseGUIVermelho",
@@ -9717,7 +9471,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/world/inventory/ConfirmRiseGUIVermelhoMenu.java"
         ]
       },
-      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs/ConfirmRise"
+      "path": "~/Factions/Radiant Lords/The Rise/GUI"
     },
     {
       "name": "ConfirmRiseGUIVerde",
@@ -9733,7 +9487,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/world/inventory/ConfirmRiseGUIVerdeMenu.java"
         ]
       },
-      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs/ConfirmRise"
+      "path": "~/Factions/Radiant Lords/The Rise/GUI"
     },
     {
       "name": "CloseConfirmRiseGUI",
@@ -9753,7 +9507,7 @@
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs/ConfirmRise"
+      "path": "~/Factions/Radiant Lords/The Rise/GUI"
     },
     {
       "name": "RiseRadiantLordRoxoAfterTheRiseConfirmation",
@@ -9789,7 +9543,7 @@
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs/Roxo"
+      "path": "~/Factions/Radiant Lords/Active Radiant Lords/Purple"
     },
     {
       "name": "RiseRadiantLordVermelhoAfterTheRiseConfirmation",
@@ -9825,7 +9579,7 @@
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs/Vermelho"
+      "path": "~/Factions/Radiant Lords/Active Radiant Lords/Red"
     },
     {
       "name": "RiseRadiantLordVerdeAfterTheRiseConfirmation",
@@ -9861,57 +9615,7 @@
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs/Verde"
-    },
-    {
-      "name": "OpenConfirmRiseGUIOnKeyPressed",
-      "type": "procedure",
-      "sortid": 573,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_confirm_rise_gui_on_key_pressed",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/OpenConfirmRiseGUIOnKeyPressedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs"
-    },
-    {
-      "name": "OpenConfirmRiseGUI",
-      "type": "keybind",
-      "sortid": 574,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_confirm_rise_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/network/OpenConfirmRiseGUIMessage.java"
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs"
+      "path": "~/Factions/Radiant Lords/Active Radiant Lords/Green"
     },
     {
       "name": "GiveRLStuffAfterRespawn",
@@ -9931,7 +9635,7 @@
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords/Procedures Ativar RLs"
+      "path": "~/Factions/Radiant Lords/Active Radiant Lords"
     },
     {
       "name": "BifrostKey",
@@ -10508,46 +10212,293 @@
       "path": "~/Dimensions/Asgard/Estruturas/End Ruins"
     },
     {
-      "name": "EndRuinsSmallLootTable",
-      "type": "loottable",
+      "name": "RadiantLordNoColorTrialPlayerCollidesWithThisEntity",
+      "type": "procedure",
       "sortid": 611,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "end_ruins_small_loot_table",
+      "registry_name": "radiant_lord_no_color_trial_player_collides_with_this_entity",
       "metadata": {
         "files": [
-          "src/main/resources/data/ethernal_kronuz/loot_tables/chests/end_ruins_small_loot_table.json"
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/RadiantLordNoColorTrialPlayerCollidesWithThisEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
         ]
       },
-      "path": "~/Dimensions/Asgard/Estruturas/End Ruins"
+      "path": "~/Factions/Radiant Lords/The Rise/NoColor"
     },
     {
-      "name": "EndRuinsMediumLootTable",
-      "type": "loottable",
+      "name": "RadiantLordNoColorTrial",
+      "type": "animatedentity",
       "sortid": 612,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "end_ruins_medium_loot_table",
+      "registry_name": "radiant_lord_no_color_trial",
       "metadata": {
         "files": [
-          "src/main/resources/data/ethernal_kronuz/loot_tables/chests/end_ruins_medium_loot_table.json"
+          "src/main/java/net/mcreator/ethernalkronuz/entity/RadiantLordNoColorTrialEntity.java",
+          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/RadiantLordNoColorTrialRenderer.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/radiant_lord_no_color_trial_spawn_egg.json",
+          "src/main/java/net/mcreator/ethernalkronuz/entity/model/RadiantLordNoColorTrialModel.java"
         ]
       },
-      "path": "~/Dimensions/Asgard/Estruturas/End Ruins"
+      "path": "~/Factions/Radiant Lords/The Rise/NoColor"
     },
     {
-      "name": "EndRuinsLargeLootTable",
-      "type": "loottable",
+      "name": "RadiantLordGreenTrial",
+      "type": "animatedentity",
       "sortid": 613,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "end_ruins_large_loot_table",
+      "registry_name": "radiant_lord_green_trial",
       "metadata": {
         "files": [
-          "src/main/resources/data/ethernal_kronuz/loot_tables/chests/end_ruins_large_loot_table.json"
+          "src/main/java/net/mcreator/ethernalkronuz/entity/RadiantLordGreenTrialEntity.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/radiant_lord_green_trial_spawn_egg.json",
+          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/RadiantLordGreenTrialRenderer.java",
+          "src/main/java/net/mcreator/ethernalkronuz/entity/model/RadiantLordGreenTrialModel.java"
         ]
       },
-      "path": "~/Dimensions/Asgard/Estruturas/End Ruins"
+      "path": "~/Factions/Radiant Lords/The Rise/Colors/Green"
+    },
+    {
+      "name": "RadiantLordGreenTrialOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 614,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "radiant_lord_green_trial_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/RadiantLordGreenTrialOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/The Rise/Colors/Green"
+    },
+    {
+      "name": "TeleportPlayerToTheTrialChamberGreen",
+      "type": "procedure",
+      "sortid": 616,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleport_player_to_the_trial_chamber_green",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/TeleportPlayerToTheTrialChamberGreenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/The Rise/Colors/Green"
+    },
+    {
+      "name": "RadiantLordGreenTrialEntityDies",
+      "type": "procedure",
+      "sortid": 618,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "radiant_lord_green_trial_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/RadiantLordGreenTrialEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/The Rise/Colors/Green"
+    },
+    {
+      "name": "LoadTheRiseChambers",
+      "type": "procedure",
+      "sortid": 620,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "load_the_rise_chambers",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/LoadTheRiseChambersProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Dimensions/Jotunheim/Spawn The Rise Chambers"
+    },
+    {
+      "name": "TheRiseChamberGreen",
+      "type": "structure",
+      "sortid": 621,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_rise_chamber_green",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/world/features/TheRiseChamberGreenFeature.java"
+        ]
+      },
+      "path": "~/Dimensions/Jotunheim/Spawn The Rise Chambers"
+    },
+    {
+      "name": "TheRiseCompleteAdvancement",
+      "type": "achievement",
+      "sortid": 624,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_rise_complete_advancement",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ethernal_kronuz/advancements/the_rise_complete_advancement.json"
+        ]
+      },
+      "path": "~/Achievements/Faccoes/Radiant Lords"
+    },
+    {
+      "name": "TheRiseParchment",
+      "type": "item",
+      "sortid": 625,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_rise_parchment",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ethernal_kronuz/models/item/the_rise_parchment.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/TheRiseParchmentItem.java"
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/The Rise/GUI"
+    },
+    {
+      "name": "TheRiseParchmentRightclicked",
+      "type": "procedure",
+      "sortid": 626,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_rise_parchment_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/TheRiseParchmentRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/The Rise/GUI"
+    },
+    {
+      "name": "GiveGreenParchment",
+      "type": "procedure",
+      "sortid": 627,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "give_green_parchment",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/GiveGreenParchmentProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/Active Radiant Lords/Green"
     }
   ],
   "variable_elements": [
@@ -10754,6 +10705,12 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "TouchRLOnce",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -11020,6 +10977,22 @@
       ],
       "category": "voice",
       "subtitle": ""
+    },
+    {
+      "name": "template_boss_music",
+      "files": [
+        "template_boss_music"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "the_rise_fade_out",
+      "files": [
+        "the_rise_fade_out"
+      ],
+      "category": "music",
+      "subtitle": ""
     }
   ],
   "language_map": {
@@ -11028,16 +11001,18 @@
       "block.ethernal_kronuz.bricks_heaven_slate_slabs": "Heaven Slate Bricks Slabs",
       "item.ethernal_kronuz.cabuflamanau": "Piruka",
       "item.ethernal_kronuz.blade_of_the_void": "§5Blade Of The Void",
+      "item.ethernal_kronuz.radiant_lord_green_trial_spawn_egg": "§aTitan Kaleb Spawn Egg",
       "biome.ethernal_kronuz.sky_fields": "Sky Fields",
       "key.ethernal_kronuz.griffin_up": "Griffin Upwards",
       "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
-      "advancements.bt_achievement.descr": "Juntar-se aos Big Testa",
-      "advancements.rl_verde_achievement.title": "Carregado até ao limite",
+      "advancements.bt_achievement.descr": "Join Big Testa",
       "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
+      "advancements.rl_verde_achievement.title": "The Third",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_atention": "Atention",
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_you_will_be_teleported_to_the_tr": "You will be teleported",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_atention": "Atention",
       "block.ethernal_kronuz.mosso_crystal_ore": "Mosso Crystal Ore",
       "item.ethernal_kronuz.ganda_moca.desc": "Ganda Moca",
@@ -11051,7 +11026,6 @@
       "block.ethernal_kronuz.ygg_trapdoor": "Ygg Wood Trapdoor",
       "item.ethernal_kronuz.aiport_steel_armor_chestplate": "Airport Steel Chestplate",
       "advancements.ascender_advancement.descr": "Tornar-se um Radiant Lord",
-      "key.ethernal_kronuz.open_confirm_rise_gui": "Open The Rise GUI",
       "item.ethernal_kronuz.rl_roxo_armour_helmet": "Gargantuan\u0027s Armour Helmet",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_armor_before_the_rise": "armor before The Rise",
       "block.ethernal_kronuz.ygg_planks": "Ygg Wood Planks",
@@ -11067,7 +11041,7 @@
       "subtitles.angolaenossa": "",
       "subtitles.griffin-death": "",
       "block.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
-      "advancements.adc_achievement.descr": "Juntar-se aos Andarilhos da cave",
+      "advancements.adc_achievement.descr": "Join Andarilhos da Cave",
       "item.ethernal_kronuz.aiport_steel_armor_helmet": "Airport Steel Helmet",
       "item.ethernal_kronuz.away.desc": "AWAY!",
       "subtitles.sao-paulo": "",
@@ -11086,6 +11060,7 @@
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_special_armor": "- Special Armor",
       "subtitles.morre-no-inferno": "",
       "block.ethernal_kronuz.heaven_stone_bricks_stairs": "Heaven Stone Bricks Stairs",
+      "subtitles.the_rise_fade_out": "",
       "block.ethernal_kronuz.heaven_stone_bricks": "Heaven Stone Bricks",
       "subtitles.gandamoca": "",
       "advancements.full_set_faking_ell.title": "Eia mano!",
@@ -11111,7 +11086,7 @@
       "item.ethernal_kronuz.cabuflamanau.desc": "Ca Bu Fla Ma Nau",
       "item.ethernal_kronuz.dino_vasco_spawn_egg": "Dino Vasco Spawn Egg",
       "death.attack.terrablade": "%1$s was put under Terra",
-      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_confirm_the_rise": "Confirm The Rise",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_confirm_the_rise": "The Rise",
       "item.ethernal_kronuz.faction_book": "§dJoin!",
       "block.ethernal_kronuz.cracked_heaven_stone_bricks": "Cracked Heaven Stone Bricks",
       "item.ethernal_kronuz.terra_blade_projectile": "Terra Blade Projectile",
@@ -11138,6 +11113,7 @@
       "death.attack.cancro.player": "%1$s is a wannabe Technomorto",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_armor_before_the_rise": "armor before The Rise",
       "subtitles.choro-vc": "",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_radiant_lord_are_you_really_rea": "Radiant Lord",
       "item.ethernal_kronuz.safira": "Kazzio",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_overwritten": "overwritten",
       "biome.ethernal_kronuz.stone_spikes": "Stone Spikes",
@@ -11151,6 +11127,7 @@
       "gui.ethernal_kronuz.trade_system_gui_techno.button_4": "4",
       "block.ethernal_kronuz.cobbled_heaven_slate": "Cobbled Heaven Slate",
       "gui.ethernal_kronuz.trade_system_gui_techno.button_3": "3",
+      "entity.ethernal_kronuz.radiant_lord_green_trial": "§aTitan Kaleb",
       "gui.ethernal_kronuz.trade_system_gui_techno.button_2": "2",
       "block.ethernal_kronuz.asgardian_dirt": "Asgardian Grass Block",
       "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_special_tool": "- Special Tool",
@@ -11183,6 +11160,7 @@
       "item.ethernal_kronuz.aiport_steel_shovel": "Aiport Steel Shovel",
       "item.ethernal_kronuz.necromancer": "Adolfus Hitlurus",
       "subtitles.sword-dash-charged": "",
+      "entity.ethernal_kronuz.radiant_lord_no_color_trial": "Radiant Lord",
       "item.ethernal_kronuz.freaky.desc": "Freaky",
       "death.attack.cancro": "Stage 4 finished you",
       "item.ethernal_kronuz.ygg_wood_stick": "Ygg Wood Stick",
@@ -11220,6 +11198,7 @@
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_special_armor": "- Special Armor",
       "item.ethernal_kronuz.airport_steel_pickaxe_head": "Head of Airport Steel Pickaxe",
       "advancements.full_set_faking_ell.descr": "Ter uma armadura completa de Faking Ell",
+      "advancements.the_rise_complete_advancement.title": "The Rise",
       "item.ethernal_kronuz.sao_paulo.desc": "São Paulo",
       "item.ethernal_kronuz.faking_ell_ingot": "Faking Ell Ingot",
       "death.attack.BODV": "%1$s reaped by the Void",
@@ -11238,6 +11217,7 @@
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_or_your_armor_will_be": "or your armor will be",
       "block.ethernal_kronuz.cracked_heaven_slate_bricks_slabs": "Cracked Heaven Slate Bricks Slabs",
       "entity.ethernal_kronuz.griffin_animated": "Griffin",
+      "item.ethernal_kronuz.the_rise_parchment": "§6The Rise Parchment",
       "item.ethernal_kronuz.backpack": "Backpack",
       "item.ethernal_kronuz.murasama": "Murasama",
       "item.ethernal_kronuz.freaky": "Janela",
@@ -11255,7 +11235,7 @@
       "death.attack.nokkiahammer": "%1$s was victim of The Carnage",
       "item.ethernal_kronuz.cristalized_divine_water_bucket": "Cristalized Divine Water Bucket",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_radiant_lord": "Radiant Lord",
-      "advancements.rl_verde_achievement.descr": "Literalmente carregado a Radiant Lord",
+      "advancements.rl_verde_achievement.descr": "Be choosen as Third Radiant Lord",
       "block.ethernal_kronuz.heaven_slate_slabs": "Heaven Slate Slabs",
       "effect.ethernal_kronuz.asgard_empowerment_cooldown": "In Cooldown",
       "subtitles.sickle-swing": "",
@@ -11266,6 +11246,7 @@
       "item.ethernal_kronuz.rl_vermelho_armor_chestplate": "Azakana\u0027s Body Armor",
       "item.ethernal_kronuz.jotunheim": "Jotunheim Portal Igniter",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_special_display_name": "- Special Display Name",
+      "advancements.the_rise_complete_advancement.descr": "Claim your position as Radiant Lord",
       "item.ethernal_kronuz.rl_vermelho_armor_helmet": "Azakana\u0027s Helmet",
       "item.ethernal_kronuz.faking_ell_armor_helmet": "Faking Ell Helmet",
       "item.ethernal_kronuz.mosso_crystal_axe": "Mosso Crystal Axe",
@@ -11277,13 +11258,13 @@
       "item.ethernal_kronuz.sao_paulo": "Yuri NR5",
       "entity.ethernal_kronuz.blessing": "Blessing",
       "gui.ethernal_kronuz.get_out_jotunheim_rlgui.label_you_will_be_teleported": "You will be teleported",
-      "advancements.adc_achievement.title": "Larga-me Carlos!",
+      "advancements.adc_achievement.title": "Carlos\u0027s Sex Toys",
       "gui.ethernal_kronuz.go_to_jotunheim_rlgui.label_teleport_to_jotunheim": "Teleport to Jotunheim",
       "block.ethernal_kronuz.ygg_gate": "Ygg Wood Fence Gate",
       "subtitles.warper-death": "",
       "block.ethernal_kronuz.normal_glow_grass": "Glow Grass",
-      "advancements.enters_asgard.title": "God\u0027s World",
-      "advancements.bt_achievement.title": "Estou indo. Comi o cu de quem está ouvindo",
+      "advancements.enters_asgard.title": "God\u0027s Dimension",
+      "advancements.bt_achievement.title": "I like your cut G",
       "item.ethernal_kronuz.angolae_nossa.desc": "Angola é nossa",
       "block.ethernal_kronuz.ygg_stairs": "Ygg Wood Stairs",
       "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_confirm_the_rise": "Confirm The Rise",
@@ -11330,6 +11311,8 @@
       "subtitles.terrablademeele": "",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_confirm_the_rise": "Confirm The Rise",
       "item.ethernal_kronuz.technomorto_spawn_egg": "Technomorto Spawn Egg",
+      "item.ethernal_kronuz.radiant_lord_no_color_trial_spawn_egg": "Radiant Lord Spawn Egg",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_your_position_as_radiant_lord": "claim your position as",
       "gui.ethernal_kronuz.trade_system_gui_techno.button_11": "1",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_became_a": "Became a",
       "key.ethernal_kronuz.null_entity_invisibility_ability_key_bind": "Invisibility Ability",
@@ -11350,11 +11333,13 @@
       "block.ethernal_kronuz.crystalized_divine_water": "Crystalized Divine Water",
       "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_double_health": "- Double Health",
       "item.ethernal_kronuz.technobalde_spawn_egg": "Technobalde Spawn Egg",
+      "subtitles.template_boss_music": "",
       "item.ethernal_kronuz.rl_verde_armor_boots": "Titan Kaleb\u0027s  Boots",
       "subtitles.sword-dash": "",
       "gui.ethernal_kronuz.get_out_jotunheim_rlgui.label_jotunheim": "Jotunheim",
       "item.ethernal_kronuz.battle_coin": "Battle Coin",
       "item.ethernal_kronuz.mosso_crystal_pickaxe": "Mosso Crystal Pickaxe",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_to_the_trial_to_claim_your_posit": "to The Rise Chamber to",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_remove_your_current": "Remove your current",
       "gui.ethernal_kronuz.trade_system_gui_techno.button_21": "2",
       "item.ethernal_kronuz.faking_ell_hoe": "Faking Ell Hoe",
@@ -11368,6 +11353,7 @@
       "subtitles.technoblade_never_dies": "",
       "item.ethernal_kronuz.freicken.desc": "Freicken",
       "item.ethernal_kronuz.alloy_setup": "Alloy",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_are_you_really_ready": "Are you REALLY ready?",
       "block.ethernal_kronuz.cobbled_heaven_slate_stairs": "Cobbled Heaven Slate Stairs",
       "gui.ethernal_kronuz.trade_system_gui_techno.button_31": "3",
       "block.ethernal_kronuz.nokkia_hammer_block": "Nokkia Hammer Block",
@@ -11486,37 +11472,59 @@
                 ]
               },
               {
-                "name": "Procedures Ativar RLs",
+                "name": "Active Radiant Lords",
                 "children": [
                   {
-                    "name": "Verde",
+                    "name": "Green",
                     "children": []
                   },
                   {
-                    "name": "ConfirmRise",
+                    "name": "Red",
                     "children": []
                   },
                   {
-                    "name": "Vermelho",
-                    "children": []
-                  },
-                  {
-                    "name": "Roxo",
+                    "name": "Purple",
                     "children": []
                   }
                 ]
               },
               {
-                "name": "Remove Faction Potions",
+                "name": "Remove Faction Effects To Ascend",
                 "children": []
               },
               {
-                "name": "Armaduras",
+                "name": "Armours",
                 "children": []
               },
               {
-                "name": "Passagem de poderes",
-                "children": []
+                "name": "The Rise",
+                "children": [
+                  {
+                    "name": "NoColor",
+                    "children": []
+                  },
+                  {
+                    "name": "GUI",
+                    "children": []
+                  },
+                  {
+                    "name": "Colors",
+                    "children": [
+                      {
+                        "name": "Green",
+                        "children": []
+                      },
+                      {
+                        "name": "Purple",
+                        "children": []
+                      },
+                      {
+                        "name": "Red",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -11924,6 +11932,10 @@
                     "children": []
                   }
                 ]
+              },
+              {
+                "name": "Spawn The Rise Chambers",
+                "children": []
               }
             ]
           }

@@ -2,7 +2,7 @@
   "display": {
     "background": "minecraft:textures/block/stone.png",
     "icon": {
-      "item": "ethernal_kronuz:deleted_mod_element"
+      "item": "ethernal_kronuz:divine_bow"
     },
     "title": {
       "translate": "advancements.enters_asgard.title"
