@@ -32,9 +32,9 @@ public class CancroEffectStartedappliedProcedure {
 	private static void execute(@Nullable Event event, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(EthernalKronuzModMobEffects.CANCRO.get()) : false) && sourceentity instanceof TechnomortoEntity && (entity instanceof Player || entity instanceof ServerPlayer)) {
+		if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(EthernalKronuzModMobEffects.CANCRO.get()) : false) && sourceentity instanceof TechnomortoEntity && (entity instanceof ServerPlayer || entity instanceof Player)) {
 			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(EthernalKronuzModMobEffects.CANCRO.get(), 4800, 0, (false), (false)));
+				_entity.addEffect(new MobEffectInstance(EthernalKronuzModMobEffects.CANCRO.get(), 4800, 0, (true), (false)));
 		}
 	}
 }

@@ -15,17 +15,25 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.ai.navigation.PathNavigation;
+import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+import net.minecraft.world.entity.ai.goal.RangedAttackGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.world.entity.ai.goal.Goal;
+import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnGroupData;
@@ -34,13 +42,13 @@ import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.DifficultyInstance;
+import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerBossEvent;
@@ -55,12 +63,14 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.ethernalkronuz.procedures.RadiantLordGreenTrialOnInitialEntitySpawnProcedure;
 import net.mcreator.ethernalkronuz.procedures.RadiantLordGreenTrialEntityDiesProcedure;
-import net.mcreator.ethernalkronuz.init.EthernalKronuzModItems;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModEntities;
 
 import javax.annotation.Nullable;
 
-public class RadiantLordGreenTrialEntity extends Monster implements IAnimatable {
+import java.util.Random;
+import java.util.EnumSet;
+
+public class RadiantLordGreenTrialEntity extends Monster implements RangedAttackMob, IAnimatable {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(RadiantLordGreenTrialEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(RadiantLordGreenTrialEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(RadiantLordGreenTrialEntity.class, EntityDataSerializers.STRING);
@@ -69,7 +79,7 @@ public class RadiantLordGreenTrialEntity extends Monster implements IAnimatable 
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
-	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.GREEN, ServerBossEvent.BossBarOverlay.NOTCHED_12);
+	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.GREEN, ServerBossEvent.BossBarOverlay.NOTCHED_10);
 
 	public RadiantLordGreenTrialEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(EthernalKronuzModEntities.RADIANT_LORD_GREEN_TRIAL.get(), world);
@@ -82,10 +92,7 @@ public class RadiantLordGreenTrialEntity extends Monster implements IAnimatable 
 		setCustomName(new TextComponent("§aTitan Kaleb"));
 		setCustomNameVisible(true);
 		setPersistenceRequired();
-		this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EthernalKronuzModItems.RL_VERDE_ARMOR_HELMET.get()));
-		this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(EthernalKronuzModItems.RL_VERDE_ARMOR_CHESTPLATE.get()));
-		this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(EthernalKronuzModItems.RL_VERDE_ARMOR_LEGGINGS.get()));
-		this.setItemSlot(EquipmentSlot.FEET, new ItemStack(EthernalKronuzModItems.RL_VERDE_ARMOR_BOOTS.get()));
+		this.moveControl = new FlyingMoveControl(this, 10, true);
 	}
 
 	@Override
@@ -106,7 +113,7 @@ public class RadiantLordGreenTrialEntity extends Monster implements IAnimatable 
 
 	@Override
 	protected float getStandingEyeHeight(Pose poseIn, EntityDimensions sizeIn) {
-		return 2F;
+		return 2.25F;
 	}
 
 	@Override
@@ -115,9 +122,14 @@ public class RadiantLordGreenTrialEntity extends Monster implements IAnimatable 
 	}
 
 	@Override
+	protected PathNavigation createNavigation(Level world) {
+		return new FlyingPathNavigation(this, world);
+	}
+
+	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.5, false) {
+		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
@@ -125,8 +137,151 @@ public class RadiantLordGreenTrialEntity extends Monster implements IAnimatable 
 		});
 		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, ServerPlayer.class, false, false));
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, Player.class, false, false));
-		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 0.8));
-		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(4, new Goal() {
+			{
+				this.setFlags(EnumSet.of(Goal.Flag.MOVE));
+			}
+
+			public boolean canUse() {
+				if (RadiantLordGreenTrialEntity.this.getTarget() != null && !RadiantLordGreenTrialEntity.this.getMoveControl().hasWanted()) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				return RadiantLordGreenTrialEntity.this.getMoveControl().hasWanted() && RadiantLordGreenTrialEntity.this.getTarget() != null && RadiantLordGreenTrialEntity.this.getTarget().isAlive();
+			}
+
+			@Override
+			public void start() {
+				LivingEntity livingentity = RadiantLordGreenTrialEntity.this.getTarget();
+				Vec3 vec3d = livingentity.getEyePosition(1);
+				RadiantLordGreenTrialEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1.2);
+			}
+
+			@Override
+			public void tick() {
+				LivingEntity livingentity = RadiantLordGreenTrialEntity.this.getTarget();
+				if (RadiantLordGreenTrialEntity.this.getBoundingBox().intersects(livingentity.getBoundingBox())) {
+					RadiantLordGreenTrialEntity.this.doHurtTarget(livingentity);
+				} else {
+					double d0 = RadiantLordGreenTrialEntity.this.distanceToSqr(livingentity);
+					if (d0 < 16) {
+						Vec3 vec3d = livingentity.getEyePosition(1);
+						RadiantLordGreenTrialEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1.2);
+					}
+				}
+			}
+		});
+		this.goalSelector.addGoal(5, new RandomStrollGoal(this, 0.8));
+		this.goalSelector.addGoal(6, new RandomStrollGoal(this, 0.8, 20) {
+			@Override
+			protected Vec3 getPosition() {
+				Random random = RadiantLordGreenTrialEntity.this.getRandom();
+				double dir_x = RadiantLordGreenTrialEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
+				double dir_y = RadiantLordGreenTrialEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
+				double dir_z = RadiantLordGreenTrialEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);
+				return new Vec3(dir_x, dir_y, dir_z);
+			}
+		});
+		this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(1, new RadiantLordGreenTrialEntity.RangedAttackGoal(this, 1.25, 20, 16f) {
+			@Override
+			public boolean canContinueToUse() {
+				return this.canUse();
+			}
+		});
+	}
+
+	public class RangedAttackGoal extends Goal {
+		private final Mob mob;
+		private final RangedAttackMob rangedAttackMob;
+		@Nullable
+		private LivingEntity target;
+		private int attackTime = -1;
+		private final double speedModifier;
+		private int seeTime;
+		private final int attackIntervalMin;
+		private final int attackIntervalMax;
+		private final float attackRadius;
+		private final float attackRadiusSqr;
+
+		public RangedAttackGoal(RangedAttackMob p_25768_, double p_25769_, int p_25770_, float p_25771_) {
+			this(p_25768_, p_25769_, p_25770_, p_25770_, p_25771_);
+		}
+
+		public RangedAttackGoal(RangedAttackMob p_25773_, double p_25774_, int p_25775_, int p_25776_, float p_25777_) {
+			if (!(p_25773_ instanceof LivingEntity)) {
+				throw new IllegalArgumentException("ArrowAttackGoal requires Mob implements RangedAttackMob");
+			} else {
+				this.rangedAttackMob = p_25773_;
+				this.mob = (Mob) p_25773_;
+				this.speedModifier = p_25774_;
+				this.attackIntervalMin = p_25775_;
+				this.attackIntervalMax = p_25776_;
+				this.attackRadius = p_25777_;
+				this.attackRadiusSqr = p_25777_ * p_25777_;
+				this.setFlags(EnumSet.of(Goal.Flag.MOVE, Goal.Flag.LOOK));
+			}
+		}
+
+		public boolean canUse() {
+			LivingEntity livingentity = this.mob.getTarget();
+			if (livingentity != null && livingentity.isAlive()) {
+				this.target = livingentity;
+				return true;
+			} else {
+				return false;
+			}
+		}
+
+		public boolean canContinueToUse() {
+			return this.canUse() || this.target.isAlive() && !this.mob.getNavigation().isDone();
+		}
+
+		public void stop() {
+			this.target = null;
+			this.seeTime = 0;
+			this.attackTime = -1;
+			((RadiantLordGreenTrialEntity) rangedAttackMob).entityData.set(SHOOT, false);
+		}
+
+		public boolean requiresUpdateEveryTick() {
+			return true;
+		}
+
+		public void tick() {
+			double d0 = this.mob.distanceToSqr(this.target.getX(), this.target.getY(), this.target.getZ());
+			boolean flag = this.mob.getSensing().hasLineOfSight(this.target);
+			if (flag) {
+				++this.seeTime;
+			} else {
+				this.seeTime = 0;
+			}
+			if (!(d0 > (double) this.attackRadiusSqr) && this.seeTime >= 5) {
+				this.mob.getNavigation().stop();
+			} else {
+				this.mob.getNavigation().moveTo(this.target, this.speedModifier);
+			}
+			this.mob.getLookControl().setLookAt(this.target, 30.0F, 30.0F);
+			if (--this.attackTime == 0) {
+				if (!flag) {
+					((RadiantLordGreenTrialEntity) rangedAttackMob).entityData.set(SHOOT, false);
+					return;
+				}
+				((RadiantLordGreenTrialEntity) rangedAttackMob).entityData.set(SHOOT, true);
+				float f = (float) Math.sqrt(d0) / this.attackRadius;
+				float f1 = Mth.clamp(f, 0.1F, 1.0F);
+				this.rangedAttackMob.performRangedAttack(this.target, f1);
+				this.attackTime = Mth.floor(f * (float) (this.attackIntervalMax - this.attackIntervalMin) + (float) this.attackIntervalMin);
+			} else if (this.attackTime < 0) {
+				this.attackTime = Mth.floor(Mth.lerp(Math.sqrt(d0) / (double) this.attackRadius, (double) this.attackIntervalMin, (double) this.attackIntervalMax));
+			} else
+				((RadiantLordGreenTrialEntity) rangedAttackMob).entityData.set(SHOOT, false);
+		}
 	}
 
 	@Override
@@ -139,6 +294,11 @@ public class RadiantLordGreenTrialEntity extends Monster implements IAnimatable 
 		return false;
 	}
 
+	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
+		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
+		this.spawnAtLocation(new ItemStack(Blocks.AIR));
+	}
+
 	@Override
 	public void playStepSound(BlockPos pos, BlockState blockIn) {
 		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ethernal_kronuz:elementsfootsteps")), 0.15f, 1);
@@ -146,17 +306,24 @@ public class RadiantLordGreenTrialEntity extends Monster implements IAnimatable 
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
+	}
+
+	@Override
+	public boolean causeFallDamage(float l, float d, DamageSource source) {
+		return false;
 	}
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
 		if (source.getDirectEntity() instanceof ThrownPotion || source.getDirectEntity() instanceof AreaEffectCloud)
+			return false;
+		if (source == DamageSource.FALL)
 			return false;
 		if (source == DamageSource.LIGHTNING_BOLT)
 			return false;
@@ -188,6 +355,11 @@ public class RadiantLordGreenTrialEntity extends Monster implements IAnimatable 
 	}
 
 	@Override
+	public void performRangedAttack(LivingEntity target, float flval) {
+		TerraBladeProjectileEntity.shoot(this, target);
+	}
+
+	@Override
 	public boolean canChangeDimensions() {
 		return false;
 	}
@@ -210,6 +382,20 @@ public class RadiantLordGreenTrialEntity extends Monster implements IAnimatable 
 		this.bossInfo.setProgress(this.getHealth() / this.getMaxHealth());
 	}
 
+	@Override
+	protected void checkFallDamage(double y, boolean onGroundIn, BlockState state, BlockPos pos) {
+	}
+
+	@Override
+	public void setNoGravity(boolean ignored) {
+		super.setNoGravity(true);
+	}
+
+	public void aiStep() {
+		super.aiStep();
+		this.setNoGravity(true);
+	}
+
 	public static void init() {
 	}
 
@@ -218,10 +404,11 @@ public class RadiantLordGreenTrialEntity extends Monster implements IAnimatable 
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 1024);
 		builder = builder.add(Attributes.ARMOR, 10);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 10);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.5);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1.2);
+		builder = builder.add(Attributes.FLYING_SPEED, 0.3);
 		return builder;
 	}
 

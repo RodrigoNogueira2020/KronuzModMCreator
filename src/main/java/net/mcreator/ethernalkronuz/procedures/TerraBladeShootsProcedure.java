@@ -35,7 +35,7 @@ public class TerraBladeShootsProcedure {
 						entityToSpawn.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
 						return entityToSpawn;
 					}
-				}.getArrow(projectileLevel, 100, 1, (byte) 100);
+				}.getArrow(projectileLevel, 1, 1, (byte) 1);
 				double offsetX = _shootFrom.getLookAngle().x;
 				double offsetY = _shootFrom.getLookAngle().y;
 				double offsetZ = _shootFrom.getLookAngle().z;

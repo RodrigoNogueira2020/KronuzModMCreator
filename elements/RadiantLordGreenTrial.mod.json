@@ -13,7 +13,7 @@
       "fixedValue": 1.0
     },
     "modelWidth": 0.6,
-    "modelHeight": 1.8,
+    "modelHeight": 2.7,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
@@ -30,7 +30,7 @@
     },
     "isBoss": true,
     "bossBarColor": "GREEN",
-    "bossBarType": "NOTCHED_12",
+    "bossBarType": "NOTCHED_10",
     "equipmentMainHand": {
       "value": ""
     },
@@ -38,20 +38,20 @@
       "value": ""
     },
     "equipmentHelmet": {
-      "value": "CUSTOM:RLVerdeArmor.helmet"
+      "value": ""
     },
     "equipmentBody": {
-      "value": "CUSTOM:RLVerdeArmor.body"
+      "value": ""
     },
     "equipmentLeggings": {
-      "value": "CUSTOM:RLVerdeArmor.legs"
+      "value": ""
     },
     "equipmentBoots": {
-      "value": "CUSTOM:RLVerdeArmor.boots"
+      "value": ""
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 3,
+    "attackStrength": 10,
     "attackKnockback": 1.2,
     "knockbackResistance": 0.5,
     "movementSpeed": 0.3,
@@ -61,7 +61,7 @@
     "health": 1024,
     "xpAmount": 0,
     "waterMob": false,
-    "flyingMob": false,
+    "flyingMob": true,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
@@ -73,7 +73,7 @@
     "canControlStrafe": false,
     "immuneToFire": true,
     "immuneToArrows": false,
-    "immuneToFallDamage": false,
+    "immuneToFallDamage": true,
     "immuneToCactus": false,
     "immuneToDrowning": false,
     "immuneToLightning": true,
@@ -85,16 +85,16 @@
     "immuneToWither": false,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": ""
+      "value": "Blocks.AIR"
     },
     "livingSound": {
       "value": ""
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": ""
     },
     "deathSound": {
-      "value": "entity.generic.death"
+      "value": ""
     },
     "stepSound": {
       "value": "CUSTOM:elementsfootsteps"
@@ -107,7 +107,7 @@
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"594\" y=\"38\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.5</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayerMP</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"962\" y=\"76\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayerMP</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_fly\"><field name=\"radius\">16</field><field name=\"speed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"fly\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "model": "radiantlordcoloranimated.geo.json",
     "groupName": "head",
     "animation1": "idle",
@@ -135,14 +135,14 @@
     "headMovement": true,
     "eyeHeight": true,
     "breedTriggerItems": [],
-    "ranged": false,
+    "ranged": true,
     "rangedAttackItem": {
       "value": ""
     },
-    "rangedItemType": "Default item",
+    "rangedItemType": "TerraBladeProjectile",
     "rangedAttackInterval": 20,
-    "rangedAttackRadius": 10.0,
-    "height": 2.0,
+    "rangedAttackRadius": 16.0,
+    "height": 2.25,
     "spawnThisMob": false,
     "doesDespawnWhenIdle": false,
     "spawningProbability": 20,

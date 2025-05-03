@@ -9,7 +9,7 @@ import net.mcreator.ethernalkronuz.procedures.CancroOnEffectActiveTickProcedure;
 
 public class CancroMobEffect extends MobEffect {
 	public CancroMobEffect() {
-		super(MobEffectCategory.HARMFUL, -16737997);
+		super(MobEffectCategory.HARMFUL, -16751053);
 	}
 
 	@Override
