@@ -86,9 +86,9 @@ public class TerraBladeProjectileEntity extends AbstractArrow implements ItemSup
 	public static TerraBladeProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
 		TerraBladeProjectileEntity entityarrow = new TerraBladeProjectileEntity(EthernalKronuzModEntities.TERRA_BLADE_PROJECTILE.get(), entity, entity.level);
 		double dx = target.getX() - entity.getX();
-		double dy = target.getY() + target.getEyeHeight() - 1.1;
+		double dy = target.getEyeY() - entity.getEyeY();
 		double dz = target.getZ() - entity.getZ();
-		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 1f * 2, 12.0F);
+		entityarrow.shoot(dx, dy, dz, 2f, 0f); //power: 2f; inaccuracy: 0f
 		entityarrow.setSilent(true);
 		entityarrow.setBaseDamage(1);
 		entityarrow.setKnockback(1);

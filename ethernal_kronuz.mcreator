@@ -10273,7 +10273,7 @@
       "type": "animatedentity",
       "sortid": 613,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "radiant_lord_green_trial",
       "metadata": {
         "files": [
@@ -10499,6 +10499,36 @@
         ]
       },
       "path": "~/Factions/Radiant Lords/Active Radiant Lords/Green"
+    },
+    {
+      "name": "RadiantLordGreenPhaseManager",
+      "type": "procedure",
+      "sortid": 628,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "radiant_lord_green_phase_manager",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/RadiantLordGreenPhaseManagerProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Factions/Radiant Lords/The Rise/Colors/Green"
+    },
+    {
+      "name": "RadiantLordGreenTrialOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 629,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "radiant_lord_green_trial_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/RadiantLordGreenTrialOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Factions/Radiant Lords/The Rise/Colors/Green"
     }
   ],
   "variable_elements": [
