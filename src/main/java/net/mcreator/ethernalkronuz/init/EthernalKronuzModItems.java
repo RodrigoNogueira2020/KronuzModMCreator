@@ -259,6 +259,8 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> THE_RISE_PARCHMENT = REGISTRY.register("the_rise_parchment", () -> new TheRiseParchmentItem());
 	public static final RegistryObject<Item> RED_RADIANT_LORD_THE_RISE_SPAWN_EGG = REGISTRY.register("red_radiant_lord_the_rise_spawn_egg",
 			() -> new ForgeSpawnEggItem(EthernalKronuzModEntities.RED_RADIANT_LORD_THE_RISE, -10066330, -43691, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB)));
+	public static final RegistryObject<Item> PURPLE_RADIANT_LORD_THE_RISE_SPAWN_EGG = REGISTRY.register("purple_radiant_lord_the_rise_spawn_egg",
+			() -> new ForgeSpawnEggItem(EthernalKronuzModEntities.PURPLE_RADIANT_LORD_THE_RISE, -10066330, -5635926, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

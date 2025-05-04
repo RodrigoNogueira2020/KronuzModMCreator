@@ -50,6 +50,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.ethernalkronuz.procedures.RedRadiantLordTheRiseOnInitialEntitySpawnProcedure;
+import net.mcreator.ethernalkronuz.procedures.RedRadiantLordTheRiseOnEntityTickUpdateProcedure;
 import net.mcreator.ethernalkronuz.procedures.RedRadiantLordTheRiseEntityDiesProcedure;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModEntities;
 
@@ -64,7 +65,7 @@ public class RedRadiantLordTheRiseEntity extends Monster implements IAnimatable 
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
-	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.RED, ServerBossEvent.BossBarOverlay.NOTCHED_10);
+	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.RED, ServerBossEvent.BossBarOverlay.NOTCHED_6);
 
 	public RedRadiantLordTheRiseEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(EthernalKronuzModEntities.RED_RADIANT_LORD_THE_RISE.get(), world);
@@ -114,7 +115,8 @@ public class RedRadiantLordTheRiseEntity extends Monster implements IAnimatable 
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
 		});
-		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Player.class, false, false));
+		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, ServerPlayer.class, false, false));
+		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, Player.class, false, false));
 	}
 
 	@Override
@@ -146,6 +148,8 @@ public class RedRadiantLordTheRiseEntity extends Monster implements IAnimatable 
 	public boolean hurt(DamageSource source, float amount) {
 		if (source.getDirectEntity() instanceof ThrownPotion || source.getDirectEntity() instanceof AreaEffectCloud)
 			return false;
+		if (source == DamageSource.FALL)
+			return false;
 		if (source == DamageSource.LIGHTNING_BOLT)
 			return false;
 		return super.hurt(source, amount);
@@ -167,6 +171,7 @@ public class RedRadiantLordTheRiseEntity extends Monster implements IAnimatable 
 	@Override
 	public void baseTick() {
 		super.baseTick();
+		RedRadiantLordTheRiseOnEntityTickUpdateProcedure.execute(this);
 		this.refreshDimensions();
 	}
 
@@ -215,9 +220,7 @@ public class RedRadiantLordTheRiseEntity extends Monster implements IAnimatable 
 
 	private <E extends IAnimatable> PlayState movementPredicate(AnimationEvent<E> event) {
 		if (this.animationprocedure.equals("empty")) {
-			if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F))
-
-			) {
+			if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F))) {
 				event.getController().setAnimation(new AnimationBuilder().addAnimation("walk", EDefaultLoopTypes.LOOP));
 				return PlayState.CONTINUE;
 			}

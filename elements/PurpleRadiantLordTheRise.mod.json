@@ -2,9 +2,9 @@
   "_fv": 39,
   "_type": "animatedentity",
   "definition": {
-    "mobName": "§cAzakana",
-    "mobLabel": "§cAzakana",
-    "mobModelTexture": "rl_crystal_red.png",
+    "mobName": "§5Gargantuan",
+    "mobLabel": "§5Gargantuan",
+    "mobModelTexture": "rl_crystal_purple.png",
     "mobModelGlowTexture": "",
     "visualScale": {
       "fixedValue": 1.0
@@ -22,14 +22,14 @@
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -43691,
+      "value": -5635926,
       "falpha": 0.0
     },
     "creativeTab": {
       "value": "CUSTOM:CreativeTab"
     },
     "isBoss": true,
-    "bossBarColor": "RED",
+    "bossBarColor": "PURPLE",
     "bossBarType": "NOTCHED_6",
     "equipmentMainHand": {
       "value": ""
@@ -73,7 +73,7 @@
     "canControlStrafe": false,
     "immuneToFire": true,
     "immuneToArrows": false,
-    "immuneToFallDamage": true,
+    "immuneToFallDamage": false,
     "immuneToCactus": false,
     "immuneToDrowning": false,
     "immuneToLightning": true,
@@ -100,18 +100,18 @@
       "value": "CUSTOM:elementsfootsteps"
     },
     "whenMobDies": {
-      "name": "RedRadiantLordTheRiseEntityDies"
+      "name": "PurpleRadiantLordTheRiseEntityDies"
     },
     "onMobTickUpdate": {
-      "name": "RedRadiantLordTheRiseOnEntityTickUpdate"
+      "name": "PurpleRadiantLordTheRiseOnEntityTickUpdate"
     },
     "onInitialSpawn": {
-      "name": "RedRadiantLordTheRiseOnInitialEntitySpawn"
+      "name": "PurpleRadiantLordTheRiseOnInitialEntitySpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayerMP</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></xml>",
-    "model": "redradiantlord.geo.json",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"258\" y=\"26\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayerMP</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></xml>",
+    "model": "purpleradiantlord.geo.json",
     "groupName": "head",
     "animation1": "idle",
     "animation2": "walk",

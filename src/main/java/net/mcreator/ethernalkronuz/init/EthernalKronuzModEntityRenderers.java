@@ -18,6 +18,7 @@ import net.mcreator.ethernalkronuz.client.renderer.TechnobaldeRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.RedRadiantLordTheRiseRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.RadiantLordNoColorTrialRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.RadiantLordGreenTrialRenderer;
+import net.mcreator.ethernalkronuz.client.renderer.PurpleRadiantLordTheRiseRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.NullEntityRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.GriffinAnimatedRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.GinukaPowerSetupRenderer;
@@ -39,5 +40,6 @@ public class EthernalKronuzModEntityRenderers {
 		event.registerEntityRenderer(EthernalKronuzModEntities.RADIANT_LORD_NO_COLOR_TRIAL.get(), RadiantLordNoColorTrialRenderer::new);
 		event.registerEntityRenderer(EthernalKronuzModEntities.RADIANT_LORD_GREEN_TRIAL.get(), RadiantLordGreenTrialRenderer::new);
 		event.registerEntityRenderer(EthernalKronuzModEntities.RED_RADIANT_LORD_THE_RISE.get(), RedRadiantLordTheRiseRenderer::new);
+		event.registerEntityRenderer(EthernalKronuzModEntities.PURPLE_RADIANT_LORD_THE_RISE.get(), PurpleRadiantLordTheRiseRenderer::new);
 	}
 }

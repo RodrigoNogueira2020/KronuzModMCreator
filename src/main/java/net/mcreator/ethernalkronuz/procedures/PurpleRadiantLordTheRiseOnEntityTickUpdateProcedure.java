@@ -4,7 +4,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 
-public class RadiantLordGreenTrialOnEntityTickUpdateProcedure {
+public class PurpleRadiantLordTheRiseOnEntityTickUpdateProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;

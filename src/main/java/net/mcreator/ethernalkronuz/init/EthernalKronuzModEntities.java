@@ -23,6 +23,7 @@ import net.mcreator.ethernalkronuz.entity.TechnobaldeEntity;
 import net.mcreator.ethernalkronuz.entity.RedRadiantLordTheRiseEntity;
 import net.mcreator.ethernalkronuz.entity.RadiantLordNoColorTrialEntity;
 import net.mcreator.ethernalkronuz.entity.RadiantLordGreenTrialEntity;
+import net.mcreator.ethernalkronuz.entity.PurpleRadiantLordTheRiseEntity;
 import net.mcreator.ethernalkronuz.entity.NullEntityEntity;
 import net.mcreator.ethernalkronuz.entity.GriffinAnimatedEntity;
 import net.mcreator.ethernalkronuz.entity.GinukaPowerSetupEntity;
@@ -70,7 +71,10 @@ public class EthernalKronuzModEntities {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RadiantLordGreenTrialEntity::new).fireImmune().sized(0.6f, 2.7f));
 	public static final RegistryObject<EntityType<RedRadiantLordTheRiseEntity>> RED_RADIANT_LORD_THE_RISE = register("red_radiant_lord_the_rise",
 			EntityType.Builder.<RedRadiantLordTheRiseEntity>of(RedRadiantLordTheRiseEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
-					.setCustomClientFactory(RedRadiantLordTheRiseEntity::new).fireImmune().sized(0.6f, 1.8f));
+					.setCustomClientFactory(RedRadiantLordTheRiseEntity::new).fireImmune().sized(0.6f, 2.7f));
+	public static final RegistryObject<EntityType<PurpleRadiantLordTheRiseEntity>> PURPLE_RADIANT_LORD_THE_RISE = register("purple_radiant_lord_the_rise",
+			EntityType.Builder.<PurpleRadiantLordTheRiseEntity>of(PurpleRadiantLordTheRiseEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+					.setCustomClientFactory(PurpleRadiantLordTheRiseEntity::new).fireImmune().sized(0.6f, 2.7f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -89,6 +93,7 @@ public class EthernalKronuzModEntities {
 			RadiantLordNoColorTrialEntity.init();
 			RadiantLordGreenTrialEntity.init();
 			RedRadiantLordTheRiseEntity.init();
+			PurpleRadiantLordTheRiseEntity.init();
 		});
 	}
 
@@ -104,5 +109,6 @@ public class EthernalKronuzModEntities {
 		event.put(RADIANT_LORD_NO_COLOR_TRIAL.get(), RadiantLordNoColorTrialEntity.createAttributes().build());
 		event.put(RADIANT_LORD_GREEN_TRIAL.get(), RadiantLordGreenTrialEntity.createAttributes().build());
 		event.put(RED_RADIANT_LORD_THE_RISE.get(), RedRadiantLordTheRiseEntity.createAttributes().build());
+		event.put(PURPLE_RADIANT_LORD_THE_RISE.get(), PurpleRadiantLordTheRiseEntity.createAttributes().build());
 	}
 }

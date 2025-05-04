@@ -2,7 +2,10 @@ package net.mcreator.ethernalkronuz.procedures;
 
 import net.minecraftforge.server.ServerLifecycleHooks;
 import net.minecraftforge.items.ItemHandlerHelper;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.entity.player.AdvancementEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
@@ -21,8 +24,20 @@ import net.minecraft.Util;
 import net.mcreator.ethernalkronuz.network.EthernalKronuzModVariables;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModItems;
 
+import javax.annotation.Nullable;
+
+@Mod.EventBusSubscriber
 public class RiseRadiantLordVermelhoAfterTheRiseConfirmationProcedure {
+	@SubscribeEvent
+	public static void onAdvancement(AdvancementEvent event) {
+		execute(event, event.getPlayer().level, event.getPlayer().getX(), event.getPlayer().getY(), event.getPlayer().getZ(), event.getPlayer());
+	}
+
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		execute(null, world, x, y, z, entity);
+	}
+
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		if ((entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel

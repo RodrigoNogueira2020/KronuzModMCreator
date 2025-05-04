@@ -7,6 +7,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundSource;
@@ -18,7 +19,7 @@ import net.mcreator.ethernalkronuz.init.EthernalKronuzModParticleTypes;
 
 public class BladeOfTheVoidSlashProcedure {
 	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
-		if (entity == null || !(entity instanceof Player player))
+		if (entity == null || !(entity instanceof LivingEntity livingEntity))
 			return;
 		if (world instanceof Level _level)
 			_level.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ethernal_kronuz:sickle-swing")), SoundSource.PLAYERS, 1.0f, 1.0f);
@@ -39,7 +40,7 @@ public class BladeOfTheVoidSlashProcedure {
 		double centerY = entity.getY() + 1;
 		double centerZ = entity.getZ();
 		for (Entity target : world.getEntitiesOfClass(Entity.class, new AABB(centerX - radius, centerY - radius / 2, centerZ - radius, centerX + radius, centerY + radius / 2, centerZ + radius))) {
-			if (target != entity && !(target instanceof Player)) {
+			if (target != entity && target.isAlive() && !target.isSpectator()) {
 				double dx = target.getX() - entity.getX();
 				double dz = target.getZ() - entity.getZ();
 				double distanceSquared = dx * dx + dz * dz;
