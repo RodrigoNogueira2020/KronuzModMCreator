@@ -12,8 +12,6 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
@@ -169,52 +167,13 @@ public class RiseRadiantLordVerdeAfterTheRiseConfirmationProcedure {
 										_setstack.setCount(1);
 										ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 									}
-									if (entity instanceof Player _player) {
-										ItemStack _setstack = new ItemStack(EthernalKronuzModItems.BIFROST_KEY.get());
-										_setstack.setCount(1);
-										ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-									}
-									{
-										Entity _entity = entity;
-										if (_entity instanceof Player _player) {
-											_player.getInventory().armor.set(3, new ItemStack(EthernalKronuzModItems.RL_VERDE_ARMOR_HELMET.get()));
-											_player.getInventory().setChanged();
-										} else if (_entity instanceof LivingEntity _living) {
-											_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EthernalKronuzModItems.RL_VERDE_ARMOR_HELMET.get()));
-										}
-									}
-									{
-										Entity _entity = entity;
-										if (_entity instanceof Player _player) {
-											_player.getInventory().armor.set(2, new ItemStack(EthernalKronuzModItems.RL_VERDE_ARMOR_CHESTPLATE.get()));
-											_player.getInventory().setChanged();
-										} else if (_entity instanceof LivingEntity _living) {
-											_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(EthernalKronuzModItems.RL_VERDE_ARMOR_CHESTPLATE.get()));
-										}
-									}
-									{
-										Entity _entity = entity;
-										if (_entity instanceof Player _player) {
-											_player.getInventory().armor.set(1, new ItemStack(EthernalKronuzModItems.RL_VERDE_ARMOR_LEGGINGS.get()));
-											_player.getInventory().setChanged();
-										} else if (_entity instanceof LivingEntity _living) {
-											_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(EthernalKronuzModItems.RL_VERDE_ARMOR_LEGGINGS.get()));
-										}
-									}
-									{
-										Entity _entity = entity;
-										if (_entity instanceof Player _player) {
-											_player.getInventory().armor.set(0, new ItemStack(EthernalKronuzModItems.RL_VERDE_ARMOR_BOOTS.get()));
-											_player.getInventory().setChanged();
-										} else if (_entity instanceof LivingEntity _living) {
-											_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(EthernalKronuzModItems.RL_VERDE_ARMOR_BOOTS.get()));
-										}
-									}
 									if (!world.isClientSide()) {
 										MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
 										if (_mcserv != null)
 											_mcserv.getPlayerList().broadcastMessage(new TextComponent("\u00A7aThe Rise of Titan Kaleb has been completed"), ChatType.SYSTEM, Util.NIL_UUID);
 									}
+									if (entity instanceof Player _player && !_player.level.isClientSide())
+										_player.displayClientMessage(new TextComponent("In 10 seconds you'll go back to where you were before The Rise"), (true));
 									MinecraftForge.EVENT_BUS.unregister(this);
 								}
 							}.start(world, 20);

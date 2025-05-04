@@ -45,9 +45,8 @@ public class RadiantLordEffectOnEffectActiveTickProcedure {
 				player.getInventory().setChanged();
 			}
 		} else if (entity instanceof LivingEntity living) {
-			if (living.getItemBySlot(slot).isEmpty()) {
+			if (living.getItemBySlot(slot).isEmpty())
 				living.setItemSlot(slot, item);
-			}
 		}
 	}
 

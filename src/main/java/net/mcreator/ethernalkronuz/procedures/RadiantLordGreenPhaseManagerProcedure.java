@@ -13,7 +13,7 @@ public class RadiantLordGreenPhaseManagerProcedure {
 		double rangedAttackTimer = entity.getPersistentData().getDouble("rangedAttackTimer");
 		boolean isPerformingPhase = entity.getPersistentData().getBoolean("isPerformingPhase");
 		
-		// Fase meele: durante 10 segundos (400 ticks)
+		// Fase meele: durante 20 segundos (400 ticks)
 		if (!isPerformingPhase) {
 			phaseTickCounter++;
 			if (phaseTickCounter >= 400) {
@@ -21,7 +21,7 @@ public class RadiantLordGreenPhaseManagerProcedure {
 				entity.getPersistentData().putDouble("rangedAttackCounter", 0);
 				entity.getPersistentData().putDouble("rangedAttackTimer", 0);
 				entity.setNoGravity(true);
-				entity.setDeltaMovement(entity.getDeltaMovement().x, 0.25, entity.getDeltaMovement().z); // Sobe
+				entity.setDeltaMovement(entity.getDeltaMovement().x, 0.15, entity.getDeltaMovement().z); // Sobe
 				entity.getPersistentData().putDouble("phaseTickCounter", 0);
 			} else
 				entity.getPersistentData().putDouble("phaseTickCounter", phaseTickCounter);
@@ -44,7 +44,7 @@ public class RadiantLordGreenPhaseManagerProcedure {
 				entity.getPersistentData().putDouble("rangedAttackTimer", rangedAttackTimer);
 			} else {
 				entity.setNoGravity(false);
-				entity.setDeltaMovement(entity.getDeltaMovement().x, -0.25, entity.getDeltaMovement().z); //Desce
+				entity.setDeltaMovement(entity.getDeltaMovement().x, -0.15, entity.getDeltaMovement().z); //Desce
 				entity.getPersistentData().putBoolean("isPerformingPhase", false);
 			}
 		}
