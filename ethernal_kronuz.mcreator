@@ -10339,7 +10339,7 @@
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords/The Rise/Colors/Green"
+      "path": "~/Factions/Radiant Lords/The Rise/GUI"
     },
     {
       "name": "RadiantLordGreenTrialEntityDies",
@@ -10529,6 +10529,99 @@
         "dependencies": []
       },
       "path": "~/Factions/Radiant Lords/The Rise/Colors/Green"
+    },
+    {
+      "name": "RedRadiantLordTheRise",
+      "type": "animatedentity",
+      "sortid": 630,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_radiant_lord_the_rise",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ethernal_kronuz/models/item/red_radiant_lord_the_rise_spawn_egg.json",
+          "src/main/java/net/mcreator/ethernalkronuz/entity/RedRadiantLordTheRiseEntity.java",
+          "src/main/java/net/mcreator/ethernalkronuz/entity/model/RedRadiantLordTheRiseModel.java",
+          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/RedRadiantLordTheRiseRenderer.java"
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/The Rise/Colors/Red"
+    },
+    {
+      "name": "RedRadiantLordTheRiseEntityDies",
+      "type": "procedure",
+      "sortid": 631,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_radiant_lord_the_rise_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/RedRadiantLordTheRiseEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/The Rise/Colors/Red"
+    },
+    {
+      "name": "RedRadiantLordTheRiseOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 632,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_radiant_lord_the_rise_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/RedRadiantLordTheRiseOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/The Rise/Colors/Red"
     }
   ],
   "variable_elements": [
@@ -11133,6 +11226,7 @@
       "block.ethernal_kronuz.cracked_heaven_stone_bricks_stairs": "Cracked Heaven Stone Bricks Stairs",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_special_tool": "- Special Tool",
       "block.ethernal_kronuz.tall_glow_grass": "Tall Glow Grass",
+      "item.ethernal_kronuz.red_radiant_lord_the_rise_spawn_egg": "§cAzakana Spawn Egg",
       "item.ethernal_kronuz.null_entity_spawn_egg": "Null Spawn Egg",
       "block.ethernal_kronuz.double_glow_plant": "Double Glow Plant",
       "biome.ethernal_kronuz.plains_jotunheim": "Jotunheim",
@@ -11210,6 +11304,7 @@
       "subtitles.literalmente-vc": "",
       "block.ethernal_kronuz.heaven_slate": "Heaven Slate",
       "block.ethernal_kronuz.ygg_slabs": "Ygg Wood Slabs",
+      "entity.ethernal_kronuz.red_radiant_lord_the_rise": "§cAzakana",
       "block.ethernal_kronuz.murasama_block": "Murasama Block",
       "gui.ethernal_kronuz.confirm_rise_gui_roxo.button_wait": "Wait",
       "item.ethernal_kronuz.faking_ell_shovel": "Faking Ell Shovel",

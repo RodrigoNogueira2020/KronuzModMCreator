@@ -80,6 +80,6 @@ public class TheRiseParchmentRightclickedProcedure {
 			}
 		}
 		if (entity instanceof Player _player && !_player.level.isClientSide())
-			_player.displayClientMessage(new TextComponent("\u00A78You have no right to see this Parchment"), (true));
+			_player.displayClientMessage(new TextComponent("\u00A77You have no right to see this Parchment"), (true));
 	}
 }

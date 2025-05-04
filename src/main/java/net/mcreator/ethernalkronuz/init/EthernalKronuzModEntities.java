@@ -20,6 +20,7 @@ import net.mcreator.ethernalkronuz.entity.WarperEntity;
 import net.mcreator.ethernalkronuz.entity.TerraBladeProjectileEntity;
 import net.mcreator.ethernalkronuz.entity.TechnomortoEntity;
 import net.mcreator.ethernalkronuz.entity.TechnobaldeEntity;
+import net.mcreator.ethernalkronuz.entity.RedRadiantLordTheRiseEntity;
 import net.mcreator.ethernalkronuz.entity.RadiantLordNoColorTrialEntity;
 import net.mcreator.ethernalkronuz.entity.RadiantLordGreenTrialEntity;
 import net.mcreator.ethernalkronuz.entity.NullEntityEntity;
@@ -67,6 +68,9 @@ public class EthernalKronuzModEntities {
 					.setCustomClientFactory(RadiantLordNoColorTrialEntity::new).fireImmune().sized(5f, 2.5f));
 	public static final RegistryObject<EntityType<RadiantLordGreenTrialEntity>> RADIANT_LORD_GREEN_TRIAL = register("radiant_lord_green_trial", EntityType.Builder.<RadiantLordGreenTrialEntity>of(RadiantLordGreenTrialEntity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RadiantLordGreenTrialEntity::new).fireImmune().sized(0.6f, 2.7f));
+	public static final RegistryObject<EntityType<RedRadiantLordTheRiseEntity>> RED_RADIANT_LORD_THE_RISE = register("red_radiant_lord_the_rise",
+			EntityType.Builder.<RedRadiantLordTheRiseEntity>of(RedRadiantLordTheRiseEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+					.setCustomClientFactory(RedRadiantLordTheRiseEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -84,6 +88,7 @@ public class EthernalKronuzModEntities {
 			GriffinAnimatedEntity.init();
 			RadiantLordNoColorTrialEntity.init();
 			RadiantLordGreenTrialEntity.init();
+			RedRadiantLordTheRiseEntity.init();
 		});
 	}
 
@@ -98,5 +103,6 @@ public class EthernalKronuzModEntities {
 		event.put(GRIFFIN_ANIMATED.get(), GriffinAnimatedEntity.createAttributes().build());
 		event.put(RADIANT_LORD_NO_COLOR_TRIAL.get(), RadiantLordNoColorTrialEntity.createAttributes().build());
 		event.put(RADIANT_LORD_GREEN_TRIAL.get(), RadiantLordGreenTrialEntity.createAttributes().build());
+		event.put(RED_RADIANT_LORD_THE_RISE.get(), RedRadiantLordTheRiseEntity.createAttributes().build());
 	}
 }

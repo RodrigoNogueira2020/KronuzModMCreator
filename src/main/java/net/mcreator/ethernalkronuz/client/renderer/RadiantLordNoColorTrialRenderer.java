@@ -25,4 +25,9 @@ public class RadiantLordNoColorTrialRenderer extends GeoEntityRenderer<RadiantLo
 		stack.scale(1f, 1f, 1f);
 		return RenderType.entityTranslucent(getTextureLocation(entity));
 	}
+
+	@Override
+	protected float getDeathMaxRotation(RadiantLordNoColorTrialEntity entityLivingBaseIn) {
+		return 0.0F;
+	}
 }

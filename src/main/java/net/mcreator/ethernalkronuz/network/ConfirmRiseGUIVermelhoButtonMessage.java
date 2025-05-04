@@ -12,7 +12,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.ethernalkronuz.world.inventory.ConfirmRiseGUIVermelhoMenu;
-import net.mcreator.ethernalkronuz.procedures.RiseRadiantLordVermelhoAfterTheRiseConfirmationProcedure;
+import net.mcreator.ethernalkronuz.procedures.TeleportPlayerToTheTrialChamberGreenProcedure;
 import net.mcreator.ethernalkronuz.procedures.CloseConfirmRiseGUIProcedure;
 import net.mcreator.ethernalkronuz.EthernalKronuzMod;
 
@@ -65,7 +65,7 @@ public class ConfirmRiseGUIVermelhoButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			RiseRadiantLordVermelhoAfterTheRiseConfirmationProcedure.execute(world, x, y, z, entity);
+			TeleportPlayerToTheTrialChamberGreenProcedure.execute(entity);
 		}
 		if (buttonID == 1) {
 

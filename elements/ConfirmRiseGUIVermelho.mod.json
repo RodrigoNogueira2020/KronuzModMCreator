@@ -236,7 +236,7 @@
           "name": "button_rise",
           "text": "Rise",
           "onClick": {
-            "name": "RiseRadiantLordVermelhoAfterTheRiseConfirmation"
+            "name": "TeleportPlayerToTheTrialChamberGreen"
           },
           "width": 46,
           "height": 20,
