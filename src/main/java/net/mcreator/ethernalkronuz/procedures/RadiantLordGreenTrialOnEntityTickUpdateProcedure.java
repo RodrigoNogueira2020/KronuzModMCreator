@@ -6,6 +6,6 @@ public class RadiantLordGreenTrialOnEntityTickUpdateProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		RadiantLordGreenPhaseManagerProcedure.execute(entity);
+		BossFightsManagerProcedure.execute(entity);
 	}
-}
+}

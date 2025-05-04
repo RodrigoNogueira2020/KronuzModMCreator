@@ -10,7 +10,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.ethernalkronuz.entity.RadiantLordGreenTrialEntity;
 
-public class RadiantLordGreenPhaseManagerProcedure {
+public class BossFightsManagerProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null || !entity.isAlive()) {
 			entity.getPersistentData().putBoolean("isPerformingPhase", false);
@@ -27,8 +27,6 @@ public class RadiantLordGreenPhaseManagerProcedure {
 		// Lightning Phase
 		if (isLightningPhase) {
 			entity.setDeltaMovement(0, 0, 0);
-			if (entity instanceof RadiantLordGreenTrialEntity)
-				((RadiantLordGreenTrialEntity) entity).setAnimation("attack-lightning");
 			lightningTicks++;
 			if (entity instanceof RadiantLordGreenTrialEntity boss && boss.level instanceof ServerLevel level) {
 				LivingEntity target = level.getNearestPlayer(boss, 64);
@@ -37,6 +35,8 @@ public class RadiantLordGreenPhaseManagerProcedure {
 					double offsetZ = (level.random.nextDouble() - 0.5) * 4;
 					LightningBolt lightning = EntityType.LIGHTNING_BOLT.create(level);
 					if (lightning != null) {
+						if (entity instanceof RadiantLordGreenTrialEntity)
+							((RadiantLordGreenTrialEntity) entity).setAnimation("attack-lightning");
 						lightning.moveTo(Vec3.atBottomCenterOf(new BlockPos(target.getX() + offsetX, target.getY(), target.getZ() + offsetZ)));
 						lightning.setVisualOnly(false);
 						level.addFreshEntity(lightning);

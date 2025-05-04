@@ -10501,21 +10501,6 @@
       "path": "~/Factions/Radiant Lords/Active Radiant Lords/Green"
     },
     {
-      "name": "RadiantLordGreenPhaseManager",
-      "type": "procedure",
-      "sortid": 628,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "radiant_lord_green_phase_manager",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/RadiantLordGreenPhaseManagerProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Factions/Radiant Lords/The Rise/Colors/Green"
-    },
-    {
       "name": "RadiantLordGreenTrialOnEntityTickUpdate",
       "type": "procedure",
       "sortid": 629,
@@ -10622,6 +10607,20 @@
         ]
       },
       "path": "~/Factions/Radiant Lords/The Rise/Colors/Red"
+    },
+    {
+      "name": "BossFightsManagerProcedure",
+      "type": "code",
+      "sortid": 633,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "boss_fights_manager_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/BossFightsManagerProcedure.java"
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/The Rise/Colors"
     }
   ],
   "variable_elements": [
