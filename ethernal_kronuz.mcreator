@@ -10519,7 +10519,7 @@
       "name": "RedRadiantLordTheRise",
       "type": "animatedentity",
       "sortid": 630,
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "registry_name": "red_radiant_lord_the_rise",
       "metadata": {
