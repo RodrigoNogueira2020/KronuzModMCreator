@@ -10293,6 +10293,9 @@
       "locked_code": false,
       "registry_name": "radiant_lord_green_trial_on_initial_entity_spawn",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/RadiantLordGreenTrialOnInitialEntitySpawnProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",

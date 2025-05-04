@@ -16,8 +16,10 @@ import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.RangedAttackMob;
@@ -227,6 +229,11 @@ public class RadiantLordGreenTrialEntity extends Monster implements RangedAttack
 	@Override
 	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
 		return false;
+	}
+
+	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
+		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
+		this.spawnAtLocation(new ItemStack(Blocks.AIR));
 	}
 
 	@Override

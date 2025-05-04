@@ -14,12 +14,12 @@ import net.mcreator.ethernalkronuz.entity.RadiantLordGreenTrialEntity;
 public class RadiantLordGreenTrialModel extends AnimatedGeoModel<RadiantLordGreenTrialEntity> {
 	@Override
 	public ResourceLocation getAnimationFileLocation(RadiantLordGreenTrialEntity entity) {
-		return new ResourceLocation("ethernal_kronuz", "animations/radiantlordcoloranimated.animation.json");
+		return new ResourceLocation("ethernal_kronuz", "animations/greenradiantlord.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelLocation(RadiantLordGreenTrialEntity entity) {
-		return new ResourceLocation("ethernal_kronuz", "geo/radiantlordcoloranimated.geo.json");
+		return new ResourceLocation("ethernal_kronuz", "geo/greenradiantlord.geo.json");
 	}
 
 	@Override

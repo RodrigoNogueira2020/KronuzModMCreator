@@ -27,6 +27,8 @@ public class RadiantLordGreenPhaseManagerProcedure {
 		// Lightning Phase
 		if (isLightningPhase) {
 			entity.setDeltaMovement(0, 0, 0);
+			if (entity instanceof RadiantLordGreenTrialEntity)
+				((RadiantLordGreenTrialEntity) entity).setAnimation("attack-lightning");
 			lightningTicks++;
 			if (entity instanceof RadiantLordGreenTrialEntity boss && boss.level instanceof ServerLevel level) {
 				LivingEntity target = level.getNearestPlayer(boss, 64);
@@ -58,9 +60,6 @@ public class RadiantLordGreenPhaseManagerProcedure {
 			entity.getPersistentData().putDouble("lightningTicks", 0);
 			entity.getPersistentData().putInt("lightningCount", 3 + entity.level.random.nextInt(5));
 			entity.setNoGravity(true);
-			if (entity instanceof RadiantLordGreenTrialEntity) {
-				((RadiantLordGreenTrialEntity) entity).setAnimation("attack-lightning");
-			}
 			return;
 		}
 		// Melee Phase
