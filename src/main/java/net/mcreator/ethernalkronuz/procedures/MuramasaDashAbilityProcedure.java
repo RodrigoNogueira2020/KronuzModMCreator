@@ -83,7 +83,7 @@ public class MuramasaDashAbilityProcedure {
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 40);
 			if (world instanceof ServerLevel _level) {
 				if (!adjustedDirection.equals(Vec3.ZERO)) {
-					String command = String.format("execute as @p at @s anchored eyes positioned ~%.1f ~%.1f ~%.1f run function ethernal_kronuz:murasama_special_attack_func", adjustedDirection.x, adjustedDirection.y, adjustedDirection.z);
+					String command = "execute as " + entity.getStringUUID() + " at @s anchored eyes run function ethernal_kronuz:murasama_special_attack_func";
 					_level.getServer().getCommands().performCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(), null).withSuppressedOutput(), command);
 				}
 			}
