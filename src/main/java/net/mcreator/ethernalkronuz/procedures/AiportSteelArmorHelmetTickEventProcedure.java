@@ -15,7 +15,7 @@ public class AiportSteelArmorHelmetTickEventProcedure {
 			return;
 		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == EthernalKronuzModItems.AIPORT_STEEL_ARMOR_HELMET.get()) {
 			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 40, 0, (false), (false)));
+				_entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 20, 0, (true), (false)));
 		}
 	}
 }
