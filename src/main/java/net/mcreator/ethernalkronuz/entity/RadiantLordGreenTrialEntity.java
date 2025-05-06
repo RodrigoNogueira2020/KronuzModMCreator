@@ -73,7 +73,7 @@ public class RadiantLordGreenTrialEntity extends Monster implements RangedAttack
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
-	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.GREEN, ServerBossEvent.BossBarOverlay.NOTCHED_10);
+	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.GREEN, ServerBossEvent.BossBarOverlay.NOTCHED_6);
 
 	public RadiantLordGreenTrialEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(EthernalKronuzModEntities.RADIANT_LORD_GREEN_TRIAL.get(), world);

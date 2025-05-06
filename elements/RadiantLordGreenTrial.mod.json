@@ -30,7 +30,7 @@
     },
     "isBoss": true,
     "bossBarColor": "GREEN",
-    "bossBarType": "NOTCHED_10",
+    "bossBarType": "NOTCHED_6",
     "equipmentMainHand": {
       "value": ""
     },

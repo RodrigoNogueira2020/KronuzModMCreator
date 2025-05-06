@@ -79,8 +79,19 @@ public class BossFightsManagerProcedure {
 		if (isSlashPhase) {
 			slashTicks++;
 			if (slashTicks % 20 == 0 && slashCount > 0) {
-				if (entity instanceof LivingEntity living)
+				LivingEntity target = level.getNearestPlayer(entity, 64);
+				if (entity instanceof LivingEntity living) {
+					if (target != null) {
+						double dx = target.getX() - entity.getX();
+						double dz = target.getZ() - entity.getZ();
+						float angle = (float) (Math.atan2(dz, dx) * (180 / Math.PI)) - 90;
+						entity.setYRot(angle);
+						entity.setYHeadRot(angle);
+						living.yBodyRot = angle;
+						living.yHeadRot = angle;
+					}
 					BladeOfTheVoidSlashProcedure.execute(level, living, new ItemStack(EthernalKronuzModItems.BLADE_OF_THE_VOID.get()));
+				}
 				slashCount--;
 			}
 			if (slashCount <= 0) {
