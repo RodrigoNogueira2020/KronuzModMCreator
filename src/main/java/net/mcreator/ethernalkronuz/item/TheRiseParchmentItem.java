@@ -14,7 +14,7 @@ import net.mcreator.ethernalkronuz.init.EthernalKronuzModTabs;
 
 public class TheRiseParchmentItem extends Item {
 	public TheRiseParchmentItem() {
-		super(new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).stacksTo(1).fireResistant().rarity(Rarity.EPIC));
+		super(new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).stacksTo(1).rarity(Rarity.EPIC));
 	}
 
 	@Override

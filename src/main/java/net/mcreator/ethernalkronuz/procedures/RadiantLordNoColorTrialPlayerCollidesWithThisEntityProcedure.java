@@ -15,8 +15,10 @@ import net.minecraft.server.level.ServerLevel;
 
 import net.mcreator.ethernalkronuz.network.EthernalKronuzModVariables;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModEntities;
+import net.mcreator.ethernalkronuz.entity.RedRadiantLordTheRiseEntity;
 import net.mcreator.ethernalkronuz.entity.RadiantLordNoColorTrialEntity;
 import net.mcreator.ethernalkronuz.entity.RadiantLordGreenTrialEntity;
+import net.mcreator.ethernalkronuz.entity.PurpleRadiantLordTheRiseEntity;
 
 public class RadiantLordNoColorTrialPlayerCollidesWithThisEntityProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
@@ -117,7 +119,7 @@ public class RadiantLordNoColorTrialPlayerCollidesWithThisEntityProcedure {
 									}
 									if ((sourceentity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).HasMinimumForTheRiseRoxo) {
 										if (world instanceof ServerLevel _level) {
-											Entity entityToSpawn = new RadiantLordGreenTrialEntity(EthernalKronuzModEntities.RADIANT_LORD_GREEN_TRIAL.get(), _level);
+											Entity entityToSpawn = new PurpleRadiantLordTheRiseEntity(EthernalKronuzModEntities.PURPLE_RADIANT_LORD_THE_RISE.get(), _level);
 											entityToSpawn.moveTo(x, y, z, 0, 0);
 											entityToSpawn.setYBodyRot(0);
 											entityToSpawn.setYHeadRot(0);
@@ -129,7 +131,7 @@ public class RadiantLordNoColorTrialPlayerCollidesWithThisEntityProcedure {
 									}
 									if ((sourceentity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).HasMinimumForTheRiseVermelho) {
 										if (world instanceof ServerLevel _level) {
-											Entity entityToSpawn = new RadiantLordGreenTrialEntity(EthernalKronuzModEntities.RADIANT_LORD_GREEN_TRIAL.get(), _level);
+											Entity entityToSpawn = new RedRadiantLordTheRiseEntity(EthernalKronuzModEntities.RED_RADIANT_LORD_THE_RISE.get(), _level);
 											entityToSpawn.moveTo(x, y, z, 0, 0);
 											entityToSpawn.setYBodyRot(0);
 											entityToSpawn.setYHeadRot(0);

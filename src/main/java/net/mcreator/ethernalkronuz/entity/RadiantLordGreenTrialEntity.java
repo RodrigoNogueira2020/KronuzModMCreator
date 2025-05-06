@@ -120,12 +120,12 @@ public class RadiantLordGreenTrialEntity extends Monster implements RangedAttack
 		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
-				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
+				return 6.0F + entity.getBbWidth(); // atacar até 2.45 blocos de distância (raiz quadrada de 6 ≈ 2.45)
 			}
 		});
 		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, ServerPlayer.class, false, false));
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, Player.class, false, false));
-		this.goalSelector.addGoal(1, new RadiantLordGreenTrialEntity.RangedAttackGoal(this, 1.25, 20, 0f) {
+		this.goalSelector.addGoal(4, new RadiantLordGreenTrialEntity.RangedAttackGoal(this, 1.25, 20, 0f) {
 			@Override
 			public boolean canContinueToUse() {
 				return this.canUse();
