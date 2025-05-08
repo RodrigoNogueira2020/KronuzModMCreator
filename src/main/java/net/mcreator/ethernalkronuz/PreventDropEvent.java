@@ -9,11 +9,15 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerContainerEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.item.ItemTossEvent;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.client.event.ScreenEvent;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.nbt.ListTag;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModItems;
@@ -27,23 +31,42 @@ public class PreventDropEvent {
 		if (event.getPlayer().isCreative())
 			return;
 		ItemStack droppedItem = event.getEntityItem().getItem();
+		Player player = event.getPlayer();
 		if (isRestrictedItem(droppedItem)) {
 			event.setCanceled(true);
-			event.getPlayer().getInventory().add(droppedItem);
+			boolean success = player.getInventory().add(droppedItem.copy());
+			if (!success) {
+				player.getPersistentData().put("RestrictedItemInQueue", droppedItem.save(new CompoundTag()));
+				if (!player.level.isClientSide)
+					player.displayClientMessage(new TextComponent("Inventário cheio! Item Restrito guardado temporariamente."), true);
+			}
 		}
 	}
 
 	@SubscribeEvent
 	public static void onMouseClicked(ScreenEvent.MouseClickedEvent event) {
-		if (!(event.getScreen() instanceof net.minecraft.client.gui.screens.inventory.AbstractContainerScreen<?>))
+		if (!(event.getScreen() instanceof net.minecraft.client.gui.screens.inventory.AbstractContainerScreen<?> screen))
 			return;
 		Player player = Minecraft.getInstance().player;
 		if (player != null && !player.isCreative()) {
-			Slot clickedSlot = ((net.minecraft.client.gui.screens.inventory.AbstractContainerScreen<?>) event.getScreen()).getSlotUnderMouse();
+			Slot clickedSlot = screen.getSlotUnderMouse();
 			if (clickedSlot != null && clickedSlot.hasItem()) {
 				ItemStack clickedItem = clickedSlot.getItem();
-				if (isRestrictedItem(clickedItem))
-					event.setCanceled(true);
+				if (isRestrictedItem(clickedItem)) {
+					boolean isPlayerInventorySlot = clickedSlot.container == player.getInventory();
+					if (!isPlayerInventorySlot) {
+						event.setCanceled(true);
+						boolean success = player.getInventory().add(clickedItem.copy());
+						if (!success) {
+							CompoundTag itemTag = clickedItem.save(new CompoundTag());
+							ListTag list = player.getPersistentData().getList("RestrictedItemsQueue", 10);
+							list.add(itemTag);
+							player.getPersistentData().put("RestrictedItemsQueue", list);
+							clickedSlot.set(ItemStack.EMPTY);
+							player.displayClientMessage(new TextComponent("Inventário cheio! Item Restrito guardado temporariamente."), true);
+						}
+					}
+				}
 			}
 		}
 	}
@@ -101,6 +124,24 @@ public class PreventDropEvent {
 			ItemStack stack = original.getInventory().getItem(i);
 			if (isRestrictedItem(stack))
 				player.getInventory().setItem(i, stack.copy());
+		}
+	}
+
+	@SubscribeEvent
+	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
+		Player player = event.player;
+		if (player.level.isClientSide || player.isCreative())
+			return;
+		CompoundTag data = player.getPersistentData();
+		if (!data.contains("RestrictedItemsQueue", 9))
+			return;
+		ListTag list = data.getList("RestrictedItemsQueue", 10);
+		if (!list.isEmpty() && player.getInventory().getFreeSlot() != -1) {
+			CompoundTag tag = (CompoundTag) list.remove(0);
+			ItemStack stack = ItemStack.of(tag);
+			player.getInventory().add(stack);
+			player.displayClientMessage(new TextComponent("Item Restrito restaurado ao inventário."), true);
+			data.put("RestrictedItemsQueue", list);
 		}
 	}
 

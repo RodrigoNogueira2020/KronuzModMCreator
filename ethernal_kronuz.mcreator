@@ -10452,9 +10452,6 @@
       "locked_code": false,
       "registry_name": "the_rise_parchment_rightclicked",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/TheRiseParchmentRightclickedProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
