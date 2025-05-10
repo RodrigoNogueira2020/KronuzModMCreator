@@ -11,6 +11,7 @@ import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.item.ItemTossEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.client.event.ScreenEvent;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.Slot;
@@ -24,7 +25,7 @@ import net.mcreator.ethernalkronuz.init.EthernalKronuzModItems;
 
 import java.util.Optional;
 
-@Mod.EventBusSubscriber
+@Mod.EventBusSubscriber(modid = "ethernalkronuz", bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.DEDICATED_SERVER)
 public class PreventDropEvent {
 	@SubscribeEvent
 	public static void onItemToss(ItemTossEvent event) {
