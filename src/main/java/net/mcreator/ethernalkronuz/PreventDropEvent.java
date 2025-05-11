@@ -10,11 +10,12 @@ import net.minecraftforge.event.entity.player.PlayerContainerEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.item.ItemTossEvent;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.nbt.Tag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.CompoundTag;
@@ -23,24 +24,53 @@ import net.mcreator.ethernalkronuz.init.EthernalKronuzModItems;
 
 import java.util.Optional;
 
-@Mod.EventBusSubscriber(modid = "ethernalkronuz", bus = Mod.EventBusSubscriber.Bus.FORGE)
+@Mod.EventBusSubscriber
 public class PreventDropEvent {
 	@SubscribeEvent
 	public static void onItemToss(ItemTossEvent event) {
-		Player player = event.getPlayer();
-		if (player.isCreative())
+		if (event.getPlayer().isCreative())
 			return;
 		ItemStack droppedItem = event.getEntityItem().getItem();
+		Player player = event.getPlayer();
 		if (isRestrictedItem(droppedItem)) {
-			System.out.println("DEBUG: Item toss cancelado - item restrito");
 			event.setCanceled(true);
-			if (player instanceof ServerPlayer serverPlayer) {
-				// Tentar colocar no inventário, senão guardar na fila
-				int freeSlot = serverPlayer.getInventory().getFreeSlot();
-				if (freeSlot != -1) {
-					serverPlayer.getInventory().placeItemBackInInventory(droppedItem.copy());
-				} else {
-					addToRestrictedQueue(player, droppedItem.copy());
+			boolean success = player.getInventory().add(droppedItem.copy());
+			if (!success) {
+				CompoundTag data = player.getPersistentData();
+				ListTag list = data.contains("RestrictedItemsQueue", Tag.TAG_LIST) ? data.getList("RestrictedItemsQueue", Tag.TAG_COMPOUND) : new ListTag();
+				list.add(droppedItem.save(new CompoundTag()));
+				data.put("RestrictedItemsQueue", list);
+			}
+		}
+	}
+
+	@OnlyIn(Dist.CLIENT)
+	@Mod.EventBusSubscriber(value = Dist.CLIENT)
+	public static class ClientEvents {
+		@SubscribeEvent
+		public static void onMouseClicked(net.minecraftforge.client.event.ScreenEvent.MouseClickedEvent event) {
+			if (!(event.getScreen() instanceof net.minecraft.client.gui.screens.inventory.AbstractContainerScreen<?> screen))
+				return;
+			net.minecraft.client.player.LocalPlayer player = net.minecraft.client.Minecraft.getInstance().player;
+			if (player != null && !player.isCreative()) {
+				Slot clickedSlot = screen.getSlotUnderMouse();
+				if (clickedSlot != null && clickedSlot.hasItem()) {
+					ItemStack clickedItem = clickedSlot.getItem();
+					if (isRestrictedItem(clickedItem)) {
+						boolean isPlayerInventorySlot = screen.getMenu().getSlot(clickedSlot.index).container == player.getInventory();
+						if (!isPlayerInventorySlot) {
+							event.setCanceled(true);
+							boolean success = player.getInventory().add(clickedItem.copy());
+							if (!success) {
+								CompoundTag itemTag = clickedItem.save(new CompoundTag());
+								CompoundTag data = player.getPersistentData();
+								ListTag list = data.contains("RestrictedItemsQueue", Tag.TAG_LIST) ? data.getList("RestrictedItemsQueue", Tag.TAG_COMPOUND) : new ListTag();
+								list.add(itemTag);
+								data.put("RestrictedItemsQueue", list);
+								clickedSlot.set(ItemStack.EMPTY);
+							}
+						}
+					}
 				}
 			}
 		}
@@ -51,19 +81,11 @@ public class PreventDropEvent {
 		Player player = event.getPlayer();
 		if (player.isCreative())
 			return;
-		System.out.println("DEBUG: Container fechado - verificação de itens restritos");
 		for (Slot slot : player.containerMenu.slots) {
 			if (slot.hasItem()) {
 				ItemStack stack = slot.getItem();
 				if (isRestrictedItem(stack)) {
-					boolean found = false;
-					for (ItemStack invStack : player.getInventory().items) {
-						if (ItemStack.isSameItemSameTags(invStack, stack)) {
-							found = true;
-							break;
-						}
-					}
-					if (!found && !isItemInCurios(player, stack)) {
+					if (!player.getInventory().contains(stack) && !isItemInCurios(player, stack)) {
 						slot.set(ItemStack.EMPTY);
 						CuriosApi.getCuriosHelper().getCuriosHandler(player).ifPresent(handler -> {
 							Optional<ICurioStacksHandler> curiosSlot = handler.getStacksHandler("curios");
@@ -77,25 +99,24 @@ public class PreventDropEvent {
 
 	@SubscribeEvent
 	public static void onPlayerDeath(LivingDeathEvent event) {
-		if (!(event.getEntity() instanceof Player player) || player.isCreative())
-			return;
-		System.out.println("DEBUG: Player morreu - limpeza de itens restritos");
-		for (int i = 0; i < player.getInventory().getContainerSize(); i++) {
-			ItemStack stack = player.getInventory().getItem(i);
-			if (isRestrictedItem(stack)) {
-				player.getInventory().setItem(i, ItemStack.EMPTY);
+		if (event.getEntity() instanceof Player player) {
+			if (player.isCreative())
+				return;
+			for (int i = 0; i < player.getInventory().getContainerSize(); i++) {
+				ItemStack stack = player.getInventory().getItem(i);
+				if (isRestrictedItem(stack))
+					player.getInventory().setItem(i, ItemStack.EMPTY);
 			}
-		}
-		CuriosApi.getCuriosHelper().getCuriosHandler(player).ifPresent(handler -> {
-			handler.getCurios().forEach((slot, stacksHandler) -> {
-				for (int i = 0; i < stacksHandler.getStacks().getSlots(); i++) {
-					ItemStack stack = stacksHandler.getStacks().getStackInSlot(i);
-					if (isRestrictedItem(stack)) {
-						stacksHandler.getStacks().setStackInSlot(i, ItemStack.EMPTY);
+			CuriosApi.getCuriosHelper().getCuriosHandler(player).ifPresent(handler -> {
+				handler.getCurios().forEach((slot, stacksHandler) -> {
+					for (int i = 0; i < stacksHandler.getStacks().getSlots(); i++) {
+						ItemStack stack = stacksHandler.getStacks().getStackInSlot(i);
+						if (isRestrictedItem(stack))
+							stacksHandler.getStacks().setStackInSlot(i, ItemStack.EMPTY);
 					}
-				}
+				});
 			});
-		});
+		}
 	}
 
 	@SubscribeEvent
@@ -104,17 +125,10 @@ public class PreventDropEvent {
 			return;
 		Player original = event.getOriginal();
 		Player player = event.getPlayer();
-		System.out.println("DEBUG: Clone do jogador após morte - restauração de inventário e fila");
 		for (int i = 0; i < original.getInventory().getContainerSize(); i++) {
 			ItemStack stack = original.getInventory().getItem(i);
-			if (isRestrictedItem(stack)) {
+			if (isRestrictedItem(stack))
 				player.getInventory().setItem(i, stack.copy());
-			}
-		}
-		CompoundTag originalData = original.getPersistentData();
-		CompoundTag newData = player.getPersistentData();
-		if (originalData.contains("RestrictedItemsQueue", Tag.TAG_LIST)) {
-			newData.put("RestrictedItemsQueue", originalData.getList("RestrictedItemsQueue", Tag.TAG_COMPOUND).copy());
 		}
 	}
 
@@ -130,28 +144,21 @@ public class PreventDropEvent {
 			if (freeSlot != -1) {
 				CompoundTag tag = (CompoundTag) list.get(0);
 				ItemStack stack = ItemStack.of(tag);
-				if (player instanceof ServerPlayer serverPlayer) {
-					serverPlayer.getInventory().placeItemBackInInventory(stack);
+				boolean added = player.getInventory().add(stack);
+				if (added)
 					list.remove(0);
-					data.put("RestrictedItemsQueue", list);
-					System.out.println("DEBUG: Item restrito restaurado da fila");
-				}
+				data.put("RestrictedItemsQueue", list);
 			}
 		}
 	}
 
-	// ========== Funções auxiliares ==========
-	private static void addToRestrictedQueue(Player player, ItemStack stack) {
-		CompoundTag data = player.getPersistentData();
-		ListTag list = data.contains("RestrictedItemsQueue", Tag.TAG_LIST) ? data.getList("RestrictedItemsQueue", Tag.TAG_COMPOUND) : new ListTag();
-		list.add(stack.save(new CompoundTag()));
-		data.put("RestrictedItemsQueue", list);
-		System.out.println("DEBUG: Item adicionado à fila de restritos");
-	}
-
 	private static boolean isRestrictedItem(ItemStack stack) {
-		// TESTE: restringe só à Terra Blade temporariamente
-		return stack.getItem() == EthernalKronuzModItems.THE_RISE_PARCHMENT.get();
+		return stack.getItem() == EthernalKronuzModItems.TERRA_BLADE.get() || stack.getItem() == EthernalKronuzModItems.BLADE_OF_THE_VOID.get() || stack.getItem() == EthernalKronuzModItems.MURASAMA.get()
+				|| stack.getItem() == EthernalKronuzModItems.RL_ROXO_ARMOUR_HELMET.get() || stack.getItem() == EthernalKronuzModItems.RL_ROXO_ARMOUR_CHESTPLATE.get() || stack.getItem() == EthernalKronuzModItems.RL_ROXO_ARMOUR_LEGGINGS.get()
+				|| stack.getItem() == EthernalKronuzModItems.RL_ROXO_ARMOUR_BOOTS.get() || stack.getItem() == EthernalKronuzModItems.RL_VERMELHO_ARMOR_HELMET.get() || stack.getItem() == EthernalKronuzModItems.RL_VERMELHO_ARMOR_CHESTPLATE.get()
+				|| stack.getItem() == EthernalKronuzModItems.RL_VERMELHO_ARMOR_LEGGINGS.get() || stack.getItem() == EthernalKronuzModItems.RL_VERMELHO_ARMOR_BOOTS.get() || stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_HELMET.get()
+				|| stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_CHESTPLATE.get() || stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_LEGGINGS.get() || stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_BOOTS.get()
+				|| stack.getItem() == EthernalKronuzModItems.BIFROST_KEY.get() || stack.getItem() == EthernalKronuzModItems.THE_RISE_PARCHMENT.get();
 	}
 
 	private static boolean isItemInCurios(Player player, ItemStack stack) {
