@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "ethernal_kronuz:bifrost_key"
+    },
+    "title": {
+      "translate": "advancements.ragnarok.title"
+    },
+    "description": {
+      "translate": "advancements.ragnarok.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "ragnarok": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "ethernal_kronuz:ascender_advancement"
+}
