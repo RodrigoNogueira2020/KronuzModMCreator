@@ -9428,20 +9428,6 @@
       "path": "~/Empowerments/Asgard Empowerment"
     },
     {
-      "name": "PreventDropEvent",
-      "type": "code",
-      "sortid": 565,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "prevent_drop_event",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/PreventDropEvent.java"
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Weapons"
-    },
-    {
       "name": "ConfirmRiseGUIRoxo",
       "type": "gui",
       "sortid": 566,
@@ -10452,6 +10438,9 @@
       "locked_code": false,
       "registry_name": "the_rise_parchment_rightclicked",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/TheRiseParchmentRightclickedProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -10496,6 +10485,20 @@
         ]
       },
       "path": "~/Factions/Radiant Lords/Active Radiant Lords/Green"
+    },
+    {
+      "name": "PreventDropEvent",
+      "type": "code",
+      "sortid": 631,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "prevent_drop_event",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/PreventDropEvent.java"
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/Weapons"
     }
   ],
   "variable_elements": [
