@@ -35,6 +35,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.Util;
 
 import net.mcreator.ethernalkronuz.world.inventory.NonRLVotingGUIMenu;
+import net.mcreator.ethernalkronuz.world.inventory.GUIFactionBookMenu;
 import net.mcreator.ethernalkronuz.network.EthernalKronuzModVariables;
 
 import javax.annotation.Nullable;
@@ -147,22 +148,71 @@ public class StartAfterRagnarokProcedure {
 							}
 
 							private void run() {
-								{
-									if (entity instanceof ServerPlayer _ent) {
-										BlockPos _bpos = new BlockPos(x, y, z);
-										NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
-											@Override
-											public Component getDisplayName() {
-												return new TextComponent("NonRLVotingGUI");
-											}
-
-											@Override
-											public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-												return new NonRLVotingGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-											}
-										}, _bpos);
-									}
+								if (!world.isClientSide()) {
+									MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
+									if (_mcserv != null)
+										_mcserv.getPlayerList().broadcastMessage(new TextComponent("\u00A7eUNKNOW: \u00A7bVoting starting in 10 seconds"), ChatType.SYSTEM, Util.NIL_UUID);
 								}
+								new Object() {
+									private int ticks = 0;
+									private float waitTicks;
+									private LevelAccessor world;
+
+									public void start(LevelAccessor world, int waitTicks) {
+										this.waitTicks = waitTicks;
+										MinecraftForge.EVENT_BUS.register(this);
+										this.world = world;
+									}
+
+									@SubscribeEvent
+									public void tick(TickEvent.ServerTickEvent event) {
+										if (event.phase == TickEvent.Phase.END) {
+											this.ticks += 1;
+											if (this.ticks >= this.waitTicks)
+												run();
+										}
+									}
+
+									private void run() {
+										if ((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordRoxoPlayer
+												|| (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordVermelhoPlayer) {
+											{
+												if (entity instanceof ServerPlayer _ent) {
+													BlockPos _bpos = new BlockPos(x, y, z);
+													NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+														@Override
+														public Component getDisplayName() {
+															return new TextComponent("GUIFactionBook");
+														}
+
+														@Override
+														public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+															return new GUIFactionBookMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+														}
+													}, _bpos);
+												}
+											}
+										} else {
+											{
+												if (entity instanceof ServerPlayer _ent) {
+													BlockPos _bpos = new BlockPos(x, y, z);
+													NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+														@Override
+														public Component getDisplayName() {
+															return new TextComponent("NonRLVotingGUI");
+														}
+
+														@Override
+														public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+															return new NonRLVotingGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+														}
+													}, _bpos);
+												}
+											}
+										}
+										MinecraftForge.EVENT_BUS.unregister(this);
+									}
+								}.start(world, 200);
 								MinecraftForge.EVENT_BUS.unregister(this);
 							}
 						}.start(world, 200);

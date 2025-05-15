@@ -48,7 +48,7 @@ public class RadiantLordRoxoProcedureProcedure {
 				{
 					boolean _setval = true;
 					entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.RadiantLordRoxoPlayer = _setval;
+						capability.HasMinimumForTheRiseRoxo = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}

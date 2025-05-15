@@ -10492,7 +10492,7 @@
           "src/main/resources/data/ethernal_kronuz/advancements/ragnarok.json"
         ]
       },
-      "path": "~/Factions/Radiant Lords/After Ragnarok"
+      "path": "~/Achievements/Faccoes/Radiant Lords"
     },
     {
       "name": "StartAfterRagnarok",
@@ -10817,6 +10817,12 @@
       "name": "TouchRLOnce",
       "type": "logic",
       "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "ActivateAfterRagnarok",
+      "type": "logic",
+      "scope": "map",
       "value": "false"
     }
   ],
@@ -12139,6 +12145,7 @@
     "version": "1.0",
     "description": "Literalmente283",
     "author": "LeZ, Bl1tzGB",
+    "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
