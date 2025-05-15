@@ -34,8 +34,8 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.Util;
 
+import net.mcreator.ethernalkronuz.world.inventory.RLVotingGUIMenu;
 import net.mcreator.ethernalkronuz.world.inventory.NonRLVotingGUIMenu;
-import net.mcreator.ethernalkronuz.world.inventory.GUIFactionBookMenu;
 import net.mcreator.ethernalkronuz.network.EthernalKronuzModVariables;
 
 import javax.annotation.Nullable;
@@ -58,7 +58,10 @@ public class StartAfterRagnarokProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel ? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("ethernal_kronuz:ragnarok"))).isDone() : false) {
+		if ((entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel ? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("ethernal_kronuz:ragnarok"))).isDone() : false)
+				&& EthernalKronuzModVariables.MapVariables.get(world).ActivateAfterRagnarok) {
+			EthernalKronuzModVariables.MapVariables.get(world).ActivateAfterRagnarok = true;
+			EthernalKronuzModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isClientSide()) {
 				MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
 				if (_mcserv != null)
@@ -182,12 +185,12 @@ public class StartAfterRagnarokProcedure {
 													NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 														@Override
 														public Component getDisplayName() {
-															return new TextComponent("GUIFactionBook");
+															return new TextComponent("RLVotingGUI");
 														}
 
 														@Override
 														public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-															return new GUIFactionBookMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+															return new RLVotingGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 														}
 													}, _bpos);
 												}

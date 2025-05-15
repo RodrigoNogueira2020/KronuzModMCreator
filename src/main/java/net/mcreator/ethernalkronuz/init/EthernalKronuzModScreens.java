@@ -13,6 +13,7 @@ import net.minecraft.client.gui.screens.MenuScreens;
 
 import net.mcreator.ethernalkronuz.client.gui.TradeSystemGUITechnoScreen;
 import net.mcreator.ethernalkronuz.client.gui.SuperBackPackGUIScreen;
+import net.mcreator.ethernalkronuz.client.gui.RLVotingGUIScreen;
 import net.mcreator.ethernalkronuz.client.gui.NonRLVotingGUIScreen;
 import net.mcreator.ethernalkronuz.client.gui.GoToJotunheimRLGUIScreen;
 import net.mcreator.ethernalkronuz.client.gui.GetOutJotunheimRLGUIScreen;
@@ -35,6 +36,7 @@ public class EthernalKronuzModScreens {
 			MenuScreens.register(EthernalKronuzModMenus.GO_TO_JOTUNHEIM_RLGUI, GoToJotunheimRLGUIScreen::new);
 			MenuScreens.register(EthernalKronuzModMenus.GET_OUT_JOTUNHEIM_RLGUI, GetOutJotunheimRLGUIScreen::new);
 			MenuScreens.register(EthernalKronuzModMenus.NON_RL_VOTING_GUI, NonRLVotingGUIScreen::new);
+			MenuScreens.register(EthernalKronuzModMenus.RL_VOTING_GUI, RLVotingGUIScreen::new);
 		});
 	}
 }
