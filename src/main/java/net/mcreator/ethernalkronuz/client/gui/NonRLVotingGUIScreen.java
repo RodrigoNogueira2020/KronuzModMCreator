@@ -3,6 +3,7 @@ package net.mcreator.ethernalkronuz.client.gui;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
@@ -14,6 +15,8 @@ import net.minecraft.client.Minecraft;
 import net.mcreator.ethernalkronuz.world.inventory.NonRLVotingGUIMenu;
 import net.mcreator.ethernalkronuz.network.EthernalKronuzModVariables;
 
+import java.util.UUID;
+import java.util.Map;
 import java.util.HashMap;
 
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -26,6 +29,7 @@ public class NonRLVotingGUIScreen extends AbstractContainerScreen<NonRLVotingGUI
 	private final Player entity;
 	private long votingEndTime = 0;
 	private boolean forceVotingActive = true;
+	private final Map<UUID, Integer> voteCount = new HashMap<>();
 
 	public NonRLVotingGUIScreen(NonRLVotingGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -72,7 +76,6 @@ public class NonRLVotingGUIScreen extends AbstractContainerScreen<NonRLVotingGUI
 	@Override
 	public boolean keyPressed(int key, int b, int c) {
 		if (key == 256 && forceVotingActive) {
-			// Bloqueia ESC durante o tempo de votação
 			return true;
 		}
 		return super.keyPressed(key, b, c);
@@ -83,7 +86,7 @@ public class NonRLVotingGUIScreen extends AbstractContainerScreen<NonRLVotingGUI
 		super.containerTick();
 		if (votingEndTime > 0 && System.currentTimeMillis() >= votingEndTime) {
 			forceVotingActive = false;
-			this.minecraft.player.closeContainer(); // Fecha GUI ao fim dos 5 minutos
+			this.minecraft.player.closeContainer();
 		}
 	}
 
@@ -92,7 +95,7 @@ public class NonRLVotingGUIScreen extends AbstractContainerScreen<NonRLVotingGUI
 		super.onClose();
 		Minecraft.getInstance().keyboardHandler.setSendRepeatsToGui(false);
 		if (forceVotingActive) {
-			Minecraft.getInstance().setScreen(new NonRLVotingGUIScreen(this.menu, this.entity.getInventory(), new TextComponent("Vote Timer")));
+			Minecraft.getInstance().setScreen(new NonRLVotingGUIScreen(this.menu, this.entity.getInventory(), new TextComponent("\u00A78Vote Timer")));
 		}
 	}
 
@@ -100,7 +103,7 @@ public class NonRLVotingGUIScreen extends AbstractContainerScreen<NonRLVotingGUI
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.votingEndTime = System.currentTimeMillis() + (5 * 60 * 1000); // 5 minutos
+		this.votingEndTime = System.currentTimeMillis() + (5 * 60 * 1000);
 		int checkboxWidth = 120;
 		int checkboxHeight = 20;
 		int maxPerColumn = 4;
@@ -132,15 +135,34 @@ public class NonRLVotingGUIScreen extends AbstractContainerScreen<NonRLVotingGUI
 				column++;
 			}
 		}
-		// Botão de confirmar voto
-		this.addRenderableWidget(new Button(baseX, baseY + (maxPerColumn * spacingY) + 10, 100, 20, new TextComponent("Confirm Vote"), button -> {
+		this.addRenderableWidget(new Button(baseX, baseY + (maxPerColumn * spacingY) + 10, 100, 20, new TextComponent("\u00A78Confirm Vote"), button -> {
+			UUID votedFor = null;
+			for (Map.Entry<String, Object> entry : guistate.entrySet()) {
+				if (entry.getValue() instanceof Checkbox checkbox && checkbox.selected()) {
+					for (Player player : world.players()) {
+						if (checkbox.getMessage().getString().equals(player.getName().getString())) {
+							votedFor = player.getUUID();
+							break;
+						}
+					}
+				}
+			}
+			if (votedFor != null) {
+				voteCount.put(votedFor, voteCount.getOrDefault(votedFor, 0) + 1);
+				for (Player player : world.players()) {
+					boolean isRL = player.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).map(vars -> vars.RadiantLordRoxoPlayer || vars.RadiantLordVermelhoPlayer).orElse(false);
+					if (isRL && player instanceof ServerPlayer serverPlayer) {
+						serverPlayer.sendMessage(new TextComponent("\u00A78[Voting Update] " + votedFor + " \u00A78has a new vote."), serverPlayer.getUUID());
+					}
+				}
+				entity.sendMessage(new TextComponent("\u00A78Vote Done"), entity.getUUID());
+			}
 			for (Object obj : guistate.values()) {
 				if (obj instanceof Checkbox checkbox) {
 					checkbox.active = false;
 				}
 			}
 			button.active = false;
-			// Aqui adiciona a lógica de guardar o voto
 		}));
 	}
 }

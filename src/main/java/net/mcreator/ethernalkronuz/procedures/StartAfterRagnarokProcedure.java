@@ -59,7 +59,7 @@ public class StartAfterRagnarokProcedure {
 		if (entity == null)
 			return;
 		if ((entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel ? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("ethernal_kronuz:ragnarok"))).isDone() : false)
-				&& EthernalKronuzModVariables.MapVariables.get(world).ActivateAfterRagnarok) {
+				&& !EthernalKronuzModVariables.MapVariables.get(world).ActivateAfterRagnarok) {
 			EthernalKronuzModVariables.MapVariables.get(world).ActivateAfterRagnarok = true;
 			EthernalKronuzModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isClientSide()) {
