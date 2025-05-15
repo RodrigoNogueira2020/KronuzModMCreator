@@ -1,5 +1,7 @@
 package net.mcreator.ethernalkronuz.client.gui;
 
+import net.minecraftforge.network.NetworkEvent;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -12,8 +14,15 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.ethernalkronuz.world.inventory.RLVotingGUIMenu;
+import net.mcreator.ethernalkronuz.network.EthernalKronuzModVariables;
 
+import java.util.function.Supplier;
+import java.util.UUID;
+import java.util.Map;
+import java.util.List;
 import java.util.HashMap;
+import java.util.Comparator;
+import java.util.ArrayList;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -25,6 +34,7 @@ public class RLVotingGUIScreen extends AbstractContainerScreen<RLVotingGUIMenu> 
 	private final Player entity;
 	private long votingEndTime = 0;
 	private boolean forceVotingActive = true;
+	private final List<Component> voteDisplayList = new ArrayList<>();
 
 	public RLVotingGUIScreen(RLVotingGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -66,6 +76,14 @@ public class RLVotingGUIScreen extends AbstractContainerScreen<RLVotingGUIMenu> 
 		int sec = seconds % 60;
 		String timerText = String.format("\u00A78Time remaining: %02d:%02d", minutes, sec);
 		this.font.draw(poseStack, timerText, this.imageWidth - 110, 5, 0xFFFFFF);
+		// Render lado esquerdo: resultados dos votos
+		int offsetY = 30;
+		this.font.draw(poseStack, "Vote Results:", 10, offsetY, 0xFFD700);
+		offsetY += 12;
+		for (Component line : voteDisplayList) {
+			this.font.draw(poseStack, line, 10, offsetY, 0xFFFFFF);
+			offsetY += 12;
+		}
 	}
 
 	@Override
@@ -92,6 +110,34 @@ public class RLVotingGUIScreen extends AbstractContainerScreen<RLVotingGUIMenu> 
 		if (forceVotingActive) {
 			Minecraft.getInstance().setScreen(new RLVotingGUIScreen(this.menu, this.entity.getInventory(), new TextComponent("Vote Timer")));
 		}
+	}
+
+	public class SyncVotesPacket {
+		public Map<UUID, Integer> votes;
+
+		// Serialize/deserialize...
+		public static void handle(SyncVotesPacket message, Supplier<NetworkEvent.Context> contextSupplier) {
+			Minecraft.getInstance().execute(() -> {
+				RLVotingGUIScreen.updateVoteDisplay(message.votes);
+			});
+		}
+	}
+
+	public static void updateVoteDisplay(Map<UUID, Integer> votesMap) {
+		Minecraft mc = Minecraft.getInstance();
+		if (mc.screen instanceof RLVotingGUIScreen gui) {
+			gui.voteDisplayList.clear();
+			List<? extends Player> rawPlayers = gui.world.players();
+			List<Player> players = rawPlayers.stream().filter(p -> !isRadiantLord(p) && votesMap.containsKey(p.getUUID())).map(p -> (Player) p).sorted(Comparator.comparingInt(p -> -votesMap.get(p.getUUID()))).toList();
+			for (Player p : players) {
+				int voteCount = votesMap.get(p.getUUID());
+				gui.voteDisplayList.add(new TextComponent(p.getName().getString() + " -> " + voteCount + (voteCount == 1 ? " vote" : " votes")));
+			}
+		}
+	}
+
+	private static boolean isRadiantLord(Player player) {
+		return player.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).map(vars -> vars.RadiantLordRoxoPlayer || vars.RadiantLordVermelhoPlayer).orElse(false);
 	}
 
 	@Override
@@ -134,7 +180,14 @@ public class RLVotingGUIScreen extends AbstractContainerScreen<RLVotingGUIMenu> 
 				}
 			}
 			button.active = false;
-			// Lógica de voto aqui
+			for (Player player : world.players()) {
+				boolean isRL = player.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).map(vars -> vars.RadiantLordRoxoPlayer || vars.RadiantLordVermelhoPlayer).orElse(false);
+				if (player.getUUID().equals(entity.getUUID()) || isRL) {
+					// Não permite votar neles mesmos
+					continue;
+				}
+				// Adicionar checkbox como já está no teu código
+			}
 		}));
 	}
 }
