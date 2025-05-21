@@ -13,6 +13,7 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.ethernalkronuz.world.inventory.NonRLVotingGUIMenu;
+import net.mcreator.ethernalkronuz.procedures.RiseRadiantLordVerdeAfterTheRiseConfirmationProcedure;
 import net.mcreator.ethernalkronuz.network.EthernalKronuzModVariables;
 
 import java.util.UUID;
@@ -28,6 +29,7 @@ public class NonRLVotingGUIScreen extends AbstractContainerScreen<NonRLVotingGUI
 	private final int x, y, z;
 	private final Player entity;
 	private long votingEndTime = 0;
+	private boolean finalized = false;
 	private boolean forceVotingActive = true;
 	private final Map<UUID, Integer> voteCount = new HashMap<>();
 
@@ -84,9 +86,10 @@ public class NonRLVotingGUIScreen extends AbstractContainerScreen<NonRLVotingGUI
 	@Override
 	public void containerTick() {
 		super.containerTick();
-		if (votingEndTime > 0 && System.currentTimeMillis() >= votingEndTime) {
-			forceVotingActive = false;
-			this.minecraft.player.closeContainer();
+		if (!finalized && System.currentTimeMillis() >= votingEndTime) {
+			finalized = true;
+			Minecraft.getInstance().player.closeContainer();
+			RiseRadiantLordVerdeAfterTheRiseConfirmationProcedure.execute(world, x, y, z, entity);
 		}
 	}
 
@@ -95,7 +98,9 @@ public class NonRLVotingGUIScreen extends AbstractContainerScreen<NonRLVotingGUI
 		super.onClose();
 		Minecraft.getInstance().keyboardHandler.setSendRepeatsToGui(false);
 		if (forceVotingActive) {
-			Minecraft.getInstance().setScreen(new NonRLVotingGUIScreen(this.menu, this.entity.getInventory(), new TextComponent("\u00A78Vote Timer")));
+			NonRLVotingGUIScreen newScreen = new NonRLVotingGUIScreen(this.menu, this.entity.getInventory(), new TextComponent("\u00A78Vote Timer"));
+			Minecraft.getInstance().setScreen(newScreen);
+			newScreen.init(minecraft, Minecraft.getInstance().getWindow().getGuiScaledWidth(), Minecraft.getInstance().getWindow().getGuiScaledHeight());
 		}
 	}
 

@@ -58,8 +58,9 @@ public class StartAfterRagnarokProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel ? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("ethernal_kronuz:ragnarok"))).isDone() : false)
-				&& !EthernalKronuzModVariables.MapVariables.get(world).ActivateAfterRagnarok) {
+		if (!EthernalKronuzModVariables.MapVariables.get(world).ActivateAfterRagnarok && (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
+				? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("ethernal_kronuz:ragnarok"))).isDone()
+				: false)) {
 			EthernalKronuzModVariables.MapVariables.get(world).ActivateAfterRagnarok = true;
 			EthernalKronuzModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isClientSide()) {
@@ -177,8 +178,7 @@ public class StartAfterRagnarokProcedure {
 									}
 
 									private void run() {
-										if ((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordRoxoPlayer
-												|| (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordVermelhoPlayer) {
+										if (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).map(vars -> vars.RadiantLordRoxoPlayer || vars.RadiantLordVermelhoPlayer).orElse(false)) {
 											{
 												if (entity instanceof ServerPlayer _ent) {
 													BlockPos _bpos = new BlockPos(x, y, z);
