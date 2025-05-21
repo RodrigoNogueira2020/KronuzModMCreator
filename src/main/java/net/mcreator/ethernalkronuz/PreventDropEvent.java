@@ -1,6 +1,5 @@
 package net.mcreator.ethernalkronuz;
 
-import top.theillusivec4.curios.api.type.inventory.ICurioStacksHandler;
 import top.theillusivec4.curios.api.CuriosApi;
 
 import net.minecraftforge.fml.common.Mod;
@@ -15,14 +14,13 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.nbt.Tag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModItems;
-
-import java.util.Optional;
 
 @Mod.EventBusSubscriber
 public class PreventDropEvent {
@@ -77,20 +75,31 @@ public class PreventDropEvent {
 	}
 
 	@SubscribeEvent
+	public static void onContainerOpen(PlayerContainerEvent.Open event) {
+		checkAndRemoveRestrictedItems(event.getContainer(), event.getPlayer());
+	}
+
+	@SubscribeEvent
 	public static void onContainerClose(PlayerContainerEvent.Close event) {
-		Player player = event.getPlayer();
+		checkAndRemoveRestrictedItems(event.getContainer(), event.getPlayer());
+	}
+
+	private static void checkAndRemoveRestrictedItems(AbstractContainerMenu container, Player player) {
 		if (player.isCreative())
 			return;
-		for (Slot slot : player.containerMenu.slots) {
+		for (Slot slot : container.slots) {
 			if (slot.hasItem()) {
 				ItemStack stack = slot.getItem();
-				if (isRestrictedItem(stack)) {
-					if (!player.getInventory().contains(stack) && !isItemInCurios(player, stack)) {
+				if (isRestrictedItem(stack) && !slot.container.equals(player.getInventory())) {
+					boolean success = player.getInventory().add(stack.copy());
+					if (success)
 						slot.set(ItemStack.EMPTY);
-						CuriosApi.getCuriosHelper().getCuriosHandler(player).ifPresent(handler -> {
-							Optional<ICurioStacksHandler> curiosSlot = handler.getStacksHandler("curios");
-							curiosSlot.ifPresent(stacksHandler -> stacksHandler.getStacks().setStackInSlot(0, stack));
-						});
+					else {
+						CompoundTag data = player.getPersistentData();
+						ListTag list = data.contains("RestrictedItemsQueue", Tag.TAG_LIST) ? data.getList("RestrictedItemsQueue", Tag.TAG_COMPOUND) : new ListTag();
+						list.add(stack.save(new CompoundTag()));
+						data.put("RestrictedItemsQueue", list);
+						slot.set(ItemStack.EMPTY);
 					}
 				}
 			}
