@@ -10621,6 +10621,19 @@
         ]
       },
       "path": "~/Factions/Radiant Lords/After Ragnarok"
+    },
+    {
+      "name": "VoteManager",
+      "type": "code",
+      "sortid": 640,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "vote_manager",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/VoteManager.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
