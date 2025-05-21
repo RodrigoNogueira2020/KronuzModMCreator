@@ -105,7 +105,7 @@ public class NonRLVotingGUIScreen extends AbstractContainerScreen<NonRLVotingGUI
 	public void init() {
 		super.init();
 		if (!VoteManager.isVotingActive())
-			VoteManager.startVoting(5 * 60 * 1000); // 5 minutos
+			VoteManager.startVoting(5 * 60 * 1000);
 		int checkboxWidth = 120;
 		int checkboxHeight = 20;
 		int maxPerColumn = 4;
@@ -116,7 +116,6 @@ public class NonRLVotingGUIScreen extends AbstractContainerScreen<NonRLVotingGUI
 		int column = 0;
 		int row = 0;
 		for (Player player : world.players()) {
-			// Não mostrar o próprio jogador nem Radiant Lords
 			if (player.getUUID().equals(entity.getUUID()))
 				continue;
 			boolean isRL = player.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).map(vars -> vars.RadiantLordRoxoPlayer || vars.RadiantLordVermelhoPlayer).orElse(false);
@@ -146,7 +145,6 @@ public class NonRLVotingGUIScreen extends AbstractContainerScreen<NonRLVotingGUI
 			if (votedFor != null) {
 				VoteManager.addNonRLVote(entity, votedFor);
 				entity.sendMessage(new TextComponent("§8Vote registered!"), entity.getUUID());
-				// Desativar checkboxes após votar
 				for (Object obj : guistate.values()) {
 					if (obj instanceof Checkbox checkbox)
 						checkbox.active = false;

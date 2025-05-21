@@ -30,7 +30,7 @@ import java.util.Collections;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class VoteManager {
 	private static final Map<UUID, Integer> nonRLVotes = new HashMap<>();
-	private static final Map<UUID, UUID> rlVotes = new HashMap<>(); // Key: RL UUID, Value: Voted Player UUID
+	private static final Map<UUID, UUID> rlVotes = new HashMap<>();
 	private static long votingEndTime = 0;
 
 	public static void startVoting(long duration) {
@@ -43,12 +43,10 @@ public class VoteManager {
 		if (System.currentTimeMillis() > votingEndTime)
 			return;
 		nonRLVotes.put(votedFor, nonRLVotes.getOrDefault(votedFor, 0) + 1);
-		// Notify all Radiant Lords
 		for (Player player : voter.level.players()) {
 			boolean isRL = player.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).map(vars -> vars.RadiantLordRoxoPlayer || vars.RadiantLordVermelhoPlayer).orElse(false);
-			if (isRL && player instanceof ServerPlayer serverPlayer) {
+			if (isRL && player instanceof ServerPlayer serverPlayer)
 				serverPlayer.sendMessage(new TextComponent("§8[Voting] New vote for " + votedFor), serverPlayer.getUUID());
-			}
 		}
 	}
 
