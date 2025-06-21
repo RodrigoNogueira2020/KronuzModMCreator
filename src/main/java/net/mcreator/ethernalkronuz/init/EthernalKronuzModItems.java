@@ -46,6 +46,7 @@ import net.mcreator.ethernalkronuz.item.GriffinFeatherItem;
 import net.mcreator.ethernalkronuz.item.GandaMocaItem;
 import net.mcreator.ethernalkronuz.item.FreickenItem;
 import net.mcreator.ethernalkronuz.item.FreakyItem;
+import net.mcreator.ethernalkronuz.item.FlameOfDamnationItem;
 import net.mcreator.ethernalkronuz.item.FakingEllSwordItem;
 import net.mcreator.ethernalkronuz.item.FakingEllShovelItem;
 import net.mcreator.ethernalkronuz.item.FakingEllPickaxeItem;
@@ -255,6 +256,7 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> DIVINE_BOW = REGISTRY.register("divine_bow", () -> new DivineBowItem());
 	public static final RegistryObject<Item> JOTUNHEIM_FRAME = block(EthernalKronuzModBlocks.JOTUNHEIM_FRAME, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
 	public static final RegistryObject<Item> MULTI_TOOL = REGISTRY.register("multi_tool", () -> new MultiToolItem());
+	public static final RegistryObject<Item> FLAME_OF_DAMNATION = REGISTRY.register("flame_of_damnation", () -> new FlameOfDamnationItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

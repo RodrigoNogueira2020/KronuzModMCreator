@@ -20,6 +20,7 @@ import net.mcreator.ethernalkronuz.entity.WarperEntity;
 import net.mcreator.ethernalkronuz.entity.TerraBladeProjectileEntity;
 import net.mcreator.ethernalkronuz.entity.TechnomortoEntity;
 import net.mcreator.ethernalkronuz.entity.TechnobaldeEntity;
+import net.mcreator.ethernalkronuz.entity.SkullDamnationEntity;
 import net.mcreator.ethernalkronuz.entity.NullEntityEntity;
 import net.mcreator.ethernalkronuz.entity.GriffinAnimatedEntity;
 import net.mcreator.ethernalkronuz.entity.GinukaPowerSetupEntity;
@@ -60,6 +61,8 @@ public class EthernalKronuzModEntities {
 			.setCustomClientFactory(TerraBladeProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<DivineBowEntity>> DIVINE_BOW = register("projectile_divine_bow",
 			EntityType.Builder.<DivineBowEntity>of(DivineBowEntity::new, MobCategory.MISC).setCustomClientFactory(DivineBowEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<SkullDamnationEntity>> SKULL_DAMNATION = register("skull_damnation", EntityType.Builder.<SkullDamnationEntity>of(SkullDamnationEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SkullDamnationEntity::new).fireImmune().sized(1f, 1f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -75,6 +78,7 @@ public class EthernalKronuzModEntities {
 			NullEntityEntity.init();
 			BlessingEntity.init();
 			GriffinAnimatedEntity.init();
+			SkullDamnationEntity.init();
 		});
 	}
 
@@ -87,5 +91,6 @@ public class EthernalKronuzModEntities {
 		event.put(NULL_ENTITY.get(), NullEntityEntity.createAttributes().build());
 		event.put(BLESSING.get(), BlessingEntity.createAttributes().build());
 		event.put(GRIFFIN_ANIMATED.get(), GriffinAnimatedEntity.createAttributes().build());
+		event.put(SKULL_DAMNATION.get(), SkullDamnationEntity.createAttributes().build());
 	}
 }

@@ -1,15 +1,12 @@
 {
   "_fv": 39,
-  "_type": "curiosbauble",
+  "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "faction_book",
+    "texture": "flame_of_damnation",
     "customModelName": "Normal",
-    "name": "§d§4",
-    "rarity": "RARE",
-    "slotType": "CURIO",
-    "baubleModel": "Default",
-    "baubleModelTexture": "",
+    "name": "Flame of Damnation",
+    "rarity": "EPIC",
     "creativeTab": {
       "value": "CUSTOM:CreativeTab"
     },
@@ -26,22 +23,18 @@
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
-    "addSlot": true,
     "damageVsEntity": 0.0,
-    "specialInfo": [],
-    "hasGlow": false,
+    "specialInfo": [
+      "Purple skull with cool flames go brrr"
+    ],
+    "hasGlow": true,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "slotAmount": 1,
-    "onRightClickedInAir": {
-      "name": "FactionBookRightClickedInAir"
+    "onRightClickedOnBlock": {
+      "name": "FlameOfDamnationRightclicked"
     },
     "isFood": false,
-    "friendlyPigs": false,
-    "enderMask": false,
-    "rotateModel": false,
-    "translateModel": false,
     "nutritionalValue": 4,
     "saturation": 0.3,
     "eatResultItem": {
@@ -49,7 +42,6 @@
     },
     "isMeat": false,
     "isAlwaysEdible": false,
-    "hasModel": false,
     "animation": "none"
   }
 }

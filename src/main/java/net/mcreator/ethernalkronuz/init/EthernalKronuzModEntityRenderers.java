@@ -15,6 +15,7 @@ import net.mcreator.ethernalkronuz.client.renderer.WarperRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.TerraBladeProjectileRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.TechnomortoRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.TechnobaldeRenderer;
+import net.mcreator.ethernalkronuz.client.renderer.SkullDamnationRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.NullEntityRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.GriffinAnimatedRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.GinukaPowerSetupRenderer;
@@ -33,5 +34,6 @@ public class EthernalKronuzModEntityRenderers {
 		event.registerEntityRenderer(EthernalKronuzModEntities.GRIFFIN_ANIMATED.get(), GriffinAnimatedRenderer::new);
 		event.registerEntityRenderer(EthernalKronuzModEntities.TERRA_BLADE_PROJECTILE.get(), TerraBladeProjectileRenderer::new);
 		event.registerEntityRenderer(EthernalKronuzModEntities.DIVINE_BOW.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(EthernalKronuzModEntities.SKULL_DAMNATION.get(), SkullDamnationRenderer::new);
 	}
 }

@@ -95,6 +95,7 @@ public class EthernalKronuzModVariables {
 			clone.HasMinimumForTheRiseRoxo = original.HasMinimumForTheRiseRoxo;
 			clone.HasMinimumForTheRiseVerde = original.HasMinimumForTheRiseVerde;
 			clone.HasMinimumForTheRiseVermelho = original.HasMinimumForTheRiseVermelho;
+			clone.skullDamnationSpawned = original.skullDamnationSpawned;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -301,6 +302,7 @@ public class EthernalKronuzModVariables {
 		public boolean HasMinimumForTheRiseRoxo = false;
 		public boolean HasMinimumForTheRiseVerde = false;
 		public boolean HasMinimumForTheRiseVermelho = false;
+		public boolean skullDamnationSpawned = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -332,6 +334,7 @@ public class EthernalKronuzModVariables {
 			nbt.putBoolean("HasMinimumForTheRiseRoxo", HasMinimumForTheRiseRoxo);
 			nbt.putBoolean("HasMinimumForTheRiseVerde", HasMinimumForTheRiseVerde);
 			nbt.putBoolean("HasMinimumForTheRiseVermelho", HasMinimumForTheRiseVermelho);
+			nbt.putBoolean("skullDamnationSpawned", skullDamnationSpawned);
 			return nbt;
 		}
 
@@ -360,6 +363,7 @@ public class EthernalKronuzModVariables {
 			HasMinimumForTheRiseRoxo = nbt.getBoolean("HasMinimumForTheRiseRoxo");
 			HasMinimumForTheRiseVerde = nbt.getBoolean("HasMinimumForTheRiseVerde");
 			HasMinimumForTheRiseVermelho = nbt.getBoolean("HasMinimumForTheRiseVermelho");
+			skullDamnationSpawned = nbt.getBoolean("skullDamnationSpawned");
 		}
 	}
 
@@ -407,6 +411,7 @@ public class EthernalKronuzModVariables {
 					variables.HasMinimumForTheRiseRoxo = message.data.HasMinimumForTheRiseRoxo;
 					variables.HasMinimumForTheRiseVerde = message.data.HasMinimumForTheRiseVerde;
 					variables.HasMinimumForTheRiseVermelho = message.data.HasMinimumForTheRiseVermelho;
+					variables.skullDamnationSpawned = message.data.skullDamnationSpawned;
 				}
 			});
 			context.setPacketHandled(true);
