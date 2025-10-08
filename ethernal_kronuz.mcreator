@@ -10555,6 +10555,40 @@
         ]
       },
       "path": "~/Dimensions/Jotunheim/Spawn The Rise Chambers and After Ragnarok"
+    },
+    {
+      "name": "Battlefield",
+      "type": "structure",
+      "sortid": 638,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battlefield",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/world/features/BattlefieldFeature.java"
+        ]
+      },
+      "path": "~/Dimensions/Asgard/Ragnarok/Structure"
+    },
+    {
+      "name": "SpawnBattlefield",
+      "type": "procedure",
+      "sortid": 640,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_battlefield",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/SpawnBattlefieldProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Dimensions/Asgard/Ragnarok/Structure"
     }
   ],
   "variable_elements": [
@@ -11982,6 +12016,15 @@
               {
                 "name": "Bifrost",
                 "children": []
+              },
+              {
+                "name": "Ragnarok",
+                "children": [
+                  {
+                    "name": "Structure",
+                    "children": []
+                  }
+                ]
               }
             ]
           },

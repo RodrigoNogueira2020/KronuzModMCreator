@@ -61,6 +61,7 @@ import net.mcreator.ethernalkronuz.world.features.DivinecrystalpillargiantFeatur
 import net.mcreator.ethernalkronuz.world.features.DivinecrystalpillarextralargeFeature;
 import net.mcreator.ethernalkronuz.world.features.DesertFeature;
 import net.mcreator.ethernalkronuz.world.features.BichFeature;
+import net.mcreator.ethernalkronuz.world.features.BattlefieldFeature;
 import net.mcreator.ethernalkronuz.world.features.AsgardTempleEntryFeature;
 import net.mcreator.ethernalkronuz.world.features.AfterRagnarokTempleFeature;
 import net.mcreator.ethernalkronuz.world.features.AesirPortalStructureFeature;
@@ -160,6 +161,8 @@ public class EthernalKronuzModFeatures {
 			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, TheRiseChamberPurpleFeature.GENERATE_BIOMES, TheRiseChamberPurpleFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> AFTER_RAGNAROK_TEMPLE = register("after_ragnarok_temple", AfterRagnarokTempleFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, AfterRagnarokTempleFeature.GENERATE_BIOMES, AfterRagnarokTempleFeature::placedFeature));
+	public static final RegistryObject<Feature<?>> BATTLEFIELD = register("battlefield", BattlefieldFeature::feature,
+			new FeatureRegistration(GenerationStep.Decoration.RAW_GENERATION, BattlefieldFeature.GENERATE_BIOMES, BattlefieldFeature::placedFeature));
 
 	private static RegistryObject<Feature<?>> register(String registryname, Supplier<Feature<?>> feature, FeatureRegistration featureRegistration) {
 		FEATURE_REGISTRATIONS.add(featureRegistration);
