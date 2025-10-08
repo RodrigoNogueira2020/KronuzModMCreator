@@ -169,6 +169,7 @@ public class EthernalKronuzModVariables {
 		public boolean AsgardPortalOpen = false;
 		public boolean AsgardPortalOpenInAsgard = false;
 		public double NokkiaHammerCountClicks = 0;
+		public boolean ActivateAfterRagnarok = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -184,6 +185,7 @@ public class EthernalKronuzModVariables {
 			AsgardPortalOpen = nbt.getBoolean("AsgardPortalOpen");
 			AsgardPortalOpenInAsgard = nbt.getBoolean("AsgardPortalOpenInAsgard");
 			NokkiaHammerCountClicks = nbt.getDouble("NokkiaHammerCountClicks");
+			ActivateAfterRagnarok = nbt.getBoolean("ActivateAfterRagnarok");
 		}
 
 		@Override
@@ -195,6 +197,7 @@ public class EthernalKronuzModVariables {
 			nbt.putBoolean("AsgardPortalOpen", AsgardPortalOpen);
 			nbt.putBoolean("AsgardPortalOpenInAsgard", AsgardPortalOpenInAsgard);
 			nbt.putDouble("NokkiaHammerCountClicks", NokkiaHammerCountClicks);
+			nbt.putBoolean("ActivateAfterRagnarok", ActivateAfterRagnarok);
 			return nbt;
 		}
 

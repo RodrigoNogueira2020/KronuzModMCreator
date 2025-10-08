@@ -19,7 +19,7 @@ import net.minecraft.core.BlockPos;
 import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
-public class LoadTheRiseChambersProcedure {
+public class LoadJotunheimStructuresProcedure {
 	@SubscribeEvent
 	public static void onWorldLoad(WorldEvent.Load event) {
 		execute(event, event.getWorld());
@@ -38,6 +38,24 @@ public class LoadTheRiseChambersProcedure {
 					StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("ethernal_kronuz", "green_trial"));
 					if (template != null) {
 						template.placeInWorld(_serverworld, new BlockPos(0, 1000, -50), new BlockPos(0, 1000, -50), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+					}
+				}
+				if (world instanceof ServerLevel _serverworld) {
+					StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("ethernal_kronuz", "green_trial"));
+					if (template != null) {
+						template.placeInWorld(_serverworld, new BlockPos(-50, 1000, 0), new BlockPos(-50, 1000, 0), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+					}
+				}
+				if (world instanceof ServerLevel _serverworld) {
+					StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("ethernal_kronuz", "green_trial"));
+					if (template != null) {
+						template.placeInWorld(_serverworld, new BlockPos(50, 1000, 0), new BlockPos(50, 1000, 0), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+					}
+				}
+				if (world instanceof ServerLevel _serverworld) {
+					StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("ethernal_kronuz", "asgard_temple"));
+					if (template != null) {
+						template.placeInWorld(_serverworld, new BlockPos(0, 1000, 50), new BlockPos(0, 1000, 50), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 					}
 				}
 			}

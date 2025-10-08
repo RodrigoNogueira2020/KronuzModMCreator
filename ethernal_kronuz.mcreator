@@ -10368,26 +10368,6 @@
       "path": "~/Factions/Radiant Lords/The Rise/Colors/Green"
     },
     {
-      "name": "LoadTheRiseChambers",
-      "type": "procedure",
-      "sortid": 620,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "load_the_rise_chambers",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/LoadTheRiseChambersProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Dimensions/Jotunheim/Spawn The Rise Chambers"
-    },
-    {
       "name": "TheRiseChamberGreen",
       "type": "structure",
       "sortid": 621,
@@ -10399,7 +10379,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/world/features/TheRiseChamberGreenFeature.java"
         ]
       },
-      "path": "~/Dimensions/Jotunheim/Spawn The Rise Chambers"
+      "path": "~/Dimensions/Jotunheim/Spawn The Rise Chambers and After Ragnarok"
     },
     {
       "name": "TheRiseCompleteAdvancement",
@@ -10499,6 +10479,82 @@
         ]
       },
       "path": "~/Factions/Radiant Lords/Weapons"
+    },
+    {
+      "name": "Ragnarok",
+      "type": "achievement",
+      "sortid": 632,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ragnarok",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ethernal_kronuz/advancements/ragnarok.json"
+        ]
+      },
+      "path": "~/Achievements/Faccoes/Radiant Lords"
+    },
+    {
+      "name": "LoadJotunheimStructures",
+      "type": "procedure",
+      "sortid": 634,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "load_jotunheim_structures",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/LoadJotunheimStructuresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Dimensions/Jotunheim/Spawn The Rise Chambers and After Ragnarok"
+    },
+    {
+      "name": "TheRiseChamberRed",
+      "type": "structure",
+      "sortid": 635,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_rise_chamber_red",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/world/features/TheRiseChamberRedFeature.java"
+        ]
+      },
+      "path": "~/Dimensions/Jotunheim/Spawn The Rise Chambers and After Ragnarok"
+    },
+    {
+      "name": "TheRiseChamberPurple",
+      "type": "structure",
+      "sortid": 636,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_rise_chamber_purple",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/world/features/TheRiseChamberPurpleFeature.java"
+        ]
+      },
+      "path": "~/Dimensions/Jotunheim/Spawn The Rise Chambers and After Ragnarok"
+    },
+    {
+      "name": "AfterRagnarokTemple",
+      "type": "structure",
+      "sortid": 637,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "after_ragnarok_temple",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/world/features/AfterRagnarokTempleFeature.java"
+        ]
+      },
+      "path": "~/Dimensions/Jotunheim/Spawn The Rise Chambers and After Ragnarok"
     }
   ],
   "variable_elements": [
@@ -10710,6 +10766,12 @@
       "name": "TouchRLOnce",
       "type": "logic",
       "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "ActivateAfterRagnarok",
+      "type": "logic",
+      "scope": "map",
       "value": "false"
     }
   ],
@@ -11007,13 +11069,13 @@
       "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
       "advancements.bt_achievement.descr": "Join Big Testa",
-      "advancements.rl_verde_achievement.title": "The Third",
       "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
+      "advancements.rl_verde_achievement.title": "The Third",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_atention": "Atention",
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
-      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_atention": "Atention",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_you_will_be_teleported_to_the_tr": "You will be teleported",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_atention": "Atention",
       "block.ethernal_kronuz.mosso_crystal_ore": "Mosso Crystal Ore",
       "item.ethernal_kronuz.ganda_moca.desc": "Ganda Moca",
       "gui.ethernal_kronuz.trade_system_gui_techno.label_technobalde": "Technobalde",
@@ -11198,6 +11260,7 @@
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_special_armor": "- Special Armor",
       "item.ethernal_kronuz.airport_steel_pickaxe_head": "Head of Airport Steel Pickaxe",
       "advancements.full_set_faking_ell.descr": "Ter uma armadura completa de Faking Ell",
+      "advancements.ragnarok.descr": "Kill damn gods!",
       "advancements.the_rise_complete_advancement.title": "The Rise",
       "item.ethernal_kronuz.sao_paulo.desc": "São Paulo",
       "item.ethernal_kronuz.faking_ell_ingot": "Faking Ell Ingot",
@@ -11264,6 +11327,7 @@
       "subtitles.warper-death": "",
       "block.ethernal_kronuz.normal_glow_grass": "Glow Grass",
       "advancements.enters_asgard.title": "God\u0027s Dimension",
+      "advancements.ragnarok.title": "Ragnarök",
       "advancements.bt_achievement.title": "I like your cut G",
       "item.ethernal_kronuz.angolae_nossa.desc": "Angola é nossa",
       "block.ethernal_kronuz.ygg_stairs": "Ygg Wood Stairs",
@@ -11934,7 +11998,7 @@
                 ]
               },
               {
-                "name": "Spawn The Rise Chambers",
+                "name": "Spawn The Rise Chambers and After Ragnarok",
                 "children": []
               }
             ]
@@ -12020,8 +12084,8 @@
     "modid": "ethernal_kronuz",
     "modName": "Ethernal Kronuz",
     "version": "1.0",
-    "description": "Literalmente | 283",
-    "author": "lez, Bl1tzGB",
+    "description": "Literalmente283",
+    "author": "LeZ, Bl1tzGB",
     "websiteURL": "https://mcreator.net",
     "license": "All Rights Reserved",
     "disableForgeVersionCheck": true,
@@ -12041,7 +12105,7 @@
       "playeranimator"
     ],
     "currentGenerator": "forge-1.18.2",
-    "credits": "Mis niggas stão de kana",
+    "credits": "Sta na fita",
     "modElementsPackage": "net.mcreator.ethernalkronuz",
     "lockBaseModFiles": false
   },
