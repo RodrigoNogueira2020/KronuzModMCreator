@@ -10589,6 +10589,36 @@
         ]
       },
       "path": "~/Dimensions/Asgard/Ragnarok/Structure"
+    },
+    {
+      "name": "Vegvisir",
+      "type": "item",
+      "sortid": 641,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vegvisir",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/item/VegvisirItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/vegvisir.json"
+        ]
+      },
+      "path": "~/Dimensions/Asgard/Ragnarok"
+    },
+    {
+      "name": "BattlefieldOnStructureInstanceGenerated",
+      "type": "procedure",
+      "sortid": 642,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battlefield_on_structure_instance_generated",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/BattlefieldOnStructureInstanceGeneratedProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Dimensions/Asgard/Ragnarok/Structure"
     }
   ],
   "variable_elements": [
@@ -11165,6 +11195,7 @@
       "item.ethernal_kronuz.deep_sea_boot": "Deep Sea Boot",
       "itemGroup.tabcreative_tab": "Ethernal Kronuz",
       "gui.ethernal_kronuz.trade_system_gui_techno.label_trades": "Trades",
+      "item.ethernal_kronuz.vegvisir": "Vegvisir",
       "item.ethernal_kronuz.rl_verde_armor_leggings": "Titan Kaleb\u0027s  Leggings",
       "block.ethernal_kronuz.ygg_fences": "Ygg Wood Fences",
       "effect.ethernal_kronuz.end_empowerment": "End Empowerment",

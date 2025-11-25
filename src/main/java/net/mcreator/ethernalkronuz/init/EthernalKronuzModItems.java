@@ -16,6 +16,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.ethernalkronuz.item.YggWoodStickItem;
+import net.mcreator.ethernalkronuz.item.VegvisirItem;
 import net.mcreator.ethernalkronuz.item.VASCOItem;
 import net.mcreator.ethernalkronuz.item.TheRiseParchmentItem;
 import net.mcreator.ethernalkronuz.item.TheEndingEyeItem;
@@ -257,6 +258,7 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> RADIANT_LORD_GREEN_TRIAL_SPAWN_EGG = REGISTRY.register("radiant_lord_green_trial_spawn_egg",
 			() -> new ForgeSpawnEggItem(EthernalKronuzModEntities.RADIANT_LORD_GREEN_TRIAL, -10066330, -16738048, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB)));
 	public static final RegistryObject<Item> THE_RISE_PARCHMENT = REGISTRY.register("the_rise_parchment", () -> new TheRiseParchmentItem());
+	public static final RegistryObject<Item> VEGVISIR = REGISTRY.register("vegvisir", () -> new VegvisirItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

@@ -13,6 +13,7 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.Level;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
@@ -21,6 +22,8 @@ import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.core.Registry;
 import net.minecraft.core.Holder;
 import net.minecraft.core.BlockPos;
+
+import net.mcreator.ethernalkronuz.procedures.BattlefieldOnStructureInstanceGeneratedProcedure;
 
 import java.util.Set;
 import java.util.List;
@@ -66,8 +69,14 @@ public class BattlefieldFeature extends Feature<NoneFeatureConfiguration> {
 				int j = context.level().getHeight(Heightmap.Types.WORLD_SURFACE_WG, i, k);
 				j += context.random().nextInt(64) + 16;
 				BlockPos spawnTo = new BlockPos(i + 0, j + 0, k + 0);
+				WorldGenLevel world = context.level();
+				int x = spawnTo.getX();
+				int y = spawnTo.getY();
+				int z = spawnTo.getZ();
 				if (template.placeInWorld(context.level(), spawnTo, spawnTo, new StructurePlaceSettings().setMirror(Mirror.values()[context.random().nextInt(2)]).setRotation(Rotation.values()[context.random().nextInt(3)]).setRandom(context.random())
 						.addProcessor(BlockIgnoreProcessor.STRUCTURE_BLOCK).setIgnoreEntities(false), context.random(), 2)) {
+
+					BattlefieldOnStructureInstanceGeneratedProcedure.execute();
 					anyPlaced = true;
 				}
 			}
