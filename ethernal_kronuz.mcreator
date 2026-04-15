@@ -3929,7 +3929,7 @@
       "type": "gui",
       "sortid": 306,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "gui_faction_book",
       "metadata": {
         "files": [
