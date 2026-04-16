@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "ethernal_kronuz:bifrost_key"
+      "item": "ethernal_kronuz:terra_blade_projectile"
     },
     "title": {
       "translate": "advancements.ragnarok.title"
@@ -12,7 +12,7 @@
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
-    "hidden": true
+    "hidden": false
   },
   "criteria": {
     "ragnarok": {

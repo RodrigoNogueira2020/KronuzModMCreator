@@ -3,15 +3,15 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "Ragnarök",
-    "achievementDescription": "Kill damn gods!",
+    "achievementDescription": "The doom of the Gods",
     "achievementIcon": {
-      "value": "CUSTOM:BifrostKey"
+      "value": "CUSTOM:TerraBladeProjectile"
     },
     "background": "Default",
     "disableDisplay": false,
     "showPopup": true,
     "announceToChat": true,
-    "hideIfNotCompleted": true,
+    "hideIfNotCompleted": false,
     "rewardLoot": [],
     "rewardRecipes": [],
     "rewardFunction": "No function",
@@ -20,6 +20,6 @@
     "parent": {
       "value": "CUSTOM:AscenderAdvancement"
     },
-    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"custom_trigger\" x=\"40\" y=\"45\"><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"custom_trigger\" x=\"53\" y=\"103\"><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
   }
 }

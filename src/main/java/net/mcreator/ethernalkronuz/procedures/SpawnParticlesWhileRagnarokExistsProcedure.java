@@ -30,7 +30,8 @@ public class SpawnParticlesWhileRagnarokExistsProcedure {
 	// Tamanho da cabeça da seta
 	private static final double HEAD_LENGTH = 1.5;
 	private static final double HEAD_WIDTH = 1.0;
-	private static final int TICK_INTERVAL = 20;
+	// Intervalos de update da seta
+	private static final int TICK_INTERVAL = 10;
 
 	@SubscribeEvent
 	public static void onServerTick(TickEvent.ServerTickEvent event) {

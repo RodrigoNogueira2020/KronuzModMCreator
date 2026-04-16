@@ -10481,20 +10481,6 @@
       "path": "~/Factions/Radiant Lords/Weapons"
     },
     {
-      "name": "Ragnarok",
-      "type": "achievement",
-      "sortid": 632,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ragnarok",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/ethernal_kronuz/advancements/ragnarok.json"
-        ]
-      },
-      "path": "~/Achievements/Faccoes/Radiant Lords"
-    },
-    {
       "name": "LoadJotunheimStructures",
       "type": "procedure",
       "sortid": 634,
@@ -10621,6 +10607,34 @@
             "name": "world",
             "type": "world"
           }
+        ]
+      },
+      "path": "~/Dimensions/Asgard/Ragnarok/Structure"
+    },
+    {
+      "name": "Ragnarok",
+      "type": "achievement",
+      "sortid": 643,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ragnarok",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ethernal_kronuz/advancements/ragnarok.json"
+        ]
+      },
+      "path": "~/Achievements/Dimensoes"
+    },
+    {
+      "name": "BubbleBorderProcedure",
+      "type": "code",
+      "sortid": 644,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "bubble_border_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/BubbleBorderProcedure.java"
         ]
       },
       "path": "~/Dimensions/Asgard/Ragnarok/Structure"
@@ -11138,8 +11152,8 @@
       "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
       "advancements.bt_achievement.descr": "Join Big Testa",
-      "advancements.rl_verde_achievement.title": "The Third",
       "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
+      "advancements.rl_verde_achievement.title": "The Third",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_atention": "Atention",
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
@@ -11330,7 +11344,7 @@
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_special_armor": "- Special Armor",
       "item.ethernal_kronuz.airport_steel_pickaxe_head": "Head of Airport Steel Pickaxe",
       "advancements.full_set_faking_ell.descr": "Ter uma armadura completa de Faking Ell",
-      "advancements.ragnarok.descr": "Kill damn gods!",
+      "advancements.ragnarok.descr": "The doom of the Gods",
       "advancements.the_rise_complete_advancement.title": "The Rise",
       "item.ethernal_kronuz.sao_paulo.desc": "São Paulo",
       "item.ethernal_kronuz.faking_ell_ingot": "Faking Ell Ingot",
@@ -12058,6 +12072,10 @@
                 "children": [
                   {
                     "name": "Structure",
+                    "children": []
+                  },
+                  {
+                    "name": "Gods",
                     "children": []
                   }
                 ]
