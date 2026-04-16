@@ -12,12 +12,15 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.ethernalkronuz.client.renderer.WarperRenderer;
+import net.mcreator.ethernalkronuz.client.renderer.ThorRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.TerraBladeProjectileRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.TechnomortoRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.TechnobaldeRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.RadiantLordNoColorTrialRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.RadiantLordGreenTrialRenderer;
+import net.mcreator.ethernalkronuz.client.renderer.OdinRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.NullEntityRenderer;
+import net.mcreator.ethernalkronuz.client.renderer.LokiRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.GriffinAnimatedRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.GinukaPowerSetupRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.BlessingRenderer;
@@ -37,5 +40,8 @@ public class EthernalKronuzModEntityRenderers {
 		event.registerEntityRenderer(EthernalKronuzModEntities.TERRA_BLADE_PROJECTILE.get(), TerraBladeProjectileRenderer::new);
 		event.registerEntityRenderer(EthernalKronuzModEntities.RADIANT_LORD_NO_COLOR_TRIAL.get(), RadiantLordNoColorTrialRenderer::new);
 		event.registerEntityRenderer(EthernalKronuzModEntities.RADIANT_LORD_GREEN_TRIAL.get(), RadiantLordGreenTrialRenderer::new);
+		event.registerEntityRenderer(EthernalKronuzModEntities.ODIN.get(), OdinRenderer::new);
+		event.registerEntityRenderer(EthernalKronuzModEntities.THOR.get(), ThorRenderer::new);
+		event.registerEntityRenderer(EthernalKronuzModEntities.LOKI.get(), LokiRenderer::new);
 	}
 }

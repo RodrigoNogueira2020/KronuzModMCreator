@@ -257,6 +257,9 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> RADIANT_LORD_GREEN_TRIAL_SPAWN_EGG = REGISTRY.register("radiant_lord_green_trial_spawn_egg",
 			() -> new ForgeSpawnEggItem(EthernalKronuzModEntities.RADIANT_LORD_GREEN_TRIAL, -10066330, -16738048, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB)));
 	public static final RegistryObject<Item> THE_RISE_PARCHMENT = REGISTRY.register("the_rise_parchment", () -> new TheRiseParchmentItem());
+	public static final RegistryObject<Item> ODIN_SPAWN_EGG = REGISTRY.register("odin_spawn_egg", () -> new ForgeSpawnEggItem(EthernalKronuzModEntities.ODIN, -13880192, -9868951, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB)));
+	public static final RegistryObject<Item> THOR_SPAWN_EGG = REGISTRY.register("thor_spawn_egg", () -> new ForgeSpawnEggItem(EthernalKronuzModEntities.THOR, -6155238, -336001, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB)));
+	public static final RegistryObject<Item> LOKI_SPAWN_EGG = REGISTRY.register("loki_spawn_egg", () -> new ForgeSpawnEggItem(EthernalKronuzModEntities.LOKI, -11508979, -2707921, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

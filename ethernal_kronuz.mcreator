@@ -10555,6 +10555,60 @@
         ]
       },
       "path": "~/Dimensions/Jotunheim/Spawn The Rise Chambers and After Ragnarok"
+    },
+    {
+      "name": "Odin",
+      "type": "animatedentity",
+      "sortid": 638,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "odin",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/entity/OdinEntity.java",
+          "src/main/java/net/mcreator/ethernalkronuz/entity/model/OdinModel.java",
+          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/OdinRenderer.java",
+          "src/main/java/net/mcreator/ethernalkronuz/entity/layer/OdinLayer.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/odin_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs/Gods/Odin"
+    },
+    {
+      "name": "Thor",
+      "type": "animatedentity",
+      "sortid": 639,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/entity/model/ThorModel.java",
+          "src/main/java/net/mcreator/ethernalkronuz/entity/layer/ThorLayer.java",
+          "src/main/java/net/mcreator/ethernalkronuz/entity/ThorEntity.java",
+          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/ThorRenderer.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/thor_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs/Gods/Thor"
+    },
+    {
+      "name": "Loki",
+      "type": "animatedentity",
+      "sortid": 640,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "loki",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/entity/model/LokiModel.java",
+          "src/main/java/net/mcreator/ethernalkronuz/entity/layer/LokiLayer.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/loki_spawn_egg.json",
+          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/LokiRenderer.java",
+          "src/main/java/net/mcreator/ethernalkronuz/entity/LokiEntity.java"
+        ]
+      },
+      "path": "~/Mobs/Gods/Loki"
     }
   ],
   "variable_elements": [
@@ -11069,13 +11123,13 @@
       "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
       "advancements.bt_achievement.descr": "Join Big Testa",
-      "advancements.rl_verde_achievement.title": "The Third",
       "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
+      "advancements.rl_verde_achievement.title": "The Third",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_atention": "Atention",
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
-      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_atention": "Atention",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_you_will_be_teleported_to_the_tr": "You will be teleported",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_atention": "Atention",
       "block.ethernal_kronuz.mosso_crystal_ore": "Mosso Crystal Ore",
       "item.ethernal_kronuz.ganda_moca.desc": "Ganda Moca",
       "gui.ethernal_kronuz.trade_system_gui_techno.label_technobalde": "Technobalde",
@@ -11137,6 +11191,7 @@
       "key.ethernal_kronuz.null_tp_ability": "Null Teleport Ability",
       "gui.ethernal_kronuz.get_out_jotunheim_rlgui.label_teleporting_into": "teleporting into",
       "subtitles.saopaulo": "",
+      "entity.ethernal_kronuz.loki": "Loki",
       "subtitles.freicken": "",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_double_health": "- Double Health",
       "item.ethernal_kronuz.divine_crystal_shard": "Divine Crystal Shard",
@@ -11174,6 +11229,7 @@
       "subtitles.mano-vc": "",
       "death.attack.cancro.player": "%1$s is a wannabe Technomorto",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_armor_before_the_rise": "armor before The Rise",
+      "item.ethernal_kronuz.odin_spawn_egg": "Odin Spawn Egg",
       "subtitles.choro-vc": "",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_radiant_lord_are_you_really_rea": "Radiant Lord",
       "item.ethernal_kronuz.safira": "Kazzio",
@@ -11218,6 +11274,7 @@
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_double_health": "- Double Health",
       "block.ethernal_kronuz.jotunheim_frame": "Jotunheim Frame",
       "item.ethernal_kronuz.mosso_crystal_sword": "Mosso Crystal Sword",
+      "entity.ethernal_kronuz.odin": "Odin",
       "gui.ethernal_kronuz.go_to_jotunheim_rlgui.button_yes": "Yes",
       "item.ethernal_kronuz.aiport_steel_shovel": "Airport Steel Shovel",
       "item.ethernal_kronuz.necromancer": "Adolfus Hitlurus",
@@ -11269,6 +11326,7 @@
       "subtitles.terrabladeshot": "",
       "item.ethernal_kronuz.blessing_spawn_egg": "Blessing Spawn Egg",
       "block.ethernal_kronuz.faking_ell_block": "Block of Faking Ell",
+      "item.ethernal_kronuz.thor_spawn_egg": "Thor Spawn Egg",
       "block.ethernal_kronuz.ygg_log": "Ygg Wood Log",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_special_tool": "- Special Tool",
       "subtitles.vc-irritado": "",
@@ -11283,6 +11341,7 @@
       "item.ethernal_kronuz.the_rise_parchment": "§6The Rise Parchment",
       "item.ethernal_kronuz.backpack": "Backpack",
       "item.ethernal_kronuz.murasama": "Murasama",
+      "entity.ethernal_kronuz.thor": "Thor",
       "item.ethernal_kronuz.freaky": "Janela",
       "item.ethernal_kronuz.away": "João Sousa",
       "item.ethernal_kronuz.the_ending_eye": "The Ending Eye",
@@ -11402,6 +11461,7 @@
       "subtitles.sword-dash": "",
       "gui.ethernal_kronuz.get_out_jotunheim_rlgui.label_jotunheim": "Jotunheim",
       "item.ethernal_kronuz.battle_coin": "Battle Coin",
+      "item.ethernal_kronuz.loki_spawn_egg": "Loki Spawn Egg",
       "item.ethernal_kronuz.mosso_crystal_pickaxe": "Mosso Crystal Pickaxe",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_to_the_trial_to_claim_your_posit": "to The Rise Chamber to",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_remove_your_current": "Remove your current",
@@ -11790,6 +11850,23 @@
           {
             "name": "DinoVasco",
             "children": []
+          },
+          {
+            "name": "Gods",
+            "children": [
+              {
+                "name": "Odin",
+                "children": []
+              },
+              {
+                "name": "Thor",
+                "children": []
+              },
+              {
+                "name": "Loki",
+                "children": []
+              }
+            ]
           }
         ]
       },
