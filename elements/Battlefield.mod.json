@@ -17,9 +17,6 @@
     ],
     "restrictionBlocks": [],
     "restrictionBiomes": [],
-    "ignoreBlocks": "STRUCTURE_BLOCK",
-    "onStructureGenerated": {
-      "name": "BattlefieldOnStructureInstanceGenerated"
-    }
+    "ignoreBlocks": "STRUCTURE_BLOCK"
   }
 }
