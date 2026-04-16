@@ -39,7 +39,7 @@ public class EndEmpowermentEffectStartedappliedProcedure {
 					|| (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY).getItem() == EthernalKronuzModItems.MOSSO_CRYSTAL_ARMOR_LEGGINGS.get()
 					|| (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getItem() == EthernalKronuzModItems.MOSSO_CRYSTAL_ARMOR_BOOTS.get()) {
 				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(EthernalKronuzModMobEffects.END_EMPOWERMENT.get(), 999999, 0, (true), (false)));
+					_entity.addEffect(new MobEffectInstance(EthernalKronuzModMobEffects.END_EMPOWERMENT.get(), (int) Double.POSITIVE_INFINITY, 0, (true), (false)));
 			}
 		} else if (!((entity.level.dimension()) == (Level.END))) {
 			if (entity instanceof LivingEntity _entity)

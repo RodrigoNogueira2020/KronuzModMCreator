@@ -2,7 +2,7 @@
   "_fv": 39,
   "_type": "potioneffect",
   "definition": {
-    "effectName": "Cancro",
+    "effectName": "Cancer",
     "icon": "cancro.png",
     "color": {
       "value": -16737997,

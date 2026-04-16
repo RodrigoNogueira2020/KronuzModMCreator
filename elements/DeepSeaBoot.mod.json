@@ -29,7 +29,7 @@
     "addSlot": true,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "Boot of the Sea God"
+      "§cPassive: §7Gives §eWater Breathing"
     ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",

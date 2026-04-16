@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "faction_book",
     "customModelName": "Normal",
-    "name": "§dJoin!",
+    "name": "§dFaction",
     "rarity": "RARE",
     "slotType": "CURIO",
     "baubleModel": "Default",

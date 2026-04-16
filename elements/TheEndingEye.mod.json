@@ -29,7 +29,7 @@
     "addSlot": true,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "Open the Third Eye"
+      "§cPassive: §7Gives §eAbsorption"
     ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",

@@ -9,8 +9,8 @@
       "registry_name": "mosso_crystal_dust",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/item/MossoCrystalDustItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_dust.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_dust.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/MossoCrystalDustItem.java"
         ]
       },
       "path": "~/Ores/Mosso Crystal"
@@ -24,11 +24,11 @@
       "registry_name": "mosso_crystal_ore",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/block/MossoCrystalOreBlock.java",
           "src/main/java/net/mcreator/ethernalkronuz/world/features/ores/MossoCrystalOreFeature.java",
-          "src/main/resources/assets/ethernal_kronuz/models/block/mosso_crystal_ore.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_ore.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/mosso_crystal_ore.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/MossoCrystalOreBlock.java"
+          "src/main/resources/assets/ethernal_kronuz/models/block/mosso_crystal_ore.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_ore.json"
         ]
       },
       "path": "~/Ores/Mosso Crystal"
@@ -42,10 +42,10 @@
       "registry_name": "mosso_crystal_block",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/blockstates/mosso_crystal_block.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/mosso_crystal_block.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_block.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/MossoCrystalBlockBlock.java"
+          "src/main/java/net/mcreator/ethernalkronuz/block/MossoCrystalBlockBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/mosso_crystal_block.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_block.json"
         ]
       },
       "path": "~/Ores/Mosso Crystal"
@@ -117,8 +117,8 @@
       "registry_name": "mosso_crystal_sword",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_sword.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/MossoCrystalSwordItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/MossoCrystalSwordItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_sword.json"
         ]
       },
       "path": "~/Ores/Mosso Crystal/Ferramentas/Sword"
@@ -132,8 +132,8 @@
       "registry_name": "mosso_crystal_shovel",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/item/MossoCrystalShovelItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_shovel.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_shovel.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/MossoCrystalShovelItem.java"
         ]
       },
       "path": "~/Ores/Mosso Crystal/Ferramentas/Shovel"
@@ -237,10 +237,10 @@
         "ec": true,
         "files": [
           "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_armor_chestplate.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_armor_helmet.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_armor_leggings.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_armor_boots.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/MossoCrystalArmorItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_armor_helmet.json"
+          "src/main/java/net/mcreator/ethernalkronuz/item/MossoCrystalArmorItem.java"
         ]
       },
       "path": "~/Ores/Mosso Crystal/Armadura"
@@ -321,8 +321,8 @@
       "registry_name": "mosso_crystal_gem",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/item/MossoCrystalGemItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_gem.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/mosso_crystal_gem.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/MossoCrystalGemItem.java"
         ]
       },
       "path": "~/Ores/Mosso Crystal"
@@ -350,8 +350,8 @@
       "registry_name": "faking_ell_dust",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_dust.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/FakingEllDustItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/FakingEllDustItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_dust.json"
         ]
       },
       "path": "~/Ores/Faking Ell"
@@ -365,11 +365,11 @@
       "registry_name": "faking_ell_ore",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_ore.json",
+          "src/main/java/net/mcreator/ethernalkronuz/world/features/ores/FakingEllOreFeature.java",
+          "src/main/java/net/mcreator/ethernalkronuz/block/FakingEllOreBlock.java",
           "src/main/resources/assets/ethernal_kronuz/blockstates/faking_ell_ore.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/faking_ell_ore.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/FakingEllOreBlock.java",
-          "src/main/java/net/mcreator/ethernalkronuz/world/features/ores/FakingEllOreFeature.java"
+          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_ore.json"
         ]
       },
       "path": "~/Ores/Faking Ell"
@@ -383,9 +383,9 @@
       "registry_name": "faking_ell_block",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/faking_ell_block.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_block.json",
           "src/main/resources/assets/ethernal_kronuz/blockstates/faking_ell_block.json",
+          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_block.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/faking_ell_block.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/FakingEllBlockBlock.java"
         ]
       },
@@ -472,8 +472,8 @@
       "registry_name": "faking_ell_sword",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_sword.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/FakingEllSwordItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/FakingEllSwordItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_sword.json"
         ]
       },
       "path": "~/Ores/Faking Ell/Ferramentas/Sword"
@@ -502,8 +502,8 @@
       "registry_name": "faking_ell_hoe",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/item/FakingEllHoeItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_hoe.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_hoe.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/FakingEllHoeItem.java"
         ]
       },
       "path": "~/Ores/Faking Ell/Ferramentas/Hoe"
@@ -591,11 +591,11 @@
         "eb": true,
         "ec": true,
         "files": [
+          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_armor_helmet.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_armor_chestplate.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_armor_leggings.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/FakingEllArmorItem.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_armor_boots.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_armor_helmet.json"
+          "src/main/java/net/mcreator/ethernalkronuz/item/FakingEllArmorItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_armor_leggings.json"
         ]
       },
       "path": "~/Ores/Faking Ell/Armadura"
@@ -679,8 +679,8 @@
       "registry_name": "faking_ell_ingot",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_ingot.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/FakingEllIngotItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/FakingEllIngotItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/faking_ell_ingot.json"
         ]
       },
       "path": "~/Ores/Faking Ell"
@@ -709,10 +709,10 @@
       "registry_name": "aiport_steel_ore",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_ore.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/aiport_steel_ore.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/AiportSteelOreBlock.java",
           "src/main/resources/assets/ethernal_kronuz/blockstates/aiport_steel_ore.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/AiportSteelOreBlock.java"
+          "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_ore.json"
         ]
       },
       "path": "~/Ores/Airport Steel"
@@ -726,10 +726,10 @@
       "registry_name": "aiport_steel_block",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_block.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/aiport_steel_block.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/aiport_steel_block.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/AiportSteelBlockBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/block/aiport_steel_block.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_block.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/aiport_steel_block.json"
         ]
       },
       "path": "~/Ores/Airport Steel"
@@ -771,8 +771,8 @@
       "registry_name": "aiport_steel_pickaxe",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_pickaxe.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/AiportSteelPickaxeItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/AiportSteelPickaxeItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_pickaxe.json"
         ]
       },
       "path": "~/Ores/Airport Steel/Ferramentas/Pickaxe"
@@ -786,8 +786,8 @@
       "registry_name": "aiport_steel_axe",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_axe.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/AiportSteelAxeItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/AiportSteelAxeItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_axe.json"
         ]
       },
       "path": "~/Ores/Airport Steel/Ferramentas/Axe"
@@ -816,8 +816,8 @@
       "registry_name": "aiport_steel_shovel",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/item/AiportSteelShovelItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_shovel.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_shovel.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/AiportSteelShovelItem.java"
         ]
       },
       "path": "~/Ores/Airport Steel/Ferramentas/Shovel"
@@ -850,11 +850,11 @@
         "eb": true,
         "ec": true,
         "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/item/AiportSteelArmorItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_armor_chestplate.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_armor_helmet.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_armor_boots.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_armor_leggings.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/AiportSteelArmorItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_armor_chestplate.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/aiport_steel_armor_leggings.json"
         ]
       },
       "path": "~/Ores/Airport Steel/Armadura"
@@ -1705,8 +1705,8 @@
       "registry_name": "blade_of_aiport_steel_sword",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/blade_of_aiport_steel_sword.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/BladeOfAiportSteelSwordItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/BladeOfAiportSteelSwordItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/blade_of_aiport_steel_sword.json"
         ]
       },
       "path": "~/Ores/Airport Steel/Ferramentas/Sword"
@@ -1824,8 +1824,8 @@
       "registry_name": "alloy_setup",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/alloy_setup.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/AlloySetupItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/AlloySetupItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/alloy_setup.json"
         ]
       },
       "path": "~/Ores/Alloy"
@@ -1868,8 +1868,8 @@
       "registry_name": "airport_steel_chunk",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/airport_steel_chunk.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/AirportSteelChunkItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/AirportSteelChunkItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/airport_steel_chunk.json"
         ]
       },
       "path": "~/Ores/Airport Steel"
@@ -1897,8 +1897,8 @@
       "registry_name": "airport_steel_pickaxe_head",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/airport_steel_pickaxe_head.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/AirportSteelPickaxeHeadItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/AirportSteelPickaxeHeadItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/airport_steel_pickaxe_head.json"
         ]
       },
       "path": "~/Ores/Airport Steel/Ferramentas/Pickaxe/AirportSteelPickaxeHead"
@@ -1968,8 +1968,8 @@
       "registry_name": "airport_steel_axe_head",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/item/AirportSteelAxeHeadItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/airport_steel_axe_head.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/airport_steel_axe_head.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/AirportSteelAxeHeadItem.java"
         ]
       },
       "path": "~/Ores/Airport Steel/Ferramentas/Axe/Head"
@@ -2409,8 +2409,8 @@
       "registry_name": "end_particles",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/particles/end_particles.json",
-          "src/main/java/net/mcreator/ethernalkronuz/client/particle/EndParticlesParticle.java"
+          "src/main/java/net/mcreator/ethernalkronuz/client/particle/EndParticlesParticle.java",
+          "src/main/resources/assets/ethernal_kronuz/particles/end_particles.json"
         ]
       },
       "path": "~/Empowerments/End Empowerment"
@@ -2561,9 +2561,9 @@
       "metadata": {
         "ep": false,
         "files": [
-          "src/main/resources/data/ethernal_kronuz/dimension/asgard.json",
+          "src/main/java/net/mcreator/ethernalkronuz/world/dimension/AsgardDimension.java",
           "src/main/resources/data/ethernal_kronuz/dimension_type/asgard.json",
-          "src/main/java/net/mcreator/ethernalkronuz/world/dimension/AsgardDimension.java"
+          "src/main/resources/data/ethernal_kronuz/dimension/asgard.json"
         ]
       },
       "path": "~/Dimensions/Asgard/Geracao"
@@ -3409,10 +3409,10 @@
       "registry_name": "nokkia_hammer_block",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/block/NokkiaHammerBlockBlock.java",
-          "src/main/resources/assets/ethernal_kronuz/models/block/nokkia_hammer_block.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/nokkia_hammer_block.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/nokkia_hammer_block.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/nokkia_hammer_block.json"
+          "src/main/resources/assets/ethernal_kronuz/models/block/nokkia_hammer_block.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/NokkiaHammerBlockBlock.java"
         ]
       },
       "path": "~/Factions/Radiant Lords/Weapons/Nokkia Hammer"
@@ -3514,10 +3514,10 @@
       "registry_name": "botv_block",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/block/BOTVBlockBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/botv_block.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/botv_block.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/botv_block.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/BOTVBlockBlock.java"
+          "src/main/resources/assets/ethernal_kronuz/blockstates/botv_block.json"
         ]
       },
       "path": "~/Factions/Radiant Lords/Weapons/Blade Of The Void/Block"
@@ -3567,10 +3567,10 @@
       "registry_name": "murasama_block",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/murasama_block.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/MurasamaBlockBlock.java",
           "src/main/resources/assets/ethernal_kronuz/blockstates/murasama_block.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/murasama_block.json"
+          "src/main/java/net/mcreator/ethernalkronuz/block/MurasamaBlockBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/murasama_block.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/murasama_block.json"
         ]
       },
       "path": "~/Factions/Radiant Lords/Weapons/Murasama/Block"
@@ -3620,10 +3620,10 @@
       "registry_name": "terra_blade_block",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/block/TerraBladeBlockBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/terra_blade_block.json",
           "src/main/resources/assets/ethernal_kronuz/models/block/terra_blade_block.json",
-          "src/main/resources/assets/ethernal_kronuz/models/item/terra_blade_block.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/terra_blade_block.json"
+          "src/main/java/net/mcreator/ethernalkronuz/block/TerraBladeBlockBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/terra_blade_block.json"
         ]
       },
       "path": "~/Factions/Radiant Lords/Weapons/Terra Blade/Block"
@@ -3677,10 +3677,10 @@
       "registry_name": "terra_blade_projectile",
       "metadata": {
         "files": [
+          "src/main/resources/assets/ethernal_kronuz/models/item/terra_blade_projectile.json",
           "src/main/java/net/mcreator/ethernalkronuz/entity/TerraBladeProjectileEntity.java",
-          "src/main/java/net/mcreator/ethernalkronuz/item/TerraBladeProjectileItem.java",
           "src/main/java/net/mcreator/ethernalkronuz/client/renderer/TerraBladeProjectileRenderer.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/terra_blade_projectile.json"
+          "src/main/java/net/mcreator/ethernalkronuz/item/TerraBladeProjectileItem.java"
         ]
       },
       "path": "~/Factions/Radiant Lords/Weapons/Terra Blade"
@@ -4701,8 +4701,8 @@
       "registry_name": "ginuka_power_setup",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/ginuka_power_setup_spawn_egg.json",
           "src/main/java/net/mcreator/ethernalkronuz/client/renderer/GinukaPowerSetupRenderer.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/ginuka_power_setup_spawn_egg.json",
           "src/main/java/net/mcreator/ethernalkronuz/entity/GinukaPowerSetupEntity.java"
         ]
       },
@@ -4830,9 +4830,9 @@
       "registry_name": "technomorto",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/technomorto_spawn_egg.json",
           "src/main/java/net/mcreator/ethernalkronuz/client/renderer/TechnomortoRenderer.java",
-          "src/main/java/net/mcreator/ethernalkronuz/entity/TechnomortoEntity.java"
+          "src/main/java/net/mcreator/ethernalkronuz/entity/TechnomortoEntity.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/technomorto_spawn_egg.json"
         ]
       },
       "path": "~/Mobs/Techno Balde"
@@ -4846,9 +4846,9 @@
       "registry_name": "technobalde",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/TechnobaldeRenderer.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/technobalde_spawn_egg.json",
-          "src/main/java/net/mcreator/ethernalkronuz/entity/TechnobaldeEntity.java"
+          "src/main/java/net/mcreator/ethernalkronuz/entity/TechnobaldeEntity.java",
+          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/TechnobaldeRenderer.java"
         ]
       },
       "path": "~/Mobs/Techno Balde"
@@ -5408,8 +5408,8 @@
       "registry_name": "blessing",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/blessing_spawn_egg.json",
           "src/main/java/net/mcreator/ethernalkronuz/client/renderer/BlessingRenderer.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/blessing_spawn_egg.json",
           "src/main/java/net/mcreator/ethernalkronuz/entity/BlessingEntity.java"
         ]
       },
@@ -5500,8 +5500,8 @@
       "registry_name": "super_back_pack_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/client/gui/SuperBackPackGUIScreen.java",
-          "src/main/java/net/mcreator/ethernalkronuz/world/inventory/SuperBackPackGUIMenu.java"
+          "src/main/java/net/mcreator/ethernalkronuz/world/inventory/SuperBackPackGUIMenu.java",
+          "src/main/java/net/mcreator/ethernalkronuz/client/gui/SuperBackPackGUIScreen.java"
         ]
       },
       "path": "~/Souvenirs/Super Backpack"
@@ -5516,8 +5516,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/ethernalkronuz/item/inventory/BackpackInventoryCapability.java",
-          "src/main/java/net/mcreator/ethernalkronuz/item/BackpackItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/backpack.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/backpack.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/BackpackItem.java"
         ]
       },
       "path": "~/Souvenirs/Super Backpack"
@@ -5546,8 +5546,8 @@
       "registry_name": "the_ending_eye",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/item/the_ending_eye.json",
-          "src/main/java/net/mcreator/ethernalkronuz/item/TheEndingEyeItem.java"
+          "src/main/java/net/mcreator/ethernalkronuz/item/TheEndingEyeItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/the_ending_eye.json"
         ]
       },
       "path": "~/Souvenirs/TheEndingEye"
@@ -6315,10 +6315,10 @@
       "registry_name": "griffin_animated",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/entity/model/GriffinAnimatedModel.java",
-          "src/main/java/net/mcreator/ethernalkronuz/entity/GriffinAnimatedEntity.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/griffin_animated_spawn_egg.json",
-          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/GriffinAnimatedRenderer.java"
+          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/GriffinAnimatedRenderer.java",
+          "src/main/java/net/mcreator/ethernalkronuz/entity/model/GriffinAnimatedModel.java",
+          "src/main/java/net/mcreator/ethernalkronuz/entity/GriffinAnimatedEntity.java"
         ]
       },
       "path": "~/Mobs/Griffin"
@@ -7866,10 +7866,10 @@
       "registry_name": "invisible_block_blessing",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/invisible_block_blessing.json",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/invisible_block_blessing.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/InvisibleBlockBlessingBlock.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/invisible_block_blessing.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/invisible_block_blessing.json"
+          "src/main/resources/assets/ethernal_kronuz/models/block/invisible_block_blessing.json"
         ]
       },
       "path": "~/Factions/Big Testas/Transformacao"
@@ -7920,8 +7920,8 @@
         "files": [
           "src/main/java/net/mcreator/ethernalkronuz/entity/WarperEntity.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/warper_spawn_egg.json",
-          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/WarperRenderer.java",
-          "src/main/java/net/mcreator/ethernalkronuz/entity/model/WarperModel.java"
+          "src/main/java/net/mcreator/ethernalkronuz/entity/model/WarperModel.java",
+          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/WarperRenderer.java"
         ]
       },
       "path": "~/Mobs/Warper"
@@ -9091,8 +9091,8 @@
       "registry_name": "terra_blade_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/particles/terra_blade_particle.json",
-          "src/main/java/net/mcreator/ethernalkronuz/client/particle/TerraBladeParticleParticle.java"
+          "src/main/java/net/mcreator/ethernalkronuz/client/particle/TerraBladeParticleParticle.java",
+          "src/main/resources/assets/ethernal_kronuz/particles/terra_blade_particle.json"
         ]
       },
       "path": "~/Factions/Radiant Lords/Weapons/Terra Blade"
@@ -9134,8 +9134,8 @@
       "registry_name": "blade_of_the_void_particle",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/client/particle/BladeOfTheVoidParticleParticle.java",
-          "src/main/resources/assets/ethernal_kronuz/particles/blade_of_the_void_particle.json"
+          "src/main/resources/assets/ethernal_kronuz/particles/blade_of_the_void_particle.json",
+          "src/main/java/net/mcreator/ethernalkronuz/client/particle/BladeOfTheVoidParticleParticle.java"
         ]
       },
       "path": "~/Factions/Radiant Lords/Weapons/Blade Of The Void/Special Attack"
@@ -9149,8 +9149,8 @@
       "registry_name": "murasama_dash_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/particles/murasama_dash_particle.json",
-          "src/main/java/net/mcreator/ethernalkronuz/client/particle/MurasamaDashParticleParticle.java"
+          "src/main/java/net/mcreator/ethernalkronuz/client/particle/MurasamaDashParticleParticle.java",
+          "src/main/resources/assets/ethernal_kronuz/particles/murasama_dash_particle.json"
         ]
       },
       "path": "~/Factions/Radiant Lords/Weapons/Murasama/Special Attack"
@@ -9436,8 +9436,8 @@
       "registry_name": "confirm_rise_gui_roxo",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/network/ConfirmRiseGUIRoxoButtonMessage.java",
           "src/main/java/net/mcreator/ethernalkronuz/client/gui/ConfirmRiseGUIRoxoScreen.java",
+          "src/main/java/net/mcreator/ethernalkronuz/network/ConfirmRiseGUIRoxoButtonMessage.java",
           "src/main/java/net/mcreator/ethernalkronuz/world/inventory/ConfirmRiseGUIRoxoMenu.java"
         ]
       },
@@ -9452,8 +9452,8 @@
       "registry_name": "confirm_rise_gui_vermelho",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/network/ConfirmRiseGUIVermelhoButtonMessage.java",
           "src/main/java/net/mcreator/ethernalkronuz/client/gui/ConfirmRiseGUIVermelhoScreen.java",
+          "src/main/java/net/mcreator/ethernalkronuz/network/ConfirmRiseGUIVermelhoButtonMessage.java",
           "src/main/java/net/mcreator/ethernalkronuz/world/inventory/ConfirmRiseGUIVermelhoMenu.java"
         ]
       },
@@ -9468,8 +9468,8 @@
       "registry_name": "confirm_rise_gui_verde",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/network/ConfirmRiseGUIVerdeButtonMessage.java",
           "src/main/java/net/mcreator/ethernalkronuz/client/gui/ConfirmRiseGUIVerdeScreen.java",
+          "src/main/java/net/mcreator/ethernalkronuz/network/ConfirmRiseGUIVerdeButtonMessage.java",
           "src/main/java/net/mcreator/ethernalkronuz/world/inventory/ConfirmRiseGUIVerdeMenu.java"
         ]
       },
@@ -10246,8 +10246,8 @@
       "registry_name": "radiant_lord_no_color_trial",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/entity/RadiantLordNoColorTrialEntity.java",
           "src/main/java/net/mcreator/ethernalkronuz/client/renderer/RadiantLordNoColorTrialRenderer.java",
+          "src/main/java/net/mcreator/ethernalkronuz/entity/RadiantLordNoColorTrialEntity.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/radiant_lord_no_color_trial_spawn_egg.json",
           "src/main/java/net/mcreator/ethernalkronuz/entity/model/RadiantLordNoColorTrialModel.java"
         ]
@@ -10263,9 +10263,9 @@
       "registry_name": "radiant_lord_green_trial",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/RadiantLordGreenTrialRenderer.java",
           "src/main/java/net/mcreator/ethernalkronuz/entity/RadiantLordGreenTrialEntity.java",
           "src/main/resources/assets/ethernal_kronuz/models/item/radiant_lord_green_trial_spawn_egg.json",
-          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/RadiantLordGreenTrialRenderer.java",
           "src/main/java/net/mcreator/ethernalkronuz/entity/model/RadiantLordGreenTrialModel.java"
         ]
       },
@@ -11069,13 +11069,13 @@
       "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
       "advancements.bt_achievement.descr": "Join Big Testa",
-      "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "advancements.rl_verde_achievement.title": "The Third",
+      "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_atention": "Atention",
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
-      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_you_will_be_teleported_to_the_tr": "You will be teleported",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_atention": "Atention",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_you_will_be_teleported_to_the_tr": "You will be teleported",
       "block.ethernal_kronuz.mosso_crystal_ore": "Mosso Crystal Ore",
       "item.ethernal_kronuz.ganda_moca.desc": "Ganda Moca",
       "gui.ethernal_kronuz.trade_system_gui_techno.label_technobalde": "Technobalde",
@@ -11096,7 +11096,7 @@
       "subtitles.nokkia_hammer_spawn": "",
       "gamerule.give_rl_verde_game_rule.description": "Ascender um jogador",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_begin_the_rise": "Begin The Rise",
-      "item.ethernal_kronuz.ginuka_power_setup_spawn_egg": "Ginuka Power Setup Spawn Egg",
+      "item.ethernal_kronuz.ginuka_power_setup_spawn_egg": "Ginuka Power Spawn Egg",
       "item.ethernal_kronuz.mosso_crystal_hoe": "Mosso Crystal Hoe",
       "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_special_display_name": "- Special Display Name",
       "item.ethernal_kronuz.faking_ell_pickaxe": "Faking Ell Pickaxe",
@@ -11116,7 +11116,7 @@
       "block.ethernal_kronuz.tiles_heaven_slate_slab": "Heaven Slate Tiles Slab",
       "block.ethernal_kronuz.ygg_door": "Ygg Wood Door",
       "subtitles.freaky": "",
-      "item.ethernal_kronuz.aiport_steel_ingot": "Aiport Steel Ingot",
+      "item.ethernal_kronuz.aiport_steel_ingot": "Airport Steel Ingot",
       "item.ethernal_kronuz.aiport_steel_pickaxe": "Airport Steel Pickaxe",
       "entity.ethernal_kronuz.warper": "Warper",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_special_armor": "- Special Armor",
@@ -11149,7 +11149,7 @@
       "item.ethernal_kronuz.dino_vasco_spawn_egg": "Dino Vasco Spawn Egg",
       "death.attack.terrablade": "%1$s was put under Terra",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_confirm_the_rise": "The Rise",
-      "item.ethernal_kronuz.faction_book": "§dJoin!",
+      "item.ethernal_kronuz.faction_book": "§dFaction",
       "block.ethernal_kronuz.cracked_heaven_stone_bricks": "Cracked Heaven Stone Bricks",
       "item.ethernal_kronuz.terra_blade_projectile": "Terra Blade Projectile",
       "item.ethernal_kronuz.warper_spawn_egg": "Warper Spawn Egg",
@@ -11182,7 +11182,7 @@
       "block.ethernal_kronuz.faking_ell_ore": "Faking Ell Ore",
       "item.ethernal_kronuz.mosso_crystal_armor_chestplate": "Mosso Crystal Chestplate",
       "item.ethernal_kronuz.griffin_feather": "Griffin Feather",
-      "item.ethernal_kronuz.blade_of_aiport_steel_sword": "Blade Of Aiport Steel Sword",
+      "item.ethernal_kronuz.blade_of_aiport_steel_sword": "Blade Of Airport Steel Sword",
       "block.ethernal_kronuz.flowerpotbioluminescentlily": "Flower Pot Bioluminescent Lily",
       "subtitles.ganda-moca": "",
       "block.ethernal_kronuz.terra_blade_block": "Terra Blade Block",
@@ -11219,7 +11219,7 @@
       "block.ethernal_kronuz.jotunheim_frame": "Jotunheim Frame",
       "item.ethernal_kronuz.mosso_crystal_sword": "Mosso Crystal Sword",
       "gui.ethernal_kronuz.go_to_jotunheim_rlgui.button_yes": "Yes",
-      "item.ethernal_kronuz.aiport_steel_shovel": "Aiport Steel Shovel",
+      "item.ethernal_kronuz.aiport_steel_shovel": "Airport Steel Shovel",
       "item.ethernal_kronuz.necromancer": "Adolfus Hitlurus",
       "subtitles.sword-dash-charged": "",
       "entity.ethernal_kronuz.radiant_lord_no_color_trial": "Radiant Lord",
@@ -11332,7 +11332,7 @@
       "item.ethernal_kronuz.angolae_nossa.desc": "Angola é nossa",
       "block.ethernal_kronuz.ygg_stairs": "Ygg Wood Stairs",
       "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_confirm_the_rise": "Confirm The Rise",
-      "effect.ethernal_kronuz.cancro": "Cancro",
+      "effect.ethernal_kronuz.cancro": "Cancer",
       "item.ethernal_kronuz.divine_water": "Divine Water",
       "biome.ethernal_kronuz.crystal_pillars": "Crystal Pillars",
       "curios.identifier.eye": "The Ending Eye",
@@ -11381,7 +11381,7 @@
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_became_a": "Became a",
       "key.ethernal_kronuz.null_entity_invisibility_ability_key_bind": "Invisibility Ability",
       "item.ethernal_kronuz.vasco.desc": "V.A.S.C.O",
-      "block.ethernal_kronuz.aiport_steel_ore": "Aiport Steel Ore",
+      "block.ethernal_kronuz.aiport_steel_ore": "Airport Steel Ore",
       "item.ethernal_kronuz.ganda_moca": "Yuri NR5",
       "item.ethernal_kronuz.faking_ell_armor_boots": "Faking Ell Boots",
       "gui.ethernal_kronuz.gui_faction_book.button_bt": "bt",
@@ -11413,7 +11413,7 @@
       "key.ethernal_kronuz.null_entity_key_bind": "Null Transformation",
       "gui.ethernal_kronuz.gui_faction_book.button_adc": "adc",
       "block.ethernal_kronuz.cracked_heaven_slate_bricks": "Cracked Heaven Slate Bricks",
-      "entity.ethernal_kronuz.ginuka_power_setup": "Ginuka Power Setup",
+      "entity.ethernal_kronuz.ginuka_power_setup": "Ginuka Power",
       "subtitles.technoblade_never_dies": "",
       "item.ethernal_kronuz.freicken.desc": "Freicken",
       "item.ethernal_kronuz.alloy_setup": "Alloy",

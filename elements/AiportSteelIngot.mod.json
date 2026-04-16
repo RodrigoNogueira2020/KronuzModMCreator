@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "airport_steel_ingot",
     "customModelName": "Normal",
-    "name": "Aiport Steel Ingot",
+    "name": "Airport Steel Ingot",
     "rarity": "EPIC",
     "creativeTab": {
       "value": "CUSTOM:CreativeTab"

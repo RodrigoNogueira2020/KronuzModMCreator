@@ -37,7 +37,7 @@ public class DeepSeaBootItem extends Item implements ICurioItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(new TextComponent("Boot of the Sea God"));
+		list.add(new TextComponent("\u00A7cPassive: \u00A77Gives \u00A7eWater Breathing"));
 	}
 
 	@Override

@@ -6,7 +6,7 @@
     "texture": "make_a_wish",
     "customModelName": "Normal",
     "name": "Make A Wish",
-    "rarity": "COMMON",
+    "rarity": "EPIC",
     "creativeTab": {
       "value": "CUSTOM:CreativeTab"
     },
@@ -24,7 +24,9 @@
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [],
+    "specialInfo": [
+      "§7Heals §eTechnomorto"
+    ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,

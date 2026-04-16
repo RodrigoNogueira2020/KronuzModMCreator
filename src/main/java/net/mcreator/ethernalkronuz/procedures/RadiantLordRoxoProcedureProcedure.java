@@ -52,12 +52,10 @@ public class RadiantLordRoxoProcedureProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (!(entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(EthernalKronuzModItems.THE_RISE_PARCHMENT.get())) : false)) {
-					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(EthernalKronuzModItems.THE_RISE_PARCHMENT.get());
-						_setstack.setCount(1);
-						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-					}
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(EthernalKronuzModItems.THE_RISE_PARCHMENT.get());
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
 			}
 		}
