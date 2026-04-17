@@ -9,7 +9,7 @@
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "nokiahammer_block:default",
+    "customModelName": "nokkiahammer_block:default",
     "rotationMode": 0,
     "enablePitch": false,
     "emissiveRendering": true,
@@ -24,21 +24,21 @@
     "disableOffset": false,
     "boundingBoxes": [
       {
-        "mx": 5.0,
+        "mx": 5.8,
         "my": 0.0,
-        "mz": 4.0,
-        "Mx": 11.0,
-        "My": 5.0,
-        "Mz": 14.0,
+        "mz": 13.3,
+        "Mx": 10.0,
+        "My": 4.3,
+        "Mz": 4.5,
         "subtract": false
       },
       {
-        "mx": 9.0,
-        "my": 5.0,
-        "mz": 10.0,
-        "Mx": 7.0,
-        "My": 14.5,
-        "Mz": 8.0,
+        "mx": 7.2,
+        "my": 4.3,
+        "mz": 9.6,
+        "Mx": 8.6,
+        "My": 13.8,
+        "Mz": 8.2,
         "subtract": false
       }
     ],
