@@ -9,8 +9,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModTabs;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModSounds;
 
-public class NecromancerItem extends RecordItem {
-	public NecromancerItem() {
-		super(0, EthernalKronuzModSounds.REGISTRY.get(new ResourceLocation("ethernal_kronuz:necromancer")), new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).stacksTo(1).rarity(Rarity.RARE));
+public class MinerarMaisUmPoucoItem extends RecordItem {
+	public MinerarMaisUmPoucoItem() {
+		super(0, EthernalKronuzModSounds.REGISTRY.get(new ResourceLocation("ethernal_kronuz:minerar_mais_um_pouco")), new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).stacksTo(1).rarity(Rarity.RARE));
 	}
 }

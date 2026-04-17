@@ -1,81 +1,9 @@
 {
-  "freicken": {
-    "category": "record",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:chico_da_tina_-_freicken__prod._bejaflor__cotanza",
-        "stream": true
-      }
-    ]
-  },
-  "away": {
-    "category": "record",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:joao_sousa_-_away_prod._tomenzy",
-        "stream": true
-      }
-    ]
-  },
-  "necromancer": {
-    "category": "record",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:necromancer_-_the_fuhrer_original_mix",
-        "stream": true
-      }
-    ]
-  },
-  "cabuflamanau": {
-    "category": "record",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:piruka_ft_mota_jr_-__ca_bu_fla_ma_nau",
-        "stream": true
-      }
-    ]
-  },
-  "pretodaamadora": {
-    "category": "record",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:sim_sou_um_preto_da_amadora_sim_eu_roubo_sim_senhora_-_memes_angolanos_shorts",
-        "stream": true
-      }
-    ]
-  },
-  "gandamoca": {
-    "category": "record",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:yuri_nr5__-_ganda_moca_prod._young_emphasis",
-        "stream": true
-      }
-    ]
-  },
-  "saopaulo": {
-    "category": "record",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:yuri_nr5_-_sao_paulo__music_video",
-        "stream": true
-      }
-    ]
-  },
   "vasco": {
     "category": "record",
     "sounds": [
       {
         "name": "ethernal_kronuz:vasco",
-        "stream": true
-      }
-    ]
-  },
-  "safira": {
-    "category": "record",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:safira",
         "stream": true
       }
     ]
@@ -86,15 +14,6 @@
       {
         "name": "ethernal_kronuz:freaky",
         "stream": true
-      }
-    ]
-  },
-  "terrabladeshot": {
-    "category": "neutral",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:terrabladeshot",
-        "stream": false
       }
     ]
   },
@@ -116,39 +35,12 @@
       }
     ]
   },
-  "erika": {
-    "category": "record",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:auf_der_heide_bluht_ein_kleines_blumelein__german_soldiers_song",
-        "stream": true
-      }
-    ]
-  },
   "aesir_rift_opening": {
     "category": "ambient",
     "sounds": [
       {
         "name": "ethernal_kronuz:fortnite-rift",
         "stream": false
-      }
-    ]
-  },
-  "nokkia_hammer_spawn": {
-    "category": "ambient",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:nokia_hammer",
-        "stream": false
-      }
-    ]
-  },
-  "angolaenossa": {
-    "category": "record",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:_angola_e_nossa__-_portuguese_nationalist_song",
-        "stream": true
       }
     ]
   },
@@ -310,6 +202,78 @@
     "sounds": [
       {
         "name": "ethernal_kronuz:the_rise_fade_out",
+        "stream": true
+      }
+    ]
+  },
+  "terrabladeshot": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:terrabladeshot",
+        "stream": false
+      }
+    ]
+  },
+  "cabuflamanau": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:piruka_ft_mota_jr_-__ca_bu_fla_ma_nau",
+        "stream": true
+      }
+    ]
+  },
+  "freicken": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:chico_da_tina_-_freicken__prod._bejaflor__cotanza",
+        "stream": true
+      }
+    ]
+  },
+  "away": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:joao_sousa_-_away_prod._tomenzy",
+        "stream": true
+      }
+    ]
+  },
+  "nokkia_hammer_spawn": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:nokia_hammer",
+        "stream": false
+      }
+    ]
+  },
+  "safira": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:safira",
+        "stream": true
+      }
+    ]
+  },
+  "saopaulo": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:yuri_nr5_-_sao_paulo__music_video",
+        "stream": true
+      }
+    ]
+  },
+  "minerar_mais_um_pouco": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:minerar_mais_um_pouco_pardia_gt3_lon3r_johny",
         "stream": true
       }
     ]

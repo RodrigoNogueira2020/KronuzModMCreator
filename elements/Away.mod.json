@@ -2,9 +2,9 @@
   "_fv": 39,
   "_type": "musicdisc",
   "definition": {
-    "name": "João Sousa",
+    "name": "AWAY!",
     "texture": "music_disc_away",
-    "description": "AWAY!",
+    "description": "João Sousa",
     "creativeTab": {
       "value": "CUSTOM:CreativeTab"
     },
