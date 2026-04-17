@@ -1,3 +1,3 @@
 # ModKronuzMcreator
-# Guilherme Bernardino
-# Rodrigo Nogueira
+###Guilherme Bernardino
+### Rodrigo Nogueira
