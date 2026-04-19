@@ -9644,20 +9644,6 @@
       "path": "~/Factions/Radiant Lords"
     },
     {
-      "name": "SleepNearOwnerGoal",
-      "type": "code",
-      "sortid": 550,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "sleep_near_owner_goal",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/SleepNearOwnerGoal.java"
-        ]
-      },
-      "path": "~/Mobs/DinoVasco"
-    },
-    {
       "name": "BladeOfTheVoid",
       "type": "tool",
       "sortid": 139,
@@ -10495,6 +10481,22 @@
         ]
       },
       "path": "~/Music Discs"
+    },
+    {
+      "name": "DinoVasco",
+      "type": "livingentity",
+      "sortid": 587,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dino_vasco",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ethernal_kronuz/models/item/dino_vasco_spawn_egg.json",
+          "src/main/java/net/mcreator/ethernalkronuz/entity/DinoVascoEntity.java",
+          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/DinoVascoRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/DinoVasco"
     }
   ],
   "variable_elements": [
@@ -10977,13 +10979,13 @@
       "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
       "advancements.bt_achievement.descr": "Join Big Testa",
-      "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "advancements.rl_verde_achievement.title": "The Third",
+      "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_atention": "Atention",
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
-      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_you_will_be_teleported_to_the_tr": "You will be teleported",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_atention": "Atention",
+      "gui.ethernal_kronuz.confirm_rise_gui_verde.label_you_will_be_teleported_to_the_tr": "You will be teleported",
       "block.ethernal_kronuz.mosso_crystal_ore": "Mosso Crystal Ore",
       "gui.ethernal_kronuz.trade_system_gui_techno.label_technobalde": "Technobalde",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_radiant_lord": "Radiant Lord",

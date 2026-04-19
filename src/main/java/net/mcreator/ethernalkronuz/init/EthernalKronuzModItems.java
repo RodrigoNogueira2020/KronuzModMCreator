@@ -249,6 +249,8 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> THE_RISE_PARCHMENT = REGISTRY.register("the_rise_parchment", () -> new TheRiseParchmentItem());
 	public static final RegistryObject<Item> TERRA_BLADE_PROJECTILE = REGISTRY.register("terra_blade_projectile", () -> new TerraBladeProjectileItem());
 	public static final RegistryObject<Item> INVISIBLE_BLOCK_BLESSING = block(EthernalKronuzModBlocks.INVISIBLE_BLOCK_BLESSING, null);
+	public static final RegistryObject<Item> DINO_VASCO_SPAWN_EGG = REGISTRY.register("dino_vasco_spawn_egg",
+			() -> new ForgeSpawnEggItem(EthernalKronuzModEntities.DINO_VASCO, -12361775, -1, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

@@ -20,6 +20,7 @@ import net.mcreator.ethernalkronuz.client.renderer.RadiantLordGreenTrialRenderer
 import net.mcreator.ethernalkronuz.client.renderer.NullEntityRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.GriffinAnimatedRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.GinukaPowerSetupRenderer;
+import net.mcreator.ethernalkronuz.client.renderer.DinoVascoRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.BlessingRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -37,5 +38,6 @@ public class EthernalKronuzModEntityRenderers {
 		event.registerEntityRenderer(EthernalKronuzModEntities.RADIANT_LORD_NO_COLOR_TRIAL.get(), RadiantLordNoColorTrialRenderer::new);
 		event.registerEntityRenderer(EthernalKronuzModEntities.RADIANT_LORD_GREEN_TRIAL.get(), RadiantLordGreenTrialRenderer::new);
 		event.registerEntityRenderer(EthernalKronuzModEntities.TERRA_BLADE_PROJECTILE.get(), TerraBladeProjectileRenderer::new);
+		event.registerEntityRenderer(EthernalKronuzModEntities.DINO_VASCO.get(), DinoVascoRenderer::new);
 	}
 }
