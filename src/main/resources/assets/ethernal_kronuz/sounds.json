@@ -1,22 +1,4 @@
 {
-  "vasco": {
-    "category": "record",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:vasco",
-        "stream": true
-      }
-    ]
-  },
-  "freaky": {
-    "category": "record",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:freaky",
-        "stream": true
-      }
-    ]
-  },
   "terrablademeele": {
     "category": "neutral",
     "sounds": [
@@ -143,51 +125,6 @@
       }
     ]
   },
-  "morre-no-inferno": {
-    "category": "voice",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:morre-no-inferno-vc",
-        "stream": false
-      }
-    ]
-  },
-  "vc-irritado": {
-    "category": "voice",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:vc-irritado",
-        "stream": false
-      }
-    ]
-  },
-  "choro-vc": {
-    "category": "voice",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:choro-vc",
-        "stream": false
-      }
-    ]
-  },
-  "literalmente-vc": {
-    "category": "voice",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:literalmente-vc",
-        "stream": false
-      }
-    ]
-  },
-  "mano-vc": {
-    "category": "voice",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:mano-vc",
-        "stream": false
-      }
-    ]
-  },
   "template_boss_music": {
     "category": "music",
     "sounds": [
@@ -275,6 +212,69 @@
       {
         "name": "ethernal_kronuz:minerar_mais_um_pouco_pardia_gt3_lon3r_johny",
         "stream": true
+      }
+    ]
+  },
+  "vasco": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:vasco",
+        "stream": true
+      }
+    ]
+  },
+  "freaky": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:freaky",
+        "stream": true
+      }
+    ]
+  },
+  "choro-vc": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:choro-vc",
+        "stream": false
+      }
+    ]
+  },
+  "literalmente-vc": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:literalmente-vc",
+        "stream": false
+      }
+    ]
+  },
+  "mano-vc": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:mano-vc",
+        "stream": false
+      }
+    ]
+  },
+  "morre-no-inferno-vc": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:morre-no-inferno-vc",
+        "stream": false
+      }
+    ]
+  },
+  "irritado-vc": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:vc-irritado",
+        "stream": false
       }
     ]
   }

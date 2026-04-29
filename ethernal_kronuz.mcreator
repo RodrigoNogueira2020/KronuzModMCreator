@@ -10487,13 +10487,28 @@
       "type": "livingentity",
       "sortid": 587,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "dino_vasco",
       "metadata": {
         "files": [
           "src/main/resources/assets/ethernal_kronuz/models/item/dino_vasco_spawn_egg.json",
           "src/main/java/net/mcreator/ethernalkronuz/entity/DinoVascoEntity.java",
           "src/main/java/net/mcreator/ethernalkronuz/client/renderer/DinoVascoRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/DinoVasco"
+    },
+    {
+      "name": "InventoryUIDinoVasco",
+      "type": "gui",
+      "sortid": 588,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "inventory_ui_dino_vasco",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/world/inventory/InventoryUIDinoVascoMenu.java",
+          "src/main/java/net/mcreator/ethernalkronuz/client/gui/InventoryUIDinoVascoScreen.java"
         ]
       },
       "path": "~/Mobs/DinoVasco"
@@ -10719,22 +10734,6 @@
   ],
   "sound_elements": [
     {
-      "name": "vasco",
-      "files": [
-        "vasco"
-      ],
-      "category": "record",
-      "subtitle": ""
-    },
-    {
-      "name": "freaky",
-      "files": [
-        "freaky"
-      ],
-      "category": "record",
-      "subtitle": ""
-    },
-    {
       "name": "terrablademeele",
       "files": [
         "terrablademelee"
@@ -10847,46 +10846,6 @@
       "subtitle": ""
     },
     {
-      "name": "morre-no-inferno",
-      "files": [
-        "morre-no-inferno-vc"
-      ],
-      "category": "voice",
-      "subtitle": ""
-    },
-    {
-      "name": "vc-irritado",
-      "files": [
-        "vc-irritado"
-      ],
-      "category": "voice",
-      "subtitle": ""
-    },
-    {
-      "name": "choro-vc",
-      "files": [
-        "choro-vc"
-      ],
-      "category": "voice",
-      "subtitle": ""
-    },
-    {
-      "name": "literalmente-vc",
-      "files": [
-        "literalmente-vc"
-      ],
-      "category": "voice",
-      "subtitle": ""
-    },
-    {
-      "name": "mano-vc",
-      "files": [
-        "mano-vc"
-      ],
-      "category": "voice",
-      "subtitle": ""
-    },
-    {
       "name": "template_boss_music",
       "files": [
         "template_boss_music"
@@ -10965,6 +10924,62 @@
       ],
       "category": "record",
       "subtitle": ""
+    },
+    {
+      "name": "vasco",
+      "files": [
+        "vasco"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "freaky",
+      "files": [
+        "freaky"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "choro-vc",
+      "files": [
+        "choro-vc"
+      ],
+      "category": "ambient",
+      "subtitle": ""
+    },
+    {
+      "name": "literalmente-vc",
+      "files": [
+        "literalmente-vc"
+      ],
+      "category": "ambient",
+      "subtitle": ""
+    },
+    {
+      "name": "mano-vc",
+      "files": [
+        "mano-vc"
+      ],
+      "category": "ambient",
+      "subtitle": ""
+    },
+    {
+      "name": "morre-no-inferno-vc",
+      "files": [
+        "morre-no-inferno-vc"
+      ],
+      "category": "ambient",
+      "subtitle": ""
+    },
+    {
+      "name": "irritado-vc",
+      "files": [
+        "vc-irritado"
+      ],
+      "category": "ambient",
+      "subtitle": ""
     }
   ],
   "language_map": {
@@ -11030,6 +11045,7 @@
       "item.ethernal_kronuz.aiport_steel_pickaxe": "Airport Steel Pickaxe",
       "entity.ethernal_kronuz.warper": "Warper",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_special_armor": "- Special Armor",
+      "subtitles.morre-no-inferno-vc": "",
       "subtitles.morre-no-inferno": "",
       "block.ethernal_kronuz.heaven_stone_bricks_stairs": "Heaven Stone Bricks Stairs",
       "subtitles.the_rise_fade_out": "",
@@ -11170,6 +11186,7 @@
       "advancements.ragnarok.descr": "Kill damn gods!",
       "advancements.the_rise_complete_advancement.title": "The Rise",
       "item.ethernal_kronuz.minerar_mais_um_pouco.desc": "João Sozinho",
+      "subtitles.irritado-vc": "",
       "item.ethernal_kronuz.sao_paulo.desc": "Yuri NR5",
       "item.ethernal_kronuz.faking_ell_ingot": "Faking Ell Ingot",
       "death.attack.BODV": "%1$s reaped by the Void",

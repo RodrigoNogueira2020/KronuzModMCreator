@@ -18,8 +18,6 @@ import java.util.HashMap;
 public class EthernalKronuzModSounds {
 	public static Map<ResourceLocation, SoundEvent> REGISTRY = new HashMap<>();
 	static {
-		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "vasco"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "vasco")));
-		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "freaky"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "freaky")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "terrablademeele"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "terrablademeele")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "elementsfootsteps"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "elementsfootsteps")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "aesir_rift_opening"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "aesir_rift_opening")));
@@ -34,11 +32,6 @@ public class EthernalKronuzModSounds {
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "sword-dash"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "sword-dash")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "sword-dash-charged"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "sword-dash-charged")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "gojo_vs_toji_hollow_purple"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "gojo_vs_toji_hollow_purple")));
-		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "morre-no-inferno"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "morre-no-inferno")));
-		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "vc-irritado"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "vc-irritado")));
-		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "choro-vc"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "choro-vc")));
-		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "literalmente-vc"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "literalmente-vc")));
-		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "mano-vc"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "mano-vc")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "template_boss_music"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "template_boss_music")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "the_rise_fade_out"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "the_rise_fade_out")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "terrabladeshot"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "terrabladeshot")));
@@ -49,6 +42,13 @@ public class EthernalKronuzModSounds {
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "safira"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "safira")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "saopaulo"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "saopaulo")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "minerar_mais_um_pouco"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "minerar_mais_um_pouco")));
+		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "vasco"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "vasco")));
+		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "freaky"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "freaky")));
+		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "choro-vc"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "choro-vc")));
+		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "literalmente-vc"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "literalmente-vc")));
+		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "mano-vc"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "mano-vc")));
+		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "morre-no-inferno-vc"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "morre-no-inferno-vc")));
+		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "irritado-vc"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "irritado-vc")));
 	}
 
 	@SubscribeEvent
