@@ -56,7 +56,7 @@ public class DinoVascoEntity extends PathfinderMob {
 	private int soundTimer = 0;
 	private static final int SOUND_INTERVAL = 1200;
 	public boolean uiOpen = false;
-	private static final String[] CUSTOM_SOUNDS = {"ethernal_kronuz:irritado-vc", "ethernal_kronuz:choro-vc", "ethernal_kronuz:literalmente-vc", "ethernal_kronuz:morre-no-inferno-vc", "ethernal_kronuz:mano-vc"};
+	private static final String[] CUSTOM_SOUNDS = {"ethernal_kronuz:vc-irritado", "ethernal_kronuz:choro-vc", "ethernal_kronuz:literalmente-vc", "ethernal_kronuz:morre-no-inferno-vc", "ethernal_kronuz:mano-vc"};
 
 	public DinoVascoEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(EthernalKronuzModEntities.DINO_VASCO.get(), world);
@@ -81,17 +81,15 @@ public class DinoVascoEntity extends PathfinderMob {
 		this.spawnAtLocation(new ItemStack(Items.COOKIE));
 	}
 
-	// ── CRÍTICO: DinoVasco NÃO pode atacar outro DinoVasco ───────────────────
 	@Override
 	public boolean canAttack(LivingEntity target) {
 		if (target == this)
 			return false;
 		if (target instanceof DinoVascoEntity)
-			return false; // nunca ataca outro DinoVasco
+			return false;
 		return true;
 	}
 
-	// ── Goals ─────────────────────────────────────────────────────────────────
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
@@ -104,7 +102,6 @@ public class DinoVascoEntity extends PathfinderMob {
 		this.targetSelector.addGoal(1, new DinoVascoCopyOwnerTargetGoal(this));
 	}
 
-	// ── Dono ─────────────────────────────────────────────────────────────────
 	@Nullable
 	public UUID getOwnerUUID() {
 		return ownerUUID;
@@ -125,7 +122,6 @@ public class DinoVascoEntity extends PathfinderMob {
 		return this.level.getPlayerByUUID(ownerUUID);
 	}
 
-	// ── Tick ─────────────────────────────────────────────────────────────────
 	@Override
 	public void tick() {
 		super.tick();
@@ -145,17 +141,16 @@ public class DinoVascoEntity extends PathfinderMob {
 	private void playRandomCustomSound() {
 		int roll = this.random.nextInt(4);
 		if (roll == 3)
-			return; // 25% silêncio
+			return;
 		String soundName = CUSTOM_SOUNDS[roll];
 		SoundEvent sound = ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(soundName));
 		if (sound == null) {
-			LOGGER.warn("[DinoVasco] SoundEvent nao encontrado no registry: {}", soundName);
+			LOGGER.warn("[DinoVasco] SoundEvent nao encontrado: {}", soundName);
 			return;
 		}
 		this.level.playSound(null, this.getX(), this.getY(), this.getZ(), sound, SoundSource.NEUTRAL, 1.0f, 1.0f);
 	}
 
-	// ── Interação botão direito ───────────────────────────────────────────────
 	@Override
 	protected InteractionResult mobInteract(Player player, InteractionHand hand) {
 		if (hand != InteractionHand.MAIN_HAND)
@@ -194,12 +189,10 @@ public class DinoVascoEntity extends PathfinderMob {
 				this.level.addParticle(ParticleTypes.HEART, this.getX() + this.random.nextFloat() * this.getBbWidth() * 2.0F - this.getBbWidth(), this.getY() + 0.5D + this.random.nextFloat() * this.getBbHeight(),
 						this.getZ() + this.random.nextFloat() * this.getBbWidth() * 2.0F - this.getBbWidth(), 0, 0, 0);
 			}
-		} else {
+		} else
 			super.handleEntityEvent(id);
-		}
 	}
 
-	// ── NBT ───────────────────────────────────────────────────────────────────
 	@Override
 	public void addAdditionalSaveData(CompoundTag tag) {
 		super.addAdditionalSaveData(tag);
@@ -254,9 +247,6 @@ public class DinoVascoEntity extends PathfinderMob {
 		return builder;
 	}
 
-	// ═════════════════════════════════════════════════════════════════════════
-	//  GOAL: Segue o dono
-	// ═════════════════════════════════════════════════════════════════════════
 	static class DinoVascoFollowOwnerGoal extends Goal {
 		private final DinoVascoEntity dino;
 		private Player owner;
@@ -275,6 +265,8 @@ public class DinoVascoEntity extends PathfinderMob {
 			Player o = dino.getOwner();
 			if (o == null || o.isSpectator())
 				return false;
+			if (o.isSleeping())
+				return false;
 			if (dino.distanceToSqr(o) <= MIN_DIST_SQ)
 				return false;
 			this.owner = o;
@@ -284,6 +276,8 @@ public class DinoVascoEntity extends PathfinderMob {
 		@Override
 		public boolean canContinueToUse() {
 			if (dino.uiOpen || owner == null || owner.isSpectator())
+				return false;
+			if (owner.isSleeping())
 				return false;
 			return dino.distanceToSqr(owner) > MIN_DIST_SQ;
 		}
@@ -307,9 +301,6 @@ public class DinoVascoEntity extends PathfinderMob {
 		}
 	}
 
-	// ═════════════════════════════════════════════════════════════════════════
-	//  GOAL: Copia o alvo do dono — NUNCA define DinoVasco como alvo
-	// ═════════════════════════════════════════════════════════════════════════
 	static class DinoVascoCopyOwnerTargetGoal extends TargetGoal {
 		private final DinoVascoEntity dino;
 		private LivingEntity ownerLastHurt;
@@ -329,10 +320,7 @@ public class DinoVascoEntity extends PathfinderMob {
 			if (owner == null)
 				return false;
 			LivingEntity target = owner.getLastHurtMob();
-			// Ignora: nulo, si próprio, ou outro DinoVasco
-			if (target == null)
-				return false;
-			if (target == dino)
+			if (target == null || target == dino)
 				return false;
 			if (target instanceof DinoVascoEntity)
 				return false;
@@ -356,13 +344,11 @@ public class DinoVascoEntity extends PathfinderMob {
 		}
 	}
 
-	// ═════════════════════════════════════════════════════════════════════════
-	//  GOAL: Dorme numa cama desocupada perto do dono
-	// ═════════════════════════════════════════════════════════════════════════
 	static class DinoVascoBedSleepGoal extends Goal {
 		private final DinoVascoEntity dino;
-		private BlockPos targetBed = null;
-		private static final int SEARCH_RADIUS = 16;
+		private BlockPos targetPos = null;
+		private boolean foundFreeBed = false;
+		private static final int SEARCH_RADIUS = 24;
 
 		public DinoVascoBedSleepGoal(DinoVascoEntity dino) {
 			this.dino = dino;
@@ -373,50 +359,82 @@ public class DinoVascoEntity extends PathfinderMob {
 		public boolean canUse() {
 			if (dino.level.isClientSide() || dino.uiOpen)
 				return false;
-			if (!dino.level.isNight() || dino.getTarget() != null)
+			if (!dino.isTamed())
+				return false;
+			if (dino.getTarget() != null)
 				return false;
 			Player owner = dino.getOwner();
-			if (owner == null)
+			if (owner == null || !owner.isSleeping())
 				return false;
-			BlockPos ownerPos = owner.blockPosition();
-			for (BlockPos pos : BlockPos.betweenClosed(ownerPos.offset(-SEARCH_RADIUS, -2, -SEARCH_RADIUS), ownerPos.offset(SEARCH_RADIUS, 2, SEARCH_RADIUS))) {
+			BlockPos ownerBedPos = owner.blockPosition();
+			BlockPos bestFreeBed = null;
+			double bestDist = Double.MAX_VALUE;
+			for (BlockPos pos : BlockPos.betweenClosed(ownerBedPos.offset(-SEARCH_RADIUS, -2, -SEARCH_RADIUS), ownerBedPos.offset(SEARCH_RADIUS, 2, SEARCH_RADIUS))) {
 				BlockState state = dino.level.getBlockState(pos);
-				if (state.getBlock() instanceof BedBlock) {
-					boolean isHead = state.getValue(BedBlock.PART) == BedPart.HEAD;
-					boolean isOccupied = state.getValue(BedBlock.OCCUPIED);
-					if (isHead && !isOccupied) {
-						targetBed = pos.immutable();
-						return true;
-					}
+				if (!(state.getBlock() instanceof BedBlock))
+					continue;
+				if (state.getValue(BedBlock.PART) != BedPart.HEAD)
+					continue;
+				if (state.getValue(BedBlock.OCCUPIED))
+					continue;
+				double dist = pos.distSqr(ownerBedPos);
+				if (dist < bestDist) {
+					bestDist = dist;
+					bestFreeBed = pos.immutable();
 				}
 			}
-			return false;
+			if (bestFreeBed != null) {
+				targetPos = bestFreeBed;
+				foundFreeBed = true;
+			} else {
+				targetPos = ownerBedPos;
+				foundFreeBed = false;
+			}
+			return true;
 		}
 
 		@Override
 		public boolean canContinueToUse() {
-			return dino.level.isNight() && dino.getTarget() == null && targetBed != null && !dino.uiOpen;
+			if (dino.uiOpen || !dino.isTamed())
+				return false;
+			if (dino.getTarget() != null)
+				return false;
+			Player owner = dino.getOwner();
+			return owner != null && owner.isSleeping() && targetPos != null;
 		}
 
 		@Override
 		public void start() {
-			if (targetBed != null)
-				dino.getNavigation().moveTo(targetBed.getX() + 0.5, targetBed.getY(), targetBed.getZ() + 0.5, 1.0);
+			if (targetPos == null)
+				return;
+			double speed = foundFreeBed ? 1.0 : 1.1;
+			dino.getNavigation().moveTo(targetPos.getX() + 0.5, targetPos.getY(), targetPos.getZ() + 0.5, speed);
 		}
 
 		@Override
 		public void tick() {
-			if (targetBed == null)
+			if (targetPos == null)
 				return;
-			if (dino.blockPosition().closerThan(targetBed, 1.5)) {
+			Player owner = dino.getOwner();
+			if (owner == null)
+				return;
+			double arrivalDist = foundFreeBed ? 1.5 : 1.2;
+			if (dino.blockPosition().closerThan(targetPos, arrivalDist)) {
 				dino.getNavigation().stop();
-				dino.getLookControl().setLookAt(targetBed.getX() + 0.5, targetBed.getY(), targetBed.getZ() + 0.5);
+				if (foundFreeBed)
+					dino.getLookControl().setLookAt(targetPos.getX() + 0.5, targetPos.getY(), targetPos.getZ() + 0.5);
+				else
+					dino.getLookControl().setLookAt(owner.getX(), owner.getY() + owner.getEyeHeight(), owner.getZ());
+			} else {
+				double speed = foundFreeBed ? 1.0 : 1.1;
+				dino.getNavigation().moveTo(targetPos.getX() + 0.5, targetPos.getY(), targetPos.getZ() + 0.5, speed);
 			}
 		}
 
 		@Override
 		public void stop() {
-			targetBed = null;
+			targetPos = null;
+			foundFreeBed = false;
 			dino.getNavigation().stop();
 		}
 	}

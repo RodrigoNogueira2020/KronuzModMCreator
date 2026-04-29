@@ -38,7 +38,6 @@ public class InventoryUIDinoVascoMenu extends AbstractContainerMenu implements S
 	private static final int SLOT_FEET = 3;
 	private static final int SLOT_MAINHAND = 4;
 
-	// Construtor SERVIDOR
 	public InventoryUIDinoVascoMenu(int id, Inventory inv, DinoVascoEntity dino) {
 		super(EthernalKronuzModMenus.INVENTORY_UI_DINO_VASCO, id);
 		this.entity = inv.player;
@@ -53,7 +52,6 @@ public class InventoryUIDinoVascoMenu extends AbstractContainerMenu implements S
 		addEquipmentSlots();
 	}
 
-	// Construtor CLIENTE
 	public InventoryUIDinoVascoMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
 		super(EthernalKronuzModMenus.INVENTORY_UI_DINO_VASCO, id);
 		this.entity = inv.player;
@@ -84,7 +82,6 @@ public class InventoryUIDinoVascoMenu extends AbstractContainerMenu implements S
 		equipmentContainer.setItem(SLOT_MAINHAND, dino.getItemBySlot(EquipmentSlot.MAINHAND).copy());
 	}
 
-	// Ajusta os X/Y para coincidirem com a tua textura PNG
 	private void addEquipmentSlots() {
 		this.addSlot(new DinoArmorSlot(equipmentContainer, SLOT_HEAD, 8, 8, EquipmentSlot.HEAD));
 		this.addSlot(new DinoArmorSlot(equipmentContainer, SLOT_CHEST, 8, 26, EquipmentSlot.CHEST));
@@ -109,7 +106,6 @@ public class InventoryUIDinoVascoMenu extends AbstractContainerMenu implements S
 	public void removed(Player player) {
 		super.removed(player);
 		if (dinoEntity != null) {
-			// Desbloqueia o movimento do entity
 			dinoEntity.uiOpen = false;
 			if (!world.isClientSide()) {
 				dinoEntity.setItemSlot(EquipmentSlot.HEAD, equipmentContainer.getItem(SLOT_HEAD));
