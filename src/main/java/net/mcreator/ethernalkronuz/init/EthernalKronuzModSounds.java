@@ -18,7 +18,6 @@ import java.util.HashMap;
 public class EthernalKronuzModSounds {
 	public static Map<ResourceLocation, SoundEvent> REGISTRY = new HashMap<>();
 	static {
-		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "terrablademeele"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "terrablademeele")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "elementsfootsteps"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "elementsfootsteps")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "aesir_rift_opening"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "aesir_rift_opening")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "technoblade_never_dies"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "technoblade_never_dies")));
@@ -35,7 +34,6 @@ public class EthernalKronuzModSounds {
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "template_boss_music"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "template_boss_music")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "the_rise_fade_out"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "the_rise_fade_out")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "terrabladeshot"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "terrabladeshot")));
-		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "cabuflamanau"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "cabuflamanau")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "freicken"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "freicken")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "away"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "away")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "nokkia_hammer_spawn"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "nokkia_hammer_spawn")));
@@ -49,6 +47,9 @@ public class EthernalKronuzModSounds {
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "mano-vc"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "mano-vc")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "morre-no-inferno-vc"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "morre-no-inferno-vc")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "irritado-vc"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "irritado-vc")));
+		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "terrablademeele"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "terrablademeele")));
+		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "cabuflamanau"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "cabuflamanau")));
+		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "pixafreestyle"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "pixafreestyle")));
 	}
 
 	@SubscribeEvent

@@ -27,6 +27,7 @@ import net.mcreator.ethernalkronuz.item.SafiraItem;
 import net.mcreator.ethernalkronuz.item.RLVermelhoArmorItem;
 import net.mcreator.ethernalkronuz.item.RLVerdeArmorItem;
 import net.mcreator.ethernalkronuz.item.RLRoxoArmourItem;
+import net.mcreator.ethernalkronuz.item.PixaFreestyleItem;
 import net.mcreator.ethernalkronuz.item.NokkiaHammerItem;
 import net.mcreator.ethernalkronuz.item.MurasamaItem;
 import net.mcreator.ethernalkronuz.item.MossoCrystalSwordItem;
@@ -251,6 +252,7 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> INVISIBLE_BLOCK_BLESSING = block(EthernalKronuzModBlocks.INVISIBLE_BLOCK_BLESSING, null);
 	public static final RegistryObject<Item> DINO_VASCO_SPAWN_EGG = REGISTRY.register("dino_vasco_spawn_egg",
 			() -> new ForgeSpawnEggItem(EthernalKronuzModEntities.DINO_VASCO, -12361775, -1, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB)));
+	public static final RegistryObject<Item> PIXA_FREESTYLE = REGISTRY.register("pixa_freestyle", () -> new PixaFreestyleItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

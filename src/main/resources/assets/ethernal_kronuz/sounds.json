@@ -1,13 +1,4 @@
 {
-  "terrablademeele": {
-    "category": "neutral",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:terrablademelee",
-        "stream": false
-      }
-    ]
-  },
   "elementsfootsteps": {
     "category": "neutral",
     "sounds": [
@@ -152,15 +143,6 @@
       }
     ]
   },
-  "cabuflamanau": {
-    "category": "record",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:piruka_ft_mota_jr_-__ca_bu_fla_ma_nau",
-        "stream": true
-      }
-    ]
-  },
   "freicken": {
     "category": "record",
     "sounds": [
@@ -275,6 +257,33 @@
       {
         "name": "ethernal_kronuz:vc-irritado",
         "stream": false
+      }
+    ]
+  },
+  "terrablademeele": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:terrablademelee",
+        "stream": false
+      }
+    ]
+  },
+  "cabuflamanau": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:piruka_ft_mota_jr_-__ca_bu_fla_ma_nau",
+        "stream": true
+      }
+    ]
+  },
+  "pixafreestyle": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:pixa_freestyle",
+        "stream": true
       }
     ]
   }

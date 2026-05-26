@@ -10512,6 +10512,21 @@
         ]
       },
       "path": "~/Mobs/DinoVasco"
+    },
+    {
+      "name": "PixaFreestyle",
+      "type": "musicdisc",
+      "sortid": 589,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pixa_freestyle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/item/PixaFreestyleItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/pixa_freestyle.json"
+        ]
+      },
+      "path": "~/Music Discs"
     }
   ],
   "variable_elements": [
@@ -10734,14 +10749,6 @@
   ],
   "sound_elements": [
     {
-      "name": "terrablademeele",
-      "files": [
-        "terrablademelee"
-      ],
-      "category": "neutral",
-      "subtitle": ""
-    },
-    {
       "name": "elementsfootsteps",
       "files": [
         "elementsfootsteps"
@@ -10870,14 +10877,6 @@
       "subtitle": ""
     },
     {
-      "name": "cabuflamanau",
-      "files": [
-        "piruka_ft_mota_jr_-__ca_bu_fla_ma_nau"
-      ],
-      "category": "record",
-      "subtitle": ""
-    },
-    {
       "name": "freicken",
       "files": [
         "chico_da_tina_-_freicken__prod._bejaflor__cotanza"
@@ -10980,6 +10979,30 @@
       ],
       "category": "ambient",
       "subtitle": ""
+    },
+    {
+      "name": "terrablademeele",
+      "files": [
+        "terrablademelee"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "cabuflamanau",
+      "files": [
+        "piruka_ft_mota_jr_-__ca_bu_fla_ma_nau"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "pixafreestyle",
+      "files": [
+        "pixa_freestyle"
+      ],
+      "category": "record",
+      "subtitle": ""
     }
   ],
   "language_map": {
@@ -10994,8 +11017,8 @@
       "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
       "advancements.bt_achievement.descr": "Join Big Testa",
-      "advancements.rl_verde_achievement.title": "The Third",
       "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
+      "advancements.rl_verde_achievement.title": "The Third",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_atention": "Atention",
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
@@ -11028,6 +11051,7 @@
       "subtitles.angolaenossa": "",
       "subtitles.griffin-death": "",
       "block.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
+      "item.ethernal_kronuz.pixa_freestyle.desc": "Galrrote",
       "advancements.adc_achievement.descr": "Join Andarilhos da Cave",
       "item.ethernal_kronuz.aiport_steel_armor_helmet": "Airport Steel Helmet",
       "item.ethernal_kronuz.away.desc": "João Sousa",
@@ -11059,6 +11083,7 @@
       "gui.ethernal_kronuz.trade_system_gui_techno.label_trades": "Trades",
       "item.ethernal_kronuz.rl_verde_armor_leggings": "Titan Kaleb\u0027s  Leggings",
       "block.ethernal_kronuz.ygg_fences": "Ygg Wood Fences",
+      "subtitles.pixafreestyle": "",
       "effect.ethernal_kronuz.end_empowerment": "End Empowerment",
       "key.ethernal_kronuz.null_tp_ability": "Null Teleport Ability",
       "gui.ethernal_kronuz.get_out_jotunheim_rlgui.label_teleporting_into": "teleporting into",
@@ -11216,6 +11241,7 @@
       "block.ethernal_kronuz.cracked_heaven_slate_bricks_stairs": "Cracked Heaven Slate Bricks Stairs",
       "subtitles.erika": "",
       "subtitles.test": "",
+      "item.ethernal_kronuz.pixa_freestyle": "Pixa Freestyle",
       "subtitles.necromancer": "",
       "block.ethernal_kronuz.heaven_slate_stairs": "Heaven Slate Stairs",
       "block.ethernal_kronuz.ygg_wood": "Ygg Wood",
