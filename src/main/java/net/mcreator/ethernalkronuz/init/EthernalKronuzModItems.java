@@ -254,7 +254,7 @@ public class EthernalKronuzModItems {
 			() -> new ForgeSpawnEggItem(EthernalKronuzModEntities.DINO_VASCO, -12361775, -1, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB)));
 	public static final RegistryObject<Item> PIXA_FREESTYLE = REGISTRY.register("pixa_freestyle", () -> new PixaFreestyleItem());
 	public static final RegistryObject<Item> RADIANT_LORD_PURPLE_TRIAL_SPAWN_EGG = REGISTRY.register("radiant_lord_purple_trial_spawn_egg",
-			() -> new ForgeSpawnEggItem(EthernalKronuzModEntities.RADIANT_LORD_PURPLE_TRIAL, -10066330, -16738048, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB)));
+			() -> new ForgeSpawnEggItem(EthernalKronuzModEntities.RADIANT_LORD_PURPLE_TRIAL, -10066330, -5635926, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

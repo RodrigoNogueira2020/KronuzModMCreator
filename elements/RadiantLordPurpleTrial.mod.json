@@ -22,14 +22,14 @@
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -16738048,
+      "value": -5635926,
       "falpha": 0.0
     },
     "creativeTab": {
       "value": "CUSTOM:CreativeTab"
     },
     "isBoss": true,
-    "bossBarColor": "GREEN",
+    "bossBarColor": "PURPLE",
     "bossBarType": "NOTCHED_12",
     "equipmentMainHand": {
       "value": ""
@@ -101,6 +101,9 @@
     },
     "whenMobDies": {
       "name": "RadiantLordGreenTrialEntityDies"
+    },
+    "whenThisMobKillsAnother": {
+      "name": "RadiantLordPurpleTrialThisEntityKillsAnotherOne"
     },
     "onInitialSpawn": {
       "name": "RadiantLordGreenTrialOnInitialEntitySpawn"

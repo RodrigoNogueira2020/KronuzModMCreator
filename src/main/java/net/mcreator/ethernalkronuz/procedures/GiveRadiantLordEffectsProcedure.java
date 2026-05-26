@@ -29,11 +29,11 @@ import net.mcreator.ethernalkronuz.init.EthernalKronuzModMobEffects;
 import java.util.Iterator;
 
 public class GiveRadiantLordEffectsProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		if (entity == null)
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
+		if (entity == null || sourceentity == null)
 			return;
 		RemoveFactionPotionsProcedure.execute(entity);
-		if (entity instanceof ServerPlayer _player) {
+		if (sourceentity instanceof ServerPlayer _player) {
 			Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("ethernal_kronuz:ascender_advancement"));
 			AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 			if (!_ap.isDone()) {
@@ -45,9 +45,9 @@ public class GiveRadiantLordEffectsProcedure {
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
 					"attribute @p minecraft:generic.max_health base set 40");
-		if (entity instanceof LivingEntity _entity)
+		if (sourceentity instanceof LivingEntity _entity)
 			_entity.addEffect(new MobEffectInstance(EthernalKronuzModMobEffects.RADIANT_LORD_EFFECT.get(), (int) Double.POSITIVE_INFINITY, 0, (true), (false)));
-		if (entity instanceof Player _player) {
+		if (sourceentity instanceof Player _player) {
 			_player.getAbilities().mayfly = (true);
 			_player.onUpdateAbilities();
 		}
@@ -75,9 +75,11 @@ public class GiveRadiantLordEffectsProcedure {
 			private void run() {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, new BlockPos(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ethernal_kronuz:gojo_vs_toji_hollow_purple")), SoundSource.PLAYERS, 10, 1);
+						_level.playSound(null, new BlockPos(sourceentity.getX(), sourceentity.getY(), sourceentity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ethernal_kronuz:gojo_vs_toji_hollow_purple")),
+								SoundSource.PLAYERS, 10, 1);
 					} else {
-						_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ethernal_kronuz:gojo_vs_toji_hollow_purple")), SoundSource.PLAYERS, 10, 1, false);
+						_level.playLocalSound((sourceentity.getX()), (sourceentity.getY()), (sourceentity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ethernal_kronuz:gojo_vs_toji_hollow_purple")), SoundSource.PLAYERS, 10, 1,
+								false);
 					}
 				}
 				MinecraftForge.EVENT_BUS.unregister(this);

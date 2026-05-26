@@ -53,6 +53,7 @@ import net.minecraft.network.chat.TextComponent;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.ethernalkronuz.procedures.RadiantLordPurpleTrialThisEntityKillsAnotherOneProcedure;
 import net.mcreator.ethernalkronuz.procedures.RadiantLordGreenTrialOnInitialEntitySpawnProcedure;
 import net.mcreator.ethernalkronuz.procedures.RadiantLordGreenTrialEntityDiesProcedure;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModItems;
@@ -69,7 +70,7 @@ public class RadiantLordPurpleTrialEntity extends Monster implements IAnimatable
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
-	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.GREEN, ServerBossEvent.BossBarOverlay.NOTCHED_12);
+	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.PURPLE, ServerBossEvent.BossBarOverlay.NOTCHED_12);
 
 	public RadiantLordPurpleTrialEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(EthernalKronuzModEntities.RADIANT_LORD_PURPLE_TRIAL.get(), world);
@@ -174,6 +175,12 @@ public class RadiantLordPurpleTrialEntity extends Monster implements IAnimatable
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
 		RadiantLordGreenTrialOnInitialEntitySpawnProcedure.execute(world, this.getX(), this.getY(), this.getZ(), this);
 		return retval;
+	}
+
+	@Override
+	public void awardKillScore(Entity entity, int score, DamageSource damageSource) {
+		super.awardKillScore(entity, score, damageSource);
+		RadiantLordPurpleTrialThisEntityKillsAnotherOneProcedure.execute(this.level);
 	}
 
 	@Override
