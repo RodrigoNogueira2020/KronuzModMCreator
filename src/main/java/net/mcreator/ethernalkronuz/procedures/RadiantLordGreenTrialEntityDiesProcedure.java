@@ -30,6 +30,7 @@ import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
 import net.mcreator.ethernalkronuz.network.EthernalKronuzModVariables;
+import net.mcreator.ethernalkronuz.entity.RadiantLordPurpleTrialEntity;
 import net.mcreator.ethernalkronuz.entity.RadiantLordGreenTrialEntity;
 
 import java.util.Iterator;
@@ -38,7 +39,7 @@ public class RadiantLordGreenTrialEntityDiesProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if (entity instanceof RadiantLordGreenTrialEntity && (sourceentity instanceof Player || sourceentity instanceof ServerPlayer)) {
+		if ((entity instanceof RadiantLordGreenTrialEntity || entity instanceof RadiantLordPurpleTrialEntity || entity instanceof RadiantLordGreenTrialEntity) && (sourceentity instanceof Player || sourceentity instanceof ServerPlayer)) {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
 						"/stopsound @a music ethernal_kronuz:template_boss_music");
@@ -153,6 +154,35 @@ public class RadiantLordGreenTrialEntityDiesProcedure {
 									((sourceentity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).CoordYBeforeEnterJotunheim),
 									((sourceentity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).CoordZBeforeEnterJotunheim), _ent.getYRot(), _ent.getXRot());
 					}
+					new Object() {
+						private int ticks = 0;
+						private float waitTicks;
+						private LevelAccessor world;
+
+						public void start(LevelAccessor world, int waitTicks) {
+							this.waitTicks = waitTicks;
+							MinecraftForge.EVENT_BUS.register(this);
+							this.world = world;
+						}
+
+						@SubscribeEvent
+						public void tick(TickEvent.ServerTickEvent event) {
+							if (event.phase == TickEvent.Phase.END) {
+								this.ticks += 1;
+								if (this.ticks >= this.waitTicks)
+									run();
+							}
+						}
+
+						private void run() {
+							if (entity instanceof RadiantLordPurpleTrialEntity) {
+								RiseRadiantLordRoxoAfterTheRiseConfirmationProcedure.execute(world, x, y, z, entity, sourceentity);
+							} else if (entity instanceof RadiantLordGreenTrialEntity) {
+								RiseRadiantLordVerdeAfterTheRiseConfirmationProcedure.execute(world, x, y, z, entity);
+							}
+							MinecraftForge.EVENT_BUS.unregister(this);
+						}
+					}.start(world, 60);
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
 			}.start(world, 400);

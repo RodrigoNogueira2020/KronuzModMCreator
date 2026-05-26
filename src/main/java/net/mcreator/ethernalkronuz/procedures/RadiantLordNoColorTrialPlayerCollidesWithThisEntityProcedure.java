@@ -15,6 +15,7 @@ import net.minecraft.server.level.ServerLevel;
 
 import net.mcreator.ethernalkronuz.network.EthernalKronuzModVariables;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModEntities;
+import net.mcreator.ethernalkronuz.entity.RadiantLordPurpleTrialEntity;
 import net.mcreator.ethernalkronuz.entity.RadiantLordNoColorTrialEntity;
 import net.mcreator.ethernalkronuz.entity.RadiantLordGreenTrialEntity;
 
@@ -117,7 +118,7 @@ public class RadiantLordNoColorTrialPlayerCollidesWithThisEntityProcedure {
 									}
 									if ((sourceentity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).HasMinimumForTheRiseRoxo) {
 										if (world instanceof ServerLevel _level) {
-											Entity entityToSpawn = new RadiantLordGreenTrialEntity(EthernalKronuzModEntities.RADIANT_LORD_GREEN_TRIAL.get(), _level);
+											Entity entityToSpawn = new RadiantLordPurpleTrialEntity(EthernalKronuzModEntities.RADIANT_LORD_PURPLE_TRIAL.get(), _level);
 											entityToSpawn.moveTo(x, y, z, 0, 0);
 											entityToSpawn.setYBodyRot(0);
 											entityToSpawn.setYHeadRot(0);
