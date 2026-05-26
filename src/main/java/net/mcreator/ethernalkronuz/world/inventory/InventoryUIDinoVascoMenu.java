@@ -30,13 +30,23 @@ public class InventoryUIDinoVascoMenu extends AbstractContainerMenu implements S
 	public int x, y, z;
 	private IItemHandler internal;
 	private final Map<Integer, Slot> customSlots = new HashMap<>();
+	// ── Equipamento da entidade ────────────────────────────────────────────────
 	private final SimpleContainer equipmentContainer;
 	private final DinoVascoEntity dinoEntity;
+	// Índices dos slots de equipamento (0-4)
 	private static final int SLOT_HEAD = 0;
 	private static final int SLOT_CHEST = 1;
 	private static final int SLOT_LEGS = 2;
 	private static final int SLOT_FEET = 3;
 	private static final int SLOT_MAINHAND = 4;
+	// Índices dos slots do inventário do jogador (5-40)
+	private static final int INV_START = 5; // início inventário (9 → 35)
+	private static final int INV_END = 32; // fim inventário (exclusive)
+	private static final int HOT_START = 32; // início hotbar (0 → 8)
+	private static final int HOT_END = 41; // fim hotbar (exclusive)
+	// ══════════════════════════════════════════════════════════════════════════
+	//  Construtor SERVIDOR
+	// ══════════════════════════════════════════════════════════════════════════
 
 	public InventoryUIDinoVascoMenu(int id, Inventory inv, DinoVascoEntity dino) {
 		super(EthernalKronuzModMenus.INVENTORY_UI_DINO_VASCO, id);
@@ -50,8 +60,12 @@ public class InventoryUIDinoVascoMenu extends AbstractContainerMenu implements S
 		this.equipmentContainer = new SimpleContainer(5);
 		loadFromEntity(dino);
 		addEquipmentSlots();
+		addPlayerInventory(inv);
 	}
 
+	// ══════════════════════════════════════════════════════════════════════════
+	//  Construtor CLIENTE
+	// ══════════════════════════════════════════════════════════════════════════
 	public InventoryUIDinoVascoMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
 		super(EthernalKronuzModMenus.INVENTORY_UI_DINO_VASCO, id);
 		this.entity = inv.player;
@@ -72,8 +86,10 @@ public class InventoryUIDinoVascoMenu extends AbstractContainerMenu implements S
 		}
 		this.dinoEntity = dino;
 		addEquipmentSlots();
+		addPlayerInventory(inv);
 	}
 
+	// ── Carrega equipamento da entidade ──────────────────────────────────────
 	private void loadFromEntity(DinoVascoEntity dino) {
 		equipmentContainer.setItem(SLOT_HEAD, dino.getItemBySlot(EquipmentSlot.HEAD).copy());
 		equipmentContainer.setItem(SLOT_CHEST, dino.getItemBySlot(EquipmentSlot.CHEST).copy());
@@ -82,17 +98,38 @@ public class InventoryUIDinoVascoMenu extends AbstractContainerMenu implements S
 		equipmentContainer.setItem(SLOT_MAINHAND, dino.getItemBySlot(EquipmentSlot.MAINHAND).copy());
 	}
 
+	// ── Slots de equipamento do DinoVasco ─────────────────────────────────────
+	// Posições (x,y) relativas ao canto superior esquerdo da GUI (leftPos/topPos)
+	// Devem coincidir com SLOT_POSITIONS no Screen
 	private void addEquipmentSlots() {
 		this.addSlot(new DinoArmorSlot(equipmentContainer, SLOT_HEAD, 8, 8, EquipmentSlot.HEAD));
 		this.addSlot(new DinoArmorSlot(equipmentContainer, SLOT_CHEST, 8, 26, EquipmentSlot.CHEST));
 		this.addSlot(new DinoArmorSlot(equipmentContainer, SLOT_LEGS, 8, 44, EquipmentSlot.LEGS));
 		this.addSlot(new DinoArmorSlot(equipmentContainer, SLOT_FEET, 8, 62, EquipmentSlot.FEET));
+		// Mão principal — aceita qualquer item
 		this.addSlot(new Slot(equipmentContainer, SLOT_MAINHAND, 77, 62) {
 			@Override
 			public int getMaxStackSize() {
 				return 1;
 			}
 		});
+	}
+
+	// ── Inventário do jogador (necessário para drag-and-drop funcionar) ───────
+	// Layout padrão Minecraft: 3 linhas de inventário + hotbar
+	//   Inventário: index 9..35  → slots GUI em y=84,102,120
+	//   Hotbar:     index 0..8   → slots GUI em y=142
+	private void addPlayerInventory(Inventory inv) {
+		// 3 linhas de inventário
+		for (int row = 0; row < 3; row++) {
+			for (int col = 0; col < 9; col++) {
+				this.addSlot(new Slot(inv, col + row * 9 + 9, 8 + col * 18, 84 + row * 18));
+			}
+		}
+		// Hotbar
+		for (int col = 0; col < 9; col++) {
+			this.addSlot(new Slot(inv, col, 8 + col * 18, 142));
+		}
 	}
 
 	@Override
@@ -117,9 +154,28 @@ public class InventoryUIDinoVascoMenu extends AbstractContainerMenu implements S
 		}
 	}
 
+	// ── Shift-click: move entre inventário do jogador e slots do DinoVasco ────
 	@Override
 	public ItemStack quickMoveStack(Player player, int index) {
-		return ItemStack.EMPTY;
+		Slot slot = this.slots.get(index);
+		if (slot == null || !slot.hasItem())
+			return ItemStack.EMPTY;
+		ItemStack stack = slot.getItem();
+		ItemStack original = stack.copy();
+		if (index < 5) {
+			// Dos slots do DinoVasco → inventário do jogador
+			if (!this.moveItemStackTo(stack, INV_START, HOT_END, true))
+				return ItemStack.EMPTY;
+		} else {
+			// Do inventário/hotbar do jogador → slots do DinoVasco
+			if (!this.moveItemStackTo(stack, 0, 5, false))
+				return ItemStack.EMPTY;
+		}
+		if (stack.isEmpty())
+			slot.set(ItemStack.EMPTY);
+		else
+			slot.setChanged();
+		return original;
 	}
 
 	@Override
@@ -127,6 +183,9 @@ public class InventoryUIDinoVascoMenu extends AbstractContainerMenu implements S
 		return customSlots;
 	}
 
+	// ═════════════════════════════════════════════════════════════════════════
+	//  Slot de armadura — só aceita a peça certa para cada slot
+	// ═════════════════════════════════════════════════════════════════════════
 	static class DinoArmorSlot extends Slot {
 		private final EquipmentSlot slotType;
 
