@@ -6094,7 +6094,7 @@
           }
         ]
       },
-      "path": "~/Mobs/Griffin"
+      "path": "~/Mobs/Griffin/Keys"
     },
     {
       "name": "GriffinUp",
@@ -6108,7 +6108,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/network/GriffinUpMessage.java"
         ]
       },
-      "path": "~/Mobs/Griffin"
+      "path": "~/Mobs/Griffin/Keys"
     },
     {
       "name": "GriffinUpOnKeyReleased",
@@ -6128,7 +6128,7 @@
           }
         ]
       },
-      "path": "~/Mobs/Griffin"
+      "path": "~/Mobs/Griffin/Keys"
     },
     {
       "name": "GriffinDownOnKeyPressed",
@@ -6148,7 +6148,7 @@
           }
         ]
       },
-      "path": "~/Mobs/Griffin"
+      "path": "~/Mobs/Griffin/Keys"
     },
     {
       "name": "GriffinDownOnKeyReleased",
@@ -6168,7 +6168,7 @@
           }
         ]
       },
-      "path": "~/Mobs/Griffin"
+      "path": "~/Mobs/Griffin/Keys"
     },
     {
       "name": "GriffinDown",
@@ -6182,7 +6182,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/network/GriffinDownMessage.java"
         ]
       },
-      "path": "~/Mobs/Griffin"
+      "path": "~/Mobs/Griffin/Keys"
     },
     {
       "name": "NullBlur",
@@ -6237,7 +6237,7 @@
           }
         ]
       },
-      "path": "~/Mobs/Griffin"
+      "path": "~/Mobs/Griffin/Keys"
     },
     {
       "name": "GriffinAnimated",
@@ -11098,16 +11098,16 @@
     "en_us": {
       "subtitles.griffin_alive": "",
       "block.ethernal_kronuz.bricks_heaven_slate_slabs": "Heaven Slate Bricks Slabs",
-      "item.ethernal_kronuz.cabuflamanau": "Ca Bu Fla Ma Nau",
       "item.ethernal_kronuz.blade_of_the_void": "§5Blade Of The Void",
+      "item.ethernal_kronuz.cabuflamanau": "Ca Bu Fla Ma Nau",
       "item.ethernal_kronuz.radiant_lord_green_trial_spawn_egg": "§aTitan Kaleb Spawn Egg",
       "biome.ethernal_kronuz.sky_fields": "Sky Fields",
       "key.ethernal_kronuz.griffin_up": "Griffin Upwards",
       "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
       "advancements.bt_achievement.descr": "Join Big Testa",
-      "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "advancements.rl_verde_achievement.title": "The Third",
+      "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_atention": "Atention",
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
@@ -11830,7 +11830,12 @@
           },
           {
             "name": "Griffin",
-            "children": []
+            "children": [
+              {
+                "name": "Keys",
+                "children": []
+              }
+            ]
           },
           {
             "name": "Warper",
