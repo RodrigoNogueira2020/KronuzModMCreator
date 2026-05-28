@@ -10588,6 +10588,36 @@
         ]
       },
       "path": "~/Factions/Radiant Lords/The Rise/Colors/Purple"
+    },
+    {
+      "name": "PaulinhoTown",
+      "type": "musicdisc",
+      "sortid": 592,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paulinho_town",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ethernal_kronuz/models/item/paulinho_town.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/PaulinhoTownItem.java"
+        ]
+      },
+      "path": "~/Music Discs"
+    },
+    {
+      "name": "FuckMinipreco",
+      "type": "musicdisc",
+      "sortid": 593,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fuck_minipreco",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/item/FuckMiniprecoItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/fuck_minipreco.json"
+        ]
+      },
+      "path": "~/Music Discs"
     }
   ],
   "variable_elements": [
@@ -10944,14 +10974,6 @@
       "subtitle": ""
     },
     {
-      "name": "freicken",
-      "files": [
-        "chico_da_tina_-_freicken__prod._bejaflor__cotanza"
-      ],
-      "category": "record",
-      "subtitle": ""
-    },
-    {
       "name": "away",
       "files": [
         "joao_sousa_-_away_prod._tomenzy"
@@ -10971,14 +10993,6 @@
       "name": "safira",
       "files": [
         "safira"
-      ],
-      "category": "record",
-      "subtitle": ""
-    },
-    {
-      "name": "saopaulo",
-      "files": [
-        "yuri_nr5_-_sao_paulo__music_video"
       ],
       "category": "record",
       "subtitle": ""
@@ -11070,22 +11084,54 @@
       ],
       "category": "record",
       "subtitle": ""
+    },
+    {
+      "name": "freicken",
+      "files": [
+        "chico_da_tina_-_freicken__prod._bejaflor__cotanza"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "paulinho_town",
+      "files": [
+        "lil_torpedo_-_paulino_town_ft._paulean_prod._neybaf"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "saopaulo",
+      "files": [
+        "yuri_nr5_-_sao_paulo__music_video"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "fuck_minipreco",
+      "files": [
+        "fuck_minipreco_ft_den_prod_shvde_-_lil_torpedo"
+      ],
+      "category": "record",
+      "subtitle": ""
     }
   ],
   "language_map": {
     "en_us": {
       "subtitles.griffin_alive": "",
       "block.ethernal_kronuz.bricks_heaven_slate_slabs": "Heaven Slate Bricks Slabs",
-      "item.ethernal_kronuz.cabuflamanau": "Ca Bu Fla Ma Nau",
       "item.ethernal_kronuz.blade_of_the_void": "§5Blade Of The Void",
+      "item.ethernal_kronuz.cabuflamanau": "Ca Bu Fla Ma Nau",
       "item.ethernal_kronuz.radiant_lord_green_trial_spawn_egg": "§aTitan Kaleb Spawn Egg",
       "biome.ethernal_kronuz.sky_fields": "Sky Fields",
       "key.ethernal_kronuz.griffin_up": "Griffin Upwards",
       "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
       "advancements.bt_achievement.descr": "Join Big Testa",
-      "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "advancements.rl_verde_achievement.title": "The Third",
+      "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_atention": "Atention",
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
@@ -11110,6 +11156,7 @@
       "advancements.enters_asgard.descr": "Enter in Asgard",
       "subtitles.nokkia_hammer_spawn": "",
       "gamerule.give_rl_verde_game_rule.description": "Ascender um jogador",
+      "subtitles.fuck_minipreco": "",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_begin_the_rise": "Begin The Rise",
       "item.ethernal_kronuz.ginuka_power_setup_spawn_egg": "Ginuka Power Spawn Egg",
       "item.ethernal_kronuz.mosso_crystal_hoe": "Mosso Crystal Hoe",
@@ -11222,6 +11269,7 @@
       "gui.ethernal_kronuz.trade_system_gui_techno.button_7": "7",
       "gui.ethernal_kronuz.trade_system_gui_techno.button_6": "6",
       "gui.ethernal_kronuz.trade_system_gui_techno.button_5": "5",
+      "item.ethernal_kronuz.paulinho_town.desc": "Lil Torpedo",
       "item.ethernal_kronuz.mosso_crystal_dust": "Mosso Crystal Dust",
       "entity.ethernal_kronuz.technobalde": "Technobalde",
       "subtitles.pretodaamadora": "",
@@ -11264,6 +11312,7 @@
       "enchantment.ethernal_kronuz.life_steal_setup": "Life Steal",
       "block.ethernal_kronuz.flowerpotglowplant": "Flower Pot Glow Plant",
       "block.ethernal_kronuz.glow_plant": "Glow Plant",
+      "item.ethernal_kronuz.fuck_minipreco": "Fuck Minipreço",
       "curios.identifier.elytra": "Elytra",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.button_rise": "Rise",
       "block.ethernal_kronuz.stripped_ygg_log": "Stripped Ygg Wood Log",
@@ -11280,6 +11329,7 @@
       "advancements.ragnarok.descr": "Kill damn gods!",
       "advancements.the_rise_complete_advancement.title": "The Rise",
       "item.ethernal_kronuz.minerar_mais_um_pouco.desc": "João Sozinho",
+      "subtitles.paulinho_town": "",
       "subtitles.irritado-vc": "",
       "item.ethernal_kronuz.sao_paulo.desc": "Yuri NR5",
       "item.ethernal_kronuz.faking_ell_ingot": "Faking Ell Ingot",
@@ -11329,6 +11379,7 @@
       "block.ethernal_kronuz.botv_block": "BOTV Block",
       "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_radiant_lord": "Radiant Lord",
       "item.ethernal_kronuz.rl_vermelho_armor_chestplate": "Azakana\u0027s Body Armor",
+      "item.ethernal_kronuz.fuck_minipreco.desc": "Lil Torpedo",
       "item.ethernal_kronuz.jotunheim": "Jotunheim Portal Igniter",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_special_display_name": "- Special Display Name",
       "advancements.the_rise_complete_advancement.descr": "Claim your position as Radiant Lord",
@@ -11399,6 +11450,7 @@
       "item.ethernal_kronuz.technomorto_spawn_egg": "Technomorto Spawn Egg",
       "item.ethernal_kronuz.radiant_lord_no_color_trial_spawn_egg": "Radiant Lord Spawn Egg",
       "gui.ethernal_kronuz.confirm_rise_gui_verde.label_your_position_as_radiant_lord": "claim your position as",
+      "item.ethernal_kronuz.paulinho_town": "Paulinho Town",
       "gui.ethernal_kronuz.trade_system_gui_techno.button_11": "1",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_became_a": "Became a",
       "key.ethernal_kronuz.null_entity_invisibility_ability_key_bind": "Invisibility Ability",

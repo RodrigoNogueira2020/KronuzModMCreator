@@ -143,15 +143,6 @@
       }
     ]
   },
-  "freicken": {
-    "category": "record",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:chico_da_tina_-_freicken__prod._bejaflor__cotanza",
-        "stream": true
-      }
-    ]
-  },
   "away": {
     "category": "record",
     "sounds": [
@@ -175,15 +166,6 @@
     "sounds": [
       {
         "name": "ethernal_kronuz:safira",
-        "stream": true
-      }
-    ]
-  },
-  "saopaulo": {
-    "category": "record",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:yuri_nr5_-_sao_paulo__music_video",
         "stream": true
       }
     ]
@@ -283,6 +265,42 @@
     "sounds": [
       {
         "name": "ethernal_kronuz:pixa_freestyle",
+        "stream": true
+      }
+    ]
+  },
+  "freicken": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:chico_da_tina_-_freicken__prod._bejaflor__cotanza",
+        "stream": true
+      }
+    ]
+  },
+  "paulinho_town": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:lil_torpedo_-_paulino_town_ft._paulean_prod._neybaf",
+        "stream": true
+      }
+    ]
+  },
+  "saopaulo": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:yuri_nr5_-_sao_paulo__music_video",
+        "stream": true
+      }
+    ]
+  },
+  "fuck_minipreco": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:fuck_minipreco_ft_den_prod_shvde_-_lil_torpedo",
         "stream": true
       }
     ]
