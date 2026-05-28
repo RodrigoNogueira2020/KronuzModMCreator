@@ -10253,10 +10253,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -10565,26 +10561,6 @@
           "src/main/java/net/mcreator/ethernalkronuz/entity/model/RadiantLordPurpleTrialModel.java",
           "src/main/java/net/mcreator/ethernalkronuz/client/renderer/RadiantLordPurpleTrialRenderer.java",
           "src/main/java/net/mcreator/ethernalkronuz/entity/RadiantLordPurpleTrialEntity.java"
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/The Rise/Colors/Purple"
-    },
-    {
-      "name": "RadiantLordPurpleTrialThisEntityKillsAnotherOne",
-      "type": "procedure",
-      "sortid": 591,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "radiant_lord_purple_trial_this_entity_kills_another_one",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/RadiantLordPurpleTrialThisEntityKillsAnotherOneProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
         ]
       },
       "path": "~/Factions/Radiant Lords/The Rise/Colors/Purple"

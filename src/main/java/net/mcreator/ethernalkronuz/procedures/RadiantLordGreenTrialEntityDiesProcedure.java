@@ -1,6 +1,5 @@
 package net.mcreator.ethernalkronuz.procedures;
 
-import net.minecraftforge.server.ServerLifecycleHooks;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
@@ -10,14 +9,12 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.GameRules;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.network.protocol.game.ClientboundUpdateMobEffectPacket;
@@ -25,14 +22,12 @@ import net.minecraft.network.protocol.game.ClientboundPlayerAbilitiesPacket;
 import net.minecraft.network.protocol.game.ClientboundLevelEventPacket;
 import net.minecraft.network.protocol.game.ClientboundGameEventPacket;
 import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.ChatType;
 import net.minecraft.core.Registry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
-import net.minecraft.Util;
 
 import net.mcreator.ethernalkronuz.network.EthernalKronuzModVariables;
 import net.mcreator.ethernalkronuz.entity.RadiantLordPurpleTrialEntity;
@@ -45,13 +40,6 @@ public class RadiantLordGreenTrialEntityDiesProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		if ((entity instanceof RadiantLordGreenTrialEntity || entity instanceof RadiantLordPurpleTrialEntity || entity instanceof RadiantLordGreenTrialEntity) && (sourceentity instanceof Player || sourceentity instanceof ServerPlayer)) {
-			if (world instanceof Level _level)
-				_level.getGameRules().getRule(GameRules.RULE_KEEPINVENTORY).set((false), _level.getServer());
-			if (!world.isClientSide()) {
-				MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
-				if (_mcserv != null)
-					_mcserv.getPlayerList().broadcastMessage(new TextComponent("Keep Inventory: False (Entity Died)"), ChatType.SYSTEM, Util.NIL_UUID);
-			}
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
 						"/stopsound @a music ethernal_kronuz:template_boss_music");

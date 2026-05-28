@@ -65,7 +65,7 @@ public class ConfirmRiseGUIVerdeButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			TeleportPlayerToTheTrialChamberGreenProcedure.execute(world, entity);
+			TeleportPlayerToTheTrialChamberGreenProcedure.execute(entity);
 		}
 		if (buttonID == 1) {
 
