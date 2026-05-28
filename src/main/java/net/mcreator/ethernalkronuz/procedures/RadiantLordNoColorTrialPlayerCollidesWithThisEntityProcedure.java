@@ -1,5 +1,6 @@
 package net.mcreator.ethernalkronuz.procedures;
 
+import net.minecraftforge.server.ServerLifecycleHooks;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -12,6 +13,10 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.ChatType;
+import net.minecraft.Util;
 
 import net.mcreator.ethernalkronuz.network.EthernalKronuzModVariables;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModEntities;
@@ -33,6 +38,11 @@ public class RadiantLordNoColorTrialPlayerCollidesWithThisEntityProcedure {
 			}
 			if (entity instanceof RadiantLordNoColorTrialEntity) {
 				((RadiantLordNoColorTrialEntity) entity).setAnimation("wakeup");
+			}
+			if (!world.isClientSide()) {
+				MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
+				if (_mcserv != null)
+					_mcserv.getPlayerList().broadcastMessage(new TextComponent("wakeup"), ChatType.SYSTEM, Util.NIL_UUID);
 			}
 			new Object() {
 				private int ticks = 0;
@@ -57,6 +67,11 @@ public class RadiantLordNoColorTrialPlayerCollidesWithThisEntityProcedure {
 				private void run() {
 					if (entity instanceof RadiantLordNoColorTrialEntity) {
 						((RadiantLordNoColorTrialEntity) entity).setAnimation("transforming");
+					}
+					if (!world.isClientSide()) {
+						MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
+						if (_mcserv != null)
+							_mcserv.getPlayerList().broadcastMessage(new TextComponent("transforming"), ChatType.SYSTEM, Util.NIL_UUID);
 					}
 					new Object() {
 						private int ticks = 0;
@@ -138,9 +153,19 @@ public class RadiantLordNoColorTrialPlayerCollidesWithThisEntityProcedure {
 											world.addFreshEntity(entityToSpawn);
 										}
 									}
+									if (!world.isClientSide()) {
+										MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
+										if (_mcserv != null)
+											_mcserv.getPlayerList().broadcastMessage(new TextComponent("spawned"), ChatType.SYSTEM, Util.NIL_UUID);
+									}
 									for (int index0 = 0; index0 < (int) (10); index0++) {
 										if (!entity.level.isClientSide())
 											entity.discard();
+									}
+									if (!world.isClientSide()) {
+										MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
+										if (_mcserv != null)
+											_mcserv.getPlayerList().broadcastMessage(new TextComponent("despawned No Color"), ChatType.SYSTEM, Util.NIL_UUID);
 									}
 									MinecraftForge.EVENT_BUS.unregister(this);
 								}

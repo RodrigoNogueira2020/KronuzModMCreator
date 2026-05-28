@@ -10253,10 +10253,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -10588,6 +10584,34 @@
         ]
       },
       "path": "~/Factions/Radiant Lords/The Rise/Colors/Purple"
+      "name": "PaulinhoTown",
+      "type": "musicdisc",
+      "sortid": 592,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paulinho_town",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ethernal_kronuz/models/item/paulinho_town.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/PaulinhoTownItem.java"
+        ]
+      },
+      "path": "~/Music Discs"
+    },
+    {
+      "name": "FuckMinipreco",
+      "type": "musicdisc",
+      "sortid": 593,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fuck_minipreco",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/item/FuckMiniprecoItem.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/fuck_minipreco.json"
+        ]
+      },
+      "path": "~/Music Discs"
     }
   ],
   "variable_elements": [

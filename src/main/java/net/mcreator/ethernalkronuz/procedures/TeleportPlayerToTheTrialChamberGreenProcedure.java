@@ -1,42 +1,25 @@
 package net.mcreator.ethernalkronuz.procedures;
 
-import net.minecraftforge.server.ServerLifecycleHooks;
-
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.GameRules;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.network.protocol.game.ClientboundUpdateMobEffectPacket;
 import net.minecraft.network.protocol.game.ClientboundPlayerAbilitiesPacket;
 import net.minecraft.network.protocol.game.ClientboundLevelEventPacket;
 import net.minecraft.network.protocol.game.ClientboundGameEventPacket;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.ChatType;
 import net.minecraft.core.Registry;
 import net.minecraft.core.BlockPos;
-import net.minecraft.Util;
 
 import net.mcreator.ethernalkronuz.network.EthernalKronuzModVariables;
 
 public class TeleportPlayerToTheTrialChamberGreenProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if (world.getLevelData().getGameRules().getBoolean(GameRules.RULE_KEEPINVENTORY) == false) {
-			if (world instanceof Level _level)
-				_level.getGameRules().getRule(GameRules.RULE_KEEPINVENTORY).set((true), _level.getServer());
-			if (!world.isClientSide()) {
-				MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
-				if (_mcserv != null)
-					_mcserv.getPlayerList().broadcastMessage(new TextComponent("Keep Inventory: True (Player TP'ed to Jotunheim)"), ChatType.SYSTEM, Util.NIL_UUID);
-			}
-		}
 		if ((entity.level.dimension()) == (Level.OVERWORLD)) {
 			{
 				double _setval = 0;

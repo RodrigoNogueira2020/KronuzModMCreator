@@ -102,9 +102,6 @@
     "whenMobDies": {
       "name": "RadiantLordGreenTrialEntityDies"
     },
-    "whenThisMobKillsAnother": {
-      "name": "RadiantLordPurpleTrialThisEntityKillsAnotherOne"
-    },
     "onInitialSpawn": {
       "name": "RadiantLordGreenTrialOnInitialEntitySpawn"
     },
