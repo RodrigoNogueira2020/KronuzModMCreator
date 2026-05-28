@@ -44,8 +44,7 @@ public class RadiantLordVermelhoProcedureProcedure {
 				&& (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
 						? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("minecraft:adventure/two_birds_one_arrow"))).isDone()
 						: false)) {
-			if (!((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).HasMinimumForTheRiseVermelho
-					&& (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordVermelhoPlayer)) {
+			if (!(entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).AlreadyHasParchement) {
 				{
 					boolean _setval = true;
 					entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -53,12 +52,17 @@ public class RadiantLordVermelhoProcedureProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (!(entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(EthernalKronuzModItems.THE_RISE_PARCHMENT.get())) : false)) {
-					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(EthernalKronuzModItems.THE_RISE_PARCHMENT.get());
-						_setstack.setCount(1);
-						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-					}
+				{
+					boolean _setval = true;
+					entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.AlreadyHasParchement = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(EthernalKronuzModItems.THE_RISE_PARCHMENT.get());
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
 			}
 		}

@@ -3924,6 +3924,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -9370,7 +9374,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/world/inventory/ConfirmRiseGUIRoxoMenu.java"
         ]
       },
-      "path": "~/Factions/Radiant Lords/The Rise/GUI"
+      "path": "~/Factions/Radiant Lords/The Rise/Parchement"
     },
     {
       "name": "ConfirmRiseGUIVermelho",
@@ -9386,7 +9390,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/world/inventory/ConfirmRiseGUIVermelhoMenu.java"
         ]
       },
-      "path": "~/Factions/Radiant Lords/The Rise/GUI"
+      "path": "~/Factions/Radiant Lords/The Rise/Parchement"
     },
     {
       "name": "ConfirmRiseGUIVerde",
@@ -9402,7 +9406,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/world/inventory/ConfirmRiseGUIVerdeMenu.java"
         ]
       },
-      "path": "~/Factions/Radiant Lords/The Rise/GUI"
+      "path": "~/Factions/Radiant Lords/The Rise/Parchement"
     },
     {
       "name": "CloseConfirmRiseGUI",
@@ -9422,7 +9426,7 @@
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords/The Rise/GUI"
+      "path": "~/Factions/Radiant Lords/The Rise/Parchement"
     },
     {
       "name": "RiseRadiantLordRoxoAfterTheRiseConfirmation",
@@ -10339,7 +10343,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/item/TheRiseParchmentItem.java"
         ]
       },
-      "path": "~/Factions/Radiant Lords/The Rise/GUI"
+      "path": "~/Factions/Radiant Lords/The Rise/Parchement"
     },
     {
       "name": "TheRiseParchmentRightclicked",
@@ -10375,7 +10379,7 @@
           }
         ]
       },
-      "path": "~/Factions/Radiant Lords/The Rise/GUI"
+      "path": "~/Factions/Radiant Lords/The Rise/Parchement"
     },
     {
       "name": "GiveGreenParchment",
@@ -10708,7 +10712,7 @@
       "value": "false"
     },
     {
-      "name": "FirstBook",
+      "name": "FirstFactionBook",
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
@@ -10801,6 +10805,12 @@
       "name": "ActivateAfterRagnarok",
       "type": "logic",
       "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "AlreadyHasParchement",
+      "type": "logic",
+      "scope": "player_persistent",
       "value": "false"
     }
   ],
@@ -11066,16 +11076,16 @@
     "en_us": {
       "subtitles.griffin_alive": "",
       "block.ethernal_kronuz.bricks_heaven_slate_slabs": "Heaven Slate Bricks Slabs",
-      "item.ethernal_kronuz.blade_of_the_void": "§5Blade Of The Void",
       "item.ethernal_kronuz.cabuflamanau": "Ca Bu Fla Ma Nau",
+      "item.ethernal_kronuz.blade_of_the_void": "§5Blade Of The Void",
       "item.ethernal_kronuz.radiant_lord_green_trial_spawn_egg": "§aTitan Kaleb Spawn Egg",
       "biome.ethernal_kronuz.sky_fields": "Sky Fields",
       "key.ethernal_kronuz.griffin_up": "Griffin Upwards",
       "fluid.ethernal_kronuz.cristalized_divine_water": "Cristalized Divine Water",
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
       "advancements.bt_achievement.descr": "Join Big Testa",
-      "advancements.rl_verde_achievement.title": "The Third",
       "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
+      "advancements.rl_verde_achievement.title": "The Third",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_atention": "Atention",
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
@@ -11578,7 +11588,7 @@
                     "children": []
                   },
                   {
-                    "name": "GUI",
+                    "name": "Parchement",
                     "children": []
                   },
                   {

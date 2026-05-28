@@ -43,12 +43,18 @@ public class RadiantLordRoxoProcedureProcedure {
 				&& (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
 						? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("minecraft:nether/explore_nether"))).isDone()
 						: false)) {
-			if (!((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordRoxoPlayer
-					&& (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).HasMinimumForTheRiseRoxo)) {
+			if (!(entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).AlreadyHasParchement) {
 				{
 					boolean _setval = true;
 					entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.HasMinimumForTheRiseRoxo = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					boolean _setval = true;
+					entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.AlreadyHasParchement = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}

@@ -85,7 +85,7 @@ public class EthernalKronuzModVariables {
 			clone.AsgardDeaths = original.AsgardDeaths;
 			clone.IsNullEntityRL = original.IsNullEntityRL;
 			clone.AlreadyClicked = original.AlreadyClicked;
-			clone.FirstBook = original.FirstBook;
+			clone.FirstFactionBook = original.FirstFactionBook;
 			clone.IsRadiantLord = original.IsRadiantLord;
 			clone.AllowInJotunheim = original.AllowInJotunheim;
 			clone.CoordXBeforeEnterAsgard = original.CoordXBeforeEnterAsgard;
@@ -100,6 +100,7 @@ public class EthernalKronuzModVariables {
 			clone.CoordZBeforeEnterJotunheim = original.CoordZBeforeEnterJotunheim;
 			clone.DimensionBeforeEnterJotunheim = original.DimensionBeforeEnterJotunheim;
 			clone.TouchRLOnce = original.TouchRLOnce;
+			clone.AlreadyHasParchement = original.AlreadyHasParchement;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -299,7 +300,7 @@ public class EthernalKronuzModVariables {
 		public double AsgardDeaths = 0.0;
 		public boolean IsNullEntityRL = false;
 		public boolean AlreadyClicked = false;
-		public boolean FirstBook = false;
+		public boolean FirstFactionBook = false;
 		public boolean IsRadiantLord = false;
 		public boolean AllowInJotunheim = false;
 		public double CoordXBeforeEnterAsgard = 0;
@@ -314,6 +315,7 @@ public class EthernalKronuzModVariables {
 		public double CoordZBeforeEnterJotunheim = 0;
 		public double DimensionBeforeEnterJotunheim = 0;
 		public boolean TouchRLOnce = false;
+		public boolean AlreadyHasParchement = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -335,7 +337,7 @@ public class EthernalKronuzModVariables {
 			nbt.putDouble("AsgardDeaths", AsgardDeaths);
 			nbt.putBoolean("IsNullEntityRL", IsNullEntityRL);
 			nbt.putBoolean("AlreadyClicked", AlreadyClicked);
-			nbt.putBoolean("FirstBook", FirstBook);
+			nbt.putBoolean("FirstFactionBook", FirstFactionBook);
 			nbt.putBoolean("IsRadiantLord", IsRadiantLord);
 			nbt.putBoolean("AllowInJotunheim", AllowInJotunheim);
 			nbt.putDouble("CoordXBeforeEnterAsgard", CoordXBeforeEnterAsgard);
@@ -350,6 +352,7 @@ public class EthernalKronuzModVariables {
 			nbt.putDouble("CoordZBeforeEnterJotunheim", CoordZBeforeEnterJotunheim);
 			nbt.putDouble("DimensionBeforeEnterJotunheim", DimensionBeforeEnterJotunheim);
 			nbt.putBoolean("TouchRLOnce", TouchRLOnce);
+			nbt.putBoolean("AlreadyHasParchement", AlreadyHasParchement);
 			return nbt;
 		}
 
@@ -368,7 +371,7 @@ public class EthernalKronuzModVariables {
 			AsgardDeaths = nbt.getDouble("AsgardDeaths");
 			IsNullEntityRL = nbt.getBoolean("IsNullEntityRL");
 			AlreadyClicked = nbt.getBoolean("AlreadyClicked");
-			FirstBook = nbt.getBoolean("FirstBook");
+			FirstFactionBook = nbt.getBoolean("FirstFactionBook");
 			IsRadiantLord = nbt.getBoolean("IsRadiantLord");
 			AllowInJotunheim = nbt.getBoolean("AllowInJotunheim");
 			CoordXBeforeEnterAsgard = nbt.getDouble("CoordXBeforeEnterAsgard");
@@ -383,6 +386,7 @@ public class EthernalKronuzModVariables {
 			CoordZBeforeEnterJotunheim = nbt.getDouble("CoordZBeforeEnterJotunheim");
 			DimensionBeforeEnterJotunheim = nbt.getDouble("DimensionBeforeEnterJotunheim");
 			TouchRLOnce = nbt.getBoolean("TouchRLOnce");
+			AlreadyHasParchement = nbt.getBoolean("AlreadyHasParchement");
 		}
 	}
 
@@ -420,7 +424,7 @@ public class EthernalKronuzModVariables {
 					variables.AsgardDeaths = message.data.AsgardDeaths;
 					variables.IsNullEntityRL = message.data.IsNullEntityRL;
 					variables.AlreadyClicked = message.data.AlreadyClicked;
-					variables.FirstBook = message.data.FirstBook;
+					variables.FirstFactionBook = message.data.FirstFactionBook;
 					variables.IsRadiantLord = message.data.IsRadiantLord;
 					variables.AllowInJotunheim = message.data.AllowInJotunheim;
 					variables.CoordXBeforeEnterAsgard = message.data.CoordXBeforeEnterAsgard;
@@ -435,6 +439,7 @@ public class EthernalKronuzModVariables {
 					variables.CoordZBeforeEnterJotunheim = message.data.CoordZBeforeEnterJotunheim;
 					variables.DimensionBeforeEnterJotunheim = message.data.DimensionBeforeEnterJotunheim;
 					variables.TouchRLOnce = message.data.TouchRLOnce;
+					variables.AlreadyHasParchement = message.data.AlreadyHasParchement;
 				}
 			});
 			context.setPacketHandled(true);
