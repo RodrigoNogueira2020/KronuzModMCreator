@@ -3,7 +3,7 @@
   "_type": "musicdisc",
   "definition": {
     "name": "Minerar Mais Um Pouco",
-    "texture": "music_disc_sapphire",
+    "texture": "music_disc_minerar",
     "description": "João Sozinho",
     "creativeTab": {
       "value": "CUSTOM:CreativeTab"
