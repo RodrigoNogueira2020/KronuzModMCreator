@@ -10854,22 +10854,6 @@
       "subtitle": ""
     },
     {
-      "name": "aesir_rift_opening",
-      "files": [
-        "fortnite-rift"
-      ],
-      "category": "ambient",
-      "subtitle": ""
-    },
-    {
-      "name": "technoblade_never_dies",
-      "files": [
-        "technoblade_never_dies"
-      ],
-      "category": "music",
-      "subtitle": ""
-    },
-    {
       "name": "griffin_alive",
       "files": [
         "griffin"
@@ -10998,14 +10982,6 @@
       "subtitle": ""
     },
     {
-      "name": "minerar_mais_um_pouco",
-      "files": [
-        "minerar_mais_um_pouco_pardia_gt3_lon3r_johny"
-      ],
-      "category": "record",
-      "subtitle": ""
-    },
-    {
       "name": "vasco",
       "files": [
         "vasco"
@@ -11078,25 +11054,9 @@
       "subtitle": ""
     },
     {
-      "name": "pixafreestyle",
-      "files": [
-        "pixa_freestyle"
-      ],
-      "category": "record",
-      "subtitle": ""
-    },
-    {
       "name": "freicken",
       "files": [
         "chico_da_tina_-_freicken__prod._bejaflor__cotanza"
-      ],
-      "category": "record",
-      "subtitle": ""
-    },
-    {
-      "name": "paulinho_town",
-      "files": [
-        "lil_torpedo_-_paulino_town_ft._paulean_prod._neybaf"
       ],
       "category": "record",
       "subtitle": ""
@@ -11110,9 +11070,49 @@
       "subtitle": ""
     },
     {
+      "name": "technoblade_never_dies",
+      "files": [
+        "technoblade_never_dies"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
       "name": "fuck_minipreco",
       "files": [
         "fuck_minipreco_ft_den_prod_shvde_-_lil_torpedo"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "paulinho_town",
+      "files": [
+        "lil_torpedo_-_paulino_town_ft__paulean__prod__neybaf_"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "minerar_mais_um_pouco",
+      "files": [
+        "minerar_mais_um_pouco_pardia_gt3_lon3r_johny"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "aesir_rift_opening",
+      "files": [
+        "fortnite-rift"
+      ],
+      "category": "ambient",
+      "subtitle": ""
+    },
+    {
+      "name": "pixa_freestyle",
+      "files": [
+        "pixa_freestyle"
       ],
       "category": "record",
       "subtitle": ""
@@ -11191,6 +11191,7 @@
       "subtitles.gandamoca": "",
       "advancements.full_set_faking_ell.title": "Eia mano!",
       "gui.ethernal_kronuz.confirm_rise_gui_roxo.label_armor_before_the_rise": "armor before The Rise",
+      "subtitles.pixa_freestyle": "",
       "effect.ethernal_kronuz.bt_effect": "Big Testa",
       "item.ethernal_kronuz.deep_sea_boot": "Deep Sea Boot",
       "itemGroup.tabcreative_tab": "Ethernal Kronuz",

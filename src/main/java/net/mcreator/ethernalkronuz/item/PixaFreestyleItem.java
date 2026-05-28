@@ -11,6 +11,6 @@ import net.mcreator.ethernalkronuz.init.EthernalKronuzModSounds;
 
 public class PixaFreestyleItem extends RecordItem {
 	public PixaFreestyleItem() {
-		super(0, EthernalKronuzModSounds.REGISTRY.get(new ResourceLocation("ethernal_kronuz:pixafreestyle")), new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).stacksTo(1).rarity(Rarity.RARE));
+		super(0, EthernalKronuzModSounds.REGISTRY.get(new ResourceLocation("ethernal_kronuz:pixa_freestyle")), new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).stacksTo(1).rarity(Rarity.RARE));
 	}
 }

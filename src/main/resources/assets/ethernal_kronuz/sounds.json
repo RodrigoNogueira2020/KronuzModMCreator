@@ -8,24 +8,6 @@
       }
     ]
   },
-  "aesir_rift_opening": {
-    "category": "ambient",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:fortnite-rift",
-        "stream": false
-      }
-    ]
-  },
-  "technoblade_never_dies": {
-    "category": "music",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:technoblade_never_dies",
-        "stream": true
-      }
-    ]
-  },
   "griffin_alive": {
     "category": "neutral",
     "sounds": [
@@ -170,15 +152,6 @@
       }
     ]
   },
-  "minerar_mais_um_pouco": {
-    "category": "record",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:minerar_mais_um_pouco_pardia_gt3_lon3r_johny",
-        "stream": true
-      }
-    ]
-  },
   "vasco": {
     "category": "record",
     "sounds": [
@@ -260,29 +233,11 @@
       }
     ]
   },
-  "pixafreestyle": {
-    "category": "record",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:pixa_freestyle",
-        "stream": true
-      }
-    ]
-  },
   "freicken": {
     "category": "record",
     "sounds": [
       {
         "name": "ethernal_kronuz:chico_da_tina_-_freicken__prod._bejaflor__cotanza",
-        "stream": true
-      }
-    ]
-  },
-  "paulinho_town": {
-    "category": "record",
-    "sounds": [
-      {
-        "name": "ethernal_kronuz:lil_torpedo_-_paulino_town_ft._paulean_prod._neybaf",
         "stream": true
       }
     ]
@@ -296,11 +251,56 @@
       }
     ]
   },
+  "technoblade_never_dies": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:technoblade_never_dies",
+        "stream": true
+      }
+    ]
+  },
   "fuck_minipreco": {
     "category": "record",
     "sounds": [
       {
         "name": "ethernal_kronuz:fuck_minipreco_ft_den_prod_shvde_-_lil_torpedo",
+        "stream": true
+      }
+    ]
+  },
+  "paulinho_town": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:lil_torpedo_-_paulino_town_ft__paulean__prod__neybaf_",
+        "stream": true
+      }
+    ]
+  },
+  "minerar_mais_um_pouco": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:minerar_mais_um_pouco_pardia_gt3_lon3r_johny",
+        "stream": true
+      }
+    ]
+  },
+  "aesir_rift_opening": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:fortnite-rift",
+        "stream": false
+      }
+    ]
+  },
+  "pixa_freestyle": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:pixa_freestyle",
         "stream": true
       }
     ]
