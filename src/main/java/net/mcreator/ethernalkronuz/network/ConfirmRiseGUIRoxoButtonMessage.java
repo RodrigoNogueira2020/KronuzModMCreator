@@ -65,7 +65,7 @@ public class ConfirmRiseGUIRoxoButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			TeleportPlayerToTheTrialChamberGreenProcedure.execute(entity);
+			TeleportPlayerToTheTrialChamberGreenProcedure.execute(world, entity);
 		}
 		if (buttonID == 1) {
 

@@ -83,6 +83,7 @@ public class RadiantLordPurpleTrialEntity extends Monster implements IAnimatable
 		setCustomName(new TextComponent("§5Gargantuan"));
 		setCustomNameVisible(true);
 		setPersistenceRequired();
+		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(EthernalKronuzModItems.BLADE_OF_THE_VOID.get()));
 		this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(EthernalKronuzModItems.RL_ROXO_ARMOUR_HELMET.get()));
 		this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(EthernalKronuzModItems.RL_ROXO_ARMOUR_CHESTPLATE.get()));
 		this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(EthernalKronuzModItems.RL_ROXO_ARMOUR_LEGGINGS.get()));

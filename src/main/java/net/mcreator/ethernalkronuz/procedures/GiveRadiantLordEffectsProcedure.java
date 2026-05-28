@@ -51,7 +51,7 @@ public class GiveRadiantLordEffectsProcedure {
 			_player.getAbilities().mayfly = (true);
 			_player.onUpdateAbilities();
 		}
-		AscenderEffectsProcedure.execute(world, entity);
+		AscenderEffectsProcedure.execute(world, sourceentity);
 		new Object() {
 			private int ticks = 0;
 			private float waitTicks;

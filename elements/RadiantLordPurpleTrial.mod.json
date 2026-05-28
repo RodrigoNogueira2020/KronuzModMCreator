@@ -32,7 +32,7 @@
     "bossBarColor": "PURPLE",
     "bossBarType": "NOTCHED_12",
     "equipmentMainHand": {
-      "value": ""
+      "value": "CUSTOM:BladeOfTheVoid"
     },
     "equipmentOffHand": {
       "value": ""
