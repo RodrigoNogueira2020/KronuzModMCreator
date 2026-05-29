@@ -24,6 +24,8 @@ public class RadiantLordNoColorTrialPlayerCollidesWithThisEntityProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
+		if (!(world instanceof ServerLevel))
+			return;
 		if (!(sourceentity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).TouchRLOnce) {
 			{
 				boolean _setval = true;
@@ -32,9 +34,9 @@ public class RadiantLordNoColorTrialPlayerCollidesWithThisEntityProcedure {
 					capability.syncPlayerVariables(sourceentity);
 				});
 			}
-			if (entity instanceof RadiantLordNoColorTrialEntity) {
+			if (entity instanceof RadiantLordNoColorTrialEntity)
 				((RadiantLordNoColorTrialEntity) entity).setAnimation("wakeup");
-			}
+			final java.util.UUID noColorEntityUUID = entity.getUUID(); // <-- GUARDA O UUID
 			new Object() {
 				private int ticks = 0;
 				private float waitTicks;
@@ -50,15 +52,16 @@ public class RadiantLordNoColorTrialPlayerCollidesWithThisEntityProcedure {
 				public void tick(TickEvent.ServerTickEvent event) {
 					if (event.phase == TickEvent.Phase.END) {
 						this.ticks += 1;
-						if (this.ticks >= this.waitTicks)
+						if (this.ticks >= this.waitTicks) {
+							MinecraftForge.EVENT_BUS.unregister(this);
 							run();
+						}
 					}
 				}
 
 				private void run() {
-					if (entity instanceof RadiantLordNoColorTrialEntity) {
+					if (entity instanceof RadiantLordNoColorTrialEntity)
 						((RadiantLordNoColorTrialEntity) entity).setAnimation("transforming");
-					}
 					new Object() {
 						private int ticks = 0;
 						private float waitTicks;
@@ -74,14 +77,16 @@ public class RadiantLordNoColorTrialPlayerCollidesWithThisEntityProcedure {
 						public void tick(TickEvent.ServerTickEvent event) {
 							if (event.phase == TickEvent.Phase.END) {
 								this.ticks += 1;
-								if (this.ticks >= this.waitTicks)
+								if (this.ticks >= this.waitTicks) {
+									MinecraftForge.EVENT_BUS.unregister(this);
 									run();
+								}
 							}
 						}
 
 						private void run() {
 							if (sourceentity instanceof LivingEntity _entity)
-								_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 40, 0, (false), (false)));
+								_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 40, 0, false, false));
 							new Object() {
 								private int ticks = 0;
 								private float waitTicks;
@@ -97,8 +102,10 @@ public class RadiantLordNoColorTrialPlayerCollidesWithThisEntityProcedure {
 								public void tick(TickEvent.ServerTickEvent event) {
 									if (event.phase == TickEvent.Phase.END) {
 										this.ticks += 1;
-										if (this.ticks >= this.waitTicks)
+										if (this.ticks >= this.waitTicks) {
+											MinecraftForge.EVENT_BUS.unregister(this);
 											run();
+										}
 									}
 								}
 
@@ -139,15 +146,16 @@ public class RadiantLordNoColorTrialPlayerCollidesWithThisEntityProcedure {
 											world.addFreshEntity(entityToSpawn);
 										}
 									}
-									if (world instanceof ServerLevel && entity.isAlive())
-										entity.discard();
-									MinecraftForge.EVENT_BUS.unregister(this);
+									// BUSCA A ENTIDADE PELO UUID em vez de usar a referência stale
+									if (world instanceof ServerLevel _level) {
+										Entity noColorEntity = _level.getEntity(noColorEntityUUID);
+										if (noColorEntity != null && noColorEntity.isAlive())
+											noColorEntity.discard();
+									}
 								}
 							}.start(world, 20);
-							MinecraftForge.EVENT_BUS.unregister(this);
 						}
 					}.start(world, 60);
-					MinecraftForge.EVENT_BUS.unregister(this);
 				}
 			}.start(world, 20);
 		}

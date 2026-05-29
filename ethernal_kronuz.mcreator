@@ -5486,20 +5486,6 @@
       "path": "~/Souvenirs/The Ending Eye"
     },
     {
-      "name": "GiveRadiantLordVerdeCommand",
-      "type": "command",
-      "sortid": 370,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "give_radiant_lord_verde_command",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/command/GiveRadiantLordVerdeCommandCommand.java"
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Active Radiant Lords/Green"
-    },
-    {
       "name": "RemoveRLVerde",
       "type": "command",
       "sortid": 371,
@@ -9374,7 +9360,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/world/inventory/ConfirmRiseGUIRoxoMenu.java"
         ]
       },
-      "path": "~/Factions/Radiant Lords/The Rise/Parchement"
+      "path": "~/Factions/Radiant Lords/The Rise/Parchement/ConfirmGUI"
     },
     {
       "name": "ConfirmRiseGUIVermelho",
@@ -9390,7 +9376,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/world/inventory/ConfirmRiseGUIVermelhoMenu.java"
         ]
       },
-      "path": "~/Factions/Radiant Lords/The Rise/Parchement"
+      "path": "~/Factions/Radiant Lords/The Rise/Parchement/ConfirmGUI"
     },
     {
       "name": "ConfirmRiseGUIVerde",
@@ -9406,7 +9392,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/world/inventory/ConfirmRiseGUIVerdeMenu.java"
         ]
       },
-      "path": "~/Factions/Radiant Lords/The Rise/Parchement"
+      "path": "~/Factions/Radiant Lords/The Rise/Parchement/ConfirmGUI"
     },
     {
       "name": "CloseConfirmRiseGUI",
@@ -10378,26 +10364,6 @@
       "path": "~/Factions/Radiant Lords/The Rise/Parchement"
     },
     {
-      "name": "GiveGreenParchment",
-      "type": "procedure",
-      "sortid": 580,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "give_green_parchment",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/procedures/GiveGreenParchmentProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Factions/Radiant Lords/Active Radiant Lords/Green"
-    },
-    {
       "name": "PreventDropEvent",
       "type": "code",
       "sortid": 581,
@@ -10611,6 +10577,40 @@
         ]
       },
       "path": "~/Factions/Radiant Lords/The Rise/Colors/Red"
+    },
+    {
+      "name": "GiveBackParchement",
+      "type": "command",
+      "sortid": 595,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "give_back_parchement",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/command/GiveBackParchementCommand.java"
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/The Rise/Parchement/Give Back Command"
+    },
+    {
+      "name": "GiveBackParchementCommand",
+      "type": "procedure",
+      "sortid": 596,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "give_back_parchement_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/GiveBackParchementCommandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Factions/Radiant Lords/The Rise/Parchement/Give Back Command"
     }
   ],
   "variable_elements": [
@@ -11115,8 +11115,8 @@
     "en_us": {
       "subtitles.griffin_alive": "",
       "block.ethernal_kronuz.bricks_heaven_slate_slabs": "Heaven Slate Bricks Slabs",
-      "item.ethernal_kronuz.cabuflamanau": "Ca Bu Fla Ma Nau",
       "item.ethernal_kronuz.blade_of_the_void": "§5Blade Of The Void",
+      "item.ethernal_kronuz.cabuflamanau": "Ca Bu Fla Ma Nau",
       "item.ethernal_kronuz.radiant_lord_green_trial_spawn_egg": "§aTitan Kaleb Spawn Egg",
       "biome.ethernal_kronuz.sky_fields": "Sky Fields",
       "key.ethernal_kronuz.griffin_up": "Griffin Upwards",
@@ -11637,7 +11637,16 @@
                   },
                   {
                     "name": "Parchement",
-                    "children": []
+                    "children": [
+                      {
+                        "name": "ConfirmGUI",
+                        "children": []
+                      },
+                      {
+                        "name": "Give Back Command",
+                        "children": []
+                      }
+                    ]
                   },
                   {
                     "name": "Colors",
