@@ -10119,7 +10119,7 @@
       "type": "procedure",
       "sortid": 573,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "radiant_lord_no_color_trial_player_collides_with_this_entity",
       "metadata": {
         "files": [
@@ -10834,6 +10834,18 @@
       "name": "AlreadyHasParchement",
       "type": "logic",
       "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "IsSpiritOfRadiantLordPurpleDefeated",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "IsSpiritOfRadiantLordRedDefeated",
+      "type": "logic",
+      "scope": "map",
       "value": "false"
     }
   ],

@@ -26,8 +26,9 @@ public class GiveBackParchementCommandProcedure {
 		} else if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(EthernalKronuzModItems.THE_RISE_PARCHMENT.get())) : false) {
 			if (entity instanceof Player _player && !_player.level.isClientSide())
 				_player.displayClientMessage(new TextComponent("You already have The Rise Parchement dumb ass"), (true));
+		} else {
+			if (entity instanceof Player _player && !_player.level.isClientSide())
+				_player.displayClientMessage(new TextComponent("You do not have access do this command"), (true));
 		}
-		if (entity instanceof Player _player && !_player.level.isClientSide())
-			_player.displayClientMessage(new TextComponent("You do not have access do this command"), (true));
 	}
 }
