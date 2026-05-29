@@ -2,16 +2,16 @@
   "_fv": 39,
   "_type": "musicdisc",
   "definition": {
-    "name": "Minerar Mais Um Pouco",
-    "texture": "music_disc_minerar",
-    "description": "João Sozinho",
+    "name": "Fuck Minipreço",
+    "texture": "music_disc_cabuflamanau",
+    "description": "Lil Torpedo",
     "creativeTab": {
       "value": "CUSTOM:CreativeTab"
     },
     "specialInfo": [],
     "hasGlow": false,
     "music": {
-      "value": "CUSTOM:minerar_mais_um_pouco"
+      "value": "CUSTOM:fuck_minipreco"
     },
     "lengthInTicks": 100,
     "analogOutput": 0

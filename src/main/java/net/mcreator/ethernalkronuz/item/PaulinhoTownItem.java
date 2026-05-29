@@ -9,8 +9,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModTabs;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModSounds;
 
-public class PixaFreestyleItem extends RecordItem {
-	public PixaFreestyleItem() {
-		super(0, EthernalKronuzModSounds.REGISTRY.get(new ResourceLocation("ethernal_kronuz:pixa_freestyle")), new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).stacksTo(1).rarity(Rarity.RARE));
+public class PaulinhoTownItem extends RecordItem {
+	public PaulinhoTownItem() {
+		super(0, EthernalKronuzModSounds.REGISTRY.get(new ResourceLocation("ethernal_kronuz:paulinho_town")), new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).stacksTo(1).rarity(Rarity.RARE));
 	}
 }
