@@ -15,6 +15,7 @@ import net.mcreator.ethernalkronuz.client.renderer.WarperRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.TerraBladeProjectileRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.TechnomortoRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.TechnobaldeRenderer;
+import net.mcreator.ethernalkronuz.client.renderer.RadiantLordRedTrialRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.RadiantLordPurpleTrialRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.RadiantLordNoColorTrialRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.RadiantLordGreenTrialRenderer;
@@ -41,5 +42,6 @@ public class EthernalKronuzModEntityRenderers {
 		event.registerEntityRenderer(EthernalKronuzModEntities.TERRA_BLADE_PROJECTILE.get(), TerraBladeProjectileRenderer::new);
 		event.registerEntityRenderer(EthernalKronuzModEntities.DINO_VASCO.get(), DinoVascoRenderer::new);
 		event.registerEntityRenderer(EthernalKronuzModEntities.RADIANT_LORD_PURPLE_TRIAL.get(), RadiantLordPurpleTrialRenderer::new);
+		event.registerEntityRenderer(EthernalKronuzModEntities.RADIANT_LORD_RED_TRIAL.get(), RadiantLordRedTrialRenderer::new);
 	}
 }
