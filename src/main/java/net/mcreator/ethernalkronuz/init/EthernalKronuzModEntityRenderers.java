@@ -35,5 +35,6 @@ public class EthernalKronuzModEntityRenderers {
 		event.registerEntityRenderer(EthernalKronuzModEntities.TERRA_BLADE_PROJECTILE.get(), TerraBladeProjectileRenderer::new);
 		event.registerEntityRenderer(EthernalKronuzModEntities.DIVINE_BOW.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(EthernalKronuzModEntities.SKULL_DAMNATION.get(), SkullDamnationRenderer::new);
+		event.registerEntityRenderer(EthernalKronuzModEntities.PURPLE_FLAME.get(), ThrownItemRenderer::new);
 	}
 }

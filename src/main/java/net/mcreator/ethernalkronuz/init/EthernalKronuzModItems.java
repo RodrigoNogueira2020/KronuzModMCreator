@@ -26,6 +26,7 @@ import net.mcreator.ethernalkronuz.item.SafiraItem;
 import net.mcreator.ethernalkronuz.item.RLVermelhoArmorItem;
 import net.mcreator.ethernalkronuz.item.RLVerdeArmorItem;
 import net.mcreator.ethernalkronuz.item.RLRoxoArmourItem;
+import net.mcreator.ethernalkronuz.item.PurpleFlameItem;
 import net.mcreator.ethernalkronuz.item.PretoDaAmadoraItem;
 import net.mcreator.ethernalkronuz.item.NokkiaHammerItem;
 import net.mcreator.ethernalkronuz.item.NecromancerItem;
@@ -257,6 +258,7 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> JOTUNHEIM_FRAME = block(EthernalKronuzModBlocks.JOTUNHEIM_FRAME, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
 	public static final RegistryObject<Item> MULTI_TOOL = REGISTRY.register("multi_tool", () -> new MultiToolItem());
 	public static final RegistryObject<Item> FLAME_OF_DAMNATION = REGISTRY.register("flame_of_damnation", () -> new FlameOfDamnationItem());
+	public static final RegistryObject<Item> PURPLE_FLAME = REGISTRY.register("purple_flame", () -> new PurpleFlameItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

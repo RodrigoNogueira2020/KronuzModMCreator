@@ -10606,9 +10606,9 @@
       "registry_name": "jotunheim_frame",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/models/block/jotunheim_frame.json",
-          "src/main/resources/assets/ethernal_kronuz/blockstates/jotunheim_frame.json",
           "src/main/java/net/mcreator/ethernalkronuz/block/JotunheimFrameBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/blockstates/jotunheim_frame.json",
+          "src/main/resources/assets/ethernal_kronuz/models/block/jotunheim_frame.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/jotunheim_frame.json"
         ]
       },
@@ -10687,8 +10687,8 @@
       "registry_name": "skull_damnation",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/SkullDamnationRenderer.java",
           "src/main/java/net/mcreator/ethernalkronuz/entity/SkullDamnationEntity.java",
+          "src/main/java/net/mcreator/ethernalkronuz/client/renderer/SkullDamnationRenderer.java",
           "src/main/java/net/mcreator/ethernalkronuz/entity/model/SkullDamnationModel.java",
           "src/main/java/net/mcreator/ethernalkronuz/entity/layer/SkullDamnationLayer.java"
         ]
@@ -10807,6 +10807,69 @@
             "name": "world",
             "type": "world"
           }
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "PurpleFlame",
+      "type": "rangeditem",
+      "sortid": 610,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_flame",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/item/PurpleFlameItem.java",
+          "src/main/java/net/mcreator/ethernalkronuz/entity/PurpleFlameEntity.java",
+          "src/main/resources/assets/ethernal_kronuz/models/item/purple_flame.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "PurpleFlameWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 611,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_flame_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/procedures/PurpleFlameWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "PurpleFlameParticle",
+      "type": "particle",
+      "sortid": 612,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_flame_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ethernalkronuz/client/particle/PurpleFlameParticleParticle.java",
+          "src/main/resources/assets/ethernal_kronuz/particles/purple_flame_particle.json"
         ]
       },
       "path": "~/Misc"
@@ -11237,8 +11300,8 @@
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
       "item.ethernal_kronuz.multi_tool": "Multi Tool",
       "advancements.bt_achievement.descr": "Juntar-se aos Big Testa",
-      "advancements.rl_verde_achievement.title": "Carregado até ao limite",
       "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
+      "advancements.rl_verde_achievement.title": "Carregado até ao limite",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_atention": "Atention",
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
@@ -11554,6 +11617,7 @@
       "key.ethernal_kronuz.null_entity_key_bind": "Null Transformation",
       "gui.ethernal_kronuz.gui_faction_book.button_adc": "adc",
       "block.ethernal_kronuz.cracked_heaven_slate_bricks": "Cracked Heaven Slate Bricks",
+      "item.ethernal_kronuz.purple_flame": "Purple Flame",
       "entity.ethernal_kronuz.ginuka_power_setup": "Ginuka Power Setup",
       "subtitles.technoblade_never_dies": "",
       "item.ethernal_kronuz.freicken.desc": "Freicken",

@@ -22,7 +22,6 @@ import net.minecraft.world.item.SpawnEggItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.projectile.ThrownPotion;
-import net.minecraft.world.entity.projectile.Arrow;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.RangedAttackMob;
@@ -130,8 +129,8 @@ public class SkullDamnationEntity extends TamableAnimal implements RangedAttackM
 	protected void registerGoals() {
 		super.registerGoals();
 		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Monster.class, false, true));
-		this.goalSelector.addGoal(2, new FollowOwnerGoal(this, 1.5, (float) 3, (float) 20, false));
-		this.goalSelector.addGoal(1, new SkullDamnationEntity.RangedAttackGoal(this, 1.25, 10, 8f) {
+		this.goalSelector.addGoal(2, new FollowOwnerGoal(this, 2, (float) 3, (float) 10, false));
+		this.goalSelector.addGoal(1, new SkullDamnationEntity.RangedAttackGoal(this, 1.25, 20, 8f) {
 			@Override
 			public boolean canContinueToUse() {
 				return this.canUse();
@@ -238,6 +237,11 @@ public class SkullDamnationEntity extends TamableAnimal implements RangedAttackM
 	}
 
 	@Override
+	public SoundEvent getAmbientSound() {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.campfire.crackle"));
+	}
+
+	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
 	}
@@ -259,6 +263,10 @@ public class SkullDamnationEntity extends TamableAnimal implements RangedAttackM
 		if (source.getDirectEntity() instanceof Player)
 			return false;
 		if (source.getDirectEntity() instanceof ThrownPotion || source.getDirectEntity() instanceof AreaEffectCloud)
+			return false;
+		if (source.getDirectEntity() instanceof Mob)
+			return false;
+		if (source == DamageSource.GENERIC)
 			return false;
 		if (source == DamageSource.FALL)
 			return false;
@@ -353,12 +361,7 @@ public class SkullDamnationEntity extends TamableAnimal implements RangedAttackM
 
 	@Override
 	public void performRangedAttack(LivingEntity target, float flval) {
-		Arrow entityarrow = new Arrow(this.level, this);
-		double d0 = target.getY() + target.getEyeHeight() - 1.1;
-		double d1 = target.getX() - this.getX();
-		double d3 = target.getZ() - this.getZ();
-		entityarrow.shoot(d1, d0 - entityarrow.getY() + Math.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 1.6F, 12.0F);
-		level.addFreshEntity(entityarrow);
+		PurpleFlameEntity.shoot(this, target);
 	}
 
 	@Override
@@ -399,6 +402,8 @@ public class SkullDamnationEntity extends TamableAnimal implements RangedAttackM
 		builder = builder.add(Attributes.ARMOR, 2);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 6);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.1);
+		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 0.1);
 		builder = builder.add(Attributes.FLYING_SPEED, 20);
 		return builder;
 	}

@@ -21,6 +21,7 @@ import net.mcreator.ethernalkronuz.entity.TerraBladeProjectileEntity;
 import net.mcreator.ethernalkronuz.entity.TechnomortoEntity;
 import net.mcreator.ethernalkronuz.entity.TechnobaldeEntity;
 import net.mcreator.ethernalkronuz.entity.SkullDamnationEntity;
+import net.mcreator.ethernalkronuz.entity.PurpleFlameEntity;
 import net.mcreator.ethernalkronuz.entity.NullEntityEntity;
 import net.mcreator.ethernalkronuz.entity.GriffinAnimatedEntity;
 import net.mcreator.ethernalkronuz.entity.GinukaPowerSetupEntity;
@@ -63,6 +64,8 @@ public class EthernalKronuzModEntities {
 			EntityType.Builder.<DivineBowEntity>of(DivineBowEntity::new, MobCategory.MISC).setCustomClientFactory(DivineBowEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<SkullDamnationEntity>> SKULL_DAMNATION = register("skull_damnation", EntityType.Builder.<SkullDamnationEntity>of(SkullDamnationEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SkullDamnationEntity::new).fireImmune().sized(1f, 1f));
+	public static final RegistryObject<EntityType<PurpleFlameEntity>> PURPLE_FLAME = register("projectile_purple_flame",
+			EntityType.Builder.<PurpleFlameEntity>of(PurpleFlameEntity::new, MobCategory.MISC).setCustomClientFactory(PurpleFlameEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
