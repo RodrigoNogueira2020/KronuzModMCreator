@@ -10155,7 +10155,7 @@
           "src/main/resources/assets/ethernal_kronuz/models/item/divine_arrow.json"
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Misc/Divine Bow"
     },
     {
       "name": "DivineArrowCrafting",
@@ -10169,7 +10169,7 @@
           "src/main/resources/data/ethernal_kronuz/recipes/divine_arrow_crafting.json"
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Misc/Divine Bow"
     },
     {
       "name": "GriffinFeather",
@@ -10199,7 +10199,7 @@
           "src/main/resources/assets/ethernal_kronuz/models/item/ygg_wood_stick.json"
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Dimensions/Asgard/Blocos/YggWood"
     },
     {
       "name": "YggWoodStickCrafting",
@@ -10213,7 +10213,7 @@
           "src/main/resources/data/ethernal_kronuz/recipes/ygg_wood_stick_crafting.json"
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Dimensions/Asgard/Blocos/YggWood"
     },
     {
       "name": "YggWoodToFenceGate",
@@ -10595,7 +10595,7 @@
           "src/main/java/net/mcreator/ethernalkronuz/item/DivineBowItem.java"
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Misc/Divine Bow"
     },
     {
       "name": "JotunheimFrame",
@@ -10626,7 +10626,7 @@
           "src/main/resources/data/ethernal_kronuz/recipes/divine_bow_craft.json"
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Misc/Divine Bow"
     },
     {
       "name": "MultiTool",
@@ -10672,11 +10672,11 @@
       "registry_name": "flame_of_damnation",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/item/FlameOfDamnationItem.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/flame_of_damnation.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/flame_of_damnation.json",
+          "src/main/java/net/mcreator/ethernalkronuz/item/FlameOfDamnationItem.java"
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Misc/Damnation"
     },
     {
       "name": "SkullDamnation",
@@ -10687,13 +10687,13 @@
       "registry_name": "skull_damnation",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/ethernalkronuz/entity/SkullDamnationEntity.java",
           "src/main/java/net/mcreator/ethernalkronuz/client/renderer/SkullDamnationRenderer.java",
-          "src/main/java/net/mcreator/ethernalkronuz/entity/model/SkullDamnationModel.java",
-          "src/main/java/net/mcreator/ethernalkronuz/entity/layer/SkullDamnationLayer.java"
+          "src/main/java/net/mcreator/ethernalkronuz/entity/SkullDamnationEntity.java",
+          "src/main/java/net/mcreator/ethernalkronuz/entity/layer/SkullDamnationLayer.java",
+          "src/main/java/net/mcreator/ethernalkronuz/entity/model/SkullDamnationModel.java"
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Misc/Damnation"
     },
     {
       "name": "FlameOfDamnationRightclicked",
@@ -10733,7 +10733,7 @@
           }
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Misc/Damnation"
     },
     {
       "name": "SkullDamnationEntityDies",
@@ -10753,7 +10753,7 @@
           }
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Misc/Damnation"
     },
     {
       "name": "SkullDamnationOnInitialEntitySpawn",
@@ -10773,7 +10773,7 @@
           }
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Misc/Damnation"
     },
     {
       "name": "SkullDamnationOnEntityTickUpdate",
@@ -10809,7 +10809,7 @@
           }
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Misc/Damnation"
     },
     {
       "name": "PurpleFlame",
@@ -10821,11 +10821,11 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/ethernalkronuz/item/PurpleFlameItem.java",
-          "src/main/java/net/mcreator/ethernalkronuz/entity/PurpleFlameEntity.java",
-          "src/main/resources/assets/ethernal_kronuz/models/item/purple_flame.json"
+          "src/main/resources/assets/ethernal_kronuz/models/item/purple_flame.json",
+          "src/main/java/net/mcreator/ethernalkronuz/entity/PurpleFlameEntity.java"
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Misc/Damnation"
     },
     {
       "name": "PurpleFlameWhileProjectileFlyingTick",
@@ -10857,7 +10857,7 @@
           }
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Misc/Damnation"
     },
     {
       "name": "PurpleFlameParticle",
@@ -10872,7 +10872,7 @@
           "src/main/resources/assets/ethernal_kronuz/particles/purple_flame_particle.json"
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Misc/Damnation"
     }
   ],
   "variable_elements": [
@@ -11300,8 +11300,8 @@
       "block.ethernal_kronuz.cobbled_heaven_stone": "Cobbled Heaven Stone",
       "item.ethernal_kronuz.multi_tool": "Multi Tool",
       "advancements.bt_achievement.descr": "Juntar-se aos Big Testa",
-      "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "advancements.rl_verde_achievement.title": "Carregado até ao limite",
+      "item.ethernal_kronuz.rl_roxo_armour_boots": "Gargantuan\u0027s Boots",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.label_atention": "Atention",
       "item.ethernal_kronuz.rl_vermelho_armor_leggings": "Azakana\u0027s Leggings",
       "advancements.full_set_airport_steel.title": "No Shower Time?",
@@ -12232,7 +12232,16 @@
       },
       {
         "name": "Misc",
-        "children": []
+        "children": [
+          {
+            "name": "Divine Bow",
+            "children": []
+          },
+          {
+            "name": "Damnation",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Tags",
