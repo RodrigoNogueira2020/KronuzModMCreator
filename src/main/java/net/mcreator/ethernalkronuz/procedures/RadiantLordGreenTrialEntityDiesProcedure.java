@@ -30,6 +30,7 @@ import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
 import net.mcreator.ethernalkronuz.network.EthernalKronuzModVariables;
+import net.mcreator.ethernalkronuz.entity.RadiantLordRedTrialEntity;
 import net.mcreator.ethernalkronuz.entity.RadiantLordPurpleTrialEntity;
 import net.mcreator.ethernalkronuz.entity.RadiantLordGreenTrialEntity;
 
@@ -39,7 +40,14 @@ public class RadiantLordGreenTrialEntityDiesProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if ((entity instanceof RadiantLordGreenTrialEntity || entity instanceof RadiantLordPurpleTrialEntity || entity instanceof RadiantLordGreenTrialEntity) && (sourceentity instanceof Player || sourceentity instanceof ServerPlayer)) {
+		if ((entity instanceof RadiantLordGreenTrialEntity || entity instanceof RadiantLordPurpleTrialEntity || entity instanceof RadiantLordRedTrialEntity) && (sourceentity instanceof ServerPlayer || sourceentity instanceof Player)) {
+			if (entity instanceof RadiantLordPurpleTrialEntity) {
+				EthernalKronuzModVariables.MapVariables.get(world).IsSpiritOfRadiantLordPurpleDefeated = true;
+				EthernalKronuzModVariables.MapVariables.get(world).syncData(world);
+			} else if (entity instanceof RadiantLordRedTrialEntity) {
+				EthernalKronuzModVariables.MapVariables.get(world).IsSpiritOfRadiantLordRedDefeated = true;
+				EthernalKronuzModVariables.MapVariables.get(world).syncData(world);
+			}
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
 						"/stopsound @a music ethernal_kronuz:template_boss_music");
@@ -177,8 +185,8 @@ public class RadiantLordGreenTrialEntityDiesProcedure {
 						private void run() {
 							if (entity instanceof RadiantLordPurpleTrialEntity) {
 								RiseRadiantLordRoxoAfterTheRiseConfirmationProcedure.execute(world, x, y, z, entity, sourceentity);
-							} else if (entity instanceof RadiantLordGreenTrialEntity) {
-								RiseRadiantLordVerdeAfterTheRiseConfirmationProcedure.execute(world, x, y, z, entity, sourceentity);
+							} else if (entity instanceof RadiantLordRedTrialEntity) {
+								RiseRadiantLordVermelhoAfterTheRiseConfirmationProcedure.execute(world, x, y, z, entity, sourceentity);
 							}
 							MinecraftForge.EVENT_BUS.unregister(this);
 						}

@@ -28,6 +28,13 @@ public class RiseRadiantLordRoxoAfterTheRiseConfirmationProcedure {
 				&& ((sourceentity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordRoxoPlayer
 						|| (sourceentity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordVerdePlayer
 						|| (sourceentity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordVermelhoPlayer))) {
+			{
+				boolean _setval = false;
+				sourceentity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.HasMinimumForTheRiseRoxo = _setval;
+					capability.syncPlayerVariables(sourceentity);
+				});
+			}
 			if (!world.isClientSide()) {
 				MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
 				if (_mcserv != null)
@@ -113,13 +120,6 @@ public class RiseRadiantLordRoxoAfterTheRiseConfirmationProcedure {
 									}
 									if (sourceentity instanceof Player _player)
 										_player.closeContainer();
-									{
-										boolean _setval = false;
-										sourceentity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-											capability.HasMinimumForTheRiseRoxo = _setval;
-											capability.syncPlayerVariables(sourceentity);
-										});
-									}
 									{
 										boolean _setval = true;
 										sourceentity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

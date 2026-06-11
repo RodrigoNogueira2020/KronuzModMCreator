@@ -28,8 +28,8 @@ public class TheRiseParchmentRightclickedProcedure {
 		if (entity == null)
 			return;
 		if (!((entity.level.dimension()) == (ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("ethernal_kronuz:jotunheim"))))) {
-			if ((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).HasMinimumForTheRiseRoxo) {
-				if (EthernalKronuzModVariables.MapVariables.get(world).IsSpiritOfRadiantLordPurpleDefeated == false) {
+			if (EthernalKronuzModVariables.MapVariables.get(world).IsSpiritOfRadiantLordPurpleDefeated == false) {
+				if ((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).HasMinimumForTheRiseRoxo) {
 					{
 						if (entity instanceof ServerPlayer _ent) {
 							BlockPos _bpos = new BlockPos(x, y, z);
@@ -46,13 +46,16 @@ public class TheRiseParchmentRightclickedProcedure {
 							}, _bpos);
 						}
 					}
+				} else {
+					if (entity instanceof Player _player && !_player.level.isClientSide())
+						_player.displayClientMessage(new TextComponent("\u00A78Minimum requirements not achieved"), (true));
 				}
 			} else {
 				if (entity instanceof Player _player && !_player.level.isClientSide())
 					_player.displayClientMessage(new TextComponent("\u00A78The Spirit of Gargantuan was defeated"), (true));
 			}
-			if ((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).HasMinimumForTheRiseVermelho) {
-				if (EthernalKronuzModVariables.MapVariables.get(world).IsSpiritOfRadiantLordRedDefeated == false) {
+			if (EthernalKronuzModVariables.MapVariables.get(world).IsSpiritOfRadiantLordRedDefeated == false) {
+				if ((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).HasMinimumForTheRiseVermelho) {
 					{
 						if (entity instanceof ServerPlayer _ent) {
 							BlockPos _bpos = new BlockPos(x, y, z);
@@ -69,6 +72,9 @@ public class TheRiseParchmentRightclickedProcedure {
 							}, _bpos);
 						}
 					}
+				} else {
+					if (entity instanceof Player _player && !_player.level.isClientSide())
+						_player.displayClientMessage(new TextComponent("\u00A78Minimum requirements not achieved"), (true));
 				}
 			} else {
 				if (entity instanceof Player _player && !_player.level.isClientSide())
