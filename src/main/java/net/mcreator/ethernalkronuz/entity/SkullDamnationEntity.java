@@ -264,6 +264,10 @@ public class SkullDamnationEntity extends TamableAnimal implements RangedAttackM
 			return false;
 		if (source.getDirectEntity() instanceof ThrownPotion || source.getDirectEntity() instanceof AreaEffectCloud)
 			return false;
+		if (source.getDirectEntity() instanceof Mob)
+			return false;
+		if (source == DamageSource.GENERIC)
+			return false;
 		if (source == DamageSource.FALL)
 			return false;
 		if (source == DamageSource.CACTUS)
