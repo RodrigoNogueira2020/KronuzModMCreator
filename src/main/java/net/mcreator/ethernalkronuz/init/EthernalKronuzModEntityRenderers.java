@@ -20,6 +20,7 @@ import net.mcreator.ethernalkronuz.client.renderer.NullEntityRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.GriffinAnimatedRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.GinukaPowerSetupRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.BlessingRenderer;
+import net.mcreator.ethernalkronuz.client.renderer.ArrowDivineRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class EthernalKronuzModEntityRenderers {
@@ -36,5 +37,6 @@ public class EthernalKronuzModEntityRenderers {
 		event.registerEntityRenderer(EthernalKronuzModEntities.DIVINE_BOW.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(EthernalKronuzModEntities.SKULL_DAMNATION.get(), SkullDamnationRenderer::new);
 		event.registerEntityRenderer(EthernalKronuzModEntities.PURPLE_FLAME.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(EthernalKronuzModEntities.ARROW_DIVINE.get(), ArrowDivineRenderer::new);
 	}
 }

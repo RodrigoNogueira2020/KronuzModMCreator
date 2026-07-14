@@ -1,0 +1,37 @@
+{
+  "_fv": 39,
+  "_type": "rangeditem",
+  "definition": {
+    "renderType": 0,
+    "texture": "divine_arrow",
+    "customModelName": "Normal",
+    "name": "Divine Arrow",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:CreativeTab"
+    },
+    "stackSize": 64,
+    "ammoItem": {
+      "value": ""
+    },
+    "shootConstantly": false,
+    "usageCount": 0,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "hasGlow": false,
+    "animation": "none",
+    "enableMeleeDamage": false,
+    "damageVsEntity": 12.0,
+    "bulletPower": 1.0,
+    "bulletDamage": 5.0,
+    "bulletKnockback": 5,
+    "bulletParticles": false,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": "CUSTOM:ArrowDivine"
+    },
+    "bulletModel": "Modeldivine_arrow_Converted",
+    "customBulletModelTexture": "divine_arrow_model.png"
+  }
+}

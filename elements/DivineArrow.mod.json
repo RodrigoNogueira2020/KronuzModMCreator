@@ -2,9 +2,9 @@
   "_fv": 39,
   "_type": "item",
   "definition": {
-    "renderType": 0,
+    "renderType": 1,
     "texture": "divine_arrow",
-    "customModelName": "Normal",
+    "customModelName": "divine_arrow2:default",
     "name": "Divine Arrow",
     "rarity": "COMMON",
     "creativeTab": {

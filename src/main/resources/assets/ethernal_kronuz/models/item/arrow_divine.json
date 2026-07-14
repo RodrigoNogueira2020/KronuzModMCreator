@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ethernal_kronuz:items/terra_blade_projectile"
+    "layer0": "ethernal_kronuz:items/divine_arrow"
   },
   "display": {
     "thirdperson_righthand": {

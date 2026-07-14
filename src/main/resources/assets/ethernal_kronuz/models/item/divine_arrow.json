@@ -1,6 +1,19 @@
 {
-  "parent": "item/generated",
+  "parent": "ethernal_kronuz:custom/divine_arrow",
   "textures": {
-    "layer0": "ethernal_kronuz:items/divine_arrow"
+    "0": "ethernal_kronuz:blocks/divine_arrow_model",
+  },
+  "perspectives":
+  {
+      "gui":
+      {
+          "parent": "item/generated",
+          "textures":
+          {
+              "layer0": "ethernal_kronuz:items/divine_arrow"
+          },
+          "gui_light": "front"
+      }
   }
+
 }

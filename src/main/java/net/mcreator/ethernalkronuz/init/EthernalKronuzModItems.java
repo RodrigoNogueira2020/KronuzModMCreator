@@ -70,6 +70,7 @@ import net.mcreator.ethernalkronuz.item.BladeOfAiportSteelSwordItem;
 import net.mcreator.ethernalkronuz.item.BifrostKeyItem;
 import net.mcreator.ethernalkronuz.item.BackpackItem;
 import net.mcreator.ethernalkronuz.item.AwayItem;
+import net.mcreator.ethernalkronuz.item.ArrowDivineItem;
 import net.mcreator.ethernalkronuz.item.AngolaeNossaItem;
 import net.mcreator.ethernalkronuz.item.AlloySetupItem;
 import net.mcreator.ethernalkronuz.item.AirportSteelShovelHeadItem;
@@ -259,6 +260,7 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> MULTI_TOOL = REGISTRY.register("multi_tool", () -> new MultiToolItem());
 	public static final RegistryObject<Item> FLAME_OF_DAMNATION = REGISTRY.register("flame_of_damnation", () -> new FlameOfDamnationItem());
 	public static final RegistryObject<Item> PURPLE_FLAME = REGISTRY.register("purple_flame", () -> new PurpleFlameItem());
+	public static final RegistryObject<Item> ARROW_DIVINE = REGISTRY.register("arrow_divine", () -> new ArrowDivineItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
