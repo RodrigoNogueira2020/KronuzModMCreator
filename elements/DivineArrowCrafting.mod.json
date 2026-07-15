@@ -38,7 +38,7 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:DivineArrow"
+      "value": "CUSTOM:ArrowDivine"
     },
     "name": "divine_arrow_crafting",
     "namespace": "mod"

@@ -20,7 +20,7 @@ import net.minecraft.network.chat.Component;
 
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModTabs;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModItems;
-import net.mcreator.ethernalkronuz.entity.DivineBowEntity;
+import net.mcreator.ethernalkronuz.entity.ArrowDivineEntity;
 
 import java.util.List;
 
@@ -69,7 +69,7 @@ public class DivineBowItem extends BowItem {
 					}
 				}
 				if (entity.getAbilities().instabuild || stack != ItemStack.EMPTY) {
-					DivineBowEntity entityarrow = DivineBowEntity.shoot(world, entity, world.getRandom(), 1f, 5, 5);
+					ArrowDivineEntity entityarrow = ArrowDivineEntity.shoot(world, entity, world.getRandom(), 1f, 5, 5);
 					itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 					if (entity.getAbilities().instabuild) {
 						entityarrow.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;

@@ -61,7 +61,6 @@ import net.mcreator.ethernalkronuz.item.ErikaItem;
 import net.mcreator.ethernalkronuz.item.DivineWaterItem;
 import net.mcreator.ethernalkronuz.item.DivineCrystalShardItem;
 import net.mcreator.ethernalkronuz.item.DivineBowItem;
-import net.mcreator.ethernalkronuz.item.DivineArrowItem;
 import net.mcreator.ethernalkronuz.item.DeepSeaBootItem;
 import net.mcreator.ethernalkronuz.item.CristalizedDivineWaterItem;
 import net.mcreator.ethernalkronuz.item.CabuflamanauItem;
@@ -251,7 +250,6 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> RL_VERDE_ARMOR_CHESTPLATE = REGISTRY.register("rl_verde_armor_chestplate", () -> new RLVerdeArmorItem.Chestplate());
 	public static final RegistryObject<Item> RL_VERDE_ARMOR_LEGGINGS = REGISTRY.register("rl_verde_armor_leggings", () -> new RLVerdeArmorItem.Leggings());
 	public static final RegistryObject<Item> RL_VERDE_ARMOR_BOOTS = REGISTRY.register("rl_verde_armor_boots", () -> new RLVerdeArmorItem.Boots());
-	public static final RegistryObject<Item> DIVINE_ARROW = REGISTRY.register("divine_arrow", () -> new DivineArrowItem());
 	public static final RegistryObject<Item> GRIFFIN_FEATHER = REGISTRY.register("griffin_feather", () -> new GriffinFeatherItem());
 	public static final RegistryObject<Item> YGG_WOOD_STICK = REGISTRY.register("ygg_wood_stick", () -> new YggWoodStickItem());
 	public static final RegistryObject<Item> BIFROST_KEY = REGISTRY.register("bifrost_key", () -> new BifrostKeyItem());

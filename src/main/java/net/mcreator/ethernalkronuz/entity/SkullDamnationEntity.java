@@ -397,14 +397,14 @@ public class SkullDamnationEntity extends TamableAnimal implements RangedAttackM
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 20);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.8);
 		builder = builder.add(Attributes.MAX_HEALTH, 0);
 		builder = builder.add(Attributes.ARMOR, 2);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 6);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.1);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 0.1);
-		builder = builder.add(Attributes.FLYING_SPEED, 20);
+		builder = builder.add(Attributes.FLYING_SPEED, 0.8);
 		return builder;
 	}
 

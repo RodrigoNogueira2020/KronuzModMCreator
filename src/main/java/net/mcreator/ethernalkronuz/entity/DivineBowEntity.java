@@ -48,12 +48,12 @@ public class DivineBowEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public ItemStack getItem() {
-		return new ItemStack(EthernalKronuzModItems.DIVINE_ARROW.get());
+		return new ItemStack(EthernalKronuzModItems.ARROW_DIVINE.get());
 	}
 
 	@Override
 	protected ItemStack getPickupItem() {
-		return new ItemStack(EthernalKronuzModItems.DIVINE_ARROW.get());
+		return new ItemStack(EthernalKronuzModItems.ARROW_DIVINE.get());
 	}
 
 	@Override
@@ -65,8 +65,6 @@ public class DivineBowEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	public void tick() {
 		super.tick();
-		if (this.inGround)
-			this.discard();
 	}
 
 	public static DivineBowEntity shoot(Level world, LivingEntity entity, Random random, float power, double damage, int knockback) {
