@@ -30,7 +30,7 @@ public class PreventDropEvent {
 			return;
 		ItemStack droppedItem = event.getEntityItem().getItem();
 		Player player = event.getPlayer();
-		if (isRestrictedItem(droppedItem)) {
+		if (isRestrictedItem(droppedItem, player)) {
 			event.setCanceled(true);
 			boolean success = player.getInventory().add(droppedItem.copy());
 			if (!success) {
@@ -54,7 +54,7 @@ public class PreventDropEvent {
 				Slot clickedSlot = screen.getSlotUnderMouse();
 				if (clickedSlot != null && clickedSlot.hasItem()) {
 					ItemStack clickedItem = clickedSlot.getItem();
-					if (isRestrictedItem(clickedItem)) {
+					if (isRestrictedItem(clickedItem, player)) {
 						boolean isPlayerInventorySlot = screen.getMenu().getSlot(clickedSlot.index).container == player.getInventory();
 						if (!isPlayerInventorySlot) {
 							event.setCanceled(true);
@@ -90,7 +90,7 @@ public class PreventDropEvent {
 		for (Slot slot : container.slots) {
 			if (slot.hasItem()) {
 				ItemStack stack = slot.getItem();
-				if (isRestrictedItem(stack) && !slot.container.equals(player.getInventory())) {
+				if (isRestrictedItem(stack, player) && !slot.container.equals(player.getInventory())) {
 					boolean success = player.getInventory().add(stack.copy());
 					if (success)
 						slot.set(ItemStack.EMPTY);
@@ -113,14 +113,14 @@ public class PreventDropEvent {
 				return;
 			for (int i = 0; i < player.getInventory().getContainerSize(); i++) {
 				ItemStack stack = player.getInventory().getItem(i);
-				if (isRestrictedItem(stack))
+				if (isRestrictedItem(stack, player))
 					player.getInventory().setItem(i, ItemStack.EMPTY);
 			}
 			CuriosApi.getCuriosHelper().getCuriosHandler(player).ifPresent(handler -> {
 				handler.getCurios().forEach((slot, stacksHandler) -> {
 					for (int i = 0; i < stacksHandler.getStacks().getSlots(); i++) {
 						ItemStack stack = stacksHandler.getStacks().getStackInSlot(i);
-						if (isRestrictedItem(stack))
+						if (isRestrictedItem(stack, player))
 							stacksHandler.getStacks().setStackInSlot(i, ItemStack.EMPTY);
 					}
 				});
@@ -136,7 +136,7 @@ public class PreventDropEvent {
 		Player player = event.getPlayer();
 		for (int i = 0; i < original.getInventory().getContainerSize(); i++) {
 			ItemStack stack = original.getInventory().getItem(i);
-			if (isRestrictedItem(stack))
+			if (isRestrictedItem(stack, player))
 				player.getInventory().setItem(i, stack.copy());
 		}
 	}
@@ -161,13 +161,13 @@ public class PreventDropEvent {
 		}
 	}
 
-	private static boolean isRestrictedItem(ItemStack stack) {
+	private static boolean isRestrictedItem(ItemStack stack, @javax.annotation.Nullable Player player) {
 		return stack.getItem() == EthernalKronuzModItems.TERRA_BLADE.get() || stack.getItem() == EthernalKronuzModItems.BLADE_OF_THE_VOID.get() || stack.getItem() == EthernalKronuzModItems.MURASAMA.get()
 				|| stack.getItem() == EthernalKronuzModItems.RL_ROXO_ARMOUR_HELMET.get() || stack.getItem() == EthernalKronuzModItems.RL_ROXO_ARMOUR_CHESTPLATE.get() || stack.getItem() == EthernalKronuzModItems.RL_ROXO_ARMOUR_LEGGINGS.get()
 				|| stack.getItem() == EthernalKronuzModItems.RL_ROXO_ARMOUR_BOOTS.get() || stack.getItem() == EthernalKronuzModItems.RL_VERMELHO_ARMOR_HELMET.get() || stack.getItem() == EthernalKronuzModItems.RL_VERMELHO_ARMOR_CHESTPLATE.get()
 				|| stack.getItem() == EthernalKronuzModItems.RL_VERMELHO_ARMOR_LEGGINGS.get() || stack.getItem() == EthernalKronuzModItems.RL_VERMELHO_ARMOR_BOOTS.get() || stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_HELMET.get()
 				|| stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_CHESTPLATE.get() || stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_LEGGINGS.get() || stack.getItem() == EthernalKronuzModItems.RL_VERDE_ARMOR_BOOTS.get()
-				|| stack.getItem() == EthernalKronuzModItems.BIFROST_KEY.get() || stack.getItem() == EthernalKronuzModItems.THE_RISE_PARCHMENT.get();
+				|| stack.getItem() == EthernalKronuzModItems.BIFROST_KEY.get();
 	}
 
 	private static boolean isItemInCurios(Player player, ItemStack stack) {

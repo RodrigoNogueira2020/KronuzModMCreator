@@ -52,6 +52,7 @@ public class EthernalKronuzModSounds {
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "minerar_mais_um_pouco"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "minerar_mais_um_pouco")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "aesir_rift_opening"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "aesir_rift_opening")));
 		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "pixa_freestyle"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "pixa_freestyle")));
+		REGISTRY.put(new ResourceLocation("ethernal_kronuz", "sorl-breathing"), new SoundEvent(new ResourceLocation("ethernal_kronuz", "sorl-breathing")));
 	}
 
 	@SubscribeEvent

@@ -304,5 +304,14 @@
         "stream": true
       }
     ]
+  },
+  "sorl-breathing": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "ethernal_kronuz:sorl-breathing",
+        "stream": false
+      }
+    ]
   }
 }

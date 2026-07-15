@@ -10831,12 +10831,6 @@
       "value": "false"
     },
     {
-      "name": "AlreadyHasParchement",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
       "name": "IsSpiritOfRadiantLordPurpleDefeated",
       "type": "logic",
       "scope": "map",
@@ -11121,6 +11115,14 @@
       ],
       "category": "record",
       "subtitle": ""
+    },
+    {
+      "name": "sorl-breathing",
+      "files": [
+        "sorl-breathing"
+      ],
+      "category": "hostile",
+      "subtitle": ""
     }
   ],
   "language_map": {
@@ -11237,6 +11239,7 @@
       "item.ethernal_kronuz.null_entity_spawn_egg": "Null Spawn Egg",
       "block.ethernal_kronuz.double_glow_plant": "Double Glow Plant",
       "biome.ethernal_kronuz.plains_jotunheim": "Jotunheim",
+      "subtitles.sorl-breathing": "",
       "block.ethernal_kronuz.flowerpotdoubleglowplant": "Flower Pot Double Glow Plant",
       "gui.ethernal_kronuz.confirm_rise_gui_vermelho.button_wait": "Wait",
       "subtitles.mano-vc": "",
