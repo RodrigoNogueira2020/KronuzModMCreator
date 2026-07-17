@@ -20,7 +20,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.Registry;
 import net.minecraft.client.renderer.DimensionSpecialEffects;
 
-import net.mcreator.ethernalkronuz.procedures.NonRLTakeDamageProcedure;
+import net.mcreator.ethernalkronuz.procedures.JotunheimPlayerEntersDimensionProcedure;
 
 import java.util.Set;
 import java.util.HashSet;
@@ -34,7 +34,7 @@ public class JotunheimDimension {
 		@SubscribeEvent
 		public static void registerFillerBlocks(FMLCommonSetupEvent event) {
 			Set<Block> replaceableBlocks = new HashSet<>();
-			replaceableBlocks.add(Blocks.SNOW_BLOCK);
+			replaceableBlocks.add(Blocks.STONE);
 			replaceableBlocks.add(Blocks.SNOW_BLOCK);
 			replaceableBlocks.add(Blocks.STONE);
 			event.enqueueWork(() -> {
@@ -70,7 +70,7 @@ public class JotunheimDimension {
 		double z = entity.getZ();
 		if (event.getTo() == ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("ethernal_kronuz:jotunheim"))) {
 
-			NonRLTakeDamageProcedure.execute(world, entity);
+			JotunheimPlayerEntersDimensionProcedure.execute(entity);
 		}
 	}
 }

@@ -1,6 +1,6 @@
 {
   "display": {
-    "background": "ethernal_kronuz:textures/screens/icon_inst.png",
+    "background": "minecraft:textures/block/stone.png",
     "icon": {
       "item": "ethernal_kronuz:faking_ell_armor_chestplate"
     },

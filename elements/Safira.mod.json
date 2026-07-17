@@ -2,9 +2,9 @@
   "_fv": 39,
   "_type": "musicdisc",
   "definition": {
-    "name": "Kazzio",
+    "name": "Safira",
     "texture": "music_disc_sapphire",
-    "description": "Safira",
+    "description": "Kazzio",
     "creativeTab": {
       "value": "CUSTOM:CreativeTab"
     },

@@ -2,12 +2,12 @@
   "_fv": 39,
   "_type": "achievement",
   "definition": {
-    "achievementName": "Larga-me Carlos!",
-    "achievementDescription": "Juntar-se aos Andarilhos da cave",
+    "achievementName": "Carlos's Sex Toys",
+    "achievementDescription": "Join Andarilhos da Cave",
     "achievementIcon": {
       "value": "CUSTOM:FakingEllArmor.helmet"
     },
-    "background": "icon_inst.png",
+    "background": "Default",
     "disableDisplay": false,
     "showPopup": true,
     "announceToChat": true,

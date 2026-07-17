@@ -25,13 +25,13 @@
         "data": {
           "name": "label_confirm_the_rise",
           "text": {
-            "fixedValue": "Confirm The Rise"
+            "fixedValue": "The Rise"
           },
           "color": {
             "value": -16777216,
             "falpha": 0.0
           },
-          "x": 105,
+          "x": 132,
           "y": 35
         }
       },
@@ -227,7 +227,7 @@
             "falpha": 0.0
           },
           "x": 249,
-          "y": 107
+          "y": 179
         }
       },
       {
@@ -236,7 +236,7 @@
           "name": "button_rise",
           "text": "Rise",
           "onClick": {
-            "name": "RiseRadiantLordVerdeAfterTheRiseConfirmation"
+            "name": "TeleportPlayerToTheTrialChamberGreen"
           },
           "width": 46,
           "height": 20,
@@ -256,6 +256,81 @@
           "height": 20,
           "x": 366,
           "y": 152
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_you_will_be_teleported_to_the_tr",
+          "text": {
+            "fixedValue": "You will be teleported"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 231,
+          "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_to_the_trial_to_claim_your_posit",
+          "text": {
+            "fixedValue": "to The Rise Chamber to"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 231,
+          "y": 98
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_your_position_as_radiant_lord",
+          "text": {
+            "fixedValue": "claim your position as"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 231,
+          "y": 107
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_radiant_lord_are_you_really_rea",
+          "text": {
+            "fixedValue": "Radiant Lord"
+          },
+          "color": {
+            "value": -16738048,
+            "falpha": 0.0
+          },
+          "x": 231,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_are_you_really_ready",
+          "text": {
+            "fixedValue": "Are you REALLY ready?"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 231,
+          "y": 143
         }
       }
     ],

@@ -2,15 +2,18 @@
 package net.mcreator.ethernalkronuz.client.renderer;
 
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
+import net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer;
+import net.minecraft.client.renderer.entity.HumanoidMobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.model.geom.ModelLayers;
+import net.minecraft.client.model.HumanoidModel;
 
 import net.mcreator.ethernalkronuz.entity.TechnobaldeEntity;
-import net.mcreator.ethernalkronuz.client.model.Modeltechnoblade;
 
-public class TechnobaldeRenderer extends MobRenderer<TechnobaldeEntity, Modeltechnoblade<TechnobaldeEntity>> {
+public class TechnobaldeRenderer extends HumanoidMobRenderer<TechnobaldeEntity, HumanoidModel<TechnobaldeEntity>> {
 	public TechnobaldeRenderer(EntityRendererProvider.Context context) {
-		super(context, new Modeltechnoblade(context.bakeLayer(Modeltechnoblade.LAYER_LOCATION)), 0.5f);
+		super(context, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER)), 0.5f);
+		this.addLayer(new HumanoidArmorLayer(this, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR)), new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR))));
 	}
 
 	@Override

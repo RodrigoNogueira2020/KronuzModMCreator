@@ -85,7 +85,7 @@ public class EthernalKronuzModVariables {
 			clone.AsgardDeaths = original.AsgardDeaths;
 			clone.IsNullEntityRL = original.IsNullEntityRL;
 			clone.AlreadyClicked = original.AlreadyClicked;
-			clone.FirstBook = original.FirstBook;
+			clone.FirstFactionBook = original.FirstFactionBook;
 			clone.IsRadiantLord = original.IsRadiantLord;
 			clone.AllowInJotunheim = original.AllowInJotunheim;
 			clone.CoordXBeforeEnterAsgard = original.CoordXBeforeEnterAsgard;
@@ -95,7 +95,11 @@ public class EthernalKronuzModVariables {
 			clone.HasMinimumForTheRiseRoxo = original.HasMinimumForTheRiseRoxo;
 			clone.HasMinimumForTheRiseVerde = original.HasMinimumForTheRiseVerde;
 			clone.HasMinimumForTheRiseVermelho = original.HasMinimumForTheRiseVermelho;
-			clone.skullDamnationSpawned = original.skullDamnationSpawned;
+			clone.CoordXBeforeEnterJotunheim = original.CoordXBeforeEnterJotunheim;
+			clone.CoordYBeforeEnterJotunheim = original.CoordYBeforeEnterJotunheim;
+			clone.CoordZBeforeEnterJotunheim = original.CoordZBeforeEnterJotunheim;
+			clone.DimensionBeforeEnterJotunheim = original.DimensionBeforeEnterJotunheim;
+			clone.TouchRLOnce = original.TouchRLOnce;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -165,6 +169,9 @@ public class EthernalKronuzModVariables {
 		public boolean AsgardPortalOpen = false;
 		public boolean AsgardPortalOpenInAsgard = false;
 		public double NokkiaHammerCountClicks = 0;
+		public boolean ActivateAfterRagnarok = false;
+		public boolean IsSpiritOfRadiantLordPurpleDefeated = false;
+		public boolean IsSpiritOfRadiantLordRedDefeated = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -180,6 +187,9 @@ public class EthernalKronuzModVariables {
 			AsgardPortalOpen = nbt.getBoolean("AsgardPortalOpen");
 			AsgardPortalOpenInAsgard = nbt.getBoolean("AsgardPortalOpenInAsgard");
 			NokkiaHammerCountClicks = nbt.getDouble("NokkiaHammerCountClicks");
+			ActivateAfterRagnarok = nbt.getBoolean("ActivateAfterRagnarok");
+			IsSpiritOfRadiantLordPurpleDefeated = nbt.getBoolean("IsSpiritOfRadiantLordPurpleDefeated");
+			IsSpiritOfRadiantLordRedDefeated = nbt.getBoolean("IsSpiritOfRadiantLordRedDefeated");
 		}
 
 		@Override
@@ -191,6 +201,9 @@ public class EthernalKronuzModVariables {
 			nbt.putBoolean("AsgardPortalOpen", AsgardPortalOpen);
 			nbt.putBoolean("AsgardPortalOpenInAsgard", AsgardPortalOpenInAsgard);
 			nbt.putDouble("NokkiaHammerCountClicks", NokkiaHammerCountClicks);
+			nbt.putBoolean("ActivateAfterRagnarok", ActivateAfterRagnarok);
+			nbt.putBoolean("IsSpiritOfRadiantLordPurpleDefeated", IsSpiritOfRadiantLordPurpleDefeated);
+			nbt.putBoolean("IsSpiritOfRadiantLordRedDefeated", IsSpiritOfRadiantLordRedDefeated);
 			return nbt;
 		}
 
@@ -292,7 +305,7 @@ public class EthernalKronuzModVariables {
 		public double AsgardDeaths = 0.0;
 		public boolean IsNullEntityRL = false;
 		public boolean AlreadyClicked = false;
-		public boolean FirstBook = false;
+		public boolean FirstFactionBook = false;
 		public boolean IsRadiantLord = false;
 		public boolean AllowInJotunheim = false;
 		public double CoordXBeforeEnterAsgard = 0;
@@ -302,7 +315,11 @@ public class EthernalKronuzModVariables {
 		public boolean HasMinimumForTheRiseRoxo = false;
 		public boolean HasMinimumForTheRiseVerde = false;
 		public boolean HasMinimumForTheRiseVermelho = false;
-		public boolean skullDamnationSpawned = false;
+		public double CoordXBeforeEnterJotunheim = 0;
+		public double CoordYBeforeEnterJotunheim = 0;
+		public double CoordZBeforeEnterJotunheim = 0;
+		public double DimensionBeforeEnterJotunheim = 0;
+		public boolean TouchRLOnce = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -324,7 +341,7 @@ public class EthernalKronuzModVariables {
 			nbt.putDouble("AsgardDeaths", AsgardDeaths);
 			nbt.putBoolean("IsNullEntityRL", IsNullEntityRL);
 			nbt.putBoolean("AlreadyClicked", AlreadyClicked);
-			nbt.putBoolean("FirstBook", FirstBook);
+			nbt.putBoolean("FirstFactionBook", FirstFactionBook);
 			nbt.putBoolean("IsRadiantLord", IsRadiantLord);
 			nbt.putBoolean("AllowInJotunheim", AllowInJotunheim);
 			nbt.putDouble("CoordXBeforeEnterAsgard", CoordXBeforeEnterAsgard);
@@ -334,7 +351,11 @@ public class EthernalKronuzModVariables {
 			nbt.putBoolean("HasMinimumForTheRiseRoxo", HasMinimumForTheRiseRoxo);
 			nbt.putBoolean("HasMinimumForTheRiseVerde", HasMinimumForTheRiseVerde);
 			nbt.putBoolean("HasMinimumForTheRiseVermelho", HasMinimumForTheRiseVermelho);
-			nbt.putBoolean("skullDamnationSpawned", skullDamnationSpawned);
+			nbt.putDouble("CoordXBeforeEnterJotunheim", CoordXBeforeEnterJotunheim);
+			nbt.putDouble("CoordYBeforeEnterJotunheim", CoordYBeforeEnterJotunheim);
+			nbt.putDouble("CoordZBeforeEnterJotunheim", CoordZBeforeEnterJotunheim);
+			nbt.putDouble("DimensionBeforeEnterJotunheim", DimensionBeforeEnterJotunheim);
+			nbt.putBoolean("TouchRLOnce", TouchRLOnce);
 			return nbt;
 		}
 
@@ -353,7 +374,7 @@ public class EthernalKronuzModVariables {
 			AsgardDeaths = nbt.getDouble("AsgardDeaths");
 			IsNullEntityRL = nbt.getBoolean("IsNullEntityRL");
 			AlreadyClicked = nbt.getBoolean("AlreadyClicked");
-			FirstBook = nbt.getBoolean("FirstBook");
+			FirstFactionBook = nbt.getBoolean("FirstFactionBook");
 			IsRadiantLord = nbt.getBoolean("IsRadiantLord");
 			AllowInJotunheim = nbt.getBoolean("AllowInJotunheim");
 			CoordXBeforeEnterAsgard = nbt.getDouble("CoordXBeforeEnterAsgard");
@@ -363,7 +384,11 @@ public class EthernalKronuzModVariables {
 			HasMinimumForTheRiseRoxo = nbt.getBoolean("HasMinimumForTheRiseRoxo");
 			HasMinimumForTheRiseVerde = nbt.getBoolean("HasMinimumForTheRiseVerde");
 			HasMinimumForTheRiseVermelho = nbt.getBoolean("HasMinimumForTheRiseVermelho");
-			skullDamnationSpawned = nbt.getBoolean("skullDamnationSpawned");
+			CoordXBeforeEnterJotunheim = nbt.getDouble("CoordXBeforeEnterJotunheim");
+			CoordYBeforeEnterJotunheim = nbt.getDouble("CoordYBeforeEnterJotunheim");
+			CoordZBeforeEnterJotunheim = nbt.getDouble("CoordZBeforeEnterJotunheim");
+			DimensionBeforeEnterJotunheim = nbt.getDouble("DimensionBeforeEnterJotunheim");
+			TouchRLOnce = nbt.getBoolean("TouchRLOnce");
 		}
 	}
 
@@ -401,7 +426,7 @@ public class EthernalKronuzModVariables {
 					variables.AsgardDeaths = message.data.AsgardDeaths;
 					variables.IsNullEntityRL = message.data.IsNullEntityRL;
 					variables.AlreadyClicked = message.data.AlreadyClicked;
-					variables.FirstBook = message.data.FirstBook;
+					variables.FirstFactionBook = message.data.FirstFactionBook;
 					variables.IsRadiantLord = message.data.IsRadiantLord;
 					variables.AllowInJotunheim = message.data.AllowInJotunheim;
 					variables.CoordXBeforeEnterAsgard = message.data.CoordXBeforeEnterAsgard;
@@ -411,7 +436,11 @@ public class EthernalKronuzModVariables {
 					variables.HasMinimumForTheRiseRoxo = message.data.HasMinimumForTheRiseRoxo;
 					variables.HasMinimumForTheRiseVerde = message.data.HasMinimumForTheRiseVerde;
 					variables.HasMinimumForTheRiseVermelho = message.data.HasMinimumForTheRiseVermelho;
-					variables.skullDamnationSpawned = message.data.skullDamnationSpawned;
+					variables.CoordXBeforeEnterJotunheim = message.data.CoordXBeforeEnterJotunheim;
+					variables.CoordYBeforeEnterJotunheim = message.data.CoordYBeforeEnterJotunheim;
+					variables.CoordZBeforeEnterJotunheim = message.data.CoordZBeforeEnterJotunheim;
+					variables.DimensionBeforeEnterJotunheim = message.data.DimensionBeforeEnterJotunheim;
+					variables.TouchRLOnce = message.data.TouchRLOnce;
 				}
 			});
 			context.setPacketHandled(true);

@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Technomorto",
     "mobLabel": "",
-    "mobModelName": "Modelundead_technoblade",
+    "mobModelName": "Biped",
     "mobModelTexture": "undead_technoblade.png",
     "mobModelGlowTexture": "",
     "solidBoundingBox": {
@@ -30,10 +30,10 @@
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
     "equipmentMainHand": {
-      "value": "CUSTOM:Murasama"
+      "value": "Items.DIAMOND_SWORD"
     },
     "equipmentOffHand": {
-      "value": "CUSTOM:AiportSteelSword"
+      "value": ""
     },
     "equipmentHelmet": {
       "value": ""

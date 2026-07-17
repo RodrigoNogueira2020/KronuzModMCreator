@@ -36,6 +36,9 @@ import net.mcreator.ethernalkronuz.world.features.YggbigtreeSkyFieldsFeature;
 import net.mcreator.ethernalkronuz.world.features.YggbigtreeFloatingGardenFeature;
 import net.mcreator.ethernalkronuz.world.features.YggbigbushSkyFieldsFeature;
 import net.mcreator.ethernalkronuz.world.features.YggbigbushFloatingGardenFeature;
+import net.mcreator.ethernalkronuz.world.features.TheRiseChamberRedFeature;
+import net.mcreator.ethernalkronuz.world.features.TheRiseChamberPurpleFeature;
+import net.mcreator.ethernalkronuz.world.features.TheRiseChamberGreenFeature;
 import net.mcreator.ethernalkronuz.world.features.TaigaFeature;
 import net.mcreator.ethernalkronuz.world.features.SnowFeature;
 import net.mcreator.ethernalkronuz.world.features.SavanhaFeature;
@@ -59,6 +62,7 @@ import net.mcreator.ethernalkronuz.world.features.DivinecrystalpillarextralargeF
 import net.mcreator.ethernalkronuz.world.features.DesertFeature;
 import net.mcreator.ethernalkronuz.world.features.BichFeature;
 import net.mcreator.ethernalkronuz.world.features.AsgardTempleEntryFeature;
+import net.mcreator.ethernalkronuz.world.features.AfterRagnarokTempleFeature;
 import net.mcreator.ethernalkronuz.world.features.AesirPortalStructureFeature;
 import net.mcreator.ethernalkronuz.EthernalKronuzMod;
 
@@ -85,6 +89,8 @@ public class EthernalKronuzModFeatures {
 			new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION, DoubleGlowPlantFeature.GENERATE_BIOMES, DoubleGlowPlantFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> TALL_GLOW_GRASS = register("tall_glow_grass", TallGlowGrassFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION, TallGlowGrassFeature.GENERATE_BIOMES, TallGlowGrassFeature::placedFeature));
+	public static final RegistryObject<Feature<?>> NORMAL_GLOW_GRASS = register("normal_glow_grass", NormalGlowGrassFeature::feature,
+			new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION, NormalGlowGrassFeature.GENERATE_BIOMES, NormalGlowGrassFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> AESIR_PORTAL_STRUCTURE = register("aesir_portal_structure", AesirPortalStructureFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.RAW_GENERATION, AesirPortalStructureFeature.GENERATE_BIOMES, AesirPortalStructureFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> BICH = register("bich", BichFeature::feature, new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, BichFeature.GENERATE_BIOMES, BichFeature::placedFeature));
@@ -100,8 +106,6 @@ public class EthernalKronuzModFeatures {
 			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, AsgardTempleEntryFeature.GENERATE_BIOMES, AsgardTempleEntryFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> DIVINECRYSTALPILLAREXTRALARGE = register("divinecrystalpillarextralarge", DivinecrystalpillarextralargeFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, DivinecrystalpillarextralargeFeature.GENERATE_BIOMES, DivinecrystalpillarextralargeFeature::placedFeature));
-	public static final RegistryObject<Feature<?>> DIVINECRYSTALPILLARLARGE = register("divinecrystalpillarlarge", DivinecrystalpillarlargeFeature::feature,
-			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, DivinecrystalpillarlargeFeature.GENERATE_BIOMES, DivinecrystalpillarlargeFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> DIVINECRYSTALPILLARMEDIUM = register("divinecrystalpillarmedium", DivinecrystalpillarmediumFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, DivinecrystalpillarmediumFeature.GENERATE_BIOMES, DivinecrystalpillarmediumFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> DIVINECRYSTALPILLARSMALL = register("divinecrystalpillarsmall", DivinecrystalpillarsmallFeature::feature,
@@ -140,14 +144,22 @@ public class EthernalKronuzModFeatures {
 			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, DivinecrystalspikegiantFeature.GENERATE_BIOMES, DivinecrystalspikegiantFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> YGGDRASILGIANTSTRUCTVOIDS = register("yggdrasilgiantstructvoids", YggdrasilgiantstructvoidsFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, YggdrasilgiantstructvoidsFeature.GENERATE_BIOMES, YggdrasilgiantstructvoidsFeature::placedFeature));
-	public static final RegistryObject<Feature<?>> NORMAL_GLOW_GRASS = register("normal_glow_grass", NormalGlowGrassFeature::feature,
-			new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION, NormalGlowGrassFeature.GENERATE_BIOMES, NormalGlowGrassFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> ENDRUINSLARGE = register("endruinslarge", EndruinslargeFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, EndruinslargeFeature.GENERATE_BIOMES, EndruinslargeFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> ENDRUINSMEDIUM = register("endruinsmedium", EndruinsmediumFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, EndruinsmediumFeature.GENERATE_BIOMES, EndruinsmediumFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> ENDRUINSSMALL = register("endruinssmall", EndruinssmallFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, EndruinssmallFeature.GENERATE_BIOMES, EndruinssmallFeature::placedFeature));
+	public static final RegistryObject<Feature<?>> DIVINECRYSTALPILLARLARGE = register("divinecrystalpillarlarge", DivinecrystalpillarlargeFeature::feature,
+			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, DivinecrystalpillarlargeFeature.GENERATE_BIOMES, DivinecrystalpillarlargeFeature::placedFeature));
+	public static final RegistryObject<Feature<?>> THE_RISE_CHAMBER_GREEN = register("the_rise_chamber_green", TheRiseChamberGreenFeature::feature,
+			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, TheRiseChamberGreenFeature.GENERATE_BIOMES, TheRiseChamberGreenFeature::placedFeature));
+	public static final RegistryObject<Feature<?>> THE_RISE_CHAMBER_RED = register("the_rise_chamber_red", TheRiseChamberRedFeature::feature,
+			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, TheRiseChamberRedFeature.GENERATE_BIOMES, TheRiseChamberRedFeature::placedFeature));
+	public static final RegistryObject<Feature<?>> THE_RISE_CHAMBER_PURPLE = register("the_rise_chamber_purple", TheRiseChamberPurpleFeature::feature,
+			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, TheRiseChamberPurpleFeature.GENERATE_BIOMES, TheRiseChamberPurpleFeature::placedFeature));
+	public static final RegistryObject<Feature<?>> AFTER_RAGNAROK_TEMPLE = register("after_ragnarok_temple", AfterRagnarokTempleFeature::feature,
+			new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, AfterRagnarokTempleFeature.GENERATE_BIOMES, AfterRagnarokTempleFeature::placedFeature));
 
 	private static RegistryObject<Feature<?>> register(String registryname, Supplier<Feature<?>> feature, FeatureRegistration featureRegistration) {
 		FEATURE_REGISTRATIONS.add(featureRegistration);

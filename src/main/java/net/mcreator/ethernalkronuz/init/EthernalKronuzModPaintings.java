@@ -14,8 +14,8 @@ import net.minecraft.world.entity.decoration.Motive;
 public class EthernalKronuzModPaintings {
 	@SubscribeEvent
 	public static void registerMotives(RegistryEvent.Register<Motive> event) {
-		event.getRegistry().register(new Motive(16, 16).setRegistryName("painting_blue_planet"));
 		event.getRegistry().register(new Motive(64, 64).setRegistryName("painting_radiant_lord"));
+		event.getRegistry().register(new Motive(16, 16).setRegistryName("painting_blue_planet"));
 		event.getRegistry().register(new Motive(64, 64).setRegistryName("painting_logo"));
 	}
 }

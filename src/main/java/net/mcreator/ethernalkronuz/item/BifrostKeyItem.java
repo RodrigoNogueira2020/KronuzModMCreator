@@ -16,7 +16,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModTabs;
-import net.mcreator.ethernalkronuz.block.JotunheimPortalBlock;
 
 import java.util.List;
 
@@ -38,7 +37,6 @@ public class BifrostKeyItem extends Item implements ICurioItem {
 			int z = pos.getZ();
 			boolean success = false;
 			if (world.isEmptyBlock(pos) && true) {
-				JotunheimPortalBlock.portalSpawn(world, pos);
 				itemstack.hurtAndBreak(1, entity, c -> c.broadcastBreakEvent(context.getHand()));
 				success = true;
 			}

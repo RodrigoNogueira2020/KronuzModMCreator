@@ -1,0 +1,19 @@
+{
+  "_fv": 39,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Minerar Mais Um Pouco",
+    "texture": "music_disc_minerar",
+    "description": "João Sozinho",
+    "creativeTab": {
+      "value": "CUSTOM:CreativeTab"
+    },
+    "specialInfo": [],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:minerar_mais_um_pouco"
+    },
+    "lengthInTicks": 100,
+    "analogOutput": 0
+  }
+}

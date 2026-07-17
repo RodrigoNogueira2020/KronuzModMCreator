@@ -1,35 +1,41 @@
-
 package net.mcreator.ethernalkronuz.item;
 
-import net.minecraftforge.common.ToolActions;
-import net.minecraftforge.common.ToolAction;
-
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.TieredItem;
 import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.tags.BlockTags;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.BlockPos;
+import net.minecraft.ChatFormatting;
 
+import net.mcreator.ethernalkronuz.procedures.KillNonRLsProcedure;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModTabs;
 
 import java.util.List;
 
-import com.google.common.collect.Multimap;
-import com.google.common.collect.ImmutableMultimap;
+public class NokkiaHammerItem extends PickaxeItem {
+	private static final int COOLDOWN_TICKS = 200;
+	private static final double RADIUS = 5.0;
+	private static final double LAUNCH_POWER = 1;
 
-public class NokkiaHammerItem extends TieredItem {
 	public NokkiaHammerItem() {
 		super(new Tier() {
 			public int getUses() {
@@ -37,11 +43,11 @@ public class NokkiaHammerItem extends TieredItem {
 			}
 
 			public float getSpeed() {
-				return 10000f;
+				return 1000f;
 			}
 
 			public float getAttackDamageBonus() {
-				return 4999f;
+				return 4998f;
 			}
 
 			public int getLevel() {
@@ -55,61 +61,62 @@ public class NokkiaHammerItem extends TieredItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.EMPTY;
 			}
-		}, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).fireResistant());
-	}
-
-	@Override
-	public boolean isCorrectToolForDrops(BlockState blockstate) {
-		int tier = 9;
-		if (tier < 3 && blockstate.is(BlockTags.NEEDS_DIAMOND_TOOL)) {
-			return false;
-		} else if (tier < 2 && blockstate.is(BlockTags.NEEDS_IRON_TOOL)) {
-			return false;
-		} else {
-			return tier < 1 && blockstate.is(BlockTags.NEEDS_STONE_TOOL)
-					? false
-					: (blockstate.is(BlockTags.MINEABLE_WITH_AXE) || blockstate.is(BlockTags.MINEABLE_WITH_HOE) || blockstate.is(BlockTags.MINEABLE_WITH_PICKAXE) || blockstate.is(BlockTags.MINEABLE_WITH_SHOVEL));
-		}
-	}
-
-	@Override
-	public boolean canPerformAction(ItemStack stack, ToolAction toolAction) {
-		return ToolActions.DEFAULT_AXE_ACTIONS.contains(toolAction) || ToolActions.DEFAULT_HOE_ACTIONS.contains(toolAction) || ToolActions.DEFAULT_SHOVEL_ACTIONS.contains(toolAction) || ToolActions.DEFAULT_PICKAXE_ACTIONS.contains(toolAction)
-				|| ToolActions.DEFAULT_SWORD_ACTIONS.contains(toolAction);
+		}, 1, 96f, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).fireResistant());
 	}
 
 	@Override
 	public float getDestroySpeed(ItemStack itemstack, BlockState blockstate) {
-		return 10000f;
+		return 1000f;
 	}
 
 	@Override
-	public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(EquipmentSlot equipmentSlot) {
-		if (equipmentSlot == EquipmentSlot.MAINHAND) {
-			ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
-			builder.putAll(super.getDefaultAttributeModifiers(equipmentSlot));
-			builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Tool modifier", 4999f, AttributeModifier.Operation.ADDITION));
-			builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Tool modifier", 96, AttributeModifier.Operation.ADDITION));
-			return builder.build();
-		}
-		return super.getDefaultAttributeModifiers(equipmentSlot);
-	}
-
-	@Override
-	public boolean mineBlock(ItemStack itemstack, Level world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
-		itemstack.hurtAndBreak(1, entity, i -> i.broadcastBreakEvent(EquipmentSlot.MAINHAND));
-		return true;
-	}
-
-	@Override
-	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
-		itemstack.hurtAndBreak(2, entity, i -> i.broadcastBreakEvent(EquipmentSlot.MAINHAND));
-		return true;
+	public Component getName(ItemStack stack) {
+		return new TextComponent("Nokkia Hammer").withStyle(ChatFormatting.DARK_RED);
 	}
 
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(new TextComponent("World Ender"));
+		list.add(new TextComponent("§cSpecial Ability: §eSmash Quake").withStyle(ChatFormatting.GOLD));
+		list.add(new TextComponent("\u00A7fRight-click §7projects all entities within a 5 block radius").withStyle(ChatFormatting.GRAY));
+	}
+
+	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		KillNonRLsProcedure.execute(entity);
+	}
+
+	@Override
+	public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
+		ItemStack itemstack = player.getItemInHand(hand);
+		if (player.getCooldowns().isOnCooldown(itemstack.getItem()))
+			return InteractionResultHolder.fail(itemstack);
+		if (!world.isClientSide) {
+			AABB cubeArea = new AABB(player.getX() - RADIUS, player.getY() - RADIUS, player.getZ() - RADIUS, player.getX() + RADIUS, player.getY() + RADIUS, player.getZ() + RADIUS);
+			List<Entity> entities = world.getEntities(player, cubeArea, e -> e instanceof LivingEntity && e != player);
+			for (Entity entity : entities) {
+				entity.setDeltaMovement(entity.getDeltaMovement().add(0, LAUNCH_POWER, 0));
+				entity.hurtMarked = true;
+				if (entity instanceof LivingEntity _entity)
+					_entity.hurt(new DamageSource("nokkiahammer").bypassArmor(), 10);
+			}
+			world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ANVIL_LAND, SoundSource.PLAYERS, 1.0F, 0.5F);
+			for (int i = 0; i < 30; i++)
+				world.addParticle(ParticleTypes.CLOUD, player.getX(), player.getY() + 1, player.getZ(), (Math.random() - 0.5) * 0.5, 0.5, (Math.random() - 0.5) * 0.5);
+			player.getCooldowns().addCooldown(itemstack.getItem(), COOLDOWN_TICKS);
+			for (int dx = -2; dx <= 2; dx++) {
+				for (int dy = -2; dy <= 2; dy++) {
+					for (int dz = -2; dz <= 2; dz++) {
+						BlockPos pos = new BlockPos(player.getX() + dx, player.getY() + dy, player.getZ() + dz);
+						BlockState blockState = world.getBlockState(pos);
+						if (!blockState.isAir() && blockState.getBlock() != Blocks.BEDROCK) {
+							((ServerLevel) world).sendParticles(new BlockParticleOption(ParticleTypes.BLOCK, blockState), pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, 5, 0.2, 0.5, 0.2, 0.25);
+						}
+					}
+				}
+			}
+		}
+		return InteractionResultHolder.success(itemstack);
 	}
 }

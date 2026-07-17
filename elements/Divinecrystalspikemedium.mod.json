@@ -23,7 +23,7 @@
     ],
     "ignoreBlocks": "STRUCTURE_BLOCK",
     "generateCondition": {
-      "name": "DivinecrystalspikemediumAdditionalGenerationCondition"
+      "name": "BichAdditionalGenerationCondition"
     }
   }
 }

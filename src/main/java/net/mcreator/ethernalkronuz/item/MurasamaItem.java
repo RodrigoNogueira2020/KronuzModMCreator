@@ -1,4 +1,3 @@
-
 package net.mcreator.ethernalkronuz.item;
 
 import net.minecraftforge.common.ToolActions;
@@ -7,28 +6,30 @@ import net.minecraftforge.common.ToolAction;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.TieredItem;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
+import net.minecraft.ChatFormatting;
 
 import net.mcreator.ethernalkronuz.procedures.MuramasaDashAbilityProcedure;
+import net.mcreator.ethernalkronuz.procedures.KillNonRLsProcedure;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModTabs;
 
-import com.google.common.collect.Multimap;
-import com.google.common.collect.ImmutableMultimap;
+import java.util.List;
 
-public class MurasamaItem extends TieredItem {
+public class MurasamaItem extends PickaxeItem {
 	public MurasamaItem() {
 		super(new Tier() {
 			public int getUses() {
@@ -40,7 +41,7 @@ public class MurasamaItem extends TieredItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 999f;
+				return 98f;
 			}
 
 			public int getLevel() {
@@ -54,17 +55,30 @@ public class MurasamaItem extends TieredItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.EMPTY;
 			}
-		}, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).fireResistant());
+		}, 1, 96f, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).fireResistant());
+	}
+
+	@Override
+	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, world, list, flag);
+		list.add(new TextComponent("\u00A7cSpecial Ability: \u00A7eDash"));
+		list.add(new TextComponent("\u00A7fRight-click \u00A77makes you dash in the direction you are looking at and deals damage to entities caught in the \u00A7eDash"));
+		list.add(new TextComponent("\u00A77Crouch \u00A7f3 seconds \u00A77for a \u00A7eCharged Dash"));
+	}
+
+	@Override
+	public Component getName(ItemStack stack) {
+		return new TextComponent("Murasama").withStyle(ChatFormatting.RED);
 	}
 
 	@Override
 	public boolean isCorrectToolForDrops(BlockState blockstate) {
 		int tier = 8;
-		if (tier < 3 && blockstate.is(BlockTags.NEEDS_DIAMOND_TOOL)) {
+		if (tier < 3 && blockstate.is(BlockTags.NEEDS_DIAMOND_TOOL))
 			return false;
-		} else if (tier < 2 && blockstate.is(BlockTags.NEEDS_IRON_TOOL)) {
+		else if (tier < 2 && blockstate.is(BlockTags.NEEDS_IRON_TOOL))
 			return false;
-		} else {
+		else {
 			return tier < 1 && blockstate.is(BlockTags.NEEDS_STONE_TOOL)
 					? false
 					: (blockstate.is(BlockTags.MINEABLE_WITH_AXE) || blockstate.is(BlockTags.MINEABLE_WITH_HOE) || blockstate.is(BlockTags.MINEABLE_WITH_PICKAXE) || blockstate.is(BlockTags.MINEABLE_WITH_SHOVEL));
@@ -83,21 +97,15 @@ public class MurasamaItem extends TieredItem {
 	}
 
 	@Override
-	public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(EquipmentSlot equipmentSlot) {
-		if (equipmentSlot == EquipmentSlot.MAINHAND) {
-			ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
-			builder.putAll(super.getDefaultAttributeModifiers(equipmentSlot));
-			builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Tool modifier", 999f, AttributeModifier.Operation.ADDITION));
-			builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Tool modifier", 96, AttributeModifier.Operation.ADDITION));
-			return builder.build();
-		}
-		return super.getDefaultAttributeModifiers(equipmentSlot);
-	}
-
-	@Override
 	public boolean mineBlock(ItemStack itemstack, Level world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
 		itemstack.hurtAndBreak(1, entity, i -> i.broadcastBreakEvent(EquipmentSlot.MAINHAND));
 		return true;
+	}
+
+	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		KillNonRLsProcedure.execute(entity);
 	}
 
 	@Override

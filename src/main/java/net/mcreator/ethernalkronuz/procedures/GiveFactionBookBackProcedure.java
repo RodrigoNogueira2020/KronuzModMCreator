@@ -16,7 +16,7 @@ public class GiveFactionBookBackProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if (((entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
+		if (!(entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(EthernalKronuzModItems.FACTION_BOOK.get())) : false) && ((entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
 				? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("ethernal_kronuz:full_set_mosso_crystal"))).isDone()
 				: false)
 				|| (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
@@ -24,16 +24,14 @@ public class GiveFactionBookBackProcedure {
 						: false)
 				|| (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel
 						? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("ethernal_kronuz:full_set_airport_steel"))).isDone()
-						: false))
-				&& !(entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(EthernalKronuzModItems.FACTION_BOOK.get())) : false)) {
+						: false))) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = new ItemStack(EthernalKronuzModItems.FACTION_BOOK.get());
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
-		} else {
-			if (entity instanceof Player _player && !_player.level.isClientSide())
-				_player.displayClientMessage(new TextComponent("N\u00E3o podes usar este comando"), (true));
 		}
+		if (entity instanceof Player _player && !_player.level.isClientSide())
+			_player.displayClientMessage(new TextComponent("You do not have access to this command"), (true));
 	}
 }

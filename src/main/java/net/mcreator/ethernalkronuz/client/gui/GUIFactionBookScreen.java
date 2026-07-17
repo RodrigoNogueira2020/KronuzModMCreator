@@ -89,7 +89,8 @@ public class GUIFactionBookScreen extends AbstractContainerScreen<GUIFactionBook
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		imagebutton_adc_button = new ImageButton(this.leftPos + -141, this.topPos + -87, 160, 160, 0, 0, 160, new ResourceLocation("ethernal_kronuz:textures/screens/atlas/imagebutton_adc_button.png"), 160, 320, e -> {
+		imagebutton_adc_button = new ImageButton(this.leftPos + -124, this.topPos + -75, 128, 128, 0, 0, 128,
+								new ResourceLocation("ethernal_kronuz:textures/screens/atlas/imagebutton_adc_button.png"), 128, 256, e -> {
 			if (true) {
 				EthernalKronuzMod.PACKET_HANDLER.sendToServer(new GUIFactionBookButtonMessage(0, x, y, z));
 				GUIFactionBookButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -97,7 +98,8 @@ public class GUIFactionBookScreen extends AbstractContainerScreen<GUIFactionBook
 		});
 		guistate.put("button:imagebutton_adc_button", imagebutton_adc_button);
 		this.addRenderableWidget(imagebutton_adc_button);
-		imagebutton_bt_button = new ImageButton(this.leftPos + -8, this.topPos + -86, 160, 160, 0, 0, 160, new ResourceLocation("ethernal_kronuz:textures/screens/atlas/imagebutton_bt_button.png"), 160, 320, e -> {
+		imagebutton_bt_button = new ImageButton(this.leftPos + 10, this.topPos + -75, 128, 128, 0, 0, 128,
+								new ResourceLocation("ethernal_kronuz:textures/screens/atlas/imagebutton_bt_button.png"), 128, 256, e -> {
 			if (true) {
 				EthernalKronuzMod.PACKET_HANDLER.sendToServer(new GUIFactionBookButtonMessage(1, x, y, z));
 				GUIFactionBookButtonMessage.handleButtonAction(entity, 1, x, y, z);

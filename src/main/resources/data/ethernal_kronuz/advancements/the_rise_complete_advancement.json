@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "ethernal_kronuz:nokkia_hammer"
+    },
+    "title": {
+      "translate": "advancements.the_rise_complete_advancement.title"
+    },
+    "description": {
+      "translate": "advancements.the_rise_complete_advancement.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "the_rise_complete_advancement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 5000
+  },
+  "parent": "ethernal_kronuz:ascender_advancement"
+}

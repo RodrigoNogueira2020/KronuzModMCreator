@@ -14,10 +14,10 @@ public class ADCEffects3Procedure {
 				_entity.removeEffect(MobEffects.UNLUCK);
 		}
 		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 999999, 1, (false), (false)));
+			_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, (int) Double.POSITIVE_INFINITY, 1, (false), (false)));
 		if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.NIGHT_VISION) : false)) {
 			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 999999, 0, (false), (false)));
+				_entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, (int) Double.POSITIVE_INFINITY, 0, (false), (false)));
 		}
 	}
 }

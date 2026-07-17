@@ -2,9 +2,9 @@
   "_fv": 39,
   "_type": "musicdisc",
   "definition": {
-    "name": "Yuri NR5",
+    "name": "São Paulo",
     "texture": "music_disc_saopaulo",
-    "description": "São Paulo",
+    "description": "Yuri NR5",
     "creativeTab": {
       "value": "CUSTOM:CreativeTab"
     },

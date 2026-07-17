@@ -1,0 +1,19 @@
+{
+  "_fv": 39,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Pixa Freestyle",
+    "texture": "music_disc_pixa_freestyle",
+    "description": "Galrrote",
+    "creativeTab": {
+      "value": "CUSTOM:CreativeTab"
+    },
+    "specialInfo": [],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:pixa_freestyle"
+    },
+    "lengthInTicks": 100,
+    "analogOutput": 0
+  }
+}

@@ -3,14 +3,14 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "flame_of_damnation",
+    "texture": "divine_arrow",
     "customModelName": "Normal",
-    "name": "Flame of Damnation",
-    "rarity": "EPIC",
+    "name": "Divine Arrow",
+    "rarity": "RARE",
     "creativeTab": {
       "value": "CUSTOM:CreativeTab"
     },
-    "stackSize": 1,
+    "stackSize": 64,
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,
@@ -24,16 +24,11 @@
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [
-      "Purple skull with cool flames go brrr"
-    ],
-    "hasGlow": true,
+    "specialInfo": [],
+    "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onRightClickedOnBlock": {
-      "name": "FlameOfDamnationRightclicked"
-    },
     "isFood": false,
     "nutritionalValue": 4,
     "saturation": 0.3,

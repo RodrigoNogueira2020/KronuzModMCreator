@@ -21,8 +21,7 @@ public class LifeStealSetupEnchantment extends Enchantment {
 	public boolean canApplyAtEnchantingTable(ItemStack stack) {
 		Item item = stack.getItem();
 		return List.of(EthernalKronuzModItems.MOSSO_CRYSTAL_SWORD.get(), EthernalKronuzModItems.FAKING_ELL_SWORD.get(), EthernalKronuzModItems.AIPORT_STEEL_SWORD.get(), Items.WOODEN_SWORD, Items.STONE_SWORD, Items.IRON_SWORD, Items.GOLDEN_SWORD,
-				Items.DIAMOND_SWORD, Items.NETHERITE_SWORD, EthernalKronuzModItems.BLADE_OF_THE_VOID_SETUP.get(), EthernalKronuzModItems.TERRA_BLADE_SETUP.get(), EthernalKronuzModItems.MURASAMA.get(), EthernalKronuzModItems.NOKKIA_HAMMER.get())
-				.contains(item);
+				Items.DIAMOND_SWORD, Items.NETHERITE_SWORD).contains(item);
 	}
 
 	@Override
