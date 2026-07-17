@@ -30,6 +30,7 @@ import net.mcreator.ethernalkronuz.entity.GinukaPowerSetupEntity;
 import net.mcreator.ethernalkronuz.entity.DivineBowEntity;
 import net.mcreator.ethernalkronuz.entity.DinoVascoEntity;
 import net.mcreator.ethernalkronuz.entity.BlessingEntity;
+import net.mcreator.ethernalkronuz.entity.ArrowDivineEntity;
 import net.mcreator.ethernalkronuz.EthernalKronuzMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -79,6 +80,8 @@ public class EthernalKronuzModEntities {
 					.setCustomClientFactory(RadiantLordPurpleTrialEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<RadiantLordRedTrialEntity>> RADIANT_LORD_RED_TRIAL = register("radiant_lord_red_trial", EntityType.Builder.<RadiantLordRedTrialEntity>of(RadiantLordRedTrialEntity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RadiantLordRedTrialEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ArrowDivineEntity>> ARROW_DIVINE = register("projectile_arrow_divine",
+			EntityType.Builder.<ArrowDivineEntity>of(ArrowDivineEntity::new, MobCategory.MISC).setCustomClientFactory(ArrowDivineEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

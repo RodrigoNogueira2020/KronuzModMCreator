@@ -24,5 +24,4 @@ public class EthernalKronuzModParticleTypes {
 	public static final RegistryObject<ParticleType<?>> TERRA_BLADE_PARTICLE = REGISTRY.register("terra_blade_particle", () -> new SimpleParticleType(true));
 	public static final RegistryObject<ParticleType<?>> BLADE_OF_THE_VOID_PARTICLE = REGISTRY.register("blade_of_the_void_particle", () -> new SimpleParticleType(true));
 	public static final RegistryObject<ParticleType<?>> MURASAMA_DASH_PARTICLE = REGISTRY.register("murasama_dash_particle", () -> new SimpleParticleType(true));
-	public static final RegistryObject<ParticleType<?>> PURPLE_FLAME_PARTICLE = REGISTRY.register("purple_flame_particle", () -> new SimpleParticleType(false));
 }

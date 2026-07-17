@@ -24,6 +24,7 @@ import net.mcreator.ethernalkronuz.client.renderer.GriffinAnimatedRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.GinukaPowerSetupRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.DinoVascoRenderer;
 import net.mcreator.ethernalkronuz.client.renderer.BlessingRenderer;
+import net.mcreator.ethernalkronuz.client.renderer.ArrowDivineRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class EthernalKronuzModEntityRenderers {
@@ -43,5 +44,6 @@ public class EthernalKronuzModEntityRenderers {
 		event.registerEntityRenderer(EthernalKronuzModEntities.DINO_VASCO.get(), DinoVascoRenderer::new);
 		event.registerEntityRenderer(EthernalKronuzModEntities.RADIANT_LORD_PURPLE_TRIAL.get(), RadiantLordPurpleTrialRenderer::new);
 		event.registerEntityRenderer(EthernalKronuzModEntities.RADIANT_LORD_RED_TRIAL.get(), RadiantLordRedTrialRenderer::new);
+		event.registerEntityRenderer(EthernalKronuzModEntities.ARROW_DIVINE.get(), ArrowDivineRenderer::new);
 	}
 }

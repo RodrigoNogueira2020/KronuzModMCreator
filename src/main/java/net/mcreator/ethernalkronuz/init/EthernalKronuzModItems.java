@@ -58,7 +58,6 @@ import net.mcreator.ethernalkronuz.item.FactionBookItem;
 import net.mcreator.ethernalkronuz.item.DivineWaterItem;
 import net.mcreator.ethernalkronuz.item.DivineCrystalShardItem;
 import net.mcreator.ethernalkronuz.item.DivineBowItem;
-import net.mcreator.ethernalkronuz.item.DivineArrowItem;
 import net.mcreator.ethernalkronuz.item.DeepSeaBootItem;
 import net.mcreator.ethernalkronuz.item.CristalizedDivineWaterItem;
 import net.mcreator.ethernalkronuz.item.CabuflamanauItem;
@@ -67,6 +66,7 @@ import net.mcreator.ethernalkronuz.item.BladeOfAiportSteelSwordItem;
 import net.mcreator.ethernalkronuz.item.BifrostKeyItem;
 import net.mcreator.ethernalkronuz.item.BackpackItem;
 import net.mcreator.ethernalkronuz.item.AwayItem;
+import net.mcreator.ethernalkronuz.item.ArrowDivineItem;
 import net.mcreator.ethernalkronuz.item.AlloySetupItem;
 import net.mcreator.ethernalkronuz.item.AirportSteelShovelHeadItem;
 import net.mcreator.ethernalkronuz.item.AirportSteelPickaxeHeadItem;
@@ -239,7 +239,6 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> YGG_WOOD_STICK = REGISTRY.register("ygg_wood_stick", () -> new YggWoodStickItem());
 	public static final RegistryObject<Item> BIFROST_KEY = REGISTRY.register("bifrost_key", () -> new BifrostKeyItem());
 	public static final RegistryObject<Item> DIVINE_BOW = REGISTRY.register("divine_bow", () -> new DivineBowItem());
-	public static final RegistryObject<Item> DIVINE_ARROW = REGISTRY.register("divine_arrow", () -> new DivineArrowItem());
 	public static final RegistryObject<Item> JOTUNHEIM_FRAME = block(EthernalKronuzModBlocks.JOTUNHEIM_FRAME, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
 	public static final RegistryObject<Item> BLADE_OF_THE_VOID = REGISTRY.register("blade_of_the_void", () -> new BladeOfTheVoidItem());
 	public static final RegistryObject<Item> MURASAMA = REGISTRY.register("murasama", () -> new MurasamaItem());
@@ -261,6 +260,7 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> FUCK_MINIPRECO = REGISTRY.register("fuck_minipreco", () -> new FuckMiniprecoItem());
 	public static final RegistryObject<Item> RADIANT_LORD_RED_TRIAL_SPAWN_EGG = REGISTRY.register("radiant_lord_red_trial_spawn_egg",
 			() -> new ForgeSpawnEggItem(EthernalKronuzModEntities.RADIANT_LORD_RED_TRIAL, -10066330, -3407821, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB)));
+	public static final RegistryObject<Item> ARROW_DIVINE = REGISTRY.register("arrow_divine", () -> new ArrowDivineItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

@@ -8,7 +8,7 @@
     "name": "Divine Arrow",
     "specialInfo": [],
     "creativeTab": {
-      "value": "CUSTOM:CreativeTab"
+      "value": "COMBAT"
     },
     "stackSize": 64,
     "ammoItem": {
@@ -22,7 +22,7 @@
     "hasGlow": false,
     "animation": "none",
     "enableMeleeDamage": false,
-    "damageVsEntity": 12.0,
+    "damageVsEntity": 0.0,
     "bulletPower": 1.0,
     "bulletDamage": 5.0,
     "bulletKnockback": 5,
