@@ -20,10 +20,12 @@ import net.mcreator.ethernalkronuz.entity.WarperEntity;
 import net.mcreator.ethernalkronuz.entity.TerraBladeProjectileEntity;
 import net.mcreator.ethernalkronuz.entity.TechnomortoEntity;
 import net.mcreator.ethernalkronuz.entity.TechnobaldeEntity;
+import net.mcreator.ethernalkronuz.entity.SkullDamnationEntity;
 import net.mcreator.ethernalkronuz.entity.RadiantLordRedTrialEntity;
 import net.mcreator.ethernalkronuz.entity.RadiantLordPurpleTrialEntity;
 import net.mcreator.ethernalkronuz.entity.RadiantLordNoColorTrialEntity;
 import net.mcreator.ethernalkronuz.entity.RadiantLordGreenTrialEntity;
+import net.mcreator.ethernalkronuz.entity.PurpleFlameEntity;
 import net.mcreator.ethernalkronuz.entity.NullEntityEntity;
 import net.mcreator.ethernalkronuz.entity.GriffinAnimatedEntity;
 import net.mcreator.ethernalkronuz.entity.GinukaPowerSetupEntity;
@@ -82,6 +84,12 @@ public class EthernalKronuzModEntities {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RadiantLordRedTrialEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<ArrowDivineEntity>> ARROW_DIVINE = register("projectile_arrow_divine",
 			EntityType.Builder.<ArrowDivineEntity>of(ArrowDivineEntity::new, MobCategory.MISC).setCustomClientFactory(ArrowDivineEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<SkullDamnationEntity>> SKULL_DAMNATION = register("skull_damnation",
+			EntityType.Builder.<SkullDamnationEntity>of(SkullDamnationEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SkullDamnationEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<PurpleFlameEntity>> PURPLE_FLAME = register("projectile_purple_flame",
+			EntityType.Builder.<PurpleFlameEntity>of(PurpleFlameEntity::new, MobCategory.MISC).setCustomClientFactory(PurpleFlameEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -102,6 +110,7 @@ public class EthernalKronuzModEntities {
 			DinoVascoEntity.init();
 			RadiantLordPurpleTrialEntity.init();
 			RadiantLordRedTrialEntity.init();
+			SkullDamnationEntity.init();
 		});
 	}
 
@@ -119,5 +128,6 @@ public class EthernalKronuzModEntities {
 		event.put(DINO_VASCO.get(), DinoVascoEntity.createAttributes().build());
 		event.put(RADIANT_LORD_PURPLE_TRIAL.get(), RadiantLordPurpleTrialEntity.createAttributes().build());
 		event.put(RADIANT_LORD_RED_TRIAL.get(), RadiantLordRedTrialEntity.createAttributes().build());
+		event.put(SKULL_DAMNATION.get(), SkullDamnationEntity.createAttributes().build());
 	}
 }

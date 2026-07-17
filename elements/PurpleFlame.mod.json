@@ -8,7 +8,7 @@
     "name": "Purple Flame",
     "specialInfo": [],
     "creativeTab": {
-      "value": "No creative tab entry"
+      "value": "COMBAT"
     },
     "stackSize": 1,
     "ammoItem": {
@@ -17,24 +17,21 @@
     "shootConstantly": false,
     "usageCount": 100,
     "actionSound": {
-      "value": "entity.blaze.shoot"
+      "value": "entity.arrow.shoot"
     },
     "hasGlow": false,
-    "animation": "none",
+    "animation": "bow",
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "bulletPower": 0.6,
-    "bulletDamage": 6.0,
-    "bulletKnockback": 0,
+    "bulletPower": 1.0,
+    "bulletDamage": 5.0,
+    "bulletKnockback": 5,
     "bulletParticles": false,
     "bulletIgnitesFire": false,
     "bulletItemTexture": {
-      "value": "CUSTOM:FlameOfDamnation"
+      "value": "CUSTOM:PurpleFlame"
     },
     "bulletModel": "Default",
-    "customBulletModelTexture": "",
-    "onBulletFlyingTick": {
-      "name": "PurpleFlameWhileProjectileFlyingTick"
-    }
+    "customBulletModelTexture": ""
   }
 }

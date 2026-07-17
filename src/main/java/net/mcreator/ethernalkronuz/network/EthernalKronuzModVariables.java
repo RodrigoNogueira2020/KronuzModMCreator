@@ -100,6 +100,7 @@ public class EthernalKronuzModVariables {
 			clone.CoordZBeforeEnterJotunheim = original.CoordZBeforeEnterJotunheim;
 			clone.DimensionBeforeEnterJotunheim = original.DimensionBeforeEnterJotunheim;
 			clone.TouchRLOnce = original.TouchRLOnce;
+			clone.SkullDamnationSpawned = original.SkullDamnationSpawned;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -320,6 +321,7 @@ public class EthernalKronuzModVariables {
 		public double CoordZBeforeEnterJotunheim = 0;
 		public double DimensionBeforeEnterJotunheim = 0;
 		public boolean TouchRLOnce = false;
+		public boolean SkullDamnationSpawned = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -356,6 +358,7 @@ public class EthernalKronuzModVariables {
 			nbt.putDouble("CoordZBeforeEnterJotunheim", CoordZBeforeEnterJotunheim);
 			nbt.putDouble("DimensionBeforeEnterJotunheim", DimensionBeforeEnterJotunheim);
 			nbt.putBoolean("TouchRLOnce", TouchRLOnce);
+			nbt.putBoolean("SkullDamnationSpawned", SkullDamnationSpawned);
 			return nbt;
 		}
 
@@ -389,6 +392,7 @@ public class EthernalKronuzModVariables {
 			CoordZBeforeEnterJotunheim = nbt.getDouble("CoordZBeforeEnterJotunheim");
 			DimensionBeforeEnterJotunheim = nbt.getDouble("DimensionBeforeEnterJotunheim");
 			TouchRLOnce = nbt.getBoolean("TouchRLOnce");
+			SkullDamnationSpawned = nbt.getBoolean("SkullDamnationSpawned");
 		}
 	}
 
@@ -441,6 +445,7 @@ public class EthernalKronuzModVariables {
 					variables.CoordZBeforeEnterJotunheim = message.data.CoordZBeforeEnterJotunheim;
 					variables.DimensionBeforeEnterJotunheim = message.data.DimensionBeforeEnterJotunheim;
 					variables.TouchRLOnce = message.data.TouchRLOnce;
+					variables.SkullDamnationSpawned = message.data.SkullDamnationSpawned;
 				}
 			});
 			context.setPacketHandled(true);

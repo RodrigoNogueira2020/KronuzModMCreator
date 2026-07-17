@@ -27,6 +27,7 @@ import net.mcreator.ethernalkronuz.item.SafiraItem;
 import net.mcreator.ethernalkronuz.item.RLVermelhoArmorItem;
 import net.mcreator.ethernalkronuz.item.RLVerdeArmorItem;
 import net.mcreator.ethernalkronuz.item.RLRoxoArmourItem;
+import net.mcreator.ethernalkronuz.item.PurpleFlameItem;
 import net.mcreator.ethernalkronuz.item.PixaFreestyleItem;
 import net.mcreator.ethernalkronuz.item.PaulinhoTownItem;
 import net.mcreator.ethernalkronuz.item.NokkiaHammerItem;
@@ -46,6 +47,7 @@ import net.mcreator.ethernalkronuz.item.GriffinFeatherItem;
 import net.mcreator.ethernalkronuz.item.FuckMiniprecoItem;
 import net.mcreator.ethernalkronuz.item.FreickenItem;
 import net.mcreator.ethernalkronuz.item.FreakyItem;
+import net.mcreator.ethernalkronuz.item.FlameOfDamnationItem;
 import net.mcreator.ethernalkronuz.item.FakingEllSwordItem;
 import net.mcreator.ethernalkronuz.item.FakingEllShovelItem;
 import net.mcreator.ethernalkronuz.item.FakingEllPickaxeItem;
@@ -261,6 +263,10 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> RADIANT_LORD_RED_TRIAL_SPAWN_EGG = REGISTRY.register("radiant_lord_red_trial_spawn_egg",
 			() -> new ForgeSpawnEggItem(EthernalKronuzModEntities.RADIANT_LORD_RED_TRIAL, -10066330, -3407821, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB)));
 	public static final RegistryObject<Item> ARROW_DIVINE = REGISTRY.register("arrow_divine", () -> new ArrowDivineItem());
+	public static final RegistryObject<Item> FLAME_OF_DAMNATION = REGISTRY.register("flame_of_damnation", () -> new FlameOfDamnationItem());
+	public static final RegistryObject<Item> SKULL_DAMNATION_SPAWN_EGG = REGISTRY.register("skull_damnation_spawn_egg",
+			() -> new ForgeSpawnEggItem(EthernalKronuzModEntities.SKULL_DAMNATION, -1, -1, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> PURPLE_FLAME = REGISTRY.register("purple_flame", () -> new PurpleFlameItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
