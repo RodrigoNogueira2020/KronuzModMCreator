@@ -9,8 +9,6 @@ import net.minecraftforge.event.entity.player.PlayerContainerEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.item.ItemTossEvent;
 import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.Slot;
@@ -42,32 +40,22 @@ public class PreventDropEvent {
 		}
 	}
 
-	@OnlyIn(Dist.CLIENT)
-	@Mod.EventBusSubscriber(value = Dist.CLIENT)
-	public static class ClientEvents {
-		@SubscribeEvent
-		public static void onMouseClicked(net.minecraftforge.client.event.ScreenEvent.MouseClickedEvent event) {
-			if (!(event.getScreen() instanceof net.minecraft.client.gui.screens.inventory.AbstractContainerScreen<?> screen))
-				return;
-			net.minecraft.client.player.LocalPlayer player = net.minecraft.client.Minecraft.getInstance().player;
-			if (player != null && !player.isCreative()) {
-				Slot clickedSlot = screen.getSlotUnderMouse();
-				if (clickedSlot != null && clickedSlot.hasItem()) {
-					ItemStack clickedItem = clickedSlot.getItem();
-					if (isRestrictedItem(clickedItem, player)) {
-						boolean isPlayerInventorySlot = screen.getMenu().getSlot(clickedSlot.index).container == player.getInventory();
-						if (!isPlayerInventorySlot) {
-							event.setCanceled(true);
-							boolean success = player.getInventory().add(clickedItem.copy());
-							if (!success) {
-								CompoundTag itemTag = clickedItem.save(new CompoundTag());
-								CompoundTag data = player.getPersistentData();
-								ListTag list = data.contains("RestrictedItemsQueue", Tag.TAG_LIST) ? data.getList("RestrictedItemsQueue", Tag.TAG_COMPOUND) : new ListTag();
-								list.add(itemTag);
-								data.put("RestrictedItemsQueue", list);
-								clickedSlot.set(ItemStack.EMPTY);
-							}
-						}
+	@SubscribeEvent
+	public static void onMouseClicked(net.minecraftforge.client.event.ScreenEvent.MouseClickedEvent event) {
+		if (!(event.getScreen() instanceof net.minecraft.client.gui.screens.inventory.AbstractContainerScreen<?> screen))
+			return;
+		net.minecraft.client.player.LocalPlayer player = net.minecraft.client.Minecraft.getInstance().player;
+		if (player != null && !player.isCreative()) {
+			Slot clickedSlot = screen.getSlotUnderMouse();
+			if (clickedSlot != null && clickedSlot.hasItem()) {
+				ItemStack clickedItem = clickedSlot.getItem();
+				if (isRestrictedItem(clickedItem, player)) {
+					boolean isPlayerInventorySlot = screen.getMenu().getSlot(clickedSlot.index).container == player.getInventory();
+					if (!isPlayerInventorySlot) {
+						// Só bloqueamos a ação aqui. NÃO tocamos no inventário/slot manualmente —
+						// isso é o que causava a duplicação. O item fica onde está e é devolvido
+						// de forma segura pelo checkAndRemoveRestrictedItems() no servidor.
+						event.setCanceled(true);
 					}
 				}
 			}
@@ -143,9 +131,12 @@ public class PreventDropEvent {
 
 	@SubscribeEvent
 	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
+		if (event.phase != TickEvent.Phase.END) // evita processar 2x por tick (START + END)
+			return;
 		Player player = event.player;
 		if (player.level.isClientSide)
 			return;
+		// Fila de itens restritos pendentes (já existia)
 		CompoundTag data = player.getPersistentData();
 		ListTag list = data.contains("RestrictedItemsQueue", Tag.TAG_LIST) ? data.getList("RestrictedItemsQueue", Tag.TAG_COMPOUND) : new ListTag();
 		if (!list.isEmpty()) {
@@ -158,6 +149,11 @@ public class PreventDropEvent {
 					list.remove(0);
 				data.put("RestrictedItemsQueue", list);
 			}
+		}
+		// NOVO: enquanto houver um container aberto que não seja o inventário do jogador,
+		// devolve qualquer item restrito que tenha ido para lá, a cada tick.
+		if (player.containerMenu != null && player.containerMenu != player.inventoryMenu) {
+			checkAndRemoveRestrictedItems(player.containerMenu, player);
 		}
 	}
 
