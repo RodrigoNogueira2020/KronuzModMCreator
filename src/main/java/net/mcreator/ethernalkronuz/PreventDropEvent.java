@@ -2,6 +2,7 @@ package net.mcreator.ethernalkronuz;
 
 import top.theillusivec4.curios.api.CuriosApi;
 
+import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
@@ -50,11 +51,10 @@ public class PreventDropEvent {
 			if (clickedSlot != null && clickedSlot.hasItem()) {
 				ItemStack clickedItem = clickedSlot.getItem();
 				if (isRestrictedItem(clickedItem, player)) {
-					boolean isPlayerInventorySlot = screen.getMenu().getSlot(clickedSlot.index).container == player.getInventory();
-					if (!isPlayerInventorySlot) {
-						// Só bloqueamos a ação aqui. NÃO tocamos no inventário/slot manualmente —
-						// isso é o que causava a duplicação. O item fica onde está e é devolvido
-						// de forma segura pelo checkAndRemoveRestrictedItems() no servidor.
+					Slot resolvedSlot = screen.getMenu().getSlot(clickedSlot.index);
+					boolean isPlayerInventorySlot = resolvedSlot.container == player.getInventory();
+					boolean isCurioSlot = isCurioSlotInMenu(player, resolvedSlot);
+					if (!isPlayerInventorySlot && !isCurioSlot) {
 						event.setCanceled(true);
 					}
 				}
@@ -78,7 +78,7 @@ public class PreventDropEvent {
 		for (Slot slot : container.slots) {
 			if (slot.hasItem()) {
 				ItemStack stack = slot.getItem();
-				if (isRestrictedItem(stack, player) && !slot.container.equals(player.getInventory())) {
+				if (isRestrictedItem(stack, player) && !slot.container.equals(player.getInventory()) && !isCurioSlotInMenu(player, slot)) {
 					boolean success = player.getInventory().add(stack.copy());
 					if (success)
 						slot.set(ItemStack.EMPTY);
@@ -131,12 +131,11 @@ public class PreventDropEvent {
 
 	@SubscribeEvent
 	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		if (event.phase != TickEvent.Phase.END) // evita processar 2x por tick (START + END)
+		if (event.phase != TickEvent.Phase.END)
 			return;
 		Player player = event.player;
 		if (player.level.isClientSide)
 			return;
-		// Fila de itens restritos pendentes (já existia)
 		CompoundTag data = player.getPersistentData();
 		ListTag list = data.contains("RestrictedItemsQueue", Tag.TAG_LIST) ? data.getList("RestrictedItemsQueue", Tag.TAG_COMPOUND) : new ListTag();
 		if (!list.isEmpty()) {
@@ -150,10 +149,16 @@ public class PreventDropEvent {
 				data.put("RestrictedItemsQueue", list);
 			}
 		}
-		// NOVO: enquanto houver um container aberto que não seja o inventário do jogador,
-		// devolve qualquer item restrito que tenha ido para lá, a cada tick.
-		if (player.containerMenu != null && player.containerMenu != player.inventoryMenu) {
+		if (player.containerMenu != null && player.containerMenu != player.inventoryMenu)
 			checkAndRemoveRestrictedItems(player.containerMenu, player);
+		// Restritos de Curio que apareçam no inventário principal (índices 9–35, ou seja,
+		// fora da hotbar 0–8) significam que já existe uma cópia legítima equipada no Curio
+		// Slot -> esta é a cópia extra criada pelo drag. Eliminamo-la, sem tentar reequipar.
+		for (int i = 9; i < 36; i++) {
+			ItemStack stack = player.getInventory().getItem(i);
+			if (!stack.isEmpty() && isRestrictedItem(stack, player) && isItemTypeEquippedInCurios(player, stack)) {
+				player.getInventory().setItem(i, ItemStack.EMPTY);
+			}
 		}
 	}
 
@@ -166,7 +171,39 @@ public class PreventDropEvent {
 				|| stack.getItem() == EthernalKronuzModItems.BIFROST_KEY.get();
 	}
 
-	private static boolean isItemInCurios(Player player, ItemStack stack) {
-		return CuriosApi.getCuriosHelper().findFirstCurio(player, stack.getItem()).isPresent();
+	private static boolean isCurioSlotInMenu(Player player, Slot slot) {
+		if (!(slot instanceof SlotItemHandler handlerSlot))
+			return false;
+		var handlerRef = handlerSlot.getItemHandler();
+		java.util.concurrent.atomic.AtomicBoolean match = new java.util.concurrent.atomic.AtomicBoolean(false);
+		CuriosApi.getCuriosHelper().getCuriosHandler(player).ifPresent(handler -> {
+			handler.getCurios().forEach((id, stacksHandler) -> {
+				if (stacksHandler.getStacks() == handlerRef)
+					match.set(true);
+			});
+		});
+		return match.get();
+	}
+
+	/**
+	 * Verifica se já existe uma cópia deste TIPO de item equipada nalgum Curio Slot
+	 * (comparação por Item, não por instância — ao contrário de isCurioSlotInMenu).
+	 * Usado só para detetar a cópia extra que sobra no inventário principal após um drag.
+	 */
+	private static boolean isItemTypeEquippedInCurios(Player player, ItemStack stack) {
+		java.util.concurrent.atomic.AtomicBoolean found = new java.util.concurrent.atomic.AtomicBoolean(false);
+		CuriosApi.getCuriosHelper().getCuriosHandler(player).ifPresent(handler -> {
+			handler.getCurios().forEach((id, stacksHandler) -> {
+				var stacks = stacksHandler.getStacks();
+				for (int i = 0; i < stacks.getSlots(); i++) {
+					ItemStack curioStack = stacks.getStackInSlot(i);
+					if (!curioStack.isEmpty() && curioStack.getItem() == stack.getItem()) {
+						found.set(true);
+						return;
+					}
+				}
+			});
+		});
+		return found.get();
 	}
 }
