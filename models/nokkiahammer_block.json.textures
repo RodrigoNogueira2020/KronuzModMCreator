@@ -2,8 +2,7 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "nokiahammer",
-        "missing": "nokiahammer"
+        "0": "nokiahammer"
       },
       "name": "default"
     }
