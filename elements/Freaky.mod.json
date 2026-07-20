@@ -2,9 +2,9 @@
   "_fv": 39,
   "_type": "musicdisc",
   "definition": {
-    "name": "Freaky",
+    "name": "Janela",
     "texture": "music_disc_freaky",
-    "description": "Janela",
+    "description": "Freaky",
     "creativeTab": {
       "value": "CUSTOM:CreativeTab"
     },

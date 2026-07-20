@@ -2,9 +2,9 @@
   "_fv": 39,
   "_type": "musicdisc",
   "definition": {
-    "name": "Freicken",
+    "name": "Chico da Concertina",
     "texture": "music_disc_freicken",
-    "description": "Chico da Concertina",
+    "description": "Freicken",
     "creativeTab": {
       "value": "CUSTOM:CreativeTab"
     },

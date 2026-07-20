@@ -2,9 +2,9 @@
   "_fv": 39,
   "_type": "musicdisc",
   "definition": {
-    "name": "Pixa Freestyle",
+    "name": "Galrrote",
     "texture": "music_disc_pixa_freestyle",
-    "description": "Galrrote",
+    "description": "Pixa Freestyle",
     "creativeTab": {
       "value": "CUSTOM:CreativeTab"
     },
