@@ -57,7 +57,7 @@ public class NokkiaHammerBlockBlock extends FallingBlock {
 
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return Shapes.or(box(5, 0, 4, 11, 5, 14), box(7, 5, 8, 9, 14.5, 10));
+		return Shapes.or(box(5.8, 0, 4.5, 10, 4.3, 13.3), box(7.2, 4.3, 8.2, 8.6, 13.8, 9.6));
 	}
 
 	@Override

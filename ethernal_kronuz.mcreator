@@ -3353,10 +3353,10 @@
       "registry_name": "nokkia_hammer_block",
       "metadata": {
         "files": [
-          "src/main/resources/assets/ethernal_kronuz/blockstates/nokkia_hammer_block.json",
           "src/main/resources/assets/ethernal_kronuz/models/item/nokkia_hammer_block.json",
-          "src/main/resources/assets/ethernal_kronuz/models/block/nokkia_hammer_block.json",
-          "src/main/java/net/mcreator/ethernalkronuz/block/NokkiaHammerBlockBlock.java"
+          "src/main/resources/assets/ethernal_kronuz/blockstates/nokkia_hammer_block.json",
+          "src/main/java/net/mcreator/ethernalkronuz/block/NokkiaHammerBlockBlock.java",
+          "src/main/resources/assets/ethernal_kronuz/models/block/nokkia_hammer_block.json"
         ]
       },
       "path": "~/Factions/Radiant Lords/Weapons/Nokkia Hammer"
