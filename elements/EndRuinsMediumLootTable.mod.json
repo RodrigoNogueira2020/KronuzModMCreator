@@ -6,7 +6,7 @@
     "pools": [
       {
         "minrolls": 1,
-        "maxrolls": 10,
+        "maxrolls": 1,
         "minbonusrolls": 1,
         "maxbonusrolls": 1,
         "hasbonusrolls": false,
@@ -28,7 +28,7 @@
           {
             "type": "item",
             "item": {
-              "value": "CUSTOM:AsgardianDirtBlock"
+              "value": "CUSTOM:AsgardianDirt"
             },
             "weight": 10,
             "minCount": 2,
@@ -73,8 +73,8 @@
               "value": "CUSTOM:MoedaDeTroca"
             },
             "weight": 5,
-            "minCount": 1,
-            "maxCount": 2,
+            "minCount": 2,
+            "maxCount": 4,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": false,
@@ -129,7 +129,7 @@
               "value": "CUSTOM:MossoCrystalGem"
             },
             "weight": 10,
-            "minCount": 2,
+            "minCount": 1,
             "maxCount": 5,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
@@ -154,7 +154,7 @@
         ]
       }
     ],
-    "name": "chests/end_ruins_medium_loot_table",
+    "name": "end_ruins_medium_loot_table",
     "namespace": "mod"
   }
 }
