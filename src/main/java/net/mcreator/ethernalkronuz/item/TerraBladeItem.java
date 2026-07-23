@@ -62,7 +62,7 @@ public class TerraBladeItem extends PickaxeItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(new TextComponent("\u00A7cSpecial Ability: \u00A7eDash"));
+		list.add(new TextComponent("\u00A7cSpecial Ability: \u00A7eSlash Projectile"));
 		list.add(new TextComponent("\u00A7fRight-click \u00A77to fire lethal projectiles"));
 	}
 

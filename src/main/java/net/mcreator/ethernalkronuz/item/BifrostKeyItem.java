@@ -47,6 +47,6 @@ public class BifrostKeyItem extends Item implements ICurioItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(new TextComponent("Key to the Jotunhein"));
+		list.add(new TextComponent("A bridge between two worlds. Can be used to access \u00A7bJotunheim"));
 	}
 }

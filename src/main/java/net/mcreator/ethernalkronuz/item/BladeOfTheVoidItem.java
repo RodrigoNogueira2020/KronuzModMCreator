@@ -63,7 +63,7 @@ public class BladeOfTheVoidItem extends PickaxeItem {
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
 		list.add(new TextComponent("\u00A7cSpecial Ability: \u00A7eDeath Swing"));
-		list.add(new TextComponent("\u00A7fRight-click \u00A77deals damage in a half-moon area to entities in front of you."));
+		list.add(new TextComponent("\u00A7fRight-click \u00A77deals damage in a half-moon area to entities in front of you"));
 	}
 
 	@Override
