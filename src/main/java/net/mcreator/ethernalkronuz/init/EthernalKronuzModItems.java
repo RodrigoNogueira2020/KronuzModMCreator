@@ -27,6 +27,9 @@ import net.mcreator.ethernalkronuz.item.SafiraItem;
 import net.mcreator.ethernalkronuz.item.RLVermelhoArmorItem;
 import net.mcreator.ethernalkronuz.item.RLVerdeArmorItem;
 import net.mcreator.ethernalkronuz.item.RLRoxoArmourItem;
+import net.mcreator.ethernalkronuz.item.PurpleFlameItem;
+import net.mcreator.ethernalkronuz.item.PixaFreestyleItem;
+import net.mcreator.ethernalkronuz.item.PaulinhoTownItem;
 import net.mcreator.ethernalkronuz.item.NokkiaHammerItem;
 import net.mcreator.ethernalkronuz.item.MurasamaItem;
 import net.mcreator.ethernalkronuz.item.MossoCrystalSwordItem;
@@ -41,8 +44,10 @@ import net.mcreator.ethernalkronuz.item.MoedaDeTrocaItem;
 import net.mcreator.ethernalkronuz.item.MinerarMaisUmPoucoItem;
 import net.mcreator.ethernalkronuz.item.MakeAWishItem;
 import net.mcreator.ethernalkronuz.item.GriffinFeatherItem;
+import net.mcreator.ethernalkronuz.item.FuckMiniprecoItem;
 import net.mcreator.ethernalkronuz.item.FreickenItem;
 import net.mcreator.ethernalkronuz.item.FreakyItem;
+import net.mcreator.ethernalkronuz.item.FlameOfDamnationItem;
 import net.mcreator.ethernalkronuz.item.FakingEllSwordItem;
 import net.mcreator.ethernalkronuz.item.FakingEllShovelItem;
 import net.mcreator.ethernalkronuz.item.FakingEllPickaxeItem;
@@ -55,7 +60,6 @@ import net.mcreator.ethernalkronuz.item.FactionBookItem;
 import net.mcreator.ethernalkronuz.item.DivineWaterItem;
 import net.mcreator.ethernalkronuz.item.DivineCrystalShardItem;
 import net.mcreator.ethernalkronuz.item.DivineBowItem;
-import net.mcreator.ethernalkronuz.item.DivineArrowItem;
 import net.mcreator.ethernalkronuz.item.DeepSeaBootItem;
 import net.mcreator.ethernalkronuz.item.CristalizedDivineWaterItem;
 import net.mcreator.ethernalkronuz.item.CabuflamanauItem;
@@ -64,6 +68,7 @@ import net.mcreator.ethernalkronuz.item.BladeOfAiportSteelSwordItem;
 import net.mcreator.ethernalkronuz.item.BifrostKeyItem;
 import net.mcreator.ethernalkronuz.item.BackpackItem;
 import net.mcreator.ethernalkronuz.item.AwayItem;
+import net.mcreator.ethernalkronuz.item.ArrowDivineItem;
 import net.mcreator.ethernalkronuz.item.AlloySetupItem;
 import net.mcreator.ethernalkronuz.item.AirportSteelShovelHeadItem;
 import net.mcreator.ethernalkronuz.item.AirportSteelPickaxeHeadItem;
@@ -236,7 +241,6 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> YGG_WOOD_STICK = REGISTRY.register("ygg_wood_stick", () -> new YggWoodStickItem());
 	public static final RegistryObject<Item> BIFROST_KEY = REGISTRY.register("bifrost_key", () -> new BifrostKeyItem());
 	public static final RegistryObject<Item> DIVINE_BOW = REGISTRY.register("divine_bow", () -> new DivineBowItem());
-	public static final RegistryObject<Item> DIVINE_ARROW = REGISTRY.register("divine_arrow", () -> new DivineArrowItem());
 	public static final RegistryObject<Item> JOTUNHEIM_FRAME = block(EthernalKronuzModBlocks.JOTUNHEIM_FRAME, EthernalKronuzModTabs.TAB_CREATIVE_TAB);
 	public static final RegistryObject<Item> BLADE_OF_THE_VOID = REGISTRY.register("blade_of_the_void", () -> new BladeOfTheVoidItem());
 	public static final RegistryObject<Item> MURASAMA = REGISTRY.register("murasama", () -> new MurasamaItem());
@@ -251,6 +255,18 @@ public class EthernalKronuzModItems {
 	public static final RegistryObject<Item> INVISIBLE_BLOCK_BLESSING = block(EthernalKronuzModBlocks.INVISIBLE_BLOCK_BLESSING, null);
 	public static final RegistryObject<Item> DINO_VASCO_SPAWN_EGG = REGISTRY.register("dino_vasco_spawn_egg",
 			() -> new ForgeSpawnEggItem(EthernalKronuzModEntities.DINO_VASCO, -12361775, -1, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB)));
+	public static final RegistryObject<Item> PIXA_FREESTYLE = REGISTRY.register("pixa_freestyle", () -> new PixaFreestyleItem());
+	public static final RegistryObject<Item> RADIANT_LORD_PURPLE_TRIAL_SPAWN_EGG = REGISTRY.register("radiant_lord_purple_trial_spawn_egg",
+			() -> new ForgeSpawnEggItem(EthernalKronuzModEntities.RADIANT_LORD_PURPLE_TRIAL, -10066330, -5635926, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB)));
+	public static final RegistryObject<Item> PAULINHO_TOWN = REGISTRY.register("paulinho_town", () -> new PaulinhoTownItem());
+	public static final RegistryObject<Item> FUCK_MINIPRECO = REGISTRY.register("fuck_minipreco", () -> new FuckMiniprecoItem());
+	public static final RegistryObject<Item> RADIANT_LORD_RED_TRIAL_SPAWN_EGG = REGISTRY.register("radiant_lord_red_trial_spawn_egg",
+			() -> new ForgeSpawnEggItem(EthernalKronuzModEntities.RADIANT_LORD_RED_TRIAL, -10066330, -3407821, new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB)));
+	public static final RegistryObject<Item> ARROW_DIVINE = REGISTRY.register("arrow_divine", () -> new ArrowDivineItem());
+	public static final RegistryObject<Item> FLAME_OF_DAMNATION = REGISTRY.register("flame_of_damnation", () -> new FlameOfDamnationItem());
+	public static final RegistryObject<Item> SKULL_DAMNATION_SPAWN_EGG = REGISTRY.register("skull_damnation_spawn_egg",
+			() -> new ForgeSpawnEggItem(EthernalKronuzModEntities.SKULL_DAMNATION, -1, -1, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> PURPLE_FLAME = REGISTRY.register("purple_flame", () -> new PurpleFlameItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

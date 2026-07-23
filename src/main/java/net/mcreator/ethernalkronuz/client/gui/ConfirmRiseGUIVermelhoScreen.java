@@ -102,7 +102,7 @@ public class ConfirmRiseGUIVermelhoScreen extends AbstractContainerScreen<Confir
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		button_rise = new Button(this.leftPos + 240, this.topPos + 88, 46, 20, new TranslatableComponent("gui.ethernal_kronuz.confirm_rise_gui_vermelho.button_rise"), e -> {
+		button_rise = new Button(this.leftPos + 240, this.topPos + 79, 46, 20, new TranslatableComponent("gui.ethernal_kronuz.confirm_rise_gui_vermelho.button_rise"), e -> {
 			if (true) {
 				EthernalKronuzMod.PACKET_HANDLER.sendToServer(new ConfirmRiseGUIVermelhoButtonMessage(0, x, y, z));
 				ConfirmRiseGUIVermelhoButtonMessage.handleButtonAction(entity, 0, x, y, z);

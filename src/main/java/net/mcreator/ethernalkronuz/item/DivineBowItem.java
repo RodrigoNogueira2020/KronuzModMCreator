@@ -7,6 +7,7 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ProjectileWeaponItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.BowItem;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
@@ -19,11 +20,11 @@ import net.minecraft.network.chat.Component;
 
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModTabs;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModItems;
-import net.mcreator.ethernalkronuz.entity.DivineBowEntity;
+import net.mcreator.ethernalkronuz.entity.ArrowDivineEntity;
 
 import java.util.List;
 
-public class DivineBowItem extends Item {
+public class DivineBowItem extends BowItem {
 	public DivineBowItem() {
 		super(new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).durability(1000));
 	}
@@ -57,23 +58,23 @@ public class DivineBowItem extends Item {
 			double y = entity.getY();
 			double z = entity.getZ();
 			if (true) {
-				ItemStack stack = ProjectileWeaponItem.getHeldProjectile(entity, e -> e.getItem() == EthernalKronuzModItems.DIVINE_ARROW.get());
+				ItemStack stack = ProjectileWeaponItem.getHeldProjectile(entity, e -> e.getItem() == EthernalKronuzModItems.ARROW_DIVINE.get());
 				if (stack == ItemStack.EMPTY) {
 					for (int i = 0; i < entity.getInventory().items.size(); i++) {
 						ItemStack teststack = entity.getInventory().items.get(i);
-						if (teststack != null && teststack.getItem() == EthernalKronuzModItems.DIVINE_ARROW.get()) {
+						if (teststack != null && teststack.getItem() == EthernalKronuzModItems.ARROW_DIVINE.get()) {
 							stack = teststack;
 							break;
 						}
 					}
 				}
 				if (entity.getAbilities().instabuild || stack != ItemStack.EMPTY) {
-					DivineBowEntity entityarrow = DivineBowEntity.shoot(world, entity, world.getRandom(), 1f, 5, 5);
+					ArrowDivineEntity entityarrow = ArrowDivineEntity.shoot(world, entity, world.getRandom(), 1f, 5, 5);
 					itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 					if (entity.getAbilities().instabuild) {
 						entityarrow.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
 					} else {
-						if (new ItemStack(EthernalKronuzModItems.DIVINE_ARROW.get()).isDamageableItem()) {
+						if (new ItemStack(EthernalKronuzModItems.ARROW_DIVINE.get()).isDamageableItem()) {
 							if (stack.hurt(1, world.getRandom(), entity)) {
 								stack.shrink(1);
 								stack.setDamageValue(0);

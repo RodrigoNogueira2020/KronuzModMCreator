@@ -20,6 +20,7 @@ import net.mcreator.ethernalkronuz.client.model.Modelmosso_crystal_armor_legs;
 import net.mcreator.ethernalkronuz.client.model.Modelgriffin;
 import net.mcreator.ethernalkronuz.client.model.Modelfaking_ell_armor_no_legs;
 import net.mcreator.ethernalkronuz.client.model.Modelfaking_ell_armor_legs;
+import net.mcreator.ethernalkronuz.client.model.Modeldivine_arrow_Converted;
 import net.mcreator.ethernalkronuz.client.model.Modelbigtesta_blessing;
 import net.mcreator.ethernalkronuz.client.model.Modelairport_steel_armor_no_legs;
 import net.mcreator.ethernalkronuz.client.model.Modelairport_steel_armor_legs;
@@ -39,6 +40,7 @@ public class EthernalKronuzModModels {
 		event.registerLayerDefinition(Modelfaking_ell_armor_legs.LAYER_LOCATION, Modelfaking_ell_armor_legs::createBodyLayer);
 		event.registerLayerDefinition(Modeltechnoblade.LAYER_LOCATION, Modeltechnoblade::createBodyLayer);
 		event.registerLayerDefinition(Modelairport_steel_armor_legs.LAYER_LOCATION, Modelairport_steel_armor_legs::createBodyLayer);
+		event.registerLayerDefinition(Modeldivine_arrow_Converted.LAYER_LOCATION, Modeldivine_arrow_Converted::createBodyLayer);
 		event.registerLayerDefinition(Modelradiantlord.LAYER_LOCATION, Modelradiantlord::createBodyLayer);
 		event.registerLayerDefinition(Modelmosso_cyrstal_armor_no_legs.LAYER_LOCATION, Modelmosso_cyrstal_armor_no_legs::createBodyLayer);
 		event.registerLayerDefinition(Modelundead_technoblade.LAYER_LOCATION, Modelundead_technoblade::createBodyLayer);

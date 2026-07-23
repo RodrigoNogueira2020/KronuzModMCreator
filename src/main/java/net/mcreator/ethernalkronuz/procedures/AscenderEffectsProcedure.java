@@ -12,14 +12,14 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
 public class AscenderEffectsProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
-		if (entity == null)
+	public static void execute(LevelAccessor world, Entity sourceentity) {
+		if (sourceentity == null)
 			return;
-		if (entity instanceof LivingEntity _entity)
+		if (sourceentity instanceof LivingEntity _entity)
 			_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 60, 0, (false), (false)));
 		if (world instanceof ServerLevel _level) {
 			LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
-			entityToSpawn.moveTo(Vec3.atBottomCenterOf(new BlockPos(entity.getX(), entity.getY(), entity.getZ())));
+			entityToSpawn.moveTo(Vec3.atBottomCenterOf(new BlockPos(sourceentity.getX(), sourceentity.getY(), sourceentity.getZ())));
 			entityToSpawn.setVisualOnly(true);
 			_level.addFreshEntity(entityToSpawn);
 		}

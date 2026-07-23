@@ -20,14 +20,19 @@ import net.mcreator.ethernalkronuz.entity.WarperEntity;
 import net.mcreator.ethernalkronuz.entity.TerraBladeProjectileEntity;
 import net.mcreator.ethernalkronuz.entity.TechnomortoEntity;
 import net.mcreator.ethernalkronuz.entity.TechnobaldeEntity;
+import net.mcreator.ethernalkronuz.entity.SkullDamnationEntity;
+import net.mcreator.ethernalkronuz.entity.RadiantLordRedTrialEntity;
+import net.mcreator.ethernalkronuz.entity.RadiantLordPurpleTrialEntity;
 import net.mcreator.ethernalkronuz.entity.RadiantLordNoColorTrialEntity;
 import net.mcreator.ethernalkronuz.entity.RadiantLordGreenTrialEntity;
+import net.mcreator.ethernalkronuz.entity.PurpleFlameEntity;
 import net.mcreator.ethernalkronuz.entity.NullEntityEntity;
 import net.mcreator.ethernalkronuz.entity.GriffinAnimatedEntity;
 import net.mcreator.ethernalkronuz.entity.GinukaPowerSetupEntity;
 import net.mcreator.ethernalkronuz.entity.DivineBowEntity;
 import net.mcreator.ethernalkronuz.entity.DinoVascoEntity;
 import net.mcreator.ethernalkronuz.entity.BlessingEntity;
+import net.mcreator.ethernalkronuz.entity.ArrowDivineEntity;
 import net.mcreator.ethernalkronuz.EthernalKronuzMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -72,6 +77,19 @@ public class EthernalKronuzModEntities {
 			EntityType.Builder.<DinoVascoEntity>of(DinoVascoEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DinoVascoEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<RadiantLordPurpleTrialEntity>> RADIANT_LORD_PURPLE_TRIAL = register("radiant_lord_purple_trial",
+			EntityType.Builder.<RadiantLordPurpleTrialEntity>of(RadiantLordPurpleTrialEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+					.setCustomClientFactory(RadiantLordPurpleTrialEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<RadiantLordRedTrialEntity>> RADIANT_LORD_RED_TRIAL = register("radiant_lord_red_trial", EntityType.Builder.<RadiantLordRedTrialEntity>of(RadiantLordRedTrialEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RadiantLordRedTrialEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ArrowDivineEntity>> ARROW_DIVINE = register("projectile_arrow_divine",
+			EntityType.Builder.<ArrowDivineEntity>of(ArrowDivineEntity::new, MobCategory.MISC).setCustomClientFactory(ArrowDivineEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<SkullDamnationEntity>> SKULL_DAMNATION = register("skull_damnation",
+			EntityType.Builder.<SkullDamnationEntity>of(SkullDamnationEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SkullDamnationEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<PurpleFlameEntity>> PURPLE_FLAME = register("projectile_purple_flame",
+			EntityType.Builder.<PurpleFlameEntity>of(PurpleFlameEntity::new, MobCategory.MISC).setCustomClientFactory(PurpleFlameEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -90,6 +108,9 @@ public class EthernalKronuzModEntities {
 			RadiantLordNoColorTrialEntity.init();
 			RadiantLordGreenTrialEntity.init();
 			DinoVascoEntity.init();
+			RadiantLordPurpleTrialEntity.init();
+			RadiantLordRedTrialEntity.init();
+			SkullDamnationEntity.init();
 		});
 	}
 
@@ -105,5 +126,8 @@ public class EthernalKronuzModEntities {
 		event.put(RADIANT_LORD_NO_COLOR_TRIAL.get(), RadiantLordNoColorTrialEntity.createAttributes().build());
 		event.put(RADIANT_LORD_GREEN_TRIAL.get(), RadiantLordGreenTrialEntity.createAttributes().build());
 		event.put(DINO_VASCO.get(), DinoVascoEntity.createAttributes().build());
+		event.put(RADIANT_LORD_PURPLE_TRIAL.get(), RadiantLordPurpleTrialEntity.createAttributes().build());
+		event.put(RADIANT_LORD_RED_TRIAL.get(), RadiantLordRedTrialEntity.createAttributes().build());
+		event.put(SKULL_DAMNATION.get(), SkullDamnationEntity.createAttributes().build());
 	}
 }

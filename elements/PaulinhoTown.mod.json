@@ -1,0 +1,19 @@
+{
+  "_fv": 39,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Lil Torpedo",
+    "texture": "music_disc_paulinho_town",
+    "description": "Paulinho Town",
+    "creativeTab": {
+      "value": "CUSTOM:CreativeTab"
+    },
+    "specialInfo": [],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:paulinho_town"
+    },
+    "lengthInTicks": 100,
+    "analogOutput": 0
+  }
+}

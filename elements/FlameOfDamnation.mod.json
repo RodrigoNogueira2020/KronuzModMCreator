@@ -3,12 +3,12 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "divine_arrow",
+    "texture": "flame_of_damnation",
     "customModelName": "Normal",
-    "name": "Divine Arrow",
-    "rarity": "RARE",
+    "name": "Flame Of Damnation",
+    "rarity": "COMMON",
     "creativeTab": {
-      "value": "CUSTOM:CreativeTab"
+      "value": "MISC"
     },
     "stackSize": 64,
     "enchantability": 0,

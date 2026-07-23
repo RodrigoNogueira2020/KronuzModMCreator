@@ -12,13 +12,13 @@ import net.minecraft.core.Direction;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.Commands;
 
-import net.mcreator.ethernalkronuz.procedures.GiveGreenParchmentProcedure;
+import net.mcreator.ethernalkronuz.procedures.GiveBackParchementCommandProcedure;
 
 @Mod.EventBusSubscriber
-public class GiveRadiantLordVerdeCommandCommand {
+public class GiveBackParchementCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("AscendRadiantLord")
+		event.getDispatcher().register(Commands.literal("GiveBackTheRiseParchement")
 
 				.then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();
@@ -30,7 +30,7 @@ public class GiveRadiantLordVerdeCommandCommand {
 						entity = FakePlayerFactory.getMinecraft(world);
 					Direction direction = entity.getDirection();
 
-					GiveGreenParchmentProcedure.execute(entity);
+					GiveBackParchementCommandProcedure.execute(entity);
 					return 0;
 				})));
 	}

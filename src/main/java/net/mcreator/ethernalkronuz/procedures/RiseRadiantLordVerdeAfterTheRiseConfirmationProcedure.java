@@ -21,8 +21,8 @@ import net.mcreator.ethernalkronuz.network.EthernalKronuzModVariables;
 import net.mcreator.ethernalkronuz.init.EthernalKronuzModItems;
 
 public class RiseRadiantLordVerdeAfterTheRiseConfirmationProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		if (entity == null)
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
+		if (entity == null || sourceentity == null)
 			return;
 		if (!(EthernalKronuzModVariables.MapVariables.get(world).RadiantLordVerde && ((entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordRoxoPlayer
 				|| (entity.getCapability(EthernalKronuzModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EthernalKronuzModVariables.PlayerVariables())).RadiantLordVerdePlayer
@@ -144,7 +144,7 @@ public class RiseRadiantLordVerdeAfterTheRiseConfirmationProcedure {
 									}
 									EthernalKronuzModVariables.MapVariables.get(world).RadiantLordRoxo = true;
 									EthernalKronuzModVariables.MapVariables.get(world).syncData(world);
-									GiveRadiantLordEffectsProcedure.execute(world, x, y, z, entity);
+									GiveRadiantLordEffectsProcedure.execute(world, x, y, z, entity, sourceentity);
 									entity.setCustomName(new TextComponent("\u00A7aTitan Kaleb"));
 									if (entity instanceof Player _player) {
 										ItemStack _setstack = new ItemStack(EthernalKronuzModItems.TERRA_BLADE.get());

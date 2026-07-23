@@ -17,6 +17,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.ethernalkronuz.entity.RadiantLordPurpleTrialEntity;
 import net.mcreator.ethernalkronuz.entity.RadiantLordGreenTrialEntity;
 
 import java.util.stream.Collectors;
@@ -36,6 +37,9 @@ public class RadiantLordGreenTrialOnInitialEntitySpawnProcedure {
 		}
 		if (entity instanceof RadiantLordGreenTrialEntity) {
 			((RadiantLordGreenTrialEntity) entity).setAnimation("attack-lightning");
+		}
+		if (entity instanceof RadiantLordPurpleTrialEntity) {
+			((RadiantLordPurpleTrialEntity) entity).setAnimation("attack-lightning");
 		}
 		new Object() {
 			private int ticks = 0;

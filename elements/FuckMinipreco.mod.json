@@ -1,0 +1,19 @@
+{
+  "_fv": 39,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Lil Torpedo",
+    "texture": "music_disc_fuck_minipreco",
+    "description": "Fuck Minipreço",
+    "creativeTab": {
+      "value": "CUSTOM:CreativeTab"
+    },
+    "specialInfo": [],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:fuck_minipreco"
+    },
+    "lengthInTicks": 100,
+    "analogOutput": 0
+  }
+}

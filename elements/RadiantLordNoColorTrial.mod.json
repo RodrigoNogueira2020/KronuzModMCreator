@@ -88,7 +88,7 @@
       "value": ""
     },
     "livingSound": {
-      "value": ""
+      "value": "CUSTOM:sorl-breathing"
     },
     "hurtSound": {
       "value": ""
@@ -99,7 +99,7 @@
     "stepSound": {
       "value": ""
     },
-    "onPlayerCollidesWith": {
+    "onRightClickedOn": {
       "name": "RadiantLordNoColorTrialPlayerCollidesWithThisEntity"
     },
     "hasAI": false,

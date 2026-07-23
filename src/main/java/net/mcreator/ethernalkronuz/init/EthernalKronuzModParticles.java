@@ -13,6 +13,7 @@ import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.ethernalkronuz.client.particle.TerraBladeParticleParticle;
+import net.mcreator.ethernalkronuz.client.particle.PurpleFlameParticleParticle;
 import net.mcreator.ethernalkronuz.client.particle.MurasamaDashParticleParticle;
 import net.mcreator.ethernalkronuz.client.particle.JotunheimportalparticlesParticle;
 import net.mcreator.ethernalkronuz.client.particle.HellParticleParticle;
@@ -35,5 +36,6 @@ public class EthernalKronuzModParticles {
 		Minecraft.getInstance().particleEngine.register((SimpleParticleType) EthernalKronuzModParticleTypes.TERRA_BLADE_PARTICLE.get(), TerraBladeParticleParticle::provider);
 		Minecraft.getInstance().particleEngine.register((SimpleParticleType) EthernalKronuzModParticleTypes.BLADE_OF_THE_VOID_PARTICLE.get(), BladeOfTheVoidParticleParticle::provider);
 		Minecraft.getInstance().particleEngine.register((SimpleParticleType) EthernalKronuzModParticleTypes.MURASAMA_DASH_PARTICLE.get(), MurasamaDashParticleParticle::provider);
+		Minecraft.getInstance().particleEngine.register((SimpleParticleType) EthernalKronuzModParticleTypes.PURPLE_FLAME_PARTICLE.get(), PurpleFlameParticleParticle::provider);
 	}
 }

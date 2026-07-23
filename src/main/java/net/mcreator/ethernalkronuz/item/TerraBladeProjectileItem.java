@@ -20,6 +20,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
 
+import net.mcreator.ethernalkronuz.init.EthernalKronuzModTabs;
 import net.mcreator.ethernalkronuz.entity.TerraBladeProjectileEntity;
 
 import com.google.common.collect.Multimap;
@@ -27,7 +28,7 @@ import com.google.common.collect.ImmutableMultimap;
 
 public class TerraBladeProjectileItem extends Item {
 	public TerraBladeProjectileItem() {
-		super(new Item.Properties().tab(null).stacksTo(1));
+		super(new Item.Properties().tab(EthernalKronuzModTabs.TAB_CREATIVE_TAB).stacksTo(1));
 	}
 
 	@Override
@@ -71,7 +72,7 @@ public class TerraBladeProjectileItem extends Item {
 			double y = entity.getY();
 			double z = entity.getZ();
 			if (true) {
-				TerraBladeProjectileEntity entityarrow = TerraBladeProjectileEntity.shoot(world, entity, world.getRandom(), 100f, 100, 1);
+				TerraBladeProjectileEntity entityarrow = TerraBladeProjectileEntity.shoot(world, entity, world.getRandom(), 20f, 100, 1);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
 			}
