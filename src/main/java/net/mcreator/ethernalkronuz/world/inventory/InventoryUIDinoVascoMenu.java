@@ -98,12 +98,23 @@ public class InventoryUIDinoVascoMenu extends AbstractContainerMenu implements S
 	}
 
 	private void addPlayerInventory(Inventory inv) {
-		for (int row = 0; row < 3; row++) {
+		for (int row = 0; row < 3; row++)
 			for (int col = 0; col < 9; col++)
 				this.addSlot(new Slot(inv, col + row * 9 + 9, 8 + col * 18, 84 + row * 18));
-		}
 		for (int col = 0; col < 9; col++)
 			this.addSlot(new Slot(inv, col, 8 + col * 18, 142));
+	}
+
+	@Override
+	public void slotsChanged(Container container) {
+		super.slotsChanged(container);
+		if (container == equipmentContainer && dinoEntity != null && !world.isClientSide()) {
+			dinoEntity.setItemSlot(EquipmentSlot.HEAD, equipmentContainer.getItem(SLOT_HEAD));
+			dinoEntity.setItemSlot(EquipmentSlot.CHEST, equipmentContainer.getItem(SLOT_CHEST));
+			dinoEntity.setItemSlot(EquipmentSlot.LEGS, equipmentContainer.getItem(SLOT_LEGS));
+			dinoEntity.setItemSlot(EquipmentSlot.FEET, equipmentContainer.getItem(SLOT_FEET));
+			dinoEntity.setItemSlot(EquipmentSlot.MAINHAND, equipmentContainer.getItem(SLOT_MAINHAND));
+		}
 	}
 
 	@Override
